@@ -1,0 +1,2348 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="MinSizeRel|Win32">
+      <Configuration>MinSizeRel</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|Win32">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGUID>{D582822E-0F80-3C90-91F1-0D4D50796609}</ProjectGUID>
+    <Keyword>Win32Proj</Keyword>
+    <Platform>Win32</Platform>
+    <ProjectName>FemGui</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">
+    <Import Project="..\..\..\..\FreeCAD_trunk.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="..\..\..\..\FreeCAD_trunk.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">
+    <Import Project="..\..\..\..\FreeCAD_trunk.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="..\..\..\..\FreeCAD_trunk.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">\code\free-cad-code\Source\Repos\code\Mod\Fem\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">FemGui.dir\Debug\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">FemGui_d</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.pyd</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">\code\free-cad-code\Source\Repos\code\Mod\Fem\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">FemGui.dir\Release\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">FemGui</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.pyd</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">\code\free-cad-code\Source\Repos\code\Mod\Fem\MinSizeRel\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">FemGui.dir\MinSizeRel\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">FemGui</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">.pyd</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">\code\free-cad-code\Source\Repos\code\Mod\Fem\RelWithDebInfo\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">FemGui.dir\RelWithDebInfo\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">FemGui</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">.pyd</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">true</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">true</GenerateManifest>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <AdditionalOptions> /Zm128 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalIncludeDirectories>$(FC_INCLUDE);$(FC_INCLUDE)\QtOpenGL;$(FC_INCLUDE)\QtSvg;$(FC_INCLUDE)\QtUiTools;$(FC_INCLUDE)\QtWebKit;$(FC_INCLUDE)\QtGui;$(FC_INCLUDE)\QtXml;$(FC_INCLUDE)\QtNetwork;$(FC_INCLUDE)\QtCore;$(FC_SOURCE);\code\free-cad-code\Source\Repos\code;$(FC_SOURCE)\Mod\Fem\Gui;$(FC_LIBRARY)\cmake\..\..\include\oce;$(FC_INCLUDE)\python2.7;$(FC_SOURCE)\3rdParty\salomesmesh\inc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>Debug/</AssemblerListingLocation>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_DEBUG;FC_DEBUG;QT_OPENGL_LIB;QT_SVG_LIB;QT_UITOOLS_LIB;QT_WEBKIT_LIB;QT_GUI_LIB;QT_XML_LIB;QT_NETWORK_LIB;QT_CORE_LIB;FCGuiFem;HAVE_ACOSH;HAVE_ASINH;HAVE_ATANH;FCWithNetgen;CMAKE_INTDIR="Debug";FemGui_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_DEBUG;FC_DEBUG;QT_OPENGL_LIB;QT_SVG_LIB;QT_UITOOLS_LIB;QT_WEBKIT_LIB;QT_GUI_LIB;QT_XML_LIB;QT_NETWORK_LIB;QT_CORE_LIB;FCGuiFem;HAVE_ACOSH;HAVE_ASINH;HAVE_ATANH;FCWithNetgen;CMAKE_INTDIR=\"Debug\";FemGui_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(FC_INCLUDE);$(FC_INCLUDE)\QtOpenGL;$(FC_INCLUDE)\QtSvg;$(FC_INCLUDE)\QtUiTools;$(FC_INCLUDE)\QtWebKit;$(FC_INCLUDE)\QtGui;$(FC_INCLUDE)\QtXml;$(FC_INCLUDE)\QtNetwork;$(FC_INCLUDE)\QtCore;$(FC_SOURCE);\code\free-cad-code\Source\Repos\code;$(FC_SOURCE)\Mod\Fem\Gui;$(FC_LIBRARY)\cmake\..\..\include\oce;$(FC_INCLUDE)\python2.7;$(FC_SOURCE)\3rdParty\salomesmesh\inc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>$(FC_INCLUDE);$(FC_INCLUDE)\QtOpenGL;$(FC_INCLUDE)\QtSvg;$(FC_INCLUDE)\QtUiTools;$(FC_INCLUDE)\QtWebKit;$(FC_INCLUDE)\QtGui;$(FC_INCLUDE)\QtXml;$(FC_INCLUDE)\QtNetwork;$(FC_INCLUDE)\QtCore;$(FC_SOURCE);\code\free-cad-code\Source\Repos\code;$(FC_SOURCE)\Mod\Fem\Gui;$(FC_LIBRARY)\cmake\..\..\include\oce;$(FC_INCLUDE)\python2.7;$(FC_SOURCE)\3rdParty\salomesmesh\inc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <PostBuildEvent>
+      <Message>
+      </Message>
+      <Command>setlocal
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+    </PostBuildEvent>
+    <Link>
+      <AdditionalOptions> /machine:X86 /debug %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;SHFolder.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;winmm.lib;comsupp.lib;Ws2_32.lib;dbghelp.lib;..\App\Debug\Fem_d.lib;..\..\..\Gui\Debug\FreeCADGui_d.lib;..\..\Part\App\Debug\Part_d.lib;$(FC_LIBRARY)\freetype.lib;..\..\..\..\lib\Debug\NETGENPlugin_d.lib;..\..\..\..\lib\Debug\StdMeshers_d.lib;..\..\..\..\lib\Debug\MEFISTO2_d.lib;..\..\..\..\lib\Debug\SMESH_d.lib;..\..\..\..\lib\Debug\DriverSTL_d.lib;..\..\..\..\lib\Debug\DriverDAT_d.lib;..\..\..\..\lib\Debug\DriverUNV_d.lib;..\..\..\..\lib\Debug\Driver_d.lib;..\..\..\..\lib\Debug\SMESHDS_d.lib;..\..\..\..\lib\Debug\SMDS_d.lib;$(FC_LIBRARY)\TKSTLd.lib;$(FC_LIBRARY)\TKFeatd.lib;$(FC_LIBRARY)\nglib.lib;$(FC_LIBRARY)\TKXDESTEPd.lib;$(FC_LIBRARY)\TKSTEPd.lib;$(FC_LIBRARY)\TKSTEP209d.lib;$(FC_LIBRARY)\TKSTEPAttrd.lib;$(FC_LIBRARY)\TKSTEPBased.lib;$(FC_LIBRARY)\TKXDEIGESd.lib;$(FC_LIBRARY)\TKIGESd.lib;$(FC_LIBRARY)\TKOffsetd.lib;$(FC_LIBRARY)\TKFilletd.lib;$(FC_LIBRARY)\TKBoold.lib;$(FC_LIBRARY)\TKXSBased.lib;$(FC_LIBRARY)\TKXCAFd.lib;$(FC_LIBRARY)\TKCAFd.lib;$(FC_LIBRARY)\TKBOd.lib;$(FC_LIBRARY)\TKPrimd.lib;$(FC_LIBRARY)\TKLCAFd.lib;$(FC_LIBRARY)\TKCDFd.lib;$(FC_LIBRARY)\TKMeshVSd.lib;$(FC_LIBRARY)\TKV3dd.lib;$(FC_LIBRARY)\TKMeshd.lib;$(FC_LIBRARY)\TKHLRd.lib;$(FC_LIBRARY)\TKServiced.lib;$(FC_LIBRARY)\TKShHealingd.lib;$(FC_LIBRARY)\TKTopAlgod.lib;$(FC_LIBRARY)\TKGeomAlgod.lib;$(FC_LIBRARY)\TKBRepd.lib;$(FC_LIBRARY)\TKGeomBased.lib;$(FC_LIBRARY)\TKG3dd.lib;$(FC_LIBRARY)\TKG2dd.lib;$(FC_LIBRARY)\TKMathd.lib;$(FC_LIBRARY)\TKerneld.lib;advapi32.lib;gdi32.lib;user32.lib;kernel32.lib;psapi.lib;FreeImaged.lib;freetyped.lib;..\..\..\App\Debug\FreeCADApp_d.lib;..\..\..\Base\Debug\FreeCADBase_d.lib;$(FC_LIBRARY)\python27_d.lib;$(FC_LIBRARY)\xerces-c_3D.lib;$(FC_LIBRARY)\zlibd.lib;MSVCRTD.lib;MSVCPRTD.lib;Rpcrt4.lib;version.lib;$(FC_LIBRARY)\boost_filesystem-vc120-mt-gd-1_55.lib;$(FC_LIBRARY)\boost_program_options-vc120-mt-gd-1_55.lib;$(FC_LIBRARY)\boost_regex-vc120-mt-gd-1_55.lib;$(FC_LIBRARY)\boost_signals-vc120-mt-gd-1_55.lib;$(FC_LIBRARY)\boost_system-vc120-mt-gd-1_55.lib;$(FC_LIBRARY)\boost_thread-vc120-mt-gd-1_55.lib;$(FC_LIBRARY)\coin4d.lib;$(FC_LIBRARY)\QtOpenGLd4.lib;glu32.lib;$(FC_LIBRARY)\QtSvgd4.lib;$(FC_LIBRARY)\QtUiToolsd.lib;$(FC_LIBRARY)\QtWebKitd4.lib;$(FC_LIBRARY)\QtXmlPatternsd4.lib;$(FC_LIBRARY)\QtGuid4.lib;imm32.lib;winmm.lib;$(FC_LIBRARY)\QtXmld4.lib;$(FC_LIBRARY)\QtNetworkd4.lib;$(FC_LIBRARY)\QtCored4.lib;ws2_32.lib;QtUiToolsd.lib;opengl32.lib;$(FC_LIBRARY)\cmake\Shiboken-1.2.2\..\..\shiboken-python2.7_d.lib;$(FC_LIBRARY)\cmake\PySide-1.2.2\..\..\pyside-python2.7_d.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(FC_LIBRARY)\;$(FC_LIBRARY)\/$(Configuration);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreAllDefaultLibraries>true</IgnoreAllDefaultLibraries>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>$(FC_SOURCE)/Mod/Fem/Gui/Debug/FemGui_d.lib</ImportLibrary>
+      <LargeAddressAware>true</LargeAddressAware>
+      <ProgramDataBaseFile>$(DEVROOT)/Mod/Fem/FemGui_d.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+      <Version>
+      </Version>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>$(FC_INCLUDE);$(FC_INCLUDE)\QtOpenGL;$(FC_INCLUDE)\QtSvg;$(FC_INCLUDE)\QtUiTools;$(FC_INCLUDE)\QtWebKit;$(FC_INCLUDE)\QtGui;$(FC_INCLUDE)\QtXml;$(FC_INCLUDE)\QtNetwork;$(FC_INCLUDE)\QtCore;$(FC_SOURCE);\code\free-cad-code\Source\Repos\code;$(FC_SOURCE)\Mod\Fem\Gui;$(FC_LIBRARY)\cmake\..\..\include\oce;$(FC_INCLUDE)\python2.7;$(FC_SOURCE)\3rdParty\salomesmesh\inc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>Release/</AssemblerListingLocation>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <ExceptionHandling>Async</ExceptionHandling>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;QT_NO_DEBUG;QT_OPENGL_LIB;QT_SVG_LIB;QT_UITOOLS_LIB;QT_WEBKIT_LIB;QT_GUI_LIB;QT_XML_LIB;QT_NETWORK_LIB;QT_CORE_LIB;FCGuiFem;HAVE_ACOSH;HAVE_ASINH;HAVE_ATANH;FCWithNetgen;CMAKE_INTDIR="Release";FemGui_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;QT_NO_DEBUG;QT_OPENGL_LIB;QT_SVG_LIB;QT_UITOOLS_LIB;QT_WEBKIT_LIB;QT_GUI_LIB;QT_XML_LIB;QT_NETWORK_LIB;QT_CORE_LIB;FCGuiFem;HAVE_ACOSH;HAVE_ASINH;HAVE_ATANH;FCWithNetgen;CMAKE_INTDIR=\"Release\";FemGui_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(FC_INCLUDE);$(FC_INCLUDE)\QtOpenGL;$(FC_INCLUDE)\QtSvg;$(FC_INCLUDE)\QtUiTools;$(FC_INCLUDE)\QtWebKit;$(FC_INCLUDE)\QtGui;$(FC_INCLUDE)\QtXml;$(FC_INCLUDE)\QtNetwork;$(FC_INCLUDE)\QtCore;$(FC_SOURCE);\code\free-cad-code\Source\Repos\code;$(FC_SOURCE)\Mod\Fem\Gui;$(FC_LIBRARY)\cmake\..\..\include\oce;$(FC_INCLUDE)\python2.7;$(FC_SOURCE)\3rdParty\salomesmesh\inc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>$(FC_INCLUDE);$(FC_INCLUDE)\QtOpenGL;$(FC_INCLUDE)\QtSvg;$(FC_INCLUDE)\QtUiTools;$(FC_INCLUDE)\QtWebKit;$(FC_INCLUDE)\QtGui;$(FC_INCLUDE)\QtXml;$(FC_INCLUDE)\QtNetwork;$(FC_INCLUDE)\QtCore;$(FC_SOURCE);\code\free-cad-code\Source\Repos\code;$(FC_SOURCE)\Mod\Fem\Gui;$(FC_LIBRARY)\cmake\..\..\include\oce;$(FC_INCLUDE)\python2.7;$(FC_SOURCE)\3rdParty\salomesmesh\inc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <PostBuildEvent>
+      <Message>
+      </Message>
+      <Command>setlocal
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+    </PostBuildEvent>
+    <Link>
+      <AdditionalOptions> /machine:X86 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;SHFolder.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;winmm.lib;comsupp.lib;Ws2_32.lib;dbghelp.lib;..\App\Release\Fem.lib;..\..\..\Gui\Release\FreeCADGui.lib;..\..\Part\App\Release\Part.lib;$(FC_LIBRARY)\freetype.lib;..\..\..\..\lib\Release\NETGENPlugin.lib;..\..\..\..\lib\Release\StdMeshers.lib;..\..\..\..\lib\Release\MEFISTO2.lib;..\..\..\..\lib\Release\SMESH.lib;..\..\..\..\lib\Release\DriverSTL.lib;..\..\..\..\lib\Release\DriverDAT.lib;..\..\..\..\lib\Release\DriverUNV.lib;..\..\..\..\lib\Release\Driver.lib;..\..\..\..\lib\Release\SMESHDS.lib;..\..\..\..\lib\Release\SMDS.lib;$(FC_LIBRARY)\TKSTL.lib;$(FC_LIBRARY)\TKFeat.lib;$(FC_LIBRARY)\nglib.lib;$(FC_LIBRARY)\TKXDESTEP.lib;$(FC_LIBRARY)\TKSTEP.lib;$(FC_LIBRARY)\TKSTEP209.lib;$(FC_LIBRARY)\TKSTEPAttr.lib;$(FC_LIBRARY)\TKSTEPBase.lib;$(FC_LIBRARY)\TKXDEIGES.lib;$(FC_LIBRARY)\TKIGES.lib;$(FC_LIBRARY)\TKOffset.lib;$(FC_LIBRARY)\TKFillet.lib;$(FC_LIBRARY)\TKBool.lib;$(FC_LIBRARY)\TKXSBase.lib;$(FC_LIBRARY)\TKXCAF.lib;$(FC_LIBRARY)\TKCAF.lib;$(FC_LIBRARY)\TKBO.lib;$(FC_LIBRARY)\TKPrim.lib;$(FC_LIBRARY)\TKLCAF.lib;$(FC_LIBRARY)\TKCDF.lib;$(FC_LIBRARY)\TKMeshVS.lib;$(FC_LIBRARY)\TKV3d.lib;$(FC_LIBRARY)\TKMesh.lib;$(FC_LIBRARY)\TKHLR.lib;$(FC_LIBRARY)\TKService.lib;$(FC_LIBRARY)\TKShHealing.lib;$(FC_LIBRARY)\TKTopAlgo.lib;$(FC_LIBRARY)\TKGeomAlgo.lib;$(FC_LIBRARY)\TKBRep.lib;$(FC_LIBRARY)\TKGeomBase.lib;$(FC_LIBRARY)\TKG3d.lib;$(FC_LIBRARY)\TKG2d.lib;$(FC_LIBRARY)\TKMath.lib;$(FC_LIBRARY)\TKernel.lib;advapi32.lib;gdi32.lib;user32.lib;kernel32.lib;psapi.lib;FreeImage.lib;freetype.lib;..\..\..\App\Release\FreeCADApp.lib;..\..\..\Base\Release\FreeCADBase.lib;$(FC_LIBRARY)\python27.lib;$(FC_LIBRARY)\xerces-c_3.lib;$(FC_LIBRARY)\zlib.lib;MSVCRT.lib;MSVCPRT.lib;Rpcrt4.lib;version.lib;$(FC_LIBRARY)\boost_filesystem-vc120-mt-1_55.lib;$(FC_LIBRARY)\boost_program_options-vc120-mt-1_55.lib;$(FC_LIBRARY)\boost_regex-vc120-mt-1_55.lib;$(FC_LIBRARY)\boost_signals-vc120-mt-1_55.lib;$(FC_LIBRARY)\boost_system-vc120-mt-1_55.lib;$(FC_LIBRARY)\boost_thread-vc120-mt-1_55.lib;$(FC_LIBRARY)\coin4.lib;$(FC_LIBRARY)\QtOpenGL4.lib;glu32.lib;$(FC_LIBRARY)\QtSvg4.lib;$(FC_LIBRARY)\QtUiTools.lib;$(FC_LIBRARY)\QtWebKit4.lib;$(FC_LIBRARY)\QtXmlPatterns4.lib;$(FC_LIBRARY)\QtGui4.lib;imm32.lib;winmm.lib;$(FC_LIBRARY)\QtXml4.lib;$(FC_LIBRARY)\QtNetwork4.lib;$(FC_LIBRARY)\QtCore4.lib;ws2_32.lib;QtUiTools.lib;opengl32.lib;$(FC_LIBRARY)\cmake\Shiboken-1.2.2\..\..\shiboken-python2.7.lib;$(FC_LIBRARY)\cmake\PySide-1.2.2\..\..\pyside-python2.7.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(FC_LIBRARY)\;$(FC_LIBRARY)\/$(Configuration);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreAllDefaultLibraries>true</IgnoreAllDefaultLibraries>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>$(FC_SOURCE)/Mod/Fem/Gui/Release/FemGui.lib</ImportLibrary>
+      <LargeAddressAware>true</LargeAddressAware>
+      <ProgramDataBaseFile>$(DEVROOT)/Mod/Fem/FemGui.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+      <Version>
+      </Version>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>$(FC_INCLUDE);$(FC_INCLUDE)\QtOpenGL;$(FC_INCLUDE)\QtSvg;$(FC_INCLUDE)\QtUiTools;$(FC_INCLUDE)\QtWebKit;$(FC_INCLUDE)\QtGui;$(FC_INCLUDE)\QtXml;$(FC_INCLUDE)\QtNetwork;$(FC_INCLUDE)\QtCore;$(FC_SOURCE);\code\free-cad-code\Source\Repos\code;$(FC_SOURCE)\Mod\Fem\Gui;$(FC_LIBRARY)\cmake\..\..\include\oce;$(FC_INCLUDE)\python2.7;$(FC_SOURCE)\3rdParty\salomesmesh\inc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>MinSizeRel/</AssemblerListingLocation>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <Optimization>MinSpace</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;QT_NO_DEBUG;QT_OPENGL_LIB;QT_SVG_LIB;QT_UITOOLS_LIB;QT_WEBKIT_LIB;QT_GUI_LIB;QT_XML_LIB;QT_NETWORK_LIB;QT_CORE_LIB;FCGuiFem;HAVE_ACOSH;HAVE_ASINH;HAVE_ATANH;FCWithNetgen;CMAKE_INTDIR="MinSizeRel";FemGui_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;QT_NO_DEBUG;QT_OPENGL_LIB;QT_SVG_LIB;QT_UITOOLS_LIB;QT_WEBKIT_LIB;QT_GUI_LIB;QT_XML_LIB;QT_NETWORK_LIB;QT_CORE_LIB;FCGuiFem;HAVE_ACOSH;HAVE_ASINH;HAVE_ATANH;FCWithNetgen;CMAKE_INTDIR=\"MinSizeRel\";FemGui_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(FC_INCLUDE);$(FC_INCLUDE)\QtOpenGL;$(FC_INCLUDE)\QtSvg;$(FC_INCLUDE)\QtUiTools;$(FC_INCLUDE)\QtWebKit;$(FC_INCLUDE)\QtGui;$(FC_INCLUDE)\QtXml;$(FC_INCLUDE)\QtNetwork;$(FC_INCLUDE)\QtCore;$(FC_SOURCE);\code\free-cad-code\Source\Repos\code;$(FC_SOURCE)\Mod\Fem\Gui;$(FC_LIBRARY)\cmake\..\..\include\oce;$(FC_INCLUDE)\python2.7;$(FC_SOURCE)\3rdParty\salomesmesh\inc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>$(FC_INCLUDE);$(FC_INCLUDE)\QtOpenGL;$(FC_INCLUDE)\QtSvg;$(FC_INCLUDE)\QtUiTools;$(FC_INCLUDE)\QtWebKit;$(FC_INCLUDE)\QtGui;$(FC_INCLUDE)\QtXml;$(FC_INCLUDE)\QtNetwork;$(FC_INCLUDE)\QtCore;$(FC_SOURCE);\code\free-cad-code\Source\Repos\code;$(FC_SOURCE)\Mod\Fem\Gui;$(FC_LIBRARY)\cmake\..\..\include\oce;$(FC_INCLUDE)\python2.7;$(FC_SOURCE)\3rdParty\salomesmesh\inc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <PostBuildEvent>
+      <Message>
+      </Message>
+      <Command>setlocal
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+    </PostBuildEvent>
+    <Link>
+      <AdditionalOptions> /machine:X86 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;SHFolder.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;winmm.lib;comsupp.lib;Ws2_32.lib;dbghelp.lib;..\App\MinSizeRel\Fem.lib;..\..\..\Gui\MinSizeRel\FreeCADGui.lib;..\..\Part\App\MinSizeRel\Part.lib;$(FC_LIBRARY)\freetype.lib;..\..\..\..\lib\MinSizeRel\NETGENPlugin.lib;..\..\..\..\lib\MinSizeRel\StdMeshers.lib;..\..\..\..\lib\MinSizeRel\MEFISTO2.lib;..\..\..\..\lib\MinSizeRel\SMESH.lib;..\..\..\..\lib\MinSizeRel\DriverSTL.lib;..\..\..\..\lib\MinSizeRel\DriverDAT.lib;..\..\..\..\lib\MinSizeRel\DriverUNV.lib;..\..\..\..\lib\MinSizeRel\Driver.lib;..\..\..\..\lib\MinSizeRel\SMESHDS.lib;..\..\..\..\lib\MinSizeRel\SMDS.lib;$(FC_LIBRARY)\TKSTLd.lib;$(FC_LIBRARY)\TKFeatd.lib;$(FC_LIBRARY)\nglib.lib;$(FC_LIBRARY)\TKXDESTEPd.lib;$(FC_LIBRARY)\TKSTEPd.lib;$(FC_LIBRARY)\TKSTEP209d.lib;$(FC_LIBRARY)\TKSTEPAttrd.lib;$(FC_LIBRARY)\TKSTEPBased.lib;$(FC_LIBRARY)\TKXDEIGESd.lib;$(FC_LIBRARY)\TKIGESd.lib;$(FC_LIBRARY)\TKOffsetd.lib;$(FC_LIBRARY)\TKFilletd.lib;$(FC_LIBRARY)\TKBoold.lib;$(FC_LIBRARY)\TKXSBased.lib;$(FC_LIBRARY)\TKXCAFd.lib;$(FC_LIBRARY)\TKCAFd.lib;$(FC_LIBRARY)\TKBOd.lib;$(FC_LIBRARY)\TKPrimd.lib;$(FC_LIBRARY)\TKLCAFd.lib;$(FC_LIBRARY)\TKCDFd.lib;$(FC_LIBRARY)\TKMeshVSd.lib;$(FC_LIBRARY)\TKV3dd.lib;$(FC_LIBRARY)\TKMeshd.lib;$(FC_LIBRARY)\TKHLRd.lib;$(FC_LIBRARY)\TKServiced.lib;$(FC_LIBRARY)\TKShHealingd.lib;$(FC_LIBRARY)\TKTopAlgod.lib;$(FC_LIBRARY)\TKGeomAlgod.lib;$(FC_LIBRARY)\TKBRepd.lib;$(FC_LIBRARY)\TKGeomBased.lib;$(FC_LIBRARY)\TKG3dd.lib;$(FC_LIBRARY)\TKG2dd.lib;$(FC_LIBRARY)\TKMathd.lib;$(FC_LIBRARY)\TKerneld.lib;advapi32.lib;gdi32.lib;user32.lib;kernel32.lib;psapi.lib;FreeImaged.lib;freetyped.lib;..\..\..\App\MinSizeRel\FreeCADApp.lib;..\..\..\Base\MinSizeRel\FreeCADBase.lib;$(FC_LIBRARY)\python27.lib;$(FC_LIBRARY)\xerces-c_3.lib;$(FC_LIBRARY)\zlib.lib;MSVCRT.lib;MSVCPRT.lib;Rpcrt4.lib;version.lib;$(FC_LIBRARY)\boost_filesystem-vc120-mt-1_55.lib;$(FC_LIBRARY)\boost_program_options-vc120-mt-1_55.lib;$(FC_LIBRARY)\boost_regex-vc120-mt-1_55.lib;$(FC_LIBRARY)\boost_signals-vc120-mt-1_55.lib;$(FC_LIBRARY)\boost_system-vc120-mt-1_55.lib;$(FC_LIBRARY)\boost_thread-vc120-mt-1_55.lib;$(FC_LIBRARY)\coin4.lib;$(FC_LIBRARY)\QtOpenGL4.lib;glu32.lib;$(FC_LIBRARY)\QtSvg4.lib;$(FC_LIBRARY)\QtUiTools.lib;$(FC_LIBRARY)\QtWebKit4.lib;$(FC_LIBRARY)\QtXmlPatterns4.lib;$(FC_LIBRARY)\QtGui4.lib;imm32.lib;winmm.lib;$(FC_LIBRARY)\QtXml4.lib;$(FC_LIBRARY)\QtNetwork4.lib;$(FC_LIBRARY)\QtCore4.lib;ws2_32.lib;QtUiTools.lib;opengl32.lib;$(FC_LIBRARY)\cmake\Shiboken-1.2.2\..\..\shiboken-python2.7.lib;$(FC_LIBRARY)\cmake\PySide-1.2.2\..\..\pyside-python2.7.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(FC_LIBRARY)\;$(FC_LIBRARY)\/$(Configuration);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreAllDefaultLibraries>true</IgnoreAllDefaultLibraries>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>$(FC_SOURCE)/Mod/Fem/Gui/MinSizeRel/FemGui.lib</ImportLibrary>
+      <LargeAddressAware>true</LargeAddressAware>
+      <ProgramDataBaseFile>$(DEVROOT)/Mod/Fem/MinSizeRel/FemGui.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+      <Version>
+      </Version>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>$(FC_INCLUDE);$(FC_INCLUDE)\QtOpenGL;$(FC_INCLUDE)\QtSvg;$(FC_INCLUDE)\QtUiTools;$(FC_INCLUDE)\QtWebKit;$(FC_INCLUDE)\QtGui;$(FC_INCLUDE)\QtXml;$(FC_INCLUDE)\QtNetwork;$(FC_INCLUDE)\QtCore;$(FC_SOURCE);\code\free-cad-code\Source\Repos\code;$(FC_SOURCE)\Mod\Fem\Gui;$(FC_LIBRARY)\cmake\..\..\include\oce;$(FC_INCLUDE)\python2.7;$(FC_SOURCE)\3rdParty\salomesmesh\inc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>RelWithDebInfo/</AssemblerListingLocation>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;QT_NO_DEBUG;QT_OPENGL_LIB;QT_SVG_LIB;QT_UITOOLS_LIB;QT_WEBKIT_LIB;QT_GUI_LIB;QT_XML_LIB;QT_NETWORK_LIB;QT_CORE_LIB;FCGuiFem;HAVE_ACOSH;HAVE_ASINH;HAVE_ATANH;FCWithNetgen;CMAKE_INTDIR="RelWithDebInfo";FemGui_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;QT_NO_DEBUG;QT_OPENGL_LIB;QT_SVG_LIB;QT_UITOOLS_LIB;QT_WEBKIT_LIB;QT_GUI_LIB;QT_XML_LIB;QT_NETWORK_LIB;QT_CORE_LIB;FCGuiFem;HAVE_ACOSH;HAVE_ASINH;HAVE_ATANH;FCWithNetgen;CMAKE_INTDIR=\"RelWithDebInfo\";FemGui_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(FC_INCLUDE);$(FC_INCLUDE)\QtOpenGL;$(FC_INCLUDE)\QtSvg;$(FC_INCLUDE)\QtUiTools;$(FC_INCLUDE)\QtWebKit;$(FC_INCLUDE)\QtGui;$(FC_INCLUDE)\QtXml;$(FC_INCLUDE)\QtNetwork;$(FC_INCLUDE)\QtCore;$(FC_SOURCE);\code\free-cad-code\Source\Repos\code;$(FC_SOURCE)\Mod\Fem\Gui;$(FC_LIBRARY)\cmake\..\..\include\oce;$(FC_INCLUDE)\python2.7;$(FC_SOURCE)\3rdParty\salomesmesh\inc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>$(FC_INCLUDE);$(FC_INCLUDE)\QtOpenGL;$(FC_INCLUDE)\QtSvg;$(FC_INCLUDE)\QtUiTools;$(FC_INCLUDE)\QtWebKit;$(FC_INCLUDE)\QtGui;$(FC_INCLUDE)\QtXml;$(FC_INCLUDE)\QtNetwork;$(FC_INCLUDE)\QtCore;$(FC_SOURCE);\code\free-cad-code\Source\Repos\code;$(FC_SOURCE)\Mod\Fem\Gui;$(FC_LIBRARY)\cmake\..\..\include\oce;$(FC_INCLUDE)\python2.7;$(FC_SOURCE)\3rdParty\salomesmesh\inc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <PostBuildEvent>
+      <Message>
+      </Message>
+      <Command>setlocal
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+    </PostBuildEvent>
+    <Link>
+      <AdditionalOptions> /machine:X86 /debug %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;SHFolder.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;winmm.lib;comsupp.lib;Ws2_32.lib;dbghelp.lib;..\App\RelWithDebInfo\Fem.lib;..\..\..\Gui\RelWithDebInfo\FreeCADGui.lib;..\..\Part\App\RelWithDebInfo\Part.lib;$(FC_LIBRARY)\freetype.lib;..\..\..\..\lib\RelWithDebInfo\NETGENPlugin.lib;..\..\..\..\lib\RelWithDebInfo\StdMeshers.lib;..\..\..\..\lib\RelWithDebInfo\MEFISTO2.lib;..\..\..\..\lib\RelWithDebInfo\SMESH.lib;..\..\..\..\lib\RelWithDebInfo\DriverSTL.lib;..\..\..\..\lib\RelWithDebInfo\DriverDAT.lib;..\..\..\..\lib\RelWithDebInfo\DriverUNV.lib;..\..\..\..\lib\RelWithDebInfo\Driver.lib;..\..\..\..\lib\RelWithDebInfo\SMESHDS.lib;..\..\..\..\lib\RelWithDebInfo\SMDS.lib;$(FC_LIBRARY)\TKSTLd.lib;$(FC_LIBRARY)\TKFeatd.lib;$(FC_LIBRARY)\nglib.lib;$(FC_LIBRARY)\TKXDESTEPd.lib;$(FC_LIBRARY)\TKSTEPd.lib;$(FC_LIBRARY)\TKSTEP209d.lib;$(FC_LIBRARY)\TKSTEPAttrd.lib;$(FC_LIBRARY)\TKSTEPBased.lib;$(FC_LIBRARY)\TKXDEIGESd.lib;$(FC_LIBRARY)\TKIGESd.lib;$(FC_LIBRARY)\TKOffsetd.lib;$(FC_LIBRARY)\TKFilletd.lib;$(FC_LIBRARY)\TKBoold.lib;$(FC_LIBRARY)\TKXSBased.lib;$(FC_LIBRARY)\TKXCAFd.lib;$(FC_LIBRARY)\TKCAFd.lib;$(FC_LIBRARY)\TKBOd.lib;$(FC_LIBRARY)\TKPrimd.lib;$(FC_LIBRARY)\TKLCAFd.lib;$(FC_LIBRARY)\TKCDFd.lib;$(FC_LIBRARY)\TKMeshVSd.lib;$(FC_LIBRARY)\TKV3dd.lib;$(FC_LIBRARY)\TKMeshd.lib;$(FC_LIBRARY)\TKHLRd.lib;$(FC_LIBRARY)\TKServiced.lib;$(FC_LIBRARY)\TKShHealingd.lib;$(FC_LIBRARY)\TKTopAlgod.lib;$(FC_LIBRARY)\TKGeomAlgod.lib;$(FC_LIBRARY)\TKBRepd.lib;$(FC_LIBRARY)\TKGeomBased.lib;$(FC_LIBRARY)\TKG3dd.lib;$(FC_LIBRARY)\TKG2dd.lib;$(FC_LIBRARY)\TKMathd.lib;$(FC_LIBRARY)\TKerneld.lib;advapi32.lib;gdi32.lib;user32.lib;kernel32.lib;psapi.lib;FreeImaged.lib;freetyped.lib;..\..\..\App\RelWithDebInfo\FreeCADApp.lib;..\..\..\Base\RelWithDebInfo\FreeCADBase.lib;$(FC_LIBRARY)\python27.lib;$(FC_LIBRARY)\xerces-c_3.lib;$(FC_LIBRARY)\zlib.lib;MSVCRT.lib;MSVCPRT.lib;Rpcrt4.lib;version.lib;$(FC_LIBRARY)\boost_filesystem-vc120-mt-1_55.lib;$(FC_LIBRARY)\boost_program_options-vc120-mt-1_55.lib;$(FC_LIBRARY)\boost_regex-vc120-mt-1_55.lib;$(FC_LIBRARY)\boost_signals-vc120-mt-1_55.lib;$(FC_LIBRARY)\boost_system-vc120-mt-1_55.lib;$(FC_LIBRARY)\boost_thread-vc120-mt-1_55.lib;$(FC_LIBRARY)\coin4.lib;$(FC_LIBRARY)\QtOpenGL4.lib;glu32.lib;$(FC_LIBRARY)\QtSvg4.lib;$(FC_LIBRARY)\QtUiTools.lib;$(FC_LIBRARY)\QtWebKit4.lib;$(FC_LIBRARY)\QtXmlPatterns4.lib;$(FC_LIBRARY)\QtGui4.lib;imm32.lib;winmm.lib;$(FC_LIBRARY)\QtXml4.lib;$(FC_LIBRARY)\QtNetwork4.lib;$(FC_LIBRARY)\QtCore4.lib;ws2_32.lib;QtUiTools.lib;opengl32.lib;$(FC_LIBRARY)\cmake\Shiboken-1.2.2\..\..\shiboken-python2.7.lib;$(FC_LIBRARY)\cmake\PySide-1.2.2\..\..\pyside-python2.7.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(FC_LIBRARY)\;$(FC_LIBRARY)\/$(Configuration);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreAllDefaultLibraries>true</IgnoreAllDefaultLibraries>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>$(FC_SOURCE)/Mod/Fem/Gui/RelWithDebInfo/FemGui.lib</ImportLibrary>
+      <LargeAddressAware>true</LargeAddressAware>
+      <ProgramDataBaseFile>$(DEVROOT)/Mod/Fem/RelWithDebInfo/FemGui.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+      <Version>
+      </Version>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="$(FC_SOURCE)\Mod\Fem\Gui\ViewProviderFemMeshPy.xml">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">ViewProviderFemMeshPy.xml</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+cd $(FC_SOURCE)\Mod\Fem\Gui
+if %errorlevel% neq 0 goto :cmEnd
+
+if %errorlevel% neq 0 goto :cmEnd
+$(FC_BIN)\python.exe $(FC_SOURCE)\Tools\generate.py --outputPath $(FC_SOURCE)/Mod/Fem/Gui ViewProviderFemMeshPy.xml
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(FC_SOURCE)/Mod/Fem/Gui/ViewProviderFemMeshPy.xml;$(FC_SOURCE)\Tools\generateTemplates\templateClassPyExport.py;$(FC_SOURCE)\Mod\Fem\Gui\ViewProviderFemMeshPy.xml;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(FC_SOURCE)\Mod\Fem\Gui\ViewProviderFemMeshPy.h;$(FC_SOURCE)\Mod\Fem\Gui\ViewProviderFemMeshPy.cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">ViewProviderFemMeshPy.xml</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+cd $(FC_SOURCE)\Mod\Fem\Gui
+if %errorlevel% neq 0 goto :cmEnd
+
+if %errorlevel% neq 0 goto :cmEnd
+$(FC_BIN)\python.exe $(FC_SOURCE)\Tools\generate.py --outputPath $(FC_SOURCE)/Mod/Fem/Gui ViewProviderFemMeshPy.xml
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(FC_SOURCE)/Mod/Fem/Gui/ViewProviderFemMeshPy.xml;$(FC_SOURCE)\Tools\generateTemplates\templateClassPyExport.py;$(FC_SOURCE)\Mod\Fem\Gui\ViewProviderFemMeshPy.xml;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(FC_SOURCE)\Mod\Fem\Gui\ViewProviderFemMeshPy.h;$(FC_SOURCE)\Mod\Fem\Gui\ViewProviderFemMeshPy.cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">ViewProviderFemMeshPy.xml</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+cd $(FC_SOURCE)\Mod\Fem\Gui
+if %errorlevel% neq 0 goto :cmEnd
+
+if %errorlevel% neq 0 goto :cmEnd
+$(FC_BIN)\python.exe $(FC_SOURCE)\Tools\generate.py --outputPath $(FC_SOURCE)/Mod/Fem/Gui ViewProviderFemMeshPy.xml
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">$(FC_SOURCE)/Mod/Fem/Gui/ViewProviderFemMeshPy.xml;$(FC_SOURCE)\Tools\generateTemplates\templateClassPyExport.py;$(FC_SOURCE)\Mod\Fem\Gui\ViewProviderFemMeshPy.xml;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">$(FC_SOURCE)\Mod\Fem\Gui\ViewProviderFemMeshPy.h;$(FC_SOURCE)\Mod\Fem\Gui\ViewProviderFemMeshPy.cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">ViewProviderFemMeshPy.xml</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+cd $(FC_SOURCE)\Mod\Fem\Gui
+if %errorlevel% neq 0 goto :cmEnd
+
+if %errorlevel% neq 0 goto :cmEnd
+$(FC_BIN)\python.exe $(FC_SOURCE)\Tools\generate.py --outputPath $(FC_SOURCE)/Mod/Fem/Gui ViewProviderFemMeshPy.xml
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(FC_SOURCE)/Mod/Fem/Gui/ViewProviderFemMeshPy.xml;$(FC_SOURCE)\Tools\generateTemplates\templateClassPyExport.py;$(FC_SOURCE)\Mod\Fem\Gui\ViewProviderFemMeshPy.xml;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(FC_SOURCE)\Mod\Fem\Gui\ViewProviderFemMeshPy.h;$(FC_SOURCE)\Mod\Fem\Gui\ViewProviderFemMeshPy.cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="$(FC_SOURCE)\Mod\Fem\Gui\DlgSettingsFem.ui">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generating ui_DlgSettingsFem.h</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+$(FC_BIN)\uic.exe -o $(FC_SOURCE)/Mod/Fem/Gui/ui_DlgSettingsFem.h $(FC_SOURCE)/Mod/Fem/Gui/DlgSettingsFem.ui
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(FC_SOURCE)/Mod/Fem/Gui/DlgSettingsFem.ui;$(FC_SOURCE)\Mod\Fem\Gui\DlgSettingsFem.ui;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(FC_SOURCE)\Mod\Fem\Gui\ui_DlgSettingsFem.h</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Generating ui_DlgSettingsFem.h</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+$(FC_BIN)\uic.exe -o $(FC_SOURCE)/Mod/Fem/Gui/ui_DlgSettingsFem.h $(FC_SOURCE)/Mod/Fem/Gui/DlgSettingsFem.ui
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(FC_SOURCE)/Mod/Fem/Gui/DlgSettingsFem.ui;$(FC_SOURCE)\Mod\Fem\Gui\DlgSettingsFem.ui;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(FC_SOURCE)\Mod\Fem\Gui\ui_DlgSettingsFem.h</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Generating ui_DlgSettingsFem.h</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+$(FC_BIN)\uic.exe -o $(FC_SOURCE)/Mod/Fem/Gui/ui_DlgSettingsFem.h $(FC_SOURCE)/Mod/Fem/Gui/DlgSettingsFem.ui
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">$(FC_SOURCE)/Mod/Fem/Gui/DlgSettingsFem.ui;$(FC_SOURCE)\Mod\Fem\Gui\DlgSettingsFem.ui;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">$(FC_SOURCE)\Mod\Fem\Gui\ui_DlgSettingsFem.h</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Generating ui_DlgSettingsFem.h</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+$(FC_BIN)\uic.exe -o $(FC_SOURCE)/Mod/Fem/Gui/ui_DlgSettingsFem.h $(FC_SOURCE)/Mod/Fem/Gui/DlgSettingsFem.ui
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(FC_SOURCE)/Mod/Fem/Gui/DlgSettingsFem.ui;$(FC_SOURCE)\Mod\Fem\Gui\DlgSettingsFem.ui;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(FC_SOURCE)\Mod\Fem\Gui\ui_DlgSettingsFem.h</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="$(FC_SOURCE)\Mod\Fem\Gui\DlgSettingsFemImp.h">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generating moc_DlgSettingsFemImp.cpp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+$(FC_BIN)\moc.exe -DBOOST_TT_HAS_OPERATOR_HPP_INCLUDED $(FC_SOURCE)/Mod/Fem/Gui/DlgSettingsFemImp.h -o $(FC_SOURCE)/Mod/Fem/Gui/moc_DlgSettingsFemImp.cpp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(FC_SOURCE)/Mod/Fem/Gui/DlgSettingsFemImp.h;$(FC_SOURCE)\Mod\Fem\Gui\DlgSettingsFemImp.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(FC_SOURCE)\Mod\Fem\Gui\moc_DlgSettingsFemImp.cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Generating moc_DlgSettingsFemImp.cpp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+$(FC_BIN)\moc.exe -DBOOST_TT_HAS_OPERATOR_HPP_INCLUDED $(FC_SOURCE)/Mod/Fem/Gui/DlgSettingsFemImp.h -o $(FC_SOURCE)/Mod/Fem/Gui/moc_DlgSettingsFemImp.cpp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(FC_SOURCE)/Mod/Fem/Gui/DlgSettingsFemImp.h;$(FC_SOURCE)\Mod\Fem\Gui\DlgSettingsFemImp.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(FC_SOURCE)\Mod\Fem\Gui\moc_DlgSettingsFemImp.cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Generating moc_DlgSettingsFemImp.cpp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+$(FC_BIN)\moc.exe -DBOOST_TT_HAS_OPERATOR_HPP_INCLUDED $(FC_SOURCE)/Mod/Fem/Gui/DlgSettingsFemImp.h -o $(FC_SOURCE)/Mod/Fem/Gui/moc_DlgSettingsFemImp.cpp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">$(FC_SOURCE)/Mod/Fem/Gui/DlgSettingsFemImp.h;$(FC_SOURCE)\Mod\Fem\Gui\DlgSettingsFemImp.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">$(FC_SOURCE)\Mod\Fem\Gui\moc_DlgSettingsFemImp.cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Generating moc_DlgSettingsFemImp.cpp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+$(FC_BIN)\moc.exe -DBOOST_TT_HAS_OPERATOR_HPP_INCLUDED $(FC_SOURCE)/Mod/Fem/Gui/DlgSettingsFemImp.h -o $(FC_SOURCE)/Mod/Fem/Gui/moc_DlgSettingsFemImp.cpp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(FC_SOURCE)/Mod/Fem/Gui/DlgSettingsFemImp.h;$(FC_SOURCE)\Mod\Fem\Gui\DlgSettingsFemImp.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(FC_SOURCE)\Mod\Fem\Gui\moc_DlgSettingsFemImp.cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="$(FC_SOURCE)\Mod\Fem\Gui\TaskFemConstraint.ui">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generating ui_TaskFemConstraint.h</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+$(FC_BIN)\uic.exe -o $(FC_SOURCE)/Mod/Fem/Gui/ui_TaskFemConstraint.h $(FC_SOURCE)/Mod/Fem/Gui/TaskFemConstraint.ui
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(FC_SOURCE)/Mod/Fem/Gui/TaskFemConstraint.ui;$(FC_SOURCE)\Mod\Fem\Gui\TaskFemConstraint.ui;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(FC_SOURCE)\Mod\Fem\Gui\ui_TaskFemConstraint.h</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Generating ui_TaskFemConstraint.h</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+$(FC_BIN)\uic.exe -o $(FC_SOURCE)/Mod/Fem/Gui/ui_TaskFemConstraint.h $(FC_SOURCE)/Mod/Fem/Gui/TaskFemConstraint.ui
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(FC_SOURCE)/Mod/Fem/Gui/TaskFemConstraint.ui;$(FC_SOURCE)\Mod\Fem\Gui\TaskFemConstraint.ui;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(FC_SOURCE)\Mod\Fem\Gui\ui_TaskFemConstraint.h</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Generating ui_TaskFemConstraint.h</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+$(FC_BIN)\uic.exe -o $(FC_SOURCE)/Mod/Fem/Gui/ui_TaskFemConstraint.h $(FC_SOURCE)/Mod/Fem/Gui/TaskFemConstraint.ui
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">$(FC_SOURCE)/Mod/Fem/Gui/TaskFemConstraint.ui;$(FC_SOURCE)\Mod\Fem\Gui\TaskFemConstraint.ui;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">$(FC_SOURCE)\Mod\Fem\Gui\ui_TaskFemConstraint.h</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Generating ui_TaskFemConstraint.h</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+$(FC_BIN)\uic.exe -o $(FC_SOURCE)/Mod/Fem/Gui/ui_TaskFemConstraint.h $(FC_SOURCE)/Mod/Fem/Gui/TaskFemConstraint.ui
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(FC_SOURCE)/Mod/Fem/Gui/TaskFemConstraint.ui;$(FC_SOURCE)\Mod\Fem\Gui\TaskFemConstraint.ui;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(FC_SOURCE)\Mod\Fem\Gui\ui_TaskFemConstraint.h</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="$(FC_SOURCE)\Mod\Fem\Gui\TaskFemConstraint.h">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generating moc_TaskFemConstraint.cpp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+$(FC_BIN)\moc.exe -DBOOST_TT_HAS_OPERATOR_HPP_INCLUDED $(FC_SOURCE)/Mod/Fem/Gui/TaskFemConstraint.h -o $(FC_SOURCE)/Mod/Fem/Gui/moc_TaskFemConstraint.cpp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(FC_SOURCE)/Mod/Fem/Gui/TaskFemConstraint.h;$(FC_SOURCE)\Mod\Fem\Gui\TaskFemConstraint.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(FC_SOURCE)\Mod\Fem\Gui\moc_TaskFemConstraint.cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Generating moc_TaskFemConstraint.cpp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+$(FC_BIN)\moc.exe -DBOOST_TT_HAS_OPERATOR_HPP_INCLUDED $(FC_SOURCE)/Mod/Fem/Gui/TaskFemConstraint.h -o $(FC_SOURCE)/Mod/Fem/Gui/moc_TaskFemConstraint.cpp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(FC_SOURCE)/Mod/Fem/Gui/TaskFemConstraint.h;$(FC_SOURCE)\Mod\Fem\Gui\TaskFemConstraint.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(FC_SOURCE)\Mod\Fem\Gui\moc_TaskFemConstraint.cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Generating moc_TaskFemConstraint.cpp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+$(FC_BIN)\moc.exe -DBOOST_TT_HAS_OPERATOR_HPP_INCLUDED $(FC_SOURCE)/Mod/Fem/Gui/TaskFemConstraint.h -o $(FC_SOURCE)/Mod/Fem/Gui/moc_TaskFemConstraint.cpp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">$(FC_SOURCE)/Mod/Fem/Gui/TaskFemConstraint.h;$(FC_SOURCE)\Mod\Fem\Gui\TaskFemConstraint.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">$(FC_SOURCE)\Mod\Fem\Gui\moc_TaskFemConstraint.cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Generating moc_TaskFemConstraint.cpp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+$(FC_BIN)\moc.exe -DBOOST_TT_HAS_OPERATOR_HPP_INCLUDED $(FC_SOURCE)/Mod/Fem/Gui/TaskFemConstraint.h -o $(FC_SOURCE)/Mod/Fem/Gui/moc_TaskFemConstraint.cpp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(FC_SOURCE)/Mod/Fem/Gui/TaskFemConstraint.h;$(FC_SOURCE)\Mod\Fem\Gui\TaskFemConstraint.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(FC_SOURCE)\Mod\Fem\Gui\moc_TaskFemConstraint.cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="$(FC_SOURCE)\Mod\Fem\Gui\TaskFemConstraintBearing.ui">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generating ui_TaskFemConstraintBearing.h</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+$(FC_BIN)\uic.exe -o $(FC_SOURCE)/Mod/Fem/Gui/ui_TaskFemConstraintBearing.h $(FC_SOURCE)/Mod/Fem/Gui/TaskFemConstraintBearing.ui
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(FC_SOURCE)/Mod/Fem/Gui/TaskFemConstraintBearing.ui;$(FC_SOURCE)\Mod\Fem\Gui\TaskFemConstraintBearing.ui;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(FC_SOURCE)\Mod\Fem\Gui\ui_TaskFemConstraintBearing.h</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Generating ui_TaskFemConstraintBearing.h</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+$(FC_BIN)\uic.exe -o $(FC_SOURCE)/Mod/Fem/Gui/ui_TaskFemConstraintBearing.h $(FC_SOURCE)/Mod/Fem/Gui/TaskFemConstraintBearing.ui
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(FC_SOURCE)/Mod/Fem/Gui/TaskFemConstraintBearing.ui;$(FC_SOURCE)\Mod\Fem\Gui\TaskFemConstraintBearing.ui;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(FC_SOURCE)\Mod\Fem\Gui\ui_TaskFemConstraintBearing.h</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Generating ui_TaskFemConstraintBearing.h</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+$(FC_BIN)\uic.exe -o $(FC_SOURCE)/Mod/Fem/Gui/ui_TaskFemConstraintBearing.h $(FC_SOURCE)/Mod/Fem/Gui/TaskFemConstraintBearing.ui
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">$(FC_SOURCE)/Mod/Fem/Gui/TaskFemConstraintBearing.ui;$(FC_SOURCE)\Mod\Fem\Gui\TaskFemConstraintBearing.ui;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">$(FC_SOURCE)\Mod\Fem\Gui\ui_TaskFemConstraintBearing.h</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Generating ui_TaskFemConstraintBearing.h</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+$(FC_BIN)\uic.exe -o $(FC_SOURCE)/Mod/Fem/Gui/ui_TaskFemConstraintBearing.h $(FC_SOURCE)/Mod/Fem/Gui/TaskFemConstraintBearing.ui
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(FC_SOURCE)/Mod/Fem/Gui/TaskFemConstraintBearing.ui;$(FC_SOURCE)\Mod\Fem\Gui\TaskFemConstraintBearing.ui;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(FC_SOURCE)\Mod\Fem\Gui\ui_TaskFemConstraintBearing.h</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="$(FC_SOURCE)\Mod\Fem\Gui\TaskFemConstraintBearing.h">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generating moc_TaskFemConstraintBearing.cpp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+$(FC_BIN)\moc.exe -DBOOST_TT_HAS_OPERATOR_HPP_INCLUDED $(FC_SOURCE)/Mod/Fem/Gui/TaskFemConstraintBearing.h -o $(FC_SOURCE)/Mod/Fem/Gui/moc_TaskFemConstraintBearing.cpp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(FC_SOURCE)/Mod/Fem/Gui/TaskFemConstraintBearing.h;$(FC_SOURCE)\Mod\Fem\Gui\TaskFemConstraintBearing.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(FC_SOURCE)\Mod\Fem\Gui\moc_TaskFemConstraintBearing.cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Generating moc_TaskFemConstraintBearing.cpp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+$(FC_BIN)\moc.exe -DBOOST_TT_HAS_OPERATOR_HPP_INCLUDED $(FC_SOURCE)/Mod/Fem/Gui/TaskFemConstraintBearing.h -o $(FC_SOURCE)/Mod/Fem/Gui/moc_TaskFemConstraintBearing.cpp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(FC_SOURCE)/Mod/Fem/Gui/TaskFemConstraintBearing.h;$(FC_SOURCE)\Mod\Fem\Gui\TaskFemConstraintBearing.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(FC_SOURCE)\Mod\Fem\Gui\moc_TaskFemConstraintBearing.cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Generating moc_TaskFemConstraintBearing.cpp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+$(FC_BIN)\moc.exe -DBOOST_TT_HAS_OPERATOR_HPP_INCLUDED $(FC_SOURCE)/Mod/Fem/Gui/TaskFemConstraintBearing.h -o $(FC_SOURCE)/Mod/Fem/Gui/moc_TaskFemConstraintBearing.cpp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">$(FC_SOURCE)/Mod/Fem/Gui/TaskFemConstraintBearing.h;$(FC_SOURCE)\Mod\Fem\Gui\TaskFemConstraintBearing.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">$(FC_SOURCE)\Mod\Fem\Gui\moc_TaskFemConstraintBearing.cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Generating moc_TaskFemConstraintBearing.cpp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+$(FC_BIN)\moc.exe -DBOOST_TT_HAS_OPERATOR_HPP_INCLUDED $(FC_SOURCE)/Mod/Fem/Gui/TaskFemConstraintBearing.h -o $(FC_SOURCE)/Mod/Fem/Gui/moc_TaskFemConstraintBearing.cpp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(FC_SOURCE)/Mod/Fem/Gui/TaskFemConstraintBearing.h;$(FC_SOURCE)\Mod\Fem\Gui\TaskFemConstraintBearing.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(FC_SOURCE)\Mod\Fem\Gui\moc_TaskFemConstraintBearing.cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="$(FC_SOURCE)\Mod\Fem\Gui\TaskFemConstraintFixed.ui">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generating ui_TaskFemConstraintFixed.h</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+$(FC_BIN)\uic.exe -o $(FC_SOURCE)/Mod/Fem/Gui/ui_TaskFemConstraintFixed.h $(FC_SOURCE)/Mod/Fem/Gui/TaskFemConstraintFixed.ui
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(FC_SOURCE)/Mod/Fem/Gui/TaskFemConstraintFixed.ui;$(FC_SOURCE)\Mod\Fem\Gui\TaskFemConstraintFixed.ui;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(FC_SOURCE)\Mod\Fem\Gui\ui_TaskFemConstraintFixed.h</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Generating ui_TaskFemConstraintFixed.h</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+$(FC_BIN)\uic.exe -o $(FC_SOURCE)/Mod/Fem/Gui/ui_TaskFemConstraintFixed.h $(FC_SOURCE)/Mod/Fem/Gui/TaskFemConstraintFixed.ui
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(FC_SOURCE)/Mod/Fem/Gui/TaskFemConstraintFixed.ui;$(FC_SOURCE)\Mod\Fem\Gui\TaskFemConstraintFixed.ui;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(FC_SOURCE)\Mod\Fem\Gui\ui_TaskFemConstraintFixed.h</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Generating ui_TaskFemConstraintFixed.h</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+$(FC_BIN)\uic.exe -o $(FC_SOURCE)/Mod/Fem/Gui/ui_TaskFemConstraintFixed.h $(FC_SOURCE)/Mod/Fem/Gui/TaskFemConstraintFixed.ui
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">$(FC_SOURCE)/Mod/Fem/Gui/TaskFemConstraintFixed.ui;$(FC_SOURCE)\Mod\Fem\Gui\TaskFemConstraintFixed.ui;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">$(FC_SOURCE)\Mod\Fem\Gui\ui_TaskFemConstraintFixed.h</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Generating ui_TaskFemConstraintFixed.h</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+$(FC_BIN)\uic.exe -o $(FC_SOURCE)/Mod/Fem/Gui/ui_TaskFemConstraintFixed.h $(FC_SOURCE)/Mod/Fem/Gui/TaskFemConstraintFixed.ui
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(FC_SOURCE)/Mod/Fem/Gui/TaskFemConstraintFixed.ui;$(FC_SOURCE)\Mod\Fem\Gui\TaskFemConstraintFixed.ui;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(FC_SOURCE)\Mod\Fem\Gui\ui_TaskFemConstraintFixed.h</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="$(FC_SOURCE)\Mod\Fem\Gui\TaskFemConstraintFixed.h">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generating moc_TaskFemConstraintFixed.cpp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+$(FC_BIN)\moc.exe -DBOOST_TT_HAS_OPERATOR_HPP_INCLUDED $(FC_SOURCE)/Mod/Fem/Gui/TaskFemConstraintFixed.h -o $(FC_SOURCE)/Mod/Fem/Gui/moc_TaskFemConstraintFixed.cpp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(FC_SOURCE)/Mod/Fem/Gui/TaskFemConstraintFixed.h;$(FC_SOURCE)\Mod\Fem\Gui\TaskFemConstraintFixed.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(FC_SOURCE)\Mod\Fem\Gui\moc_TaskFemConstraintFixed.cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Generating moc_TaskFemConstraintFixed.cpp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+$(FC_BIN)\moc.exe -DBOOST_TT_HAS_OPERATOR_HPP_INCLUDED $(FC_SOURCE)/Mod/Fem/Gui/TaskFemConstraintFixed.h -o $(FC_SOURCE)/Mod/Fem/Gui/moc_TaskFemConstraintFixed.cpp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(FC_SOURCE)/Mod/Fem/Gui/TaskFemConstraintFixed.h;$(FC_SOURCE)\Mod\Fem\Gui\TaskFemConstraintFixed.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(FC_SOURCE)\Mod\Fem\Gui\moc_TaskFemConstraintFixed.cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Generating moc_TaskFemConstraintFixed.cpp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+$(FC_BIN)\moc.exe -DBOOST_TT_HAS_OPERATOR_HPP_INCLUDED $(FC_SOURCE)/Mod/Fem/Gui/TaskFemConstraintFixed.h -o $(FC_SOURCE)/Mod/Fem/Gui/moc_TaskFemConstraintFixed.cpp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">$(FC_SOURCE)/Mod/Fem/Gui/TaskFemConstraintFixed.h;$(FC_SOURCE)\Mod\Fem\Gui\TaskFemConstraintFixed.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">$(FC_SOURCE)\Mod\Fem\Gui\moc_TaskFemConstraintFixed.cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Generating moc_TaskFemConstraintFixed.cpp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+$(FC_BIN)\moc.exe -DBOOST_TT_HAS_OPERATOR_HPP_INCLUDED $(FC_SOURCE)/Mod/Fem/Gui/TaskFemConstraintFixed.h -o $(FC_SOURCE)/Mod/Fem/Gui/moc_TaskFemConstraintFixed.cpp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(FC_SOURCE)/Mod/Fem/Gui/TaskFemConstraintFixed.h;$(FC_SOURCE)\Mod\Fem\Gui\TaskFemConstraintFixed.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(FC_SOURCE)\Mod\Fem\Gui\moc_TaskFemConstraintFixed.cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="$(FC_SOURCE)\Mod\Fem\Gui\TaskFemConstraintForce.ui">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generating ui_TaskFemConstraintForce.h</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+$(FC_BIN)\uic.exe -o $(FC_SOURCE)/Mod/Fem/Gui/ui_TaskFemConstraintForce.h $(FC_SOURCE)/Mod/Fem/Gui/TaskFemConstraintForce.ui
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(FC_SOURCE)/Mod/Fem/Gui/TaskFemConstraintForce.ui;$(FC_SOURCE)\Mod\Fem\Gui\TaskFemConstraintForce.ui;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(FC_SOURCE)\Mod\Fem\Gui\ui_TaskFemConstraintForce.h</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Generating ui_TaskFemConstraintForce.h</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+$(FC_BIN)\uic.exe -o $(FC_SOURCE)/Mod/Fem/Gui/ui_TaskFemConstraintForce.h $(FC_SOURCE)/Mod/Fem/Gui/TaskFemConstraintForce.ui
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(FC_SOURCE)/Mod/Fem/Gui/TaskFemConstraintForce.ui;$(FC_SOURCE)\Mod\Fem\Gui\TaskFemConstraintForce.ui;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(FC_SOURCE)\Mod\Fem\Gui\ui_TaskFemConstraintForce.h</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Generating ui_TaskFemConstraintForce.h</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+$(FC_BIN)\uic.exe -o $(FC_SOURCE)/Mod/Fem/Gui/ui_TaskFemConstraintForce.h $(FC_SOURCE)/Mod/Fem/Gui/TaskFemConstraintForce.ui
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">$(FC_SOURCE)/Mod/Fem/Gui/TaskFemConstraintForce.ui;$(FC_SOURCE)\Mod\Fem\Gui\TaskFemConstraintForce.ui;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">$(FC_SOURCE)\Mod\Fem\Gui\ui_TaskFemConstraintForce.h</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Generating ui_TaskFemConstraintForce.h</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+$(FC_BIN)\uic.exe -o $(FC_SOURCE)/Mod/Fem/Gui/ui_TaskFemConstraintForce.h $(FC_SOURCE)/Mod/Fem/Gui/TaskFemConstraintForce.ui
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(FC_SOURCE)/Mod/Fem/Gui/TaskFemConstraintForce.ui;$(FC_SOURCE)\Mod\Fem\Gui\TaskFemConstraintForce.ui;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(FC_SOURCE)\Mod\Fem\Gui\ui_TaskFemConstraintForce.h</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="$(FC_SOURCE)\Mod\Fem\Gui\TaskFemConstraintForce.h">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generating moc_TaskFemConstraintForce.cpp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+$(FC_BIN)\moc.exe -DBOOST_TT_HAS_OPERATOR_HPP_INCLUDED $(FC_SOURCE)/Mod/Fem/Gui/TaskFemConstraintForce.h -o $(FC_SOURCE)/Mod/Fem/Gui/moc_TaskFemConstraintForce.cpp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(FC_SOURCE)/Mod/Fem/Gui/TaskFemConstraintForce.h;$(FC_SOURCE)\Mod\Fem\Gui\TaskFemConstraintForce.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(FC_SOURCE)\Mod\Fem\Gui\moc_TaskFemConstraintForce.cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Generating moc_TaskFemConstraintForce.cpp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+$(FC_BIN)\moc.exe -DBOOST_TT_HAS_OPERATOR_HPP_INCLUDED $(FC_SOURCE)/Mod/Fem/Gui/TaskFemConstraintForce.h -o $(FC_SOURCE)/Mod/Fem/Gui/moc_TaskFemConstraintForce.cpp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(FC_SOURCE)/Mod/Fem/Gui/TaskFemConstraintForce.h;$(FC_SOURCE)\Mod\Fem\Gui\TaskFemConstraintForce.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(FC_SOURCE)\Mod\Fem\Gui\moc_TaskFemConstraintForce.cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Generating moc_TaskFemConstraintForce.cpp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+$(FC_BIN)\moc.exe -DBOOST_TT_HAS_OPERATOR_HPP_INCLUDED $(FC_SOURCE)/Mod/Fem/Gui/TaskFemConstraintForce.h -o $(FC_SOURCE)/Mod/Fem/Gui/moc_TaskFemConstraintForce.cpp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">$(FC_SOURCE)/Mod/Fem/Gui/TaskFemConstraintForce.h;$(FC_SOURCE)\Mod\Fem\Gui\TaskFemConstraintForce.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">$(FC_SOURCE)\Mod\Fem\Gui\moc_TaskFemConstraintForce.cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Generating moc_TaskFemConstraintForce.cpp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+$(FC_BIN)\moc.exe -DBOOST_TT_HAS_OPERATOR_HPP_INCLUDED $(FC_SOURCE)/Mod/Fem/Gui/TaskFemConstraintForce.h -o $(FC_SOURCE)/Mod/Fem/Gui/moc_TaskFemConstraintForce.cpp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(FC_SOURCE)/Mod/Fem/Gui/TaskFemConstraintForce.h;$(FC_SOURCE)\Mod\Fem\Gui\TaskFemConstraintForce.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(FC_SOURCE)\Mod\Fem\Gui\moc_TaskFemConstraintForce.cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="$(FC_SOURCE)\Mod\Fem\Gui\TaskFemConstraintPressure.ui">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generating ui_TaskFemConstraintPressure.h</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+$(FC_BIN)\uic.exe -o $(FC_SOURCE)/Mod/Fem/Gui/ui_TaskFemConstraintPressure.h $(FC_SOURCE)/Mod/Fem/Gui/TaskFemConstraintPressure.ui
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(FC_SOURCE)/Mod/Fem/Gui/TaskFemConstraintPressure.ui;$(FC_SOURCE)\Mod\Fem\Gui\TaskFemConstraintPressure.ui;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(FC_SOURCE)\Mod\Fem\Gui\ui_TaskFemConstraintPressure.h</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Generating ui_TaskFemConstraintPressure.h</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+$(FC_BIN)\uic.exe -o $(FC_SOURCE)/Mod/Fem/Gui/ui_TaskFemConstraintPressure.h $(FC_SOURCE)/Mod/Fem/Gui/TaskFemConstraintPressure.ui
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(FC_SOURCE)/Mod/Fem/Gui/TaskFemConstraintPressure.ui;$(FC_SOURCE)\Mod\Fem\Gui\TaskFemConstraintPressure.ui;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(FC_SOURCE)\Mod\Fem\Gui\ui_TaskFemConstraintPressure.h</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Generating ui_TaskFemConstraintPressure.h</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+$(FC_BIN)\uic.exe -o $(FC_SOURCE)/Mod/Fem/Gui/ui_TaskFemConstraintPressure.h $(FC_SOURCE)/Mod/Fem/Gui/TaskFemConstraintPressure.ui
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">$(FC_SOURCE)/Mod/Fem/Gui/TaskFemConstraintPressure.ui;$(FC_SOURCE)\Mod\Fem\Gui\TaskFemConstraintPressure.ui;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">$(FC_SOURCE)\Mod\Fem\Gui\ui_TaskFemConstraintPressure.h</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Generating ui_TaskFemConstraintPressure.h</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+$(FC_BIN)\uic.exe -o $(FC_SOURCE)/Mod/Fem/Gui/ui_TaskFemConstraintPressure.h $(FC_SOURCE)/Mod/Fem/Gui/TaskFemConstraintPressure.ui
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(FC_SOURCE)/Mod/Fem/Gui/TaskFemConstraintPressure.ui;$(FC_SOURCE)\Mod\Fem\Gui\TaskFemConstraintPressure.ui;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(FC_SOURCE)\Mod\Fem\Gui\ui_TaskFemConstraintPressure.h</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="$(FC_SOURCE)\Mod\Fem\Gui\TaskFemConstraintPressure.h">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generating moc_TaskFemConstraintPressure.cpp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+$(FC_BIN)\moc.exe -DBOOST_TT_HAS_OPERATOR_HPP_INCLUDED $(FC_SOURCE)/Mod/Fem/Gui/TaskFemConstraintPressure.h -o $(FC_SOURCE)/Mod/Fem/Gui/moc_TaskFemConstraintPressure.cpp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(FC_SOURCE)/Mod/Fem/Gui/TaskFemConstraintPressure.h;$(FC_SOURCE)\Mod\Fem\Gui\TaskFemConstraintPressure.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(FC_SOURCE)\Mod\Fem\Gui\moc_TaskFemConstraintPressure.cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Generating moc_TaskFemConstraintPressure.cpp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+$(FC_BIN)\moc.exe -DBOOST_TT_HAS_OPERATOR_HPP_INCLUDED $(FC_SOURCE)/Mod/Fem/Gui/TaskFemConstraintPressure.h -o $(FC_SOURCE)/Mod/Fem/Gui/moc_TaskFemConstraintPressure.cpp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(FC_SOURCE)/Mod/Fem/Gui/TaskFemConstraintPressure.h;$(FC_SOURCE)\Mod\Fem\Gui\TaskFemConstraintPressure.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(FC_SOURCE)\Mod\Fem\Gui\moc_TaskFemConstraintPressure.cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Generating moc_TaskFemConstraintPressure.cpp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+$(FC_BIN)\moc.exe -DBOOST_TT_HAS_OPERATOR_HPP_INCLUDED $(FC_SOURCE)/Mod/Fem/Gui/TaskFemConstraintPressure.h -o $(FC_SOURCE)/Mod/Fem/Gui/moc_TaskFemConstraintPressure.cpp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">$(FC_SOURCE)/Mod/Fem/Gui/TaskFemConstraintPressure.h;$(FC_SOURCE)\Mod\Fem\Gui\TaskFemConstraintPressure.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">$(FC_SOURCE)\Mod\Fem\Gui\moc_TaskFemConstraintPressure.cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Generating moc_TaskFemConstraintPressure.cpp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+$(FC_BIN)\moc.exe -DBOOST_TT_HAS_OPERATOR_HPP_INCLUDED $(FC_SOURCE)/Mod/Fem/Gui/TaskFemConstraintPressure.h -o $(FC_SOURCE)/Mod/Fem/Gui/moc_TaskFemConstraintPressure.cpp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(FC_SOURCE)/Mod/Fem/Gui/TaskFemConstraintPressure.h;$(FC_SOURCE)\Mod\Fem\Gui\TaskFemConstraintPressure.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(FC_SOURCE)\Mod\Fem\Gui\moc_TaskFemConstraintPressure.cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="$(FC_SOURCE)\Mod\Fem\Gui\TaskFemConstraintGear.h">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generating moc_TaskFemConstraintGear.cpp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+$(FC_BIN)\moc.exe -DBOOST_TT_HAS_OPERATOR_HPP_INCLUDED $(FC_SOURCE)/Mod/Fem/Gui/TaskFemConstraintGear.h -o $(FC_SOURCE)/Mod/Fem/Gui/moc_TaskFemConstraintGear.cpp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(FC_SOURCE)/Mod/Fem/Gui/TaskFemConstraintGear.h;$(FC_SOURCE)\Mod\Fem\Gui\TaskFemConstraintGear.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(FC_SOURCE)\Mod\Fem\Gui\moc_TaskFemConstraintGear.cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Generating moc_TaskFemConstraintGear.cpp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+$(FC_BIN)\moc.exe -DBOOST_TT_HAS_OPERATOR_HPP_INCLUDED $(FC_SOURCE)/Mod/Fem/Gui/TaskFemConstraintGear.h -o $(FC_SOURCE)/Mod/Fem/Gui/moc_TaskFemConstraintGear.cpp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(FC_SOURCE)/Mod/Fem/Gui/TaskFemConstraintGear.h;$(FC_SOURCE)\Mod\Fem\Gui\TaskFemConstraintGear.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(FC_SOURCE)\Mod\Fem\Gui\moc_TaskFemConstraintGear.cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Generating moc_TaskFemConstraintGear.cpp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+$(FC_BIN)\moc.exe -DBOOST_TT_HAS_OPERATOR_HPP_INCLUDED $(FC_SOURCE)/Mod/Fem/Gui/TaskFemConstraintGear.h -o $(FC_SOURCE)/Mod/Fem/Gui/moc_TaskFemConstraintGear.cpp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">$(FC_SOURCE)/Mod/Fem/Gui/TaskFemConstraintGear.h;$(FC_SOURCE)\Mod\Fem\Gui\TaskFemConstraintGear.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">$(FC_SOURCE)\Mod\Fem\Gui\moc_TaskFemConstraintGear.cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Generating moc_TaskFemConstraintGear.cpp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+$(FC_BIN)\moc.exe -DBOOST_TT_HAS_OPERATOR_HPP_INCLUDED $(FC_SOURCE)/Mod/Fem/Gui/TaskFemConstraintGear.h -o $(FC_SOURCE)/Mod/Fem/Gui/moc_TaskFemConstraintGear.cpp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(FC_SOURCE)/Mod/Fem/Gui/TaskFemConstraintGear.h;$(FC_SOURCE)\Mod\Fem\Gui\TaskFemConstraintGear.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(FC_SOURCE)\Mod\Fem\Gui\moc_TaskFemConstraintGear.cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="$(FC_SOURCE)\Mod\Fem\Gui\TaskFemConstraintPulley.h">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generating moc_TaskFemConstraintPulley.cpp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+$(FC_BIN)\moc.exe -DBOOST_TT_HAS_OPERATOR_HPP_INCLUDED $(FC_SOURCE)/Mod/Fem/Gui/TaskFemConstraintPulley.h -o $(FC_SOURCE)/Mod/Fem/Gui/moc_TaskFemConstraintPulley.cpp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(FC_SOURCE)/Mod/Fem/Gui/TaskFemConstraintPulley.h;$(FC_SOURCE)\Mod\Fem\Gui\TaskFemConstraintPulley.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(FC_SOURCE)\Mod\Fem\Gui\moc_TaskFemConstraintPulley.cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Generating moc_TaskFemConstraintPulley.cpp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+$(FC_BIN)\moc.exe -DBOOST_TT_HAS_OPERATOR_HPP_INCLUDED $(FC_SOURCE)/Mod/Fem/Gui/TaskFemConstraintPulley.h -o $(FC_SOURCE)/Mod/Fem/Gui/moc_TaskFemConstraintPulley.cpp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(FC_SOURCE)/Mod/Fem/Gui/TaskFemConstraintPulley.h;$(FC_SOURCE)\Mod\Fem\Gui\TaskFemConstraintPulley.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(FC_SOURCE)\Mod\Fem\Gui\moc_TaskFemConstraintPulley.cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Generating moc_TaskFemConstraintPulley.cpp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+$(FC_BIN)\moc.exe -DBOOST_TT_HAS_OPERATOR_HPP_INCLUDED $(FC_SOURCE)/Mod/Fem/Gui/TaskFemConstraintPulley.h -o $(FC_SOURCE)/Mod/Fem/Gui/moc_TaskFemConstraintPulley.cpp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">$(FC_SOURCE)/Mod/Fem/Gui/TaskFemConstraintPulley.h;$(FC_SOURCE)\Mod\Fem\Gui\TaskFemConstraintPulley.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">$(FC_SOURCE)\Mod\Fem\Gui\moc_TaskFemConstraintPulley.cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Generating moc_TaskFemConstraintPulley.cpp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+$(FC_BIN)\moc.exe -DBOOST_TT_HAS_OPERATOR_HPP_INCLUDED $(FC_SOURCE)/Mod/Fem/Gui/TaskFemConstraintPulley.h -o $(FC_SOURCE)/Mod/Fem/Gui/moc_TaskFemConstraintPulley.cpp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(FC_SOURCE)/Mod/Fem/Gui/TaskFemConstraintPulley.h;$(FC_SOURCE)\Mod\Fem\Gui\TaskFemConstraintPulley.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(FC_SOURCE)\Mod\Fem\Gui\moc_TaskFemConstraintPulley.cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="$(FC_SOURCE)\Mod\Fem\Gui\TaskDlgCreateNodeSet.h">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generating moc_TaskDlgCreateNodeSet.cpp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+$(FC_BIN)\moc.exe -DBOOST_TT_HAS_OPERATOR_HPP_INCLUDED $(FC_SOURCE)/Mod/Fem/Gui/TaskDlgCreateNodeSet.h -o $(FC_SOURCE)/Mod/Fem/Gui/moc_TaskDlgCreateNodeSet.cpp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(FC_SOURCE)/Mod/Fem/Gui/TaskDlgCreateNodeSet.h;$(FC_SOURCE)\Mod\Fem\Gui\TaskDlgCreateNodeSet.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(FC_SOURCE)\Mod\Fem\Gui\moc_TaskDlgCreateNodeSet.cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Generating moc_TaskDlgCreateNodeSet.cpp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+$(FC_BIN)\moc.exe -DBOOST_TT_HAS_OPERATOR_HPP_INCLUDED $(FC_SOURCE)/Mod/Fem/Gui/TaskDlgCreateNodeSet.h -o $(FC_SOURCE)/Mod/Fem/Gui/moc_TaskDlgCreateNodeSet.cpp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(FC_SOURCE)/Mod/Fem/Gui/TaskDlgCreateNodeSet.h;$(FC_SOURCE)\Mod\Fem\Gui\TaskDlgCreateNodeSet.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(FC_SOURCE)\Mod\Fem\Gui\moc_TaskDlgCreateNodeSet.cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Generating moc_TaskDlgCreateNodeSet.cpp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+$(FC_BIN)\moc.exe -DBOOST_TT_HAS_OPERATOR_HPP_INCLUDED $(FC_SOURCE)/Mod/Fem/Gui/TaskDlgCreateNodeSet.h -o $(FC_SOURCE)/Mod/Fem/Gui/moc_TaskDlgCreateNodeSet.cpp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">$(FC_SOURCE)/Mod/Fem/Gui/TaskDlgCreateNodeSet.h;$(FC_SOURCE)\Mod\Fem\Gui\TaskDlgCreateNodeSet.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">$(FC_SOURCE)\Mod\Fem\Gui\moc_TaskDlgCreateNodeSet.cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Generating moc_TaskDlgCreateNodeSet.cpp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+$(FC_BIN)\moc.exe -DBOOST_TT_HAS_OPERATOR_HPP_INCLUDED $(FC_SOURCE)/Mod/Fem/Gui/TaskDlgCreateNodeSet.h -o $(FC_SOURCE)/Mod/Fem/Gui/moc_TaskDlgCreateNodeSet.cpp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(FC_SOURCE)/Mod/Fem/Gui/TaskDlgCreateNodeSet.h;$(FC_SOURCE)\Mod\Fem\Gui\TaskDlgCreateNodeSet.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(FC_SOURCE)\Mod\Fem\Gui\moc_TaskDlgCreateNodeSet.cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="$(FC_SOURCE)\Mod\Fem\Gui\TaskDlgMeshShapeNetgen.h">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generating moc_TaskDlgMeshShapeNetgen.cpp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+$(FC_BIN)\moc.exe -DBOOST_TT_HAS_OPERATOR_HPP_INCLUDED $(FC_SOURCE)/Mod/Fem/Gui/TaskDlgMeshShapeNetgen.h -o $(FC_SOURCE)/Mod/Fem/Gui/moc_TaskDlgMeshShapeNetgen.cpp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(FC_SOURCE)/Mod/Fem/Gui/TaskDlgMeshShapeNetgen.h;$(FC_SOURCE)\Mod\Fem\Gui\TaskDlgMeshShapeNetgen.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(FC_SOURCE)\Mod\Fem\Gui\moc_TaskDlgMeshShapeNetgen.cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Generating moc_TaskDlgMeshShapeNetgen.cpp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+$(FC_BIN)\moc.exe -DBOOST_TT_HAS_OPERATOR_HPP_INCLUDED $(FC_SOURCE)/Mod/Fem/Gui/TaskDlgMeshShapeNetgen.h -o $(FC_SOURCE)/Mod/Fem/Gui/moc_TaskDlgMeshShapeNetgen.cpp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(FC_SOURCE)/Mod/Fem/Gui/TaskDlgMeshShapeNetgen.h;$(FC_SOURCE)\Mod\Fem\Gui\TaskDlgMeshShapeNetgen.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(FC_SOURCE)\Mod\Fem\Gui\moc_TaskDlgMeshShapeNetgen.cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Generating moc_TaskDlgMeshShapeNetgen.cpp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+$(FC_BIN)\moc.exe -DBOOST_TT_HAS_OPERATOR_HPP_INCLUDED $(FC_SOURCE)/Mod/Fem/Gui/TaskDlgMeshShapeNetgen.h -o $(FC_SOURCE)/Mod/Fem/Gui/moc_TaskDlgMeshShapeNetgen.cpp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">$(FC_SOURCE)/Mod/Fem/Gui/TaskDlgMeshShapeNetgen.h;$(FC_SOURCE)\Mod\Fem\Gui\TaskDlgMeshShapeNetgen.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">$(FC_SOURCE)\Mod\Fem\Gui\moc_TaskDlgMeshShapeNetgen.cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Generating moc_TaskDlgMeshShapeNetgen.cpp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+$(FC_BIN)\moc.exe -DBOOST_TT_HAS_OPERATOR_HPP_INCLUDED $(FC_SOURCE)/Mod/Fem/Gui/TaskDlgMeshShapeNetgen.h -o $(FC_SOURCE)/Mod/Fem/Gui/moc_TaskDlgMeshShapeNetgen.cpp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(FC_SOURCE)/Mod/Fem/Gui/TaskDlgMeshShapeNetgen.h;$(FC_SOURCE)\Mod\Fem\Gui\TaskDlgMeshShapeNetgen.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(FC_SOURCE)\Mod\Fem\Gui\moc_TaskDlgMeshShapeNetgen.cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="$(FC_SOURCE)\Mod\Fem\Gui\TaskDlgAnalysis.h">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generating moc_TaskDlgAnalysis.cpp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+$(FC_BIN)\moc.exe -DBOOST_TT_HAS_OPERATOR_HPP_INCLUDED $(FC_SOURCE)/Mod/Fem/Gui/TaskDlgAnalysis.h -o $(FC_SOURCE)/Mod/Fem/Gui/moc_TaskDlgAnalysis.cpp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(FC_SOURCE)/Mod/Fem/Gui/TaskDlgAnalysis.h;$(FC_SOURCE)\Mod\Fem\Gui\TaskDlgAnalysis.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(FC_SOURCE)\Mod\Fem\Gui\moc_TaskDlgAnalysis.cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Generating moc_TaskDlgAnalysis.cpp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+$(FC_BIN)\moc.exe -DBOOST_TT_HAS_OPERATOR_HPP_INCLUDED $(FC_SOURCE)/Mod/Fem/Gui/TaskDlgAnalysis.h -o $(FC_SOURCE)/Mod/Fem/Gui/moc_TaskDlgAnalysis.cpp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(FC_SOURCE)/Mod/Fem/Gui/TaskDlgAnalysis.h;$(FC_SOURCE)\Mod\Fem\Gui\TaskDlgAnalysis.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(FC_SOURCE)\Mod\Fem\Gui\moc_TaskDlgAnalysis.cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Generating moc_TaskDlgAnalysis.cpp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+$(FC_BIN)\moc.exe -DBOOST_TT_HAS_OPERATOR_HPP_INCLUDED $(FC_SOURCE)/Mod/Fem/Gui/TaskDlgAnalysis.h -o $(FC_SOURCE)/Mod/Fem/Gui/moc_TaskDlgAnalysis.cpp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">$(FC_SOURCE)/Mod/Fem/Gui/TaskDlgAnalysis.h;$(FC_SOURCE)\Mod\Fem\Gui\TaskDlgAnalysis.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">$(FC_SOURCE)\Mod\Fem\Gui\moc_TaskDlgAnalysis.cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Generating moc_TaskDlgAnalysis.cpp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+$(FC_BIN)\moc.exe -DBOOST_TT_HAS_OPERATOR_HPP_INCLUDED $(FC_SOURCE)/Mod/Fem/Gui/TaskDlgAnalysis.h -o $(FC_SOURCE)/Mod/Fem/Gui/moc_TaskDlgAnalysis.cpp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(FC_SOURCE)/Mod/Fem/Gui/TaskDlgAnalysis.h;$(FC_SOURCE)\Mod\Fem\Gui\TaskDlgAnalysis.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(FC_SOURCE)\Mod\Fem\Gui\moc_TaskDlgAnalysis.cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="$(FC_SOURCE)\Mod\Fem\Gui\TaskObjectName.ui">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generating ui_TaskObjectName.h</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+$(FC_BIN)\uic.exe -o $(FC_SOURCE)/Mod/Fem/Gui/ui_TaskObjectName.h $(FC_SOURCE)/Mod/Fem/Gui/TaskObjectName.ui
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(FC_SOURCE)/Mod/Fem/Gui/TaskObjectName.ui;$(FC_SOURCE)\Mod\Fem\Gui\TaskObjectName.ui;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(FC_SOURCE)\Mod\Fem\Gui\ui_TaskObjectName.h</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Generating ui_TaskObjectName.h</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+$(FC_BIN)\uic.exe -o $(FC_SOURCE)/Mod/Fem/Gui/ui_TaskObjectName.h $(FC_SOURCE)/Mod/Fem/Gui/TaskObjectName.ui
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(FC_SOURCE)/Mod/Fem/Gui/TaskObjectName.ui;$(FC_SOURCE)\Mod\Fem\Gui\TaskObjectName.ui;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(FC_SOURCE)\Mod\Fem\Gui\ui_TaskObjectName.h</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Generating ui_TaskObjectName.h</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+$(FC_BIN)\uic.exe -o $(FC_SOURCE)/Mod/Fem/Gui/ui_TaskObjectName.h $(FC_SOURCE)/Mod/Fem/Gui/TaskObjectName.ui
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">$(FC_SOURCE)/Mod/Fem/Gui/TaskObjectName.ui;$(FC_SOURCE)\Mod\Fem\Gui\TaskObjectName.ui;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">$(FC_SOURCE)\Mod\Fem\Gui\ui_TaskObjectName.h</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Generating ui_TaskObjectName.h</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+$(FC_BIN)\uic.exe -o $(FC_SOURCE)/Mod/Fem/Gui/ui_TaskObjectName.h $(FC_SOURCE)/Mod/Fem/Gui/TaskObjectName.ui
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(FC_SOURCE)/Mod/Fem/Gui/TaskObjectName.ui;$(FC_SOURCE)\Mod\Fem\Gui\TaskObjectName.ui;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(FC_SOURCE)\Mod\Fem\Gui\ui_TaskObjectName.h</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="$(FC_SOURCE)\Mod\Fem\Gui\TaskObjectName.h">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generating moc_TaskObjectName.cpp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+$(FC_BIN)\moc.exe -DBOOST_TT_HAS_OPERATOR_HPP_INCLUDED $(FC_SOURCE)/Mod/Fem/Gui/TaskObjectName.h -o $(FC_SOURCE)/Mod/Fem/Gui/moc_TaskObjectName.cpp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(FC_SOURCE)/Mod/Fem/Gui/TaskObjectName.h;$(FC_SOURCE)\Mod\Fem\Gui\TaskObjectName.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(FC_SOURCE)\Mod\Fem\Gui\moc_TaskObjectName.cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Generating moc_TaskObjectName.cpp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+$(FC_BIN)\moc.exe -DBOOST_TT_HAS_OPERATOR_HPP_INCLUDED $(FC_SOURCE)/Mod/Fem/Gui/TaskObjectName.h -o $(FC_SOURCE)/Mod/Fem/Gui/moc_TaskObjectName.cpp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(FC_SOURCE)/Mod/Fem/Gui/TaskObjectName.h;$(FC_SOURCE)\Mod\Fem\Gui\TaskObjectName.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(FC_SOURCE)\Mod\Fem\Gui\moc_TaskObjectName.cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Generating moc_TaskObjectName.cpp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+$(FC_BIN)\moc.exe -DBOOST_TT_HAS_OPERATOR_HPP_INCLUDED $(FC_SOURCE)/Mod/Fem/Gui/TaskObjectName.h -o $(FC_SOURCE)/Mod/Fem/Gui/moc_TaskObjectName.cpp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">$(FC_SOURCE)/Mod/Fem/Gui/TaskObjectName.h;$(FC_SOURCE)\Mod\Fem\Gui\TaskObjectName.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">$(FC_SOURCE)\Mod\Fem\Gui\moc_TaskObjectName.cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Generating moc_TaskObjectName.cpp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+$(FC_BIN)\moc.exe -DBOOST_TT_HAS_OPERATOR_HPP_INCLUDED $(FC_SOURCE)/Mod/Fem/Gui/TaskObjectName.h -o $(FC_SOURCE)/Mod/Fem/Gui/moc_TaskObjectName.cpp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(FC_SOURCE)/Mod/Fem/Gui/TaskObjectName.h;$(FC_SOURCE)\Mod\Fem\Gui\TaskObjectName.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(FC_SOURCE)\Mod\Fem\Gui\moc_TaskObjectName.cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="$(FC_SOURCE)\Mod\Fem\Gui\TaskCreateNodeSet.ui">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generating ui_TaskCreateNodeSet.h</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+$(FC_BIN)\uic.exe -o $(FC_SOURCE)/Mod/Fem/Gui/ui_TaskCreateNodeSet.h $(FC_SOURCE)/Mod/Fem/Gui/TaskCreateNodeSet.ui
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(FC_SOURCE)/Mod/Fem/Gui/TaskCreateNodeSet.ui;$(FC_SOURCE)\Mod\Fem\Gui\TaskCreateNodeSet.ui;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(FC_SOURCE)\Mod\Fem\Gui\ui_TaskCreateNodeSet.h</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Generating ui_TaskCreateNodeSet.h</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+$(FC_BIN)\uic.exe -o $(FC_SOURCE)/Mod/Fem/Gui/ui_TaskCreateNodeSet.h $(FC_SOURCE)/Mod/Fem/Gui/TaskCreateNodeSet.ui
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(FC_SOURCE)/Mod/Fem/Gui/TaskCreateNodeSet.ui;$(FC_SOURCE)\Mod\Fem\Gui\TaskCreateNodeSet.ui;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(FC_SOURCE)\Mod\Fem\Gui\ui_TaskCreateNodeSet.h</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Generating ui_TaskCreateNodeSet.h</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+$(FC_BIN)\uic.exe -o $(FC_SOURCE)/Mod/Fem/Gui/ui_TaskCreateNodeSet.h $(FC_SOURCE)/Mod/Fem/Gui/TaskCreateNodeSet.ui
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">$(FC_SOURCE)/Mod/Fem/Gui/TaskCreateNodeSet.ui;$(FC_SOURCE)\Mod\Fem\Gui\TaskCreateNodeSet.ui;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">$(FC_SOURCE)\Mod\Fem\Gui\ui_TaskCreateNodeSet.h</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Generating ui_TaskCreateNodeSet.h</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+$(FC_BIN)\uic.exe -o $(FC_SOURCE)/Mod/Fem/Gui/ui_TaskCreateNodeSet.h $(FC_SOURCE)/Mod/Fem/Gui/TaskCreateNodeSet.ui
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(FC_SOURCE)/Mod/Fem/Gui/TaskCreateNodeSet.ui;$(FC_SOURCE)\Mod\Fem\Gui\TaskCreateNodeSet.ui;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(FC_SOURCE)\Mod\Fem\Gui\ui_TaskCreateNodeSet.h</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="$(FC_SOURCE)\Mod\Fem\Gui\TaskCreateNodeSet.h">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generating moc_TaskCreateNodeSet.cpp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+$(FC_BIN)\moc.exe -DBOOST_TT_HAS_OPERATOR_HPP_INCLUDED $(FC_SOURCE)/Mod/Fem/Gui/TaskCreateNodeSet.h -o $(FC_SOURCE)/Mod/Fem/Gui/moc_TaskCreateNodeSet.cpp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(FC_SOURCE)/Mod/Fem/Gui/TaskCreateNodeSet.h;$(FC_SOURCE)\Mod\Fem\Gui\TaskCreateNodeSet.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(FC_SOURCE)\Mod\Fem\Gui\moc_TaskCreateNodeSet.cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Generating moc_TaskCreateNodeSet.cpp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+$(FC_BIN)\moc.exe -DBOOST_TT_HAS_OPERATOR_HPP_INCLUDED $(FC_SOURCE)/Mod/Fem/Gui/TaskCreateNodeSet.h -o $(FC_SOURCE)/Mod/Fem/Gui/moc_TaskCreateNodeSet.cpp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(FC_SOURCE)/Mod/Fem/Gui/TaskCreateNodeSet.h;$(FC_SOURCE)\Mod\Fem\Gui\TaskCreateNodeSet.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(FC_SOURCE)\Mod\Fem\Gui\moc_TaskCreateNodeSet.cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Generating moc_TaskCreateNodeSet.cpp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+$(FC_BIN)\moc.exe -DBOOST_TT_HAS_OPERATOR_HPP_INCLUDED $(FC_SOURCE)/Mod/Fem/Gui/TaskCreateNodeSet.h -o $(FC_SOURCE)/Mod/Fem/Gui/moc_TaskCreateNodeSet.cpp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">$(FC_SOURCE)/Mod/Fem/Gui/TaskCreateNodeSet.h;$(FC_SOURCE)\Mod\Fem\Gui\TaskCreateNodeSet.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">$(FC_SOURCE)\Mod\Fem\Gui\moc_TaskCreateNodeSet.cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Generating moc_TaskCreateNodeSet.cpp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+$(FC_BIN)\moc.exe -DBOOST_TT_HAS_OPERATOR_HPP_INCLUDED $(FC_SOURCE)/Mod/Fem/Gui/TaskCreateNodeSet.h -o $(FC_SOURCE)/Mod/Fem/Gui/moc_TaskCreateNodeSet.cpp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(FC_SOURCE)/Mod/Fem/Gui/TaskCreateNodeSet.h;$(FC_SOURCE)\Mod\Fem\Gui\TaskCreateNodeSet.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(FC_SOURCE)\Mod\Fem\Gui\moc_TaskCreateNodeSet.cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="$(FC_SOURCE)\Mod\Fem\Gui\TaskDriver.ui">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generating ui_TaskDriver.h</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+$(FC_BIN)\uic.exe -o $(FC_SOURCE)/Mod/Fem/Gui/ui_TaskDriver.h $(FC_SOURCE)/Mod/Fem/Gui/TaskDriver.ui
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(FC_SOURCE)/Mod/Fem/Gui/TaskDriver.ui;$(FC_SOURCE)\Mod\Fem\Gui\TaskDriver.ui;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(FC_SOURCE)\Mod\Fem\Gui\ui_TaskDriver.h</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Generating ui_TaskDriver.h</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+$(FC_BIN)\uic.exe -o $(FC_SOURCE)/Mod/Fem/Gui/ui_TaskDriver.h $(FC_SOURCE)/Mod/Fem/Gui/TaskDriver.ui
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(FC_SOURCE)/Mod/Fem/Gui/TaskDriver.ui;$(FC_SOURCE)\Mod\Fem\Gui\TaskDriver.ui;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(FC_SOURCE)\Mod\Fem\Gui\ui_TaskDriver.h</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Generating ui_TaskDriver.h</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+$(FC_BIN)\uic.exe -o $(FC_SOURCE)/Mod/Fem/Gui/ui_TaskDriver.h $(FC_SOURCE)/Mod/Fem/Gui/TaskDriver.ui
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">$(FC_SOURCE)/Mod/Fem/Gui/TaskDriver.ui;$(FC_SOURCE)\Mod\Fem\Gui\TaskDriver.ui;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">$(FC_SOURCE)\Mod\Fem\Gui\ui_TaskDriver.h</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Generating ui_TaskDriver.h</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+$(FC_BIN)\uic.exe -o $(FC_SOURCE)/Mod/Fem/Gui/ui_TaskDriver.h $(FC_SOURCE)/Mod/Fem/Gui/TaskDriver.ui
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(FC_SOURCE)/Mod/Fem/Gui/TaskDriver.ui;$(FC_SOURCE)\Mod\Fem\Gui\TaskDriver.ui;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(FC_SOURCE)\Mod\Fem\Gui\ui_TaskDriver.h</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="$(FC_SOURCE)\Mod\Fem\Gui\TaskDriver.h">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generating moc_TaskDriver.cpp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+$(FC_BIN)\moc.exe -DBOOST_TT_HAS_OPERATOR_HPP_INCLUDED $(FC_SOURCE)/Mod/Fem/Gui/TaskDriver.h -o $(FC_SOURCE)/Mod/Fem/Gui/moc_TaskDriver.cpp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(FC_SOURCE)/Mod/Fem/Gui/TaskDriver.h;$(FC_SOURCE)\Mod\Fem\Gui\TaskDriver.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(FC_SOURCE)\Mod\Fem\Gui\moc_TaskDriver.cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Generating moc_TaskDriver.cpp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+$(FC_BIN)\moc.exe -DBOOST_TT_HAS_OPERATOR_HPP_INCLUDED $(FC_SOURCE)/Mod/Fem/Gui/TaskDriver.h -o $(FC_SOURCE)/Mod/Fem/Gui/moc_TaskDriver.cpp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(FC_SOURCE)/Mod/Fem/Gui/TaskDriver.h;$(FC_SOURCE)\Mod\Fem\Gui\TaskDriver.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(FC_SOURCE)\Mod\Fem\Gui\moc_TaskDriver.cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Generating moc_TaskDriver.cpp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+$(FC_BIN)\moc.exe -DBOOST_TT_HAS_OPERATOR_HPP_INCLUDED $(FC_SOURCE)/Mod/Fem/Gui/TaskDriver.h -o $(FC_SOURCE)/Mod/Fem/Gui/moc_TaskDriver.cpp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">$(FC_SOURCE)/Mod/Fem/Gui/TaskDriver.h;$(FC_SOURCE)\Mod\Fem\Gui\TaskDriver.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">$(FC_SOURCE)\Mod\Fem\Gui\moc_TaskDriver.cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Generating moc_TaskDriver.cpp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+$(FC_BIN)\moc.exe -DBOOST_TT_HAS_OPERATOR_HPP_INCLUDED $(FC_SOURCE)/Mod/Fem/Gui/TaskDriver.h -o $(FC_SOURCE)/Mod/Fem/Gui/moc_TaskDriver.cpp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(FC_SOURCE)/Mod/Fem/Gui/TaskDriver.h;$(FC_SOURCE)\Mod\Fem\Gui\TaskDriver.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(FC_SOURCE)\Mod\Fem\Gui\moc_TaskDriver.cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="$(FC_SOURCE)\Mod\Fem\Gui\TaskAnalysisInfo.ui">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generating ui_TaskAnalysisInfo.h</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+$(FC_BIN)\uic.exe -o $(FC_SOURCE)/Mod/Fem/Gui/ui_TaskAnalysisInfo.h $(FC_SOURCE)/Mod/Fem/Gui/TaskAnalysisInfo.ui
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(FC_SOURCE)/Mod/Fem/Gui/TaskAnalysisInfo.ui;$(FC_SOURCE)\Mod\Fem\Gui\TaskAnalysisInfo.ui;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(FC_SOURCE)\Mod\Fem\Gui\ui_TaskAnalysisInfo.h</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Generating ui_TaskAnalysisInfo.h</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+$(FC_BIN)\uic.exe -o $(FC_SOURCE)/Mod/Fem/Gui/ui_TaskAnalysisInfo.h $(FC_SOURCE)/Mod/Fem/Gui/TaskAnalysisInfo.ui
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(FC_SOURCE)/Mod/Fem/Gui/TaskAnalysisInfo.ui;$(FC_SOURCE)\Mod\Fem\Gui\TaskAnalysisInfo.ui;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(FC_SOURCE)\Mod\Fem\Gui\ui_TaskAnalysisInfo.h</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Generating ui_TaskAnalysisInfo.h</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+$(FC_BIN)\uic.exe -o $(FC_SOURCE)/Mod/Fem/Gui/ui_TaskAnalysisInfo.h $(FC_SOURCE)/Mod/Fem/Gui/TaskAnalysisInfo.ui
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">$(FC_SOURCE)/Mod/Fem/Gui/TaskAnalysisInfo.ui;$(FC_SOURCE)\Mod\Fem\Gui\TaskAnalysisInfo.ui;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">$(FC_SOURCE)\Mod\Fem\Gui\ui_TaskAnalysisInfo.h</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Generating ui_TaskAnalysisInfo.h</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+$(FC_BIN)\uic.exe -o $(FC_SOURCE)/Mod/Fem/Gui/ui_TaskAnalysisInfo.h $(FC_SOURCE)/Mod/Fem/Gui/TaskAnalysisInfo.ui
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(FC_SOURCE)/Mod/Fem/Gui/TaskAnalysisInfo.ui;$(FC_SOURCE)\Mod\Fem\Gui\TaskAnalysisInfo.ui;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(FC_SOURCE)\Mod\Fem\Gui\ui_TaskAnalysisInfo.h</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="$(FC_SOURCE)\Mod\Fem\Gui\TaskAnalysisInfo.h">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generating moc_TaskAnalysisInfo.cpp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+$(FC_BIN)\moc.exe -DBOOST_TT_HAS_OPERATOR_HPP_INCLUDED $(FC_SOURCE)/Mod/Fem/Gui/TaskAnalysisInfo.h -o $(FC_SOURCE)/Mod/Fem/Gui/moc_TaskAnalysisInfo.cpp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(FC_SOURCE)/Mod/Fem/Gui/TaskAnalysisInfo.h;$(FC_SOURCE)\Mod\Fem\Gui\TaskAnalysisInfo.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(FC_SOURCE)\Mod\Fem\Gui\moc_TaskAnalysisInfo.cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Generating moc_TaskAnalysisInfo.cpp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+$(FC_BIN)\moc.exe -DBOOST_TT_HAS_OPERATOR_HPP_INCLUDED $(FC_SOURCE)/Mod/Fem/Gui/TaskAnalysisInfo.h -o $(FC_SOURCE)/Mod/Fem/Gui/moc_TaskAnalysisInfo.cpp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(FC_SOURCE)/Mod/Fem/Gui/TaskAnalysisInfo.h;$(FC_SOURCE)\Mod\Fem\Gui\TaskAnalysisInfo.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(FC_SOURCE)\Mod\Fem\Gui\moc_TaskAnalysisInfo.cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Generating moc_TaskAnalysisInfo.cpp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+$(FC_BIN)\moc.exe -DBOOST_TT_HAS_OPERATOR_HPP_INCLUDED $(FC_SOURCE)/Mod/Fem/Gui/TaskAnalysisInfo.h -o $(FC_SOURCE)/Mod/Fem/Gui/moc_TaskAnalysisInfo.cpp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">$(FC_SOURCE)/Mod/Fem/Gui/TaskAnalysisInfo.h;$(FC_SOURCE)\Mod\Fem\Gui\TaskAnalysisInfo.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">$(FC_SOURCE)\Mod\Fem\Gui\moc_TaskAnalysisInfo.cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Generating moc_TaskAnalysisInfo.cpp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+$(FC_BIN)\moc.exe -DBOOST_TT_HAS_OPERATOR_HPP_INCLUDED $(FC_SOURCE)/Mod/Fem/Gui/TaskAnalysisInfo.h -o $(FC_SOURCE)/Mod/Fem/Gui/moc_TaskAnalysisInfo.cpp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(FC_SOURCE)/Mod/Fem/Gui/TaskAnalysisInfo.h;$(FC_SOURCE)\Mod\Fem\Gui\TaskAnalysisInfo.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(FC_SOURCE)\Mod\Fem\Gui\moc_TaskAnalysisInfo.cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="$(FC_SOURCE)\Mod\Fem\Gui\TaskTetParameter.ui">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generating ui_TaskTetParameter.h</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+$(FC_BIN)\uic.exe -o $(FC_SOURCE)/Mod/Fem/Gui/ui_TaskTetParameter.h $(FC_SOURCE)/Mod/Fem/Gui/TaskTetParameter.ui
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(FC_SOURCE)/Mod/Fem/Gui/TaskTetParameter.ui;$(FC_SOURCE)\Mod\Fem\Gui\TaskTetParameter.ui;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(FC_SOURCE)\Mod\Fem\Gui\ui_TaskTetParameter.h</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Generating ui_TaskTetParameter.h</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+$(FC_BIN)\uic.exe -o $(FC_SOURCE)/Mod/Fem/Gui/ui_TaskTetParameter.h $(FC_SOURCE)/Mod/Fem/Gui/TaskTetParameter.ui
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(FC_SOURCE)/Mod/Fem/Gui/TaskTetParameter.ui;$(FC_SOURCE)\Mod\Fem\Gui\TaskTetParameter.ui;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(FC_SOURCE)\Mod\Fem\Gui\ui_TaskTetParameter.h</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Generating ui_TaskTetParameter.h</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+$(FC_BIN)\uic.exe -o $(FC_SOURCE)/Mod/Fem/Gui/ui_TaskTetParameter.h $(FC_SOURCE)/Mod/Fem/Gui/TaskTetParameter.ui
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">$(FC_SOURCE)/Mod/Fem/Gui/TaskTetParameter.ui;$(FC_SOURCE)\Mod\Fem\Gui\TaskTetParameter.ui;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">$(FC_SOURCE)\Mod\Fem\Gui\ui_TaskTetParameter.h</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Generating ui_TaskTetParameter.h</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+$(FC_BIN)\uic.exe -o $(FC_SOURCE)/Mod/Fem/Gui/ui_TaskTetParameter.h $(FC_SOURCE)/Mod/Fem/Gui/TaskTetParameter.ui
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(FC_SOURCE)/Mod/Fem/Gui/TaskTetParameter.ui;$(FC_SOURCE)\Mod\Fem\Gui\TaskTetParameter.ui;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(FC_SOURCE)\Mod\Fem\Gui\ui_TaskTetParameter.h</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="$(FC_SOURCE)\Mod\Fem\Gui\TaskTetParameter.h">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generating moc_TaskTetParameter.cpp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+$(FC_BIN)\moc.exe -DBOOST_TT_HAS_OPERATOR_HPP_INCLUDED $(FC_SOURCE)/Mod/Fem/Gui/TaskTetParameter.h -o $(FC_SOURCE)/Mod/Fem/Gui/moc_TaskTetParameter.cpp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(FC_SOURCE)/Mod/Fem/Gui/TaskTetParameter.h;$(FC_SOURCE)\Mod\Fem\Gui\TaskTetParameter.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(FC_SOURCE)\Mod\Fem\Gui\moc_TaskTetParameter.cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Generating moc_TaskTetParameter.cpp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+$(FC_BIN)\moc.exe -DBOOST_TT_HAS_OPERATOR_HPP_INCLUDED $(FC_SOURCE)/Mod/Fem/Gui/TaskTetParameter.h -o $(FC_SOURCE)/Mod/Fem/Gui/moc_TaskTetParameter.cpp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(FC_SOURCE)/Mod/Fem/Gui/TaskTetParameter.h;$(FC_SOURCE)\Mod\Fem\Gui\TaskTetParameter.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(FC_SOURCE)\Mod\Fem\Gui\moc_TaskTetParameter.cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Generating moc_TaskTetParameter.cpp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+$(FC_BIN)\moc.exe -DBOOST_TT_HAS_OPERATOR_HPP_INCLUDED $(FC_SOURCE)/Mod/Fem/Gui/TaskTetParameter.h -o $(FC_SOURCE)/Mod/Fem/Gui/moc_TaskTetParameter.cpp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">$(FC_SOURCE)/Mod/Fem/Gui/TaskTetParameter.h;$(FC_SOURCE)\Mod\Fem\Gui\TaskTetParameter.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">$(FC_SOURCE)\Mod\Fem\Gui\moc_TaskTetParameter.cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Generating moc_TaskTetParameter.cpp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+$(FC_BIN)\moc.exe -DBOOST_TT_HAS_OPERATOR_HPP_INCLUDED $(FC_SOURCE)/Mod/Fem/Gui/TaskTetParameter.h -o $(FC_SOURCE)/Mod/Fem/Gui/moc_TaskTetParameter.cpp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(FC_SOURCE)/Mod/Fem/Gui/TaskTetParameter.h;$(FC_SOURCE)\Mod\Fem\Gui\TaskTetParameter.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(FC_SOURCE)\Mod\Fem\Gui\moc_TaskTetParameter.cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="$(FC_SOURCE)\Mod\Fem\Gui\Resources\Fem.qrc">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generating qrc_Fem.cxx</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+$(FC_BIN)\rcc.exe -name Fem -o $(FC_SOURCE)/Mod/Fem/Gui/qrc_Fem.cxx $(FC_SOURCE)/Mod/Fem/Gui/Resources/Fem.qrc
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(FC_SOURCE)/Mod/Fem/Gui/Resources/Fem.qrc;$(FC_SOURCE)\Mod\Fem\Gui\Resources\icons\Fem_FemMesh.svg;$(FC_SOURCE)\Mod\Fem\Gui\Resources\icons\Fem_FemMesh_createnodebypoly.svg;$(FC_SOURCE)\Mod\Fem\Gui\Resources\icons\Fem_Analysis.svg;$(FC_SOURCE)\Mod\Fem\Gui\Resources\icons\Fem_ConstraintForce.svg;$(FC_SOURCE)\Mod\Fem\Gui\Resources\icons\Fem_ConstraintFixed.svg;$(FC_SOURCE)\Mod\Fem\Gui\Resources\icons\Fem_ConstraintPressure.svg;$(FC_SOURCE)\Mod\Fem\Gui\Resources\icons\Fem_ConstraintBearing.svg;$(FC_SOURCE)\Mod\Fem\Gui\Resources\icons\Fem_ConstraintGear.svg;$(FC_SOURCE)\Mod\Fem\Gui\Resources\icons\Fem_ConstraintPulley.svg;$(FC_SOURCE)\Mod\Fem\Gui\Resources\icons\Fem_AddFemMesh.svg;$(FC_SOURCE)\Mod\Fem\Gui\Resources\icons\Fem_AddMaterial.svg;$(FC_SOURCE)\Mod\Fem\Gui\Resources\icons\Fem_AddPart.svg;$(FC_SOURCE)\Mod\Fem\Gui\Resources\icons\Fem_Inp_Editor.svg;$(FC_SOURCE)\Mod\Fem\Gui\Resources\icons\Fem_Material.svg;$(FC_SOURCE)\Mod\Fem\Gui\Resources\icons\Fem_NewAnalysis.svg;$(FC_SOURCE)\Mod\Fem\Gui\Resources\icons\Fem_Purge_Results.svg;$(FC_SOURCE)\Mod\Fem\Gui\Resources\icons\Fem_Quick_Analysis.svg;$(FC_SOURCE)\Mod\Fem\Gui\Resources\icons\Fem_Result.svg;$(FC_SOURCE)\Mod\Fem\Gui\Resources\icons\Fem_ResultDisplacement.svg;$(FC_SOURCE)\Mod\Fem\Gui\Resources\icons\Fem_ResultStress.svg;$(FC_SOURCE)\Mod\Fem\Gui\Resources\icons\preferences-fem.svg;$(FC_SOURCE)\Mod\Fem\Gui\Resources\translations\Fem_af.qm;$(FC_SOURCE)\Mod\Fem\Gui\Resources\translations\Fem_de.qm;$(FC_SOURCE)\Mod\Fem\Gui\Resources\translations\Fem_fi.qm;$(FC_SOURCE)\Mod\Fem\Gui\Resources\translations\Fem_fr.qm;$(FC_SOURCE)\Mod\Fem\Gui\Resources\translations\Fem_hr.qm;$(FC_SOURCE)\Mod\Fem\Gui\Resources\translations\Fem_it.qm;$(FC_SOURCE)\Mod\Fem\Gui\Resources\translations\Fem_nl.qm;$(FC_SOURCE)\Mod\Fem\Gui\Resources\translations\Fem_no.qm;$(FC_SOURCE)\Mod\Fem\Gui\Resources\translations\Fem_pl.qm;$(FC_SOURCE)\Mod\Fem\Gui\Resources\translations\Fem_ru.qm;$(FC_SOURCE)\Mod\Fem\Gui\Resources\translations\Fem_uk.qm;$(FC_SOURCE)\Mod\Fem\Gui\Resources\translations\Fem_tr.qm;$(FC_SOURCE)\Mod\Fem\Gui\Resources\translations\Fem_sv-SE.qm;$(FC_SOURCE)\Mod\Fem\Gui\Resources\translations\Fem_zh-TW.qm;$(FC_SOURCE)\Mod\Fem\Gui\Resources\translations\Fem_pt-BR.qm;$(FC_SOURCE)\Mod\Fem\Gui\Resources\translations\Fem_cs.qm;$(FC_SOURCE)\Mod\Fem\Gui\Resources\translations\Fem_sk.qm;$(FC_SOURCE)\Mod\Fem\Gui\Resources\translations\Fem_es-ES.qm;$(FC_SOURCE)\Mod\Fem\Gui\Resources\translations\Fem_zh-CN.qm;$(FC_SOURCE)\Mod\Fem\Gui\Resources\translations\Fem_ja.qm;$(FC_SOURCE)\Mod\Fem\Gui\Resources\translations\Fem_ro.qm;$(FC_SOURCE)\Mod\Fem\Gui\Resources\translations\Fem_hu.qm;$(FC_SOURCE)\Mod\Fem\Gui\Resources\translations\Fem_pt-PT.qm;$(FC_SOURCE)\Mod\Fem\Gui\Resources\translations\Fem_sr.qm;$(FC_SOURCE)\Mod\Fem\Gui\Resources\Fem.qrc.depends;$(FC_SOURCE)\Mod\Fem\Gui\Resources\Fem.qrc;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(FC_SOURCE)\Mod\Fem\Gui\qrc_Fem.cxx</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Generating qrc_Fem.cxx</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+$(FC_BIN)\rcc.exe -name Fem -o $(FC_SOURCE)/Mod/Fem/Gui/qrc_Fem.cxx $(FC_SOURCE)/Mod/Fem/Gui/Resources/Fem.qrc
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(FC_SOURCE)/Mod/Fem/Gui/Resources/Fem.qrc;$(FC_SOURCE)\Mod\Fem\Gui\Resources\icons\Fem_FemMesh.svg;$(FC_SOURCE)\Mod\Fem\Gui\Resources\icons\Fem_FemMesh_createnodebypoly.svg;$(FC_SOURCE)\Mod\Fem\Gui\Resources\icons\Fem_Analysis.svg;$(FC_SOURCE)\Mod\Fem\Gui\Resources\icons\Fem_ConstraintForce.svg;$(FC_SOURCE)\Mod\Fem\Gui\Resources\icons\Fem_ConstraintFixed.svg;$(FC_SOURCE)\Mod\Fem\Gui\Resources\icons\Fem_ConstraintPressure.svg;$(FC_SOURCE)\Mod\Fem\Gui\Resources\icons\Fem_ConstraintBearing.svg;$(FC_SOURCE)\Mod\Fem\Gui\Resources\icons\Fem_ConstraintGear.svg;$(FC_SOURCE)\Mod\Fem\Gui\Resources\icons\Fem_ConstraintPulley.svg;$(FC_SOURCE)\Mod\Fem\Gui\Resources\icons\Fem_AddFemMesh.svg;$(FC_SOURCE)\Mod\Fem\Gui\Resources\icons\Fem_AddMaterial.svg;$(FC_SOURCE)\Mod\Fem\Gui\Resources\icons\Fem_AddPart.svg;$(FC_SOURCE)\Mod\Fem\Gui\Resources\icons\Fem_Inp_Editor.svg;$(FC_SOURCE)\Mod\Fem\Gui\Resources\icons\Fem_Material.svg;$(FC_SOURCE)\Mod\Fem\Gui\Resources\icons\Fem_NewAnalysis.svg;$(FC_SOURCE)\Mod\Fem\Gui\Resources\icons\Fem_Purge_Results.svg;$(FC_SOURCE)\Mod\Fem\Gui\Resources\icons\Fem_Quick_Analysis.svg;$(FC_SOURCE)\Mod\Fem\Gui\Resources\icons\Fem_Result.svg;$(FC_SOURCE)\Mod\Fem\Gui\Resources\icons\Fem_ResultDisplacement.svg;$(FC_SOURCE)\Mod\Fem\Gui\Resources\icons\Fem_ResultStress.svg;$(FC_SOURCE)\Mod\Fem\Gui\Resources\icons\preferences-fem.svg;$(FC_SOURCE)\Mod\Fem\Gui\Resources\translations\Fem_af.qm;$(FC_SOURCE)\Mod\Fem\Gui\Resources\translations\Fem_de.qm;$(FC_SOURCE)\Mod\Fem\Gui\Resources\translations\Fem_fi.qm;$(FC_SOURCE)\Mod\Fem\Gui\Resources\translations\Fem_fr.qm;$(FC_SOURCE)\Mod\Fem\Gui\Resources\translations\Fem_hr.qm;$(FC_SOURCE)\Mod\Fem\Gui\Resources\translations\Fem_it.qm;$(FC_SOURCE)\Mod\Fem\Gui\Resources\translations\Fem_nl.qm;$(FC_SOURCE)\Mod\Fem\Gui\Resources\translations\Fem_no.qm;$(FC_SOURCE)\Mod\Fem\Gui\Resources\translations\Fem_pl.qm;$(FC_SOURCE)\Mod\Fem\Gui\Resources\translations\Fem_ru.qm;$(FC_SOURCE)\Mod\Fem\Gui\Resources\translations\Fem_uk.qm;$(FC_SOURCE)\Mod\Fem\Gui\Resources\translations\Fem_tr.qm;$(FC_SOURCE)\Mod\Fem\Gui\Resources\translations\Fem_sv-SE.qm;$(FC_SOURCE)\Mod\Fem\Gui\Resources\translations\Fem_zh-TW.qm;$(FC_SOURCE)\Mod\Fem\Gui\Resources\translations\Fem_pt-BR.qm;$(FC_SOURCE)\Mod\Fem\Gui\Resources\translations\Fem_cs.qm;$(FC_SOURCE)\Mod\Fem\Gui\Resources\translations\Fem_sk.qm;$(FC_SOURCE)\Mod\Fem\Gui\Resources\translations\Fem_es-ES.qm;$(FC_SOURCE)\Mod\Fem\Gui\Resources\translations\Fem_zh-CN.qm;$(FC_SOURCE)\Mod\Fem\Gui\Resources\translations\Fem_ja.qm;$(FC_SOURCE)\Mod\Fem\Gui\Resources\translations\Fem_ro.qm;$(FC_SOURCE)\Mod\Fem\Gui\Resources\translations\Fem_hu.qm;$(FC_SOURCE)\Mod\Fem\Gui\Resources\translations\Fem_pt-PT.qm;$(FC_SOURCE)\Mod\Fem\Gui\Resources\translations\Fem_sr.qm;$(FC_SOURCE)\Mod\Fem\Gui\Resources\Fem.qrc.depends;$(FC_SOURCE)\Mod\Fem\Gui\Resources\Fem.qrc;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(FC_SOURCE)\Mod\Fem\Gui\qrc_Fem.cxx</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Generating qrc_Fem.cxx</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+$(FC_BIN)\rcc.exe -name Fem -o $(FC_SOURCE)/Mod/Fem/Gui/qrc_Fem.cxx $(FC_SOURCE)/Mod/Fem/Gui/Resources/Fem.qrc
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">$(FC_SOURCE)/Mod/Fem/Gui/Resources/Fem.qrc;$(FC_SOURCE)\Mod\Fem\Gui\Resources\icons\Fem_FemMesh.svg;$(FC_SOURCE)\Mod\Fem\Gui\Resources\icons\Fem_FemMesh_createnodebypoly.svg;$(FC_SOURCE)\Mod\Fem\Gui\Resources\icons\Fem_Analysis.svg;$(FC_SOURCE)\Mod\Fem\Gui\Resources\icons\Fem_ConstraintForce.svg;$(FC_SOURCE)\Mod\Fem\Gui\Resources\icons\Fem_ConstraintFixed.svg;$(FC_SOURCE)\Mod\Fem\Gui\Resources\icons\Fem_ConstraintPressure.svg;$(FC_SOURCE)\Mod\Fem\Gui\Resources\icons\Fem_ConstraintBearing.svg;$(FC_SOURCE)\Mod\Fem\Gui\Resources\icons\Fem_ConstraintGear.svg;$(FC_SOURCE)\Mod\Fem\Gui\Resources\icons\Fem_ConstraintPulley.svg;$(FC_SOURCE)\Mod\Fem\Gui\Resources\icons\Fem_AddFemMesh.svg;$(FC_SOURCE)\Mod\Fem\Gui\Resources\icons\Fem_AddMaterial.svg;$(FC_SOURCE)\Mod\Fem\Gui\Resources\icons\Fem_AddPart.svg;$(FC_SOURCE)\Mod\Fem\Gui\Resources\icons\Fem_Inp_Editor.svg;$(FC_SOURCE)\Mod\Fem\Gui\Resources\icons\Fem_Material.svg;$(FC_SOURCE)\Mod\Fem\Gui\Resources\icons\Fem_NewAnalysis.svg;$(FC_SOURCE)\Mod\Fem\Gui\Resources\icons\Fem_Purge_Results.svg;$(FC_SOURCE)\Mod\Fem\Gui\Resources\icons\Fem_Quick_Analysis.svg;$(FC_SOURCE)\Mod\Fem\Gui\Resources\icons\Fem_Result.svg;$(FC_SOURCE)\Mod\Fem\Gui\Resources\icons\Fem_ResultDisplacement.svg;$(FC_SOURCE)\Mod\Fem\Gui\Resources\icons\Fem_ResultStress.svg;$(FC_SOURCE)\Mod\Fem\Gui\Resources\icons\preferences-fem.svg;$(FC_SOURCE)\Mod\Fem\Gui\Resources\translations\Fem_af.qm;$(FC_SOURCE)\Mod\Fem\Gui\Resources\translations\Fem_de.qm;$(FC_SOURCE)\Mod\Fem\Gui\Resources\translations\Fem_fi.qm;$(FC_SOURCE)\Mod\Fem\Gui\Resources\translations\Fem_fr.qm;$(FC_SOURCE)\Mod\Fem\Gui\Resources\translations\Fem_hr.qm;$(FC_SOURCE)\Mod\Fem\Gui\Resources\translations\Fem_it.qm;$(FC_SOURCE)\Mod\Fem\Gui\Resources\translations\Fem_nl.qm;$(FC_SOURCE)\Mod\Fem\Gui\Resources\translations\Fem_no.qm;$(FC_SOURCE)\Mod\Fem\Gui\Resources\translations\Fem_pl.qm;$(FC_SOURCE)\Mod\Fem\Gui\Resources\translations\Fem_ru.qm;$(FC_SOURCE)\Mod\Fem\Gui\Resources\translations\Fem_uk.qm;$(FC_SOURCE)\Mod\Fem\Gui\Resources\translations\Fem_tr.qm;$(FC_SOURCE)\Mod\Fem\Gui\Resources\translations\Fem_sv-SE.qm;$(FC_SOURCE)\Mod\Fem\Gui\Resources\translations\Fem_zh-TW.qm;$(FC_SOURCE)\Mod\Fem\Gui\Resources\translations\Fem_pt-BR.qm;$(FC_SOURCE)\Mod\Fem\Gui\Resources\translations\Fem_cs.qm;$(FC_SOURCE)\Mod\Fem\Gui\Resources\translations\Fem_sk.qm;$(FC_SOURCE)\Mod\Fem\Gui\Resources\translations\Fem_es-ES.qm;$(FC_SOURCE)\Mod\Fem\Gui\Resources\translations\Fem_zh-CN.qm;$(FC_SOURCE)\Mod\Fem\Gui\Resources\translations\Fem_ja.qm;$(FC_SOURCE)\Mod\Fem\Gui\Resources\translations\Fem_ro.qm;$(FC_SOURCE)\Mod\Fem\Gui\Resources\translations\Fem_hu.qm;$(FC_SOURCE)\Mod\Fem\Gui\Resources\translations\Fem_pt-PT.qm;$(FC_SOURCE)\Mod\Fem\Gui\Resources\translations\Fem_sr.qm;$(FC_SOURCE)\Mod\Fem\Gui\Resources\Fem.qrc.depends;$(FC_SOURCE)\Mod\Fem\Gui\Resources\Fem.qrc;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">$(FC_SOURCE)\Mod\Fem\Gui\qrc_Fem.cxx</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Generating qrc_Fem.cxx</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+$(FC_BIN)\rcc.exe -name Fem -o $(FC_SOURCE)/Mod/Fem/Gui/qrc_Fem.cxx $(FC_SOURCE)/Mod/Fem/Gui/Resources/Fem.qrc
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(FC_SOURCE)/Mod/Fem/Gui/Resources/Fem.qrc;$(FC_SOURCE)\Mod\Fem\Gui\Resources\icons\Fem_FemMesh.svg;$(FC_SOURCE)\Mod\Fem\Gui\Resources\icons\Fem_FemMesh_createnodebypoly.svg;$(FC_SOURCE)\Mod\Fem\Gui\Resources\icons\Fem_Analysis.svg;$(FC_SOURCE)\Mod\Fem\Gui\Resources\icons\Fem_ConstraintForce.svg;$(FC_SOURCE)\Mod\Fem\Gui\Resources\icons\Fem_ConstraintFixed.svg;$(FC_SOURCE)\Mod\Fem\Gui\Resources\icons\Fem_ConstraintPressure.svg;$(FC_SOURCE)\Mod\Fem\Gui\Resources\icons\Fem_ConstraintBearing.svg;$(FC_SOURCE)\Mod\Fem\Gui\Resources\icons\Fem_ConstraintGear.svg;$(FC_SOURCE)\Mod\Fem\Gui\Resources\icons\Fem_ConstraintPulley.svg;$(FC_SOURCE)\Mod\Fem\Gui\Resources\icons\Fem_AddFemMesh.svg;$(FC_SOURCE)\Mod\Fem\Gui\Resources\icons\Fem_AddMaterial.svg;$(FC_SOURCE)\Mod\Fem\Gui\Resources\icons\Fem_AddPart.svg;$(FC_SOURCE)\Mod\Fem\Gui\Resources\icons\Fem_Inp_Editor.svg;$(FC_SOURCE)\Mod\Fem\Gui\Resources\icons\Fem_Material.svg;$(FC_SOURCE)\Mod\Fem\Gui\Resources\icons\Fem_NewAnalysis.svg;$(FC_SOURCE)\Mod\Fem\Gui\Resources\icons\Fem_Purge_Results.svg;$(FC_SOURCE)\Mod\Fem\Gui\Resources\icons\Fem_Quick_Analysis.svg;$(FC_SOURCE)\Mod\Fem\Gui\Resources\icons\Fem_Result.svg;$(FC_SOURCE)\Mod\Fem\Gui\Resources\icons\Fem_ResultDisplacement.svg;$(FC_SOURCE)\Mod\Fem\Gui\Resources\icons\Fem_ResultStress.svg;$(FC_SOURCE)\Mod\Fem\Gui\Resources\icons\preferences-fem.svg;$(FC_SOURCE)\Mod\Fem\Gui\Resources\translations\Fem_af.qm;$(FC_SOURCE)\Mod\Fem\Gui\Resources\translations\Fem_de.qm;$(FC_SOURCE)\Mod\Fem\Gui\Resources\translations\Fem_fi.qm;$(FC_SOURCE)\Mod\Fem\Gui\Resources\translations\Fem_fr.qm;$(FC_SOURCE)\Mod\Fem\Gui\Resources\translations\Fem_hr.qm;$(FC_SOURCE)\Mod\Fem\Gui\Resources\translations\Fem_it.qm;$(FC_SOURCE)\Mod\Fem\Gui\Resources\translations\Fem_nl.qm;$(FC_SOURCE)\Mod\Fem\Gui\Resources\translations\Fem_no.qm;$(FC_SOURCE)\Mod\Fem\Gui\Resources\translations\Fem_pl.qm;$(FC_SOURCE)\Mod\Fem\Gui\Resources\translations\Fem_ru.qm;$(FC_SOURCE)\Mod\Fem\Gui\Resources\translations\Fem_uk.qm;$(FC_SOURCE)\Mod\Fem\Gui\Resources\translations\Fem_tr.qm;$(FC_SOURCE)\Mod\Fem\Gui\Resources\translations\Fem_sv-SE.qm;$(FC_SOURCE)\Mod\Fem\Gui\Resources\translations\Fem_zh-TW.qm;$(FC_SOURCE)\Mod\Fem\Gui\Resources\translations\Fem_pt-BR.qm;$(FC_SOURCE)\Mod\Fem\Gui\Resources\translations\Fem_cs.qm;$(FC_SOURCE)\Mod\Fem\Gui\Resources\translations\Fem_sk.qm;$(FC_SOURCE)\Mod\Fem\Gui\Resources\translations\Fem_es-ES.qm;$(FC_SOURCE)\Mod\Fem\Gui\Resources\translations\Fem_zh-CN.qm;$(FC_SOURCE)\Mod\Fem\Gui\Resources\translations\Fem_ja.qm;$(FC_SOURCE)\Mod\Fem\Gui\Resources\translations\Fem_ro.qm;$(FC_SOURCE)\Mod\Fem\Gui\Resources\translations\Fem_hu.qm;$(FC_SOURCE)\Mod\Fem\Gui\Resources\translations\Fem_pt-PT.qm;$(FC_SOURCE)\Mod\Fem\Gui\Resources\translations\Fem_sr.qm;$(FC_SOURCE)\Mod\Fem\Gui\Resources\Fem.qrc.depends;$(FC_SOURCE)\Mod\Fem\Gui\Resources\Fem.qrc;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(FC_SOURCE)\Mod\Fem\Gui\qrc_Fem.cxx</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="\code\free-cad-code\Source\Repos\code\CMakeFiles\49c6813715ff56e9360160382e75e871\InitGui.py.rule">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generating ../../../../Mod/Fem/InitGui.py</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+$(CMAKE_BIN)\cmake.exe -E copy $(FC_SOURCE)/Mod/Fem/InitGui.py $(DEVROOT)/Mod/Fem/InitGui.py
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(DEVROOT)/CMakeFiles/49c6813715ff56e9360160382e75e871/InitGui.py.rule;$(FC_SOURCE)\Mod\Fem\InitGui.py;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">\code\free-cad-code\Source\Repos\code\Mod\Fem\InitGui.py</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Generating ../../../../Mod/Fem/InitGui.py</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+$(CMAKE_BIN)\cmake.exe -E copy $(FC_SOURCE)/Mod/Fem/InitGui.py $(DEVROOT)/Mod/Fem/InitGui.py
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(DEVROOT)/CMakeFiles/49c6813715ff56e9360160382e75e871/InitGui.py.rule;$(FC_SOURCE)\Mod\Fem\InitGui.py;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">\code\free-cad-code\Source\Repos\code\Mod\Fem\InitGui.py</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Generating ../../../../Mod/Fem/InitGui.py</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+$(CMAKE_BIN)\cmake.exe -E copy $(FC_SOURCE)/Mod/Fem/InitGui.py $(DEVROOT)/Mod/Fem/InitGui.py
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">$(DEVROOT)/CMakeFiles/49c6813715ff56e9360160382e75e871/InitGui.py.rule;$(FC_SOURCE)\Mod\Fem\InitGui.py;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">\code\free-cad-code\Source\Repos\code\Mod\Fem\InitGui.py</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Generating ../../../../Mod/Fem/InitGui.py</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+$(CMAKE_BIN)\cmake.exe -E copy $(FC_SOURCE)/Mod/Fem/InitGui.py $(DEVROOT)/Mod/Fem/InitGui.py
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(DEVROOT)/CMakeFiles/49c6813715ff56e9360160382e75e871/InitGui.py.rule;$(FC_SOURCE)\Mod\Fem\InitGui.py;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">\code\free-cad-code\Source\Repos\code\Mod\Fem\InitGui.py</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="\code\free-cad-code\Source\Repos\code\CMakeFiles\49c6813715ff56e9360160382e75e871\MechanicalMaterial.ui.rule">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generating ../../../../Mod/Fem/MechanicalMaterial.ui</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+$(CMAKE_BIN)\cmake.exe -E copy $(FC_SOURCE)/Mod/Fem/MechanicalMaterial.ui $(DEVROOT)/Mod/Fem/MechanicalMaterial.ui
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(DEVROOT)/CMakeFiles/49c6813715ff56e9360160382e75e871/MechanicalMaterial.ui.rule;$(FC_SOURCE)\Mod\Fem\MechanicalMaterial.ui;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">\code\free-cad-code\Source\Repos\code\Mod\Fem\MechanicalMaterial.ui</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Generating ../../../../Mod/Fem/MechanicalMaterial.ui</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+$(CMAKE_BIN)\cmake.exe -E copy $(FC_SOURCE)/Mod/Fem/MechanicalMaterial.ui $(DEVROOT)/Mod/Fem/MechanicalMaterial.ui
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(DEVROOT)/CMakeFiles/49c6813715ff56e9360160382e75e871/MechanicalMaterial.ui.rule;$(FC_SOURCE)\Mod\Fem\MechanicalMaterial.ui;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">\code\free-cad-code\Source\Repos\code\Mod\Fem\MechanicalMaterial.ui</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Generating ../../../../Mod/Fem/MechanicalMaterial.ui</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+$(CMAKE_BIN)\cmake.exe -E copy $(FC_SOURCE)/Mod/Fem/MechanicalMaterial.ui $(DEVROOT)/Mod/Fem/MechanicalMaterial.ui
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">$(DEVROOT)/CMakeFiles/49c6813715ff56e9360160382e75e871/MechanicalMaterial.ui.rule;$(FC_SOURCE)\Mod\Fem\MechanicalMaterial.ui;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">\code\free-cad-code\Source\Repos\code\Mod\Fem\MechanicalMaterial.ui</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Generating ../../../../Mod/Fem/MechanicalMaterial.ui</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+$(CMAKE_BIN)\cmake.exe -E copy $(FC_SOURCE)/Mod/Fem/MechanicalMaterial.ui $(DEVROOT)/Mod/Fem/MechanicalMaterial.ui
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(DEVROOT)/CMakeFiles/49c6813715ff56e9360160382e75e871/MechanicalMaterial.ui.rule;$(FC_SOURCE)\Mod\Fem\MechanicalMaterial.ui;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">\code\free-cad-code\Source\Repos\code\Mod\Fem\MechanicalMaterial.ui</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="\code\free-cad-code\Source\Repos\code\CMakeFiles\49c6813715ff56e9360160382e75e871\MechanicalAnalysis.ui.rule">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generating ../../../../Mod/Fem/MechanicalAnalysis.ui</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+$(CMAKE_BIN)\cmake.exe -E copy $(FC_SOURCE)/Mod/Fem/MechanicalAnalysis.ui $(DEVROOT)/Mod/Fem/MechanicalAnalysis.ui
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(DEVROOT)/CMakeFiles/49c6813715ff56e9360160382e75e871/MechanicalAnalysis.ui.rule;$(FC_SOURCE)\Mod\Fem\MechanicalAnalysis.ui;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">\code\free-cad-code\Source\Repos\code\Mod\Fem\MechanicalAnalysis.ui</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Generating ../../../../Mod/Fem/MechanicalAnalysis.ui</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+$(CMAKE_BIN)\cmake.exe -E copy $(FC_SOURCE)/Mod/Fem/MechanicalAnalysis.ui $(DEVROOT)/Mod/Fem/MechanicalAnalysis.ui
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(DEVROOT)/CMakeFiles/49c6813715ff56e9360160382e75e871/MechanicalAnalysis.ui.rule;$(FC_SOURCE)\Mod\Fem\MechanicalAnalysis.ui;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">\code\free-cad-code\Source\Repos\code\Mod\Fem\MechanicalAnalysis.ui</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Generating ../../../../Mod/Fem/MechanicalAnalysis.ui</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+$(CMAKE_BIN)\cmake.exe -E copy $(FC_SOURCE)/Mod/Fem/MechanicalAnalysis.ui $(DEVROOT)/Mod/Fem/MechanicalAnalysis.ui
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">$(DEVROOT)/CMakeFiles/49c6813715ff56e9360160382e75e871/MechanicalAnalysis.ui.rule;$(FC_SOURCE)\Mod\Fem\MechanicalAnalysis.ui;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">\code\free-cad-code\Source\Repos\code\Mod\Fem\MechanicalAnalysis.ui</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Generating ../../../../Mod/Fem/MechanicalAnalysis.ui</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+$(CMAKE_BIN)\cmake.exe -E copy $(FC_SOURCE)/Mod/Fem/MechanicalAnalysis.ui $(DEVROOT)/Mod/Fem/MechanicalAnalysis.ui
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(DEVROOT)/CMakeFiles/49c6813715ff56e9360160382e75e871/MechanicalAnalysis.ui.rule;$(FC_SOURCE)\Mod\Fem\MechanicalAnalysis.ui;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">\code\free-cad-code\Source\Repos\code\Mod\Fem\MechanicalAnalysis.ui</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="\code\free-cad-code\Source\Repos\code\CMakeFiles\aaa0fab4d4fbfb733f521d6b0d535510\preferences-fem.svg.rule">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generating ../../../../data/Mod/Fem/Resources/icons/preferences-fem.svg</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+$(CMAKE_BIN)\cmake.exe -E copy $(FC_SOURCE)/Mod/Fem/Gui/Resources/icons/preferences-fem.svg $(DEVROOT)/data/Mod/Fem/Resources/icons/preferences-fem.svg
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(DEVROOT)/CMakeFiles/aaa0fab4d4fbfb733f521d6b0d535510/preferences-fem.svg.rule;$(FC_SOURCE)\Mod\Fem\Gui\Resources\icons\preferences-fem.svg;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">\code\free-cad-code\Source\Repos\code\data\Mod\Fem\Resources\icons\preferences-fem.svg</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Generating ../../../../data/Mod/Fem/Resources/icons/preferences-fem.svg</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+$(CMAKE_BIN)\cmake.exe -E copy $(FC_SOURCE)/Mod/Fem/Gui/Resources/icons/preferences-fem.svg $(DEVROOT)/data/Mod/Fem/Resources/icons/preferences-fem.svg
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(DEVROOT)/CMakeFiles/aaa0fab4d4fbfb733f521d6b0d535510/preferences-fem.svg.rule;$(FC_SOURCE)\Mod\Fem\Gui\Resources\icons\preferences-fem.svg;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">\code\free-cad-code\Source\Repos\code\data\Mod\Fem\Resources\icons\preferences-fem.svg</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Generating ../../../../data/Mod/Fem/Resources/icons/preferences-fem.svg</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+$(CMAKE_BIN)\cmake.exe -E copy $(FC_SOURCE)/Mod/Fem/Gui/Resources/icons/preferences-fem.svg $(DEVROOT)/data/Mod/Fem/Resources/icons/preferences-fem.svg
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">$(DEVROOT)/CMakeFiles/aaa0fab4d4fbfb733f521d6b0d535510/preferences-fem.svg.rule;$(FC_SOURCE)\Mod\Fem\Gui\Resources\icons\preferences-fem.svg;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">\code\free-cad-code\Source\Repos\code\data\Mod\Fem\Resources\icons\preferences-fem.svg</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Generating ../../../../data/Mod/Fem/Resources/icons/preferences-fem.svg</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+$(CMAKE_BIN)\cmake.exe -E copy $(FC_SOURCE)/Mod/Fem/Gui/Resources/icons/preferences-fem.svg $(DEVROOT)/data/Mod/Fem/Resources/icons/preferences-fem.svg
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(DEVROOT)/CMakeFiles/aaa0fab4d4fbfb733f521d6b0d535510/preferences-fem.svg.rule;$(FC_SOURCE)\Mod\Fem\Gui\Resources\icons\preferences-fem.svg;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">\code\free-cad-code\Source\Repos\code\data\Mod\Fem\Resources\icons\preferences-fem.svg</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="$(FC_SOURCE)\Mod\Fem\Gui\ui_DlgSettingsFem.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Fem\Gui\ui_TaskCreateNodeSet.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Fem\Gui\ui_TaskObjectName.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Fem\Gui\ui_TaskFemConstraint.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Fem\Gui\ui_TaskFemConstraintBearing.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Fem\Gui\ui_TaskFemConstraintFixed.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Fem\Gui\ui_TaskFemConstraintForce.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Fem\Gui\ui_TaskFemConstraintPressure.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Fem\Gui\ui_TaskTetParameter.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Fem\Gui\ui_TaskAnalysisInfo.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Fem\Gui\ui_TaskDriver.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Fem\Gui\ViewProviderFemMesh.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Fem\Gui\ViewProviderFemMeshShape.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Fem\Gui\ViewProviderFemMeshShapeNetgen.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Fem\Gui\ViewProviderAnalysis.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Fem\Gui\ViewProviderSetNodes.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Fem\Gui\ViewProviderSetElements.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Fem\Gui\ViewProviderSetFaces.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Fem\Gui\ViewProviderSetGeometry.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Fem\Gui\FemSelectionGate.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Fem\Gui\ViewProviderFemConstraint.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Fem\Gui\ViewProviderFemConstraintBearing.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Fem\Gui\ViewProviderFemConstraintFixed.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Fem\Gui\ViewProviderFemConstraintForce.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Fem\Gui\ViewProviderFemConstraintPressure.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Fem\Gui\ViewProviderFemConstraintGear.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Fem\Gui\ViewProviderFemConstraintPulley.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Fem\Gui\ViewProviderResult.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Fem\Gui\AbaqusHighlighter.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Fem\Gui\ActiveAnalysisObserver.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Fem\Gui\PreCompiled.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Fem\Gui\Workbench.h" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Fem\Gui\ViewProviderFemMeshPyImp.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Fem\Gui\DlgSettingsFemImp.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Fem\Gui\TaskFemConstraint.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Fem\Gui\TaskFemConstraintBearing.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Fem\Gui\TaskFemConstraintFixed.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Fem\Gui\TaskFemConstraintForce.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Fem\Gui\TaskFemConstraintPressure.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Fem\Gui\TaskFemConstraintGear.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Fem\Gui\TaskFemConstraintPulley.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Fem\Gui\qrc_Fem.cxx" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Fem\Gui\ViewProviderFemMesh.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Fem\Gui\ViewProviderFemMeshShape.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Fem\Gui\ViewProviderFemMeshShapeNetgen.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Fem\Gui\ViewProviderAnalysis.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Fem\Gui\ViewProviderSetNodes.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Fem\Gui\ViewProviderSetElements.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Fem\Gui\ViewProviderSetFaces.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Fem\Gui\ViewProviderSetGeometry.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Fem\Gui\FemSelectionGate.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Fem\Gui\ViewProviderFemConstraint.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Fem\Gui\ViewProviderFemConstraintBearing.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Fem\Gui\ViewProviderFemConstraintFixed.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Fem\Gui\ViewProviderFemConstraintForce.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Fem\Gui\ViewProviderFemConstraintPressure.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Fem\Gui\ViewProviderFemConstraintGear.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Fem\Gui\ViewProviderFemConstraintPulley.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Fem\Gui\ViewProviderResult.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Fem\Gui\TaskDlgCreateNodeSet.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Fem\Gui\TaskDlgMeshShapeNetgen.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Fem\Gui\TaskDlgAnalysis.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Fem\Gui\TaskObjectName.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Fem\Gui\TaskCreateNodeSet.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Fem\Gui\TaskDriver.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Fem\Gui\TaskAnalysisInfo.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Fem\Gui\TaskTetParameter.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Fem\Gui\AppFemGui.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Fem\Gui\AppFemGuiPy.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Fem\Gui\AbaqusHighlighter.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Fem\Gui\ActiveAnalysisObserver.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Fem\Gui\Command.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Fem\Gui\PreCompiled.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Fem\Gui\Workbench.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="$(FC_SOURCE)/3rdParty/salomesmesh/Driver.vcxproj">
+      <Project>4184515E-C92C-39DB-AC99-D448C9ED24CE</Project>
+    </ProjectReference>
+    <ProjectReference Include="$(FC_SOURCE)/3rdParty/salomesmesh/DriverDAT.vcxproj">
+      <Project>56A2482A-7A94-37E4-A065-7D67DB723D1F</Project>
+    </ProjectReference>
+    <ProjectReference Include="$(FC_SOURCE)/3rdParty/salomesmesh/DriverSTL.vcxproj">
+      <Project>ACA1C729-77DC-3E2B-A977-F7D39B689861</Project>
+    </ProjectReference>
+    <ProjectReference Include="$(FC_SOURCE)/3rdParty/salomesmesh/DriverUNV.vcxproj">
+      <Project>E9695B41-1DF5-3588-AAC8-7462E2252898</Project>
+    </ProjectReference>
+    <ProjectReference Include="$(FC_SOURCE)/Mod/Fem/App/Fem.vcxproj">
+      <Project>8C3549EB-5E56-34EA-8D66-6B8F18384A0E</Project>
+    </ProjectReference>
+    <ProjectReference Include="$(FC_SOURCE)/App/FreeCADApp.vcxproj">
+      <Project>106CFB68-340E-3307-8B33-691BFD4C2F84</Project>
+    </ProjectReference>
+    <ProjectReference Include="$(FC_SOURCE)/Base/FreeCADBase.vcxproj">
+      <Project>C318BD7C-A3CA-3454-A3D8-7E815B7B6CC0</Project>
+    </ProjectReference>
+    <ProjectReference Include="$(FC_SOURCE)/Gui/FreeCADGui.vcxproj">
+      <Project>DFA51F4B-58A3-3BF2-B5F0-4D1AE14CB897</Project>
+    </ProjectReference>
+    <ProjectReference Include="$(FC_SOURCE)/3rdParty/salomesmesh/MEFISTO2.vcxproj">
+      <Project>547DA2EE-3079-390B-A267-B258BE58AD9B</Project>
+    </ProjectReference>
+    <ProjectReference Include="$(FC_SOURCE)/3rdParty/salomesmesh/NETGENPlugin.vcxproj">
+      <Project>2BE4C4F4-8DFB-38B3-A351-68704EED1657</Project>
+    </ProjectReference>
+    <ProjectReference Include="$(FC_SOURCE)/Mod/Part/App/Part.vcxproj">
+      <Project>CD9CC58A-54E1-3516-AE9C-CEFF64AC463B</Project>
+    </ProjectReference>
+    <ProjectReference Include="$(FC_SOURCE)/3rdParty/salomesmesh/SMDS.vcxproj">
+      <Project>7B7EA69F-5748-358A-8BFB-3EC77AE80E00</Project>
+    </ProjectReference>
+    <ProjectReference Include="$(FC_SOURCE)/3rdParty/salomesmesh/SMESH.vcxproj">
+      <Project>801EBE69-1214-3C04-82B8-AB3DAF127E5A</Project>
+    </ProjectReference>
+    <ProjectReference Include="$(FC_SOURCE)/3rdParty/salomesmesh/SMESHDS.vcxproj">
+      <Project>A83FC5D2-A226-3217-B535-E61942A02DBF</Project>
+    </ProjectReference>
+    <ProjectReference Include="$(FC_SOURCE)/3rdParty/salomesmesh/StdMeshers.vcxproj">
+      <Project>FD8AD3CE-F46B-34F4-90DF-76DEC786B233</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

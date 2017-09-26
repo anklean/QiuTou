@@ -1,0 +1,2219 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="MinSizeRel|Win32">
+      <Configuration>MinSizeRel</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|Win32">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGUID>{D3BE73C5-352D-3136-936A-FE54EE5BF07B}</ProjectGUID>
+    <Keyword>Win32Proj</Keyword>
+    <Platform>Win32</Platform>
+    <ProjectName>Idf</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">
+    <Import Project="..\..\..\FreeCAD_trunk.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="..\..\..\FreeCAD_trunk.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">
+    <Import Project="..\..\..\FreeCAD_trunk.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="..\..\..\FreeCAD_trunk.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Midl>
+      <AdditionalIncludeDirectories>$(FC_INCLUDE);$(FC_INCLUDE)\QtOpenGL;$(FC_INCLUDE)\QtSvg;$(FC_INCLUDE)\QtUiTools;$(FC_INCLUDE)\QtWebKit;$(FC_INCLUDE)\QtGui;$(FC_INCLUDE)\QtXml;$(FC_INCLUDE)\QtNetwork;$(FC_INCLUDE)\QtCore;$(FC_SOURCE);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <PostBuildEvent>
+      <Message>
+      </Message>
+      <Command>setlocal
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Midl>
+      <AdditionalIncludeDirectories>$(FC_INCLUDE);$(FC_INCLUDE)\QtOpenGL;$(FC_INCLUDE)\QtSvg;$(FC_INCLUDE)\QtUiTools;$(FC_INCLUDE)\QtWebKit;$(FC_INCLUDE)\QtGui;$(FC_INCLUDE)\QtXml;$(FC_INCLUDE)\QtNetwork;$(FC_INCLUDE)\QtCore;$(FC_SOURCE);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <PostBuildEvent>
+      <Message>
+      </Message>
+      <Command>setlocal
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">
+    <Midl>
+      <AdditionalIncludeDirectories>$(FC_INCLUDE);$(FC_INCLUDE)\QtOpenGL;$(FC_INCLUDE)\QtSvg;$(FC_INCLUDE)\QtUiTools;$(FC_INCLUDE)\QtWebKit;$(FC_INCLUDE)\QtGui;$(FC_INCLUDE)\QtXml;$(FC_INCLUDE)\QtNetwork;$(FC_INCLUDE)\QtCore;$(FC_SOURCE);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <PostBuildEvent>
+      <Message>
+      </Message>
+      <Command>setlocal
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">
+    <Midl>
+      <AdditionalIncludeDirectories>$(FC_INCLUDE);$(FC_INCLUDE)\QtOpenGL;$(FC_INCLUDE)\QtSvg;$(FC_INCLUDE)\QtUiTools;$(FC_INCLUDE)\QtWebKit;$(FC_INCLUDE)\QtGui;$(FC_INCLUDE)\QtXml;$(FC_INCLUDE)\QtNetwork;$(FC_INCLUDE)\QtCore;$(FC_SOURCE);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <PostBuildEvent>
+      <Message>
+      </Message>
+      <Command>setlocal
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="\code\free-cad-code\Source\Repos\code\CMakeFiles\3ffb86a9ee126e384206cc0b7a795328\Init.py.rule">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generating ../../../Mod/Idf/Init.py</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+$(CMAKE_BIN)\cmake.exe -E copy $(FC_SOURCE)/Mod/Idf/Init.py $(DEVROOT)/Mod/Idf/Init.py
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(DEVROOT)/CMakeFiles/3ffb86a9ee126e384206cc0b7a795328/Init.py.rule;$(FC_SOURCE)\Mod\Idf\Init.py;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">\code\free-cad-code\Source\Repos\code\Mod\Idf\Init.py</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Generating ../../../Mod/Idf/Init.py</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+$(CMAKE_BIN)\cmake.exe -E copy $(FC_SOURCE)/Mod/Idf/Init.py $(DEVROOT)/Mod/Idf/Init.py
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(DEVROOT)/CMakeFiles/3ffb86a9ee126e384206cc0b7a795328/Init.py.rule;$(FC_SOURCE)\Mod\Idf\Init.py;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">\code\free-cad-code\Source\Repos\code\Mod\Idf\Init.py</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Generating ../../../Mod/Idf/Init.py</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+$(CMAKE_BIN)\cmake.exe -E copy $(FC_SOURCE)/Mod/Idf/Init.py $(DEVROOT)/Mod/Idf/Init.py
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">$(DEVROOT)/CMakeFiles/3ffb86a9ee126e384206cc0b7a795328/Init.py.rule;$(FC_SOURCE)\Mod\Idf\Init.py;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">\code\free-cad-code\Source\Repos\code\Mod\Idf\Init.py</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Generating ../../../Mod/Idf/Init.py</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+$(CMAKE_BIN)\cmake.exe -E copy $(FC_SOURCE)/Mod/Idf/Init.py $(DEVROOT)/Mod/Idf/Init.py
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(DEVROOT)/CMakeFiles/3ffb86a9ee126e384206cc0b7a795328/Init.py.rule;$(FC_SOURCE)\Mod\Idf\Init.py;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">\code\free-cad-code\Source\Repos\code\Mod\Idf\Init.py</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="\code\free-cad-code\Source\Repos\code\CMakeFiles\3ffb86a9ee126e384206cc0b7a795328\Idf.py.rule">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generating ../../../Mod/Idf/Idf.py</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+$(CMAKE_BIN)\cmake.exe -E copy $(FC_SOURCE)/Mod/Idf/Idf.py $(DEVROOT)/Mod/Idf/Idf.py
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(DEVROOT)/CMakeFiles/3ffb86a9ee126e384206cc0b7a795328/Idf.py.rule;$(FC_SOURCE)\Mod\Idf\Idf.py;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">\code\free-cad-code\Source\Repos\code\Mod\Idf\Idf.py</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Generating ../../../Mod/Idf/Idf.py</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+$(CMAKE_BIN)\cmake.exe -E copy $(FC_SOURCE)/Mod/Idf/Idf.py $(DEVROOT)/Mod/Idf/Idf.py
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(DEVROOT)/CMakeFiles/3ffb86a9ee126e384206cc0b7a795328/Idf.py.rule;$(FC_SOURCE)\Mod\Idf\Idf.py;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">\code\free-cad-code\Source\Repos\code\Mod\Idf\Idf.py</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Generating ../../../Mod/Idf/Idf.py</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+$(CMAKE_BIN)\cmake.exe -E copy $(FC_SOURCE)/Mod/Idf/Idf.py $(DEVROOT)/Mod/Idf/Idf.py
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">$(DEVROOT)/CMakeFiles/3ffb86a9ee126e384206cc0b7a795328/Idf.py.rule;$(FC_SOURCE)\Mod\Idf\Idf.py;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">\code\free-cad-code\Source\Repos\code\Mod\Idf\Idf.py</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Generating ../../../Mod/Idf/Idf.py</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+$(CMAKE_BIN)\cmake.exe -E copy $(FC_SOURCE)/Mod/Idf/Idf.py $(DEVROOT)/Mod/Idf/Idf.py
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(DEVROOT)/CMakeFiles/3ffb86a9ee126e384206cc0b7a795328/Idf.py.rule;$(FC_SOURCE)\Mod\Idf\Idf.py;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">\code\free-cad-code\Source\Repos\code\Mod\Idf\Idf.py</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="\code\free-cad-code\Source\Repos\code\CMakeFiles\c5a298aac99a1ffe447b3b443d8deddb\License.txt.rule">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generating ../../../Mod/Idf/lib/License.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+$(CMAKE_BIN)\cmake.exe -E copy $(FC_SOURCE)/Mod/Idf/lib/License.txt $(DEVROOT)/Mod/Idf/lib/License.txt
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(DEVROOT)/CMakeFiles/c5a298aac99a1ffe447b3b443d8deddb/License.txt.rule;$(FC_SOURCE)\Mod\Idf\lib\License.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">\code\free-cad-code\Source\Repos\code\Mod\Idf\lib\License.txt</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Generating ../../../Mod/Idf/lib/License.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+$(CMAKE_BIN)\cmake.exe -E copy $(FC_SOURCE)/Mod/Idf/lib/License.txt $(DEVROOT)/Mod/Idf/lib/License.txt
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(DEVROOT)/CMakeFiles/c5a298aac99a1ffe447b3b443d8deddb/License.txt.rule;$(FC_SOURCE)\Mod\Idf\lib\License.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">\code\free-cad-code\Source\Repos\code\Mod\Idf\lib\License.txt</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Generating ../../../Mod/Idf/lib/License.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+$(CMAKE_BIN)\cmake.exe -E copy $(FC_SOURCE)/Mod/Idf/lib/License.txt $(DEVROOT)/Mod/Idf/lib/License.txt
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">$(DEVROOT)/CMakeFiles/c5a298aac99a1ffe447b3b443d8deddb/License.txt.rule;$(FC_SOURCE)\Mod\Idf\lib\License.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">\code\free-cad-code\Source\Repos\code\Mod\Idf\lib\License.txt</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Generating ../../../Mod/Idf/lib/License.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+$(CMAKE_BIN)\cmake.exe -E copy $(FC_SOURCE)/Mod/Idf/lib/License.txt $(DEVROOT)/Mod/Idf/lib/License.txt
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(DEVROOT)/CMakeFiles/c5a298aac99a1ffe447b3b443d8deddb/License.txt.rule;$(FC_SOURCE)\Mod\Idf\lib\License.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">\code\free-cad-code\Source\Repos\code\Mod\Idf\lib\License.txt</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="\code\free-cad-code\Source\Repos\code\CMakeFiles\c5a298aac99a1ffe447b3b443d8deddb\0603_SMD.stp.rule">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generating ../../../Mod/Idf/lib/0603_SMD.stp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+$(CMAKE_BIN)\cmake.exe -E copy $(FC_SOURCE)/Mod/Idf/lib/0603_SMD.stp $(DEVROOT)/Mod/Idf/lib/0603_SMD.stp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(DEVROOT)/CMakeFiles/c5a298aac99a1ffe447b3b443d8deddb/0603_SMD.stp.rule;$(FC_SOURCE)\Mod\Idf\lib\0603_SMD.stp;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">\code\free-cad-code\Source\Repos\code\Mod\Idf\lib\0603_SMD.stp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Generating ../../../Mod/Idf/lib/0603_SMD.stp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+$(CMAKE_BIN)\cmake.exe -E copy $(FC_SOURCE)/Mod/Idf/lib/0603_SMD.stp $(DEVROOT)/Mod/Idf/lib/0603_SMD.stp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(DEVROOT)/CMakeFiles/c5a298aac99a1ffe447b3b443d8deddb/0603_SMD.stp.rule;$(FC_SOURCE)\Mod\Idf\lib\0603_SMD.stp;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">\code\free-cad-code\Source\Repos\code\Mod\Idf\lib\0603_SMD.stp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Generating ../../../Mod/Idf/lib/0603_SMD.stp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+$(CMAKE_BIN)\cmake.exe -E copy $(FC_SOURCE)/Mod/Idf/lib/0603_SMD.stp $(DEVROOT)/Mod/Idf/lib/0603_SMD.stp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">$(DEVROOT)/CMakeFiles/c5a298aac99a1ffe447b3b443d8deddb/0603_SMD.stp.rule;$(FC_SOURCE)\Mod\Idf\lib\0603_SMD.stp;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">\code\free-cad-code\Source\Repos\code\Mod\Idf\lib\0603_SMD.stp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Generating ../../../Mod/Idf/lib/0603_SMD.stp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+$(CMAKE_BIN)\cmake.exe -E copy $(FC_SOURCE)/Mod/Idf/lib/0603_SMD.stp $(DEVROOT)/Mod/Idf/lib/0603_SMD.stp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(DEVROOT)/CMakeFiles/c5a298aac99a1ffe447b3b443d8deddb/0603_SMD.stp.rule;$(FC_SOURCE)\Mod\Idf\lib\0603_SMD.stp;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">\code\free-cad-code\Source\Repos\code\Mod\Idf\lib\0603_SMD.stp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="\code\free-cad-code\Source\Repos\code\CMakeFiles\c5a298aac99a1ffe447b3b443d8deddb\0805_SMD.stp.rule">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generating ../../../Mod/Idf/lib/0805_SMD.stp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+$(CMAKE_BIN)\cmake.exe -E copy $(FC_SOURCE)/Mod/Idf/lib/0805_SMD.stp $(DEVROOT)/Mod/Idf/lib/0805_SMD.stp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(DEVROOT)/CMakeFiles/c5a298aac99a1ffe447b3b443d8deddb/0805_SMD.stp.rule;$(FC_SOURCE)\Mod\Idf\lib\0805_SMD.stp;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">\code\free-cad-code\Source\Repos\code\Mod\Idf\lib\0805_SMD.stp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Generating ../../../Mod/Idf/lib/0805_SMD.stp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+$(CMAKE_BIN)\cmake.exe -E copy $(FC_SOURCE)/Mod/Idf/lib/0805_SMD.stp $(DEVROOT)/Mod/Idf/lib/0805_SMD.stp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(DEVROOT)/CMakeFiles/c5a298aac99a1ffe447b3b443d8deddb/0805_SMD.stp.rule;$(FC_SOURCE)\Mod\Idf\lib\0805_SMD.stp;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">\code\free-cad-code\Source\Repos\code\Mod\Idf\lib\0805_SMD.stp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Generating ../../../Mod/Idf/lib/0805_SMD.stp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+$(CMAKE_BIN)\cmake.exe -E copy $(FC_SOURCE)/Mod/Idf/lib/0805_SMD.stp $(DEVROOT)/Mod/Idf/lib/0805_SMD.stp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">$(DEVROOT)/CMakeFiles/c5a298aac99a1ffe447b3b443d8deddb/0805_SMD.stp.rule;$(FC_SOURCE)\Mod\Idf\lib\0805_SMD.stp;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">\code\free-cad-code\Source\Repos\code\Mod\Idf\lib\0805_SMD.stp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Generating ../../../Mod/Idf/lib/0805_SMD.stp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+$(CMAKE_BIN)\cmake.exe -E copy $(FC_SOURCE)/Mod/Idf/lib/0805_SMD.stp $(DEVROOT)/Mod/Idf/lib/0805_SMD.stp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(DEVROOT)/CMakeFiles/c5a298aac99a1ffe447b3b443d8deddb/0805_SMD.stp.rule;$(FC_SOURCE)\Mod\Idf\lib\0805_SMD.stp;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">\code\free-cad-code\Source\Repos\code\Mod\Idf\lib\0805_SMD.stp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="\code\free-cad-code\Source\Repos\code\CMakeFiles\c5a298aac99a1ffe447b3b443d8deddb\1206_SMD.stp.rule">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generating ../../../Mod/Idf/lib/1206_SMD.stp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+$(CMAKE_BIN)\cmake.exe -E copy $(FC_SOURCE)/Mod/Idf/lib/1206_SMD.stp $(DEVROOT)/Mod/Idf/lib/1206_SMD.stp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(DEVROOT)/CMakeFiles/c5a298aac99a1ffe447b3b443d8deddb/1206_SMD.stp.rule;$(FC_SOURCE)\Mod\Idf\lib\1206_SMD.stp;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">\code\free-cad-code\Source\Repos\code\Mod\Idf\lib\1206_SMD.stp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Generating ../../../Mod/Idf/lib/1206_SMD.stp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+$(CMAKE_BIN)\cmake.exe -E copy $(FC_SOURCE)/Mod/Idf/lib/1206_SMD.stp $(DEVROOT)/Mod/Idf/lib/1206_SMD.stp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(DEVROOT)/CMakeFiles/c5a298aac99a1ffe447b3b443d8deddb/1206_SMD.stp.rule;$(FC_SOURCE)\Mod\Idf\lib\1206_SMD.stp;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">\code\free-cad-code\Source\Repos\code\Mod\Idf\lib\1206_SMD.stp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Generating ../../../Mod/Idf/lib/1206_SMD.stp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+$(CMAKE_BIN)\cmake.exe -E copy $(FC_SOURCE)/Mod/Idf/lib/1206_SMD.stp $(DEVROOT)/Mod/Idf/lib/1206_SMD.stp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">$(DEVROOT)/CMakeFiles/c5a298aac99a1ffe447b3b443d8deddb/1206_SMD.stp.rule;$(FC_SOURCE)\Mod\Idf\lib\1206_SMD.stp;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">\code\free-cad-code\Source\Repos\code\Mod\Idf\lib\1206_SMD.stp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Generating ../../../Mod/Idf/lib/1206_SMD.stp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+$(CMAKE_BIN)\cmake.exe -E copy $(FC_SOURCE)/Mod/Idf/lib/1206_SMD.stp $(DEVROOT)/Mod/Idf/lib/1206_SMD.stp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(DEVROOT)/CMakeFiles/c5a298aac99a1ffe447b3b443d8deddb/1206_SMD.stp.rule;$(FC_SOURCE)\Mod\Idf\lib\1206_SMD.stp;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">\code\free-cad-code\Source\Repos\code\Mod\Idf\lib\1206_SMD.stp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="\code\free-cad-code\Source\Repos\code\CMakeFiles\c5a298aac99a1ffe447b3b443d8deddb\1210_SMD.stp.rule">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generating ../../../Mod/Idf/lib/1210_SMD.stp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+$(CMAKE_BIN)\cmake.exe -E copy $(FC_SOURCE)/Mod/Idf/lib/1210_SMD.stp $(DEVROOT)/Mod/Idf/lib/1210_SMD.stp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(DEVROOT)/CMakeFiles/c5a298aac99a1ffe447b3b443d8deddb/1210_SMD.stp.rule;$(FC_SOURCE)\Mod\Idf\lib\1210_SMD.stp;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">\code\free-cad-code\Source\Repos\code\Mod\Idf\lib\1210_SMD.stp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Generating ../../../Mod/Idf/lib/1210_SMD.stp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+$(CMAKE_BIN)\cmake.exe -E copy $(FC_SOURCE)/Mod/Idf/lib/1210_SMD.stp $(DEVROOT)/Mod/Idf/lib/1210_SMD.stp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(DEVROOT)/CMakeFiles/c5a298aac99a1ffe447b3b443d8deddb/1210_SMD.stp.rule;$(FC_SOURCE)\Mod\Idf\lib\1210_SMD.stp;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">\code\free-cad-code\Source\Repos\code\Mod\Idf\lib\1210_SMD.stp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Generating ../../../Mod/Idf/lib/1210_SMD.stp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+$(CMAKE_BIN)\cmake.exe -E copy $(FC_SOURCE)/Mod/Idf/lib/1210_SMD.stp $(DEVROOT)/Mod/Idf/lib/1210_SMD.stp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">$(DEVROOT)/CMakeFiles/c5a298aac99a1ffe447b3b443d8deddb/1210_SMD.stp.rule;$(FC_SOURCE)\Mod\Idf\lib\1210_SMD.stp;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">\code\free-cad-code\Source\Repos\code\Mod\Idf\lib\1210_SMD.stp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Generating ../../../Mod/Idf/lib/1210_SMD.stp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+$(CMAKE_BIN)\cmake.exe -E copy $(FC_SOURCE)/Mod/Idf/lib/1210_SMD.stp $(DEVROOT)/Mod/Idf/lib/1210_SMD.stp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(DEVROOT)/CMakeFiles/c5a298aac99a1ffe447b3b443d8deddb/1210_SMD.stp.rule;$(FC_SOURCE)\Mod\Idf\lib\1210_SMD.stp;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">\code\free-cad-code\Source\Repos\code\Mod\Idf\lib\1210_SMD.stp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="\code\free-cad-code\Source\Repos\code\CMakeFiles\c5a298aac99a1ffe447b3b443d8deddb\1812_SMD.stp.rule">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generating ../../../Mod/Idf/lib/1812_SMD.stp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+$(CMAKE_BIN)\cmake.exe -E copy $(FC_SOURCE)/Mod/Idf/lib/1812_SMD.stp $(DEVROOT)/Mod/Idf/lib/1812_SMD.stp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(DEVROOT)/CMakeFiles/c5a298aac99a1ffe447b3b443d8deddb/1812_SMD.stp.rule;$(FC_SOURCE)\Mod\Idf\lib\1812_SMD.stp;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">\code\free-cad-code\Source\Repos\code\Mod\Idf\lib\1812_SMD.stp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Generating ../../../Mod/Idf/lib/1812_SMD.stp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+$(CMAKE_BIN)\cmake.exe -E copy $(FC_SOURCE)/Mod/Idf/lib/1812_SMD.stp $(DEVROOT)/Mod/Idf/lib/1812_SMD.stp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(DEVROOT)/CMakeFiles/c5a298aac99a1ffe447b3b443d8deddb/1812_SMD.stp.rule;$(FC_SOURCE)\Mod\Idf\lib\1812_SMD.stp;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">\code\free-cad-code\Source\Repos\code\Mod\Idf\lib\1812_SMD.stp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Generating ../../../Mod/Idf/lib/1812_SMD.stp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+$(CMAKE_BIN)\cmake.exe -E copy $(FC_SOURCE)/Mod/Idf/lib/1812_SMD.stp $(DEVROOT)/Mod/Idf/lib/1812_SMD.stp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">$(DEVROOT)/CMakeFiles/c5a298aac99a1ffe447b3b443d8deddb/1812_SMD.stp.rule;$(FC_SOURCE)\Mod\Idf\lib\1812_SMD.stp;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">\code\free-cad-code\Source\Repos\code\Mod\Idf\lib\1812_SMD.stp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Generating ../../../Mod/Idf/lib/1812_SMD.stp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+$(CMAKE_BIN)\cmake.exe -E copy $(FC_SOURCE)/Mod/Idf/lib/1812_SMD.stp $(DEVROOT)/Mod/Idf/lib/1812_SMD.stp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(DEVROOT)/CMakeFiles/c5a298aac99a1ffe447b3b443d8deddb/1812_SMD.stp.rule;$(FC_SOURCE)\Mod\Idf\lib\1812_SMD.stp;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">\code\free-cad-code\Source\Repos\code\Mod\Idf\lib\1812_SMD.stp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="\code\free-cad-code\Source\Repos\code\CMakeFiles\c5a298aac99a1ffe447b3b443d8deddb\2225_SMD.stp.rule">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generating ../../../Mod/Idf/lib/2225_SMD.stp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+$(CMAKE_BIN)\cmake.exe -E copy $(FC_SOURCE)/Mod/Idf/lib/2225_SMD.stp $(DEVROOT)/Mod/Idf/lib/2225_SMD.stp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(DEVROOT)/CMakeFiles/c5a298aac99a1ffe447b3b443d8deddb/2225_SMD.stp.rule;$(FC_SOURCE)\Mod\Idf\lib\2225_SMD.stp;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">\code\free-cad-code\Source\Repos\code\Mod\Idf\lib\2225_SMD.stp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Generating ../../../Mod/Idf/lib/2225_SMD.stp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+$(CMAKE_BIN)\cmake.exe -E copy $(FC_SOURCE)/Mod/Idf/lib/2225_SMD.stp $(DEVROOT)/Mod/Idf/lib/2225_SMD.stp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(DEVROOT)/CMakeFiles/c5a298aac99a1ffe447b3b443d8deddb/2225_SMD.stp.rule;$(FC_SOURCE)\Mod\Idf\lib\2225_SMD.stp;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">\code\free-cad-code\Source\Repos\code\Mod\Idf\lib\2225_SMD.stp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Generating ../../../Mod/Idf/lib/2225_SMD.stp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+$(CMAKE_BIN)\cmake.exe -E copy $(FC_SOURCE)/Mod/Idf/lib/2225_SMD.stp $(DEVROOT)/Mod/Idf/lib/2225_SMD.stp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">$(DEVROOT)/CMakeFiles/c5a298aac99a1ffe447b3b443d8deddb/2225_SMD.stp.rule;$(FC_SOURCE)\Mod\Idf\lib\2225_SMD.stp;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">\code\free-cad-code\Source\Repos\code\Mod\Idf\lib\2225_SMD.stp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Generating ../../../Mod/Idf/lib/2225_SMD.stp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+$(CMAKE_BIN)\cmake.exe -E copy $(FC_SOURCE)/Mod/Idf/lib/2225_SMD.stp $(DEVROOT)/Mod/Idf/lib/2225_SMD.stp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(DEVROOT)/CMakeFiles/c5a298aac99a1ffe447b3b443d8deddb/2225_SMD.stp.rule;$(FC_SOURCE)\Mod\Idf\lib\2225_SMD.stp;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">\code\free-cad-code\Source\Repos\code\Mod\Idf\lib\2225_SMD.stp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="\code\free-cad-code\Source\Repos\code\CMakeFiles\c5a298aac99a1ffe447b3b443d8deddb\2512_SMD.stp.rule">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generating ../../../Mod/Idf/lib/2512_SMD.stp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+$(CMAKE_BIN)\cmake.exe -E copy $(FC_SOURCE)/Mod/Idf/lib/2512_SMD.stp $(DEVROOT)/Mod/Idf/lib/2512_SMD.stp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(DEVROOT)/CMakeFiles/c5a298aac99a1ffe447b3b443d8deddb/2512_SMD.stp.rule;$(FC_SOURCE)\Mod\Idf\lib\2512_SMD.stp;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">\code\free-cad-code\Source\Repos\code\Mod\Idf\lib\2512_SMD.stp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Generating ../../../Mod/Idf/lib/2512_SMD.stp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+$(CMAKE_BIN)\cmake.exe -E copy $(FC_SOURCE)/Mod/Idf/lib/2512_SMD.stp $(DEVROOT)/Mod/Idf/lib/2512_SMD.stp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(DEVROOT)/CMakeFiles/c5a298aac99a1ffe447b3b443d8deddb/2512_SMD.stp.rule;$(FC_SOURCE)\Mod\Idf\lib\2512_SMD.stp;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">\code\free-cad-code\Source\Repos\code\Mod\Idf\lib\2512_SMD.stp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Generating ../../../Mod/Idf/lib/2512_SMD.stp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+$(CMAKE_BIN)\cmake.exe -E copy $(FC_SOURCE)/Mod/Idf/lib/2512_SMD.stp $(DEVROOT)/Mod/Idf/lib/2512_SMD.stp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">$(DEVROOT)/CMakeFiles/c5a298aac99a1ffe447b3b443d8deddb/2512_SMD.stp.rule;$(FC_SOURCE)\Mod\Idf\lib\2512_SMD.stp;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">\code\free-cad-code\Source\Repos\code\Mod\Idf\lib\2512_SMD.stp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Generating ../../../Mod/Idf/lib/2512_SMD.stp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+$(CMAKE_BIN)\cmake.exe -E copy $(FC_SOURCE)/Mod/Idf/lib/2512_SMD.stp $(DEVROOT)/Mod/Idf/lib/2512_SMD.stp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(DEVROOT)/CMakeFiles/c5a298aac99a1ffe447b3b443d8deddb/2512_SMD.stp.rule;$(FC_SOURCE)\Mod\Idf\lib\2512_SMD.stp;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">\code\free-cad-code\Source\Repos\code\Mod\Idf\lib\2512_SMD.stp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="\code\free-cad-code\Source\Repos\code\CMakeFiles\c5a298aac99a1ffe447b3b443d8deddb\CAP_50SGV_8_10.stp.rule">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generating ../../../Mod/Idf/lib/CAP_50SGV_8_10.stp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+$(CMAKE_BIN)\cmake.exe -E copy $(FC_SOURCE)/Mod/Idf/lib/CAP_50SGV_8_10.stp $(DEVROOT)/Mod/Idf/lib/CAP_50SGV_8_10.stp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(DEVROOT)/CMakeFiles/c5a298aac99a1ffe447b3b443d8deddb/CAP_50SGV_8_10.stp.rule;$(FC_SOURCE)\Mod\Idf\lib\CAP_50SGV_8_10.stp;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">\code\free-cad-code\Source\Repos\code\Mod\Idf\lib\CAP_50SGV_8_10.stp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Generating ../../../Mod/Idf/lib/CAP_50SGV_8_10.stp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+$(CMAKE_BIN)\cmake.exe -E copy $(FC_SOURCE)/Mod/Idf/lib/CAP_50SGV_8_10.stp $(DEVROOT)/Mod/Idf/lib/CAP_50SGV_8_10.stp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(DEVROOT)/CMakeFiles/c5a298aac99a1ffe447b3b443d8deddb/CAP_50SGV_8_10.stp.rule;$(FC_SOURCE)\Mod\Idf\lib\CAP_50SGV_8_10.stp;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">\code\free-cad-code\Source\Repos\code\Mod\Idf\lib\CAP_50SGV_8_10.stp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Generating ../../../Mod/Idf/lib/CAP_50SGV_8_10.stp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+$(CMAKE_BIN)\cmake.exe -E copy $(FC_SOURCE)/Mod/Idf/lib/CAP_50SGV_8_10.stp $(DEVROOT)/Mod/Idf/lib/CAP_50SGV_8_10.stp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">$(DEVROOT)/CMakeFiles/c5a298aac99a1ffe447b3b443d8deddb/CAP_50SGV_8_10.stp.rule;$(FC_SOURCE)\Mod\Idf\lib\CAP_50SGV_8_10.stp;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">\code\free-cad-code\Source\Repos\code\Mod\Idf\lib\CAP_50SGV_8_10.stp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Generating ../../../Mod/Idf/lib/CAP_50SGV_8_10.stp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+$(CMAKE_BIN)\cmake.exe -E copy $(FC_SOURCE)/Mod/Idf/lib/CAP_50SGV_8_10.stp $(DEVROOT)/Mod/Idf/lib/CAP_50SGV_8_10.stp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(DEVROOT)/CMakeFiles/c5a298aac99a1ffe447b3b443d8deddb/CAP_50SGV_8_10.stp.rule;$(FC_SOURCE)\Mod\Idf\lib\CAP_50SGV_8_10.stp;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">\code\free-cad-code\Source\Repos\code\Mod\Idf\lib\CAP_50SGV_8_10.stp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="\code\free-cad-code\Source\Repos\code\CMakeFiles\c5a298aac99a1ffe447b3b443d8deddb\EPL22_6_16.stp.rule">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generating ../../../Mod/Idf/lib/EPL22_6_16.stp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+$(CMAKE_BIN)\cmake.exe -E copy $(FC_SOURCE)/Mod/Idf/lib/EPL22_6_16.stp $(DEVROOT)/Mod/Idf/lib/EPL22_6_16.stp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(DEVROOT)/CMakeFiles/c5a298aac99a1ffe447b3b443d8deddb/EPL22_6_16.stp.rule;$(FC_SOURCE)\Mod\Idf\lib\EPL22_6_16.stp;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">\code\free-cad-code\Source\Repos\code\Mod\Idf\lib\EPL22_6_16.stp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Generating ../../../Mod/Idf/lib/EPL22_6_16.stp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+$(CMAKE_BIN)\cmake.exe -E copy $(FC_SOURCE)/Mod/Idf/lib/EPL22_6_16.stp $(DEVROOT)/Mod/Idf/lib/EPL22_6_16.stp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(DEVROOT)/CMakeFiles/c5a298aac99a1ffe447b3b443d8deddb/EPL22_6_16.stp.rule;$(FC_SOURCE)\Mod\Idf\lib\EPL22_6_16.stp;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">\code\free-cad-code\Source\Repos\code\Mod\Idf\lib\EPL22_6_16.stp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Generating ../../../Mod/Idf/lib/EPL22_6_16.stp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+$(CMAKE_BIN)\cmake.exe -E copy $(FC_SOURCE)/Mod/Idf/lib/EPL22_6_16.stp $(DEVROOT)/Mod/Idf/lib/EPL22_6_16.stp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">$(DEVROOT)/CMakeFiles/c5a298aac99a1ffe447b3b443d8deddb/EPL22_6_16.stp.rule;$(FC_SOURCE)\Mod\Idf\lib\EPL22_6_16.stp;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">\code\free-cad-code\Source\Repos\code\Mod\Idf\lib\EPL22_6_16.stp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Generating ../../../Mod/Idf/lib/EPL22_6_16.stp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+$(CMAKE_BIN)\cmake.exe -E copy $(FC_SOURCE)/Mod/Idf/lib/EPL22_6_16.stp $(DEVROOT)/Mod/Idf/lib/EPL22_6_16.stp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(DEVROOT)/CMakeFiles/c5a298aac99a1ffe447b3b443d8deddb/EPL22_6_16.stp.rule;$(FC_SOURCE)\Mod\Idf\lib\EPL22_6_16.stp;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">\code\free-cad-code\Source\Repos\code\Mod\Idf\lib\EPL22_6_16.stp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="\code\free-cad-code\Source\Repos\code\CMakeFiles\c5a298aac99a1ffe447b3b443d8deddb\footprints_models.csv.rule">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generating ../../../Mod/Idf/lib/footprints_models.csv</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+$(CMAKE_BIN)\cmake.exe -E copy $(FC_SOURCE)/Mod/Idf/lib/footprints_models.csv $(DEVROOT)/Mod/Idf/lib/footprints_models.csv
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(DEVROOT)/CMakeFiles/c5a298aac99a1ffe447b3b443d8deddb/footprints_models.csv.rule;$(FC_SOURCE)\Mod\Idf\lib\footprints_models.csv;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">\code\free-cad-code\Source\Repos\code\Mod\Idf\lib\footprints_models.csv</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Generating ../../../Mod/Idf/lib/footprints_models.csv</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+$(CMAKE_BIN)\cmake.exe -E copy $(FC_SOURCE)/Mod/Idf/lib/footprints_models.csv $(DEVROOT)/Mod/Idf/lib/footprints_models.csv
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(DEVROOT)/CMakeFiles/c5a298aac99a1ffe447b3b443d8deddb/footprints_models.csv.rule;$(FC_SOURCE)\Mod\Idf\lib\footprints_models.csv;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">\code\free-cad-code\Source\Repos\code\Mod\Idf\lib\footprints_models.csv</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Generating ../../../Mod/Idf/lib/footprints_models.csv</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+$(CMAKE_BIN)\cmake.exe -E copy $(FC_SOURCE)/Mod/Idf/lib/footprints_models.csv $(DEVROOT)/Mod/Idf/lib/footprints_models.csv
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">$(DEVROOT)/CMakeFiles/c5a298aac99a1ffe447b3b443d8deddb/footprints_models.csv.rule;$(FC_SOURCE)\Mod\Idf\lib\footprints_models.csv;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">\code\free-cad-code\Source\Repos\code\Mod\Idf\lib\footprints_models.csv</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Generating ../../../Mod/Idf/lib/footprints_models.csv</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+$(CMAKE_BIN)\cmake.exe -E copy $(FC_SOURCE)/Mod/Idf/lib/footprints_models.csv $(DEVROOT)/Mod/Idf/lib/footprints_models.csv
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(DEVROOT)/CMakeFiles/c5a298aac99a1ffe447b3b443d8deddb/footprints_models.csv.rule;$(FC_SOURCE)\Mod\Idf\lib\footprints_models.csv;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">\code\free-cad-code\Source\Repos\code\Mod\Idf\lib\footprints_models.csv</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="\code\free-cad-code\Source\Repos\code\CMakeFiles\c5a298aac99a1ffe447b3b443d8deddb\I22_2_5_16.stp.rule">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generating ../../../Mod/Idf/lib/I22_2_5_16.stp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+$(CMAKE_BIN)\cmake.exe -E copy $(FC_SOURCE)/Mod/Idf/lib/I22_2_5_16.stp $(DEVROOT)/Mod/Idf/lib/I22_2_5_16.stp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(DEVROOT)/CMakeFiles/c5a298aac99a1ffe447b3b443d8deddb/I22_2_5_16.stp.rule;$(FC_SOURCE)\Mod\Idf\lib\I22_2_5_16.stp;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">\code\free-cad-code\Source\Repos\code\Mod\Idf\lib\I22_2_5_16.stp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Generating ../../../Mod/Idf/lib/I22_2_5_16.stp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+$(CMAKE_BIN)\cmake.exe -E copy $(FC_SOURCE)/Mod/Idf/lib/I22_2_5_16.stp $(DEVROOT)/Mod/Idf/lib/I22_2_5_16.stp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(DEVROOT)/CMakeFiles/c5a298aac99a1ffe447b3b443d8deddb/I22_2_5_16.stp.rule;$(FC_SOURCE)\Mod\Idf\lib\I22_2_5_16.stp;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">\code\free-cad-code\Source\Repos\code\Mod\Idf\lib\I22_2_5_16.stp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Generating ../../../Mod/Idf/lib/I22_2_5_16.stp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+$(CMAKE_BIN)\cmake.exe -E copy $(FC_SOURCE)/Mod/Idf/lib/I22_2_5_16.stp $(DEVROOT)/Mod/Idf/lib/I22_2_5_16.stp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">$(DEVROOT)/CMakeFiles/c5a298aac99a1ffe447b3b443d8deddb/I22_2_5_16.stp.rule;$(FC_SOURCE)\Mod\Idf\lib\I22_2_5_16.stp;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">\code\free-cad-code\Source\Repos\code\Mod\Idf\lib\I22_2_5_16.stp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Generating ../../../Mod/Idf/lib/I22_2_5_16.stp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+$(CMAKE_BIN)\cmake.exe -E copy $(FC_SOURCE)/Mod/Idf/lib/I22_2_5_16.stp $(DEVROOT)/Mod/Idf/lib/I22_2_5_16.stp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(DEVROOT)/CMakeFiles/c5a298aac99a1ffe447b3b443d8deddb/I22_2_5_16.stp.rule;$(FC_SOURCE)\Mod\Idf\lib\I22_2_5_16.stp;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">\code\free-cad-code\Source\Repos\code\Mod\Idf\lib\I22_2_5_16.stp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="\code\free-cad-code\Source\Repos\code\CMakeFiles\c5a298aac99a1ffe447b3b443d8deddb\I22_2_5_16withEPL22_6_16.stp.rule">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generating ../../../Mod/Idf/lib/I22_2_5_16withEPL22_6_16.stp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+$(CMAKE_BIN)\cmake.exe -E copy $(FC_SOURCE)/Mod/Idf/lib/I22_2_5_16withEPL22_6_16.stp $(DEVROOT)/Mod/Idf/lib/I22_2_5_16withEPL22_6_16.stp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(DEVROOT)/CMakeFiles/c5a298aac99a1ffe447b3b443d8deddb/I22_2_5_16withEPL22_6_16.stp.rule;$(FC_SOURCE)\Mod\Idf\lib\I22_2_5_16withEPL22_6_16.stp;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">\code\free-cad-code\Source\Repos\code\Mod\Idf\lib\I22_2_5_16withEPL22_6_16.stp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Generating ../../../Mod/Idf/lib/I22_2_5_16withEPL22_6_16.stp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+$(CMAKE_BIN)\cmake.exe -E copy $(FC_SOURCE)/Mod/Idf/lib/I22_2_5_16withEPL22_6_16.stp $(DEVROOT)/Mod/Idf/lib/I22_2_5_16withEPL22_6_16.stp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(DEVROOT)/CMakeFiles/c5a298aac99a1ffe447b3b443d8deddb/I22_2_5_16withEPL22_6_16.stp.rule;$(FC_SOURCE)\Mod\Idf\lib\I22_2_5_16withEPL22_6_16.stp;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">\code\free-cad-code\Source\Repos\code\Mod\Idf\lib\I22_2_5_16withEPL22_6_16.stp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Generating ../../../Mod/Idf/lib/I22_2_5_16withEPL22_6_16.stp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+$(CMAKE_BIN)\cmake.exe -E copy $(FC_SOURCE)/Mod/Idf/lib/I22_2_5_16withEPL22_6_16.stp $(DEVROOT)/Mod/Idf/lib/I22_2_5_16withEPL22_6_16.stp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">$(DEVROOT)/CMakeFiles/c5a298aac99a1ffe447b3b443d8deddb/I22_2_5_16withEPL22_6_16.stp.rule;$(FC_SOURCE)\Mod\Idf\lib\I22_2_5_16withEPL22_6_16.stp;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">\code\free-cad-code\Source\Repos\code\Mod\Idf\lib\I22_2_5_16withEPL22_6_16.stp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Generating ../../../Mod/Idf/lib/I22_2_5_16withEPL22_6_16.stp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+$(CMAKE_BIN)\cmake.exe -E copy $(FC_SOURCE)/Mod/Idf/lib/I22_2_5_16withEPL22_6_16.stp $(DEVROOT)/Mod/Idf/lib/I22_2_5_16withEPL22_6_16.stp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(DEVROOT)/CMakeFiles/c5a298aac99a1ffe447b3b443d8deddb/I22_2_5_16withEPL22_6_16.stp.rule;$(FC_SOURCE)\Mod\Idf\lib\I22_2_5_16withEPL22_6_16.stp;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">\code\free-cad-code\Source\Repos\code\Mod\Idf\lib\I22_2_5_16withEPL22_6_16.stp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="\code\free-cad-code\Source\Repos\code\CMakeFiles\c5a298aac99a1ffe447b3b443d8deddb\MSOP_10.stp.rule">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generating ../../../Mod/Idf/lib/MSOP_10.stp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+$(CMAKE_BIN)\cmake.exe -E copy $(FC_SOURCE)/Mod/Idf/lib/MSOP_10.stp $(DEVROOT)/Mod/Idf/lib/MSOP_10.stp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(DEVROOT)/CMakeFiles/c5a298aac99a1ffe447b3b443d8deddb/MSOP_10.stp.rule;$(FC_SOURCE)\Mod\Idf\lib\MSOP_10.stp;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">\code\free-cad-code\Source\Repos\code\Mod\Idf\lib\MSOP_10.stp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Generating ../../../Mod/Idf/lib/MSOP_10.stp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+$(CMAKE_BIN)\cmake.exe -E copy $(FC_SOURCE)/Mod/Idf/lib/MSOP_10.stp $(DEVROOT)/Mod/Idf/lib/MSOP_10.stp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(DEVROOT)/CMakeFiles/c5a298aac99a1ffe447b3b443d8deddb/MSOP_10.stp.rule;$(FC_SOURCE)\Mod\Idf\lib\MSOP_10.stp;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">\code\free-cad-code\Source\Repos\code\Mod\Idf\lib\MSOP_10.stp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Generating ../../../Mod/Idf/lib/MSOP_10.stp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+$(CMAKE_BIN)\cmake.exe -E copy $(FC_SOURCE)/Mod/Idf/lib/MSOP_10.stp $(DEVROOT)/Mod/Idf/lib/MSOP_10.stp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">$(DEVROOT)/CMakeFiles/c5a298aac99a1ffe447b3b443d8deddb/MSOP_10.stp.rule;$(FC_SOURCE)\Mod\Idf\lib\MSOP_10.stp;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">\code\free-cad-code\Source\Repos\code\Mod\Idf\lib\MSOP_10.stp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Generating ../../../Mod/Idf/lib/MSOP_10.stp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+$(CMAKE_BIN)\cmake.exe -E copy $(FC_SOURCE)/Mod/Idf/lib/MSOP_10.stp $(DEVROOT)/Mod/Idf/lib/MSOP_10.stp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(DEVROOT)/CMakeFiles/c5a298aac99a1ffe447b3b443d8deddb/MSOP_10.stp.rule;$(FC_SOURCE)\Mod\Idf\lib\MSOP_10.stp;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">\code\free-cad-code\Source\Repos\code\Mod\Idf\lib\MSOP_10.stp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="\code\free-cad-code\Source\Repos\code\CMakeFiles\c5a298aac99a1ffe447b3b443d8deddb\RLF_12545.stp.rule">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generating ../../../Mod/Idf/lib/RLF_12545.stp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+$(CMAKE_BIN)\cmake.exe -E copy $(FC_SOURCE)/Mod/Idf/lib/RLF_12545.stp $(DEVROOT)/Mod/Idf/lib/RLF_12545.stp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(DEVROOT)/CMakeFiles/c5a298aac99a1ffe447b3b443d8deddb/RLF_12545.stp.rule;$(FC_SOURCE)\Mod\Idf\lib\RLF_12545.stp;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">\code\free-cad-code\Source\Repos\code\Mod\Idf\lib\RLF_12545.stp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Generating ../../../Mod/Idf/lib/RLF_12545.stp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+$(CMAKE_BIN)\cmake.exe -E copy $(FC_SOURCE)/Mod/Idf/lib/RLF_12545.stp $(DEVROOT)/Mod/Idf/lib/RLF_12545.stp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(DEVROOT)/CMakeFiles/c5a298aac99a1ffe447b3b443d8deddb/RLF_12545.stp.rule;$(FC_SOURCE)\Mod\Idf\lib\RLF_12545.stp;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">\code\free-cad-code\Source\Repos\code\Mod\Idf\lib\RLF_12545.stp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Generating ../../../Mod/Idf/lib/RLF_12545.stp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+$(CMAKE_BIN)\cmake.exe -E copy $(FC_SOURCE)/Mod/Idf/lib/RLF_12545.stp $(DEVROOT)/Mod/Idf/lib/RLF_12545.stp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">$(DEVROOT)/CMakeFiles/c5a298aac99a1ffe447b3b443d8deddb/RLF_12545.stp.rule;$(FC_SOURCE)\Mod\Idf\lib\RLF_12545.stp;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">\code\free-cad-code\Source\Repos\code\Mod\Idf\lib\RLF_12545.stp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Generating ../../../Mod/Idf/lib/RLF_12545.stp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+$(CMAKE_BIN)\cmake.exe -E copy $(FC_SOURCE)/Mod/Idf/lib/RLF_12545.stp $(DEVROOT)/Mod/Idf/lib/RLF_12545.stp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(DEVROOT)/CMakeFiles/c5a298aac99a1ffe447b3b443d8deddb/RLF_12545.stp.rule;$(FC_SOURCE)\Mod\Idf\lib\RLF_12545.stp;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">\code\free-cad-code\Source\Repos\code\Mod\Idf\lib\RLF_12545.stp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="\code\free-cad-code\Source\Repos\code\CMakeFiles\c5a298aac99a1ffe447b3b443d8deddb\RLF_7030.stp.rule">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generating ../../../Mod/Idf/lib/RLF_7030.stp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+$(CMAKE_BIN)\cmake.exe -E copy $(FC_SOURCE)/Mod/Idf/lib/RLF_7030.stp $(DEVROOT)/Mod/Idf/lib/RLF_7030.stp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(DEVROOT)/CMakeFiles/c5a298aac99a1ffe447b3b443d8deddb/RLF_7030.stp.rule;$(FC_SOURCE)\Mod\Idf\lib\RLF_7030.stp;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">\code\free-cad-code\Source\Repos\code\Mod\Idf\lib\RLF_7030.stp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Generating ../../../Mod/Idf/lib/RLF_7030.stp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+$(CMAKE_BIN)\cmake.exe -E copy $(FC_SOURCE)/Mod/Idf/lib/RLF_7030.stp $(DEVROOT)/Mod/Idf/lib/RLF_7030.stp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(DEVROOT)/CMakeFiles/c5a298aac99a1ffe447b3b443d8deddb/RLF_7030.stp.rule;$(FC_SOURCE)\Mod\Idf\lib\RLF_7030.stp;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">\code\free-cad-code\Source\Repos\code\Mod\Idf\lib\RLF_7030.stp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Generating ../../../Mod/Idf/lib/RLF_7030.stp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+$(CMAKE_BIN)\cmake.exe -E copy $(FC_SOURCE)/Mod/Idf/lib/RLF_7030.stp $(DEVROOT)/Mod/Idf/lib/RLF_7030.stp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">$(DEVROOT)/CMakeFiles/c5a298aac99a1ffe447b3b443d8deddb/RLF_7030.stp.rule;$(FC_SOURCE)\Mod\Idf\lib\RLF_7030.stp;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">\code\free-cad-code\Source\Repos\code\Mod\Idf\lib\RLF_7030.stp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Generating ../../../Mod/Idf/lib/RLF_7030.stp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+$(CMAKE_BIN)\cmake.exe -E copy $(FC_SOURCE)/Mod/Idf/lib/RLF_7030.stp $(DEVROOT)/Mod/Idf/lib/RLF_7030.stp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(DEVROOT)/CMakeFiles/c5a298aac99a1ffe447b3b443d8deddb/RLF_7030.stp.rule;$(FC_SOURCE)\Mod\Idf\lib\RLF_7030.stp;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">\code\free-cad-code\Source\Repos\code\Mod\Idf\lib\RLF_7030.stp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="\code\free-cad-code\Source\Repos\code\CMakeFiles\c5a298aac99a1ffe447b3b443d8deddb\SMB_DO_214AA.stp.rule">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generating ../../../Mod/Idf/lib/SMB_DO_214AA.stp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+$(CMAKE_BIN)\cmake.exe -E copy $(FC_SOURCE)/Mod/Idf/lib/SMB_DO_214AA.stp $(DEVROOT)/Mod/Idf/lib/SMB_DO_214AA.stp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(DEVROOT)/CMakeFiles/c5a298aac99a1ffe447b3b443d8deddb/SMB_DO_214AA.stp.rule;$(FC_SOURCE)\Mod\Idf\lib\SMB_DO_214AA.stp;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">\code\free-cad-code\Source\Repos\code\Mod\Idf\lib\SMB_DO_214AA.stp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Generating ../../../Mod/Idf/lib/SMB_DO_214AA.stp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+$(CMAKE_BIN)\cmake.exe -E copy $(FC_SOURCE)/Mod/Idf/lib/SMB_DO_214AA.stp $(DEVROOT)/Mod/Idf/lib/SMB_DO_214AA.stp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(DEVROOT)/CMakeFiles/c5a298aac99a1ffe447b3b443d8deddb/SMB_DO_214AA.stp.rule;$(FC_SOURCE)\Mod\Idf\lib\SMB_DO_214AA.stp;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">\code\free-cad-code\Source\Repos\code\Mod\Idf\lib\SMB_DO_214AA.stp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Generating ../../../Mod/Idf/lib/SMB_DO_214AA.stp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+$(CMAKE_BIN)\cmake.exe -E copy $(FC_SOURCE)/Mod/Idf/lib/SMB_DO_214AA.stp $(DEVROOT)/Mod/Idf/lib/SMB_DO_214AA.stp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">$(DEVROOT)/CMakeFiles/c5a298aac99a1ffe447b3b443d8deddb/SMB_DO_214AA.stp.rule;$(FC_SOURCE)\Mod\Idf\lib\SMB_DO_214AA.stp;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">\code\free-cad-code\Source\Repos\code\Mod\Idf\lib\SMB_DO_214AA.stp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Generating ../../../Mod/Idf/lib/SMB_DO_214AA.stp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+$(CMAKE_BIN)\cmake.exe -E copy $(FC_SOURCE)/Mod/Idf/lib/SMB_DO_214AA.stp $(DEVROOT)/Mod/Idf/lib/SMB_DO_214AA.stp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(DEVROOT)/CMakeFiles/c5a298aac99a1ffe447b3b443d8deddb/SMB_DO_214AA.stp.rule;$(FC_SOURCE)\Mod\Idf\lib\SMB_DO_214AA.stp;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">\code\free-cad-code\Source\Repos\code\Mod\Idf\lib\SMB_DO_214AA.stp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="\code\free-cad-code\Source\Repos\code\CMakeFiles\c5a298aac99a1ffe447b3b443d8deddb\SMC_DO_214AB.stp.rule">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generating ../../../Mod/Idf/lib/SMC_DO_214AB.stp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+$(CMAKE_BIN)\cmake.exe -E copy $(FC_SOURCE)/Mod/Idf/lib/SMC_DO_214AB.stp $(DEVROOT)/Mod/Idf/lib/SMC_DO_214AB.stp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(DEVROOT)/CMakeFiles/c5a298aac99a1ffe447b3b443d8deddb/SMC_DO_214AB.stp.rule;$(FC_SOURCE)\Mod\Idf\lib\SMC_DO_214AB.stp;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">\code\free-cad-code\Source\Repos\code\Mod\Idf\lib\SMC_DO_214AB.stp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Generating ../../../Mod/Idf/lib/SMC_DO_214AB.stp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+$(CMAKE_BIN)\cmake.exe -E copy $(FC_SOURCE)/Mod/Idf/lib/SMC_DO_214AB.stp $(DEVROOT)/Mod/Idf/lib/SMC_DO_214AB.stp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(DEVROOT)/CMakeFiles/c5a298aac99a1ffe447b3b443d8deddb/SMC_DO_214AB.stp.rule;$(FC_SOURCE)\Mod\Idf\lib\SMC_DO_214AB.stp;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">\code\free-cad-code\Source\Repos\code\Mod\Idf\lib\SMC_DO_214AB.stp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Generating ../../../Mod/Idf/lib/SMC_DO_214AB.stp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+$(CMAKE_BIN)\cmake.exe -E copy $(FC_SOURCE)/Mod/Idf/lib/SMC_DO_214AB.stp $(DEVROOT)/Mod/Idf/lib/SMC_DO_214AB.stp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">$(DEVROOT)/CMakeFiles/c5a298aac99a1ffe447b3b443d8deddb/SMC_DO_214AB.stp.rule;$(FC_SOURCE)\Mod\Idf\lib\SMC_DO_214AB.stp;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">\code\free-cad-code\Source\Repos\code\Mod\Idf\lib\SMC_DO_214AB.stp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Generating ../../../Mod/Idf/lib/SMC_DO_214AB.stp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+$(CMAKE_BIN)\cmake.exe -E copy $(FC_SOURCE)/Mod/Idf/lib/SMC_DO_214AB.stp $(DEVROOT)/Mod/Idf/lib/SMC_DO_214AB.stp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(DEVROOT)/CMakeFiles/c5a298aac99a1ffe447b3b443d8deddb/SMC_DO_214AB.stp.rule;$(FC_SOURCE)\Mod\Idf\lib\SMC_DO_214AB.stp;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">\code\free-cad-code\Source\Repos\code\Mod\Idf\lib\SMC_DO_214AB.stp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="\code\free-cad-code\Source\Repos\code\CMakeFiles\c5a298aac99a1ffe447b3b443d8deddb\SOD_323.igs.rule">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generating ../../../Mod/Idf/lib/SOD_323.igs</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+$(CMAKE_BIN)\cmake.exe -E copy $(FC_SOURCE)/Mod/Idf/lib/SOD_323.igs $(DEVROOT)/Mod/Idf/lib/SOD_323.igs
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(DEVROOT)/CMakeFiles/c5a298aac99a1ffe447b3b443d8deddb/SOD_323.igs.rule;$(FC_SOURCE)\Mod\Idf\lib\SOD_323.igs;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">\code\free-cad-code\Source\Repos\code\Mod\Idf\lib\SOD_323.igs</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Generating ../../../Mod/Idf/lib/SOD_323.igs</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+$(CMAKE_BIN)\cmake.exe -E copy $(FC_SOURCE)/Mod/Idf/lib/SOD_323.igs $(DEVROOT)/Mod/Idf/lib/SOD_323.igs
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(DEVROOT)/CMakeFiles/c5a298aac99a1ffe447b3b443d8deddb/SOD_323.igs.rule;$(FC_SOURCE)\Mod\Idf\lib\SOD_323.igs;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">\code\free-cad-code\Source\Repos\code\Mod\Idf\lib\SOD_323.igs</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Generating ../../../Mod/Idf/lib/SOD_323.igs</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+$(CMAKE_BIN)\cmake.exe -E copy $(FC_SOURCE)/Mod/Idf/lib/SOD_323.igs $(DEVROOT)/Mod/Idf/lib/SOD_323.igs
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">$(DEVROOT)/CMakeFiles/c5a298aac99a1ffe447b3b443d8deddb/SOD_323.igs.rule;$(FC_SOURCE)\Mod\Idf\lib\SOD_323.igs;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">\code\free-cad-code\Source\Repos\code\Mod\Idf\lib\SOD_323.igs</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Generating ../../../Mod/Idf/lib/SOD_323.igs</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+$(CMAKE_BIN)\cmake.exe -E copy $(FC_SOURCE)/Mod/Idf/lib/SOD_323.igs $(DEVROOT)/Mod/Idf/lib/SOD_323.igs
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(DEVROOT)/CMakeFiles/c5a298aac99a1ffe447b3b443d8deddb/SOD_323.igs.rule;$(FC_SOURCE)\Mod\Idf\lib\SOD_323.igs;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">\code\free-cad-code\Source\Repos\code\Mod\Idf\lib\SOD_323.igs</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="\code\free-cad-code\Source\Repos\code\CMakeFiles\c5a298aac99a1ffe447b3b443d8deddb\SOD_323.stp.rule">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generating ../../../Mod/Idf/lib/SOD_323.stp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+$(CMAKE_BIN)\cmake.exe -E copy $(FC_SOURCE)/Mod/Idf/lib/SOD_323.stp $(DEVROOT)/Mod/Idf/lib/SOD_323.stp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(DEVROOT)/CMakeFiles/c5a298aac99a1ffe447b3b443d8deddb/SOD_323.stp.rule;$(FC_SOURCE)\Mod\Idf\lib\SOD_323.stp;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">\code\free-cad-code\Source\Repos\code\Mod\Idf\lib\SOD_323.stp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Generating ../../../Mod/Idf/lib/SOD_323.stp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+$(CMAKE_BIN)\cmake.exe -E copy $(FC_SOURCE)/Mod/Idf/lib/SOD_323.stp $(DEVROOT)/Mod/Idf/lib/SOD_323.stp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(DEVROOT)/CMakeFiles/c5a298aac99a1ffe447b3b443d8deddb/SOD_323.stp.rule;$(FC_SOURCE)\Mod\Idf\lib\SOD_323.stp;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">\code\free-cad-code\Source\Repos\code\Mod\Idf\lib\SOD_323.stp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Generating ../../../Mod/Idf/lib/SOD_323.stp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+$(CMAKE_BIN)\cmake.exe -E copy $(FC_SOURCE)/Mod/Idf/lib/SOD_323.stp $(DEVROOT)/Mod/Idf/lib/SOD_323.stp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">$(DEVROOT)/CMakeFiles/c5a298aac99a1ffe447b3b443d8deddb/SOD_323.stp.rule;$(FC_SOURCE)\Mod\Idf\lib\SOD_323.stp;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">\code\free-cad-code\Source\Repos\code\Mod\Idf\lib\SOD_323.stp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Generating ../../../Mod/Idf/lib/SOD_323.stp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+$(CMAKE_BIN)\cmake.exe -E copy $(FC_SOURCE)/Mod/Idf/lib/SOD_323.stp $(DEVROOT)/Mod/Idf/lib/SOD_323.stp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(DEVROOT)/CMakeFiles/c5a298aac99a1ffe447b3b443d8deddb/SOD_323.stp.rule;$(FC_SOURCE)\Mod\Idf\lib\SOD_323.stp;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">\code\free-cad-code\Source\Repos\code\Mod\Idf\lib\SOD_323.stp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="\code\free-cad-code\Source\Repos\code\CMakeFiles\c5a298aac99a1ffe447b3b443d8deddb\SOD_523.stp.rule">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generating ../../../Mod/Idf/lib/SOD_523.stp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+$(CMAKE_BIN)\cmake.exe -E copy $(FC_SOURCE)/Mod/Idf/lib/SOD_523.stp $(DEVROOT)/Mod/Idf/lib/SOD_523.stp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(DEVROOT)/CMakeFiles/c5a298aac99a1ffe447b3b443d8deddb/SOD_523.stp.rule;$(FC_SOURCE)\Mod\Idf\lib\SOD_523.stp;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">\code\free-cad-code\Source\Repos\code\Mod\Idf\lib\SOD_523.stp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Generating ../../../Mod/Idf/lib/SOD_523.stp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+$(CMAKE_BIN)\cmake.exe -E copy $(FC_SOURCE)/Mod/Idf/lib/SOD_523.stp $(DEVROOT)/Mod/Idf/lib/SOD_523.stp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(DEVROOT)/CMakeFiles/c5a298aac99a1ffe447b3b443d8deddb/SOD_523.stp.rule;$(FC_SOURCE)\Mod\Idf\lib\SOD_523.stp;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">\code\free-cad-code\Source\Repos\code\Mod\Idf\lib\SOD_523.stp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Generating ../../../Mod/Idf/lib/SOD_523.stp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+$(CMAKE_BIN)\cmake.exe -E copy $(FC_SOURCE)/Mod/Idf/lib/SOD_523.stp $(DEVROOT)/Mod/Idf/lib/SOD_523.stp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">$(DEVROOT)/CMakeFiles/c5a298aac99a1ffe447b3b443d8deddb/SOD_523.stp.rule;$(FC_SOURCE)\Mod\Idf\lib\SOD_523.stp;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">\code\free-cad-code\Source\Repos\code\Mod\Idf\lib\SOD_523.stp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Generating ../../../Mod/Idf/lib/SOD_523.stp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+$(CMAKE_BIN)\cmake.exe -E copy $(FC_SOURCE)/Mod/Idf/lib/SOD_523.stp $(DEVROOT)/Mod/Idf/lib/SOD_523.stp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(DEVROOT)/CMakeFiles/c5a298aac99a1ffe447b3b443d8deddb/SOD_523.stp.rule;$(FC_SOURCE)\Mod\Idf\lib\SOD_523.stp;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">\code\free-cad-code\Source\Repos\code\Mod\Idf\lib\SOD_523.stp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="\code\free-cad-code\Source\Repos\code\CMakeFiles\c5a298aac99a1ffe447b3b443d8deddb\SOT23.stp.rule">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generating ../../../Mod/Idf/lib/SOT23.stp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+$(CMAKE_BIN)\cmake.exe -E copy $(FC_SOURCE)/Mod/Idf/lib/SOT23.stp $(DEVROOT)/Mod/Idf/lib/SOT23.stp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(DEVROOT)/CMakeFiles/c5a298aac99a1ffe447b3b443d8deddb/SOT23.stp.rule;$(FC_SOURCE)\Mod\Idf\lib\SOT23.stp;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">\code\free-cad-code\Source\Repos\code\Mod\Idf\lib\SOT23.stp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Generating ../../../Mod/Idf/lib/SOT23.stp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+$(CMAKE_BIN)\cmake.exe -E copy $(FC_SOURCE)/Mod/Idf/lib/SOT23.stp $(DEVROOT)/Mod/Idf/lib/SOT23.stp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(DEVROOT)/CMakeFiles/c5a298aac99a1ffe447b3b443d8deddb/SOT23.stp.rule;$(FC_SOURCE)\Mod\Idf\lib\SOT23.stp;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">\code\free-cad-code\Source\Repos\code\Mod\Idf\lib\SOT23.stp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Generating ../../../Mod/Idf/lib/SOT23.stp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+$(CMAKE_BIN)\cmake.exe -E copy $(FC_SOURCE)/Mod/Idf/lib/SOT23.stp $(DEVROOT)/Mod/Idf/lib/SOT23.stp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">$(DEVROOT)/CMakeFiles/c5a298aac99a1ffe447b3b443d8deddb/SOT23.stp.rule;$(FC_SOURCE)\Mod\Idf\lib\SOT23.stp;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">\code\free-cad-code\Source\Repos\code\Mod\Idf\lib\SOT23.stp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Generating ../../../Mod/Idf/lib/SOT23.stp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+$(CMAKE_BIN)\cmake.exe -E copy $(FC_SOURCE)/Mod/Idf/lib/SOT23.stp $(DEVROOT)/Mod/Idf/lib/SOT23.stp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(DEVROOT)/CMakeFiles/c5a298aac99a1ffe447b3b443d8deddb/SOT23.stp.rule;$(FC_SOURCE)\Mod\Idf\lib\SOT23.stp;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">\code\free-cad-code\Source\Repos\code\Mod\Idf\lib\SOT23.stp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="\code\free-cad-code\Source\Repos\code\CMakeFiles\c5a298aac99a1ffe447b3b443d8deddb\SOT404.stp.rule">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generating ../../../Mod/Idf/lib/SOT404.stp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+$(CMAKE_BIN)\cmake.exe -E copy $(FC_SOURCE)/Mod/Idf/lib/SOT404.stp $(DEVROOT)/Mod/Idf/lib/SOT404.stp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(DEVROOT)/CMakeFiles/c5a298aac99a1ffe447b3b443d8deddb/SOT404.stp.rule;$(FC_SOURCE)\Mod\Idf\lib\SOT404.stp;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">\code\free-cad-code\Source\Repos\code\Mod\Idf\lib\SOT404.stp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Generating ../../../Mod/Idf/lib/SOT404.stp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+$(CMAKE_BIN)\cmake.exe -E copy $(FC_SOURCE)/Mod/Idf/lib/SOT404.stp $(DEVROOT)/Mod/Idf/lib/SOT404.stp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(DEVROOT)/CMakeFiles/c5a298aac99a1ffe447b3b443d8deddb/SOT404.stp.rule;$(FC_SOURCE)\Mod\Idf\lib\SOT404.stp;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">\code\free-cad-code\Source\Repos\code\Mod\Idf\lib\SOT404.stp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Generating ../../../Mod/Idf/lib/SOT404.stp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+$(CMAKE_BIN)\cmake.exe -E copy $(FC_SOURCE)/Mod/Idf/lib/SOT404.stp $(DEVROOT)/Mod/Idf/lib/SOT404.stp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">$(DEVROOT)/CMakeFiles/c5a298aac99a1ffe447b3b443d8deddb/SOT404.stp.rule;$(FC_SOURCE)\Mod\Idf\lib\SOT404.stp;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">\code\free-cad-code\Source\Repos\code\Mod\Idf\lib\SOT404.stp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Generating ../../../Mod/Idf/lib/SOT404.stp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+$(CMAKE_BIN)\cmake.exe -E copy $(FC_SOURCE)/Mod/Idf/lib/SOT404.stp $(DEVROOT)/Mod/Idf/lib/SOT404.stp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(DEVROOT)/CMakeFiles/c5a298aac99a1ffe447b3b443d8deddb/SOT404.stp.rule;$(FC_SOURCE)\Mod\Idf\lib\SOT404.stp;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">\code\free-cad-code\Source\Repos\code\Mod\Idf\lib\SOT404.stp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="\code\free-cad-code\Source\Repos\code\CMakeFiles\c5a298aac99a1ffe447b3b443d8deddb\SOT428_DPAK.stp.rule">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generating ../../../Mod/Idf/lib/SOT428_DPAK.stp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+$(CMAKE_BIN)\cmake.exe -E copy $(FC_SOURCE)/Mod/Idf/lib/SOT428_DPAK.stp $(DEVROOT)/Mod/Idf/lib/SOT428_DPAK.stp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(DEVROOT)/CMakeFiles/c5a298aac99a1ffe447b3b443d8deddb/SOT428_DPAK.stp.rule;$(FC_SOURCE)\Mod\Idf\lib\SOT428_DPAK.stp;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">\code\free-cad-code\Source\Repos\code\Mod\Idf\lib\SOT428_DPAK.stp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Generating ../../../Mod/Idf/lib/SOT428_DPAK.stp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+$(CMAKE_BIN)\cmake.exe -E copy $(FC_SOURCE)/Mod/Idf/lib/SOT428_DPAK.stp $(DEVROOT)/Mod/Idf/lib/SOT428_DPAK.stp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(DEVROOT)/CMakeFiles/c5a298aac99a1ffe447b3b443d8deddb/SOT428_DPAK.stp.rule;$(FC_SOURCE)\Mod\Idf\lib\SOT428_DPAK.stp;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">\code\free-cad-code\Source\Repos\code\Mod\Idf\lib\SOT428_DPAK.stp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Generating ../../../Mod/Idf/lib/SOT428_DPAK.stp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+$(CMAKE_BIN)\cmake.exe -E copy $(FC_SOURCE)/Mod/Idf/lib/SOT428_DPAK.stp $(DEVROOT)/Mod/Idf/lib/SOT428_DPAK.stp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">$(DEVROOT)/CMakeFiles/c5a298aac99a1ffe447b3b443d8deddb/SOT428_DPAK.stp.rule;$(FC_SOURCE)\Mod\Idf\lib\SOT428_DPAK.stp;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">\code\free-cad-code\Source\Repos\code\Mod\Idf\lib\SOT428_DPAK.stp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Generating ../../../Mod/Idf/lib/SOT428_DPAK.stp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+$(CMAKE_BIN)\cmake.exe -E copy $(FC_SOURCE)/Mod/Idf/lib/SOT428_DPAK.stp $(DEVROOT)/Mod/Idf/lib/SOT428_DPAK.stp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(DEVROOT)/CMakeFiles/c5a298aac99a1ffe447b3b443d8deddb/SOT428_DPAK.stp.rule;$(FC_SOURCE)\Mod\Idf\lib\SOT428_DPAK.stp;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">\code\free-cad-code\Source\Repos\code\Mod\Idf\lib\SOT428_DPAK.stp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="\code\free-cad-code\Source\Repos\code\CMakeFiles\c5a298aac99a1ffe447b3b443d8deddb\SOT_323_3.stp.rule">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generating ../../../Mod/Idf/lib/SOT_323_3.stp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+$(CMAKE_BIN)\cmake.exe -E copy $(FC_SOURCE)/Mod/Idf/lib/SOT_323_3.stp $(DEVROOT)/Mod/Idf/lib/SOT_323_3.stp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(DEVROOT)/CMakeFiles/c5a298aac99a1ffe447b3b443d8deddb/SOT_323_3.stp.rule;$(FC_SOURCE)\Mod\Idf\lib\SOT_323_3.stp;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">\code\free-cad-code\Source\Repos\code\Mod\Idf\lib\SOT_323_3.stp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Generating ../../../Mod/Idf/lib/SOT_323_3.stp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+$(CMAKE_BIN)\cmake.exe -E copy $(FC_SOURCE)/Mod/Idf/lib/SOT_323_3.stp $(DEVROOT)/Mod/Idf/lib/SOT_323_3.stp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(DEVROOT)/CMakeFiles/c5a298aac99a1ffe447b3b443d8deddb/SOT_323_3.stp.rule;$(FC_SOURCE)\Mod\Idf\lib\SOT_323_3.stp;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">\code\free-cad-code\Source\Repos\code\Mod\Idf\lib\SOT_323_3.stp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Generating ../../../Mod/Idf/lib/SOT_323_3.stp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+$(CMAKE_BIN)\cmake.exe -E copy $(FC_SOURCE)/Mod/Idf/lib/SOT_323_3.stp $(DEVROOT)/Mod/Idf/lib/SOT_323_3.stp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">$(DEVROOT)/CMakeFiles/c5a298aac99a1ffe447b3b443d8deddb/SOT_323_3.stp.rule;$(FC_SOURCE)\Mod\Idf\lib\SOT_323_3.stp;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">\code\free-cad-code\Source\Repos\code\Mod\Idf\lib\SOT_323_3.stp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Generating ../../../Mod/Idf/lib/SOT_323_3.stp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+$(CMAKE_BIN)\cmake.exe -E copy $(FC_SOURCE)/Mod/Idf/lib/SOT_323_3.stp $(DEVROOT)/Mod/Idf/lib/SOT_323_3.stp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(DEVROOT)/CMakeFiles/c5a298aac99a1ffe447b3b443d8deddb/SOT_323_3.stp.rule;$(FC_SOURCE)\Mod\Idf\lib\SOT_323_3.stp;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">\code\free-cad-code\Source\Repos\code\Mod\Idf\lib\SOT_323_3.stp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="\code\free-cad-code\Source\Repos\code\CMakeFiles\c5a298aac99a1ffe447b3b443d8deddb\SOT_96.stp.rule">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generating ../../../Mod/Idf/lib/SOT_96.stp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+$(CMAKE_BIN)\cmake.exe -E copy $(FC_SOURCE)/Mod/Idf/lib/SOT_96.stp $(DEVROOT)/Mod/Idf/lib/SOT_96.stp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(DEVROOT)/CMakeFiles/c5a298aac99a1ffe447b3b443d8deddb/SOT_96.stp.rule;$(FC_SOURCE)\Mod\Idf\lib\SOT_96.stp;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">\code\free-cad-code\Source\Repos\code\Mod\Idf\lib\SOT_96.stp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Generating ../../../Mod/Idf/lib/SOT_96.stp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+$(CMAKE_BIN)\cmake.exe -E copy $(FC_SOURCE)/Mod/Idf/lib/SOT_96.stp $(DEVROOT)/Mod/Idf/lib/SOT_96.stp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(DEVROOT)/CMakeFiles/c5a298aac99a1ffe447b3b443d8deddb/SOT_96.stp.rule;$(FC_SOURCE)\Mod\Idf\lib\SOT_96.stp;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">\code\free-cad-code\Source\Repos\code\Mod\Idf\lib\SOT_96.stp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Generating ../../../Mod/Idf/lib/SOT_96.stp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+$(CMAKE_BIN)\cmake.exe -E copy $(FC_SOURCE)/Mod/Idf/lib/SOT_96.stp $(DEVROOT)/Mod/Idf/lib/SOT_96.stp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">$(DEVROOT)/CMakeFiles/c5a298aac99a1ffe447b3b443d8deddb/SOT_96.stp.rule;$(FC_SOURCE)\Mod\Idf\lib\SOT_96.stp;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">\code\free-cad-code\Source\Repos\code\Mod\Idf\lib\SOT_96.stp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Generating ../../../Mod/Idf/lib/SOT_96.stp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+$(CMAKE_BIN)\cmake.exe -E copy $(FC_SOURCE)/Mod/Idf/lib/SOT_96.stp $(DEVROOT)/Mod/Idf/lib/SOT_96.stp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(DEVROOT)/CMakeFiles/c5a298aac99a1ffe447b3b443d8deddb/SOT_96.stp.rule;$(FC_SOURCE)\Mod\Idf\lib\SOT_96.stp;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">\code\free-cad-code\Source\Repos\code\Mod\Idf\lib\SOT_96.stp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="\code\free-cad-code\Source\Repos\code\CMakeFiles\c5a298aac99a1ffe447b3b443d8deddb\TCMT1107_4.stp.rule">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generating ../../../Mod/Idf/lib/TCMT1107_4.stp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+$(CMAKE_BIN)\cmake.exe -E copy $(FC_SOURCE)/Mod/Idf/lib/TCMT1107_4.stp $(DEVROOT)/Mod/Idf/lib/TCMT1107_4.stp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(DEVROOT)/CMakeFiles/c5a298aac99a1ffe447b3b443d8deddb/TCMT1107_4.stp.rule;$(FC_SOURCE)\Mod\Idf\lib\TCMT1107_4.stp;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">\code\free-cad-code\Source\Repos\code\Mod\Idf\lib\TCMT1107_4.stp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Generating ../../../Mod/Idf/lib/TCMT1107_4.stp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+$(CMAKE_BIN)\cmake.exe -E copy $(FC_SOURCE)/Mod/Idf/lib/TCMT1107_4.stp $(DEVROOT)/Mod/Idf/lib/TCMT1107_4.stp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(DEVROOT)/CMakeFiles/c5a298aac99a1ffe447b3b443d8deddb/TCMT1107_4.stp.rule;$(FC_SOURCE)\Mod\Idf\lib\TCMT1107_4.stp;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">\code\free-cad-code\Source\Repos\code\Mod\Idf\lib\TCMT1107_4.stp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Generating ../../../Mod/Idf/lib/TCMT1107_4.stp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+$(CMAKE_BIN)\cmake.exe -E copy $(FC_SOURCE)/Mod/Idf/lib/TCMT1107_4.stp $(DEVROOT)/Mod/Idf/lib/TCMT1107_4.stp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">$(DEVROOT)/CMakeFiles/c5a298aac99a1ffe447b3b443d8deddb/TCMT1107_4.stp.rule;$(FC_SOURCE)\Mod\Idf\lib\TCMT1107_4.stp;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">\code\free-cad-code\Source\Repos\code\Mod\Idf\lib\TCMT1107_4.stp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Generating ../../../Mod/Idf/lib/TCMT1107_4.stp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+$(CMAKE_BIN)\cmake.exe -E copy $(FC_SOURCE)/Mod/Idf/lib/TCMT1107_4.stp $(DEVROOT)/Mod/Idf/lib/TCMT1107_4.stp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(DEVROOT)/CMakeFiles/c5a298aac99a1ffe447b3b443d8deddb/TCMT1107_4.stp.rule;$(FC_SOURCE)\Mod\Idf\lib\TCMT1107_4.stp;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">\code\free-cad-code\Source\Repos\code\Mod\Idf\lib\TCMT1107_4.stp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="\code\free-cad-code\Source\Repos\code\CMakeFiles\c5a298aac99a1ffe447b3b443d8deddb\TSM_103_01_L_DV_A.stp.rule">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generating ../../../Mod/Idf/lib/TSM_103_01_L_DV_A.stp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+$(CMAKE_BIN)\cmake.exe -E copy $(FC_SOURCE)/Mod/Idf/lib/TSM_103_01_L_DV_A.stp $(DEVROOT)/Mod/Idf/lib/TSM_103_01_L_DV_A.stp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(DEVROOT)/CMakeFiles/c5a298aac99a1ffe447b3b443d8deddb/TSM_103_01_L_DV_A.stp.rule;$(FC_SOURCE)\Mod\Idf\lib\TSM_103_01_L_DV_A.stp;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">\code\free-cad-code\Source\Repos\code\Mod\Idf\lib\TSM_103_01_L_DV_A.stp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Generating ../../../Mod/Idf/lib/TSM_103_01_L_DV_A.stp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+$(CMAKE_BIN)\cmake.exe -E copy $(FC_SOURCE)/Mod/Idf/lib/TSM_103_01_L_DV_A.stp $(DEVROOT)/Mod/Idf/lib/TSM_103_01_L_DV_A.stp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(DEVROOT)/CMakeFiles/c5a298aac99a1ffe447b3b443d8deddb/TSM_103_01_L_DV_A.stp.rule;$(FC_SOURCE)\Mod\Idf\lib\TSM_103_01_L_DV_A.stp;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">\code\free-cad-code\Source\Repos\code\Mod\Idf\lib\TSM_103_01_L_DV_A.stp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Generating ../../../Mod/Idf/lib/TSM_103_01_L_DV_A.stp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+$(CMAKE_BIN)\cmake.exe -E copy $(FC_SOURCE)/Mod/Idf/lib/TSM_103_01_L_DV_A.stp $(DEVROOT)/Mod/Idf/lib/TSM_103_01_L_DV_A.stp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">$(DEVROOT)/CMakeFiles/c5a298aac99a1ffe447b3b443d8deddb/TSM_103_01_L_DV_A.stp.rule;$(FC_SOURCE)\Mod\Idf\lib\TSM_103_01_L_DV_A.stp;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">\code\free-cad-code\Source\Repos\code\Mod\Idf\lib\TSM_103_01_L_DV_A.stp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Generating ../../../Mod/Idf/lib/TSM_103_01_L_DV_A.stp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+$(CMAKE_BIN)\cmake.exe -E copy $(FC_SOURCE)/Mod/Idf/lib/TSM_103_01_L_DV_A.stp $(DEVROOT)/Mod/Idf/lib/TSM_103_01_L_DV_A.stp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(DEVROOT)/CMakeFiles/c5a298aac99a1ffe447b3b443d8deddb/TSM_103_01_L_DV_A.stp.rule;$(FC_SOURCE)\Mod\Idf\lib\TSM_103_01_L_DV_A.stp;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">\code\free-cad-code\Source\Repos\code\Mod\Idf\lib\TSM_103_01_L_DV_A.stp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="\code\free-cad-code\Source\Repos\code\CMakeFiles\c5a298aac99a1ffe447b3b443d8deddb\TSM_104_01_L_DV_A.stp.rule">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generating ../../../Mod/Idf/lib/TSM_104_01_L_DV_A.stp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+$(CMAKE_BIN)\cmake.exe -E copy $(FC_SOURCE)/Mod/Idf/lib/TSM_104_01_L_DV_A.stp $(DEVROOT)/Mod/Idf/lib/TSM_104_01_L_DV_A.stp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(DEVROOT)/CMakeFiles/c5a298aac99a1ffe447b3b443d8deddb/TSM_104_01_L_DV_A.stp.rule;$(FC_SOURCE)\Mod\Idf\lib\TSM_104_01_L_DV_A.stp;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">\code\free-cad-code\Source\Repos\code\Mod\Idf\lib\TSM_104_01_L_DV_A.stp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Generating ../../../Mod/Idf/lib/TSM_104_01_L_DV_A.stp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+$(CMAKE_BIN)\cmake.exe -E copy $(FC_SOURCE)/Mod/Idf/lib/TSM_104_01_L_DV_A.stp $(DEVROOT)/Mod/Idf/lib/TSM_104_01_L_DV_A.stp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(DEVROOT)/CMakeFiles/c5a298aac99a1ffe447b3b443d8deddb/TSM_104_01_L_DV_A.stp.rule;$(FC_SOURCE)\Mod\Idf\lib\TSM_104_01_L_DV_A.stp;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">\code\free-cad-code\Source\Repos\code\Mod\Idf\lib\TSM_104_01_L_DV_A.stp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Generating ../../../Mod/Idf/lib/TSM_104_01_L_DV_A.stp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+$(CMAKE_BIN)\cmake.exe -E copy $(FC_SOURCE)/Mod/Idf/lib/TSM_104_01_L_DV_A.stp $(DEVROOT)/Mod/Idf/lib/TSM_104_01_L_DV_A.stp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">$(DEVROOT)/CMakeFiles/c5a298aac99a1ffe447b3b443d8deddb/TSM_104_01_L_DV_A.stp.rule;$(FC_SOURCE)\Mod\Idf\lib\TSM_104_01_L_DV_A.stp;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">\code\free-cad-code\Source\Repos\code\Mod\Idf\lib\TSM_104_01_L_DV_A.stp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Generating ../../../Mod/Idf/lib/TSM_104_01_L_DV_A.stp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+$(CMAKE_BIN)\cmake.exe -E copy $(FC_SOURCE)/Mod/Idf/lib/TSM_104_01_L_DV_A.stp $(DEVROOT)/Mod/Idf/lib/TSM_104_01_L_DV_A.stp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(DEVROOT)/CMakeFiles/c5a298aac99a1ffe447b3b443d8deddb/TSM_104_01_L_DV_A.stp.rule;$(FC_SOURCE)\Mod\Idf\lib\TSM_104_01_L_DV_A.stp;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">\code\free-cad-code\Source\Repos\code\Mod\Idf\lib\TSM_104_01_L_DV_A.stp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="\code\free-cad-code\Source\Repos\code\CMakeFiles\c5a298aac99a1ffe447b3b443d8deddb\TSS0P_8.stp.rule">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generating ../../../Mod/Idf/lib/TSS0P_8.stp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+$(CMAKE_BIN)\cmake.exe -E copy $(FC_SOURCE)/Mod/Idf/lib/TSS0P_8.stp $(DEVROOT)/Mod/Idf/lib/TSS0P_8.stp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(DEVROOT)/CMakeFiles/c5a298aac99a1ffe447b3b443d8deddb/TSS0P_8.stp.rule;$(FC_SOURCE)\Mod\Idf\lib\TSS0P_8.stp;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">\code\free-cad-code\Source\Repos\code\Mod\Idf\lib\TSS0P_8.stp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Generating ../../../Mod/Idf/lib/TSS0P_8.stp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+$(CMAKE_BIN)\cmake.exe -E copy $(FC_SOURCE)/Mod/Idf/lib/TSS0P_8.stp $(DEVROOT)/Mod/Idf/lib/TSS0P_8.stp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(DEVROOT)/CMakeFiles/c5a298aac99a1ffe447b3b443d8deddb/TSS0P_8.stp.rule;$(FC_SOURCE)\Mod\Idf\lib\TSS0P_8.stp;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">\code\free-cad-code\Source\Repos\code\Mod\Idf\lib\TSS0P_8.stp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Generating ../../../Mod/Idf/lib/TSS0P_8.stp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+$(CMAKE_BIN)\cmake.exe -E copy $(FC_SOURCE)/Mod/Idf/lib/TSS0P_8.stp $(DEVROOT)/Mod/Idf/lib/TSS0P_8.stp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">$(DEVROOT)/CMakeFiles/c5a298aac99a1ffe447b3b443d8deddb/TSS0P_8.stp.rule;$(FC_SOURCE)\Mod\Idf\lib\TSS0P_8.stp;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">\code\free-cad-code\Source\Repos\code\Mod\Idf\lib\TSS0P_8.stp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Generating ../../../Mod/Idf/lib/TSS0P_8.stp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+$(CMAKE_BIN)\cmake.exe -E copy $(FC_SOURCE)/Mod/Idf/lib/TSS0P_8.stp $(DEVROOT)/Mod/Idf/lib/TSS0P_8.stp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(DEVROOT)/CMakeFiles/c5a298aac99a1ffe447b3b443d8deddb/TSS0P_8.stp.rule;$(FC_SOURCE)\Mod\Idf\lib\TSS0P_8.stp;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">\code\free-cad-code\Source\Repos\code\Mod\Idf\lib\TSS0P_8.stp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="\code\free-cad-code\Source\Repos\code\CMakeFiles\c5a298aac99a1ffe447b3b443d8deddb\VC0603_SMD.stp.rule">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generating ../../../Mod/Idf/lib/VC0603_SMD.stp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+$(CMAKE_BIN)\cmake.exe -E copy $(FC_SOURCE)/Mod/Idf/lib/VC0603_SMD.stp $(DEVROOT)/Mod/Idf/lib/VC0603_SMD.stp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(DEVROOT)/CMakeFiles/c5a298aac99a1ffe447b3b443d8deddb/VC0603_SMD.stp.rule;$(FC_SOURCE)\Mod\Idf\lib\VC0603_SMD.stp;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">\code\free-cad-code\Source\Repos\code\Mod\Idf\lib\VC0603_SMD.stp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Generating ../../../Mod/Idf/lib/VC0603_SMD.stp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+$(CMAKE_BIN)\cmake.exe -E copy $(FC_SOURCE)/Mod/Idf/lib/VC0603_SMD.stp $(DEVROOT)/Mod/Idf/lib/VC0603_SMD.stp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(DEVROOT)/CMakeFiles/c5a298aac99a1ffe447b3b443d8deddb/VC0603_SMD.stp.rule;$(FC_SOURCE)\Mod\Idf\lib\VC0603_SMD.stp;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">\code\free-cad-code\Source\Repos\code\Mod\Idf\lib\VC0603_SMD.stp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Generating ../../../Mod/Idf/lib/VC0603_SMD.stp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+$(CMAKE_BIN)\cmake.exe -E copy $(FC_SOURCE)/Mod/Idf/lib/VC0603_SMD.stp $(DEVROOT)/Mod/Idf/lib/VC0603_SMD.stp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">$(DEVROOT)/CMakeFiles/c5a298aac99a1ffe447b3b443d8deddb/VC0603_SMD.stp.rule;$(FC_SOURCE)\Mod\Idf\lib\VC0603_SMD.stp;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">\code\free-cad-code\Source\Repos\code\Mod\Idf\lib\VC0603_SMD.stp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Generating ../../../Mod/Idf/lib/VC0603_SMD.stp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+$(CMAKE_BIN)\cmake.exe -E copy $(FC_SOURCE)/Mod/Idf/lib/VC0603_SMD.stp $(DEVROOT)/Mod/Idf/lib/VC0603_SMD.stp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(DEVROOT)/CMakeFiles/c5a298aac99a1ffe447b3b443d8deddb/VC0603_SMD.stp.rule;$(FC_SOURCE)\Mod\Idf\lib\VC0603_SMD.stp;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">\code\free-cad-code\Source\Repos\code\Mod\Idf\lib\VC0603_SMD.stp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="\code\free-cad-code\Source\Repos\code\CMakeFiles\c5a298aac99a1ffe447b3b443d8deddb\RLF_12545.igs.rule">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generating ../../../Mod/Idf/lib/RLF_12545.igs</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+$(CMAKE_BIN)\cmake.exe -E copy $(FC_SOURCE)/Mod/Idf/lib/RLF_12545.igs $(DEVROOT)/Mod/Idf/lib/RLF_12545.igs
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(DEVROOT)/CMakeFiles/c5a298aac99a1ffe447b3b443d8deddb/RLF_12545.igs.rule;$(FC_SOURCE)\Mod\Idf\lib\RLF_12545.igs;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">\code\free-cad-code\Source\Repos\code\Mod\Idf\lib\RLF_12545.igs</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Generating ../../../Mod/Idf/lib/RLF_12545.igs</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+$(CMAKE_BIN)\cmake.exe -E copy $(FC_SOURCE)/Mod/Idf/lib/RLF_12545.igs $(DEVROOT)/Mod/Idf/lib/RLF_12545.igs
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(DEVROOT)/CMakeFiles/c5a298aac99a1ffe447b3b443d8deddb/RLF_12545.igs.rule;$(FC_SOURCE)\Mod\Idf\lib\RLF_12545.igs;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">\code\free-cad-code\Source\Repos\code\Mod\Idf\lib\RLF_12545.igs</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Generating ../../../Mod/Idf/lib/RLF_12545.igs</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+$(CMAKE_BIN)\cmake.exe -E copy $(FC_SOURCE)/Mod/Idf/lib/RLF_12545.igs $(DEVROOT)/Mod/Idf/lib/RLF_12545.igs
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">$(DEVROOT)/CMakeFiles/c5a298aac99a1ffe447b3b443d8deddb/RLF_12545.igs.rule;$(FC_SOURCE)\Mod\Idf\lib\RLF_12545.igs;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">\code\free-cad-code\Source\Repos\code\Mod\Idf\lib\RLF_12545.igs</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Generating ../../../Mod/Idf/lib/RLF_12545.igs</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+$(CMAKE_BIN)\cmake.exe -E copy $(FC_SOURCE)/Mod/Idf/lib/RLF_12545.igs $(DEVROOT)/Mod/Idf/lib/RLF_12545.igs
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(DEVROOT)/CMakeFiles/c5a298aac99a1ffe447b3b443d8deddb/RLF_12545.igs.rule;$(FC_SOURCE)\Mod\Idf\lib\RLF_12545.igs;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">\code\free-cad-code\Source\Repos\code\Mod\Idf\lib\RLF_12545.igs</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="\code\free-cad-code\Source\Repos\code\CMakeFiles\c5a298aac99a1ffe447b3b443d8deddb\SOT23.igs.rule">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generating ../../../Mod/Idf/lib/SOT23.igs</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+$(CMAKE_BIN)\cmake.exe -E copy $(FC_SOURCE)/Mod/Idf/lib/SOT23.igs $(DEVROOT)/Mod/Idf/lib/SOT23.igs
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(DEVROOT)/CMakeFiles/c5a298aac99a1ffe447b3b443d8deddb/SOT23.igs.rule;$(FC_SOURCE)\Mod\Idf\lib\SOT23.igs;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">\code\free-cad-code\Source\Repos\code\Mod\Idf\lib\SOT23.igs</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Generating ../../../Mod/Idf/lib/SOT23.igs</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+$(CMAKE_BIN)\cmake.exe -E copy $(FC_SOURCE)/Mod/Idf/lib/SOT23.igs $(DEVROOT)/Mod/Idf/lib/SOT23.igs
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(DEVROOT)/CMakeFiles/c5a298aac99a1ffe447b3b443d8deddb/SOT23.igs.rule;$(FC_SOURCE)\Mod\Idf\lib\SOT23.igs;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">\code\free-cad-code\Source\Repos\code\Mod\Idf\lib\SOT23.igs</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Generating ../../../Mod/Idf/lib/SOT23.igs</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+$(CMAKE_BIN)\cmake.exe -E copy $(FC_SOURCE)/Mod/Idf/lib/SOT23.igs $(DEVROOT)/Mod/Idf/lib/SOT23.igs
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">$(DEVROOT)/CMakeFiles/c5a298aac99a1ffe447b3b443d8deddb/SOT23.igs.rule;$(FC_SOURCE)\Mod\Idf\lib\SOT23.igs;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">\code\free-cad-code\Source\Repos\code\Mod\Idf\lib\SOT23.igs</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Generating ../../../Mod/Idf/lib/SOT23.igs</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+$(CMAKE_BIN)\cmake.exe -E copy $(FC_SOURCE)/Mod/Idf/lib/SOT23.igs $(DEVROOT)/Mod/Idf/lib/SOT23.igs
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(DEVROOT)/CMakeFiles/c5a298aac99a1ffe447b3b443d8deddb/SOT23.igs.rule;$(FC_SOURCE)\Mod\Idf\lib\SOT23.igs;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">\code\free-cad-code\Source\Repos\code\Mod\Idf\lib\SOT23.igs</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="\code\free-cad-code\Source\Repos\code\CMakeFiles\c5a298aac99a1ffe447b3b443d8deddb\SOT404.igs.rule">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generating ../../../Mod/Idf/lib/SOT404.igs</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+$(CMAKE_BIN)\cmake.exe -E copy $(FC_SOURCE)/Mod/Idf/lib/SOT404.igs $(DEVROOT)/Mod/Idf/lib/SOT404.igs
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(DEVROOT)/CMakeFiles/c5a298aac99a1ffe447b3b443d8deddb/SOT404.igs.rule;$(FC_SOURCE)\Mod\Idf\lib\SOT404.igs;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">\code\free-cad-code\Source\Repos\code\Mod\Idf\lib\SOT404.igs</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Generating ../../../Mod/Idf/lib/SOT404.igs</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+$(CMAKE_BIN)\cmake.exe -E copy $(FC_SOURCE)/Mod/Idf/lib/SOT404.igs $(DEVROOT)/Mod/Idf/lib/SOT404.igs
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(DEVROOT)/CMakeFiles/c5a298aac99a1ffe447b3b443d8deddb/SOT404.igs.rule;$(FC_SOURCE)\Mod\Idf\lib\SOT404.igs;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">\code\free-cad-code\Source\Repos\code\Mod\Idf\lib\SOT404.igs</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Generating ../../../Mod/Idf/lib/SOT404.igs</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+$(CMAKE_BIN)\cmake.exe -E copy $(FC_SOURCE)/Mod/Idf/lib/SOT404.igs $(DEVROOT)/Mod/Idf/lib/SOT404.igs
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">$(DEVROOT)/CMakeFiles/c5a298aac99a1ffe447b3b443d8deddb/SOT404.igs.rule;$(FC_SOURCE)\Mod\Idf\lib\SOT404.igs;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">\code\free-cad-code\Source\Repos\code\Mod\Idf\lib\SOT404.igs</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Generating ../../../Mod/Idf/lib/SOT404.igs</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+$(CMAKE_BIN)\cmake.exe -E copy $(FC_SOURCE)/Mod/Idf/lib/SOT404.igs $(DEVROOT)/Mod/Idf/lib/SOT404.igs
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(DEVROOT)/CMakeFiles/c5a298aac99a1ffe447b3b443d8deddb/SOT404.igs.rule;$(FC_SOURCE)\Mod\Idf\lib\SOT404.igs;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">\code\free-cad-code\Source\Repos\code\Mod\Idf\lib\SOT404.igs</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="$(FC_SOURCE)\Mod\Idf\Init.py" />
+    <None Include="$(FC_SOURCE)\Mod\Idf\Idf.py" />
+    <None Include="$(FC_SOURCE)\Mod\Idf\lib\License.txt" />
+    <None Include="$(FC_SOURCE)\Mod\Idf\lib\0603_SMD.stp" />
+    <None Include="$(FC_SOURCE)\Mod\Idf\lib\0805_SMD.stp" />
+    <None Include="$(FC_SOURCE)\Mod\Idf\lib\1206_SMD.stp" />
+    <None Include="$(FC_SOURCE)\Mod\Idf\lib\1210_SMD.stp" />
+    <None Include="$(FC_SOURCE)\Mod\Idf\lib\1812_SMD.stp" />
+    <None Include="$(FC_SOURCE)\Mod\Idf\lib\2225_SMD.stp" />
+    <None Include="$(FC_SOURCE)\Mod\Idf\lib\2512_SMD.stp" />
+    <None Include="$(FC_SOURCE)\Mod\Idf\lib\CAP_50SGV_8_10.stp" />
+    <None Include="$(FC_SOURCE)\Mod\Idf\lib\EPL22_6_16.stp" />
+    <None Include="$(FC_SOURCE)\Mod\Idf\lib\footprints_models.csv" />
+    <None Include="$(FC_SOURCE)\Mod\Idf\lib\I22_2_5_16.stp" />
+    <None Include="$(FC_SOURCE)\Mod\Idf\lib\I22_2_5_16withEPL22_6_16.stp" />
+    <None Include="$(FC_SOURCE)\Mod\Idf\lib\MSOP_10.stp" />
+    <None Include="$(FC_SOURCE)\Mod\Idf\lib\RLF_12545.stp" />
+    <None Include="$(FC_SOURCE)\Mod\Idf\lib\RLF_7030.stp" />
+    <None Include="$(FC_SOURCE)\Mod\Idf\lib\SMB_DO_214AA.stp" />
+    <None Include="$(FC_SOURCE)\Mod\Idf\lib\SMC_DO_214AB.stp" />
+    <None Include="$(FC_SOURCE)\Mod\Idf\lib\SOD_323.igs" />
+    <None Include="$(FC_SOURCE)\Mod\Idf\lib\SOD_323.stp" />
+    <None Include="$(FC_SOURCE)\Mod\Idf\lib\SOD_523.stp" />
+    <None Include="$(FC_SOURCE)\Mod\Idf\lib\SOT23.stp" />
+    <None Include="$(FC_SOURCE)\Mod\Idf\lib\SOT404.stp" />
+    <None Include="$(FC_SOURCE)\Mod\Idf\lib\SOT428_DPAK.stp" />
+    <None Include="$(FC_SOURCE)\Mod\Idf\lib\SOT_323_3.stp" />
+    <None Include="$(FC_SOURCE)\Mod\Idf\lib\SOT_96.stp" />
+    <None Include="$(FC_SOURCE)\Mod\Idf\lib\TCMT1107_4.stp" />
+    <None Include="$(FC_SOURCE)\Mod\Idf\lib\TSM_103_01_L_DV_A.stp" />
+    <None Include="$(FC_SOURCE)\Mod\Idf\lib\TSM_104_01_L_DV_A.stp" />
+    <None Include="$(FC_SOURCE)\Mod\Idf\lib\TSS0P_8.stp" />
+    <None Include="$(FC_SOURCE)\Mod\Idf\lib\VC0603_SMD.stp" />
+    <None Include="$(FC_SOURCE)\Mod\Idf\lib\RLF_12545.igs" />
+    <None Include="$(FC_SOURCE)\Mod\Idf\lib\SOT23.igs" />
+    <None Include="$(FC_SOURCE)\Mod\Idf\lib\SOT404.igs" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

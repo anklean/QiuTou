@@ -1,0 +1,97 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="$(FC_SOURCE)\Mod\Robot\Gui\qrc_Robot.cxx" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Robot\Gui\AppRobotGui.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Robot\Gui\AppRobotGuiPy.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Robot\Gui\PreCompiled.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Robot\Gui\Workbench.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Robot\Gui\ViewProviderRobotObject.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Robot\Gui\ViewProviderTrajectory.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Robot\Gui\ViewProviderEdge2TracObject.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Robot\Gui\ViewProviderTrajectoryCompound.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Robot\Gui\ViewProviderTrajectoryDressUp.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Robot\Gui\Command.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Robot\Gui\CommandTrajectory.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Robot\Gui\CommandInsertRobot.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Robot\Gui\CommandExport.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Robot\Gui\TaskRobot6Axis.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Robot\Gui\TaskTrajectory.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Robot\Gui\TaskRobotMessages.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Robot\Gui\TaskRobotControl.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Robot\Gui\TrajectorySimulate.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Robot\Gui\TaskEdge2TracParameter.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Robot\Gui\TaskTrajectoryDressUpParameter.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Robot\Gui\TaskWatcher.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Robot\Gui\TaskDlgSimulate.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Robot\Gui\TaskDlgEdge2Trac.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Robot\Gui\TaskDlgTrajectoryCompound.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Robot\Gui\TaskDlgTrajectoryDressUp.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="$(FC_SOURCE)\Mod\Robot\Gui\ui_TaskTrajectory.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Robot\Gui\ui_TaskRobot6Axis.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Robot\Gui\ui_TrajectorySimulate.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Robot\Gui\ui_TaskRobotMessages.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Robot\Gui\ui_TaskRobotControl.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Robot\Gui\ui_TaskEdge2TracParameter.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Robot\Gui\ui_TaskTrajectoryDressUpParameter.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Robot\Gui\PreCompiled.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Robot\Gui\Workbench.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Robot\Gui\ViewProviderRobotObject.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Robot\Gui\ViewProviderTrajectory.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Robot\Gui\ViewProviderEdge2TracObject.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Robot\Gui\ViewProviderTrajectoryCompound.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Robot\Gui\ViewProviderTrajectoryDressUp.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="$(FC_SOURCE)\Mod\Robot\Gui\Resources\Robot.qrc" />
+    <CustomBuild Include="$(FC_SOURCE)\Mod\Robot\Gui\TaskRobot6Axis.ui" />
+    <CustomBuild Include="$(FC_SOURCE)\Mod\Robot\Gui\TaskRobot6Axis.h" />
+    <CustomBuild Include="$(FC_SOURCE)\Mod\Robot\Gui\TaskTrajectory.ui" />
+    <CustomBuild Include="$(FC_SOURCE)\Mod\Robot\Gui\TaskTrajectory.h" />
+    <CustomBuild Include="$(FC_SOURCE)\Mod\Robot\Gui\TaskRobotMessages.ui" />
+    <CustomBuild Include="$(FC_SOURCE)\Mod\Robot\Gui\TaskRobotMessages.h" />
+    <CustomBuild Include="$(FC_SOURCE)\Mod\Robot\Gui\TaskRobotControl.ui" />
+    <CustomBuild Include="$(FC_SOURCE)\Mod\Robot\Gui\TaskRobotControl.h" />
+    <CustomBuild Include="$(FC_SOURCE)\Mod\Robot\Gui\TrajectorySimulate.ui" />
+    <CustomBuild Include="$(FC_SOURCE)\Mod\Robot\Gui\TrajectorySimulate.h" />
+    <CustomBuild Include="$(FC_SOURCE)\Mod\Robot\Gui\TaskEdge2TracParameter.ui" />
+    <CustomBuild Include="$(FC_SOURCE)\Mod\Robot\Gui\TaskEdge2TracParameter.h" />
+    <CustomBuild Include="$(FC_SOURCE)\Mod\Robot\Gui\TaskTrajectoryDressUpParameter.ui" />
+    <CustomBuild Include="$(FC_SOURCE)\Mod\Robot\Gui\TaskTrajectoryDressUpParameter.h" />
+    <CustomBuild Include="$(FC_SOURCE)\Mod\Robot\Gui\TaskWatcher.h" />
+    <CustomBuild Include="$(FC_SOURCE)\Mod\Robot\Gui\TaskDlgSimulate.h" />
+    <CustomBuild Include="$(FC_SOURCE)\Mod\Robot\Gui\TaskDlgEdge2Trac.h" />
+    <CustomBuild Include="$(FC_SOURCE)\Mod\Robot\Gui\TaskDlgTrajectoryCompound.h" />
+    <CustomBuild Include="$(FC_SOURCE)\Mod\Robot\Gui\TaskDlgTrajectoryDressUp.h" />
+    <CustomBuild Include="\code\free-cad-code\Source\Repos\code\CMakeFiles\b93e6521d863daa79291f6cc58378259\InitGui.py.rule" />
+    <CustomBuild Include="\code\free-cad-code\Source\Repos\code\CMakeFiles\b93e6521d863daa79291f6cc58378259\MovieTool.py.rule" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{4129A801-9AD2-3DA1-A809-5BC032DABCC2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{5124C73C-630B-3F59-9DFC-D2C200992F06}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resources">
+      <UniqueIdentifier>{8C207286-E436-3C9C-8929-F51266F7ADBA}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Module">
+      <UniqueIdentifier>{D07C31CD-D17F-31BA-9EAE-DE2074DD6B41}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Commands">
+      <UniqueIdentifier>{3C7EE9C9-227B-3708-A7DB-946582A3E3DD}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ViewProvider">
+      <UniqueIdentifier>{C58C1CB9-DF0A-37B9-9E90-01B496C8CA81}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Task_Boxes">
+      <UniqueIdentifier>{0A79CDBB-1E55-333C-8A28-3816688FE8E1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Task_Dialogs">
+      <UniqueIdentifier>{8869044E-0548-3A9E-B76B-F49D0E641256}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

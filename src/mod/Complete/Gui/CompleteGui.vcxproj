@@ -1,0 +1,469 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="MinSizeRel|Win32">
+      <Configuration>MinSizeRel</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|Win32">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGUID>{169B527C-829A-38F8-92B9-B297772249F7}</ProjectGUID>
+    <Keyword>Win32Proj</Keyword>
+    <Platform>Win32</Platform>
+    <ProjectName>CompleteGui</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">
+    <Import Project="..\..\..\..\FreeCAD_trunk.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="..\..\..\..\FreeCAD_trunk.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">
+    <Import Project="..\..\..\..\FreeCAD_trunk.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="..\..\..\..\FreeCAD_trunk.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">\code\free-cad-code\Source\Repos\code\Mod\Complete\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompleteGui.dir\Debug\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompleteGui_d</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.pyd</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">\code\free-cad-code\Source\Repos\code\Mod\Complete\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">CompleteGui.dir\Release\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">CompleteGui</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.pyd</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">\code\free-cad-code\Source\Repos\code\Mod\Complete\MinSizeRel\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">CompleteGui.dir\MinSizeRel\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">CompleteGui</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">.pyd</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">\code\free-cad-code\Source\Repos\code\Mod\Complete\RelWithDebInfo\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">CompleteGui.dir\RelWithDebInfo\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">CompleteGui</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">.pyd</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">true</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">true</GenerateManifest>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <AdditionalOptions> /Zm128 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalIncludeDirectories>$(FC_INCLUDE);$(FC_INCLUDE)\QtOpenGL;$(FC_INCLUDE)\QtSvg;$(FC_INCLUDE)\QtUiTools;$(FC_INCLUDE)\QtWebKit;$(FC_INCLUDE)\QtGui;$(FC_INCLUDE)\QtXml;$(FC_INCLUDE)\QtNetwork;$(FC_INCLUDE)\QtCore;$(FC_SOURCE);$(FC_SOURCE)\Mod\Complete\Gui;$(FC_INCLUDE)\python2.7;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>Debug/</AssemblerListingLocation>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_DEBUG;FC_DEBUG;QT_OPENGL_LIB;QT_SVG_LIB;QT_UITOOLS_LIB;QT_WEBKIT_LIB;QT_GUI_LIB;QT_XML_LIB;QT_NETWORK_LIB;QT_CORE_LIB;CMAKE_INTDIR="Debug";CompleteGui_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_DEBUG;FC_DEBUG;QT_OPENGL_LIB;QT_SVG_LIB;QT_UITOOLS_LIB;QT_WEBKIT_LIB;QT_GUI_LIB;QT_XML_LIB;QT_NETWORK_LIB;QT_CORE_LIB;CMAKE_INTDIR=\"Debug\";CompleteGui_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(FC_INCLUDE);$(FC_INCLUDE)\QtOpenGL;$(FC_INCLUDE)\QtSvg;$(FC_INCLUDE)\QtUiTools;$(FC_INCLUDE)\QtWebKit;$(FC_INCLUDE)\QtGui;$(FC_INCLUDE)\QtXml;$(FC_INCLUDE)\QtNetwork;$(FC_INCLUDE)\QtCore;$(FC_SOURCE);$(FC_SOURCE)\Mod\Complete\Gui;$(FC_INCLUDE)\python2.7;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>$(FC_INCLUDE);$(FC_INCLUDE)\QtOpenGL;$(FC_INCLUDE)\QtSvg;$(FC_INCLUDE)\QtUiTools;$(FC_INCLUDE)\QtWebKit;$(FC_INCLUDE)\QtGui;$(FC_INCLUDE)\QtXml;$(FC_INCLUDE)\QtNetwork;$(FC_INCLUDE)\QtCore;$(FC_SOURCE);$(FC_SOURCE)\Mod\Complete\Gui;$(FC_INCLUDE)\python2.7;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <PostBuildEvent>
+      <Message>
+      </Message>
+      <Command>setlocal
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+    </PostBuildEvent>
+    <Link>
+      <AdditionalOptions> /machine:X86 /debug %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;SHFolder.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;winmm.lib;comsupp.lib;Ws2_32.lib;dbghelp.lib;..\App\Debug\Complete_d.lib;..\..\..\Gui\Debug\FreeCADGui_d.lib;..\..\..\App\Debug\FreeCADApp_d.lib;..\..\..\Base\Debug\FreeCADBase_d.lib;$(FC_LIBRARY)\python27_d.lib;$(FC_LIBRARY)\xerces-c_3D.lib;$(FC_LIBRARY)\zlibd.lib;MSVCRTD.lib;MSVCPRTD.lib;Rpcrt4.lib;version.lib;$(FC_LIBRARY)\boost_filesystem-vc120-mt-gd-1_55.lib;$(FC_LIBRARY)\boost_program_options-vc120-mt-gd-1_55.lib;$(FC_LIBRARY)\boost_regex-vc120-mt-gd-1_55.lib;$(FC_LIBRARY)\boost_signals-vc120-mt-gd-1_55.lib;$(FC_LIBRARY)\boost_system-vc120-mt-gd-1_55.lib;$(FC_LIBRARY)\boost_thread-vc120-mt-gd-1_55.lib;$(FC_LIBRARY)\coin4d.lib;$(FC_LIBRARY)\QtOpenGLd4.lib;glu32.lib;QtUiToolsd.lib;opengl32.lib;$(FC_LIBRARY)\QtSvgd4.lib;$(FC_LIBRARY)\QtUiToolsd.lib;$(FC_LIBRARY)\QtWebKitd4.lib;$(FC_LIBRARY)\QtXmlPatternsd4.lib;$(FC_LIBRARY)\QtGuid4.lib;imm32.lib;winmm.lib;$(FC_LIBRARY)\QtXmld4.lib;$(FC_LIBRARY)\QtNetworkd4.lib;$(FC_LIBRARY)\QtCored4.lib;ws2_32.lib;$(FC_LIBRARY)\cmake\Shiboken-1.2.2\..\..\shiboken-python2.7_d.lib;$(FC_LIBRARY)\cmake\PySide-1.2.2\..\..\pyside-python2.7_d.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(FC_LIBRARY)\;$(FC_LIBRARY)\/$(Configuration);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreAllDefaultLibraries>true</IgnoreAllDefaultLibraries>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>$(FC_SOURCE)/Mod/Complete/Gui/Debug/CompleteGui_d.lib</ImportLibrary>
+      <LargeAddressAware>true</LargeAddressAware>
+      <ProgramDataBaseFile>$(DEVROOT)/Mod/Complete/CompleteGui_d.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+      <Version>
+      </Version>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>$(FC_INCLUDE);$(FC_INCLUDE)\QtOpenGL;$(FC_INCLUDE)\QtSvg;$(FC_INCLUDE)\QtUiTools;$(FC_INCLUDE)\QtWebKit;$(FC_INCLUDE)\QtGui;$(FC_INCLUDE)\QtXml;$(FC_INCLUDE)\QtNetwork;$(FC_INCLUDE)\QtCore;$(FC_SOURCE);$(FC_SOURCE)\Mod\Complete\Gui;$(FC_INCLUDE)\python2.7;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>Release/</AssemblerListingLocation>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <ExceptionHandling>Async</ExceptionHandling>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;QT_NO_DEBUG;QT_OPENGL_LIB;QT_SVG_LIB;QT_UITOOLS_LIB;QT_WEBKIT_LIB;QT_GUI_LIB;QT_XML_LIB;QT_NETWORK_LIB;QT_CORE_LIB;CMAKE_INTDIR="Release";CompleteGui_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;QT_NO_DEBUG;QT_OPENGL_LIB;QT_SVG_LIB;QT_UITOOLS_LIB;QT_WEBKIT_LIB;QT_GUI_LIB;QT_XML_LIB;QT_NETWORK_LIB;QT_CORE_LIB;CMAKE_INTDIR=\"Release\";CompleteGui_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(FC_INCLUDE);$(FC_INCLUDE)\QtOpenGL;$(FC_INCLUDE)\QtSvg;$(FC_INCLUDE)\QtUiTools;$(FC_INCLUDE)\QtWebKit;$(FC_INCLUDE)\QtGui;$(FC_INCLUDE)\QtXml;$(FC_INCLUDE)\QtNetwork;$(FC_INCLUDE)\QtCore;$(FC_SOURCE);$(FC_SOURCE)\Mod\Complete\Gui;$(FC_INCLUDE)\python2.7;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>$(FC_INCLUDE);$(FC_INCLUDE)\QtOpenGL;$(FC_INCLUDE)\QtSvg;$(FC_INCLUDE)\QtUiTools;$(FC_INCLUDE)\QtWebKit;$(FC_INCLUDE)\QtGui;$(FC_INCLUDE)\QtXml;$(FC_INCLUDE)\QtNetwork;$(FC_INCLUDE)\QtCore;$(FC_SOURCE);$(FC_SOURCE)\Mod\Complete\Gui;$(FC_INCLUDE)\python2.7;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <PostBuildEvent>
+      <Message>
+      </Message>
+      <Command>setlocal
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+    </PostBuildEvent>
+    <Link>
+      <AdditionalOptions> /machine:X86 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;SHFolder.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;winmm.lib;comsupp.lib;Ws2_32.lib;dbghelp.lib;..\App\Release\Complete.lib;..\..\..\Gui\Release\FreeCADGui.lib;..\..\..\App\Release\FreeCADApp.lib;..\..\..\Base\Release\FreeCADBase.lib;$(FC_LIBRARY)\python27.lib;$(FC_LIBRARY)\xerces-c_3.lib;$(FC_LIBRARY)\zlib.lib;MSVCRT.lib;MSVCPRT.lib;Rpcrt4.lib;version.lib;$(FC_LIBRARY)\boost_filesystem-vc120-mt-1_55.lib;$(FC_LIBRARY)\boost_program_options-vc120-mt-1_55.lib;$(FC_LIBRARY)\boost_regex-vc120-mt-1_55.lib;$(FC_LIBRARY)\boost_signals-vc120-mt-1_55.lib;$(FC_LIBRARY)\boost_system-vc120-mt-1_55.lib;$(FC_LIBRARY)\boost_thread-vc120-mt-1_55.lib;$(FC_LIBRARY)\coin4.lib;$(FC_LIBRARY)\QtOpenGL4.lib;glu32.lib;QtUiTools.lib;opengl32.lib;$(FC_LIBRARY)\QtSvg4.lib;$(FC_LIBRARY)\QtUiTools.lib;$(FC_LIBRARY)\QtWebKit4.lib;$(FC_LIBRARY)\QtXmlPatterns4.lib;$(FC_LIBRARY)\QtGui4.lib;imm32.lib;winmm.lib;$(FC_LIBRARY)\QtXml4.lib;$(FC_LIBRARY)\QtNetwork4.lib;$(FC_LIBRARY)\QtCore4.lib;ws2_32.lib;$(FC_LIBRARY)\cmake\Shiboken-1.2.2\..\..\shiboken-python2.7.lib;$(FC_LIBRARY)\cmake\PySide-1.2.2\..\..\pyside-python2.7.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(FC_LIBRARY)\;$(FC_LIBRARY)\/$(Configuration);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreAllDefaultLibraries>true</IgnoreAllDefaultLibraries>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>$(FC_SOURCE)/Mod/Complete/Gui/Release/CompleteGui.lib</ImportLibrary>
+      <LargeAddressAware>true</LargeAddressAware>
+      <ProgramDataBaseFile>$(DEVROOT)/Mod/Complete/CompleteGui.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+      <Version>
+      </Version>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>$(FC_INCLUDE);$(FC_INCLUDE)\QtOpenGL;$(FC_INCLUDE)\QtSvg;$(FC_INCLUDE)\QtUiTools;$(FC_INCLUDE)\QtWebKit;$(FC_INCLUDE)\QtGui;$(FC_INCLUDE)\QtXml;$(FC_INCLUDE)\QtNetwork;$(FC_INCLUDE)\QtCore;$(FC_SOURCE);$(FC_SOURCE)\Mod\Complete\Gui;$(FC_INCLUDE)\python2.7;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>MinSizeRel/</AssemblerListingLocation>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <Optimization>MinSpace</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;QT_NO_DEBUG;QT_OPENGL_LIB;QT_SVG_LIB;QT_UITOOLS_LIB;QT_WEBKIT_LIB;QT_GUI_LIB;QT_XML_LIB;QT_NETWORK_LIB;QT_CORE_LIB;CMAKE_INTDIR="MinSizeRel";CompleteGui_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;QT_NO_DEBUG;QT_OPENGL_LIB;QT_SVG_LIB;QT_UITOOLS_LIB;QT_WEBKIT_LIB;QT_GUI_LIB;QT_XML_LIB;QT_NETWORK_LIB;QT_CORE_LIB;CMAKE_INTDIR=\"MinSizeRel\";CompleteGui_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(FC_INCLUDE);$(FC_INCLUDE)\QtOpenGL;$(FC_INCLUDE)\QtSvg;$(FC_INCLUDE)\QtUiTools;$(FC_INCLUDE)\QtWebKit;$(FC_INCLUDE)\QtGui;$(FC_INCLUDE)\QtXml;$(FC_INCLUDE)\QtNetwork;$(FC_INCLUDE)\QtCore;$(FC_SOURCE);$(FC_SOURCE)\Mod\Complete\Gui;$(FC_INCLUDE)\python2.7;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>$(FC_INCLUDE);$(FC_INCLUDE)\QtOpenGL;$(FC_INCLUDE)\QtSvg;$(FC_INCLUDE)\QtUiTools;$(FC_INCLUDE)\QtWebKit;$(FC_INCLUDE)\QtGui;$(FC_INCLUDE)\QtXml;$(FC_INCLUDE)\QtNetwork;$(FC_INCLUDE)\QtCore;$(FC_SOURCE);$(FC_SOURCE)\Mod\Complete\Gui;$(FC_INCLUDE)\python2.7;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <PostBuildEvent>
+      <Message>
+      </Message>
+      <Command>setlocal
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+    </PostBuildEvent>
+    <Link>
+      <AdditionalOptions> /machine:X86 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;SHFolder.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;winmm.lib;comsupp.lib;Ws2_32.lib;dbghelp.lib;..\App\MinSizeRel\Complete.lib;..\..\..\Gui\MinSizeRel\FreeCADGui.lib;..\..\..\App\MinSizeRel\FreeCADApp.lib;..\..\..\Base\MinSizeRel\FreeCADBase.lib;$(FC_LIBRARY)\python27.lib;$(FC_LIBRARY)\xerces-c_3.lib;$(FC_LIBRARY)\zlib.lib;MSVCRT.lib;MSVCPRT.lib;Rpcrt4.lib;version.lib;$(FC_LIBRARY)\boost_filesystem-vc120-mt-1_55.lib;$(FC_LIBRARY)\boost_program_options-vc120-mt-1_55.lib;$(FC_LIBRARY)\boost_regex-vc120-mt-1_55.lib;$(FC_LIBRARY)\boost_signals-vc120-mt-1_55.lib;$(FC_LIBRARY)\boost_system-vc120-mt-1_55.lib;$(FC_LIBRARY)\boost_thread-vc120-mt-1_55.lib;$(FC_LIBRARY)\coin4.lib;$(FC_LIBRARY)\QtOpenGL4.lib;glu32.lib;QtUiTools.lib;opengl32.lib;$(FC_LIBRARY)\QtSvg4.lib;$(FC_LIBRARY)\QtUiTools.lib;$(FC_LIBRARY)\QtWebKit4.lib;$(FC_LIBRARY)\QtXmlPatterns4.lib;$(FC_LIBRARY)\QtGui4.lib;imm32.lib;winmm.lib;$(FC_LIBRARY)\QtXml4.lib;$(FC_LIBRARY)\QtNetwork4.lib;$(FC_LIBRARY)\QtCore4.lib;ws2_32.lib;$(FC_LIBRARY)\cmake\Shiboken-1.2.2\..\..\shiboken-python2.7.lib;$(FC_LIBRARY)\cmake\PySide-1.2.2\..\..\pyside-python2.7.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(FC_LIBRARY)\;$(FC_LIBRARY)\/$(Configuration);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreAllDefaultLibraries>true</IgnoreAllDefaultLibraries>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>$(FC_SOURCE)/Mod/Complete/Gui/MinSizeRel/CompleteGui.lib</ImportLibrary>
+      <LargeAddressAware>true</LargeAddressAware>
+      <ProgramDataBaseFile>$(DEVROOT)/Mod/Complete/MinSizeRel/CompleteGui.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+      <Version>
+      </Version>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>$(FC_INCLUDE);$(FC_INCLUDE)\QtOpenGL;$(FC_INCLUDE)\QtSvg;$(FC_INCLUDE)\QtUiTools;$(FC_INCLUDE)\QtWebKit;$(FC_INCLUDE)\QtGui;$(FC_INCLUDE)\QtXml;$(FC_INCLUDE)\QtNetwork;$(FC_INCLUDE)\QtCore;$(FC_SOURCE);$(FC_SOURCE)\Mod\Complete\Gui;$(FC_INCLUDE)\python2.7;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>RelWithDebInfo/</AssemblerListingLocation>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;QT_NO_DEBUG;QT_OPENGL_LIB;QT_SVG_LIB;QT_UITOOLS_LIB;QT_WEBKIT_LIB;QT_GUI_LIB;QT_XML_LIB;QT_NETWORK_LIB;QT_CORE_LIB;CMAKE_INTDIR="RelWithDebInfo";CompleteGui_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;QT_NO_DEBUG;QT_OPENGL_LIB;QT_SVG_LIB;QT_UITOOLS_LIB;QT_WEBKIT_LIB;QT_GUI_LIB;QT_XML_LIB;QT_NETWORK_LIB;QT_CORE_LIB;CMAKE_INTDIR=\"RelWithDebInfo\";CompleteGui_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(FC_INCLUDE);$(FC_INCLUDE)\QtOpenGL;$(FC_INCLUDE)\QtSvg;$(FC_INCLUDE)\QtUiTools;$(FC_INCLUDE)\QtWebKit;$(FC_INCLUDE)\QtGui;$(FC_INCLUDE)\QtXml;$(FC_INCLUDE)\QtNetwork;$(FC_INCLUDE)\QtCore;$(FC_SOURCE);$(FC_SOURCE)\Mod\Complete\Gui;$(FC_INCLUDE)\python2.7;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>$(FC_INCLUDE);$(FC_INCLUDE)\QtOpenGL;$(FC_INCLUDE)\QtSvg;$(FC_INCLUDE)\QtUiTools;$(FC_INCLUDE)\QtWebKit;$(FC_INCLUDE)\QtGui;$(FC_INCLUDE)\QtXml;$(FC_INCLUDE)\QtNetwork;$(FC_INCLUDE)\QtCore;$(FC_SOURCE);$(FC_SOURCE)\Mod\Complete\Gui;$(FC_INCLUDE)\python2.7;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <PostBuildEvent>
+      <Message>
+      </Message>
+      <Command>setlocal
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+    </PostBuildEvent>
+    <Link>
+      <AdditionalOptions> /machine:X86 /debug %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;SHFolder.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;winmm.lib;comsupp.lib;Ws2_32.lib;dbghelp.lib;..\App\RelWithDebInfo\Complete.lib;..\..\..\Gui\RelWithDebInfo\FreeCADGui.lib;..\..\..\App\RelWithDebInfo\FreeCADApp.lib;..\..\..\Base\RelWithDebInfo\FreeCADBase.lib;$(FC_LIBRARY)\python27.lib;$(FC_LIBRARY)\xerces-c_3.lib;$(FC_LIBRARY)\zlib.lib;MSVCRT.lib;MSVCPRT.lib;Rpcrt4.lib;version.lib;$(FC_LIBRARY)\boost_filesystem-vc120-mt-1_55.lib;$(FC_LIBRARY)\boost_program_options-vc120-mt-1_55.lib;$(FC_LIBRARY)\boost_regex-vc120-mt-1_55.lib;$(FC_LIBRARY)\boost_signals-vc120-mt-1_55.lib;$(FC_LIBRARY)\boost_system-vc120-mt-1_55.lib;$(FC_LIBRARY)\boost_thread-vc120-mt-1_55.lib;$(FC_LIBRARY)\coin4.lib;$(FC_LIBRARY)\QtOpenGL4.lib;glu32.lib;QtUiTools.lib;opengl32.lib;$(FC_LIBRARY)\QtSvg4.lib;$(FC_LIBRARY)\QtUiTools.lib;$(FC_LIBRARY)\QtWebKit4.lib;$(FC_LIBRARY)\QtXmlPatterns4.lib;$(FC_LIBRARY)\QtGui4.lib;imm32.lib;winmm.lib;$(FC_LIBRARY)\QtXml4.lib;$(FC_LIBRARY)\QtNetwork4.lib;$(FC_LIBRARY)\QtCore4.lib;ws2_32.lib;$(FC_LIBRARY)\cmake\Shiboken-1.2.2\..\..\shiboken-python2.7.lib;$(FC_LIBRARY)\cmake\PySide-1.2.2\..\..\pyside-python2.7.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(FC_LIBRARY)\;$(FC_LIBRARY)\/$(Configuration);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreAllDefaultLibraries>true</IgnoreAllDefaultLibraries>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>$(FC_SOURCE)/Mod/Complete/Gui/RelWithDebInfo/CompleteGui.lib</ImportLibrary>
+      <LargeAddressAware>true</LargeAddressAware>
+      <ProgramDataBaseFile>$(DEVROOT)/Mod/Complete/RelWithDebInfo/CompleteGui.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+      <Version>
+      </Version>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="\code\free-cad-code\Source\Repos\code\CMakeFiles\67905314270b592e3d054ba31d74b172\InitGui.py.rule">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generating ../../../../Mod/Complete/InitGui.py</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+$(CMAKE_BIN)\cmake.exe -E copy $(FC_SOURCE)/Mod/Complete/InitGui.py $(DEVROOT)/Mod/Complete/InitGui.py
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(DEVROOT)/CMakeFiles/67905314270b592e3d054ba31d74b172/InitGui.py.rule;$(FC_SOURCE)\Mod\Complete\InitGui.py;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">\code\free-cad-code\Source\Repos\code\Mod\Complete\InitGui.py</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Generating ../../../../Mod/Complete/InitGui.py</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+$(CMAKE_BIN)\cmake.exe -E copy $(FC_SOURCE)/Mod/Complete/InitGui.py $(DEVROOT)/Mod/Complete/InitGui.py
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(DEVROOT)/CMakeFiles/67905314270b592e3d054ba31d74b172/InitGui.py.rule;$(FC_SOURCE)\Mod\Complete\InitGui.py;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">\code\free-cad-code\Source\Repos\code\Mod\Complete\InitGui.py</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Generating ../../../../Mod/Complete/InitGui.py</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+$(CMAKE_BIN)\cmake.exe -E copy $(FC_SOURCE)/Mod/Complete/InitGui.py $(DEVROOT)/Mod/Complete/InitGui.py
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">$(DEVROOT)/CMakeFiles/67905314270b592e3d054ba31d74b172/InitGui.py.rule;$(FC_SOURCE)\Mod\Complete\InitGui.py;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">\code\free-cad-code\Source\Repos\code\Mod\Complete\InitGui.py</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Generating ../../../../Mod/Complete/InitGui.py</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+$(CMAKE_BIN)\cmake.exe -E copy $(FC_SOURCE)/Mod/Complete/InitGui.py $(DEVROOT)/Mod/Complete/InitGui.py
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(DEVROOT)/CMakeFiles/67905314270b592e3d054ba31d74b172/InitGui.py.rule;$(FC_SOURCE)\Mod\Complete\InitGui.py;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">\code\free-cad-code\Source\Repos\code\Mod\Complete\InitGui.py</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="$(FC_SOURCE)\Mod\Complete\Gui\Resources\Complete.qrc">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generating qrc_Complete.cxx</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+$(FC_BIN)\rcc.exe -name Complete -o $(FC_SOURCE)/Mod/Complete/Gui/qrc_Complete.cxx $(FC_SOURCE)/Mod/Complete/Gui/Resources/Complete.qrc
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(FC_SOURCE)/Mod/Complete/Gui/Resources/Complete.qrc;$(FC_SOURCE)\Mod\Complete\Gui\Resources\translations\Complete_af.qm;$(FC_SOURCE)\Mod\Complete\Gui\Resources\translations\Complete_de.qm;$(FC_SOURCE)\Mod\Complete\Gui\Resources\translations\Complete_fi.qm;$(FC_SOURCE)\Mod\Complete\Gui\Resources\translations\Complete_fr.qm;$(FC_SOURCE)\Mod\Complete\Gui\Resources\translations\Complete_hr.qm;$(FC_SOURCE)\Mod\Complete\Gui\Resources\translations\Complete_it.qm;$(FC_SOURCE)\Mod\Complete\Gui\Resources\translations\Complete_nl.qm;$(FC_SOURCE)\Mod\Complete\Gui\Resources\translations\Complete_no.qm;$(FC_SOURCE)\Mod\Complete\Gui\Resources\translations\Complete_pl.qm;$(FC_SOURCE)\Mod\Complete\Gui\Resources\translations\Complete_ru.qm;$(FC_SOURCE)\Mod\Complete\Gui\Resources\translations\Complete_uk.qm;$(FC_SOURCE)\Mod\Complete\Gui\Resources\translations\Complete_tr.qm;$(FC_SOURCE)\Mod\Complete\Gui\Resources\translations\Complete_sv-SE.qm;$(FC_SOURCE)\Mod\Complete\Gui\Resources\translations\Complete_zh-TW.qm;$(FC_SOURCE)\Mod\Complete\Gui\Resources\translations\Complete_pt-BR.qm;$(FC_SOURCE)\Mod\Complete\Gui\Resources\translations\Complete_cs.qm;$(FC_SOURCE)\Mod\Complete\Gui\Resources\translations\Complete_sk.qm;$(FC_SOURCE)\Mod\Complete\Gui\Resources\translations\Complete_es-ES.qm;$(FC_SOURCE)\Mod\Complete\Gui\Resources\translations\Complete_zh-CN.qm;$(FC_SOURCE)\Mod\Complete\Gui\Resources\translations\Complete_ja.qm;$(FC_SOURCE)\Mod\Complete\Gui\Resources\translations\Complete_ro.qm;$(FC_SOURCE)\Mod\Complete\Gui\Resources\translations\Complete_hu.qm;$(FC_SOURCE)\Mod\Complete\Gui\Resources\translations\Complete_pt-PT.qm;$(FC_SOURCE)\Mod\Complete\Gui\Resources\translations\Complete_sr.qm;$(FC_SOURCE)\Mod\Complete\Gui\Resources\Complete.qrc.depends;$(FC_SOURCE)\Mod\Complete\Gui\Resources\Complete.qrc;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(FC_SOURCE)\Mod\Complete\Gui\qrc_Complete.cxx</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Generating qrc_Complete.cxx</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+$(FC_BIN)\rcc.exe -name Complete -o $(FC_SOURCE)/Mod/Complete/Gui/qrc_Complete.cxx $(FC_SOURCE)/Mod/Complete/Gui/Resources/Complete.qrc
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(FC_SOURCE)/Mod/Complete/Gui/Resources/Complete.qrc;$(FC_SOURCE)\Mod\Complete\Gui\Resources\translations\Complete_af.qm;$(FC_SOURCE)\Mod\Complete\Gui\Resources\translations\Complete_de.qm;$(FC_SOURCE)\Mod\Complete\Gui\Resources\translations\Complete_fi.qm;$(FC_SOURCE)\Mod\Complete\Gui\Resources\translations\Complete_fr.qm;$(FC_SOURCE)\Mod\Complete\Gui\Resources\translations\Complete_hr.qm;$(FC_SOURCE)\Mod\Complete\Gui\Resources\translations\Complete_it.qm;$(FC_SOURCE)\Mod\Complete\Gui\Resources\translations\Complete_nl.qm;$(FC_SOURCE)\Mod\Complete\Gui\Resources\translations\Complete_no.qm;$(FC_SOURCE)\Mod\Complete\Gui\Resources\translations\Complete_pl.qm;$(FC_SOURCE)\Mod\Complete\Gui\Resources\translations\Complete_ru.qm;$(FC_SOURCE)\Mod\Complete\Gui\Resources\translations\Complete_uk.qm;$(FC_SOURCE)\Mod\Complete\Gui\Resources\translations\Complete_tr.qm;$(FC_SOURCE)\Mod\Complete\Gui\Resources\translations\Complete_sv-SE.qm;$(FC_SOURCE)\Mod\Complete\Gui\Resources\translations\Complete_zh-TW.qm;$(FC_SOURCE)\Mod\Complete\Gui\Resources\translations\Complete_pt-BR.qm;$(FC_SOURCE)\Mod\Complete\Gui\Resources\translations\Complete_cs.qm;$(FC_SOURCE)\Mod\Complete\Gui\Resources\translations\Complete_sk.qm;$(FC_SOURCE)\Mod\Complete\Gui\Resources\translations\Complete_es-ES.qm;$(FC_SOURCE)\Mod\Complete\Gui\Resources\translations\Complete_zh-CN.qm;$(FC_SOURCE)\Mod\Complete\Gui\Resources\translations\Complete_ja.qm;$(FC_SOURCE)\Mod\Complete\Gui\Resources\translations\Complete_ro.qm;$(FC_SOURCE)\Mod\Complete\Gui\Resources\translations\Complete_hu.qm;$(FC_SOURCE)\Mod\Complete\Gui\Resources\translations\Complete_pt-PT.qm;$(FC_SOURCE)\Mod\Complete\Gui\Resources\translations\Complete_sr.qm;$(FC_SOURCE)\Mod\Complete\Gui\Resources\Complete.qrc.depends;$(FC_SOURCE)\Mod\Complete\Gui\Resources\Complete.qrc;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(FC_SOURCE)\Mod\Complete\Gui\qrc_Complete.cxx</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Generating qrc_Complete.cxx</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+$(FC_BIN)\rcc.exe -name Complete -o $(FC_SOURCE)/Mod/Complete/Gui/qrc_Complete.cxx $(FC_SOURCE)/Mod/Complete/Gui/Resources/Complete.qrc
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">$(FC_SOURCE)/Mod/Complete/Gui/Resources/Complete.qrc;$(FC_SOURCE)\Mod\Complete\Gui\Resources\translations\Complete_af.qm;$(FC_SOURCE)\Mod\Complete\Gui\Resources\translations\Complete_de.qm;$(FC_SOURCE)\Mod\Complete\Gui\Resources\translations\Complete_fi.qm;$(FC_SOURCE)\Mod\Complete\Gui\Resources\translations\Complete_fr.qm;$(FC_SOURCE)\Mod\Complete\Gui\Resources\translations\Complete_hr.qm;$(FC_SOURCE)\Mod\Complete\Gui\Resources\translations\Complete_it.qm;$(FC_SOURCE)\Mod\Complete\Gui\Resources\translations\Complete_nl.qm;$(FC_SOURCE)\Mod\Complete\Gui\Resources\translations\Complete_no.qm;$(FC_SOURCE)\Mod\Complete\Gui\Resources\translations\Complete_pl.qm;$(FC_SOURCE)\Mod\Complete\Gui\Resources\translations\Complete_ru.qm;$(FC_SOURCE)\Mod\Complete\Gui\Resources\translations\Complete_uk.qm;$(FC_SOURCE)\Mod\Complete\Gui\Resources\translations\Complete_tr.qm;$(FC_SOURCE)\Mod\Complete\Gui\Resources\translations\Complete_sv-SE.qm;$(FC_SOURCE)\Mod\Complete\Gui\Resources\translations\Complete_zh-TW.qm;$(FC_SOURCE)\Mod\Complete\Gui\Resources\translations\Complete_pt-BR.qm;$(FC_SOURCE)\Mod\Complete\Gui\Resources\translations\Complete_cs.qm;$(FC_SOURCE)\Mod\Complete\Gui\Resources\translations\Complete_sk.qm;$(FC_SOURCE)\Mod\Complete\Gui\Resources\translations\Complete_es-ES.qm;$(FC_SOURCE)\Mod\Complete\Gui\Resources\translations\Complete_zh-CN.qm;$(FC_SOURCE)\Mod\Complete\Gui\Resources\translations\Complete_ja.qm;$(FC_SOURCE)\Mod\Complete\Gui\Resources\translations\Complete_ro.qm;$(FC_SOURCE)\Mod\Complete\Gui\Resources\translations\Complete_hu.qm;$(FC_SOURCE)\Mod\Complete\Gui\Resources\translations\Complete_pt-PT.qm;$(FC_SOURCE)\Mod\Complete\Gui\Resources\translations\Complete_sr.qm;$(FC_SOURCE)\Mod\Complete\Gui\Resources\Complete.qrc.depends;$(FC_SOURCE)\Mod\Complete\Gui\Resources\Complete.qrc;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">$(FC_SOURCE)\Mod\Complete\Gui\qrc_Complete.cxx</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Generating qrc_Complete.cxx</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+$(FC_BIN)\rcc.exe -name Complete -o $(FC_SOURCE)/Mod/Complete/Gui/qrc_Complete.cxx $(FC_SOURCE)/Mod/Complete/Gui/Resources/Complete.qrc
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(FC_SOURCE)/Mod/Complete/Gui/Resources/Complete.qrc;$(FC_SOURCE)\Mod\Complete\Gui\Resources\translations\Complete_af.qm;$(FC_SOURCE)\Mod\Complete\Gui\Resources\translations\Complete_de.qm;$(FC_SOURCE)\Mod\Complete\Gui\Resources\translations\Complete_fi.qm;$(FC_SOURCE)\Mod\Complete\Gui\Resources\translations\Complete_fr.qm;$(FC_SOURCE)\Mod\Complete\Gui\Resources\translations\Complete_hr.qm;$(FC_SOURCE)\Mod\Complete\Gui\Resources\translations\Complete_it.qm;$(FC_SOURCE)\Mod\Complete\Gui\Resources\translations\Complete_nl.qm;$(FC_SOURCE)\Mod\Complete\Gui\Resources\translations\Complete_no.qm;$(FC_SOURCE)\Mod\Complete\Gui\Resources\translations\Complete_pl.qm;$(FC_SOURCE)\Mod\Complete\Gui\Resources\translations\Complete_ru.qm;$(FC_SOURCE)\Mod\Complete\Gui\Resources\translations\Complete_uk.qm;$(FC_SOURCE)\Mod\Complete\Gui\Resources\translations\Complete_tr.qm;$(FC_SOURCE)\Mod\Complete\Gui\Resources\translations\Complete_sv-SE.qm;$(FC_SOURCE)\Mod\Complete\Gui\Resources\translations\Complete_zh-TW.qm;$(FC_SOURCE)\Mod\Complete\Gui\Resources\translations\Complete_pt-BR.qm;$(FC_SOURCE)\Mod\Complete\Gui\Resources\translations\Complete_cs.qm;$(FC_SOURCE)\Mod\Complete\Gui\Resources\translations\Complete_sk.qm;$(FC_SOURCE)\Mod\Complete\Gui\Resources\translations\Complete_es-ES.qm;$(FC_SOURCE)\Mod\Complete\Gui\Resources\translations\Complete_zh-CN.qm;$(FC_SOURCE)\Mod\Complete\Gui\Resources\translations\Complete_ja.qm;$(FC_SOURCE)\Mod\Complete\Gui\Resources\translations\Complete_ro.qm;$(FC_SOURCE)\Mod\Complete\Gui\Resources\translations\Complete_hu.qm;$(FC_SOURCE)\Mod\Complete\Gui\Resources\translations\Complete_pt-PT.qm;$(FC_SOURCE)\Mod\Complete\Gui\Resources\translations\Complete_sr.qm;$(FC_SOURCE)\Mod\Complete\Gui\Resources\Complete.qrc.depends;$(FC_SOURCE)\Mod\Complete\Gui\Resources\Complete.qrc;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(FC_SOURCE)\Mod\Complete\Gui\qrc_Complete.cxx</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="$(FC_SOURCE)\Mod\Complete\Gui\PreCompiled.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Complete\Gui\Workbench.h" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Complete\Gui\qrc_Complete.cxx" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Complete\Gui\AppCompleteGui.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Complete\Gui\AppCompleteGuiPy.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Complete\Gui\Command.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Complete\Gui\PreCompiled.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Complete\Gui\Workbench.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="$(FC_SOURCE)/Mod/Complete/App/Complete.vcxproj">
+      <Project>F7D30D72-4FBA-311E-A6C7-F23F1B20703A</Project>
+    </ProjectReference>
+    <ProjectReference Include="$(FC_SOURCE)/App/FreeCADApp.vcxproj">
+      <Project>106CFB68-340E-3307-8B33-691BFD4C2F84</Project>
+    </ProjectReference>
+    <ProjectReference Include="$(FC_SOURCE)/Base/FreeCADBase.vcxproj">
+      <Project>C318BD7C-A3CA-3454-A3D8-7E815B7B6CC0</Project>
+    </ProjectReference>
+    <ProjectReference Include="$(FC_SOURCE)/Gui/FreeCADGui.vcxproj">
+      <Project>DFA51F4B-58A3-3BF2-B5F0-4D1AE14CB897</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

@@ -1,0 +1,1037 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="MinSizeRel|Win32">
+      <Configuration>MinSizeRel</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|Win32">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGUID>{0CA006B3-8B77-3B8F-AC2F-E5E2A5884140}</ProjectGUID>
+    <Keyword>Win32Proj</Keyword>
+    <Platform>Win32</Platform>
+    <ProjectName>SpreadsheetGui</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">
+    <Import Project="..\..\..\..\FreeCAD_trunk.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="..\..\..\..\FreeCAD_trunk.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">
+    <Import Project="..\..\..\..\FreeCAD_trunk.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="..\..\..\..\FreeCAD_trunk.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">\code\free-cad-code\Source\Repos\code\Mod\Spreadsheet\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">SpreadsheetGui.dir\Debug\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">SpreadsheetGui_d</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.pyd</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">\code\free-cad-code\Source\Repos\code\Mod\Spreadsheet\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">SpreadsheetGui.dir\Release\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">SpreadsheetGui</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.pyd</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">\code\free-cad-code\Source\Repos\code\Mod\Spreadsheet\MinSizeRel\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">SpreadsheetGui.dir\MinSizeRel\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">SpreadsheetGui</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">.pyd</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">\code\free-cad-code\Source\Repos\code\Mod\Spreadsheet\RelWithDebInfo\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">SpreadsheetGui.dir\RelWithDebInfo\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">SpreadsheetGui</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">.pyd</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">true</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">true</GenerateManifest>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <AdditionalOptions> /Zm128 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalIncludeDirectories>$(FC_INCLUDE);$(FC_INCLUDE)\QtOpenGL;$(FC_INCLUDE)\QtSvg;$(FC_INCLUDE)\QtUiTools;$(FC_INCLUDE)\QtWebKit;$(FC_INCLUDE)\QtGui;$(FC_INCLUDE)\QtXml;$(FC_INCLUDE)\QtNetwork;$(FC_INCLUDE)\QtCore;$(FC_SOURCE);$(FC_SOURCE)\Mod\Spreadsheet\Gui;$(FC_INCLUDE)\python2.7;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>Debug/</AssemblerListingLocation>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_DEBUG;FC_DEBUG;QT_OPENGL_LIB;QT_SVG_LIB;QT_UITOOLS_LIB;QT_WEBKIT_LIB;QT_GUI_LIB;QT_XML_LIB;QT_NETWORK_LIB;QT_CORE_LIB;CMAKE_INTDIR="Debug";SpreadsheetGui_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_DEBUG;FC_DEBUG;QT_OPENGL_LIB;QT_SVG_LIB;QT_UITOOLS_LIB;QT_WEBKIT_LIB;QT_GUI_LIB;QT_XML_LIB;QT_NETWORK_LIB;QT_CORE_LIB;CMAKE_INTDIR=\"Debug\";SpreadsheetGui_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(FC_INCLUDE);$(FC_INCLUDE)\QtOpenGL;$(FC_INCLUDE)\QtSvg;$(FC_INCLUDE)\QtUiTools;$(FC_INCLUDE)\QtWebKit;$(FC_INCLUDE)\QtGui;$(FC_INCLUDE)\QtXml;$(FC_INCLUDE)\QtNetwork;$(FC_INCLUDE)\QtCore;$(FC_SOURCE);$(FC_SOURCE)\Mod\Spreadsheet\Gui;$(FC_INCLUDE)\python2.7;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>$(FC_INCLUDE);$(FC_INCLUDE)\QtOpenGL;$(FC_INCLUDE)\QtSvg;$(FC_INCLUDE)\QtUiTools;$(FC_INCLUDE)\QtWebKit;$(FC_INCLUDE)\QtGui;$(FC_INCLUDE)\QtXml;$(FC_INCLUDE)\QtNetwork;$(FC_INCLUDE)\QtCore;$(FC_SOURCE);$(FC_SOURCE)\Mod\Spreadsheet\Gui;$(FC_INCLUDE)\python2.7;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <PostBuildEvent>
+      <Message>
+      </Message>
+      <Command>setlocal
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+    </PostBuildEvent>
+    <Link>
+      <AdditionalOptions> /machine:X86 /debug %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;SHFolder.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;winmm.lib;comsupp.lib;Ws2_32.lib;dbghelp.lib;..\App\Debug\Spreadsheet_d.lib;..\..\..\Gui\Debug\FreeCADGui_d.lib;..\..\..\App\Debug\FreeCADApp_d.lib;..\..\..\Base\Debug\FreeCADBase_d.lib;$(FC_LIBRARY)\python27_d.lib;$(FC_LIBRARY)\xerces-c_3D.lib;$(FC_LIBRARY)\zlibd.lib;MSVCRTD.lib;MSVCPRTD.lib;Rpcrt4.lib;version.lib;$(FC_LIBRARY)\boost_filesystem-vc120-mt-gd-1_55.lib;$(FC_LIBRARY)\boost_program_options-vc120-mt-gd-1_55.lib;$(FC_LIBRARY)\boost_regex-vc120-mt-gd-1_55.lib;$(FC_LIBRARY)\boost_signals-vc120-mt-gd-1_55.lib;$(FC_LIBRARY)\boost_system-vc120-mt-gd-1_55.lib;$(FC_LIBRARY)\boost_thread-vc120-mt-gd-1_55.lib;$(FC_LIBRARY)\coin4d.lib;$(FC_LIBRARY)\QtOpenGLd4.lib;glu32.lib;QtUiToolsd.lib;opengl32.lib;$(FC_LIBRARY)\QtSvgd4.lib;$(FC_LIBRARY)\QtUiToolsd.lib;$(FC_LIBRARY)\QtWebKitd4.lib;$(FC_LIBRARY)\QtXmlPatternsd4.lib;$(FC_LIBRARY)\QtGuid4.lib;imm32.lib;winmm.lib;$(FC_LIBRARY)\QtXmld4.lib;$(FC_LIBRARY)\QtNetworkd4.lib;$(FC_LIBRARY)\QtCored4.lib;ws2_32.lib;$(FC_LIBRARY)\cmake\Shiboken-1.2.2\..\..\shiboken-python2.7_d.lib;$(FC_LIBRARY)\cmake\PySide-1.2.2\..\..\pyside-python2.7_d.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(FC_LIBRARY)\;$(FC_LIBRARY)\/$(Configuration);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreAllDefaultLibraries>true</IgnoreAllDefaultLibraries>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>$(FC_SOURCE)/Mod/Spreadsheet/Gui/Debug/SpreadsheetGui_d.lib</ImportLibrary>
+      <LargeAddressAware>true</LargeAddressAware>
+      <ProgramDataBaseFile>$(DEVROOT)/Mod/Spreadsheet/SpreadsheetGui_d.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+      <Version>
+      </Version>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>$(FC_INCLUDE);$(FC_INCLUDE)\QtOpenGL;$(FC_INCLUDE)\QtSvg;$(FC_INCLUDE)\QtUiTools;$(FC_INCLUDE)\QtWebKit;$(FC_INCLUDE)\QtGui;$(FC_INCLUDE)\QtXml;$(FC_INCLUDE)\QtNetwork;$(FC_INCLUDE)\QtCore;$(FC_SOURCE);$(FC_SOURCE)\Mod\Spreadsheet\Gui;$(FC_INCLUDE)\python2.7;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>Release/</AssemblerListingLocation>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <ExceptionHandling>Async</ExceptionHandling>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;QT_NO_DEBUG;QT_OPENGL_LIB;QT_SVG_LIB;QT_UITOOLS_LIB;QT_WEBKIT_LIB;QT_GUI_LIB;QT_XML_LIB;QT_NETWORK_LIB;QT_CORE_LIB;CMAKE_INTDIR="Release";SpreadsheetGui_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;QT_NO_DEBUG;QT_OPENGL_LIB;QT_SVG_LIB;QT_UITOOLS_LIB;QT_WEBKIT_LIB;QT_GUI_LIB;QT_XML_LIB;QT_NETWORK_LIB;QT_CORE_LIB;CMAKE_INTDIR=\"Release\";SpreadsheetGui_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(FC_INCLUDE);$(FC_INCLUDE)\QtOpenGL;$(FC_INCLUDE)\QtSvg;$(FC_INCLUDE)\QtUiTools;$(FC_INCLUDE)\QtWebKit;$(FC_INCLUDE)\QtGui;$(FC_INCLUDE)\QtXml;$(FC_INCLUDE)\QtNetwork;$(FC_INCLUDE)\QtCore;$(FC_SOURCE);$(FC_SOURCE)\Mod\Spreadsheet\Gui;$(FC_INCLUDE)\python2.7;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>$(FC_INCLUDE);$(FC_INCLUDE)\QtOpenGL;$(FC_INCLUDE)\QtSvg;$(FC_INCLUDE)\QtUiTools;$(FC_INCLUDE)\QtWebKit;$(FC_INCLUDE)\QtGui;$(FC_INCLUDE)\QtXml;$(FC_INCLUDE)\QtNetwork;$(FC_INCLUDE)\QtCore;$(FC_SOURCE);$(FC_SOURCE)\Mod\Spreadsheet\Gui;$(FC_INCLUDE)\python2.7;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <PostBuildEvent>
+      <Message>
+      </Message>
+      <Command>setlocal
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+    </PostBuildEvent>
+    <Link>
+      <AdditionalOptions> /machine:X86 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;SHFolder.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;winmm.lib;comsupp.lib;Ws2_32.lib;dbghelp.lib;..\App\Release\Spreadsheet.lib;..\..\..\Gui\Release\FreeCADGui.lib;..\..\..\App\Release\FreeCADApp.lib;..\..\..\Base\Release\FreeCADBase.lib;$(FC_LIBRARY)\python27.lib;$(FC_LIBRARY)\xerces-c_3.lib;$(FC_LIBRARY)\zlib.lib;MSVCRT.lib;MSVCPRT.lib;Rpcrt4.lib;version.lib;$(FC_LIBRARY)\boost_filesystem-vc120-mt-1_55.lib;$(FC_LIBRARY)\boost_program_options-vc120-mt-1_55.lib;$(FC_LIBRARY)\boost_regex-vc120-mt-1_55.lib;$(FC_LIBRARY)\boost_signals-vc120-mt-1_55.lib;$(FC_LIBRARY)\boost_system-vc120-mt-1_55.lib;$(FC_LIBRARY)\boost_thread-vc120-mt-1_55.lib;$(FC_LIBRARY)\coin4.lib;$(FC_LIBRARY)\QtOpenGL4.lib;glu32.lib;QtUiTools.lib;opengl32.lib;$(FC_LIBRARY)\QtSvg4.lib;$(FC_LIBRARY)\QtUiTools.lib;$(FC_LIBRARY)\QtWebKit4.lib;$(FC_LIBRARY)\QtXmlPatterns4.lib;$(FC_LIBRARY)\QtGui4.lib;imm32.lib;winmm.lib;$(FC_LIBRARY)\QtXml4.lib;$(FC_LIBRARY)\QtNetwork4.lib;$(FC_LIBRARY)\QtCore4.lib;ws2_32.lib;$(FC_LIBRARY)\cmake\Shiboken-1.2.2\..\..\shiboken-python2.7.lib;$(FC_LIBRARY)\cmake\PySide-1.2.2\..\..\pyside-python2.7.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(FC_LIBRARY)\;$(FC_LIBRARY)\/$(Configuration);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreAllDefaultLibraries>true</IgnoreAllDefaultLibraries>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>$(FC_SOURCE)/Mod/Spreadsheet/Gui/Release/SpreadsheetGui.lib</ImportLibrary>
+      <LargeAddressAware>true</LargeAddressAware>
+      <ProgramDataBaseFile>$(DEVROOT)/Mod/Spreadsheet/SpreadsheetGui.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+      <Version>
+      </Version>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>$(FC_INCLUDE);$(FC_INCLUDE)\QtOpenGL;$(FC_INCLUDE)\QtSvg;$(FC_INCLUDE)\QtUiTools;$(FC_INCLUDE)\QtWebKit;$(FC_INCLUDE)\QtGui;$(FC_INCLUDE)\QtXml;$(FC_INCLUDE)\QtNetwork;$(FC_INCLUDE)\QtCore;$(FC_SOURCE);$(FC_SOURCE)\Mod\Spreadsheet\Gui;$(FC_INCLUDE)\python2.7;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>MinSizeRel/</AssemblerListingLocation>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <Optimization>MinSpace</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;QT_NO_DEBUG;QT_OPENGL_LIB;QT_SVG_LIB;QT_UITOOLS_LIB;QT_WEBKIT_LIB;QT_GUI_LIB;QT_XML_LIB;QT_NETWORK_LIB;QT_CORE_LIB;CMAKE_INTDIR="MinSizeRel";SpreadsheetGui_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;QT_NO_DEBUG;QT_OPENGL_LIB;QT_SVG_LIB;QT_UITOOLS_LIB;QT_WEBKIT_LIB;QT_GUI_LIB;QT_XML_LIB;QT_NETWORK_LIB;QT_CORE_LIB;CMAKE_INTDIR=\"MinSizeRel\";SpreadsheetGui_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(FC_INCLUDE);$(FC_INCLUDE)\QtOpenGL;$(FC_INCLUDE)\QtSvg;$(FC_INCLUDE)\QtUiTools;$(FC_INCLUDE)\QtWebKit;$(FC_INCLUDE)\QtGui;$(FC_INCLUDE)\QtXml;$(FC_INCLUDE)\QtNetwork;$(FC_INCLUDE)\QtCore;$(FC_SOURCE);$(FC_SOURCE)\Mod\Spreadsheet\Gui;$(FC_INCLUDE)\python2.7;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>$(FC_INCLUDE);$(FC_INCLUDE)\QtOpenGL;$(FC_INCLUDE)\QtSvg;$(FC_INCLUDE)\QtUiTools;$(FC_INCLUDE)\QtWebKit;$(FC_INCLUDE)\QtGui;$(FC_INCLUDE)\QtXml;$(FC_INCLUDE)\QtNetwork;$(FC_INCLUDE)\QtCore;$(FC_SOURCE);$(FC_SOURCE)\Mod\Spreadsheet\Gui;$(FC_INCLUDE)\python2.7;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <PostBuildEvent>
+      <Message>
+      </Message>
+      <Command>setlocal
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+    </PostBuildEvent>
+    <Link>
+      <AdditionalOptions> /machine:X86 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;SHFolder.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;winmm.lib;comsupp.lib;Ws2_32.lib;dbghelp.lib;..\App\MinSizeRel\Spreadsheet.lib;..\..\..\Gui\MinSizeRel\FreeCADGui.lib;..\..\..\App\MinSizeRel\FreeCADApp.lib;..\..\..\Base\MinSizeRel\FreeCADBase.lib;$(FC_LIBRARY)\python27.lib;$(FC_LIBRARY)\xerces-c_3.lib;$(FC_LIBRARY)\zlib.lib;MSVCRT.lib;MSVCPRT.lib;Rpcrt4.lib;version.lib;$(FC_LIBRARY)\boost_filesystem-vc120-mt-1_55.lib;$(FC_LIBRARY)\boost_program_options-vc120-mt-1_55.lib;$(FC_LIBRARY)\boost_regex-vc120-mt-1_55.lib;$(FC_LIBRARY)\boost_signals-vc120-mt-1_55.lib;$(FC_LIBRARY)\boost_system-vc120-mt-1_55.lib;$(FC_LIBRARY)\boost_thread-vc120-mt-1_55.lib;$(FC_LIBRARY)\coin4.lib;$(FC_LIBRARY)\QtOpenGL4.lib;glu32.lib;QtUiTools.lib;opengl32.lib;$(FC_LIBRARY)\QtSvg4.lib;$(FC_LIBRARY)\QtUiTools.lib;$(FC_LIBRARY)\QtWebKit4.lib;$(FC_LIBRARY)\QtXmlPatterns4.lib;$(FC_LIBRARY)\QtGui4.lib;imm32.lib;winmm.lib;$(FC_LIBRARY)\QtXml4.lib;$(FC_LIBRARY)\QtNetwork4.lib;$(FC_LIBRARY)\QtCore4.lib;ws2_32.lib;$(FC_LIBRARY)\cmake\Shiboken-1.2.2\..\..\shiboken-python2.7.lib;$(FC_LIBRARY)\cmake\PySide-1.2.2\..\..\pyside-python2.7.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(FC_LIBRARY)\;$(FC_LIBRARY)\/$(Configuration);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreAllDefaultLibraries>true</IgnoreAllDefaultLibraries>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>$(FC_SOURCE)/Mod/Spreadsheet/Gui/MinSizeRel/SpreadsheetGui.lib</ImportLibrary>
+      <LargeAddressAware>true</LargeAddressAware>
+      <ProgramDataBaseFile>$(DEVROOT)/Mod/Spreadsheet/MinSizeRel/SpreadsheetGui.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+      <Version>
+      </Version>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>$(FC_INCLUDE);$(FC_INCLUDE)\QtOpenGL;$(FC_INCLUDE)\QtSvg;$(FC_INCLUDE)\QtUiTools;$(FC_INCLUDE)\QtWebKit;$(FC_INCLUDE)\QtGui;$(FC_INCLUDE)\QtXml;$(FC_INCLUDE)\QtNetwork;$(FC_INCLUDE)\QtCore;$(FC_SOURCE);$(FC_SOURCE)\Mod\Spreadsheet\Gui;$(FC_INCLUDE)\python2.7;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>RelWithDebInfo/</AssemblerListingLocation>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;QT_NO_DEBUG;QT_OPENGL_LIB;QT_SVG_LIB;QT_UITOOLS_LIB;QT_WEBKIT_LIB;QT_GUI_LIB;QT_XML_LIB;QT_NETWORK_LIB;QT_CORE_LIB;CMAKE_INTDIR="RelWithDebInfo";SpreadsheetGui_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;QT_NO_DEBUG;QT_OPENGL_LIB;QT_SVG_LIB;QT_UITOOLS_LIB;QT_WEBKIT_LIB;QT_GUI_LIB;QT_XML_LIB;QT_NETWORK_LIB;QT_CORE_LIB;CMAKE_INTDIR=\"RelWithDebInfo\";SpreadsheetGui_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(FC_INCLUDE);$(FC_INCLUDE)\QtOpenGL;$(FC_INCLUDE)\QtSvg;$(FC_INCLUDE)\QtUiTools;$(FC_INCLUDE)\QtWebKit;$(FC_INCLUDE)\QtGui;$(FC_INCLUDE)\QtXml;$(FC_INCLUDE)\QtNetwork;$(FC_INCLUDE)\QtCore;$(FC_SOURCE);$(FC_SOURCE)\Mod\Spreadsheet\Gui;$(FC_INCLUDE)\python2.7;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>$(FC_INCLUDE);$(FC_INCLUDE)\QtOpenGL;$(FC_INCLUDE)\QtSvg;$(FC_INCLUDE)\QtUiTools;$(FC_INCLUDE)\QtWebKit;$(FC_INCLUDE)\QtGui;$(FC_INCLUDE)\QtXml;$(FC_INCLUDE)\QtNetwork;$(FC_INCLUDE)\QtCore;$(FC_SOURCE);$(FC_SOURCE)\Mod\Spreadsheet\Gui;$(FC_INCLUDE)\python2.7;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <PostBuildEvent>
+      <Message>
+      </Message>
+      <Command>setlocal
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+    </PostBuildEvent>
+    <Link>
+      <AdditionalOptions> /machine:X86 /debug %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;SHFolder.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;winmm.lib;comsupp.lib;Ws2_32.lib;dbghelp.lib;..\App\RelWithDebInfo\Spreadsheet.lib;..\..\..\Gui\RelWithDebInfo\FreeCADGui.lib;..\..\..\App\RelWithDebInfo\FreeCADApp.lib;..\..\..\Base\RelWithDebInfo\FreeCADBase.lib;$(FC_LIBRARY)\python27.lib;$(FC_LIBRARY)\xerces-c_3.lib;$(FC_LIBRARY)\zlib.lib;MSVCRT.lib;MSVCPRT.lib;Rpcrt4.lib;version.lib;$(FC_LIBRARY)\boost_filesystem-vc120-mt-1_55.lib;$(FC_LIBRARY)\boost_program_options-vc120-mt-1_55.lib;$(FC_LIBRARY)\boost_regex-vc120-mt-1_55.lib;$(FC_LIBRARY)\boost_signals-vc120-mt-1_55.lib;$(FC_LIBRARY)\boost_system-vc120-mt-1_55.lib;$(FC_LIBRARY)\boost_thread-vc120-mt-1_55.lib;$(FC_LIBRARY)\coin4.lib;$(FC_LIBRARY)\QtOpenGL4.lib;glu32.lib;QtUiTools.lib;opengl32.lib;$(FC_LIBRARY)\QtSvg4.lib;$(FC_LIBRARY)\QtUiTools.lib;$(FC_LIBRARY)\QtWebKit4.lib;$(FC_LIBRARY)\QtXmlPatterns4.lib;$(FC_LIBRARY)\QtGui4.lib;imm32.lib;winmm.lib;$(FC_LIBRARY)\QtXml4.lib;$(FC_LIBRARY)\QtNetwork4.lib;$(FC_LIBRARY)\QtCore4.lib;ws2_32.lib;$(FC_LIBRARY)\cmake\Shiboken-1.2.2\..\..\shiboken-python2.7.lib;$(FC_LIBRARY)\cmake\PySide-1.2.2\..\..\pyside-python2.7.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(FC_LIBRARY)\;$(FC_LIBRARY)\/$(Configuration);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreAllDefaultLibraries>true</IgnoreAllDefaultLibraries>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>$(FC_SOURCE)/Mod/Spreadsheet/Gui/RelWithDebInfo/SpreadsheetGui.lib</ImportLibrary>
+      <LargeAddressAware>true</LargeAddressAware>
+      <ProgramDataBaseFile>$(DEVROOT)/Mod/Spreadsheet/RelWithDebInfo/SpreadsheetGui.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+      <Version>
+      </Version>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="$(FC_SOURCE)\Mod\Spreadsheet\Gui\Resources\Spreadsheet.qrc">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generating qrc_Spreadsheet.cxx</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+$(FC_BIN)\rcc.exe -name Spreadsheet -o $(FC_SOURCE)/Mod/Spreadsheet/Gui/qrc_Spreadsheet.cxx $(FC_SOURCE)/Mod/Spreadsheet/Gui/Resources/Spreadsheet.qrc
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(FC_SOURCE)/Mod/Spreadsheet/Gui/Resources/Spreadsheet.qrc;$(FC_SOURCE)\Mod\Spreadsheet\Gui\Resources\icons\Spreadsheet.svg;$(FC_SOURCE)\Mod\Spreadsheet\Gui\Resources\icons\SpreadsheetController.svg;$(FC_SOURCE)\Mod\Spreadsheet\Gui\Resources\icons\SpreadsheetImport.svg;$(FC_SOURCE)\Mod\Spreadsheet\Gui\Resources\icons\SpreadsheetExport.svg;$(FC_SOURCE)\Mod\Spreadsheet\Gui\Resources\icons\SpreadsheetSplitCell.svg;$(FC_SOURCE)\Mod\Spreadsheet\Gui\Resources\icons\SpreadsheetMergeCells.svg;$(FC_SOURCE)\Mod\Spreadsheet\Gui\Resources\icons\SpreadsheetAlignRight.svg;$(FC_SOURCE)\Mod\Spreadsheet\Gui\Resources\icons\SpreadsheetAlignLeft.svg;$(FC_SOURCE)\Mod\Spreadsheet\Gui\Resources\icons\SpreadsheetAlignCenter.svg;$(FC_SOURCE)\Mod\Spreadsheet\Gui\Resources\icons\SpreadsheetAlignVCenter.svg;$(FC_SOURCE)\Mod\Spreadsheet\Gui\Resources\icons\SpreadsheetAlignTop.svg;$(FC_SOURCE)\Mod\Spreadsheet\Gui\Resources\icons\SpreadsheetAlignBottom.svg;$(FC_SOURCE)\Mod\Spreadsheet\Gui\Resources\icons\SpreadsheetStyleUnderline.svg;$(FC_SOURCE)\Mod\Spreadsheet\Gui\Resources\icons\SpreadsheetStyleItalic.svg;$(FC_SOURCE)\Mod\Spreadsheet\Gui\Resources\icons\SpreadsheetStyleBold.svg;$(FC_SOURCE)\Mod\Spreadsheet\Gui\Resources\translations\Spreadsheet_de.qm;$(FC_SOURCE)\Mod\Spreadsheet\Gui\Resources\translations\Spreadsheet_af.qm;$(FC_SOURCE)\Mod\Spreadsheet\Gui\Resources\translations\Spreadsheet_zh-CN.qm;$(FC_SOURCE)\Mod\Spreadsheet\Gui\Resources\translations\Spreadsheet_zh-TW.qm;$(FC_SOURCE)\Mod\Spreadsheet\Gui\Resources\translations\Spreadsheet_hr.qm;$(FC_SOURCE)\Mod\Spreadsheet\Gui\Resources\translations\Spreadsheet_cs.qm;$(FC_SOURCE)\Mod\Spreadsheet\Gui\Resources\translations\Spreadsheet_nl.qm;$(FC_SOURCE)\Mod\Spreadsheet\Gui\Resources\translations\Spreadsheet_fi.qm;$(FC_SOURCE)\Mod\Spreadsheet\Gui\Resources\translations\Spreadsheet_fr.qm;$(FC_SOURCE)\Mod\Spreadsheet\Gui\Resources\translations\Spreadsheet_hu.qm;$(FC_SOURCE)\Mod\Spreadsheet\Gui\Resources\translations\Spreadsheet_ja.qm;$(FC_SOURCE)\Mod\Spreadsheet\Gui\Resources\translations\Spreadsheet_no.qm;$(FC_SOURCE)\Mod\Spreadsheet\Gui\Resources\translations\Spreadsheet_pl.qm;$(FC_SOURCE)\Mod\Spreadsheet\Gui\Resources\translations\Spreadsheet_pt-PT.qm;$(FC_SOURCE)\Mod\Spreadsheet\Gui\Resources\translations\Spreadsheet_ro.qm;$(FC_SOURCE)\Mod\Spreadsheet\Gui\Resources\translations\Spreadsheet_ru.qm;$(FC_SOURCE)\Mod\Spreadsheet\Gui\Resources\translations\Spreadsheet_sr.qm;$(FC_SOURCE)\Mod\Spreadsheet\Gui\Resources\translations\Spreadsheet_es-ES.qm;$(FC_SOURCE)\Mod\Spreadsheet\Gui\Resources\translations\Spreadsheet_sv-SE.qm;$(FC_SOURCE)\Mod\Spreadsheet\Gui\Resources\translations\Spreadsheet_uk.qm;$(FC_SOURCE)\Mod\Spreadsheet\Gui\Resources\translations\Spreadsheet_it.qm;$(FC_SOURCE)\Mod\Spreadsheet\Gui\Resources\translations\Spreadsheet_pt-BR.qm;$(FC_SOURCE)\Mod\Spreadsheet\Gui\Resources\Spreadsheet.qrc.depends;$(FC_SOURCE)\Mod\Spreadsheet\Gui\Resources\Spreadsheet.qrc;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(FC_SOURCE)\Mod\Spreadsheet\Gui\qrc_Spreadsheet.cxx</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Generating qrc_Spreadsheet.cxx</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+$(FC_BIN)\rcc.exe -name Spreadsheet -o $(FC_SOURCE)/Mod/Spreadsheet/Gui/qrc_Spreadsheet.cxx $(FC_SOURCE)/Mod/Spreadsheet/Gui/Resources/Spreadsheet.qrc
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(FC_SOURCE)/Mod/Spreadsheet/Gui/Resources/Spreadsheet.qrc;$(FC_SOURCE)\Mod\Spreadsheet\Gui\Resources\icons\Spreadsheet.svg;$(FC_SOURCE)\Mod\Spreadsheet\Gui\Resources\icons\SpreadsheetController.svg;$(FC_SOURCE)\Mod\Spreadsheet\Gui\Resources\icons\SpreadsheetImport.svg;$(FC_SOURCE)\Mod\Spreadsheet\Gui\Resources\icons\SpreadsheetExport.svg;$(FC_SOURCE)\Mod\Spreadsheet\Gui\Resources\icons\SpreadsheetSplitCell.svg;$(FC_SOURCE)\Mod\Spreadsheet\Gui\Resources\icons\SpreadsheetMergeCells.svg;$(FC_SOURCE)\Mod\Spreadsheet\Gui\Resources\icons\SpreadsheetAlignRight.svg;$(FC_SOURCE)\Mod\Spreadsheet\Gui\Resources\icons\SpreadsheetAlignLeft.svg;$(FC_SOURCE)\Mod\Spreadsheet\Gui\Resources\icons\SpreadsheetAlignCenter.svg;$(FC_SOURCE)\Mod\Spreadsheet\Gui\Resources\icons\SpreadsheetAlignVCenter.svg;$(FC_SOURCE)\Mod\Spreadsheet\Gui\Resources\icons\SpreadsheetAlignTop.svg;$(FC_SOURCE)\Mod\Spreadsheet\Gui\Resources\icons\SpreadsheetAlignBottom.svg;$(FC_SOURCE)\Mod\Spreadsheet\Gui\Resources\icons\SpreadsheetStyleUnderline.svg;$(FC_SOURCE)\Mod\Spreadsheet\Gui\Resources\icons\SpreadsheetStyleItalic.svg;$(FC_SOURCE)\Mod\Spreadsheet\Gui\Resources\icons\SpreadsheetStyleBold.svg;$(FC_SOURCE)\Mod\Spreadsheet\Gui\Resources\translations\Spreadsheet_de.qm;$(FC_SOURCE)\Mod\Spreadsheet\Gui\Resources\translations\Spreadsheet_af.qm;$(FC_SOURCE)\Mod\Spreadsheet\Gui\Resources\translations\Spreadsheet_zh-CN.qm;$(FC_SOURCE)\Mod\Spreadsheet\Gui\Resources\translations\Spreadsheet_zh-TW.qm;$(FC_SOURCE)\Mod\Spreadsheet\Gui\Resources\translations\Spreadsheet_hr.qm;$(FC_SOURCE)\Mod\Spreadsheet\Gui\Resources\translations\Spreadsheet_cs.qm;$(FC_SOURCE)\Mod\Spreadsheet\Gui\Resources\translations\Spreadsheet_nl.qm;$(FC_SOURCE)\Mod\Spreadsheet\Gui\Resources\translations\Spreadsheet_fi.qm;$(FC_SOURCE)\Mod\Spreadsheet\Gui\Resources\translations\Spreadsheet_fr.qm;$(FC_SOURCE)\Mod\Spreadsheet\Gui\Resources\translations\Spreadsheet_hu.qm;$(FC_SOURCE)\Mod\Spreadsheet\Gui\Resources\translations\Spreadsheet_ja.qm;$(FC_SOURCE)\Mod\Spreadsheet\Gui\Resources\translations\Spreadsheet_no.qm;$(FC_SOURCE)\Mod\Spreadsheet\Gui\Resources\translations\Spreadsheet_pl.qm;$(FC_SOURCE)\Mod\Spreadsheet\Gui\Resources\translations\Spreadsheet_pt-PT.qm;$(FC_SOURCE)\Mod\Spreadsheet\Gui\Resources\translations\Spreadsheet_ro.qm;$(FC_SOURCE)\Mod\Spreadsheet\Gui\Resources\translations\Spreadsheet_ru.qm;$(FC_SOURCE)\Mod\Spreadsheet\Gui\Resources\translations\Spreadsheet_sr.qm;$(FC_SOURCE)\Mod\Spreadsheet\Gui\Resources\translations\Spreadsheet_es-ES.qm;$(FC_SOURCE)\Mod\Spreadsheet\Gui\Resources\translations\Spreadsheet_sv-SE.qm;$(FC_SOURCE)\Mod\Spreadsheet\Gui\Resources\translations\Spreadsheet_uk.qm;$(FC_SOURCE)\Mod\Spreadsheet\Gui\Resources\translations\Spreadsheet_it.qm;$(FC_SOURCE)\Mod\Spreadsheet\Gui\Resources\translations\Spreadsheet_pt-BR.qm;$(FC_SOURCE)\Mod\Spreadsheet\Gui\Resources\Spreadsheet.qrc.depends;$(FC_SOURCE)\Mod\Spreadsheet\Gui\Resources\Spreadsheet.qrc;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(FC_SOURCE)\Mod\Spreadsheet\Gui\qrc_Spreadsheet.cxx</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Generating qrc_Spreadsheet.cxx</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+$(FC_BIN)\rcc.exe -name Spreadsheet -o $(FC_SOURCE)/Mod/Spreadsheet/Gui/qrc_Spreadsheet.cxx $(FC_SOURCE)/Mod/Spreadsheet/Gui/Resources/Spreadsheet.qrc
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">$(FC_SOURCE)/Mod/Spreadsheet/Gui/Resources/Spreadsheet.qrc;$(FC_SOURCE)\Mod\Spreadsheet\Gui\Resources\icons\Spreadsheet.svg;$(FC_SOURCE)\Mod\Spreadsheet\Gui\Resources\icons\SpreadsheetController.svg;$(FC_SOURCE)\Mod\Spreadsheet\Gui\Resources\icons\SpreadsheetImport.svg;$(FC_SOURCE)\Mod\Spreadsheet\Gui\Resources\icons\SpreadsheetExport.svg;$(FC_SOURCE)\Mod\Spreadsheet\Gui\Resources\icons\SpreadsheetSplitCell.svg;$(FC_SOURCE)\Mod\Spreadsheet\Gui\Resources\icons\SpreadsheetMergeCells.svg;$(FC_SOURCE)\Mod\Spreadsheet\Gui\Resources\icons\SpreadsheetAlignRight.svg;$(FC_SOURCE)\Mod\Spreadsheet\Gui\Resources\icons\SpreadsheetAlignLeft.svg;$(FC_SOURCE)\Mod\Spreadsheet\Gui\Resources\icons\SpreadsheetAlignCenter.svg;$(FC_SOURCE)\Mod\Spreadsheet\Gui\Resources\icons\SpreadsheetAlignVCenter.svg;$(FC_SOURCE)\Mod\Spreadsheet\Gui\Resources\icons\SpreadsheetAlignTop.svg;$(FC_SOURCE)\Mod\Spreadsheet\Gui\Resources\icons\SpreadsheetAlignBottom.svg;$(FC_SOURCE)\Mod\Spreadsheet\Gui\Resources\icons\SpreadsheetStyleUnderline.svg;$(FC_SOURCE)\Mod\Spreadsheet\Gui\Resources\icons\SpreadsheetStyleItalic.svg;$(FC_SOURCE)\Mod\Spreadsheet\Gui\Resources\icons\SpreadsheetStyleBold.svg;$(FC_SOURCE)\Mod\Spreadsheet\Gui\Resources\translations\Spreadsheet_de.qm;$(FC_SOURCE)\Mod\Spreadsheet\Gui\Resources\translations\Spreadsheet_af.qm;$(FC_SOURCE)\Mod\Spreadsheet\Gui\Resources\translations\Spreadsheet_zh-CN.qm;$(FC_SOURCE)\Mod\Spreadsheet\Gui\Resources\translations\Spreadsheet_zh-TW.qm;$(FC_SOURCE)\Mod\Spreadsheet\Gui\Resources\translations\Spreadsheet_hr.qm;$(FC_SOURCE)\Mod\Spreadsheet\Gui\Resources\translations\Spreadsheet_cs.qm;$(FC_SOURCE)\Mod\Spreadsheet\Gui\Resources\translations\Spreadsheet_nl.qm;$(FC_SOURCE)\Mod\Spreadsheet\Gui\Resources\translations\Spreadsheet_fi.qm;$(FC_SOURCE)\Mod\Spreadsheet\Gui\Resources\translations\Spreadsheet_fr.qm;$(FC_SOURCE)\Mod\Spreadsheet\Gui\Resources\translations\Spreadsheet_hu.qm;$(FC_SOURCE)\Mod\Spreadsheet\Gui\Resources\translations\Spreadsheet_ja.qm;$(FC_SOURCE)\Mod\Spreadsheet\Gui\Resources\translations\Spreadsheet_no.qm;$(FC_SOURCE)\Mod\Spreadsheet\Gui\Resources\translations\Spreadsheet_pl.qm;$(FC_SOURCE)\Mod\Spreadsheet\Gui\Resources\translations\Spreadsheet_pt-PT.qm;$(FC_SOURCE)\Mod\Spreadsheet\Gui\Resources\translations\Spreadsheet_ro.qm;$(FC_SOURCE)\Mod\Spreadsheet\Gui\Resources\translations\Spreadsheet_ru.qm;$(FC_SOURCE)\Mod\Spreadsheet\Gui\Resources\translations\Spreadsheet_sr.qm;$(FC_SOURCE)\Mod\Spreadsheet\Gui\Resources\translations\Spreadsheet_es-ES.qm;$(FC_SOURCE)\Mod\Spreadsheet\Gui\Resources\translations\Spreadsheet_sv-SE.qm;$(FC_SOURCE)\Mod\Spreadsheet\Gui\Resources\translations\Spreadsheet_uk.qm;$(FC_SOURCE)\Mod\Spreadsheet\Gui\Resources\translations\Spreadsheet_it.qm;$(FC_SOURCE)\Mod\Spreadsheet\Gui\Resources\translations\Spreadsheet_pt-BR.qm;$(FC_SOURCE)\Mod\Spreadsheet\Gui\Resources\Spreadsheet.qrc.depends;$(FC_SOURCE)\Mod\Spreadsheet\Gui\Resources\Spreadsheet.qrc;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">$(FC_SOURCE)\Mod\Spreadsheet\Gui\qrc_Spreadsheet.cxx</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Generating qrc_Spreadsheet.cxx</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+$(FC_BIN)\rcc.exe -name Spreadsheet -o $(FC_SOURCE)/Mod/Spreadsheet/Gui/qrc_Spreadsheet.cxx $(FC_SOURCE)/Mod/Spreadsheet/Gui/Resources/Spreadsheet.qrc
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(FC_SOURCE)/Mod/Spreadsheet/Gui/Resources/Spreadsheet.qrc;$(FC_SOURCE)\Mod\Spreadsheet\Gui\Resources\icons\Spreadsheet.svg;$(FC_SOURCE)\Mod\Spreadsheet\Gui\Resources\icons\SpreadsheetController.svg;$(FC_SOURCE)\Mod\Spreadsheet\Gui\Resources\icons\SpreadsheetImport.svg;$(FC_SOURCE)\Mod\Spreadsheet\Gui\Resources\icons\SpreadsheetExport.svg;$(FC_SOURCE)\Mod\Spreadsheet\Gui\Resources\icons\SpreadsheetSplitCell.svg;$(FC_SOURCE)\Mod\Spreadsheet\Gui\Resources\icons\SpreadsheetMergeCells.svg;$(FC_SOURCE)\Mod\Spreadsheet\Gui\Resources\icons\SpreadsheetAlignRight.svg;$(FC_SOURCE)\Mod\Spreadsheet\Gui\Resources\icons\SpreadsheetAlignLeft.svg;$(FC_SOURCE)\Mod\Spreadsheet\Gui\Resources\icons\SpreadsheetAlignCenter.svg;$(FC_SOURCE)\Mod\Spreadsheet\Gui\Resources\icons\SpreadsheetAlignVCenter.svg;$(FC_SOURCE)\Mod\Spreadsheet\Gui\Resources\icons\SpreadsheetAlignTop.svg;$(FC_SOURCE)\Mod\Spreadsheet\Gui\Resources\icons\SpreadsheetAlignBottom.svg;$(FC_SOURCE)\Mod\Spreadsheet\Gui\Resources\icons\SpreadsheetStyleUnderline.svg;$(FC_SOURCE)\Mod\Spreadsheet\Gui\Resources\icons\SpreadsheetStyleItalic.svg;$(FC_SOURCE)\Mod\Spreadsheet\Gui\Resources\icons\SpreadsheetStyleBold.svg;$(FC_SOURCE)\Mod\Spreadsheet\Gui\Resources\translations\Spreadsheet_de.qm;$(FC_SOURCE)\Mod\Spreadsheet\Gui\Resources\translations\Spreadsheet_af.qm;$(FC_SOURCE)\Mod\Spreadsheet\Gui\Resources\translations\Spreadsheet_zh-CN.qm;$(FC_SOURCE)\Mod\Spreadsheet\Gui\Resources\translations\Spreadsheet_zh-TW.qm;$(FC_SOURCE)\Mod\Spreadsheet\Gui\Resources\translations\Spreadsheet_hr.qm;$(FC_SOURCE)\Mod\Spreadsheet\Gui\Resources\translations\Spreadsheet_cs.qm;$(FC_SOURCE)\Mod\Spreadsheet\Gui\Resources\translations\Spreadsheet_nl.qm;$(FC_SOURCE)\Mod\Spreadsheet\Gui\Resources\translations\Spreadsheet_fi.qm;$(FC_SOURCE)\Mod\Spreadsheet\Gui\Resources\translations\Spreadsheet_fr.qm;$(FC_SOURCE)\Mod\Spreadsheet\Gui\Resources\translations\Spreadsheet_hu.qm;$(FC_SOURCE)\Mod\Spreadsheet\Gui\Resources\translations\Spreadsheet_ja.qm;$(FC_SOURCE)\Mod\Spreadsheet\Gui\Resources\translations\Spreadsheet_no.qm;$(FC_SOURCE)\Mod\Spreadsheet\Gui\Resources\translations\Spreadsheet_pl.qm;$(FC_SOURCE)\Mod\Spreadsheet\Gui\Resources\translations\Spreadsheet_pt-PT.qm;$(FC_SOURCE)\Mod\Spreadsheet\Gui\Resources\translations\Spreadsheet_ro.qm;$(FC_SOURCE)\Mod\Spreadsheet\Gui\Resources\translations\Spreadsheet_ru.qm;$(FC_SOURCE)\Mod\Spreadsheet\Gui\Resources\translations\Spreadsheet_sr.qm;$(FC_SOURCE)\Mod\Spreadsheet\Gui\Resources\translations\Spreadsheet_es-ES.qm;$(FC_SOURCE)\Mod\Spreadsheet\Gui\Resources\translations\Spreadsheet_sv-SE.qm;$(FC_SOURCE)\Mod\Spreadsheet\Gui\Resources\translations\Spreadsheet_uk.qm;$(FC_SOURCE)\Mod\Spreadsheet\Gui\Resources\translations\Spreadsheet_it.qm;$(FC_SOURCE)\Mod\Spreadsheet\Gui\Resources\translations\Spreadsheet_pt-BR.qm;$(FC_SOURCE)\Mod\Spreadsheet\Gui\Resources\Spreadsheet.qrc.depends;$(FC_SOURCE)\Mod\Spreadsheet\Gui\Resources\Spreadsheet.qrc;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(FC_SOURCE)\Mod\Spreadsheet\Gui\qrc_Spreadsheet.cxx</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="$(FC_SOURCE)\Mod\Spreadsheet\Gui\SpreadsheetView.h">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generating moc_SpreadsheetView.cpp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+$(FC_BIN)\moc.exe -DBOOST_TT_HAS_OPERATOR_HPP_INCLUDED $(FC_SOURCE)/Mod/Spreadsheet/Gui/SpreadsheetView.h -o $(FC_SOURCE)/Mod/Spreadsheet/Gui/moc_SpreadsheetView.cpp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(FC_SOURCE)/Mod/Spreadsheet/Gui/SpreadsheetView.h;$(FC_SOURCE)\Mod\Spreadsheet\Gui\SpreadsheetView.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(FC_SOURCE)\Mod\Spreadsheet\Gui\moc_SpreadsheetView.cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Generating moc_SpreadsheetView.cpp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+$(FC_BIN)\moc.exe -DBOOST_TT_HAS_OPERATOR_HPP_INCLUDED $(FC_SOURCE)/Mod/Spreadsheet/Gui/SpreadsheetView.h -o $(FC_SOURCE)/Mod/Spreadsheet/Gui/moc_SpreadsheetView.cpp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(FC_SOURCE)/Mod/Spreadsheet/Gui/SpreadsheetView.h;$(FC_SOURCE)\Mod\Spreadsheet\Gui\SpreadsheetView.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(FC_SOURCE)\Mod\Spreadsheet\Gui\moc_SpreadsheetView.cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Generating moc_SpreadsheetView.cpp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+$(FC_BIN)\moc.exe -DBOOST_TT_HAS_OPERATOR_HPP_INCLUDED $(FC_SOURCE)/Mod/Spreadsheet/Gui/SpreadsheetView.h -o $(FC_SOURCE)/Mod/Spreadsheet/Gui/moc_SpreadsheetView.cpp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">$(FC_SOURCE)/Mod/Spreadsheet/Gui/SpreadsheetView.h;$(FC_SOURCE)\Mod\Spreadsheet\Gui\SpreadsheetView.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">$(FC_SOURCE)\Mod\Spreadsheet\Gui\moc_SpreadsheetView.cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Generating moc_SpreadsheetView.cpp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+$(FC_BIN)\moc.exe -DBOOST_TT_HAS_OPERATOR_HPP_INCLUDED $(FC_SOURCE)/Mod/Spreadsheet/Gui/SpreadsheetView.h -o $(FC_SOURCE)/Mod/Spreadsheet/Gui/moc_SpreadsheetView.cpp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(FC_SOURCE)/Mod/Spreadsheet/Gui/SpreadsheetView.h;$(FC_SOURCE)\Mod\Spreadsheet\Gui\SpreadsheetView.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(FC_SOURCE)\Mod\Spreadsheet\Gui\moc_SpreadsheetView.cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="$(FC_SOURCE)\Mod\Spreadsheet\Gui\SpreadsheetDelegate.h">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generating moc_SpreadsheetDelegate.cpp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+$(FC_BIN)\moc.exe -DBOOST_TT_HAS_OPERATOR_HPP_INCLUDED $(FC_SOURCE)/Mod/Spreadsheet/Gui/SpreadsheetDelegate.h -o $(FC_SOURCE)/Mod/Spreadsheet/Gui/moc_SpreadsheetDelegate.cpp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(FC_SOURCE)/Mod/Spreadsheet/Gui/SpreadsheetDelegate.h;$(FC_SOURCE)\Mod\Spreadsheet\Gui\SpreadsheetDelegate.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(FC_SOURCE)\Mod\Spreadsheet\Gui\moc_SpreadsheetDelegate.cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Generating moc_SpreadsheetDelegate.cpp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+$(FC_BIN)\moc.exe -DBOOST_TT_HAS_OPERATOR_HPP_INCLUDED $(FC_SOURCE)/Mod/Spreadsheet/Gui/SpreadsheetDelegate.h -o $(FC_SOURCE)/Mod/Spreadsheet/Gui/moc_SpreadsheetDelegate.cpp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(FC_SOURCE)/Mod/Spreadsheet/Gui/SpreadsheetDelegate.h;$(FC_SOURCE)\Mod\Spreadsheet\Gui\SpreadsheetDelegate.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(FC_SOURCE)\Mod\Spreadsheet\Gui\moc_SpreadsheetDelegate.cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Generating moc_SpreadsheetDelegate.cpp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+$(FC_BIN)\moc.exe -DBOOST_TT_HAS_OPERATOR_HPP_INCLUDED $(FC_SOURCE)/Mod/Spreadsheet/Gui/SpreadsheetDelegate.h -o $(FC_SOURCE)/Mod/Spreadsheet/Gui/moc_SpreadsheetDelegate.cpp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">$(FC_SOURCE)/Mod/Spreadsheet/Gui/SpreadsheetDelegate.h;$(FC_SOURCE)\Mod\Spreadsheet\Gui\SpreadsheetDelegate.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">$(FC_SOURCE)\Mod\Spreadsheet\Gui\moc_SpreadsheetDelegate.cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Generating moc_SpreadsheetDelegate.cpp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+$(FC_BIN)\moc.exe -DBOOST_TT_HAS_OPERATOR_HPP_INCLUDED $(FC_SOURCE)/Mod/Spreadsheet/Gui/SpreadsheetDelegate.h -o $(FC_SOURCE)/Mod/Spreadsheet/Gui/moc_SpreadsheetDelegate.cpp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(FC_SOURCE)/Mod/Spreadsheet/Gui/SpreadsheetDelegate.h;$(FC_SOURCE)\Mod\Spreadsheet\Gui\SpreadsheetDelegate.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(FC_SOURCE)\Mod\Spreadsheet\Gui\moc_SpreadsheetDelegate.cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="$(FC_SOURCE)\Mod\Spreadsheet\Gui\SheetTableView.h">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generating moc_SheetTableView.cpp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+$(FC_BIN)\moc.exe -DBOOST_TT_HAS_OPERATOR_HPP_INCLUDED $(FC_SOURCE)/Mod/Spreadsheet/Gui/SheetTableView.h -o $(FC_SOURCE)/Mod/Spreadsheet/Gui/moc_SheetTableView.cpp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(FC_SOURCE)/Mod/Spreadsheet/Gui/SheetTableView.h;$(FC_SOURCE)\Mod\Spreadsheet\Gui\SheetTableView.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(FC_SOURCE)\Mod\Spreadsheet\Gui\moc_SheetTableView.cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Generating moc_SheetTableView.cpp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+$(FC_BIN)\moc.exe -DBOOST_TT_HAS_OPERATOR_HPP_INCLUDED $(FC_SOURCE)/Mod/Spreadsheet/Gui/SheetTableView.h -o $(FC_SOURCE)/Mod/Spreadsheet/Gui/moc_SheetTableView.cpp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(FC_SOURCE)/Mod/Spreadsheet/Gui/SheetTableView.h;$(FC_SOURCE)\Mod\Spreadsheet\Gui\SheetTableView.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(FC_SOURCE)\Mod\Spreadsheet\Gui\moc_SheetTableView.cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Generating moc_SheetTableView.cpp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+$(FC_BIN)\moc.exe -DBOOST_TT_HAS_OPERATOR_HPP_INCLUDED $(FC_SOURCE)/Mod/Spreadsheet/Gui/SheetTableView.h -o $(FC_SOURCE)/Mod/Spreadsheet/Gui/moc_SheetTableView.cpp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">$(FC_SOURCE)/Mod/Spreadsheet/Gui/SheetTableView.h;$(FC_SOURCE)\Mod\Spreadsheet\Gui\SheetTableView.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">$(FC_SOURCE)\Mod\Spreadsheet\Gui\moc_SheetTableView.cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Generating moc_SheetTableView.cpp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+$(FC_BIN)\moc.exe -DBOOST_TT_HAS_OPERATOR_HPP_INCLUDED $(FC_SOURCE)/Mod/Spreadsheet/Gui/SheetTableView.h -o $(FC_SOURCE)/Mod/Spreadsheet/Gui/moc_SheetTableView.cpp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(FC_SOURCE)/Mod/Spreadsheet/Gui/SheetTableView.h;$(FC_SOURCE)\Mod\Spreadsheet\Gui\SheetTableView.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(FC_SOURCE)\Mod\Spreadsheet\Gui\moc_SheetTableView.cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="$(FC_SOURCE)\Mod\Spreadsheet\Gui\SheetModel.h">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generating moc_SheetModel.cpp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+$(FC_BIN)\moc.exe -DBOOST_TT_HAS_OPERATOR_HPP_INCLUDED $(FC_SOURCE)/Mod/Spreadsheet/Gui/SheetModel.h -o $(FC_SOURCE)/Mod/Spreadsheet/Gui/moc_SheetModel.cpp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(FC_SOURCE)/Mod/Spreadsheet/Gui/SheetModel.h;$(FC_SOURCE)\Mod\Spreadsheet\Gui\SheetModel.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(FC_SOURCE)\Mod\Spreadsheet\Gui\moc_SheetModel.cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Generating moc_SheetModel.cpp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+$(FC_BIN)\moc.exe -DBOOST_TT_HAS_OPERATOR_HPP_INCLUDED $(FC_SOURCE)/Mod/Spreadsheet/Gui/SheetModel.h -o $(FC_SOURCE)/Mod/Spreadsheet/Gui/moc_SheetModel.cpp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(FC_SOURCE)/Mod/Spreadsheet/Gui/SheetModel.h;$(FC_SOURCE)\Mod\Spreadsheet\Gui\SheetModel.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(FC_SOURCE)\Mod\Spreadsheet\Gui\moc_SheetModel.cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Generating moc_SheetModel.cpp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+$(FC_BIN)\moc.exe -DBOOST_TT_HAS_OPERATOR_HPP_INCLUDED $(FC_SOURCE)/Mod/Spreadsheet/Gui/SheetModel.h -o $(FC_SOURCE)/Mod/Spreadsheet/Gui/moc_SheetModel.cpp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">$(FC_SOURCE)/Mod/Spreadsheet/Gui/SheetModel.h;$(FC_SOURCE)\Mod\Spreadsheet\Gui\SheetModel.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">$(FC_SOURCE)\Mod\Spreadsheet\Gui\moc_SheetModel.cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Generating moc_SheetModel.cpp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+$(FC_BIN)\moc.exe -DBOOST_TT_HAS_OPERATOR_HPP_INCLUDED $(FC_SOURCE)/Mod/Spreadsheet/Gui/SheetModel.h -o $(FC_SOURCE)/Mod/Spreadsheet/Gui/moc_SheetModel.cpp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(FC_SOURCE)/Mod/Spreadsheet/Gui/SheetModel.h;$(FC_SOURCE)\Mod\Spreadsheet\Gui\SheetModel.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(FC_SOURCE)\Mod\Spreadsheet\Gui\moc_SheetModel.cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="$(FC_SOURCE)\Mod\Spreadsheet\Gui\Workbench.h">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generating moc_Workbench.cpp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+$(FC_BIN)\moc.exe -DBOOST_TT_HAS_OPERATOR_HPP_INCLUDED $(FC_SOURCE)/Mod/Spreadsheet/Gui/Workbench.h -o $(FC_SOURCE)/Mod/Spreadsheet/Gui/moc_Workbench.cpp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(FC_SOURCE)/Mod/Spreadsheet/Gui/Workbench.h;$(FC_SOURCE)\Mod\Spreadsheet\Gui\Workbench.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(FC_SOURCE)\Mod\Spreadsheet\Gui\moc_Workbench.cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Generating moc_Workbench.cpp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+$(FC_BIN)\moc.exe -DBOOST_TT_HAS_OPERATOR_HPP_INCLUDED $(FC_SOURCE)/Mod/Spreadsheet/Gui/Workbench.h -o $(FC_SOURCE)/Mod/Spreadsheet/Gui/moc_Workbench.cpp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(FC_SOURCE)/Mod/Spreadsheet/Gui/Workbench.h;$(FC_SOURCE)\Mod\Spreadsheet\Gui\Workbench.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(FC_SOURCE)\Mod\Spreadsheet\Gui\moc_Workbench.cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Generating moc_Workbench.cpp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+$(FC_BIN)\moc.exe -DBOOST_TT_HAS_OPERATOR_HPP_INCLUDED $(FC_SOURCE)/Mod/Spreadsheet/Gui/Workbench.h -o $(FC_SOURCE)/Mod/Spreadsheet/Gui/moc_Workbench.cpp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">$(FC_SOURCE)/Mod/Spreadsheet/Gui/Workbench.h;$(FC_SOURCE)\Mod\Spreadsheet\Gui\Workbench.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">$(FC_SOURCE)\Mod\Spreadsheet\Gui\moc_Workbench.cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Generating moc_Workbench.cpp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+$(FC_BIN)\moc.exe -DBOOST_TT_HAS_OPERATOR_HPP_INCLUDED $(FC_SOURCE)/Mod/Spreadsheet/Gui/Workbench.h -o $(FC_SOURCE)/Mod/Spreadsheet/Gui/moc_Workbench.cpp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(FC_SOURCE)/Mod/Spreadsheet/Gui/Workbench.h;$(FC_SOURCE)\Mod\Spreadsheet\Gui\Workbench.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(FC_SOURCE)\Mod\Spreadsheet\Gui\moc_Workbench.cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="$(FC_SOURCE)\Mod\Spreadsheet\Gui\qtcolorpicker.h">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generating moc_qtcolorpicker.cpp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+$(FC_BIN)\moc.exe -DBOOST_TT_HAS_OPERATOR_HPP_INCLUDED $(FC_SOURCE)/Mod/Spreadsheet/Gui/qtcolorpicker.h -o $(FC_SOURCE)/Mod/Spreadsheet/Gui/moc_qtcolorpicker.cpp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(FC_SOURCE)/Mod/Spreadsheet/Gui/qtcolorpicker.h;$(FC_SOURCE)\Mod\Spreadsheet\Gui\qtcolorpicker.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(FC_SOURCE)\Mod\Spreadsheet\Gui\moc_qtcolorpicker.cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Generating moc_qtcolorpicker.cpp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+$(FC_BIN)\moc.exe -DBOOST_TT_HAS_OPERATOR_HPP_INCLUDED $(FC_SOURCE)/Mod/Spreadsheet/Gui/qtcolorpicker.h -o $(FC_SOURCE)/Mod/Spreadsheet/Gui/moc_qtcolorpicker.cpp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(FC_SOURCE)/Mod/Spreadsheet/Gui/qtcolorpicker.h;$(FC_SOURCE)\Mod\Spreadsheet\Gui\qtcolorpicker.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(FC_SOURCE)\Mod\Spreadsheet\Gui\moc_qtcolorpicker.cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Generating moc_qtcolorpicker.cpp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+$(FC_BIN)\moc.exe -DBOOST_TT_HAS_OPERATOR_HPP_INCLUDED $(FC_SOURCE)/Mod/Spreadsheet/Gui/qtcolorpicker.h -o $(FC_SOURCE)/Mod/Spreadsheet/Gui/moc_qtcolorpicker.cpp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">$(FC_SOURCE)/Mod/Spreadsheet/Gui/qtcolorpicker.h;$(FC_SOURCE)\Mod\Spreadsheet\Gui\qtcolorpicker.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">$(FC_SOURCE)\Mod\Spreadsheet\Gui\moc_qtcolorpicker.cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Generating moc_qtcolorpicker.cpp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+$(FC_BIN)\moc.exe -DBOOST_TT_HAS_OPERATOR_HPP_INCLUDED $(FC_SOURCE)/Mod/Spreadsheet/Gui/qtcolorpicker.h -o $(FC_SOURCE)/Mod/Spreadsheet/Gui/moc_qtcolorpicker.cpp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(FC_SOURCE)/Mod/Spreadsheet/Gui/qtcolorpicker.h;$(FC_SOURCE)\Mod\Spreadsheet\Gui\qtcolorpicker.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(FC_SOURCE)\Mod\Spreadsheet\Gui\moc_qtcolorpicker.cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="$(FC_SOURCE)\Mod\Spreadsheet\Gui\PropertiesDialog.h">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generating moc_PropertiesDialog.cpp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+$(FC_BIN)\moc.exe -DBOOST_TT_HAS_OPERATOR_HPP_INCLUDED $(FC_SOURCE)/Mod/Spreadsheet/Gui/PropertiesDialog.h -o $(FC_SOURCE)/Mod/Spreadsheet/Gui/moc_PropertiesDialog.cpp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(FC_SOURCE)/Mod/Spreadsheet/Gui/PropertiesDialog.h;$(FC_SOURCE)\Mod\Spreadsheet\Gui\PropertiesDialog.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(FC_SOURCE)\Mod\Spreadsheet\Gui\moc_PropertiesDialog.cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Generating moc_PropertiesDialog.cpp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+$(FC_BIN)\moc.exe -DBOOST_TT_HAS_OPERATOR_HPP_INCLUDED $(FC_SOURCE)/Mod/Spreadsheet/Gui/PropertiesDialog.h -o $(FC_SOURCE)/Mod/Spreadsheet/Gui/moc_PropertiesDialog.cpp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(FC_SOURCE)/Mod/Spreadsheet/Gui/PropertiesDialog.h;$(FC_SOURCE)\Mod\Spreadsheet\Gui\PropertiesDialog.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(FC_SOURCE)\Mod\Spreadsheet\Gui\moc_PropertiesDialog.cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Generating moc_PropertiesDialog.cpp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+$(FC_BIN)\moc.exe -DBOOST_TT_HAS_OPERATOR_HPP_INCLUDED $(FC_SOURCE)/Mod/Spreadsheet/Gui/PropertiesDialog.h -o $(FC_SOURCE)/Mod/Spreadsheet/Gui/moc_PropertiesDialog.cpp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">$(FC_SOURCE)/Mod/Spreadsheet/Gui/PropertiesDialog.h;$(FC_SOURCE)\Mod\Spreadsheet\Gui\PropertiesDialog.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">$(FC_SOURCE)\Mod\Spreadsheet\Gui\moc_PropertiesDialog.cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Generating moc_PropertiesDialog.cpp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+$(FC_BIN)\moc.exe -DBOOST_TT_HAS_OPERATOR_HPP_INCLUDED $(FC_SOURCE)/Mod/Spreadsheet/Gui/PropertiesDialog.h -o $(FC_SOURCE)/Mod/Spreadsheet/Gui/moc_PropertiesDialog.cpp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(FC_SOURCE)/Mod/Spreadsheet/Gui/PropertiesDialog.h;$(FC_SOURCE)\Mod\Spreadsheet\Gui\PropertiesDialog.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(FC_SOURCE)\Mod\Spreadsheet\Gui\moc_PropertiesDialog.cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="\code\free-cad-code\Source\Repos\code\CMakeFiles\4ae08007890516fa54f8c8864ae6a5e1\InitGui.py.rule">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generating ../../../../Mod/Spreadsheet/InitGui.py</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+$(CMAKE_BIN)\cmake.exe -E copy $(FC_SOURCE)/Mod/Spreadsheet/InitGui.py $(DEVROOT)/Mod/Spreadsheet/InitGui.py
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(DEVROOT)/CMakeFiles/4ae08007890516fa54f8c8864ae6a5e1/InitGui.py.rule;$(FC_SOURCE)\Mod\Spreadsheet\InitGui.py;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">\code\free-cad-code\Source\Repos\code\Mod\Spreadsheet\InitGui.py</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Generating ../../../../Mod/Spreadsheet/InitGui.py</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+$(CMAKE_BIN)\cmake.exe -E copy $(FC_SOURCE)/Mod/Spreadsheet/InitGui.py $(DEVROOT)/Mod/Spreadsheet/InitGui.py
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(DEVROOT)/CMakeFiles/4ae08007890516fa54f8c8864ae6a5e1/InitGui.py.rule;$(FC_SOURCE)\Mod\Spreadsheet\InitGui.py;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">\code\free-cad-code\Source\Repos\code\Mod\Spreadsheet\InitGui.py</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Generating ../../../../Mod/Spreadsheet/InitGui.py</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+$(CMAKE_BIN)\cmake.exe -E copy $(FC_SOURCE)/Mod/Spreadsheet/InitGui.py $(DEVROOT)/Mod/Spreadsheet/InitGui.py
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">$(DEVROOT)/CMakeFiles/4ae08007890516fa54f8c8864ae6a5e1/InitGui.py.rule;$(FC_SOURCE)\Mod\Spreadsheet\InitGui.py;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">\code\free-cad-code\Source\Repos\code\Mod\Spreadsheet\InitGui.py</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Generating ../../../../Mod/Spreadsheet/InitGui.py</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+$(CMAKE_BIN)\cmake.exe -E copy $(FC_SOURCE)/Mod/Spreadsheet/InitGui.py $(DEVROOT)/Mod/Spreadsheet/InitGui.py
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(DEVROOT)/CMakeFiles/4ae08007890516fa54f8c8864ae6a5e1/InitGui.py.rule;$(FC_SOURCE)\Mod\Spreadsheet\InitGui.py;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">\code\free-cad-code\Source\Repos\code\Mod\Spreadsheet\InitGui.py</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="\code\free-cad-code\Source\Repos\code\CMakeFiles\c5f6b65c826c24d47d43531c1aad46e3\moc_qtcolorpicker-internal.cpp.rule">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generating moc_qtcolorpicker-internal.cpp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+$(FC_BIN)\moc.exe -o $(FC_SOURCE)/Mod/Spreadsheet/Gui/moc_qtcolorpicker-internal.cpp $(FC_SOURCE)/Mod/Spreadsheet/Gui/qtcolorpicker.cpp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(DEVROOT)/CMakeFiles/c5f6b65c826c24d47d43531c1aad46e3/moc_qtcolorpicker-internal.cpp.rule;$(FC_SOURCE)\Mod\Spreadsheet\Gui\qtcolorpicker.cpp;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(FC_SOURCE)\Mod\Spreadsheet\Gui\moc_qtcolorpicker-internal.cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Generating moc_qtcolorpicker-internal.cpp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+$(FC_BIN)\moc.exe -o $(FC_SOURCE)/Mod/Spreadsheet/Gui/moc_qtcolorpicker-internal.cpp $(FC_SOURCE)/Mod/Spreadsheet/Gui/qtcolorpicker.cpp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(DEVROOT)/CMakeFiles/c5f6b65c826c24d47d43531c1aad46e3/moc_qtcolorpicker-internal.cpp.rule;$(FC_SOURCE)\Mod\Spreadsheet\Gui\qtcolorpicker.cpp;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(FC_SOURCE)\Mod\Spreadsheet\Gui\moc_qtcolorpicker-internal.cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Generating moc_qtcolorpicker-internal.cpp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+$(FC_BIN)\moc.exe -o $(FC_SOURCE)/Mod/Spreadsheet/Gui/moc_qtcolorpicker-internal.cpp $(FC_SOURCE)/Mod/Spreadsheet/Gui/qtcolorpicker.cpp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">$(DEVROOT)/CMakeFiles/c5f6b65c826c24d47d43531c1aad46e3/moc_qtcolorpicker-internal.cpp.rule;$(FC_SOURCE)\Mod\Spreadsheet\Gui\qtcolorpicker.cpp;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">$(FC_SOURCE)\Mod\Spreadsheet\Gui\moc_qtcolorpicker-internal.cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Generating moc_qtcolorpicker-internal.cpp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+$(FC_BIN)\moc.exe -o $(FC_SOURCE)/Mod/Spreadsheet/Gui/moc_qtcolorpicker-internal.cpp $(FC_SOURCE)/Mod/Spreadsheet/Gui/qtcolorpicker.cpp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(DEVROOT)/CMakeFiles/c5f6b65c826c24d47d43531c1aad46e3/moc_qtcolorpicker-internal.cpp.rule;$(FC_SOURCE)\Mod\Spreadsheet\Gui\qtcolorpicker.cpp;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(FC_SOURCE)\Mod\Spreadsheet\Gui\moc_qtcolorpicker-internal.cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="$(FC_SOURCE)\Mod\Spreadsheet\Gui\Sheet.ui">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generating ui_Sheet.h</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+$(FC_BIN)\uic.exe -o $(FC_SOURCE)/Mod/Spreadsheet/Gui/ui_Sheet.h $(FC_SOURCE)/Mod/Spreadsheet/Gui/Sheet.ui
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(FC_SOURCE)/Mod/Spreadsheet/Gui/Sheet.ui;$(FC_SOURCE)\Mod\Spreadsheet\Gui\Sheet.ui;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(FC_SOURCE)\Mod\Spreadsheet\Gui\ui_Sheet.h</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Generating ui_Sheet.h</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+$(FC_BIN)\uic.exe -o $(FC_SOURCE)/Mod/Spreadsheet/Gui/ui_Sheet.h $(FC_SOURCE)/Mod/Spreadsheet/Gui/Sheet.ui
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(FC_SOURCE)/Mod/Spreadsheet/Gui/Sheet.ui;$(FC_SOURCE)\Mod\Spreadsheet\Gui\Sheet.ui;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(FC_SOURCE)\Mod\Spreadsheet\Gui\ui_Sheet.h</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Generating ui_Sheet.h</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+$(FC_BIN)\uic.exe -o $(FC_SOURCE)/Mod/Spreadsheet/Gui/ui_Sheet.h $(FC_SOURCE)/Mod/Spreadsheet/Gui/Sheet.ui
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">$(FC_SOURCE)/Mod/Spreadsheet/Gui/Sheet.ui;$(FC_SOURCE)\Mod\Spreadsheet\Gui\Sheet.ui;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">$(FC_SOURCE)\Mod\Spreadsheet\Gui\ui_Sheet.h</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Generating ui_Sheet.h</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+$(FC_BIN)\uic.exe -o $(FC_SOURCE)/Mod/Spreadsheet/Gui/ui_Sheet.h $(FC_SOURCE)/Mod/Spreadsheet/Gui/Sheet.ui
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(FC_SOURCE)/Mod/Spreadsheet/Gui/Sheet.ui;$(FC_SOURCE)\Mod\Spreadsheet\Gui\Sheet.ui;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(FC_SOURCE)\Mod\Spreadsheet\Gui\ui_Sheet.h</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="$(FC_SOURCE)\Mod\Spreadsheet\Gui\PropertiesDialog.ui">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generating ui_PropertiesDialog.h</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+$(FC_BIN)\uic.exe -o $(FC_SOURCE)/Mod/Spreadsheet/Gui/ui_PropertiesDialog.h $(FC_SOURCE)/Mod/Spreadsheet/Gui/PropertiesDialog.ui
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(FC_SOURCE)/Mod/Spreadsheet/Gui/PropertiesDialog.ui;$(FC_SOURCE)\Mod\Spreadsheet\Gui\PropertiesDialog.ui;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(FC_SOURCE)\Mod\Spreadsheet\Gui\ui_PropertiesDialog.h</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Generating ui_PropertiesDialog.h</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+$(FC_BIN)\uic.exe -o $(FC_SOURCE)/Mod/Spreadsheet/Gui/ui_PropertiesDialog.h $(FC_SOURCE)/Mod/Spreadsheet/Gui/PropertiesDialog.ui
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(FC_SOURCE)/Mod/Spreadsheet/Gui/PropertiesDialog.ui;$(FC_SOURCE)\Mod\Spreadsheet\Gui\PropertiesDialog.ui;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(FC_SOURCE)\Mod\Spreadsheet\Gui\ui_PropertiesDialog.h</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Generating ui_PropertiesDialog.h</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+$(FC_BIN)\uic.exe -o $(FC_SOURCE)/Mod/Spreadsheet/Gui/ui_PropertiesDialog.h $(FC_SOURCE)/Mod/Spreadsheet/Gui/PropertiesDialog.ui
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">$(FC_SOURCE)/Mod/Spreadsheet/Gui/PropertiesDialog.ui;$(FC_SOURCE)\Mod\Spreadsheet\Gui\PropertiesDialog.ui;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">$(FC_SOURCE)\Mod\Spreadsheet\Gui\ui_PropertiesDialog.h</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Generating ui_PropertiesDialog.h</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+$(FC_BIN)\uic.exe -o $(FC_SOURCE)/Mod/Spreadsheet/Gui/ui_PropertiesDialog.h $(FC_SOURCE)/Mod/Spreadsheet/Gui/PropertiesDialog.ui
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(FC_SOURCE)/Mod/Spreadsheet/Gui/PropertiesDialog.ui;$(FC_SOURCE)\Mod\Spreadsheet\Gui\PropertiesDialog.ui;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(FC_SOURCE)\Mod\Spreadsheet\Gui\ui_PropertiesDialog.h</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="$(FC_SOURCE)\Mod\Spreadsheet\Gui\ViewProviderSpreadsheet.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Spreadsheet\Gui\PreCompiled.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Spreadsheet\Gui\ui_Sheet.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Spreadsheet\Gui\ui_PropertiesDialog.h" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Spreadsheet\Gui\AppSpreadsheetGui.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Spreadsheet\Gui\AppSpreadsheetGuiPy.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Spreadsheet\Gui\Command.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Spreadsheet\Gui\ViewProviderSpreadsheet.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Spreadsheet\Gui\SpreadsheetView.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Spreadsheet\Gui\SpreadsheetDelegate.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Spreadsheet\Gui\SheetTableView.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Spreadsheet\Gui\SheetModel.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Spreadsheet\Gui\PreCompiled.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Spreadsheet\Gui\Workbench.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Spreadsheet\Gui\qtcolorpicker.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Spreadsheet\Gui\PropertiesDialog.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="$(FC_SOURCE)/App/FreeCADApp.vcxproj">
+      <Project>106CFB68-340E-3307-8B33-691BFD4C2F84</Project>
+    </ProjectReference>
+    <ProjectReference Include="$(FC_SOURCE)/Base/FreeCADBase.vcxproj">
+      <Project>C318BD7C-A3CA-3454-A3D8-7E815B7B6CC0</Project>
+    </ProjectReference>
+    <ProjectReference Include="$(FC_SOURCE)/Gui/FreeCADGui.vcxproj">
+      <Project>DFA51F4B-58A3-3BF2-B5F0-4D1AE14CB897</Project>
+    </ProjectReference>
+    <ProjectReference Include="$(FC_SOURCE)/Mod/Spreadsheet/App/Spreadsheet.vcxproj">
+      <Project>5BB9213C-CCD2-37CB-B8C0-028E86EFA5E2</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

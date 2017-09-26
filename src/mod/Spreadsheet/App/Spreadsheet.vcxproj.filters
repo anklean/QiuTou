@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="$(FC_SOURCE)\Mod\Spreadsheet\App\Expression.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Spreadsheet\App\Cell.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Spreadsheet\App\PropertySheet.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Spreadsheet\App\PropertySheetPyImp.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Spreadsheet\App\PropertyColumnWidths.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Spreadsheet\App\PropertyColumnWidthsPyImp.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Spreadsheet\App\PropertyRowHeights.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Spreadsheet\App\PropertyRowHeightsPyImp.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Spreadsheet\App\PreCompiled.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Spreadsheet\App\Sheet.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Spreadsheet\App\SheetPyImp.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Spreadsheet\App\SheetObserver.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Spreadsheet\App\Utils.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Spreadsheet\App\Range.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Spreadsheet\App\AppSpreadsheet.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="$(FC_SOURCE)\Mod\Spreadsheet\App\Expression.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Spreadsheet\App\Cell.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Spreadsheet\App\DisplayUnit.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Spreadsheet\App\PropertySheet.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Spreadsheet\App\PropertyColumnWidths.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Spreadsheet\App\PropertyRowHeights.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Spreadsheet\App\PreCompiled.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Spreadsheet\App\Sheet.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Spreadsheet\App\SheetObserver.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Spreadsheet\App\Utils.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Spreadsheet\App\Range.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="$(FC_SOURCE)\Mod\Spreadsheet\App\PropertySheetPy.xml" />
+    <CustomBuild Include="$(FC_SOURCE)\Mod\Spreadsheet\App\PropertyColumnWidthsPy.xml" />
+    <CustomBuild Include="$(FC_SOURCE)\Mod\Spreadsheet\App\PropertyRowHeightsPy.xml" />
+    <CustomBuild Include="$(FC_SOURCE)\Mod\Spreadsheet\App\SheetPy.xml" />
+    <CustomBuild Include="\code\free-cad-code\Source\Repos\code\CMakeFiles\4ae08007890516fa54f8c8864ae6a5e1\Init.py.rule" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{BD35BF06-C8E8-3366-910F-4955129FFCAC}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{4129A801-9AD2-3DA1-A809-5BC032DABCC2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{5124C73C-630B-3F59-9DFC-D2C200992F06}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,462 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="MinSizeRel|Win32">
+      <Configuration>MinSizeRel</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|Win32">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGUID>{B960864A-7E7F-3A63-B51A-C5370AF62857}</ProjectGUID>
+    <Keyword>Win32Proj</Keyword>
+    <Platform>Win32</Platform>
+    <ProjectName>WebGui</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">
+    <Import Project="..\..\..\..\FreeCAD_trunk.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="..\..\..\..\FreeCAD_trunk.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">
+    <Import Project="..\..\..\..\FreeCAD_trunk.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="..\..\..\..\FreeCAD_trunk.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.pyd</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</GenerateManifest>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">WebGui.dir\Release\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">WebGui</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.pyd</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">\code\free-cad-code\Source\Repos\code\Mod\Web\MinSizeRel\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">WebGui.dir\MinSizeRel\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">WebGui</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">.pyd</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">\code\free-cad-code\Source\Repos\code\Mod\Web\RelWithDebInfo\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">WebGui.dir\RelWithDebInfo\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">WebGui</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">.pyd</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">true</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">true</GenerateManifest>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <AdditionalOptions> /Zm128 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalIncludeDirectories>$(FC_INCLUDE);$(FC_INCLUDE)\QtOpenGL;$(FC_INCLUDE)\QtSvg;$(FC_INCLUDE)\QtUiTools;$(FC_INCLUDE)\QtWebKit;$(FC_INCLUDE)\QtGui;$(FC_INCLUDE)\QtXml;$(FC_INCLUDE)\QtNetwork;$(FC_INCLUDE)\QtCore;$(FC_SOURCE);$(FC_SOURCE)\Mod\Web\Gui;$(FC_INCLUDE)\python2.7;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>Debug/</AssemblerListingLocation>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_DEBUG;FC_DEBUG;QT_OPENGL_LIB;QT_SVG_LIB;QT_UITOOLS_LIB;QT_WEBKIT_LIB;QT_GUI_LIB;QT_XML_LIB;QT_NETWORK_LIB;QT_CORE_LIB;CMAKE_INTDIR="Debug";WebGui_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_DEBUG;FC_DEBUG;QT_OPENGL_LIB;QT_SVG_LIB;QT_UITOOLS_LIB;QT_WEBKIT_LIB;QT_GUI_LIB;QT_XML_LIB;QT_NETWORK_LIB;QT_CORE_LIB;CMAKE_INTDIR=\"Debug\";WebGui_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(FC_INCLUDE);$(FC_INCLUDE)\QtOpenGL;$(FC_INCLUDE)\QtSvg;$(FC_INCLUDE)\QtUiTools;$(FC_INCLUDE)\QtWebKit;$(FC_INCLUDE)\QtGui;$(FC_INCLUDE)\QtXml;$(FC_INCLUDE)\QtNetwork;$(FC_INCLUDE)\QtCore;$(FC_SOURCE);$(FC_SOURCE)\Mod\Web\Gui;$(FC_INCLUDE)\python2.7;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>$(FC_INCLUDE);$(FC_INCLUDE)\QtOpenGL;$(FC_INCLUDE)\QtSvg;$(FC_INCLUDE)\QtUiTools;$(FC_INCLUDE)\QtWebKit;$(FC_INCLUDE)\QtGui;$(FC_INCLUDE)\QtXml;$(FC_INCLUDE)\QtNetwork;$(FC_INCLUDE)\QtCore;$(FC_SOURCE);$(FC_SOURCE)\Mod\Web\Gui;$(FC_INCLUDE)\python2.7;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <PostBuildEvent>
+      <Message>
+      </Message>
+      <Command>setlocal
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+    </PostBuildEvent>
+    <Link>
+      <AdditionalOptions> /machine:X86 /debug %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;SHFolder.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;winmm.lib;comsupp.lib;Ws2_32.lib;dbghelp.lib;FreeCADGui.lib;FreeCADApp.lib;FreeCADBase.lib;$(FC_LIBRARY)\python27_d.lib;$(FC_LIBRARY)\xerces-c_3D.lib;$(FC_LIBRARY)\zlibd.lib;MSVCRTD.lib;MSVCPRTD.lib;Rpcrt4.lib;version.lib;$(FC_LIBRARY)\boost_filesystem-vc120-mt-gd-1_55.lib;$(FC_LIBRARY)\boost_program_options-vc120-mt-gd-1_55.lib;$(FC_LIBRARY)\boost_regex-vc120-mt-gd-1_55.lib;$(FC_LIBRARY)\boost_signals-vc120-mt-gd-1_55.lib;$(FC_LIBRARY)\boost_system-vc120-mt-gd-1_55.lib;$(FC_LIBRARY)\boost_thread-vc120-mt-gd-1_55.lib;$(FC_LIBRARY)\coin4d.lib;$(FC_LIBRARY)\QtOpenGLd4.lib;glu32.lib;QtUiToolsd.lib;opengl32.lib;$(FC_LIBRARY)\QtSvgd4.lib;$(FC_LIBRARY)\QtUiToolsd.lib;$(FC_LIBRARY)\QtWebKitd4.lib;$(FC_LIBRARY)\QtXmlPatternsd4.lib;$(FC_LIBRARY)\QtGuid4.lib;imm32.lib;$(FC_LIBRARY)\QtXmld4.lib;$(FC_LIBRARY)\QtNetworkd4.lib;$(FC_LIBRARY)\QtCored4.lib;ws2_32.lib;$(FC_LIBRARY)\cmake\Shiboken-1.2.2\..\..\shiboken-python2.7_d.lib;$(FC_LIBRARY)\cmake\PySide-1.2.2\..\..\pyside-python2.7_d.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(FC_LIBRARY)\;$(FC_LIBRARY)\/$(Configuration);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreAllDefaultLibraries>true</IgnoreAllDefaultLibraries>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>$(FC_LIBRARY)\$(TargetName).lib</ImportLibrary>
+      <LargeAddressAware>true</LargeAddressAware>
+      <ProgramDataBaseFile>$(DEVROOT)/Mod/Web/WebGui_d.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+      <Version>
+      </Version>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>$(FC_INCLUDE);$(FC_INCLUDE)\QtOpenGL;$(FC_INCLUDE)\QtSvg;$(FC_INCLUDE)\QtUiTools;$(FC_INCLUDE)\QtWebKit;$(FC_INCLUDE)\QtGui;$(FC_INCLUDE)\QtXml;$(FC_INCLUDE)\QtNetwork;$(FC_INCLUDE)\QtCore;$(FC_SOURCE);$(FC_SOURCE)\Mod\Web\Gui;$(FC_INCLUDE)\python2.7;$(FC_INCLUDE)\shiboken;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>Release/</AssemblerListingLocation>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <ExceptionHandling>Async</ExceptionHandling>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;QT_NO_DEBUG;QT_OPENGL_LIB;QT_SVG_LIB;QT_UITOOLS_LIB;QT_WEBKIT_LIB;QT_GUI_LIB;QT_XML_LIB;QT_NETWORK_LIB;QT_CORE_LIB;CMAKE_INTDIR="Release";WebGui_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;QT_NO_DEBUG;QT_OPENGL_LIB;QT_SVG_LIB;QT_UITOOLS_LIB;QT_WEBKIT_LIB;QT_GUI_LIB;QT_XML_LIB;QT_NETWORK_LIB;QT_CORE_LIB;CMAKE_INTDIR=\"Release\";WebGui_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(FC_INCLUDE);$(FC_INCLUDE)\QtOpenGL;$(FC_INCLUDE)\QtSvg;$(FC_INCLUDE)\QtUiTools;$(FC_INCLUDE)\QtWebKit;$(FC_INCLUDE)\QtGui;$(FC_INCLUDE)\QtXml;$(FC_INCLUDE)\QtNetwork;$(FC_INCLUDE)\QtCore;$(FC_SOURCE);$(FC_SOURCE)\Mod\Web\Gui;$(FC_INCLUDE)\python2.7;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>$(FC_INCLUDE);$(FC_INCLUDE)\QtOpenGL;$(FC_INCLUDE)\QtSvg;$(FC_INCLUDE)\QtUiTools;$(FC_INCLUDE)\QtWebKit;$(FC_INCLUDE)\QtGui;$(FC_INCLUDE)\QtXml;$(FC_INCLUDE)\QtNetwork;$(FC_INCLUDE)\QtCore;$(FC_SOURCE);$(FC_SOURCE)\Mod\Web\Gui;$(FC_INCLUDE)\python2.7;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <PostBuildEvent>
+      <Message>
+      </Message>
+      <Command>setlocal
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+    </PostBuildEvent>
+    <Link>
+      <AdditionalOptions> /machine:X86 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;SHFolder.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;winmm.lib;comsupp.lib;Ws2_32.lib;dbghelp.lib;FreeCADGui.lib;FreeCADApp.lib;FreeCADBase.lib;$(FC_LIBRARY)\python27.lib;$(FC_LIBRARY)\xerces-c_3.lib;$(FC_LIBRARY)\zlib.lib;MSVCRT.lib;MSVCPRT.lib;Rpcrt4.lib;version.lib;$(FC_LIBRARY)\boost_filesystem-vc120-mt-1_55.lib;$(FC_LIBRARY)\boost_program_options-vc120-mt-1_55.lib;$(FC_LIBRARY)\boost_regex-vc120-mt-1_55.lib;$(FC_LIBRARY)\boost_signals-vc120-mt-1_55.lib;$(FC_LIBRARY)\boost_system-vc120-mt-1_55.lib;$(FC_LIBRARY)\boost_thread-vc120-mt-1_55.lib;$(FC_LIBRARY)\coin4.lib;$(FC_LIBRARY)\QtOpenGL4.lib;glu32.lib;QtUiTools.lib;opengl32.lib;$(FC_LIBRARY)\QtSvg4.lib;$(FC_LIBRARY)\QtUiTools.lib;$(FC_LIBRARY)\QtWebKit4.lib;$(FC_LIBRARY)\QtXmlPatterns4.lib;$(FC_LIBRARY)\QtGui4.lib;imm32.lib;$(FC_LIBRARY)\QtXml4.lib;$(FC_LIBRARY)\QtNetwork4.lib;$(FC_LIBRARY)\QtCore4.lib;ws2_32.lib;$(FC_LIBRARY)\cmake\Shiboken-1.2.2\..\..\shiboken-python2.7.lib;$(FC_LIBRARY)\cmake\PySide-1.2.2\..\..\pyside-python2.7.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(FC_LIBRARY)\;$(FC_LIBRARY)\/$(Configuration);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreAllDefaultLibraries>true</IgnoreAllDefaultLibraries>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <LargeAddressAware>true</LargeAddressAware>
+      <ProgramDataBaseFile>$(DEVROOT)/Mod/Web/WebGui.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+      <Version>
+      </Version>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>$(FC_INCLUDE);$(FC_INCLUDE)\QtOpenGL;$(FC_INCLUDE)\QtSvg;$(FC_INCLUDE)\QtUiTools;$(FC_INCLUDE)\QtWebKit;$(FC_INCLUDE)\QtGui;$(FC_INCLUDE)\QtXml;$(FC_INCLUDE)\QtNetwork;$(FC_INCLUDE)\QtCore;$(FC_SOURCE);$(FC_SOURCE)\Mod\Web\Gui;$(FC_INCLUDE)\python2.7;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>MinSizeRel/</AssemblerListingLocation>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <Optimization>MinSpace</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;QT_NO_DEBUG;QT_OPENGL_LIB;QT_SVG_LIB;QT_UITOOLS_LIB;QT_WEBKIT_LIB;QT_GUI_LIB;QT_XML_LIB;QT_NETWORK_LIB;QT_CORE_LIB;CMAKE_INTDIR="MinSizeRel";WebGui_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;QT_NO_DEBUG;QT_OPENGL_LIB;QT_SVG_LIB;QT_UITOOLS_LIB;QT_WEBKIT_LIB;QT_GUI_LIB;QT_XML_LIB;QT_NETWORK_LIB;QT_CORE_LIB;CMAKE_INTDIR=\"MinSizeRel\";WebGui_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(FC_INCLUDE);$(FC_INCLUDE)\QtOpenGL;$(FC_INCLUDE)\QtSvg;$(FC_INCLUDE)\QtUiTools;$(FC_INCLUDE)\QtWebKit;$(FC_INCLUDE)\QtGui;$(FC_INCLUDE)\QtXml;$(FC_INCLUDE)\QtNetwork;$(FC_INCLUDE)\QtCore;$(FC_SOURCE);$(FC_SOURCE)\Mod\Web\Gui;$(FC_INCLUDE)\python2.7;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>$(FC_INCLUDE);$(FC_INCLUDE)\QtOpenGL;$(FC_INCLUDE)\QtSvg;$(FC_INCLUDE)\QtUiTools;$(FC_INCLUDE)\QtWebKit;$(FC_INCLUDE)\QtGui;$(FC_INCLUDE)\QtXml;$(FC_INCLUDE)\QtNetwork;$(FC_INCLUDE)\QtCore;$(FC_SOURCE);$(FC_SOURCE)\Mod\Web\Gui;$(FC_INCLUDE)\python2.7;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <PostBuildEvent>
+      <Message>
+      </Message>
+      <Command>setlocal
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+    </PostBuildEvent>
+    <Link>
+      <AdditionalOptions> /machine:X86 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;SHFolder.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;winmm.lib;comsupp.lib;Ws2_32.lib;dbghelp.lib;..\..\..\Gui\MinSizeRel\FreeCADGui.lib;..\..\..\App\MinSizeRel\FreeCADApp.lib;..\..\..\Base\MinSizeRel\FreeCADBase.lib;$(FC_LIBRARY)\python27.lib;$(FC_LIBRARY)\xerces-c_3.lib;$(FC_LIBRARY)\zlib.lib;MSVCRT.lib;MSVCPRT.lib;Rpcrt4.lib;version.lib;$(FC_LIBRARY)\boost_filesystem-vc120-mt-1_55.lib;$(FC_LIBRARY)\boost_program_options-vc120-mt-1_55.lib;$(FC_LIBRARY)\boost_regex-vc120-mt-1_55.lib;$(FC_LIBRARY)\boost_signals-vc120-mt-1_55.lib;$(FC_LIBRARY)\boost_system-vc120-mt-1_55.lib;$(FC_LIBRARY)\boost_thread-vc120-mt-1_55.lib;$(FC_LIBRARY)\coin4.lib;$(FC_LIBRARY)\QtOpenGL4.lib;glu32.lib;QtUiTools.lib;opengl32.lib;$(FC_LIBRARY)\QtSvg4.lib;$(FC_LIBRARY)\QtUiTools.lib;$(FC_LIBRARY)\QtWebKit4.lib;$(FC_LIBRARY)\QtXmlPatterns4.lib;$(FC_LIBRARY)\QtGui4.lib;imm32.lib;winmm.lib;$(FC_LIBRARY)\QtXml4.lib;$(FC_LIBRARY)\QtNetwork4.lib;$(FC_LIBRARY)\QtCore4.lib;ws2_32.lib;$(FC_LIBRARY)\cmake\Shiboken-1.2.2\..\..\shiboken-python2.7.lib;$(FC_LIBRARY)\cmake\PySide-1.2.2\..\..\pyside-python2.7.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(FC_LIBRARY)\;$(FC_LIBRARY)\/$(Configuration);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreAllDefaultLibraries>true</IgnoreAllDefaultLibraries>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>$(FC_SOURCE)/Mod/Web/Gui/MinSizeRel/WebGui.lib</ImportLibrary>
+      <LargeAddressAware>true</LargeAddressAware>
+      <ProgramDataBaseFile>$(DEVROOT)/Mod/Web/MinSizeRel/WebGui.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+      <Version>
+      </Version>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>$(FC_INCLUDE);$(FC_INCLUDE)\QtOpenGL;$(FC_INCLUDE)\QtSvg;$(FC_INCLUDE)\QtUiTools;$(FC_INCLUDE)\QtWebKit;$(FC_INCLUDE)\QtGui;$(FC_INCLUDE)\QtXml;$(FC_INCLUDE)\QtNetwork;$(FC_INCLUDE)\QtCore;$(FC_SOURCE);$(FC_SOURCE)\Mod\Web\Gui;$(FC_INCLUDE)\python2.7;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>RelWithDebInfo/</AssemblerListingLocation>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;QT_NO_DEBUG;QT_OPENGL_LIB;QT_SVG_LIB;QT_UITOOLS_LIB;QT_WEBKIT_LIB;QT_GUI_LIB;QT_XML_LIB;QT_NETWORK_LIB;QT_CORE_LIB;CMAKE_INTDIR="RelWithDebInfo";WebGui_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;QT_NO_DEBUG;QT_OPENGL_LIB;QT_SVG_LIB;QT_UITOOLS_LIB;QT_WEBKIT_LIB;QT_GUI_LIB;QT_XML_LIB;QT_NETWORK_LIB;QT_CORE_LIB;CMAKE_INTDIR=\"RelWithDebInfo\";WebGui_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(FC_INCLUDE);$(FC_INCLUDE)\QtOpenGL;$(FC_INCLUDE)\QtSvg;$(FC_INCLUDE)\QtUiTools;$(FC_INCLUDE)\QtWebKit;$(FC_INCLUDE)\QtGui;$(FC_INCLUDE)\QtXml;$(FC_INCLUDE)\QtNetwork;$(FC_INCLUDE)\QtCore;$(FC_SOURCE);$(FC_SOURCE)\Mod\Web\Gui;$(FC_INCLUDE)\python2.7;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>$(FC_INCLUDE);$(FC_INCLUDE)\QtOpenGL;$(FC_INCLUDE)\QtSvg;$(FC_INCLUDE)\QtUiTools;$(FC_INCLUDE)\QtWebKit;$(FC_INCLUDE)\QtGui;$(FC_INCLUDE)\QtXml;$(FC_INCLUDE)\QtNetwork;$(FC_INCLUDE)\QtCore;$(FC_SOURCE);$(FC_SOURCE)\Mod\Web\Gui;$(FC_INCLUDE)\python2.7;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <PostBuildEvent>
+      <Message>
+      </Message>
+      <Command>setlocal
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+    </PostBuildEvent>
+    <Link>
+      <AdditionalOptions> /machine:X86 /debug %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;SHFolder.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;winmm.lib;comsupp.lib;Ws2_32.lib;dbghelp.lib;..\..\..\Gui\RelWithDebInfo\FreeCADGui.lib;..\..\..\App\RelWithDebInfo\FreeCADApp.lib;..\..\..\Base\RelWithDebInfo\FreeCADBase.lib;$(FC_LIBRARY)\python27.lib;$(FC_LIBRARY)\xerces-c_3.lib;$(FC_LIBRARY)\zlib.lib;MSVCRT.lib;MSVCPRT.lib;Rpcrt4.lib;version.lib;$(FC_LIBRARY)\boost_filesystem-vc120-mt-1_55.lib;$(FC_LIBRARY)\boost_program_options-vc120-mt-1_55.lib;$(FC_LIBRARY)\boost_regex-vc120-mt-1_55.lib;$(FC_LIBRARY)\boost_signals-vc120-mt-1_55.lib;$(FC_LIBRARY)\boost_system-vc120-mt-1_55.lib;$(FC_LIBRARY)\boost_thread-vc120-mt-1_55.lib;$(FC_LIBRARY)\coin4.lib;$(FC_LIBRARY)\QtOpenGL4.lib;glu32.lib;QtUiTools.lib;opengl32.lib;$(FC_LIBRARY)\QtSvg4.lib;$(FC_LIBRARY)\QtUiTools.lib;$(FC_LIBRARY)\QtWebKit4.lib;$(FC_LIBRARY)\QtXmlPatterns4.lib;$(FC_LIBRARY)\QtGui4.lib;imm32.lib;winmm.lib;$(FC_LIBRARY)\QtXml4.lib;$(FC_LIBRARY)\QtNetwork4.lib;$(FC_LIBRARY)\QtCore4.lib;ws2_32.lib;$(FC_LIBRARY)\cmake\Shiboken-1.2.2\..\..\shiboken-python2.7.lib;$(FC_LIBRARY)\cmake\PySide-1.2.2\..\..\pyside-python2.7.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(FC_LIBRARY)\;$(FC_LIBRARY)\/$(Configuration);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreAllDefaultLibraries>true</IgnoreAllDefaultLibraries>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>$(FC_SOURCE)/Mod/Web/Gui/RelWithDebInfo/WebGui.lib</ImportLibrary>
+      <LargeAddressAware>true</LargeAddressAware>
+      <ProgramDataBaseFile>$(DEVROOT)/Mod/Web/RelWithDebInfo/WebGui.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+      <Version>
+      </Version>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="$(FC_SOURCE)\Mod\Web\Gui\BrowserView.h">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generating moc_BrowserView.cpp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+$(FC_BIN)\moc.exe -DBOOST_TT_HAS_OPERATOR_HPP_INCLUDED $(FC_SOURCE)/Mod/Web/Gui/BrowserView.h -o $(FC_SOURCE)/Mod/Web/Gui/moc_BrowserView.cpp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(FC_SOURCE)/Mod/Web/Gui/BrowserView.h;$(FC_SOURCE)\Mod\Web\Gui\BrowserView.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(FC_SOURCE)\Mod\Web\Gui\moc_BrowserView.cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Generating moc_BrowserView.cpp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+$(FC_BIN)\moc.exe -DBOOST_TT_HAS_OPERATOR_HPP_INCLUDED $(FC_SOURCE)/Mod/Web/Gui/BrowserView.h -o $(FC_SOURCE)/Mod/Web/Gui/moc_BrowserView.cpp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(FC_SOURCE)/Mod/Web/Gui/BrowserView.h;$(FC_SOURCE)\Mod\Web\Gui\BrowserView.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(FC_SOURCE)\Mod\Web\Gui\moc_BrowserView.cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Generating moc_BrowserView.cpp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+$(FC_BIN)\moc.exe -DBOOST_TT_HAS_OPERATOR_HPP_INCLUDED $(FC_SOURCE)/Mod/Web/Gui/BrowserView.h -o $(FC_SOURCE)/Mod/Web/Gui/moc_BrowserView.cpp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">$(FC_SOURCE)/Mod/Web/Gui/BrowserView.h;$(FC_SOURCE)\Mod\Web\Gui\BrowserView.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">$(FC_SOURCE)\Mod\Web\Gui\moc_BrowserView.cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Generating moc_BrowserView.cpp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+$(FC_BIN)\moc.exe -DBOOST_TT_HAS_OPERATOR_HPP_INCLUDED $(FC_SOURCE)/Mod/Web/Gui/BrowserView.h -o $(FC_SOURCE)/Mod/Web/Gui/moc_BrowserView.cpp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(FC_SOURCE)/Mod/Web/Gui/BrowserView.h;$(FC_SOURCE)\Mod\Web\Gui\BrowserView.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(FC_SOURCE)\Mod\Web\Gui\moc_BrowserView.cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="$(FC_SOURCE)\Mod\Web\Gui\Resources\Web.qrc">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generating qrc_Web.cxx</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+$(FC_BIN)\rcc.exe -name Web -o $(FC_SOURCE)/Mod/Web/Gui/qrc_Web.cxx $(FC_SOURCE)/Mod/Web/Gui/Resources/Web.qrc
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(FC_SOURCE)/Mod/Web/Gui/Resources/Web.qrc;$(FC_SOURCE)\Mod\Web\Gui\Resources\icons\actions\web-browser.svg;$(FC_SOURCE)\Mod\Web\Gui\Resources\icons\actions\web-home.svg;$(FC_SOURCE)\Mod\Web\Gui\Resources\icons\actions\web-next.svg;$(FC_SOURCE)\Mod\Web\Gui\Resources\icons\actions\web-previous.svg;$(FC_SOURCE)\Mod\Web\Gui\Resources\icons\actions\web-refresh.svg;$(FC_SOURCE)\Mod\Web\Gui\Resources\icons\actions\web-stop.svg;$(FC_SOURCE)\Mod\Web\Gui\Resources\icons\actions\web-zoom-in.svg;$(FC_SOURCE)\Mod\Web\Gui\Resources\icons\actions\web-zoom-out.svg;$(FC_SOURCE)\Mod\Web\Gui\Resources\translations\Web_de.qm;$(FC_SOURCE)\Mod\Web\Gui\Resources\translations\Web_af.qm;$(FC_SOURCE)\Mod\Web\Gui\Resources\translations\Web_zh-CN.qm;$(FC_SOURCE)\Mod\Web\Gui\Resources\translations\Web_zh-TW.qm;$(FC_SOURCE)\Mod\Web\Gui\Resources\translations\Web_hr.qm;$(FC_SOURCE)\Mod\Web\Gui\Resources\translations\Web_cs.qm;$(FC_SOURCE)\Mod\Web\Gui\Resources\translations\Web_nl.qm;$(FC_SOURCE)\Mod\Web\Gui\Resources\translations\Web_fi.qm;$(FC_SOURCE)\Mod\Web\Gui\Resources\translations\Web_fr.qm;$(FC_SOURCE)\Mod\Web\Gui\Resources\translations\Web_hu.qm;$(FC_SOURCE)\Mod\Web\Gui\Resources\translations\Web_ja.qm;$(FC_SOURCE)\Mod\Web\Gui\Resources\translations\Web_no.qm;$(FC_SOURCE)\Mod\Web\Gui\Resources\translations\Web_pl.qm;$(FC_SOURCE)\Mod\Web\Gui\Resources\translations\Web_pt-PT.qm;$(FC_SOURCE)\Mod\Web\Gui\Resources\translations\Web_ro.qm;$(FC_SOURCE)\Mod\Web\Gui\Resources\translations\Web_ru.qm;$(FC_SOURCE)\Mod\Web\Gui\Resources\translations\Web_sr.qm;$(FC_SOURCE)\Mod\Web\Gui\Resources\translations\Web_es-ES.qm;$(FC_SOURCE)\Mod\Web\Gui\Resources\translations\Web_sv-SE.qm;$(FC_SOURCE)\Mod\Web\Gui\Resources\translations\Web_uk.qm;$(FC_SOURCE)\Mod\Web\Gui\Resources\translations\Web_it.qm;$(FC_SOURCE)\Mod\Web\Gui\Resources\translations\Web_pt-BR.qm;$(FC_SOURCE)\Mod\Web\Gui\Resources\Web.qrc.depends;$(FC_SOURCE)\Mod\Web\Gui\Resources\Web.qrc;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(FC_SOURCE)\Mod\Web\Gui\qrc_Web.cxx</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Generating qrc_Web.cxx</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+$(FC_BIN)\rcc.exe -name Web -o $(FC_SOURCE)/Mod/Web/Gui/qrc_Web.cxx $(FC_SOURCE)/Mod/Web/Gui/Resources/Web.qrc
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(FC_SOURCE)/Mod/Web/Gui/Resources/Web.qrc;$(FC_SOURCE)\Mod\Web\Gui\Resources\icons\actions\web-browser.svg;$(FC_SOURCE)\Mod\Web\Gui\Resources\icons\actions\web-home.svg;$(FC_SOURCE)\Mod\Web\Gui\Resources\icons\actions\web-next.svg;$(FC_SOURCE)\Mod\Web\Gui\Resources\icons\actions\web-previous.svg;$(FC_SOURCE)\Mod\Web\Gui\Resources\icons\actions\web-refresh.svg;$(FC_SOURCE)\Mod\Web\Gui\Resources\icons\actions\web-stop.svg;$(FC_SOURCE)\Mod\Web\Gui\Resources\icons\actions\web-zoom-in.svg;$(FC_SOURCE)\Mod\Web\Gui\Resources\icons\actions\web-zoom-out.svg;$(FC_SOURCE)\Mod\Web\Gui\Resources\translations\Web_de.qm;$(FC_SOURCE)\Mod\Web\Gui\Resources\translations\Web_af.qm;$(FC_SOURCE)\Mod\Web\Gui\Resources\translations\Web_zh-CN.qm;$(FC_SOURCE)\Mod\Web\Gui\Resources\translations\Web_zh-TW.qm;$(FC_SOURCE)\Mod\Web\Gui\Resources\translations\Web_hr.qm;$(FC_SOURCE)\Mod\Web\Gui\Resources\translations\Web_cs.qm;$(FC_SOURCE)\Mod\Web\Gui\Resources\translations\Web_nl.qm;$(FC_SOURCE)\Mod\Web\Gui\Resources\translations\Web_fi.qm;$(FC_SOURCE)\Mod\Web\Gui\Resources\translations\Web_fr.qm;$(FC_SOURCE)\Mod\Web\Gui\Resources\translations\Web_hu.qm;$(FC_SOURCE)\Mod\Web\Gui\Resources\translations\Web_ja.qm;$(FC_SOURCE)\Mod\Web\Gui\Resources\translations\Web_no.qm;$(FC_SOURCE)\Mod\Web\Gui\Resources\translations\Web_pl.qm;$(FC_SOURCE)\Mod\Web\Gui\Resources\translations\Web_pt-PT.qm;$(FC_SOURCE)\Mod\Web\Gui\Resources\translations\Web_ro.qm;$(FC_SOURCE)\Mod\Web\Gui\Resources\translations\Web_ru.qm;$(FC_SOURCE)\Mod\Web\Gui\Resources\translations\Web_sr.qm;$(FC_SOURCE)\Mod\Web\Gui\Resources\translations\Web_es-ES.qm;$(FC_SOURCE)\Mod\Web\Gui\Resources\translations\Web_sv-SE.qm;$(FC_SOURCE)\Mod\Web\Gui\Resources\translations\Web_uk.qm;$(FC_SOURCE)\Mod\Web\Gui\Resources\translations\Web_it.qm;$(FC_SOURCE)\Mod\Web\Gui\Resources\translations\Web_pt-BR.qm;$(FC_SOURCE)\Mod\Web\Gui\Resources\Web.qrc.depends;$(FC_SOURCE)\Mod\Web\Gui\Resources\Web.qrc;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(FC_SOURCE)\Mod\Web\Gui\qrc_Web.cxx</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Generating qrc_Web.cxx</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+$(FC_BIN)\rcc.exe -name Web -o $(FC_SOURCE)/Mod/Web/Gui/qrc_Web.cxx $(FC_SOURCE)/Mod/Web/Gui/Resources/Web.qrc
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">$(FC_SOURCE)/Mod/Web/Gui/Resources/Web.qrc;$(FC_SOURCE)\Mod\Web\Gui\Resources\icons\actions\web-browser.svg;$(FC_SOURCE)\Mod\Web\Gui\Resources\icons\actions\web-home.svg;$(FC_SOURCE)\Mod\Web\Gui\Resources\icons\actions\web-next.svg;$(FC_SOURCE)\Mod\Web\Gui\Resources\icons\actions\web-previous.svg;$(FC_SOURCE)\Mod\Web\Gui\Resources\icons\actions\web-refresh.svg;$(FC_SOURCE)\Mod\Web\Gui\Resources\icons\actions\web-stop.svg;$(FC_SOURCE)\Mod\Web\Gui\Resources\icons\actions\web-zoom-in.svg;$(FC_SOURCE)\Mod\Web\Gui\Resources\icons\actions\web-zoom-out.svg;$(FC_SOURCE)\Mod\Web\Gui\Resources\translations\Web_de.qm;$(FC_SOURCE)\Mod\Web\Gui\Resources\translations\Web_af.qm;$(FC_SOURCE)\Mod\Web\Gui\Resources\translations\Web_zh-CN.qm;$(FC_SOURCE)\Mod\Web\Gui\Resources\translations\Web_zh-TW.qm;$(FC_SOURCE)\Mod\Web\Gui\Resources\translations\Web_hr.qm;$(FC_SOURCE)\Mod\Web\Gui\Resources\translations\Web_cs.qm;$(FC_SOURCE)\Mod\Web\Gui\Resources\translations\Web_nl.qm;$(FC_SOURCE)\Mod\Web\Gui\Resources\translations\Web_fi.qm;$(FC_SOURCE)\Mod\Web\Gui\Resources\translations\Web_fr.qm;$(FC_SOURCE)\Mod\Web\Gui\Resources\translations\Web_hu.qm;$(FC_SOURCE)\Mod\Web\Gui\Resources\translations\Web_ja.qm;$(FC_SOURCE)\Mod\Web\Gui\Resources\translations\Web_no.qm;$(FC_SOURCE)\Mod\Web\Gui\Resources\translations\Web_pl.qm;$(FC_SOURCE)\Mod\Web\Gui\Resources\translations\Web_pt-PT.qm;$(FC_SOURCE)\Mod\Web\Gui\Resources\translations\Web_ro.qm;$(FC_SOURCE)\Mod\Web\Gui\Resources\translations\Web_ru.qm;$(FC_SOURCE)\Mod\Web\Gui\Resources\translations\Web_sr.qm;$(FC_SOURCE)\Mod\Web\Gui\Resources\translations\Web_es-ES.qm;$(FC_SOURCE)\Mod\Web\Gui\Resources\translations\Web_sv-SE.qm;$(FC_SOURCE)\Mod\Web\Gui\Resources\translations\Web_uk.qm;$(FC_SOURCE)\Mod\Web\Gui\Resources\translations\Web_it.qm;$(FC_SOURCE)\Mod\Web\Gui\Resources\translations\Web_pt-BR.qm;$(FC_SOURCE)\Mod\Web\Gui\Resources\Web.qrc.depends;$(FC_SOURCE)\Mod\Web\Gui\Resources\Web.qrc;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">$(FC_SOURCE)\Mod\Web\Gui\qrc_Web.cxx</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Generating qrc_Web.cxx</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+$(FC_BIN)\rcc.exe -name Web -o $(FC_SOURCE)/Mod/Web/Gui/qrc_Web.cxx $(FC_SOURCE)/Mod/Web/Gui/Resources/Web.qrc
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(FC_SOURCE)/Mod/Web/Gui/Resources/Web.qrc;$(FC_SOURCE)\Mod\Web\Gui\Resources\icons\actions\web-browser.svg;$(FC_SOURCE)\Mod\Web\Gui\Resources\icons\actions\web-home.svg;$(FC_SOURCE)\Mod\Web\Gui\Resources\icons\actions\web-next.svg;$(FC_SOURCE)\Mod\Web\Gui\Resources\icons\actions\web-previous.svg;$(FC_SOURCE)\Mod\Web\Gui\Resources\icons\actions\web-refresh.svg;$(FC_SOURCE)\Mod\Web\Gui\Resources\icons\actions\web-stop.svg;$(FC_SOURCE)\Mod\Web\Gui\Resources\icons\actions\web-zoom-in.svg;$(FC_SOURCE)\Mod\Web\Gui\Resources\icons\actions\web-zoom-out.svg;$(FC_SOURCE)\Mod\Web\Gui\Resources\translations\Web_de.qm;$(FC_SOURCE)\Mod\Web\Gui\Resources\translations\Web_af.qm;$(FC_SOURCE)\Mod\Web\Gui\Resources\translations\Web_zh-CN.qm;$(FC_SOURCE)\Mod\Web\Gui\Resources\translations\Web_zh-TW.qm;$(FC_SOURCE)\Mod\Web\Gui\Resources\translations\Web_hr.qm;$(FC_SOURCE)\Mod\Web\Gui\Resources\translations\Web_cs.qm;$(FC_SOURCE)\Mod\Web\Gui\Resources\translations\Web_nl.qm;$(FC_SOURCE)\Mod\Web\Gui\Resources\translations\Web_fi.qm;$(FC_SOURCE)\Mod\Web\Gui\Resources\translations\Web_fr.qm;$(FC_SOURCE)\Mod\Web\Gui\Resources\translations\Web_hu.qm;$(FC_SOURCE)\Mod\Web\Gui\Resources\translations\Web_ja.qm;$(FC_SOURCE)\Mod\Web\Gui\Resources\translations\Web_no.qm;$(FC_SOURCE)\Mod\Web\Gui\Resources\translations\Web_pl.qm;$(FC_SOURCE)\Mod\Web\Gui\Resources\translations\Web_pt-PT.qm;$(FC_SOURCE)\Mod\Web\Gui\Resources\translations\Web_ro.qm;$(FC_SOURCE)\Mod\Web\Gui\Resources\translations\Web_ru.qm;$(FC_SOURCE)\Mod\Web\Gui\Resources\translations\Web_sr.qm;$(FC_SOURCE)\Mod\Web\Gui\Resources\translations\Web_es-ES.qm;$(FC_SOURCE)\Mod\Web\Gui\Resources\translations\Web_sv-SE.qm;$(FC_SOURCE)\Mod\Web\Gui\Resources\translations\Web_uk.qm;$(FC_SOURCE)\Mod\Web\Gui\Resources\translations\Web_it.qm;$(FC_SOURCE)\Mod\Web\Gui\Resources\translations\Web_pt-BR.qm;$(FC_SOURCE)\Mod\Web\Gui\Resources\Web.qrc.depends;$(FC_SOURCE)\Mod\Web\Gui\Resources\Web.qrc;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(FC_SOURCE)\Mod\Web\Gui\qrc_Web.cxx</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="$(FC_SOURCE)\Mod\Web\Gui\PreCompiled.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Web\Gui\Workbench.h" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Web\Gui\qrc_Web.cxx" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Web\Gui\AppWebGui.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Web\Gui\AppWebGuiPy.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Web\Gui\Command.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Web\Gui\PreCompiled.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Web\Gui\Workbench.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Web\Gui\BrowserView.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="$(FC_SOURCE)/App/FreeCADApp.vcxproj">
+      <Project>106CFB68-340E-3307-8B33-691BFD4C2F84</Project>
+    </ProjectReference>
+    <ProjectReference Include="$(FC_SOURCE)/Base/FreeCADBase.vcxproj">
+      <Project>C318BD7C-A3CA-3454-A3D8-7E815B7B6CC0</Project>
+    </ProjectReference>
+    <ProjectReference Include="$(FC_SOURCE)/Gui/FreeCADGui.vcxproj">
+      <Project>DFA51F4B-58A3-3BF2-B5F0-4D1AE14CB897</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

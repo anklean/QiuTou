@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="$(FC_SOURCE)\Mod\MeshPart\Gui\qrc_MeshPart.cxx" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\MeshPart\Gui\AppMeshPartGui.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\MeshPart\Gui\AppMeshPartGuiPy.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\MeshPart\Gui\Command.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\MeshPart\Gui\PreCompiled.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\MeshPart\Gui\Tessellation.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\MeshPart\Gui\Workbench.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="$(FC_SOURCE)\Mod\MeshPart\Gui\ui_Tessellation.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\MeshPart\Gui\PreCompiled.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\MeshPart\Gui\Workbench.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="$(FC_SOURCE)\Mod\MeshPart\Gui\Resources\MeshPart.qrc" />
+    <CustomBuild Include="$(FC_SOURCE)\Mod\MeshPart\Gui\Tessellation.ui" />
+    <CustomBuild Include="$(FC_SOURCE)\Mod\MeshPart\Gui\Tessellation.h" />
+    <CustomBuild Include="\code\free-cad-code\Source\Repos\code\CMakeFiles\840dc372d7a40d28868a386202e764b4\InitGui.py.rule" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{BD35BF06-C8E8-3366-910F-4955129FFCAC}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{4129A801-9AD2-3DA1-A809-5BC032DABCC2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{5124C73C-630B-3F59-9DFC-D2C200992F06}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

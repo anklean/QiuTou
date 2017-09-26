@@ -1,0 +1,623 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="MinSizeRel|Win32">
+      <Configuration>MinSizeRel</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|Win32">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGUID>{7207F672-7CAE-3D5F-B3E7-A4C71F781C0A}</ProjectGUID>
+    <Keyword>Win32Proj</Keyword>
+    <Platform>Win32</Platform>
+    <ProjectName>WizardShaft</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">
+    <Import Project="..\..\..\FreeCAD_trunk.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="..\..\..\FreeCAD_trunk.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">
+    <Import Project="..\..\..\FreeCAD_trunk.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="..\..\..\FreeCAD_trunk.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Midl>
+      <AdditionalIncludeDirectories>$(FC_INCLUDE);$(FC_INCLUDE)\QtOpenGL;$(FC_INCLUDE)\QtSvg;$(FC_INCLUDE)\QtUiTools;$(FC_INCLUDE)\QtWebKit;$(FC_INCLUDE)\QtGui;$(FC_INCLUDE)\QtXml;$(FC_INCLUDE)\QtNetwork;$(FC_INCLUDE)\QtCore;$(FC_SOURCE);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <PostBuildEvent>
+      <Message>
+      </Message>
+      <Command>setlocal
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Midl>
+      <AdditionalIncludeDirectories>$(FC_INCLUDE);$(FC_INCLUDE)\QtOpenGL;$(FC_INCLUDE)\QtSvg;$(FC_INCLUDE)\QtUiTools;$(FC_INCLUDE)\QtWebKit;$(FC_INCLUDE)\QtGui;$(FC_INCLUDE)\QtXml;$(FC_INCLUDE)\QtNetwork;$(FC_INCLUDE)\QtCore;$(FC_SOURCE);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <PostBuildEvent>
+      <Message>
+      </Message>
+      <Command>setlocal
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">
+    <Midl>
+      <AdditionalIncludeDirectories>$(FC_INCLUDE);$(FC_INCLUDE)\QtOpenGL;$(FC_INCLUDE)\QtSvg;$(FC_INCLUDE)\QtUiTools;$(FC_INCLUDE)\QtWebKit;$(FC_INCLUDE)\QtGui;$(FC_INCLUDE)\QtXml;$(FC_INCLUDE)\QtNetwork;$(FC_INCLUDE)\QtCore;$(FC_SOURCE);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <PostBuildEvent>
+      <Message>
+      </Message>
+      <Command>setlocal
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">
+    <Midl>
+      <AdditionalIncludeDirectories>$(FC_INCLUDE);$(FC_INCLUDE)\QtOpenGL;$(FC_INCLUDE)\QtSvg;$(FC_INCLUDE)\QtUiTools;$(FC_INCLUDE)\QtWebKit;$(FC_INCLUDE)\QtGui;$(FC_INCLUDE)\QtXml;$(FC_INCLUDE)\QtNetwork;$(FC_INCLUDE)\QtCore;$(FC_SOURCE);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <PostBuildEvent>
+      <Message>
+      </Message>
+      <Command>setlocal
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="\code\free-cad-code\Source\Repos\code\CMakeFiles\9e17346c7ff4efca1d81292f485cc107\__init__.py.rule">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generating ../../../Mod/PartDesign/WizardShaft/__init__.py</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+$(CMAKE_BIN)\cmake.exe -E copy $(FC_SOURCE)/Mod/PartDesign/WizardShaft/__init__.py $(DEVROOT)/Mod/PartDesign/WizardShaft/__init__.py
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(DEVROOT)/CMakeFiles/9e17346c7ff4efca1d81292f485cc107/__init__.py.rule;$(FC_SOURCE)\Mod\PartDesign\WizardShaft\__init__.py;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">\code\free-cad-code\Source\Repos\code\Mod\PartDesign\WizardShaft\__init__.py</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Generating ../../../Mod/PartDesign/WizardShaft/__init__.py</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+$(CMAKE_BIN)\cmake.exe -E copy $(FC_SOURCE)/Mod/PartDesign/WizardShaft/__init__.py $(DEVROOT)/Mod/PartDesign/WizardShaft/__init__.py
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(DEVROOT)/CMakeFiles/9e17346c7ff4efca1d81292f485cc107/__init__.py.rule;$(FC_SOURCE)\Mod\PartDesign\WizardShaft\__init__.py;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">\code\free-cad-code\Source\Repos\code\Mod\PartDesign\WizardShaft\__init__.py</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Generating ../../../Mod/PartDesign/WizardShaft/__init__.py</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+$(CMAKE_BIN)\cmake.exe -E copy $(FC_SOURCE)/Mod/PartDesign/WizardShaft/__init__.py $(DEVROOT)/Mod/PartDesign/WizardShaft/__init__.py
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">$(DEVROOT)/CMakeFiles/9e17346c7ff4efca1d81292f485cc107/__init__.py.rule;$(FC_SOURCE)\Mod\PartDesign\WizardShaft\__init__.py;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">\code\free-cad-code\Source\Repos\code\Mod\PartDesign\WizardShaft\__init__.py</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Generating ../../../Mod/PartDesign/WizardShaft/__init__.py</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+$(CMAKE_BIN)\cmake.exe -E copy $(FC_SOURCE)/Mod/PartDesign/WizardShaft/__init__.py $(DEVROOT)/Mod/PartDesign/WizardShaft/__init__.py
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(DEVROOT)/CMakeFiles/9e17346c7ff4efca1d81292f485cc107/__init__.py.rule;$(FC_SOURCE)\Mod\PartDesign\WizardShaft\__init__.py;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">\code\free-cad-code\Source\Repos\code\Mod\PartDesign\WizardShaft\__init__.py</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="\code\free-cad-code\Source\Repos\code\CMakeFiles\9e17346c7ff4efca1d81292f485cc107\WizardShaft.svg.rule">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generating ../../../Mod/PartDesign/WizardShaft/WizardShaft.svg</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+$(CMAKE_BIN)\cmake.exe -E copy $(FC_SOURCE)/Mod/PartDesign/WizardShaft/WizardShaft.svg $(DEVROOT)/Mod/PartDesign/WizardShaft/WizardShaft.svg
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(DEVROOT)/CMakeFiles/9e17346c7ff4efca1d81292f485cc107/WizardShaft.svg.rule;$(FC_SOURCE)\Mod\PartDesign\WizardShaft\WizardShaft.svg;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">\code\free-cad-code\Source\Repos\code\Mod\PartDesign\WizardShaft\WizardShaft.svg</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Generating ../../../Mod/PartDesign/WizardShaft/WizardShaft.svg</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+$(CMAKE_BIN)\cmake.exe -E copy $(FC_SOURCE)/Mod/PartDesign/WizardShaft/WizardShaft.svg $(DEVROOT)/Mod/PartDesign/WizardShaft/WizardShaft.svg
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(DEVROOT)/CMakeFiles/9e17346c7ff4efca1d81292f485cc107/WizardShaft.svg.rule;$(FC_SOURCE)\Mod\PartDesign\WizardShaft\WizardShaft.svg;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">\code\free-cad-code\Source\Repos\code\Mod\PartDesign\WizardShaft\WizardShaft.svg</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Generating ../../../Mod/PartDesign/WizardShaft/WizardShaft.svg</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+$(CMAKE_BIN)\cmake.exe -E copy $(FC_SOURCE)/Mod/PartDesign/WizardShaft/WizardShaft.svg $(DEVROOT)/Mod/PartDesign/WizardShaft/WizardShaft.svg
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">$(DEVROOT)/CMakeFiles/9e17346c7ff4efca1d81292f485cc107/WizardShaft.svg.rule;$(FC_SOURCE)\Mod\PartDesign\WizardShaft\WizardShaft.svg;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">\code\free-cad-code\Source\Repos\code\Mod\PartDesign\WizardShaft\WizardShaft.svg</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Generating ../../../Mod/PartDesign/WizardShaft/WizardShaft.svg</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+$(CMAKE_BIN)\cmake.exe -E copy $(FC_SOURCE)/Mod/PartDesign/WizardShaft/WizardShaft.svg $(DEVROOT)/Mod/PartDesign/WizardShaft/WizardShaft.svg
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(DEVROOT)/CMakeFiles/9e17346c7ff4efca1d81292f485cc107/WizardShaft.svg.rule;$(FC_SOURCE)\Mod\PartDesign\WizardShaft\WizardShaft.svg;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">\code\free-cad-code\Source\Repos\code\Mod\PartDesign\WizardShaft\WizardShaft.svg</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="\code\free-cad-code\Source\Repos\code\CMakeFiles\9e17346c7ff4efca1d81292f485cc107\WizardShaft.py.rule">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generating ../../../Mod/PartDesign/WizardShaft/WizardShaft.py</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+$(CMAKE_BIN)\cmake.exe -E copy $(FC_SOURCE)/Mod/PartDesign/WizardShaft/WizardShaft.py $(DEVROOT)/Mod/PartDesign/WizardShaft/WizardShaft.py
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(DEVROOT)/CMakeFiles/9e17346c7ff4efca1d81292f485cc107/WizardShaft.py.rule;$(FC_SOURCE)\Mod\PartDesign\WizardShaft\WizardShaft.py;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">\code\free-cad-code\Source\Repos\code\Mod\PartDesign\WizardShaft\WizardShaft.py</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Generating ../../../Mod/PartDesign/WizardShaft/WizardShaft.py</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+$(CMAKE_BIN)\cmake.exe -E copy $(FC_SOURCE)/Mod/PartDesign/WizardShaft/WizardShaft.py $(DEVROOT)/Mod/PartDesign/WizardShaft/WizardShaft.py
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(DEVROOT)/CMakeFiles/9e17346c7ff4efca1d81292f485cc107/WizardShaft.py.rule;$(FC_SOURCE)\Mod\PartDesign\WizardShaft\WizardShaft.py;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">\code\free-cad-code\Source\Repos\code\Mod\PartDesign\WizardShaft\WizardShaft.py</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Generating ../../../Mod/PartDesign/WizardShaft/WizardShaft.py</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+$(CMAKE_BIN)\cmake.exe -E copy $(FC_SOURCE)/Mod/PartDesign/WizardShaft/WizardShaft.py $(DEVROOT)/Mod/PartDesign/WizardShaft/WizardShaft.py
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">$(DEVROOT)/CMakeFiles/9e17346c7ff4efca1d81292f485cc107/WizardShaft.py.rule;$(FC_SOURCE)\Mod\PartDesign\WizardShaft\WizardShaft.py;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">\code\free-cad-code\Source\Repos\code\Mod\PartDesign\WizardShaft\WizardShaft.py</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Generating ../../../Mod/PartDesign/WizardShaft/WizardShaft.py</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+$(CMAKE_BIN)\cmake.exe -E copy $(FC_SOURCE)/Mod/PartDesign/WizardShaft/WizardShaft.py $(DEVROOT)/Mod/PartDesign/WizardShaft/WizardShaft.py
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(DEVROOT)/CMakeFiles/9e17346c7ff4efca1d81292f485cc107/WizardShaft.py.rule;$(FC_SOURCE)\Mod\PartDesign\WizardShaft\WizardShaft.py;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">\code\free-cad-code\Source\Repos\code\Mod\PartDesign\WizardShaft\WizardShaft.py</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="\code\free-cad-code\Source\Repos\code\CMakeFiles\9e17346c7ff4efca1d81292f485cc107\WizardShaftTable.py.rule">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generating ../../../Mod/PartDesign/WizardShaft/WizardShaftTable.py</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+$(CMAKE_BIN)\cmake.exe -E copy $(FC_SOURCE)/Mod/PartDesign/WizardShaft/WizardShaftTable.py $(DEVROOT)/Mod/PartDesign/WizardShaft/WizardShaftTable.py
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(DEVROOT)/CMakeFiles/9e17346c7ff4efca1d81292f485cc107/WizardShaftTable.py.rule;$(FC_SOURCE)\Mod\PartDesign\WizardShaft\WizardShaftTable.py;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">\code\free-cad-code\Source\Repos\code\Mod\PartDesign\WizardShaft\WizardShaftTable.py</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Generating ../../../Mod/PartDesign/WizardShaft/WizardShaftTable.py</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+$(CMAKE_BIN)\cmake.exe -E copy $(FC_SOURCE)/Mod/PartDesign/WizardShaft/WizardShaftTable.py $(DEVROOT)/Mod/PartDesign/WizardShaft/WizardShaftTable.py
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(DEVROOT)/CMakeFiles/9e17346c7ff4efca1d81292f485cc107/WizardShaftTable.py.rule;$(FC_SOURCE)\Mod\PartDesign\WizardShaft\WizardShaftTable.py;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">\code\free-cad-code\Source\Repos\code\Mod\PartDesign\WizardShaft\WizardShaftTable.py</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Generating ../../../Mod/PartDesign/WizardShaft/WizardShaftTable.py</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+$(CMAKE_BIN)\cmake.exe -E copy $(FC_SOURCE)/Mod/PartDesign/WizardShaft/WizardShaftTable.py $(DEVROOT)/Mod/PartDesign/WizardShaft/WizardShaftTable.py
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">$(DEVROOT)/CMakeFiles/9e17346c7ff4efca1d81292f485cc107/WizardShaftTable.py.rule;$(FC_SOURCE)\Mod\PartDesign\WizardShaft\WizardShaftTable.py;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">\code\free-cad-code\Source\Repos\code\Mod\PartDesign\WizardShaft\WizardShaftTable.py</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Generating ../../../Mod/PartDesign/WizardShaft/WizardShaftTable.py</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+$(CMAKE_BIN)\cmake.exe -E copy $(FC_SOURCE)/Mod/PartDesign/WizardShaft/WizardShaftTable.py $(DEVROOT)/Mod/PartDesign/WizardShaft/WizardShaftTable.py
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(DEVROOT)/CMakeFiles/9e17346c7ff4efca1d81292f485cc107/WizardShaftTable.py.rule;$(FC_SOURCE)\Mod\PartDesign\WizardShaft\WizardShaftTable.py;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">\code\free-cad-code\Source\Repos\code\Mod\PartDesign\WizardShaft\WizardShaftTable.py</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="\code\free-cad-code\Source\Repos\code\CMakeFiles\9e17346c7ff4efca1d81292f485cc107\Shaft.py.rule">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generating ../../../Mod/PartDesign/WizardShaft/Shaft.py</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+$(CMAKE_BIN)\cmake.exe -E copy $(FC_SOURCE)/Mod/PartDesign/WizardShaft/Shaft.py $(DEVROOT)/Mod/PartDesign/WizardShaft/Shaft.py
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(DEVROOT)/CMakeFiles/9e17346c7ff4efca1d81292f485cc107/Shaft.py.rule;$(FC_SOURCE)\Mod\PartDesign\WizardShaft\Shaft.py;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">\code\free-cad-code\Source\Repos\code\Mod\PartDesign\WizardShaft\Shaft.py</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Generating ../../../Mod/PartDesign/WizardShaft/Shaft.py</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+$(CMAKE_BIN)\cmake.exe -E copy $(FC_SOURCE)/Mod/PartDesign/WizardShaft/Shaft.py $(DEVROOT)/Mod/PartDesign/WizardShaft/Shaft.py
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(DEVROOT)/CMakeFiles/9e17346c7ff4efca1d81292f485cc107/Shaft.py.rule;$(FC_SOURCE)\Mod\PartDesign\WizardShaft\Shaft.py;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">\code\free-cad-code\Source\Repos\code\Mod\PartDesign\WizardShaft\Shaft.py</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Generating ../../../Mod/PartDesign/WizardShaft/Shaft.py</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+$(CMAKE_BIN)\cmake.exe -E copy $(FC_SOURCE)/Mod/PartDesign/WizardShaft/Shaft.py $(DEVROOT)/Mod/PartDesign/WizardShaft/Shaft.py
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">$(DEVROOT)/CMakeFiles/9e17346c7ff4efca1d81292f485cc107/Shaft.py.rule;$(FC_SOURCE)\Mod\PartDesign\WizardShaft\Shaft.py;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">\code\free-cad-code\Source\Repos\code\Mod\PartDesign\WizardShaft\Shaft.py</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Generating ../../../Mod/PartDesign/WizardShaft/Shaft.py</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+$(CMAKE_BIN)\cmake.exe -E copy $(FC_SOURCE)/Mod/PartDesign/WizardShaft/Shaft.py $(DEVROOT)/Mod/PartDesign/WizardShaft/Shaft.py
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(DEVROOT)/CMakeFiles/9e17346c7ff4efca1d81292f485cc107/Shaft.py.rule;$(FC_SOURCE)\Mod\PartDesign\WizardShaft\Shaft.py;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">\code\free-cad-code\Source\Repos\code\Mod\PartDesign\WizardShaft\Shaft.py</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="\code\free-cad-code\Source\Repos\code\CMakeFiles\9e17346c7ff4efca1d81292f485cc107\ShaftFeature.py.rule">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generating ../../../Mod/PartDesign/WizardShaft/ShaftFeature.py</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+$(CMAKE_BIN)\cmake.exe -E copy $(FC_SOURCE)/Mod/PartDesign/WizardShaft/ShaftFeature.py $(DEVROOT)/Mod/PartDesign/WizardShaft/ShaftFeature.py
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(DEVROOT)/CMakeFiles/9e17346c7ff4efca1d81292f485cc107/ShaftFeature.py.rule;$(FC_SOURCE)\Mod\PartDesign\WizardShaft\ShaftFeature.py;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">\code\free-cad-code\Source\Repos\code\Mod\PartDesign\WizardShaft\ShaftFeature.py</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Generating ../../../Mod/PartDesign/WizardShaft/ShaftFeature.py</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+$(CMAKE_BIN)\cmake.exe -E copy $(FC_SOURCE)/Mod/PartDesign/WizardShaft/ShaftFeature.py $(DEVROOT)/Mod/PartDesign/WizardShaft/ShaftFeature.py
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(DEVROOT)/CMakeFiles/9e17346c7ff4efca1d81292f485cc107/ShaftFeature.py.rule;$(FC_SOURCE)\Mod\PartDesign\WizardShaft\ShaftFeature.py;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">\code\free-cad-code\Source\Repos\code\Mod\PartDesign\WizardShaft\ShaftFeature.py</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Generating ../../../Mod/PartDesign/WizardShaft/ShaftFeature.py</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+$(CMAKE_BIN)\cmake.exe -E copy $(FC_SOURCE)/Mod/PartDesign/WizardShaft/ShaftFeature.py $(DEVROOT)/Mod/PartDesign/WizardShaft/ShaftFeature.py
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">$(DEVROOT)/CMakeFiles/9e17346c7ff4efca1d81292f485cc107/ShaftFeature.py.rule;$(FC_SOURCE)\Mod\PartDesign\WizardShaft\ShaftFeature.py;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">\code\free-cad-code\Source\Repos\code\Mod\PartDesign\WizardShaft\ShaftFeature.py</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Generating ../../../Mod/PartDesign/WizardShaft/ShaftFeature.py</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+$(CMAKE_BIN)\cmake.exe -E copy $(FC_SOURCE)/Mod/PartDesign/WizardShaft/ShaftFeature.py $(DEVROOT)/Mod/PartDesign/WizardShaft/ShaftFeature.py
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(DEVROOT)/CMakeFiles/9e17346c7ff4efca1d81292f485cc107/ShaftFeature.py.rule;$(FC_SOURCE)\Mod\PartDesign\WizardShaft\ShaftFeature.py;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">\code\free-cad-code\Source\Repos\code\Mod\PartDesign\WizardShaft\ShaftFeature.py</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="\code\free-cad-code\Source\Repos\code\CMakeFiles\9e17346c7ff4efca1d81292f485cc107\ShaftDiagram.py.rule">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generating ../../../Mod/PartDesign/WizardShaft/ShaftDiagram.py</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+$(CMAKE_BIN)\cmake.exe -E copy $(FC_SOURCE)/Mod/PartDesign/WizardShaft/ShaftDiagram.py $(DEVROOT)/Mod/PartDesign/WizardShaft/ShaftDiagram.py
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(DEVROOT)/CMakeFiles/9e17346c7ff4efca1d81292f485cc107/ShaftDiagram.py.rule;$(FC_SOURCE)\Mod\PartDesign\WizardShaft\ShaftDiagram.py;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">\code\free-cad-code\Source\Repos\code\Mod\PartDesign\WizardShaft\ShaftDiagram.py</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Generating ../../../Mod/PartDesign/WizardShaft/ShaftDiagram.py</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+$(CMAKE_BIN)\cmake.exe -E copy $(FC_SOURCE)/Mod/PartDesign/WizardShaft/ShaftDiagram.py $(DEVROOT)/Mod/PartDesign/WizardShaft/ShaftDiagram.py
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(DEVROOT)/CMakeFiles/9e17346c7ff4efca1d81292f485cc107/ShaftDiagram.py.rule;$(FC_SOURCE)\Mod\PartDesign\WizardShaft\ShaftDiagram.py;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">\code\free-cad-code\Source\Repos\code\Mod\PartDesign\WizardShaft\ShaftDiagram.py</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Generating ../../../Mod/PartDesign/WizardShaft/ShaftDiagram.py</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+$(CMAKE_BIN)\cmake.exe -E copy $(FC_SOURCE)/Mod/PartDesign/WizardShaft/ShaftDiagram.py $(DEVROOT)/Mod/PartDesign/WizardShaft/ShaftDiagram.py
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">$(DEVROOT)/CMakeFiles/9e17346c7ff4efca1d81292f485cc107/ShaftDiagram.py.rule;$(FC_SOURCE)\Mod\PartDesign\WizardShaft\ShaftDiagram.py;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">\code\free-cad-code\Source\Repos\code\Mod\PartDesign\WizardShaft\ShaftDiagram.py</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Generating ../../../Mod/PartDesign/WizardShaft/ShaftDiagram.py</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+$(CMAKE_BIN)\cmake.exe -E copy $(FC_SOURCE)/Mod/PartDesign/WizardShaft/ShaftDiagram.py $(DEVROOT)/Mod/PartDesign/WizardShaft/ShaftDiagram.py
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(DEVROOT)/CMakeFiles/9e17346c7ff4efca1d81292f485cc107/ShaftDiagram.py.rule;$(FC_SOURCE)\Mod\PartDesign\WizardShaft\ShaftDiagram.py;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">\code\free-cad-code\Source\Repos\code\Mod\PartDesign\WizardShaft\ShaftDiagram.py</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="\code\free-cad-code\Source\Repos\code\CMakeFiles\9e17346c7ff4efca1d81292f485cc107\SegmentFunction.py.rule">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generating ../../../Mod/PartDesign/WizardShaft/SegmentFunction.py</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+$(CMAKE_BIN)\cmake.exe -E copy $(FC_SOURCE)/Mod/PartDesign/WizardShaft/SegmentFunction.py $(DEVROOT)/Mod/PartDesign/WizardShaft/SegmentFunction.py
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(DEVROOT)/CMakeFiles/9e17346c7ff4efca1d81292f485cc107/SegmentFunction.py.rule;$(FC_SOURCE)\Mod\PartDesign\WizardShaft\SegmentFunction.py;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">\code\free-cad-code\Source\Repos\code\Mod\PartDesign\WizardShaft\SegmentFunction.py</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Generating ../../../Mod/PartDesign/WizardShaft/SegmentFunction.py</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+$(CMAKE_BIN)\cmake.exe -E copy $(FC_SOURCE)/Mod/PartDesign/WizardShaft/SegmentFunction.py $(DEVROOT)/Mod/PartDesign/WizardShaft/SegmentFunction.py
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(DEVROOT)/CMakeFiles/9e17346c7ff4efca1d81292f485cc107/SegmentFunction.py.rule;$(FC_SOURCE)\Mod\PartDesign\WizardShaft\SegmentFunction.py;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">\code\free-cad-code\Source\Repos\code\Mod\PartDesign\WizardShaft\SegmentFunction.py</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Generating ../../../Mod/PartDesign/WizardShaft/SegmentFunction.py</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+$(CMAKE_BIN)\cmake.exe -E copy $(FC_SOURCE)/Mod/PartDesign/WizardShaft/SegmentFunction.py $(DEVROOT)/Mod/PartDesign/WizardShaft/SegmentFunction.py
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">$(DEVROOT)/CMakeFiles/9e17346c7ff4efca1d81292f485cc107/SegmentFunction.py.rule;$(FC_SOURCE)\Mod\PartDesign\WizardShaft\SegmentFunction.py;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">\code\free-cad-code\Source\Repos\code\Mod\PartDesign\WizardShaft\SegmentFunction.py</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Generating ../../../Mod/PartDesign/WizardShaft/SegmentFunction.py</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+$(CMAKE_BIN)\cmake.exe -E copy $(FC_SOURCE)/Mod/PartDesign/WizardShaft/SegmentFunction.py $(DEVROOT)/Mod/PartDesign/WizardShaft/SegmentFunction.py
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(DEVROOT)/CMakeFiles/9e17346c7ff4efca1d81292f485cc107/SegmentFunction.py.rule;$(FC_SOURCE)\Mod\PartDesign\WizardShaft\SegmentFunction.py;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">\code\free-cad-code\Source\Repos\code\Mod\PartDesign\WizardShaft\SegmentFunction.py</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="$(FC_SOURCE)\Mod\PartDesign\WizardShaft\__init__.py" />
+    <None Include="$(FC_SOURCE)\Mod\PartDesign\WizardShaft\WizardShaft.svg" />
+    <None Include="$(FC_SOURCE)\Mod\PartDesign\WizardShaft\WizardShaft.py" />
+    <None Include="$(FC_SOURCE)\Mod\PartDesign\WizardShaft\WizardShaftTable.py" />
+    <None Include="$(FC_SOURCE)\Mod\PartDesign\WizardShaft\Shaft.py" />
+    <None Include="$(FC_SOURCE)\Mod\PartDesign\WizardShaft\ShaftFeature.py" />
+    <None Include="$(FC_SOURCE)\Mod\PartDesign\WizardShaft\ShaftDiagram.py" />
+    <None Include="$(FC_SOURCE)\Mod\PartDesign\WizardShaft\SegmentFunction.py" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

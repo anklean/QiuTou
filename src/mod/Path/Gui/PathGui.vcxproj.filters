@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="$(FC_SOURCE)\Mod\Path\Gui\qrc_Path.cxx" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Path\Gui\Command.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Path\Gui\AppPathGui.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Path\Gui\AppPathGuiPy.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Path\Gui\PreCompiled.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Path\Gui\DlgSettingsPathColor.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Path\Gui\TaskDlgPathCompound.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Path\Gui\DlgProcessorChooser.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Path\Gui\ViewProviderPath.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Path\Gui\ViewProviderPathCompound.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Path\Gui\ViewProviderPathShape.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="$(FC_SOURCE)\Mod\Path\Gui\ui_DlgSettingsPathColor.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Path\Gui\ui_TaskDlgPathCompound.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Path\Gui\ui_DlgProcessorChooser.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Path\Gui\PreCompiled.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Path\Gui\ViewProviderPath.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Path\Gui\ViewProviderPathCompound.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Path\Gui\ViewProviderPathShape.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="$(FC_SOURCE)\Mod\Path\Gui\Resources\Path.qrc" />
+    <CustomBuild Include="$(FC_SOURCE)\Mod\Path\Gui\DlgSettingsPathColor.ui" />
+    <CustomBuild Include="$(FC_SOURCE)\Mod\Path\Gui\DlgSettingsPathColor.h" />
+    <CustomBuild Include="$(FC_SOURCE)\Mod\Path\Gui\TaskDlgPathCompound.ui" />
+    <CustomBuild Include="$(FC_SOURCE)\Mod\Path\Gui\TaskDlgPathCompound.h" />
+    <CustomBuild Include="$(FC_SOURCE)\Mod\Path\Gui\DlgProcessorChooser.ui" />
+    <CustomBuild Include="$(FC_SOURCE)\Mod\Path\Gui\DlgProcessorChooser.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{4129A801-9AD2-3DA1-A809-5BC032DABCC2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{5124C73C-630B-3F59-9DFC-D2C200992F06}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resources">
+      <UniqueIdentifier>{8C207286-E436-3C9C-8929-F51266F7ADBA}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Module">
+      <UniqueIdentifier>{D07C31CD-D17F-31BA-9EAE-DE2074DD6B41}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ViewProvider">
+      <UniqueIdentifier>{C58C1CB9-DF0A-37B9-9E90-01B496C8CA81}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

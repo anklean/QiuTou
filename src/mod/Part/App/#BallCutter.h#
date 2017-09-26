@@ -1,0 +1,61 @@
+#ifndef PART_BALLCUTTER_H
+#define PART_BALLCUTTER_H
+
+#include <App/PropertyStandard.h>
+#include <App/PropertyUnits.h>
+
+#include <TopoDS_Face.hxx>
+#include "Geometry.h"
+#include "App/DocumentObject.h"
+#include "TopoDS_Edge.hxx"
+#include "PartFeature.h"
+
+namespace Part
+{
+
+class BallCutter : public Part::Feature
+{
+    PROPERTY_HEADER(Part::BallCutter);
+
+public:
+    BallCutter();
+
+	App::PropertyInteger number; // 刀刃数量
+	App::PropertyAngle angle; // 螺旋角
+
+	App::PropertyAngle sketchAngle; // 截面夹角
+	App::PropertyLength sketchLength; // 截面边长
+
+	App::PropertyLength radius; // 球头半径
+	App::PropertyLength ballHeight; // 球头总高
+
+	App::PropertyLength pathStep; // 刀路歩距
+	
+
+    /** @name methods override feature */
+    //@{
+    /// recalculate the feature
+    App::DocumentObjectExecReturn *execute(void);
+    short mustExecute() const;
+	void onChanged(const App::Property* prop);
+    /// returns the type name of the view provider
+    const char* getViewProviderName(void) const {
+        return "PartGui::ViewProviderPart";
+    }
+    //@}
+
+private:
+	App::DocumentObjectExecReturn* makeLine(Base::Vector3d& startPt, Base::Vector3d& endPt, TopoDS_Edge& edge);
+	void makeMainSketch(double h, double L, double angleIncre, double sketchY, TopoDS_Wire& wire);
+	void makePloyline(std::vector<Base::Vector3d> points, TopoDS_Wire& wire);
+	void makeMainBody();
+
+private:
+	std::vector<TopoDS_Edge>  lineList;
+	TopTools_ListOfShape profiles;
+};
+
+} //namespace Part
+
+
+#endif // PART_BALLCUTTER_H

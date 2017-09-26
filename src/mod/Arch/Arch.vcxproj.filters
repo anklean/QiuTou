@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="\code\free-cad-code\Source\Repos\code\CMakeFiles\a1aca7282f80dc7b3c4a235c9fd17ffd\Init.py.rule" />
+    <CustomBuild Include="\code\free-cad-code\Source\Repos\code\CMakeFiles\a1aca7282f80dc7b3c4a235c9fd17ffd\InitGui.py.rule" />
+    <CustomBuild Include="\code\free-cad-code\Source\Repos\code\CMakeFiles\a1aca7282f80dc7b3c4a235c9fd17ffd\ArchComponent.py.rule" />
+    <CustomBuild Include="\code\free-cad-code\Source\Repos\code\CMakeFiles\a1aca7282f80dc7b3c4a235c9fd17ffd\ArchWall.py.rule" />
+    <CustomBuild Include="\code\free-cad-code\Source\Repos\code\CMakeFiles\a1aca7282f80dc7b3c4a235c9fd17ffd\importIFC.py.rule" />
+    <CustomBuild Include="\code\free-cad-code\Source\Repos\code\CMakeFiles\a1aca7282f80dc7b3c4a235c9fd17ffd\importIFClegacy.py.rule" />
+    <CustomBuild Include="\code\free-cad-code\Source\Repos\code\CMakeFiles\a1aca7282f80dc7b3c4a235c9fd17ffd\Arch.py.rule" />
+    <CustomBuild Include="\code\free-cad-code\Source\Repos\code\CMakeFiles\a1aca7282f80dc7b3c4a235c9fd17ffd\ArchBuilding.py.rule" />
+    <CustomBuild Include="\code\free-cad-code\Source\Repos\code\CMakeFiles\a1aca7282f80dc7b3c4a235c9fd17ffd\ArchFloor.py.rule" />
+    <CustomBuild Include="\code\free-cad-code\Source\Repos\code\CMakeFiles\a1aca7282f80dc7b3c4a235c9fd17ffd\ArchSite.py.rule" />
+    <CustomBuild Include="\code\free-cad-code\Source\Repos\code\CMakeFiles\a1aca7282f80dc7b3c4a235c9fd17ffd\ArchStructure.py.rule" />
+    <CustomBuild Include="\code\free-cad-code\Source\Repos\code\CMakeFiles\a1aca7282f80dc7b3c4a235c9fd17ffd\ArchCommands.py.rule" />
+    <CustomBuild Include="\code\free-cad-code\Source\Repos\code\CMakeFiles\a1aca7282f80dc7b3c4a235c9fd17ffd\ArchSectionPlane.py.rule" />
+    <CustomBuild Include="\code\free-cad-code\Source\Repos\code\CMakeFiles\a1aca7282f80dc7b3c4a235c9fd17ffd\importDAE.py.rule" />
+    <CustomBuild Include="\code\free-cad-code\Source\Repos\code\CMakeFiles\a1aca7282f80dc7b3c4a235c9fd17ffd\importOBJ.py.rule" />
+    <CustomBuild Include="\code\free-cad-code\Source\Repos\code\CMakeFiles\a1aca7282f80dc7b3c4a235c9fd17ffd\ArchWindow.py.rule" />
+    <CustomBuild Include="\code\free-cad-code\Source\Repos\code\CMakeFiles\a1aca7282f80dc7b3c4a235c9fd17ffd\ArchAxis.py.rule" />
+    <CustomBuild Include="\code\free-cad-code\Source\Repos\code\CMakeFiles\a1aca7282f80dc7b3c4a235c9fd17ffd\ArchVRM.py.rule" />
+    <CustomBuild Include="\code\free-cad-code\Source\Repos\code\CMakeFiles\a1aca7282f80dc7b3c4a235c9fd17ffd\ArchRoof.py.rule" />
+    <CustomBuild Include="\code\free-cad-code\Source\Repos\code\CMakeFiles\a1aca7282f80dc7b3c4a235c9fd17ffd\ArchStairs.py.rule" />
+    <CustomBuild Include="\code\free-cad-code\Source\Repos\code\CMakeFiles\a1aca7282f80dc7b3c4a235c9fd17ffd\importWebGL.py.rule" />
+    <CustomBuild Include="\code\free-cad-code\Source\Repos\code\CMakeFiles\a1aca7282f80dc7b3c4a235c9fd17ffd\ArchSpace.py.rule" />
+    <CustomBuild Include="\code\free-cad-code\Source\Repos\code\CMakeFiles\a1aca7282f80dc7b3c4a235c9fd17ffd\ArchRebar.py.rule" />
+    <CustomBuild Include="\code\free-cad-code\Source\Repos\code\CMakeFiles\a1aca7282f80dc7b3c4a235c9fd17ffd\TestArch.py.rule" />
+    <CustomBuild Include="\code\free-cad-code\Source\Repos\code\CMakeFiles\a1aca7282f80dc7b3c4a235c9fd17ffd\ArchFrame.py.rule" />
+    <CustomBuild Include="\code\free-cad-code\Source\Repos\code\CMakeFiles\a1aca7282f80dc7b3c4a235c9fd17ffd\ArchPanel.py.rule" />
+    <CustomBuild Include="\code\free-cad-code\Source\Repos\code\CMakeFiles\a1aca7282f80dc7b3c4a235c9fd17ffd\ArchEquipment.py.rule" />
+    <CustomBuild Include="\code\free-cad-code\Source\Repos\code\CMakeFiles\a1aca7282f80dc7b3c4a235c9fd17ffd\ArchCutPlane.py.rule" />
+    <CustomBuild Include="\code\free-cad-code\Source\Repos\code\CMakeFiles\a1aca7282f80dc7b3c4a235c9fd17ffd\ArchServer.py.rule" />
+    <CustomBuild Include="\code\free-cad-code\Source\Repos\code\CMakeFiles\a1aca7282f80dc7b3c4a235c9fd17ffd\ArchMaterial.py.rule" />
+    <CustomBuild Include="\code\free-cad-code\Source\Repos\code\CMakeFiles\a1aca7282f80dc7b3c4a235c9fd17ffd\ArchSchedule.py.rule" />
+    <CustomBuild Include="$(FC_SOURCE)\Mod\Arch\Resources\Arch.qrc" />
+    <CustomBuild Include="\code\free-cad-code\Source\Repos\code\CMakeFiles\a1aca7282f80dc7b3c4a235c9fd17ffd\Arch_rc.py.rule" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="$(FC_SOURCE)\Mod\Arch\Init.py" />
+    <None Include="$(FC_SOURCE)\Mod\Arch\InitGui.py" />
+    <None Include="$(FC_SOURCE)\Mod\Arch\ArchComponent.py" />
+    <None Include="$(FC_SOURCE)\Mod\Arch\ArchWall.py" />
+    <None Include="$(FC_SOURCE)\Mod\Arch\importIFC.py" />
+    <None Include="$(FC_SOURCE)\Mod\Arch\importIFClegacy.py" />
+    <None Include="$(FC_SOURCE)\Mod\Arch\Arch.py" />
+    <None Include="$(FC_SOURCE)\Mod\Arch\ArchBuilding.py" />
+    <None Include="$(FC_SOURCE)\Mod\Arch\ArchFloor.py" />
+    <None Include="$(FC_SOURCE)\Mod\Arch\ArchSite.py" />
+    <None Include="$(FC_SOURCE)\Mod\Arch\ArchStructure.py" />
+    <None Include="$(FC_SOURCE)\Mod\Arch\ArchCommands.py" />
+    <None Include="$(FC_SOURCE)\Mod\Arch\ArchSectionPlane.py" />
+    <None Include="$(FC_SOURCE)\Mod\Arch\importDAE.py" />
+    <None Include="$(FC_SOURCE)\Mod\Arch\importOBJ.py" />
+    <None Include="$(FC_SOURCE)\Mod\Arch\ArchWindow.py" />
+    <None Include="$(FC_SOURCE)\Mod\Arch\ArchAxis.py" />
+    <None Include="$(FC_SOURCE)\Mod\Arch\ArchVRM.py" />
+    <None Include="$(FC_SOURCE)\Mod\Arch\ArchRoof.py" />
+    <None Include="$(FC_SOURCE)\Mod\Arch\ArchStairs.py" />
+    <None Include="$(FC_SOURCE)\Mod\Arch\importWebGL.py" />
+    <None Include="$(FC_SOURCE)\Mod\Arch\ArchSpace.py" />
+    <None Include="$(FC_SOURCE)\Mod\Arch\ArchRebar.py" />
+    <None Include="$(FC_SOURCE)\Mod\Arch\TestArch.py" />
+    <None Include="$(FC_SOURCE)\Mod\Arch\ArchFrame.py" />
+    <None Include="$(FC_SOURCE)\Mod\Arch\ArchPanel.py" />
+    <None Include="$(FC_SOURCE)\Mod\Arch\ArchEquipment.py" />
+    <None Include="$(FC_SOURCE)\Mod\Arch\ArchCutPlane.py" />
+    <None Include="$(FC_SOURCE)\Mod\Arch\ArchServer.py" />
+    <None Include="$(FC_SOURCE)\Mod\Arch\ArchMaterial.py" />
+    <None Include="$(FC_SOURCE)\Mod\Arch\ArchSchedule.py" />
+    <None Include="$(FC_SOURCE)\Mod\Arch\Arch_rc.py" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{5124C73C-630B-3F59-9DFC-D2C200992F06}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

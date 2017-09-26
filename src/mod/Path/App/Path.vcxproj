@@ -1,0 +1,816 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="MinSizeRel|Win32">
+      <Configuration>MinSizeRel</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|Win32">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGUID>{5C51B93E-CB38-361D-A14A-00003839F8D7}</ProjectGUID>
+    <Keyword>Win32Proj</Keyword>
+    <Platform>Win32</Platform>
+    <ProjectName>Path</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">
+    <Import Project="..\..\..\..\FreeCAD_trunk.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="..\..\..\..\FreeCAD_trunk.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">
+    <Import Project="..\..\..\..\FreeCAD_trunk.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="..\..\..\..\FreeCAD_trunk.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.pyd</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</GenerateManifest>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Path</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.pyd</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">\code\free-cad-code\Source\Repos\code\Mod\Path\MinSizeRel\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Path.dir\MinSizeRel\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Path</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">.pyd</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">\code\free-cad-code\Source\Repos\code\Mod\Path\RelWithDebInfo\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Path.dir\RelWithDebInfo\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Path</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">.pyd</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">true</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">true</GenerateManifest>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <AdditionalOptions> /Zm128 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalIncludeDirectories>$(FC_INCLUDE);$(FC_INCLUDE)\QtOpenGL;$(FC_INCLUDE)\QtSvg;$(FC_INCLUDE)\QtUiTools;$(FC_INCLUDE)\QtWebKit;$(FC_INCLUDE)\QtGui;$(FC_INCLUDE)\QtXml;$(FC_INCLUDE)\QtNetwork;$(FC_INCLUDE)\QtCore;$(FC_SOURCE);\code\free-cad-code\Source\Repos\code;$(FC_SOURCE)\Mod\Path\App;$(FC_LIBRARY)\cmake\..\..\include\oce;$(FC_INCLUDE)\eigen3;$(FC_INCLUDE)\python2.7;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>Debug/</AssemblerListingLocation>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_DEBUG;FC_DEBUG;QT_OPENGL_LIB;QT_SVG_LIB;QT_UITOOLS_LIB;QT_WEBKIT_LIB;QT_GUI_LIB;QT_XML_LIB;QT_NETWORK_LIB;QT_CORE_LIB;HAVE_ACOSH;HAVE_ASINH;HAVE_ATANH;EIGEN2_SUPPORT;CMAKE_INTDIR="Debug";Path_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_DEBUG;FC_DEBUG;QT_OPENGL_LIB;QT_SVG_LIB;QT_UITOOLS_LIB;QT_WEBKIT_LIB;QT_GUI_LIB;QT_XML_LIB;QT_NETWORK_LIB;QT_CORE_LIB;HAVE_ACOSH;HAVE_ASINH;HAVE_ATANH;EIGEN2_SUPPORT;CMAKE_INTDIR=\"Debug\";Path_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(FC_INCLUDE);$(FC_INCLUDE)\QtOpenGL;$(FC_INCLUDE)\QtSvg;$(FC_INCLUDE)\QtUiTools;$(FC_INCLUDE)\QtWebKit;$(FC_INCLUDE)\QtGui;$(FC_INCLUDE)\QtXml;$(FC_INCLUDE)\QtNetwork;$(FC_INCLUDE)\QtCore;$(FC_SOURCE);\code\free-cad-code\Source\Repos\code;$(FC_SOURCE)\Mod\Path\App;$(FC_LIBRARY)\cmake\..\..\include\oce;$(FC_INCLUDE)\eigen3;$(FC_INCLUDE)\python2.7;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>$(FC_INCLUDE);$(FC_INCLUDE)\QtOpenGL;$(FC_INCLUDE)\QtSvg;$(FC_INCLUDE)\QtUiTools;$(FC_INCLUDE)\QtWebKit;$(FC_INCLUDE)\QtGui;$(FC_INCLUDE)\QtXml;$(FC_INCLUDE)\QtNetwork;$(FC_INCLUDE)\QtCore;$(FC_SOURCE);\code\free-cad-code\Source\Repos\code;$(FC_SOURCE)\Mod\Path\App;$(FC_LIBRARY)\cmake\..\..\include\oce;$(FC_INCLUDE)\eigen3;$(FC_INCLUDE)\python2.7;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <PostBuildEvent>
+      <Message>
+      </Message>
+      <Command>setlocal
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+    </PostBuildEvent>
+    <Link>
+      <AdditionalOptions> /machine:X86 /debug %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;SHFolder.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;winmm.lib;comsupp.lib;Ws2_32.lib;dbghelp.lib;$(FC_LIBRARY)\QtCored4.lib;Part_d.lib;FreeCADApp.lib;FreeCADBase.lib;$(FC_LIBRARY)\python27_d.lib;$(FC_LIBRARY)\xerces-c_3D.lib;$(FC_LIBRARY)\zlibd.lib;MSVCRTD.lib;MSVCPRTD.lib;Rpcrt4.lib;version.lib;$(FC_LIBRARY)\boost_filesystem-vc120-mt-gd-1_55.lib;$(FC_LIBRARY)\boost_program_options-vc120-mt-gd-1_55.lib;$(FC_LIBRARY)\boost_regex-vc120-mt-gd-1_55.lib;$(FC_LIBRARY)\boost_signals-vc120-mt-gd-1_55.lib;$(FC_LIBRARY)\boost_system-vc120-mt-gd-1_55.lib;$(FC_LIBRARY)\boost_thread-vc120-mt-gd-1_55.lib;$(FC_LIBRARY)\QtOpenGLd4.lib;glu32.lib;opengl32.lib;$(FC_LIBRARY)\QtSvgd4.lib;$(FC_LIBRARY)\QtUiToolsd.lib;$(FC_LIBRARY)\QtWebKitd4.lib;$(FC_LIBRARY)\QtXmlPatternsd4.lib;$(FC_LIBRARY)\QtGuid4.lib;imm32.lib;$(FC_LIBRARY)\QtXmld4.lib;$(FC_LIBRARY)\QtNetworkd4.lib;$(FC_LIBRARY)\TKIGESd.lib;$(FC_LIBRARY)\TKSTLd.lib;$(FC_LIBRARY)\TKMeshd.lib;$(FC_LIBRARY)\TKOffsetd.lib;$(FC_LIBRARY)\TKFilletd.lib;$(FC_LIBRARY)\TKSTEPd.lib;$(FC_LIBRARY)\TKSTEP209d.lib;$(FC_LIBRARY)\TKSTEPAttrd.lib;$(FC_LIBRARY)\TKSTEPBased.lib;$(FC_LIBRARY)\TKXSBased.lib;$(FC_LIBRARY)\TKHLRd.lib;$(FC_LIBRARY)\TKFeatd.lib;$(FC_LIBRARY)\TKBoold.lib;$(FC_LIBRARY)\TKShHealingd.lib;$(FC_LIBRARY)\TKBOd.lib;$(FC_LIBRARY)\TKPrimd.lib;$(FC_LIBRARY)\TKTopAlgod.lib;$(FC_LIBRARY)\TKGeomAlgod.lib;$(FC_LIBRARY)\TKBRepd.lib;$(FC_LIBRARY)\TKGeomBased.lib;$(FC_LIBRARY)\TKG3dd.lib;$(FC_LIBRARY)\TKG2dd.lib;$(FC_LIBRARY)\TKMathd.lib;$(FC_LIBRARY)\TKerneld.lib;ws2_32.lib;psapi.lib;$(FC_LIBRARY)\freetype.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(FC_LIBRARY)\;$(FC_LIBRARY)\/$(Configuration);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreAllDefaultLibraries>true</IgnoreAllDefaultLibraries>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>$(FC_LIBRARY)\$(TargetName).lib</ImportLibrary>
+      <LargeAddressAware>true</LargeAddressAware>
+      <ProgramDataBaseFile>$(DEVROOT)/Mod/Path/Path_d.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+      <Version>
+      </Version>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>$(FC_INCLUDE);$(FC_INCLUDE)\QtOpenGL;$(FC_INCLUDE)\QtSvg;$(FC_INCLUDE)\QtUiTools;$(FC_INCLUDE)\QtWebKit;$(FC_INCLUDE)\QtGui;$(FC_INCLUDE)\QtXml;$(FC_INCLUDE)\QtNetwork;$(FC_INCLUDE)\QtCore;$(FC_SOURCE);\code\free-cad-code\Source\Repos\code;$(FC_SOURCE)\Mod\Path\App;$(FC_LIBRARY)\cmake\..\..\include\oce;$(FC_INCLUDE)\eigen3;$(FC_INCLUDE)\python2.7;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>Release/</AssemblerListingLocation>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <ExceptionHandling>Async</ExceptionHandling>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;QT_NO_DEBUG;QT_OPENGL_LIB;QT_SVG_LIB;QT_UITOOLS_LIB;QT_WEBKIT_LIB;QT_GUI_LIB;QT_XML_LIB;QT_NETWORK_LIB;QT_CORE_LIB;HAVE_ACOSH;HAVE_ASINH;HAVE_ATANH;EIGEN2_SUPPORT;CMAKE_INTDIR="Release";Path_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;QT_NO_DEBUG;QT_OPENGL_LIB;QT_SVG_LIB;QT_UITOOLS_LIB;QT_WEBKIT_LIB;QT_GUI_LIB;QT_XML_LIB;QT_NETWORK_LIB;QT_CORE_LIB;HAVE_ACOSH;HAVE_ASINH;HAVE_ATANH;EIGEN2_SUPPORT;CMAKE_INTDIR=\"Release\";Path_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(FC_INCLUDE);$(FC_INCLUDE)\QtOpenGL;$(FC_INCLUDE)\QtSvg;$(FC_INCLUDE)\QtUiTools;$(FC_INCLUDE)\QtWebKit;$(FC_INCLUDE)\QtGui;$(FC_INCLUDE)\QtXml;$(FC_INCLUDE)\QtNetwork;$(FC_INCLUDE)\QtCore;$(FC_SOURCE);\code\free-cad-code\Source\Repos\code;$(FC_SOURCE)\Mod\Path\App;$(FC_LIBRARY)\cmake\..\..\include\oce;$(FC_INCLUDE)\eigen3;$(FC_INCLUDE)\python2.7;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>$(FC_INCLUDE);$(FC_INCLUDE)\QtOpenGL;$(FC_INCLUDE)\QtSvg;$(FC_INCLUDE)\QtUiTools;$(FC_INCLUDE)\QtWebKit;$(FC_INCLUDE)\QtGui;$(FC_INCLUDE)\QtXml;$(FC_INCLUDE)\QtNetwork;$(FC_INCLUDE)\QtCore;$(FC_SOURCE);\code\free-cad-code\Source\Repos\code;$(FC_SOURCE)\Mod\Path\App;$(FC_LIBRARY)\cmake\..\..\include\oce;$(FC_INCLUDE)\eigen3;$(FC_INCLUDE)\python2.7;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <PostBuildEvent>
+      <Message>
+      </Message>
+      <Command>setlocal
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+    </PostBuildEvent>
+    <Link>
+      <AdditionalOptions> /machine:X86 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;SHFolder.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;winmm.lib;comsupp.lib;Ws2_32.lib;dbghelp.lib;$(FC_LIBRARY)\QtCore4.lib;Part.lib;FreeCADApp.lib;FreeCADBase.lib;$(FC_LIBRARY)\python27.lib;$(FC_LIBRARY)\xerces-c_3.lib;$(FC_LIBRARY)\zlib.lib;MSVCRT.lib;MSVCPRT.lib;Rpcrt4.lib;version.lib;$(FC_LIBRARY)\boost_filesystem-vc120-mt-1_55.lib;$(FC_LIBRARY)\boost_program_options-vc120-mt-1_55.lib;$(FC_LIBRARY)\boost_regex-vc120-mt-1_55.lib;$(FC_LIBRARY)\boost_signals-vc120-mt-1_55.lib;$(FC_LIBRARY)\boost_system-vc120-mt-1_55.lib;$(FC_LIBRARY)\boost_thread-vc120-mt-1_55.lib;$(FC_LIBRARY)\QtOpenGL4.lib;glu32.lib;opengl32.lib;$(FC_LIBRARY)\QtSvg4.lib;$(FC_LIBRARY)\QtUiTools.lib;$(FC_LIBRARY)\QtWebKit4.lib;$(FC_LIBRARY)\QtXmlPatterns4.lib;$(FC_LIBRARY)\QtGui4.lib;imm32.lib;$(FC_LIBRARY)\QtXml4.lib;$(FC_LIBRARY)\QtNetwork4.lib;$(FC_LIBRARY)\TKIGES.lib;$(FC_LIBRARY)\TKSTL.lib;$(FC_LIBRARY)\TKMesh.lib;$(FC_LIBRARY)\TKOffset.lib;$(FC_LIBRARY)\TKFillet.lib;$(FC_LIBRARY)\TKSTEP.lib;$(FC_LIBRARY)\TKSTEP209.lib;$(FC_LIBRARY)\TKSTEPAttr.lib;$(FC_LIBRARY)\TKSTEPBase.lib;$(FC_LIBRARY)\TKXSBase.lib;$(FC_LIBRARY)\TKHLR.lib;$(FC_LIBRARY)\TKFeat.lib;$(FC_LIBRARY)\TKBool.lib;$(FC_LIBRARY)\TKShHealing.lib;$(FC_LIBRARY)\TKBO.lib;$(FC_LIBRARY)\TKPrim.lib;$(FC_LIBRARY)\TKTopAlgo.lib;$(FC_LIBRARY)\TKGeomAlgo.lib;$(FC_LIBRARY)\TKBRep.lib;$(FC_LIBRARY)\TKGeomBase.lib;$(FC_LIBRARY)\TKG3d.lib;$(FC_LIBRARY)\TKG2d.lib;$(FC_LIBRARY)\TKMath.lib;$(FC_LIBRARY)\TKernel.lib;ws2_32.lib;psapi.lib;$(FC_LIBRARY)\freetype.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(FC_LIBRARY)\;$(FC_LIBRARY)\/$(Configuration);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreAllDefaultLibraries>true</IgnoreAllDefaultLibraries>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <LargeAddressAware>true</LargeAddressAware>
+      <ProgramDataBaseFile>$(DEVROOT)/Mod/Path/Path.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+      <Version>
+      </Version>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>$(FC_INCLUDE);$(FC_INCLUDE)\QtOpenGL;$(FC_INCLUDE)\QtSvg;$(FC_INCLUDE)\QtUiTools;$(FC_INCLUDE)\QtWebKit;$(FC_INCLUDE)\QtGui;$(FC_INCLUDE)\QtXml;$(FC_INCLUDE)\QtNetwork;$(FC_INCLUDE)\QtCore;$(FC_SOURCE);\code\free-cad-code\Source\Repos\code;$(FC_SOURCE)\Mod\Path\App;$(FC_LIBRARY)\cmake\..\..\include\oce;$(FC_INCLUDE)\eigen3;$(FC_INCLUDE)\python2.7;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>MinSizeRel/</AssemblerListingLocation>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <Optimization>MinSpace</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;QT_NO_DEBUG;QT_OPENGL_LIB;QT_SVG_LIB;QT_UITOOLS_LIB;QT_WEBKIT_LIB;QT_GUI_LIB;QT_XML_LIB;QT_NETWORK_LIB;QT_CORE_LIB;HAVE_ACOSH;HAVE_ASINH;HAVE_ATANH;EIGEN2_SUPPORT;CMAKE_INTDIR="MinSizeRel";Path_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;QT_NO_DEBUG;QT_OPENGL_LIB;QT_SVG_LIB;QT_UITOOLS_LIB;QT_WEBKIT_LIB;QT_GUI_LIB;QT_XML_LIB;QT_NETWORK_LIB;QT_CORE_LIB;HAVE_ACOSH;HAVE_ASINH;HAVE_ATANH;EIGEN2_SUPPORT;CMAKE_INTDIR=\"MinSizeRel\";Path_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(FC_INCLUDE);$(FC_INCLUDE)\QtOpenGL;$(FC_INCLUDE)\QtSvg;$(FC_INCLUDE)\QtUiTools;$(FC_INCLUDE)\QtWebKit;$(FC_INCLUDE)\QtGui;$(FC_INCLUDE)\QtXml;$(FC_INCLUDE)\QtNetwork;$(FC_INCLUDE)\QtCore;$(FC_SOURCE);\code\free-cad-code\Source\Repos\code;$(FC_SOURCE)\Mod\Path\App;$(FC_LIBRARY)\cmake\..\..\include\oce;$(FC_INCLUDE)\eigen3;$(FC_INCLUDE)\python2.7;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>$(FC_INCLUDE);$(FC_INCLUDE)\QtOpenGL;$(FC_INCLUDE)\QtSvg;$(FC_INCLUDE)\QtUiTools;$(FC_INCLUDE)\QtWebKit;$(FC_INCLUDE)\QtGui;$(FC_INCLUDE)\QtXml;$(FC_INCLUDE)\QtNetwork;$(FC_INCLUDE)\QtCore;$(FC_SOURCE);\code\free-cad-code\Source\Repos\code;$(FC_SOURCE)\Mod\Path\App;$(FC_LIBRARY)\cmake\..\..\include\oce;$(FC_INCLUDE)\eigen3;$(FC_INCLUDE)\python2.7;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <PostBuildEvent>
+      <Message>
+      </Message>
+      <Command>setlocal
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+    </PostBuildEvent>
+    <Link>
+      <AdditionalOptions> /machine:X86 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;SHFolder.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;winmm.lib;comsupp.lib;Ws2_32.lib;dbghelp.lib;..\..\Robot\App\MinSizeRel\Robot.lib;$(FC_LIBRARY)\QtCore4.lib;..\..\Part\App\MinSizeRel\Part.lib;..\..\..\App\MinSizeRel\FreeCADApp.lib;..\..\..\Base\MinSizeRel\FreeCADBase.lib;$(FC_LIBRARY)\python27.lib;$(FC_LIBRARY)\xerces-c_3.lib;$(FC_LIBRARY)\zlib.lib;MSVCRT.lib;MSVCPRT.lib;Rpcrt4.lib;version.lib;$(FC_LIBRARY)\boost_filesystem-vc120-mt-1_55.lib;$(FC_LIBRARY)\boost_program_options-vc120-mt-1_55.lib;$(FC_LIBRARY)\boost_regex-vc120-mt-1_55.lib;$(FC_LIBRARY)\boost_signals-vc120-mt-1_55.lib;$(FC_LIBRARY)\boost_system-vc120-mt-1_55.lib;$(FC_LIBRARY)\boost_thread-vc120-mt-1_55.lib;$(FC_LIBRARY)\QtOpenGL4.lib;glu32.lib;opengl32.lib;$(FC_LIBRARY)\QtSvg4.lib;$(FC_LIBRARY)\QtUiTools.lib;$(FC_LIBRARY)\QtWebKit4.lib;$(FC_LIBRARY)\QtXmlPatterns4.lib;$(FC_LIBRARY)\QtGui4.lib;imm32.lib;winmm.lib;$(FC_LIBRARY)\QtXml4.lib;$(FC_LIBRARY)\QtNetwork4.lib;$(FC_LIBRARY)\QtCore4.lib;$(FC_LIBRARY)\TKIGESd.lib;$(FC_LIBRARY)\TKSTLd.lib;$(FC_LIBRARY)\TKMeshd.lib;$(FC_LIBRARY)\TKOffsetd.lib;$(FC_LIBRARY)\TKFilletd.lib;$(FC_LIBRARY)\TKSTEPd.lib;$(FC_LIBRARY)\TKSTEP209d.lib;$(FC_LIBRARY)\TKSTEPAttrd.lib;$(FC_LIBRARY)\TKSTEPBased.lib;$(FC_LIBRARY)\TKXSBased.lib;$(FC_LIBRARY)\TKHLRd.lib;$(FC_LIBRARY)\TKFeatd.lib;$(FC_LIBRARY)\TKBoold.lib;$(FC_LIBRARY)\TKShHealingd.lib;$(FC_LIBRARY)\TKBOd.lib;$(FC_LIBRARY)\TKPrimd.lib;$(FC_LIBRARY)\TKTopAlgod.lib;$(FC_LIBRARY)\TKGeomAlgod.lib;$(FC_LIBRARY)\TKBRepd.lib;$(FC_LIBRARY)\TKGeomBased.lib;$(FC_LIBRARY)\TKG3dd.lib;$(FC_LIBRARY)\TKG2dd.lib;$(FC_LIBRARY)\TKMathd.lib;$(FC_LIBRARY)\TKerneld.lib;ws2_32.lib;advapi32.lib;gdi32.lib;user32.lib;kernel32.lib;psapi.lib;$(FC_LIBRARY)\freetype.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(FC_LIBRARY)\;$(FC_LIBRARY)\/$(Configuration);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreAllDefaultLibraries>true</IgnoreAllDefaultLibraries>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>$(FC_SOURCE)/Mod/Path/App/MinSizeRel/Path.lib</ImportLibrary>
+      <LargeAddressAware>true</LargeAddressAware>
+      <ProgramDataBaseFile>$(DEVROOT)/Mod/Path/MinSizeRel/Path.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+      <Version>
+      </Version>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>$(FC_INCLUDE);$(FC_INCLUDE)\QtOpenGL;$(FC_INCLUDE)\QtSvg;$(FC_INCLUDE)\QtUiTools;$(FC_INCLUDE)\QtWebKit;$(FC_INCLUDE)\QtGui;$(FC_INCLUDE)\QtXml;$(FC_INCLUDE)\QtNetwork;$(FC_INCLUDE)\QtCore;$(FC_SOURCE);\code\free-cad-code\Source\Repos\code;$(FC_SOURCE)\Mod\Path\App;$(FC_LIBRARY)\cmake\..\..\include\oce;$(FC_INCLUDE)\eigen3;$(FC_INCLUDE)\python2.7;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>RelWithDebInfo/</AssemblerListingLocation>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;QT_NO_DEBUG;QT_OPENGL_LIB;QT_SVG_LIB;QT_UITOOLS_LIB;QT_WEBKIT_LIB;QT_GUI_LIB;QT_XML_LIB;QT_NETWORK_LIB;QT_CORE_LIB;HAVE_ACOSH;HAVE_ASINH;HAVE_ATANH;EIGEN2_SUPPORT;CMAKE_INTDIR="RelWithDebInfo";Path_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;QT_NO_DEBUG;QT_OPENGL_LIB;QT_SVG_LIB;QT_UITOOLS_LIB;QT_WEBKIT_LIB;QT_GUI_LIB;QT_XML_LIB;QT_NETWORK_LIB;QT_CORE_LIB;HAVE_ACOSH;HAVE_ASINH;HAVE_ATANH;EIGEN2_SUPPORT;CMAKE_INTDIR=\"RelWithDebInfo\";Path_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(FC_INCLUDE);$(FC_INCLUDE)\QtOpenGL;$(FC_INCLUDE)\QtSvg;$(FC_INCLUDE)\QtUiTools;$(FC_INCLUDE)\QtWebKit;$(FC_INCLUDE)\QtGui;$(FC_INCLUDE)\QtXml;$(FC_INCLUDE)\QtNetwork;$(FC_INCLUDE)\QtCore;$(FC_SOURCE);\code\free-cad-code\Source\Repos\code;$(FC_SOURCE)\Mod\Path\App;$(FC_LIBRARY)\cmake\..\..\include\oce;$(FC_INCLUDE)\eigen3;$(FC_INCLUDE)\python2.7;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>$(FC_INCLUDE);$(FC_INCLUDE)\QtOpenGL;$(FC_INCLUDE)\QtSvg;$(FC_INCLUDE)\QtUiTools;$(FC_INCLUDE)\QtWebKit;$(FC_INCLUDE)\QtGui;$(FC_INCLUDE)\QtXml;$(FC_INCLUDE)\QtNetwork;$(FC_INCLUDE)\QtCore;$(FC_SOURCE);\code\free-cad-code\Source\Repos\code;$(FC_SOURCE)\Mod\Path\App;$(FC_LIBRARY)\cmake\..\..\include\oce;$(FC_INCLUDE)\eigen3;$(FC_INCLUDE)\python2.7;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <PostBuildEvent>
+      <Message>
+      </Message>
+      <Command>setlocal
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+    </PostBuildEvent>
+    <Link>
+      <AdditionalOptions> /machine:X86 /debug %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;SHFolder.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;winmm.lib;comsupp.lib;Ws2_32.lib;dbghelp.lib;..\..\Robot\App\RelWithDebInfo\Robot.lib;$(FC_LIBRARY)\QtCore4.lib;..\..\Part\App\RelWithDebInfo\Part.lib;..\..\..\App\RelWithDebInfo\FreeCADApp.lib;..\..\..\Base\RelWithDebInfo\FreeCADBase.lib;$(FC_LIBRARY)\python27.lib;$(FC_LIBRARY)\xerces-c_3.lib;$(FC_LIBRARY)\zlib.lib;MSVCRT.lib;MSVCPRT.lib;Rpcrt4.lib;version.lib;$(FC_LIBRARY)\boost_filesystem-vc120-mt-1_55.lib;$(FC_LIBRARY)\boost_program_options-vc120-mt-1_55.lib;$(FC_LIBRARY)\boost_regex-vc120-mt-1_55.lib;$(FC_LIBRARY)\boost_signals-vc120-mt-1_55.lib;$(FC_LIBRARY)\boost_system-vc120-mt-1_55.lib;$(FC_LIBRARY)\boost_thread-vc120-mt-1_55.lib;$(FC_LIBRARY)\QtOpenGL4.lib;glu32.lib;opengl32.lib;$(FC_LIBRARY)\QtSvg4.lib;$(FC_LIBRARY)\QtUiTools.lib;$(FC_LIBRARY)\QtWebKit4.lib;$(FC_LIBRARY)\QtXmlPatterns4.lib;$(FC_LIBRARY)\QtGui4.lib;imm32.lib;winmm.lib;$(FC_LIBRARY)\QtXml4.lib;$(FC_LIBRARY)\QtNetwork4.lib;$(FC_LIBRARY)\QtCore4.lib;$(FC_LIBRARY)\TKIGESd.lib;$(FC_LIBRARY)\TKSTLd.lib;$(FC_LIBRARY)\TKMeshd.lib;$(FC_LIBRARY)\TKOffsetd.lib;$(FC_LIBRARY)\TKFilletd.lib;$(FC_LIBRARY)\TKSTEPd.lib;$(FC_LIBRARY)\TKSTEP209d.lib;$(FC_LIBRARY)\TKSTEPAttrd.lib;$(FC_LIBRARY)\TKSTEPBased.lib;$(FC_LIBRARY)\TKXSBased.lib;$(FC_LIBRARY)\TKHLRd.lib;$(FC_LIBRARY)\TKFeatd.lib;$(FC_LIBRARY)\TKBoold.lib;$(FC_LIBRARY)\TKShHealingd.lib;$(FC_LIBRARY)\TKBOd.lib;$(FC_LIBRARY)\TKPrimd.lib;$(FC_LIBRARY)\TKTopAlgod.lib;$(FC_LIBRARY)\TKGeomAlgod.lib;$(FC_LIBRARY)\TKBRepd.lib;$(FC_LIBRARY)\TKGeomBased.lib;$(FC_LIBRARY)\TKG3dd.lib;$(FC_LIBRARY)\TKG2dd.lib;$(FC_LIBRARY)\TKMathd.lib;$(FC_LIBRARY)\TKerneld.lib;ws2_32.lib;advapi32.lib;gdi32.lib;user32.lib;kernel32.lib;psapi.lib;$(FC_LIBRARY)\freetype.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(FC_LIBRARY)\;$(FC_LIBRARY)\/$(Configuration);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreAllDefaultLibraries>true</IgnoreAllDefaultLibraries>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>$(FC_SOURCE)/Mod/Path/App/RelWithDebInfo/Path.lib</ImportLibrary>
+      <LargeAddressAware>true</LargeAddressAware>
+      <ProgramDataBaseFile>$(DEVROOT)/Mod/Path/RelWithDebInfo/Path.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+      <Version>
+      </Version>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="$(FC_SOURCE)\Mod\Path\App\CommandPy.xml">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CommandPy.xml</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+cd $(FC_SOURCE)\Mod\Path\App
+if %errorlevel% neq 0 goto :cmEnd
+
+if %errorlevel% neq 0 goto :cmEnd
+$(FC_BIN)\python.exe $(FC_SOURCE)\Tools\generate.py --outputPath $(FC_SOURCE)/Mod/Path/App CommandPy.xml
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(FC_SOURCE)/Mod/Path/App/CommandPy.xml;$(FC_SOURCE)\Tools\generateTemplates\templateClassPyExport.py;$(FC_SOURCE)\Mod\Path\App\CommandPy.xml;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(FC_SOURCE)\Mod\Path\App\CommandPy.h;$(FC_SOURCE)\Mod\Path\App\CommandPy.cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">CommandPy.xml</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+cd $(FC_SOURCE)\Mod\Path\App
+if %errorlevel% neq 0 goto :cmEnd
+
+if %errorlevel% neq 0 goto :cmEnd
+$(FC_BIN)\python.exe $(FC_SOURCE)\Tools\generate.py --outputPath $(FC_SOURCE)/Mod/Path/App CommandPy.xml
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(FC_SOURCE)/Mod/Path/App/CommandPy.xml;$(FC_SOURCE)\Tools\generateTemplates\templateClassPyExport.py;$(FC_SOURCE)\Mod\Path\App\CommandPy.xml;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(FC_SOURCE)\Mod\Path\App\CommandPy.h;$(FC_SOURCE)\Mod\Path\App\CommandPy.cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">CommandPy.xml</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+cd $(FC_SOURCE)\Mod\Path\App
+if %errorlevel% neq 0 goto :cmEnd
+
+if %errorlevel% neq 0 goto :cmEnd
+$(FC_BIN)\python.exe $(FC_SOURCE)\Tools\generate.py --outputPath $(FC_SOURCE)/Mod/Path/App CommandPy.xml
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">$(FC_SOURCE)/Mod/Path/App/CommandPy.xml;$(FC_SOURCE)\Tools\generateTemplates\templateClassPyExport.py;$(FC_SOURCE)\Mod\Path\App\CommandPy.xml;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">$(FC_SOURCE)\Mod\Path\App\CommandPy.h;$(FC_SOURCE)\Mod\Path\App\CommandPy.cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">CommandPy.xml</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+cd $(FC_SOURCE)\Mod\Path\App
+if %errorlevel% neq 0 goto :cmEnd
+
+if %errorlevel% neq 0 goto :cmEnd
+$(FC_BIN)\python.exe $(FC_SOURCE)\Tools\generate.py --outputPath $(FC_SOURCE)/Mod/Path/App CommandPy.xml
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(FC_SOURCE)/Mod/Path/App/CommandPy.xml;$(FC_SOURCE)\Tools\generateTemplates\templateClassPyExport.py;$(FC_SOURCE)\Mod\Path\App\CommandPy.xml;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(FC_SOURCE)\Mod\Path\App\CommandPy.h;$(FC_SOURCE)\Mod\Path\App\CommandPy.cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="$(FC_SOURCE)\Mod\Path\App\PathPy.xml">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">PathPy.xml</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+cd $(FC_SOURCE)\Mod\Path\App
+if %errorlevel% neq 0 goto :cmEnd
+
+if %errorlevel% neq 0 goto :cmEnd
+$(FC_BIN)\python.exe $(FC_SOURCE)\Tools\generate.py --outputPath $(FC_SOURCE)/Mod/Path/App PathPy.xml
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(FC_SOURCE)/Mod/Path/App/PathPy.xml;$(FC_SOURCE)\Tools\generateTemplates\templateClassPyExport.py;$(FC_SOURCE)\Mod\Path\App\PathPy.xml;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(FC_SOURCE)\Mod\Path\App\PathPy.h;$(FC_SOURCE)\Mod\Path\App\PathPy.cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">PathPy.xml</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+cd $(FC_SOURCE)\Mod\Path\App
+if %errorlevel% neq 0 goto :cmEnd
+
+if %errorlevel% neq 0 goto :cmEnd
+$(FC_BIN)\python.exe $(FC_SOURCE)\Tools\generate.py --outputPath $(FC_SOURCE)/Mod/Path/App PathPy.xml
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(FC_SOURCE)/Mod/Path/App/PathPy.xml;$(FC_SOURCE)\Tools\generateTemplates\templateClassPyExport.py;$(FC_SOURCE)\Mod\Path\App\PathPy.xml;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(FC_SOURCE)\Mod\Path\App\PathPy.h;$(FC_SOURCE)\Mod\Path\App\PathPy.cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">PathPy.xml</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+cd $(FC_SOURCE)\Mod\Path\App
+if %errorlevel% neq 0 goto :cmEnd
+
+if %errorlevel% neq 0 goto :cmEnd
+$(FC_BIN)\python.exe $(FC_SOURCE)\Tools\generate.py --outputPath $(FC_SOURCE)/Mod/Path/App PathPy.xml
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">$(FC_SOURCE)/Mod/Path/App/PathPy.xml;$(FC_SOURCE)\Tools\generateTemplates\templateClassPyExport.py;$(FC_SOURCE)\Mod\Path\App\PathPy.xml;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">$(FC_SOURCE)\Mod\Path\App\PathPy.h;$(FC_SOURCE)\Mod\Path\App\PathPy.cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">PathPy.xml</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+cd $(FC_SOURCE)\Mod\Path\App
+if %errorlevel% neq 0 goto :cmEnd
+
+if %errorlevel% neq 0 goto :cmEnd
+$(FC_BIN)\python.exe $(FC_SOURCE)\Tools\generate.py --outputPath $(FC_SOURCE)/Mod/Path/App PathPy.xml
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(FC_SOURCE)/Mod/Path/App/PathPy.xml;$(FC_SOURCE)\Tools\generateTemplates\templateClassPyExport.py;$(FC_SOURCE)\Mod\Path\App\PathPy.xml;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(FC_SOURCE)\Mod\Path\App\PathPy.h;$(FC_SOURCE)\Mod\Path\App\PathPy.cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="$(FC_SOURCE)\Mod\Path\App\ToolPy.xml">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">ToolPy.xml</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+cd $(FC_SOURCE)\Mod\Path\App
+if %errorlevel% neq 0 goto :cmEnd
+
+if %errorlevel% neq 0 goto :cmEnd
+$(FC_BIN)\python.exe $(FC_SOURCE)\Tools\generate.py --outputPath $(FC_SOURCE)/Mod/Path/App ToolPy.xml
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(FC_SOURCE)/Mod/Path/App/ToolPy.xml;$(FC_SOURCE)\Tools\generateTemplates\templateClassPyExport.py;$(FC_SOURCE)\Mod\Path\App\ToolPy.xml;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(FC_SOURCE)\Mod\Path\App\ToolPy.h;$(FC_SOURCE)\Mod\Path\App\ToolPy.cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">ToolPy.xml</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+cd $(FC_SOURCE)\Mod\Path\App
+if %errorlevel% neq 0 goto :cmEnd
+
+if %errorlevel% neq 0 goto :cmEnd
+$(FC_BIN)\python.exe $(FC_SOURCE)\Tools\generate.py --outputPath $(FC_SOURCE)/Mod/Path/App ToolPy.xml
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(FC_SOURCE)/Mod/Path/App/ToolPy.xml;$(FC_SOURCE)\Tools\generateTemplates\templateClassPyExport.py;$(FC_SOURCE)\Mod\Path\App\ToolPy.xml;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(FC_SOURCE)\Mod\Path\App\ToolPy.h;$(FC_SOURCE)\Mod\Path\App\ToolPy.cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">ToolPy.xml</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+cd $(FC_SOURCE)\Mod\Path\App
+if %errorlevel% neq 0 goto :cmEnd
+
+if %errorlevel% neq 0 goto :cmEnd
+$(FC_BIN)\python.exe $(FC_SOURCE)\Tools\generate.py --outputPath $(FC_SOURCE)/Mod/Path/App ToolPy.xml
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">$(FC_SOURCE)/Mod/Path/App/ToolPy.xml;$(FC_SOURCE)\Tools\generateTemplates\templateClassPyExport.py;$(FC_SOURCE)\Mod\Path\App\ToolPy.xml;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">$(FC_SOURCE)\Mod\Path\App\ToolPy.h;$(FC_SOURCE)\Mod\Path\App\ToolPy.cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">ToolPy.xml</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+cd $(FC_SOURCE)\Mod\Path\App
+if %errorlevel% neq 0 goto :cmEnd
+
+if %errorlevel% neq 0 goto :cmEnd
+$(FC_BIN)\python.exe $(FC_SOURCE)\Tools\generate.py --outputPath $(FC_SOURCE)/Mod/Path/App ToolPy.xml
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(FC_SOURCE)/Mod/Path/App/ToolPy.xml;$(FC_SOURCE)\Tools\generateTemplates\templateClassPyExport.py;$(FC_SOURCE)\Mod\Path\App\ToolPy.xml;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(FC_SOURCE)\Mod\Path\App\ToolPy.h;$(FC_SOURCE)\Mod\Path\App\ToolPy.cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="$(FC_SOURCE)\Mod\Path\App\TooltablePy.xml">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">TooltablePy.xml</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+cd $(FC_SOURCE)\Mod\Path\App
+if %errorlevel% neq 0 goto :cmEnd
+
+if %errorlevel% neq 0 goto :cmEnd
+$(FC_BIN)\python.exe $(FC_SOURCE)\Tools\generate.py --outputPath $(FC_SOURCE)/Mod/Path/App TooltablePy.xml
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(FC_SOURCE)/Mod/Path/App/TooltablePy.xml;$(FC_SOURCE)\Tools\generateTemplates\templateClassPyExport.py;$(FC_SOURCE)\Mod\Path\App\TooltablePy.xml;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(FC_SOURCE)\Mod\Path\App\TooltablePy.h;$(FC_SOURCE)\Mod\Path\App\TooltablePy.cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">TooltablePy.xml</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+cd $(FC_SOURCE)\Mod\Path\App
+if %errorlevel% neq 0 goto :cmEnd
+
+if %errorlevel% neq 0 goto :cmEnd
+$(FC_BIN)\python.exe $(FC_SOURCE)\Tools\generate.py --outputPath $(FC_SOURCE)/Mod/Path/App TooltablePy.xml
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(FC_SOURCE)/Mod/Path/App/TooltablePy.xml;$(FC_SOURCE)\Tools\generateTemplates\templateClassPyExport.py;$(FC_SOURCE)\Mod\Path\App\TooltablePy.xml;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(FC_SOURCE)\Mod\Path\App\TooltablePy.h;$(FC_SOURCE)\Mod\Path\App\TooltablePy.cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">TooltablePy.xml</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+cd $(FC_SOURCE)\Mod\Path\App
+if %errorlevel% neq 0 goto :cmEnd
+
+if %errorlevel% neq 0 goto :cmEnd
+$(FC_BIN)\python.exe $(FC_SOURCE)\Tools\generate.py --outputPath $(FC_SOURCE)/Mod/Path/App TooltablePy.xml
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">$(FC_SOURCE)/Mod/Path/App/TooltablePy.xml;$(FC_SOURCE)\Tools\generateTemplates\templateClassPyExport.py;$(FC_SOURCE)\Mod\Path\App\TooltablePy.xml;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">$(FC_SOURCE)\Mod\Path\App\TooltablePy.h;$(FC_SOURCE)\Mod\Path\App\TooltablePy.cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">TooltablePy.xml</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+cd $(FC_SOURCE)\Mod\Path\App
+if %errorlevel% neq 0 goto :cmEnd
+
+if %errorlevel% neq 0 goto :cmEnd
+$(FC_BIN)\python.exe $(FC_SOURCE)\Tools\generate.py --outputPath $(FC_SOURCE)/Mod/Path/App TooltablePy.xml
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(FC_SOURCE)/Mod/Path/App/TooltablePy.xml;$(FC_SOURCE)\Tools\generateTemplates\templateClassPyExport.py;$(FC_SOURCE)\Mod\Path\App\TooltablePy.xml;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(FC_SOURCE)\Mod\Path\App\TooltablePy.h;$(FC_SOURCE)\Mod\Path\App\TooltablePy.cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="$(FC_SOURCE)\Mod\Path\App\Command.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Path\App\Path.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Path\App\Tooltable.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Path\App\PropertyPath.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Path\App\FeaturePath.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Path\App\PropertyTooltable.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Path\App\FeaturePathCompound.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Path\App\FeaturePathShape.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Path\App\PreCompiled.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Robot\App\kdl_cp\articulatedbodyinertia.hpp" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Robot\App\kdl_cp\chain.hpp" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Robot\App\kdl_cp\chaindynparam.hpp" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Robot\App\kdl_cp\chainfksolver.hpp" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Robot\App\kdl_cp\chainfksolverpos_recursive.hpp" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Robot\App\kdl_cp\chainfksolvervel_recursive.hpp" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Robot\App\kdl_cp\chainidsolver.hpp" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Robot\App\kdl_cp\chainidsolver_recursive_newton_euler.hpp" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Robot\App\kdl_cp\chainiksolver.hpp" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Robot\App\kdl_cp\chainiksolverpos_nr.hpp" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Robot\App\kdl_cp\chainiksolverpos_nr_jl.hpp" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Robot\App\kdl_cp\chainiksolvervel_pinv.hpp" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Robot\App\kdl_cp\chainiksolvervel_pinv_givens.hpp" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Robot\App\kdl_cp\chainiksolvervel_pinv_nso.hpp" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Robot\App\kdl_cp\chainiksolvervel_wdls.hpp" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Robot\App\kdl_cp\chainjnttojacsolver.hpp" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Robot\App\kdl_cp\frameacc.hpp" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Robot\App\kdl_cp\frameacc_io.hpp" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Robot\App\kdl_cp\frames.hpp" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Robot\App\kdl_cp\frames_io.hpp" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Robot\App\kdl_cp\framevel.hpp" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Robot\App\kdl_cp\framevel_io.hpp" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Robot\App\kdl_cp\jacobian.hpp" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Robot\App\kdl_cp\jntarray.hpp" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Robot\App\kdl_cp\jntarrayacc.hpp" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Robot\App\kdl_cp\jntarrayvel.hpp" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Robot\App\kdl_cp\jntspaceinertiamatrix.hpp" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Robot\App\kdl_cp\joint.hpp" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Robot\App\kdl_cp\kdl.hpp" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Robot\App\kdl_cp\kinfam.hpp" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Robot\App\kdl_cp\kinfam_io.hpp" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Robot\App\kdl_cp\motion.hpp" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Robot\App\kdl_cp\path.hpp" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Robot\App\kdl_cp\path_circle.hpp" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Robot\App\kdl_cp\path_composite.hpp" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Robot\App\kdl_cp\path_cyclic_closed.hpp" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Robot\App\kdl_cp\path_line.hpp" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Robot\App\kdl_cp\path_point.hpp" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Robot\App\kdl_cp\path_roundedcomposite.hpp" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Robot\App\kdl_cp\rigidbodyinertia.hpp" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Robot\App\kdl_cp\rotationalinertia.hpp" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Robot\App\kdl_cp\rotational_interpolation.hpp" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Robot\App\kdl_cp\rotational_interpolation_sa.hpp" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Robot\App\kdl_cp\segment.hpp" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Robot\App\kdl_cp\stiffness.hpp" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Robot\App\kdl_cp\trajectory.hpp" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Robot\App\kdl_cp\trajectory_composite.hpp" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Robot\App\kdl_cp\trajectory_segment.hpp" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Robot\App\kdl_cp\trajectory_stationary.hpp" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Robot\App\kdl_cp\tree.hpp" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Robot\App\kdl_cp\treefksolver.hpp" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Robot\App\kdl_cp\treefksolverpos_recursive.hpp" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Robot\App\kdl_cp\treeiksolver.hpp" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Robot\App\kdl_cp\treeiksolverpos_nr_jl.hpp" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Robot\App\kdl_cp\treeiksolvervel_wdls.hpp" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Robot\App\kdl_cp\treejnttojacsolver.hpp" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Robot\App\kdl_cp\velocityprofile.hpp" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Robot\App\kdl_cp\velocityprofile_dirac.hpp" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Robot\App\kdl_cp\velocityprofile_rect.hpp" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Robot\App\kdl_cp\velocityprofile_trap.hpp" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Robot\App\kdl_cp\velocityprofile_traphalf.hpp" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Robot\App\kdl_cp\frameacc.inl" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Robot\App\kdl_cp\frames.inl" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Robot\App\kdl_cp\framevel.inl" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Robot\App\kdl_cp\utilities\error.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Robot\App\kdl_cp\utilities\error_stack.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Robot\App\kdl_cp\utilities\kdl-config.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Robot\App\kdl_cp\utilities\rall1d.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Robot\App\kdl_cp\utilities\rall1d_io.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Robot\App\kdl_cp\utilities\rall2d.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Robot\App\kdl_cp\utilities\rall2d_io.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Robot\App\kdl_cp\utilities\rallNd.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Robot\App\kdl_cp\utilities\traits.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Robot\App\kdl_cp\utilities\utility.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Robot\App\kdl_cp\utilities\utility_io.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Robot\App\kdl_cp\utilities\svd_eigen_HH.hpp" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Robot\App\kdl_cp\utilities\svd_eigen_Macie.hpp" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Robot\App\kdl_cp\utilities\svd_HH.hpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Path\App\Command.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Path\App\Path.cpp">
+      <ObjectFileName>$(IntDir)/Path.cpp.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="$(FC_SOURCE)\Mod\Path\App\Tooltable.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Path\App\PropertyPath.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Path\App\FeaturePath.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Path\App\PropertyTooltable.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Path\App\FeaturePathCompound.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Path\App\FeaturePathShape.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Path\App\AppPath.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Path\App\AppPathPy.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Path\App\PreCompiled.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Path\App\CommandPyImp.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Path\App\PathPyImp.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Path\App\TooltablePyImp.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Robot\App\kdl_cp\articulatedbodyinertia.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Robot\App\kdl_cp\chain.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Robot\App\kdl_cp\chaindynparam.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Robot\App\kdl_cp\chainfksolverpos_recursive.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Robot\App\kdl_cp\chainfksolvervel_recursive.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Robot\App\kdl_cp\chainidsolver_recursive_newton_euler.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Robot\App\kdl_cp\chainiksolverpos_nr.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Robot\App\kdl_cp\chainiksolverpos_nr_jl.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Robot\App\kdl_cp\chainiksolvervel_pinv.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Robot\App\kdl_cp\chainiksolvervel_pinv_givens.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Robot\App\kdl_cp\chainiksolvervel_pinv_nso.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Robot\App\kdl_cp\chainiksolvervel_wdls.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Robot\App\kdl_cp\chainjnttojacsolver.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Robot\App\kdl_cp\frameacc.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Robot\App\kdl_cp\frames.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Robot\App\kdl_cp\frames_io.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Robot\App\kdl_cp\framevel.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Robot\App\kdl_cp\jacobian.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Robot\App\kdl_cp\jntarray.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Robot\App\kdl_cp\jntarrayacc.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Robot\App\kdl_cp\jntarrayvel.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Robot\App\kdl_cp\jntspaceinertiamatrix.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Robot\App\kdl_cp\joint.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Robot\App\kdl_cp\kinfam_io.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Robot\App\kdl_cp\path.cpp">
+      <ObjectFileName>$(IntDir)/__/__/Robot/App/kdl_cp/path.cpp.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="$(FC_SOURCE)\Mod\Robot\App\kdl_cp\path_circle.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Robot\App\kdl_cp\path_composite.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Robot\App\kdl_cp\path_cyclic_closed.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Robot\App\kdl_cp\path_line.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Robot\App\kdl_cp\path_point.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Robot\App\kdl_cp\path_roundedcomposite.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Robot\App\kdl_cp\rigidbodyinertia.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Robot\App\kdl_cp\rotationalinertia.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Robot\App\kdl_cp\rotational_interpolation.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Robot\App\kdl_cp\rotational_interpolation_sa.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Robot\App\kdl_cp\segment.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Robot\App\kdl_cp\trajectory.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Robot\App\kdl_cp\trajectory_composite.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Robot\App\kdl_cp\trajectory_segment.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Robot\App\kdl_cp\trajectory_stationary.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Robot\App\kdl_cp\tree.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Robot\App\kdl_cp\treefksolverpos_recursive.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Robot\App\kdl_cp\treeiksolverpos_nr_jl.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Robot\App\kdl_cp\treeiksolvervel_wdls.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Robot\App\kdl_cp\treejnttojacsolver.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Robot\App\kdl_cp\velocityprofile.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Robot\App\kdl_cp\velocityprofile_dirac.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Robot\App\kdl_cp\velocityprofile_rect.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Robot\App\kdl_cp\velocityprofile_trap.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Robot\App\kdl_cp\velocityprofile_traphalf.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Robot\App\kdl_cp\utilities\svd_eigen_HH.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Robot\App\kdl_cp\utilities\svd_HH.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Robot\App\kdl_cp\utilities\error_stack.cxx" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Robot\App\kdl_cp\utilities\utility.cxx" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Robot\App\kdl_cp\utilities\utility_io.cxx" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="$(FC_SOURCE)/App/FreeCADApp.vcxproj">
+      <Project>106CFB68-340E-3307-8B33-691BFD4C2F84</Project>
+    </ProjectReference>
+    <ProjectReference Include="$(FC_SOURCE)/Base/FreeCADBase.vcxproj">
+      <Project>C318BD7C-A3CA-3454-A3D8-7E815B7B6CC0</Project>
+    </ProjectReference>
+    <ProjectReference Include="$(FC_SOURCE)/Mod/Part/App/Part.vcxproj">
+      <Project>CD9CC58A-54E1-3516-AE9C-CEFF64AC463B</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

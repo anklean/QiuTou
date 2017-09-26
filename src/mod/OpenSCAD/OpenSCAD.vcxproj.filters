@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="\code\free-cad-code\Source\Repos\code\CMakeFiles\3a444f06f486c8533010c3aea63e5ed3\Init.py.rule" />
+    <CustomBuild Include="\code\free-cad-code\Source\Repos\code\CMakeFiles\3a444f06f486c8533010c3aea63e5ed3\InitGui.py.rule" />
+    <CustomBuild Include="\code\free-cad-code\Source\Repos\code\CMakeFiles\3a444f06f486c8533010c3aea63e5ed3\OpenSCAD2Dgeom.py.rule" />
+    <CustomBuild Include="\code\free-cad-code\Source\Repos\code\CMakeFiles\3a444f06f486c8533010c3aea63e5ed3\OpenSCADFeatures.py.rule" />
+    <CustomBuild Include="\code\free-cad-code\Source\Repos\code\CMakeFiles\3a444f06f486c8533010c3aea63e5ed3\OpenSCADUtils.py.rule" />
+    <CustomBuild Include="\code\free-cad-code\Source\Repos\code\CMakeFiles\3a444f06f486c8533010c3aea63e5ed3\OpenSCADCommands.py.rule" />
+    <CustomBuild Include="\code\free-cad-code\Source\Repos\code\CMakeFiles\3a444f06f486c8533010c3aea63e5ed3\exportCSG.py.rule" />
+    <CustomBuild Include="\code\free-cad-code\Source\Repos\code\CMakeFiles\3a444f06f486c8533010c3aea63e5ed3\importCSG.py.rule" />
+    <CustomBuild Include="\code\free-cad-code\Source\Repos\code\CMakeFiles\3a444f06f486c8533010c3aea63e5ed3\tokrules.py.rule" />
+    <CustomBuild Include="\code\free-cad-code\Source\Repos\code\CMakeFiles\3a444f06f486c8533010c3aea63e5ed3\colorcodeshapes.py.rule" />
+    <CustomBuild Include="\code\free-cad-code\Source\Repos\code\CMakeFiles\3a444f06f486c8533010c3aea63e5ed3\expandplacements.py.rule" />
+    <CustomBuild Include="\code\free-cad-code\Source\Repos\code\CMakeFiles\3a444f06f486c8533010c3aea63e5ed3\replaceobj.py.rule" />
+    <CustomBuild Include="\code\free-cad-code\Source\Repos\code\CMakeFiles\e0bb39b4431145b535fcf82d892ca19a\lex.py.rule" />
+    <CustomBuild Include="\code\free-cad-code\Source\Repos\code\CMakeFiles\e0bb39b4431145b535fcf82d892ca19a\README.rule" />
+    <CustomBuild Include="\code\free-cad-code\Source\Repos\code\CMakeFiles\e0bb39b4431145b535fcf82d892ca19a\yacc.py.rule" />
+    <CustomBuild Include="\code\free-cad-code\Source\Repos\code\CMakeFiles\e0bb39b4431145b535fcf82d892ca19a\__init__.py.rule" />
+    <CustomBuild Include="$(FC_SOURCE)\Mod\OpenSCAD\Resources\OpenSCAD.qrc" />
+    <CustomBuild Include="\code\free-cad-code\Source\Repos\code\CMakeFiles\3a444f06f486c8533010c3aea63e5ed3\OpenSCAD_rc.py.rule" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="$(FC_SOURCE)\Mod\OpenSCAD\OpenSCAD_rc.py" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{5124C73C-630B-3F59-9DFC-D2C200992F06}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="$(FC_SOURCE)\Mod\Sketcher\Gui\qrc_Sketcher.cxx" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Sketcher\Gui\AppSketcherGui.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Sketcher\Gui\AppSketcherGuiPy.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Sketcher\Gui\Command.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Sketcher\Gui\CommandCreateGeo.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Sketcher\Gui\CommandConstraints.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Sketcher\Gui\CommandSketcherTools.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Sketcher\Gui\CommandAlterGeometry.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Sketcher\Gui\PreCompiled.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Sketcher\Gui\SoZoomTranslation.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Sketcher\Gui\SoDatumLabel.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Sketcher\Gui\PropertyConstraintListItem.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Sketcher\Gui\TaskSketcherConstrains.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Sketcher\Gui\TaskSketcherElements.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Sketcher\Gui\TaskSketcherCreateCommands.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Sketcher\Gui\TaskSketcherGeneral.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Sketcher\Gui\TaskSketcherMessages.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Sketcher\Gui\TaskSketcherSolverAdvanced.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Sketcher\Gui\TaskSketcherValidation.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Sketcher\Gui\ViewProviderSketch.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Sketcher\Gui\DrawSketchHandler.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Sketcher\Gui\Workbench.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Sketcher\Gui\EditDatumDialog.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Sketcher\Gui\SketchOrientationDialog.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Sketcher\Gui\SketcherSettings.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Sketcher\Gui\TaskDlgEditSketch.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Sketcher\Gui\ViewProviderPython.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="$(FC_SOURCE)\Mod\Sketcher\Gui\ui_TaskSketcherConstrains.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Sketcher\Gui\ui_TaskSketcherElements.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Sketcher\Gui\ui_TaskSketcherGeneral.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Sketcher\Gui\ui_TaskSketcherMessages.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Sketcher\Gui\ui_TaskSketcherSolverAdvanced.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Sketcher\Gui\ui_TaskSketcherValidation.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Sketcher\Gui\ui_InsertDatum.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Sketcher\Gui\ui_SketchOrientationDialog.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Sketcher\Gui\ui_SketcherSettings.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Sketcher\Gui\GeometryCreationMode.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Sketcher\Gui\CommandConstraints.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Sketcher\Gui\PreCompiled.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Sketcher\Gui\SoZoomTranslation.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Sketcher\Gui\SoDatumLabel.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Sketcher\Gui\ViewProviderSketch.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Sketcher\Gui\DrawSketchHandler.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Sketcher\Gui\Workbench.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Sketcher\Gui\EditDatumDialog.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Sketcher\Gui\ViewProviderPython.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\Sketcher.qrc" />
+    <CustomBuild Include="$(FC_SOURCE)\Mod\Sketcher\Gui\PropertyConstraintListItem.h" />
+    <CustomBuild Include="$(FC_SOURCE)\Mod\Sketcher\Gui\TaskSketcherConstrains.ui" />
+    <CustomBuild Include="$(FC_SOURCE)\Mod\Sketcher\Gui\TaskSketcherConstrains.h" />
+    <CustomBuild Include="$(FC_SOURCE)\Mod\Sketcher\Gui\TaskSketcherElements.ui" />
+    <CustomBuild Include="$(FC_SOURCE)\Mod\Sketcher\Gui\TaskSketcherElements.h" />
+    <CustomBuild Include="$(FC_SOURCE)\Mod\Sketcher\Gui\TaskSketcherCreateCommands.h" />
+    <CustomBuild Include="$(FC_SOURCE)\Mod\Sketcher\Gui\TaskSketcherGeneral.ui" />
+    <CustomBuild Include="$(FC_SOURCE)\Mod\Sketcher\Gui\TaskSketcherGeneral.h" />
+    <CustomBuild Include="$(FC_SOURCE)\Mod\Sketcher\Gui\TaskSketcherMessages.ui" />
+    <CustomBuild Include="$(FC_SOURCE)\Mod\Sketcher\Gui\TaskSketcherMessages.h" />
+    <CustomBuild Include="$(FC_SOURCE)\Mod\Sketcher\Gui\TaskSketcherSolverAdvanced.ui" />
+    <CustomBuild Include="$(FC_SOURCE)\Mod\Sketcher\Gui\TaskSketcherSolverAdvanced.h" />
+    <CustomBuild Include="$(FC_SOURCE)\Mod\Sketcher\Gui\TaskSketcherValidation.ui" />
+    <CustomBuild Include="$(FC_SOURCE)\Mod\Sketcher\Gui\TaskSketcherValidation.h" />
+    <CustomBuild Include="$(FC_SOURCE)\Mod\Sketcher\Gui\SketchOrientationDialog.h" />
+    <CustomBuild Include="$(FC_SOURCE)\Mod\Sketcher\Gui\SketcherSettings.h" />
+    <CustomBuild Include="$(FC_SOURCE)\Mod\Sketcher\Gui\TaskDlgEditSketch.h" />
+    <CustomBuild Include="\code\free-cad-code\Source\Repos\code\CMakeFiles\1441a96959fe2714d7ac997be2b95f2e\InitGui.py.rule" />
+    <CustomBuild Include="\code\free-cad-code\Source\Repos\code\CMakeFiles\1441a96959fe2714d7ac997be2b95f2e\TestSketcherGui.py.rule" />
+    <CustomBuild Include="$(FC_SOURCE)\Mod\Sketcher\Gui\InsertDatum.ui" />
+    <CustomBuild Include="$(FC_SOURCE)\Mod\Sketcher\Gui\SketchOrientationDialog.ui" />
+    <CustomBuild Include="$(FC_SOURCE)\Mod\Sketcher\Gui\SketcherSettings.ui" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{BD35BF06-C8E8-3366-910F-4955129FFCAC}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{4129A801-9AD2-3DA1-A809-5BC032DABCC2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{5124C73C-630B-3F59-9DFC-D2C200992F06}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

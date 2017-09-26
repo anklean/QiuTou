@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="$(FC_SOURCE)\Mod\Fem\App\FemMeshObject.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Fem\App\FemMeshShapeObject.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Fem\App\FemMeshShapeNetgenObject.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Fem\App\FemAnalysis.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Fem\App\FemMesh.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Fem\App\FemResultObject.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Fem\App\FemConstraint.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Fem\App\FemMeshProperty.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Fem\App\FemSetObject.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Fem\App\FemSetNodesObject.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Fem\App\FemSetElementsObject.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Fem\App\FemSetFacesObject.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Fem\App\FemSetGeometryObject.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Fem\App\FemConstraintBearing.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Fem\App\FemConstraintFixed.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Fem\App\FemConstraintForce.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Fem\App\FemConstraintPressure.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Fem\App\FemConstraintGear.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Fem\App\FemConstraintPulley.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Fem\App\AppFem.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Fem\App\AppFemPy.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Fem\App\PreCompiled.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Fem\App\FemMeshPyImp.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Fem\App\HypothesisPy.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="$(FC_SOURCE)\Mod\Fem\App\FemMeshObject.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Fem\App\FemMeshShapeObject.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Fem\App\FemMeshShapeNetgenObject.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Fem\App\FemAnalysis.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Fem\App\FemMesh.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Fem\App\FemResultObject.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Fem\App\FemConstraint.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Fem\App\FemMeshProperty.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Fem\App\FemSetObject.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Fem\App\FemSetNodesObject.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Fem\App\FemSetElementsObject.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Fem\App\FemSetFacesObject.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Fem\App\FemSetGeometryObject.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Fem\App\FemConstraintBearing.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Fem\App\FemConstraintFixed.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Fem\App\FemConstraintForce.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Fem\App\FemConstraintPressure.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Fem\App\FemConstraintGear.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Fem\App\FemConstraintPulley.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Fem\App\PreCompiled.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Fem\App\HypothesisPy.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="$(FC_SOURCE)\Mod\Fem\App\FemMeshPy.xml" />
+    <CustomBuild Include="\code\free-cad-code\Source\Repos\code\CMakeFiles\49c6813715ff56e9360160382e75e871\Init.py.rule" />
+    <CustomBuild Include="\code\free-cad-code\Source\Repos\code\CMakeFiles\49c6813715ff56e9360160382e75e871\convert2TetGen.py.rule" />
+    <CustomBuild Include="\code\free-cad-code\Source\Repos\code\CMakeFiles\49c6813715ff56e9360160382e75e871\ccxFrdReader.py.rule" />
+    <CustomBuild Include="\code\free-cad-code\Source\Repos\code\CMakeFiles\49c6813715ff56e9360160382e75e871\ccxInpWriter.py.rule" />
+    <CustomBuild Include="\code\free-cad-code\Source\Repos\code\CMakeFiles\49c6813715ff56e9360160382e75e871\FemTools.py.rule" />
+    <CustomBuild Include="\code\free-cad-code\Source\Repos\code\CMakeFiles\49c6813715ff56e9360160382e75e871\MechanicalAnalysis.ui.rule" />
+    <CustomBuild Include="\code\free-cad-code\Source\Repos\code\CMakeFiles\49c6813715ff56e9360160382e75e871\MechanicalAnalysis.py.rule" />
+    <CustomBuild Include="\code\free-cad-code\Source\Repos\code\CMakeFiles\49c6813715ff56e9360160382e75e871\MechanicalMaterial.ui.rule" />
+    <CustomBuild Include="\code\free-cad-code\Source\Repos\code\CMakeFiles\49c6813715ff56e9360160382e75e871\MechanicalMaterial.py.rule" />
+    <CustomBuild Include="\code\free-cad-code\Source\Repos\code\CMakeFiles\49c6813715ff56e9360160382e75e871\ShowDisplacement.ui.rule" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{5124C73C-630B-3F59-9DFC-D2C200992F06}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Python">
+      <UniqueIdentifier>{3007B628-6C63-33B6-B2CF-5375A530392A}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Module">
+      <UniqueIdentifier>{D07C31CD-D17F-31BA-9EAE-DE2074DD6B41}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Base types">
+      <UniqueIdentifier>{E82C0CED-2DEC-3042-BAD5-38D5F39E2E80}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Set objects">
+      <UniqueIdentifier>{D1727BD9-878E-338E-813C-1174CFBA25E5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Constraints">
+      <UniqueIdentifier>{6A808A4F-8F02-3E24-BAEF-7E0D51608D50}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

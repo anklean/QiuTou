@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="$(FC_SOURCE)\Mod\PartDesign\App\Feature.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\PartDesign\App\Body.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\PartDesign\App\FeatureTransformed.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\PartDesign\App\FeatureMirrored.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\PartDesign\App\FeatureLinearPattern.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\PartDesign\App\FeaturePolarPattern.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\PartDesign\App\FeatureScaled.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\PartDesign\App\FeatureMultiTransform.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\PartDesign\App\FeatureSketchBased.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\PartDesign\App\FeatureFace.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\PartDesign\App\FeaturePad.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\PartDesign\App\FeaturePocket.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\PartDesign\App\FeatureRevolution.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\PartDesign\App\FeatureGroove.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\PartDesign\App\FeatureAdditive.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\PartDesign\App\FeatureSubtractive.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\PartDesign\App\FeatureHole.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\PartDesign\App\FeatureDressUp.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\PartDesign\App\FeatureFillet.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\PartDesign\App\FeatureChamfer.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\PartDesign\App\FeatureDraft.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\PartDesign\App\AppPartDesign.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\PartDesign\App\AppPartDesignPy.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\PartDesign\App\PreCompiled.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="$(FC_SOURCE)\Mod\PartDesign\App\Feature.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\PartDesign\App\Body.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\PartDesign\App\FeatureTransformed.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\PartDesign\App\FeatureMirrored.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\PartDesign\App\FeatureLinearPattern.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\PartDesign\App\FeaturePolarPattern.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\PartDesign\App\FeatureScaled.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\PartDesign\App\FeatureMultiTransform.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\PartDesign\App\FeatureSketchBased.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\PartDesign\App\FeatureFace.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\PartDesign\App\FeaturePad.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\PartDesign\App\FeaturePocket.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\PartDesign\App\FeatureRevolution.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\PartDesign\App\FeatureGroove.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\PartDesign\App\FeatureAdditive.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\PartDesign\App\FeatureSubtractive.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\PartDesign\App\FeatureHole.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\PartDesign\App\FeatureDressUp.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\PartDesign\App\FeatureFillet.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\PartDesign\App\FeatureChamfer.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\PartDesign\App\FeatureDraft.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\PartDesign\App\PreCompiled.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{5124C73C-630B-3F59-9DFC-D2C200992F06}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Features">
+      <UniqueIdentifier>{87630B96-4026-3662-A292-99D1C179217B}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="FeaturesTransformed">
+      <UniqueIdentifier>{E1C149BA-26DD-330F-880F-4F599BF890FA}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DressUpFeatures">
+      <UniqueIdentifier>{742840A1-B61F-3F85-A451-8F94C2F0B05C}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SketchBasedFeatures">
+      <UniqueIdentifier>{FB8D6C6E-0416-3896-97D5-96F4467972FB}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Module">
+      <UniqueIdentifier>{D07C31CD-D17F-31BA-9EAE-DE2074DD6B41}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

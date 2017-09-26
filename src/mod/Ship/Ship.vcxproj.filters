@@ -1,0 +1,135 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="\code\free-cad-code\Source\Repos\code\CMakeFiles\e366114a64c56a92c07580987b46d1ff\InitGui.py.rule" />
+    <CustomBuild Include="\code\free-cad-code\Source\Repos\code\CMakeFiles\e366114a64c56a92c07580987b46d1ff\ShipGui.py.rule" />
+    <CustomBuild Include="\code\free-cad-code\Source\Repos\code\CMakeFiles\e366114a64c56a92c07580987b46d1ff\Instance.py.rule" />
+    <CustomBuild Include="\code\free-cad-code\Source\Repos\code\CMakeFiles\e366114a64c56a92c07580987b46d1ff\TankInstance.py.rule" />
+    <CustomBuild Include="\code\free-cad-code\Source\Repos\code\CMakeFiles\e366114a64c56a92c07580987b46d1ff\WeightInstance.py.rule" />
+    <CustomBuild Include="\code\free-cad-code\Source\Repos\code\CMakeFiles\9b56e19b86fd5b29da1c9112f463655d\s60.fcstd.rule" />
+    <CustomBuild Include="\code\free-cad-code\Source\Repos\code\CMakeFiles\9b56e19b86fd5b29da1c9112f463655d\s60_katamaran.fcstd.rule" />
+    <CustomBuild Include="\code\free-cad-code\Source\Repos\code\CMakeFiles\9b56e19b86fd5b29da1c9112f463655d\wigley.fcstd.rule" />
+    <CustomBuild Include="\code\free-cad-code\Source\Repos\code\CMakeFiles\9b56e19b86fd5b29da1c9112f463655d\wigley_katamaran.fcstd.rule" />
+    <CustomBuild Include="\code\free-cad-code\Source\Repos\code\CMakeFiles\b2768ef75080cf7f4b97830f39daae21\__init__.py.rule" />
+    <CustomBuild Include="\code\free-cad-code\Source\Repos\code\CMakeFiles\b2768ef75080cf7f4b97830f39daae21\TaskPanel.py.rule" />
+    <CustomBuild Include="\code\free-cad-code\Source\Repos\code\CMakeFiles\b2768ef75080cf7f4b97830f39daae21\TaskPanel.ui.rule" />
+    <CustomBuild Include="\code\free-cad-code\Source\Repos\code\CMakeFiles\7308d4778595f81e89cee7d76b01758d\__init__.py.rule" />
+    <CustomBuild Include="\code\free-cad-code\Source\Repos\code\CMakeFiles\7308d4778595f81e89cee7d76b01758d\Preview.py.rule" />
+    <CustomBuild Include="\code\free-cad-code\Source\Repos\code\CMakeFiles\7308d4778595f81e89cee7d76b01758d\TaskPanel.py.rule" />
+    <CustomBuild Include="\code\free-cad-code\Source\Repos\code\CMakeFiles\7308d4778595f81e89cee7d76b01758d\TaskPanel.ui.rule" />
+    <CustomBuild Include="\code\free-cad-code\Source\Repos\code\CMakeFiles\396e26610b065c688b54880f8cf70b15\__init__.py.rule" />
+    <CustomBuild Include="\code\free-cad-code\Source\Repos\code\CMakeFiles\396e26610b065c688b54880f8cf70b15\Preview.py.rule" />
+    <CustomBuild Include="\code\free-cad-code\Source\Repos\code\CMakeFiles\396e26610b065c688b54880f8cf70b15\TaskPanel.py.rule" />
+    <CustomBuild Include="\code\free-cad-code\Source\Repos\code\CMakeFiles\396e26610b065c688b54880f8cf70b15\TaskPanel.ui.rule" />
+    <CustomBuild Include="\code\free-cad-code\Source\Repos\code\CMakeFiles\e0b532e2a086c4b67a21ba56a5b8be14\__init__.py.rule" />
+    <CustomBuild Include="\code\free-cad-code\Source\Repos\code\CMakeFiles\e0b532e2a086c4b67a21ba56a5b8be14\PlotAux.py.rule" />
+    <CustomBuild Include="\code\free-cad-code\Source\Repos\code\CMakeFiles\e0b532e2a086c4b67a21ba56a5b8be14\Preview.py.rule" />
+    <CustomBuild Include="\code\free-cad-code\Source\Repos\code\CMakeFiles\e0b532e2a086c4b67a21ba56a5b8be14\TaskPanel.py.rule" />
+    <CustomBuild Include="\code\free-cad-code\Source\Repos\code\CMakeFiles\e0b532e2a086c4b67a21ba56a5b8be14\TaskPanel.ui.rule" />
+    <CustomBuild Include="\code\free-cad-code\Source\Repos\code\CMakeFiles\050560ef503573a07ffaf82711285bcb\__init__.py.rule" />
+    <CustomBuild Include="\code\free-cad-code\Source\Repos\code\CMakeFiles\050560ef503573a07ffaf82711285bcb\PlotAux.py.rule" />
+    <CustomBuild Include="\code\free-cad-code\Source\Repos\code\CMakeFiles\050560ef503573a07ffaf82711285bcb\TaskPanel.py.rule" />
+    <CustomBuild Include="\code\free-cad-code\Source\Repos\code\CMakeFiles\050560ef503573a07ffaf82711285bcb\TaskPanel.ui.rule" />
+    <CustomBuild Include="\code\free-cad-code\Source\Repos\code\CMakeFiles\050560ef503573a07ffaf82711285bcb\Tools.py.rule" />
+    <CustomBuild Include="\code\free-cad-code\Source\Repos\code\CMakeFiles\23d03ed1ff39b37836860bb94c5b7115\__init__.py.rule" />
+    <CustomBuild Include="\code\free-cad-code\Source\Repos\code\CMakeFiles\23d03ed1ff39b37836860bb94c5b7115\TaskPanel.py.rule" />
+    <CustomBuild Include="\code\free-cad-code\Source\Repos\code\CMakeFiles\23d03ed1ff39b37836860bb94c5b7115\TaskPanel.ui.rule" />
+    <CustomBuild Include="\code\free-cad-code\Source\Repos\code\CMakeFiles\3d754274413cf3ac07ece3cbdc547630\__init__.py.rule" />
+    <CustomBuild Include="\code\free-cad-code\Source\Repos\code\CMakeFiles\3d754274413cf3ac07ece3cbdc547630\TaskPanel.py.rule" />
+    <CustomBuild Include="\code\free-cad-code\Source\Repos\code\CMakeFiles\3d754274413cf3ac07ece3cbdc547630\TaskPanel.ui.rule" />
+    <CustomBuild Include="\code\free-cad-code\Source\Repos\code\CMakeFiles\085c9f099febcbc4413deafe2f178672\__init__.py.rule" />
+    <CustomBuild Include="\code\free-cad-code\Source\Repos\code\CMakeFiles\085c9f099febcbc4413deafe2f178672\PlotAux.py.rule" />
+    <CustomBuild Include="\code\free-cad-code\Source\Repos\code\CMakeFiles\085c9f099febcbc4413deafe2f178672\TaskPanel.py.rule" />
+    <CustomBuild Include="\code\free-cad-code\Source\Repos\code\CMakeFiles\085c9f099febcbc4413deafe2f178672\TaskPanel.ui.rule" />
+    <CustomBuild Include="\code\free-cad-code\Source\Repos\code\CMakeFiles\0926f3dfeb2054d5ff2f2a22b4e9c1d1\__init__.py.rule" />
+    <CustomBuild Include="\code\free-cad-code\Source\Repos\code\CMakeFiles\0926f3dfeb2054d5ff2f2a22b4e9c1d1\Locale.py.rule" />
+    <CustomBuild Include="\code\free-cad-code\Source\Repos\code\CMakeFiles\0926f3dfeb2054d5ff2f2a22b4e9c1d1\Math.py.rule" />
+    <CustomBuild Include="\code\free-cad-code\Source\Repos\code\CMakeFiles\0926f3dfeb2054d5ff2f2a22b4e9c1d1\Paths.py.rule" />
+    <CustomBuild Include="\code\free-cad-code\Source\Repos\code\CMakeFiles\0926f3dfeb2054d5ff2f2a22b4e9c1d1\Units.py.rule" />
+    <CustomBuild Include="$(FC_SOURCE)\Mod\Ship\resources\Ship.qrc" />
+    <CustomBuild Include="\code\free-cad-code\Source\Repos\code\CMakeFiles\e366114a64c56a92c07580987b46d1ff\Ship_rc.py.rule" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="$(FC_SOURCE)\Mod\Ship\InitGui.py" />
+    <None Include="$(FC_SOURCE)\Mod\Ship\ShipGui.py" />
+    <None Include="$(FC_SOURCE)\Mod\Ship\Instance.py" />
+    <None Include="$(FC_SOURCE)\Mod\Ship\TankInstance.py" />
+    <None Include="$(FC_SOURCE)\Mod\Ship\WeightInstance.py" />
+    <None Include="$(FC_SOURCE)\Mod\Ship\resources\examples\s60.fcstd" />
+    <None Include="$(FC_SOURCE)\Mod\Ship\resources\examples\s60_katamaran.fcstd" />
+    <None Include="$(FC_SOURCE)\Mod\Ship\resources\examples\wigley.fcstd" />
+    <None Include="$(FC_SOURCE)\Mod\Ship\resources\examples\wigley_katamaran.fcstd" />
+    <None Include="$(FC_SOURCE)\Mod\Ship\shipLoadExample\__init__.py" />
+    <None Include="$(FC_SOURCE)\Mod\Ship\shipLoadExample\TaskPanel.py" />
+    <None Include="$(FC_SOURCE)\Mod\Ship\shipLoadExample\TaskPanel.ui" />
+    <None Include="$(FC_SOURCE)\Mod\Ship\shipCreateShip\__init__.py" />
+    <None Include="$(FC_SOURCE)\Mod\Ship\shipCreateShip\Preview.py" />
+    <None Include="$(FC_SOURCE)\Mod\Ship\shipCreateShip\TaskPanel.py" />
+    <None Include="$(FC_SOURCE)\Mod\Ship\shipCreateShip\TaskPanel.ui" />
+    <None Include="$(FC_SOURCE)\Mod\Ship\shipOutlineDraw\__init__.py" />
+    <None Include="$(FC_SOURCE)\Mod\Ship\shipOutlineDraw\Preview.py" />
+    <None Include="$(FC_SOURCE)\Mod\Ship\shipOutlineDraw\TaskPanel.py" />
+    <None Include="$(FC_SOURCE)\Mod\Ship\shipOutlineDraw\TaskPanel.ui" />
+    <None Include="$(FC_SOURCE)\Mod\Ship\shipAreasCurve\__init__.py" />
+    <None Include="$(FC_SOURCE)\Mod\Ship\shipAreasCurve\PlotAux.py" />
+    <None Include="$(FC_SOURCE)\Mod\Ship\shipAreasCurve\Preview.py" />
+    <None Include="$(FC_SOURCE)\Mod\Ship\shipAreasCurve\TaskPanel.py" />
+    <None Include="$(FC_SOURCE)\Mod\Ship\shipAreasCurve\TaskPanel.ui" />
+    <None Include="$(FC_SOURCE)\Mod\Ship\shipHydrostatics\__init__.py" />
+    <None Include="$(FC_SOURCE)\Mod\Ship\shipHydrostatics\PlotAux.py" />
+    <None Include="$(FC_SOURCE)\Mod\Ship\shipHydrostatics\TaskPanel.py" />
+    <None Include="$(FC_SOURCE)\Mod\Ship\shipHydrostatics\TaskPanel.ui" />
+    <None Include="$(FC_SOURCE)\Mod\Ship\shipHydrostatics\Tools.py" />
+    <None Include="$(FC_SOURCE)\Mod\Ship\shipCreateWeight\__init__.py" />
+    <None Include="$(FC_SOURCE)\Mod\Ship\shipCreateWeight\TaskPanel.py" />
+    <None Include="$(FC_SOURCE)\Mod\Ship\shipCreateWeight\TaskPanel.ui" />
+    <None Include="$(FC_SOURCE)\Mod\Ship\shipCreateTank\__init__.py" />
+    <None Include="$(FC_SOURCE)\Mod\Ship\shipCreateTank\TaskPanel.py" />
+    <None Include="$(FC_SOURCE)\Mod\Ship\shipCreateTank\TaskPanel.ui" />
+    <None Include="$(FC_SOURCE)\Mod\Ship\shipCapacityCurve\__init__.py" />
+    <None Include="$(FC_SOURCE)\Mod\Ship\shipCapacityCurve\PlotAux.py" />
+    <None Include="$(FC_SOURCE)\Mod\Ship\shipCapacityCurve\TaskPanel.py" />
+    <None Include="$(FC_SOURCE)\Mod\Ship\shipCapacityCurve\TaskPanel.ui" />
+    <None Include="$(FC_SOURCE)\Mod\Ship\shipUtils\__init__.py" />
+    <None Include="$(FC_SOURCE)\Mod\Ship\shipUtils\Locale.py" />
+    <None Include="$(FC_SOURCE)\Mod\Ship\shipUtils\Math.py" />
+    <None Include="$(FC_SOURCE)\Mod\Ship\shipUtils\Paths.py" />
+    <None Include="$(FC_SOURCE)\Mod\Ship\shipUtils\Units.py" />
+    <None Include="$(FC_SOURCE)\Mod\Ship\Ship_rc.py" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{5124C73C-630B-3F59-9DFC-D2C200992F06}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="shipexamples">
+      <UniqueIdentifier>{AD4DF2E0-5EFB-3451-B9CD-9884524DB3E1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="shiploadexample">
+      <UniqueIdentifier>{D70EC5AE-7E31-3DB0-9623-06B5A75D3BCB}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="shipcreateship">
+      <UniqueIdentifier>{CEB64CE2-B905-311D-BD7C-7B19348FEDF9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="shipoutlinedraw">
+      <UniqueIdentifier>{B48C9C31-360E-3BD6-8289-DA5515ED89A7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="shipareascurve">
+      <UniqueIdentifier>{58CA1FD9-6827-3ECC-8984-B9E61994BD02}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="shiphydrostatics">
+      <UniqueIdentifier>{D4922638-682B-3736-B78F-5F9DE89BD2B1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="shipcreateweight">
+      <UniqueIdentifier>{61C89BA4-8F7E-389D-843F-324D6FB327C0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="shipcreatetank">
+      <UniqueIdentifier>{F622FCB2-E33C-3D89-8BE9-BE3ADDFC18B4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="shipcapacitycurve">
+      <UniqueIdentifier>{BE82FA83-EC65-3EDC-8112-3227E9AB3262}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="shiputils">
+      <UniqueIdentifier>{9F4F5FC0-0FDE-360E-95FE-5614DEFA4777}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

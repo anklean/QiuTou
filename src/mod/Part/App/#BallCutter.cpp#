@@ -1,0 +1,347 @@
+/***************************************************************************
+ *   Copyright (c) 2008 Werner Mayer <wmayer[at]users.sourceforge.net>     *
+ *                                                                         *
+ *   This file is part of the FreeCAD CAx development system.              *
+ *                                                                         *
+ *   This library is free software; you can redistribute it and/or         *
+ *   modify it under the terms of the GNU Library General Public           *
+ *   License as published by the Free Software Foundation; either          *
+ *   version 2 of the License, or (at your option) any later version.      *
+ *                                                                         *
+ *   This library  is distributed in the hope that it will be useful,      *
+ *   but WITHOUT ANY WARRANTY; without even the implied warranty of        *
+ *   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the         *
+ *   GNU Library General Public License for more details.                  *
+ *                                                                         *
+ *   You should have received a copy of the GNU Library General Public     *
+ *   License along with this library; see the file COPYING.LIB. If not,    *
+ *   write to the Free Software Foundation, Inc., 59 Temple Place,         *
+ *   Suite 330, Boston, MA  02111-1307, USA                                *
+ *                                                                         *
+ ***************************************************************************/
+
+
+#include "PreCompiled.h"
+#ifndef _PreComp_
+# include <cmath>
+# include <Bnd_Box.hxx>
+# include <BRepBndLib.hxx>
+# include <gp_Pln.hxx>
+# include <gp_Trsf.hxx>
+# include <BRep_Tool.hxx>
+# include <BRepAdaptor_Surface.hxx>
+# include <BRepCheck_Analyzer.hxx>
+# include <BRepOffsetAPI_MakeOffset.hxx>
+# include <BRepBuilderAPI_Copy.hxx>
+# include <BRepBuilderAPI_MakeFace.hxx>
+# include <BRepBuilderAPI_MakeWire.hxx>
+# include <BRepBuilderAPI_Transform.hxx>
+# include <BRepOffsetAPI_ThruSections.hxx>
+# include <BRepPrimAPI_MakePrism.hxx>
+# include <Geom_Plane.hxx>
+# include <IntTools_FClass2d.hxx>
+# include <Precision.hxx>
+# include <ShapeAnalysis.hxx>
+# include <ShapeAnalysis_Surface.hxx>
+# include <ShapeFix_Shape.hxx>
+# include <ShapeFix_Wire.hxx>
+# include <TopoDS.hxx>
+# include <TopoDS_Iterator.hxx>
+# include <TopExp.hxx>
+# include <TopExp_Explorer.hxx>
+# include <TopTools_IndexedMapOfShape.hxx>
+#endif
+
+
+#include "BallCutter.h"
+#include <Base/Tools.h>
+#include <Base/Exception.h>
+#include "math.h"
+#include "App/Application.h"
+#include "App/Document.h"
+#include "PrimitiveFeature.h"
+#include "BRepBuilderAPI_MakeEdge.hxx"
+#include "BRepBuilderAPI_MakePolygon.hxx"
+
+
+using namespace Part;
+
+
+PROPERTY_SOURCE(Part::BallCutter, Part::Feature)
+
+BallCutter::BallCutter()
+{
+	ADD_PROPERTY(number, (6));
+	ADD_PROPERTY(angle, (18));
+	ADD_PROPERTY(sketchAngle, (30));
+	ADD_PROPERTY(sketchLength, (0.3));
+
+	ADD_PROPERTY(radius, (0.8));
+	ADD_PROPERTY(ballHeight, (1.2));
+	ADD_PROPERTY(pathStep, (0.3));
+	
+}
+
+short BallCutter::mustExecute() const
+{
+	if (number.isTouched() ||
+		angle.isTouched() ||
+		sketchAngle.isTouched() ||
+		sketchLength.isTouched() ||
+		radius.isTouched() ||
+		ballHeight.isTouched())
+        return 1;
+    return 0;
+}
+
+App::DocumentObjectExecReturn* BallCutter::makeLine(Base::Vector3d& startPt, Base::Vector3d& endPt, TopoDS_Edge& edge)
+{
+	//Part::GeomLineSegment line;
+	//line.setPoints(startPt, endPt);
+	//lineList.push_back(line);
+
+ 	App::Document* doc = App::GetApplication().getActiveDocument();
+ 	if (doc)
+ 	{
+ 		App::DocumentObject* pobj = doc->addObject("Part::Line", "line");
+ 		if (pobj)
+ 		{
+ 			Part::Line* pLine = dynamic_cast<Part::Line*>(pobj);
+ 			pLine->X1.setValue(startPt.x);
+ 			pLine->Y1.setValue(startPt.y);
+ 			pLine->Z1.setValue(startPt.z);
+ 			pLine->X2.setValue(endPt.x);
+ 			pLine->Y2.setValue(endPt.y);
+ 			pLine->Z2.setValue(endPt.z);
+ 		}
+ 	}
+
+	/*gp_Pnt point1;
+	point1.SetX(startPt.x);
+	point1.SetY(startPt.y);
+	point1.SetZ(startPt.z);
+
+	gp_Pnt point2;
+	point2.SetX(endPt.x);
+	point2.SetY(endPt.y);
+	point2.SetZ(endPt.z);
+
+	BRepBuilderAPI_MakeEdge mkEdge(point1, point2);
+	if (!mkEdge.IsDone())
+		return new App::DocumentObjectExecReturn("Failed to create edge");
+	
+	edge = mkEdge.Edge();*/
+
+	return 0;
+}
+
+void BallCutter::makePloyline(std::vector<Base::Vector3d> points,TopoDS_Wire& wrie)
+{
+	// create polygon
+	BRepBuilderAPI_MakePolygon mkPoly;
+
+	int size = points.size();
+	for (int i = 0; i < size; i++) 
+	{
+		Base::Vector3d v = points[i];
+		mkPoly.Add(gp_Pnt(v.x, v.y, v.z));
+	}
+
+	if (mkPoly.IsDone())
+	{
+		mkPoly.Close();
+		wrie = mkPoly.Wire();
+	}
+}
+
+void BallCutter::makeMainBoby()
+{
+  double cyDiameter = CylinderDiameter.getValue();
+  double cyLength = CylinderLength.getValue();
+
+  double ballH = ballHeight.getValue();
+  double ballD = ballDiameter.getValue();
+
+  double chamferA = chamferEdgeA.getValue();
+  double chamferB = chamferEdgeB.getValue();
+  
+  Base::Vector3d pt0(0,0,0);
+  Base::Vector3d pt1(pt0.x,pt0.y + cyDiameter / 2 , pt0.z);
+  Base::Vector3d pt2(pt0.x + cyLength - ChamferA, pt1.y, pt1.z);
+  Base::Vector3d pt3(pt0.x + cyLength, pt2.y + chamferB, pt2.z);
+
+  double h = sqrt((ballD / 2) * (ballD / 2) - (ballH - ballD / 2) * (ballH - ballD / 2));
+
+  gp_Pnt base(0,0,0);
+  gp_Dir axis(0,1,0);
+
+  Standard_Boolean isSolid = Standard_True;
+  
+}
+void BallCutter::makeMainSketch(double h, double L, double angleIncre, double sketchY, TopoDS_Wire& wire)
+{
+	Base::Vector3d basePt(0, 0, 0);
+	Base::Vector3d pt0(basePt.x, basePt.y, basePt.z + sketchY);
+
+	std::vector<Base::Vector3d> points;
+	// 创建外圈点
+	int num = number.getValue();
+	for (int i = 0; i < num; i++)
+	{
+		double ag = 2 * M_PI / num * i + angleIncre;
+		Base::Vector3d pt = Base::Vector3d(pt0.x + h * sin(ag), pt0.y + h * cos(ag), pt0.z);
+		points.push_back(pt);
+	}
+
+	// 创建内圈点
+	if (points.size() == 0)
+	{
+		return;
+	}
+	Base::Vector3d ptStart = points[0];
+	double sktAngle = sketchAngle.getValue() * M_PI / 180;
+	Base::Vector3d ptTemp = Base::Vector3d(ptStart.x + L * sin(sktAngle),
+		ptStart.y - L * cos(sktAngle), ptStart.z);
+	double ag = atan(ptTemp.y / ptTemp.x);
+	double r = ptTemp.y / sin(ag);
+
+	for (int i = 0; i < num; i++)
+	{
+		double agStep = 2 * M_PI / num * i;
+		Base::Vector3d pt = Base::Vector3d(pt0.x + r * cos(ag - agStep),
+			pt0.y + r * sin(ag - agStep), pt0.z);
+		points.push_back(pt);
+	}
+
+	int size = (int)points.size() / 2;
+
+	std::vector<Base::Vector3d> pointList;
+	//BRepBuilderAPI_MakeWire mkWrie;
+	for (int i = 0; i < size; i++)
+	{
+		Base::Vector3d pt = points[i];
+		Base::Vector3d ptNext;
+		Base::Vector3d ptInSide = points[i + num];
+		if (i != size - 1)
+		{			
+			ptNext = points[i + 1];
+		}
+		else
+		{
+			ptNext = points[0];
+		}
+
+		double stp = pathStep.getValue();
+		Base::Vector3d vec = (ptInSide - pt).Normalize();
+
+		int count = (int)(L / pathStep.getValue());
+		for (int i = 0; i < count; i++)
+		{
+			Base::Vector3d ptTemp = pt + (vec * i * stp);
+			pointList.push_back(ptTemp);
+		}
+		double dist = Distance(ptInSide, ptNext);
+		count = (int)(dist / stp);
+		Base::Vector3d vec2 = (ptNext - ptInSide).Normalize();
+
+		for (int i = 0; i < count; i++)
+		{
+			Base::Vector3d ptTemp = ptInSide + (vec2 * i * stp);
+			pointList.push_back(ptTemp);
+		}
+	}
+
+	makePloyline(pointList, wire);
+
+// 	for (int i = 0; i < pointList.size(); i++)
+// 	{
+// 		Base::Vector3d pt = pointList[i];
+// 		Base::Vector3d ptNext;
+// 		if (i != pointList.size() -1)
+// 		{
+// 			ptNext = pointList[i + 1];
+// 		}
+// 		else
+// 		{
+// 			ptNext = pointList[0];
+// 		}
+// 		TopoDS_Edge edge1;
+// 		makeLine(pt, ptNext, edge1);
+// 	}
+}
+App::DocumentObjectExecReturn *BallCutter::execute(void)
+{
+	App::Document* doc = App::GetApplication().getActiveDocument();
+	if (doc)
+	{
+		std::vector<App::DocumentObject*> lines = doc->getObjectsOfType(Part::Line::getClassTypeId());
+		for (std::vector<App::DocumentObject*>::iterator it = lines.begin();
+			it != lines.end(); ++it)
+		{
+			doc->remObject((*it)->getNameInDocument());
+		}		
+	}
+	//makeMainBoby(1.1, 0.8, 0.1, 0.05, 1.2, 1.6)
+	double r = radius.getValue();
+	double bh = ballHeight.getValue();
+	double h = sqrt(r * r - (bh - r) * (bh - r));
+	double ag = asin((bh - r) / r);
+	double L = sketchLength.getValue();
+
+	Standard_Boolean isSolid = Standard_False;
+	Standard_Boolean isRuled = Standard_True;
+	Standard_Boolean isClosed = Standard_False;
+
+	BRepOffsetAPI_ThruSections aGenerator(isSolid, isRuled);
+
+	double angleIncre = 0.;
+	int n = 10;
+	for (int i = 0; i < n; i++)
+	{
+		double agNew = ag - (4 * M_PI / 8 + ag)*i / n;
+		double hNew = r * cos(agNew);
+
+		double sketchY = r * sin(agNew);
+		angleIncre += 18 * M_PI / 180 / n;
+
+		TopoDS_Wire wire;
+		makeMainSketch(hNew, L, angleIncre, sketchY, wire);
+
+		aGenerator.AddWire(wire);
+	}
+	
+	Standard_Boolean anIsCheck = Standard_True;
+	aGenerator.CheckCompatibility(anIsCheck);   // use BRepFill_CompatibleWires on profiles. force #edges, orientation, "origin" to match.
+	aGenerator.Build();
+	if (!aGenerator.IsDone())
+		Standard_Failure::Raise("Failed to create loft face");
+
+	//Base::Console().Message("DEBUG: TopoShape::makeLoft returns.\n");
+	TopoDS_Shape ss= aGenerator.Shape();
+	this->Shape.setValue(ss);
+	return App::DocumentObject::StdReturn;
+}
+
+
+void Part::BallCutter::onChanged(const App::Property* prop)
+{
+	if (prop == &number ||
+		prop == &angle ||
+		prop == &sketchAngle ||
+		prop == &sketchLength ||
+		prop == &radius ||
+		prop == &ballHeight)
+	{
+		try
+		{
+			App::DocumentObjectExecReturn *r =this->recompute();
+			delete r;
+		}
+		catch (...)
+		{
+			
+		}
+	}
+
+	Part::Feature::onChanged(prop);
+}

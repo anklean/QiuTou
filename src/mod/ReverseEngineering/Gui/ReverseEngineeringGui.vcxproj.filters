@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="$(FC_SOURCE)\Mod\ReverseEngineering\Gui\qrc_ReverseEngineering.cxx" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\ReverseEngineering\Gui\AppReverseEngineeringGui.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\ReverseEngineering\Gui\AppReverseEngineeringGuiPy.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\ReverseEngineering\Gui\Command.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\ReverseEngineering\Gui\PreCompiled.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\ReverseEngineering\Gui\Workbench.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="$(FC_SOURCE)\Mod\ReverseEngineering\Gui\PreCompiled.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\ReverseEngineering\Gui\Workbench.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="$(FC_SOURCE)\Mod\ReverseEngineering\Gui\Resources\ReverseEngineering.qrc" />
+    <CustomBuild Include="\code\free-cad-code\Source\Repos\code\CMakeFiles\57bf6588a10e1cf09b2c537f6d0c7f0c\InitGui.py.rule" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{BD35BF06-C8E8-3366-910F-4955129FFCAC}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{4129A801-9AD2-3DA1-A809-5BC032DABCC2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{5124C73C-630B-3F59-9DFC-D2C200992F06}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

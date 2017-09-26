@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="$(FC_SOURCE)\Mod\Drawing\Gui\qrc_Drawing.cxx" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Drawing\Gui\AppDrawingGui.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Drawing\Gui\AppDrawingGuiPy.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Drawing\Gui\Command.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Drawing\Gui\PreCompiled.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Drawing\Gui\TaskDialog.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Drawing\Gui\TaskOrthoViews.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Drawing\Gui\Workbench.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Drawing\Gui\DrawingView.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Drawing\Gui\ViewProviderPage.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Drawing\Gui\ViewProviderView.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="$(FC_SOURCE)\Mod\Drawing\Gui\PreCompiled.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Drawing\Gui\Workbench.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Drawing\Gui\ViewProviderPage.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Drawing\Gui\ViewProviderView.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="$(FC_SOURCE)\Mod\Drawing\Gui\Resources\Drawing.qrc" />
+    <CustomBuild Include="$(FC_SOURCE)\Mod\Drawing\Gui\TaskDialog.h" />
+    <CustomBuild Include="$(FC_SOURCE)\Mod\Drawing\Gui\TaskOrthoViews.ui" />
+    <CustomBuild Include="$(FC_SOURCE)\Mod\Drawing\Gui\TaskOrthoViews.h" />
+    <CustomBuild Include="$(FC_SOURCE)\Mod\Drawing\Gui\DrawingView.h" />
+    <CustomBuild Include="\code\free-cad-code\Source\Repos\code\CMakeFiles\13c93b197220c4bc49f0c888508d265a\InitGui.py.rule" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{5124C73C-630B-3F59-9DFC-D2C200992F06}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Mod">
+      <UniqueIdentifier>{5AB22130-1B24-37FF-8C75-80B96661A15E}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SVG-View">
+      <UniqueIdentifier>{74A2524C-4B96-3072-85BC-F5973BD7A393}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ViewProvider">
+      <UniqueIdentifier>{C58C1CB9-DF0A-37B9-9E90-01B496C8CA81}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="TaskDialogs">
+      <UniqueIdentifier>{FA163800-3670-30ED-971A-9EABDE0DB6C9}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

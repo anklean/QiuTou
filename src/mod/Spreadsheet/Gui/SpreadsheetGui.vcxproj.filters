@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="$(FC_SOURCE)\Mod\Spreadsheet\Gui\AppSpreadsheetGui.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Spreadsheet\Gui\AppSpreadsheetGuiPy.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Spreadsheet\Gui\Command.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Spreadsheet\Gui\ViewProviderSpreadsheet.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Spreadsheet\Gui\SpreadsheetView.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Spreadsheet\Gui\SpreadsheetDelegate.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Spreadsheet\Gui\SheetTableView.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Spreadsheet\Gui\SheetModel.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Spreadsheet\Gui\PreCompiled.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Spreadsheet\Gui\Workbench.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Spreadsheet\Gui\qtcolorpicker.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Spreadsheet\Gui\PropertiesDialog.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="$(FC_SOURCE)\Mod\Spreadsheet\Gui\ViewProviderSpreadsheet.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Spreadsheet\Gui\PreCompiled.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Spreadsheet\Gui\ui_Sheet.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Spreadsheet\Gui\ui_PropertiesDialog.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="$(FC_SOURCE)\Mod\Spreadsheet\Gui\Resources\Spreadsheet.qrc" />
+    <CustomBuild Include="$(FC_SOURCE)\Mod\Spreadsheet\Gui\SpreadsheetView.h" />
+    <CustomBuild Include="$(FC_SOURCE)\Mod\Spreadsheet\Gui\SpreadsheetDelegate.h" />
+    <CustomBuild Include="$(FC_SOURCE)\Mod\Spreadsheet\Gui\SheetTableView.h" />
+    <CustomBuild Include="$(FC_SOURCE)\Mod\Spreadsheet\Gui\SheetModel.h" />
+    <CustomBuild Include="$(FC_SOURCE)\Mod\Spreadsheet\Gui\Workbench.h" />
+    <CustomBuild Include="$(FC_SOURCE)\Mod\Spreadsheet\Gui\qtcolorpicker.h" />
+    <CustomBuild Include="$(FC_SOURCE)\Mod\Spreadsheet\Gui\PropertiesDialog.h" />
+    <CustomBuild Include="\code\free-cad-code\Source\Repos\code\CMakeFiles\4ae08007890516fa54f8c8864ae6a5e1\InitGui.py.rule" />
+    <CustomBuild Include="\code\free-cad-code\Source\Repos\code\CMakeFiles\c5f6b65c826c24d47d43531c1aad46e3\moc_qtcolorpicker-internal.cpp.rule" />
+    <CustomBuild Include="$(FC_SOURCE)\Mod\Spreadsheet\Gui\Sheet.ui" />
+    <CustomBuild Include="$(FC_SOURCE)\Mod\Spreadsheet\Gui\PropertiesDialog.ui" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{BD35BF06-C8E8-3366-910F-4955129FFCAC}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{4129A801-9AD2-3DA1-A809-5BC032DABCC2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{5124C73C-630B-3F59-9DFC-D2C200992F06}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

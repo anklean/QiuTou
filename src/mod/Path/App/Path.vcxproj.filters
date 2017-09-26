@@ -1,0 +1,189 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="$(FC_SOURCE)\Mod\Path\App\Command.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Path\App\Path.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Path\App\Tooltable.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Path\App\PropertyPath.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Path\App\FeaturePath.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Path\App\PropertyTooltable.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Path\App\FeaturePathCompound.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Path\App\FeaturePathShape.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Path\App\AppPath.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Path\App\AppPathPy.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Path\App\PreCompiled.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Path\App\CommandPyImp.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Path\App\PathPyImp.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Path\App\TooltablePyImp.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Robot\App\kdl_cp\articulatedbodyinertia.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Robot\App\kdl_cp\chain.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Robot\App\kdl_cp\chaindynparam.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Robot\App\kdl_cp\chainfksolverpos_recursive.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Robot\App\kdl_cp\chainfksolvervel_recursive.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Robot\App\kdl_cp\chainidsolver_recursive_newton_euler.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Robot\App\kdl_cp\chainiksolverpos_nr.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Robot\App\kdl_cp\chainiksolverpos_nr_jl.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Robot\App\kdl_cp\chainiksolvervel_pinv.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Robot\App\kdl_cp\chainiksolvervel_pinv_givens.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Robot\App\kdl_cp\chainiksolvervel_pinv_nso.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Robot\App\kdl_cp\chainiksolvervel_wdls.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Robot\App\kdl_cp\chainjnttojacsolver.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Robot\App\kdl_cp\frameacc.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Robot\App\kdl_cp\frames.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Robot\App\kdl_cp\frames_io.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Robot\App\kdl_cp\framevel.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Robot\App\kdl_cp\jacobian.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Robot\App\kdl_cp\jntarray.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Robot\App\kdl_cp\jntarrayacc.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Robot\App\kdl_cp\jntarrayvel.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Robot\App\kdl_cp\jntspaceinertiamatrix.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Robot\App\kdl_cp\joint.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Robot\App\kdl_cp\kinfam_io.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Robot\App\kdl_cp\path.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Robot\App\kdl_cp\path_circle.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Robot\App\kdl_cp\path_composite.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Robot\App\kdl_cp\path_cyclic_closed.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Robot\App\kdl_cp\path_line.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Robot\App\kdl_cp\path_point.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Robot\App\kdl_cp\path_roundedcomposite.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Robot\App\kdl_cp\rigidbodyinertia.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Robot\App\kdl_cp\rotationalinertia.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Robot\App\kdl_cp\rotational_interpolation.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Robot\App\kdl_cp\rotational_interpolation_sa.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Robot\App\kdl_cp\segment.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Robot\App\kdl_cp\trajectory.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Robot\App\kdl_cp\trajectory_composite.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Robot\App\kdl_cp\trajectory_segment.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Robot\App\kdl_cp\trajectory_stationary.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Robot\App\kdl_cp\tree.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Robot\App\kdl_cp\treefksolverpos_recursive.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Robot\App\kdl_cp\treeiksolverpos_nr_jl.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Robot\App\kdl_cp\treeiksolvervel_wdls.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Robot\App\kdl_cp\treejnttojacsolver.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Robot\App\kdl_cp\velocityprofile.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Robot\App\kdl_cp\velocityprofile_dirac.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Robot\App\kdl_cp\velocityprofile_rect.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Robot\App\kdl_cp\velocityprofile_trap.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Robot\App\kdl_cp\velocityprofile_traphalf.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Robot\App\kdl_cp\utilities\svd_eigen_HH.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Robot\App\kdl_cp\utilities\svd_HH.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Robot\App\kdl_cp\utilities\error_stack.cxx" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Robot\App\kdl_cp\utilities\utility.cxx" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Robot\App\kdl_cp\utilities\utility_io.cxx" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="$(FC_SOURCE)\Mod\Path\App\Command.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Path\App\Path.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Path\App\Tooltable.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Path\App\PropertyPath.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Path\App\FeaturePath.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Path\App\PropertyTooltable.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Path\App\FeaturePathCompound.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Path\App\FeaturePathShape.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Path\App\PreCompiled.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Robot\App\kdl_cp\articulatedbodyinertia.hpp" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Robot\App\kdl_cp\chain.hpp" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Robot\App\kdl_cp\chaindynparam.hpp" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Robot\App\kdl_cp\chainfksolver.hpp" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Robot\App\kdl_cp\chainfksolverpos_recursive.hpp" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Robot\App\kdl_cp\chainfksolvervel_recursive.hpp" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Robot\App\kdl_cp\chainidsolver.hpp" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Robot\App\kdl_cp\chainidsolver_recursive_newton_euler.hpp" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Robot\App\kdl_cp\chainiksolver.hpp" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Robot\App\kdl_cp\chainiksolverpos_nr.hpp" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Robot\App\kdl_cp\chainiksolverpos_nr_jl.hpp" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Robot\App\kdl_cp\chainiksolvervel_pinv.hpp" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Robot\App\kdl_cp\chainiksolvervel_pinv_givens.hpp" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Robot\App\kdl_cp\chainiksolvervel_pinv_nso.hpp" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Robot\App\kdl_cp\chainiksolvervel_wdls.hpp" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Robot\App\kdl_cp\chainjnttojacsolver.hpp" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Robot\App\kdl_cp\frameacc.hpp" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Robot\App\kdl_cp\frameacc_io.hpp" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Robot\App\kdl_cp\frames.hpp" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Robot\App\kdl_cp\frames_io.hpp" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Robot\App\kdl_cp\framevel.hpp" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Robot\App\kdl_cp\framevel_io.hpp" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Robot\App\kdl_cp\jacobian.hpp" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Robot\App\kdl_cp\jntarray.hpp" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Robot\App\kdl_cp\jntarrayacc.hpp" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Robot\App\kdl_cp\jntarrayvel.hpp" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Robot\App\kdl_cp\jntspaceinertiamatrix.hpp" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Robot\App\kdl_cp\joint.hpp" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Robot\App\kdl_cp\kdl.hpp" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Robot\App\kdl_cp\kinfam.hpp" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Robot\App\kdl_cp\kinfam_io.hpp" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Robot\App\kdl_cp\motion.hpp" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Robot\App\kdl_cp\path.hpp" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Robot\App\kdl_cp\path_circle.hpp" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Robot\App\kdl_cp\path_composite.hpp" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Robot\App\kdl_cp\path_cyclic_closed.hpp" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Robot\App\kdl_cp\path_line.hpp" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Robot\App\kdl_cp\path_point.hpp" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Robot\App\kdl_cp\path_roundedcomposite.hpp" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Robot\App\kdl_cp\rigidbodyinertia.hpp" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Robot\App\kdl_cp\rotationalinertia.hpp" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Robot\App\kdl_cp\rotational_interpolation.hpp" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Robot\App\kdl_cp\rotational_interpolation_sa.hpp" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Robot\App\kdl_cp\segment.hpp" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Robot\App\kdl_cp\stiffness.hpp" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Robot\App\kdl_cp\trajectory.hpp" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Robot\App\kdl_cp\trajectory_composite.hpp" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Robot\App\kdl_cp\trajectory_segment.hpp" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Robot\App\kdl_cp\trajectory_stationary.hpp" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Robot\App\kdl_cp\tree.hpp" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Robot\App\kdl_cp\treefksolver.hpp" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Robot\App\kdl_cp\treefksolverpos_recursive.hpp" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Robot\App\kdl_cp\treeiksolver.hpp" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Robot\App\kdl_cp\treeiksolverpos_nr_jl.hpp" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Robot\App\kdl_cp\treeiksolvervel_wdls.hpp" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Robot\App\kdl_cp\treejnttojacsolver.hpp" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Robot\App\kdl_cp\velocityprofile.hpp" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Robot\App\kdl_cp\velocityprofile_dirac.hpp" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Robot\App\kdl_cp\velocityprofile_rect.hpp" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Robot\App\kdl_cp\velocityprofile_trap.hpp" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Robot\App\kdl_cp\velocityprofile_traphalf.hpp" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Robot\App\kdl_cp\frameacc.inl" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Robot\App\kdl_cp\frames.inl" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Robot\App\kdl_cp\framevel.inl" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Robot\App\kdl_cp\utilities\error.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Robot\App\kdl_cp\utilities\error_stack.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Robot\App\kdl_cp\utilities\kdl-config.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Robot\App\kdl_cp\utilities\rall1d.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Robot\App\kdl_cp\utilities\rall1d_io.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Robot\App\kdl_cp\utilities\rall2d.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Robot\App\kdl_cp\utilities\rall2d_io.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Robot\App\kdl_cp\utilities\rallNd.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Robot\App\kdl_cp\utilities\traits.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Robot\App\kdl_cp\utilities\utility.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Robot\App\kdl_cp\utilities\utility_io.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Robot\App\kdl_cp\utilities\svd_eigen_HH.hpp" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Robot\App\kdl_cp\utilities\svd_eigen_Macie.hpp" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Robot\App\kdl_cp\utilities\svd_HH.hpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="$(FC_SOURCE)\Mod\Path\App\CommandPy.xml" />
+    <CustomBuild Include="$(FC_SOURCE)\Mod\Path\App\PathPy.xml" />
+    <CustomBuild Include="$(FC_SOURCE)\Mod\Path\App\ToolPy.xml" />
+    <CustomBuild Include="$(FC_SOURCE)\Mod\Path\App\TooltablePy.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{BD35BF06-C8E8-3366-910F-4955129FFCAC}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{4129A801-9AD2-3DA1-A809-5BC032DABCC2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{5124C73C-630B-3F59-9DFC-D2C200992F06}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Python">
+      <UniqueIdentifier>{3007B628-6C63-33B6-B2CF-5375A530392A}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Module">
+      <UniqueIdentifier>{D07C31CD-D17F-31BA-9EAE-DE2074DD6B41}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="KDL">
+      <UniqueIdentifier>{27523951-99D6-3BEA-B8FF-75A0FE3B9EF3}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

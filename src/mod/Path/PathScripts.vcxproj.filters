@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <None Include="$(FC_SOURCE)\Mod\Path\PathScripts\__init__.py" />
+    <None Include="$(FC_SOURCE)\Mod\Path\PathScripts\PostUtils.py" />
+    <None Include="$(FC_SOURCE)\Mod\Path\PathScripts\example_pre.py" />
+    <None Include="$(FC_SOURCE)\Mod\Path\PathScripts\opensbp_pre.py" />
+    <None Include="$(FC_SOURCE)\Mod\Path\PathScripts\example_post.py" />
+    <None Include="$(FC_SOURCE)\Mod\Path\PathScripts\linuxcnc_post.py" />
+    <None Include="$(FC_SOURCE)\Mod\Path\PathScripts\centroid_post.py" />
+    <None Include="$(FC_SOURCE)\Mod\Path\PathScripts\comparams_post.py" />
+    <None Include="$(FC_SOURCE)\Mod\Path\PathScripts\dumper_post.py" />
+    <None Include="$(FC_SOURCE)\Mod\Path\PathScripts\TooltableEditor.py" />
+    <None Include="$(FC_SOURCE)\Mod\Path\PathScripts\PathProfile.py" />
+    <None Include="$(FC_SOURCE)\Mod\Path\PathScripts\PathPocket.py" />
+    <None Include="$(FC_SOURCE)\Mod\Path\PathScripts\PathDrilling.py" />
+    <None Include="$(FC_SOURCE)\Mod\Path\PathScripts\PathDressup.py" />
+    <None Include="$(FC_SOURCE)\Mod\Path\PathScripts\PathHop.py" />
+    <None Include="$(FC_SOURCE)\Mod\Path\PathScripts\PathUtils.py" />
+    <None Include="$(FC_SOURCE)\Mod\Path\PathScripts\PathSelection.py" />
+    <None Include="$(FC_SOURCE)\Mod\Path\PathScripts\PathFixture.py" />
+    <None Include="$(FC_SOURCE)\Mod\Path\PathScripts\PathCopy.py" />
+    <None Include="$(FC_SOURCE)\Mod\Path\PathScripts\PathCompoundExtended.py" />
+    <None Include="$(FC_SOURCE)\Mod\Path\PathScripts\PathProject.py" />
+    <None Include="$(FC_SOURCE)\Mod\Path\PathScripts\PathToolTableEdit.py" />
+    <None Include="$(FC_SOURCE)\Mod\Path\PathScripts\PathStock.py" />
+    <None Include="$(FC_SOURCE)\Mod\Path\PathScripts\PathPlane.py" />
+    <None Include="$(FC_SOURCE)\Mod\Path\PathScripts\PathPost.py" />
+    <None Include="$(FC_SOURCE)\Mod\Path\PathScripts\PathLoadTool.py" />
+    <None Include="$(FC_SOURCE)\Mod\Path\PathScripts\PathToolLenOffset.py" />
+    <None Include="$(FC_SOURCE)\Mod\Path\PathScripts\PathComment.py" />
+    <None Include="$(FC_SOURCE)\Mod\Path\PathScripts\PathStop.py" />
+    <None Include="$(FC_SOURCE)\Mod\Path\PathScripts\PathMachine.py" />
+    <None Include="$(FC_SOURCE)\Mod\Path\PathScripts\PathFromShape.py" />
+    <None Include="$(FC_SOURCE)\Mod\Path\PathScripts\DlgSettingsPath.ui" />
+    <None Include="$(FC_SOURCE)\Mod\Path\PathScripts\PathKurveUtils.py" />
+    <None Include="$(FC_SOURCE)\Mod\Path\PathScripts\PathKurve.py" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{5124C73C-630B-3F59-9DFC-D2C200992F06}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

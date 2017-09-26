@@ -1,0 +1,680 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="$(FC_SOURCE)\Gui\3Dconnexion\MouseParameters.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Gui\3Dconnexion\GuiApplicationNativeEventAwareWin32.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Gui\Application.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Gui\ApplicationPy.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Gui\BitmapFactory.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Gui\Document.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Gui\DocumentModel.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Gui\DocumentPyImp.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Gui\GraphicsViewZoom.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Gui\GuiApplicationNativeEventAware.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Gui\GuiConsole.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Gui\Macro.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Gui\MergeDocuments.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Gui\resource.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Gui\Control.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Gui\SpaceballEvent.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Gui\Thumbnail.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Gui\Utilities.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Gui\WaitCursor.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Gui\ManualAlignment.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Gui\WinNativeGestureRecognizers.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Gui\iisTaskPanel\src\moc_iisiconlabel.cxx" />
+    <ClCompile Include="$(FC_SOURCE)\Gui\iisTaskPanel\src\moc_iistaskbox.cxx" />
+    <ClCompile Include="$(FC_SOURCE)\Gui\iisTaskPanel\src\moc_iistaskgroup.cxx" />
+    <ClCompile Include="$(FC_SOURCE)\Gui\iisTaskPanel\src\moc_iistaskheader.cxx" />
+    <ClCompile Include="$(FC_SOURCE)\Gui\QSint\actionpanel\moc_actionbox.cxx" />
+    <ClCompile Include="$(FC_SOURCE)\Gui\QSint\actionpanel\moc_actionlabel.cxx" />
+    <ClCompile Include="$(FC_SOURCE)\Gui\QSint\actionpanel\moc_actiongroup.cxx" />
+    <ClCompile Include="$(FC_SOURCE)\Gui\QSint\actionpanel\moc_actionpanel.cxx" />
+    <ClCompile Include="$(FC_SOURCE)\Gui\QSint\actionpanel\moc_taskheader_p.cxx" />
+    <ClCompile Include="$(FC_SOURCE)\Gui\qrc_resource.cxx" />
+    <ClCompile Include="$(FC_SOURCE)\Gui\qrc_translation.cxx" />
+    <ClCompile Include="$(FC_SOURCE)\Gui\qrc_iisTaskPanel.cxx" />
+    <ClCompile Include="$(FC_SOURCE)\Gui\qrc_schemes.cxx" />
+    <ClCompile Include="$(FC_SOURCE)\Gui\Action.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Gui\ActionFunction.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Gui\Command.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Gui\CommandDoc.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Gui\CommandFeat.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Gui\CommandMacro.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Gui\CommandStd.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Gui\CommandWindow.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Gui\CommandTest.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Gui\CommandView.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Gui\Clipping.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Gui\DemoMode.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Gui\DlgActivateWindowImp.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Gui\DlgUnitsCalculatorImp.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Gui\DlgDisplayPropertiesImp.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Gui\DlgInputDialogImp.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Gui\DlgMacroExecuteImp.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Gui\DlgRunExternal.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Gui\DlgEditFileIncludeProptertyExternal.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Gui\DlgMacroRecordImp.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Gui\DlgMaterialPropertiesImp.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Gui\DlgParameterImp.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Gui\DlgProjectInformationImp.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Gui\DlgProjectUtility.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Gui\DlgPropertyLink.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Gui\DlgTipOfTheDayImp.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Gui\TaskDlgRelocation.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Gui\DlgUndoRedo.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Gui\InputVector.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Gui\Placement.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Gui\PropertyPage.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Gui\SceneInspector.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Gui\TextureMapping.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Gui\Transform.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Gui\DownloadDialog.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Gui\DownloadItem.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Gui\DownloadManager.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Gui\DlgActionsImp.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Gui\DlgCommandsImp.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Gui\DlgCustomizeImp.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Gui\DlgCustomizeSpaceball.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Gui\DlgCustomizeSpNavSettings.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Gui\DlgKeyboardImp.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Gui\DlgToolbarsImp.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Gui\DlgWorkbenchesImp.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Gui\QListWidgetCustom.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Gui\DlgEditorImp.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Gui\DlgGeneralImp.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Gui\DlgOnlineHelpImp.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Gui\DlgPreferencesImp.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Gui\DlgReportViewImp.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Gui\DlgSettings3DViewImp.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Gui\DlgSettingsUnitsImp.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Gui\DlgSettingsViewColor.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Gui\DlgSettingsColorGradientImp.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Gui\DlgSettingsDocumentImp.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Gui\DlgSettingsImageImp.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Gui\DlgSettingsMacroImp.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Gui\CombiView.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Gui\DockWindow.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Gui\HelpView.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Gui\PropertyView.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Gui\ReportView.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Gui\SelectionView.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Gui\ToolBox.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Gui\Tree.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Gui\TreeView.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Gui\ProjectView.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Gui\CallTips.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Gui\EditorView.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Gui\PythonConsole.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Gui\PythonConsolePy.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Gui\PythonDebugger.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Gui\PythonEditor.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Gui\SyntaxHighlighter.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Gui\TextEdit.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Gui\Assistant.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Gui\NetworkRetriever.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Gui\OnlineDocumentation.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Gui\WhatsThis.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Gui\Inventor\SoDrawingGrid.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Gui\Inventor\SoAutoZoomTranslation.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Gui\SoFCBackgroundGradient.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Gui\SoFCBoundingBox.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Gui\SoFCColorBar.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Gui\SoFCColorGradient.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Gui\SoFCColorLegend.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Gui\SoFCDB.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Gui\SoFCInteractiveElement.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Gui\SoFCOffscreenRenderer.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Gui\SoFCSelection.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Gui\SoFCUnifiedSelection.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Gui\SoFCSelectionAction.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Gui\SoFCVectorizeSVGAction.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Gui\SoFCVectorizeU3DAction.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Gui\SoNavigationDragger.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Gui\SoAxisCrossKit.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Gui\SoTextLabel.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Gui\SoTouchEvents.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Gui\Language\Translator.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Gui\propertyeditor\PropertyEditor.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Gui\propertyeditor\PropertyItem.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Gui\propertyeditor\PropertyItemDelegate.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Gui\propertyeditor\PropertyModel.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Gui\TaskView\TaskAppearance.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Gui\TaskView\TaskSelectLinkProperty.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Gui\TaskView\TaskEditControl.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Gui\TaskView\TaskView.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Gui\TaskView\TaskDialog.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Gui\TaskView\TaskDialogPython.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Gui\TaskView\TaskWatcher.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Gui\iisTaskPanel\src\iisfreecadscheme.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Gui\iisTaskPanel\src\iisiconlabel.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Gui\iisTaskPanel\src\iistaskbox.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Gui\iisTaskPanel\src\iistaskgroup.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Gui\iisTaskPanel\src\iistaskheader.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Gui\iisTaskPanel\src\iistaskpanel.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Gui\iisTaskPanel\src\iistaskpanelscheme.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Gui\iisTaskPanel\src\iiswinxptaskpanelscheme.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Gui\QSint\actionpanel\actionbox.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Gui\QSint\actionpanel\actionlabel.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Gui\QSint\actionpanel\actiongroup.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Gui\QSint\actionpanel\actionpanel.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Gui\QSint\actionpanel\actionpanelscheme.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Gui\QSint\actionpanel\androidpanelscheme.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Gui\QSint\actionpanel\macpanelscheme.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Gui\QSint\actionpanel\taskgroup_p.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Gui\QSint\actionpanel\taskheader_p.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Gui\QSint\actionpanel\winvistapanelscheme.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Gui\QSint\actionpanel\winxppanelscheme.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Gui\QSint\actionpanel\freecadscheme.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Gui\Quarter\ContextMenu.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Gui\Quarter\DragDropHandler.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Gui\Quarter\EventFilter.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Gui\Quarter\FocusHandler.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Gui\Quarter\ImageReader.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Gui\Quarter\InputDevice.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Gui\Quarter\InteractionMode.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Gui\Quarter\Keyboard.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Gui\Quarter\KeyboardP.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Gui\Quarter\Mouse.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Gui\Quarter\NativeEvent.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Gui\Quarter\QtCoinCompatibility.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Gui\Quarter\Quarter.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Gui\Quarter\QuarterP.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Gui\Quarter\QuarterWidget.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Gui\Quarter\QuarterWidgetP.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Gui\Quarter\SensorManager.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Gui\Quarter\SignalThread.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Gui\Quarter\SoQTQuarterAdaptor.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Gui\Quarter\SpaceNavigatorDevice.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Gui\Quarter\moc_SignalThread.cxx" />
+    <ClCompile Include="$(FC_SOURCE)\Gui\Quarter\moc_InteractionMode.cxx" />
+    <ClCompile Include="$(FC_SOURCE)\Gui\Quarter\moc_SensorManager.cxx" />
+    <ClCompile Include="$(FC_SOURCE)\Gui\Quarter\moc_ContextMenu.cxx" />
+    <ClCompile Include="$(FC_SOURCE)\Gui\Quarter\eventhandlers\moc_FocusHandler.cxx" />
+    <ClCompile Include="$(FC_SOURCE)\Gui\Quarter\eventhandlers\moc_DragDropHandler.cxx" />
+    <ClCompile Include="$(FC_SOURCE)\Gui\Quarter\eventhandlers\moc_EventFilter.cxx" />
+    <ClCompile Include="$(FC_SOURCE)\Gui\Quarter\moc_QuarterWidget.cxx" />
+    <ClCompile Include="$(FC_SOURCE)\Gui\Flag.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Gui\GLPainter.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Gui\MouseSelection.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Gui\NavigationStyle.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Gui\InventorNavigationStyle.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Gui\CADNavigationStyle.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Gui\BlenderNavigationStyle.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Gui\OpenCascadeNavigationStyle.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Gui\TouchpadNavigationStyle.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Gui\GestureNavigationStyle.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Gui\SplitView3DInventor.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Gui\View.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Gui\View3DInventor.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Gui\View3DInventorExamples.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Gui\View3DInventorViewer.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Gui\View3DInventorRiftViewer.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Gui\CoinRiftWidget.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Gui\View3DPy.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Gui\View3DViewerPy.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Gui\ViewProvider.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Gui\ViewProviderAnnotation.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Gui\ViewProviderDocumentObject.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Gui\ViewProviderDocumentObjectGroup.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Gui\ViewProviderDocumentObjectPyImp.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Gui\ViewProviderPythonFeaturePyImp.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Gui\ViewProviderExtern.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Gui\ViewProviderFeature.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Gui\ViewProviderGeometryObject.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Gui\ViewProviderInventorObject.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Gui\ViewProviderMeasureDistance.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Gui\ViewProviderPyImp.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Gui\ViewProviderPythonFeature.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Gui\ViewProviderVRMLObject.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Gui\ViewProviderBuilder.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Gui\ViewProviderPlacement.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Gui\ViewProviderPlane.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Gui\ViewProviderMaterialObject.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Gui\FileDialog.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Gui\MainWindow.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Gui\PrefWidgets.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Gui\InputField.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Gui\ProgressBar.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Gui\QuantitySpinBox.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Gui\SpinBox.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Gui\Splashscreen.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Gui\WidgetFactory.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Gui\Widgets.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Gui\Window.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Gui\MDIView.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Gui\GraphvizView.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Gui\DockWindowManager.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Gui\MenuManager.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Gui\PythonWorkbenchPyImp.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Gui\ToolBarManager.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Gui\ToolBoxManager.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Gui\Workbench.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Gui\WorkbenchFactory.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Gui\WorkbenchManager.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Gui\WorkbenchPyImp.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Gui\SelectionObjectPyImp.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Gui\SelectionObject.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Gui\Selection.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Gui\SelectionFilter.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Gui\PreCompiled.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="$(FC_SOURCE)\Gui\3Dconnexion\I3dMouseParams.h" />
+    <ClInclude Include="$(FC_SOURCE)\Gui\3Dconnexion\MouseParameters.h" />
+    <ClInclude Include="$(FC_SOURCE)\Gui\ui_AboutApplication.h" />
+    <ClInclude Include="$(FC_SOURCE)\Gui\ui_Clipping.h" />
+    <ClInclude Include="$(FC_SOURCE)\Gui\ui_DemoMode.h" />
+    <ClInclude Include="$(FC_SOURCE)\Gui\ui_DlgActions.h" />
+    <ClInclude Include="$(FC_SOURCE)\Gui\ui_DlgActivateWindow.h" />
+    <ClInclude Include="$(FC_SOURCE)\Gui\ui_DlgUnitsCalculator.h" />
+    <ClInclude Include="$(FC_SOURCE)\Gui\ui_DlgAuthorization.h" />
+    <ClInclude Include="$(FC_SOURCE)\Gui\ui_DlgChooseIcon.h" />
+    <ClInclude Include="$(FC_SOURCE)\Gui\ui_DlgCommands.h" />
+    <ClInclude Include="$(FC_SOURCE)\Gui\ui_DlgCustomizeSpNavSettings.h" />
+    <ClInclude Include="$(FC_SOURCE)\Gui\ui_DlgDisplayProperties.h" />
+    <ClInclude Include="$(FC_SOURCE)\Gui\ui_DlgEditor.h" />
+    <ClInclude Include="$(FC_SOURCE)\Gui\ui_DlgGeneral.h" />
+    <ClInclude Include="$(FC_SOURCE)\Gui\ui_DlgInputDialog.h" />
+    <ClInclude Include="$(FC_SOURCE)\Gui\ui_DlgKeyboard.h" />
+    <ClInclude Include="$(FC_SOURCE)\Gui\ui_DlgMacroExecute.h" />
+    <ClInclude Include="$(FC_SOURCE)\Gui\ui_DlgRunExternal.h" />
+    <ClInclude Include="$(FC_SOURCE)\Gui\ui_DlgMacroRecord.h" />
+    <ClInclude Include="$(FC_SOURCE)\Gui\ui_DlgMaterialProperties.h" />
+    <ClInclude Include="$(FC_SOURCE)\Gui\ui_DlgOnlineHelp.h" />
+    <ClInclude Include="$(FC_SOURCE)\Gui\ui_DlgParameter.h" />
+    <ClInclude Include="$(FC_SOURCE)\Gui\ui_DlgPreferences.h" />
+    <ClInclude Include="$(FC_SOURCE)\Gui\ui_DlgProjectInformation.h" />
+    <ClInclude Include="$(FC_SOURCE)\Gui\ui_DlgProjectUtility.h" />
+    <ClInclude Include="$(FC_SOURCE)\Gui\ui_DlgPropertyLink.h" />
+    <ClInclude Include="$(FC_SOURCE)\Gui\ui_DlgReportView.h" />
+    <ClInclude Include="$(FC_SOURCE)\Gui\ui_DlgSettings3DView.h" />
+    <ClInclude Include="$(FC_SOURCE)\Gui\ui_DlgSettingsUnits.h" />
+    <ClInclude Include="$(FC_SOURCE)\Gui\ui_DlgSettingsViewColor.h" />
+    <ClInclude Include="$(FC_SOURCE)\Gui\ui_DlgSettingsColorGradient.h" />
+    <ClInclude Include="$(FC_SOURCE)\Gui\ui_DlgSettingsDocument.h" />
+    <ClInclude Include="$(FC_SOURCE)\Gui\ui_DlgSettingsImage.h" />
+    <ClInclude Include="$(FC_SOURCE)\Gui\ui_DlgSettingsMacro.h" />
+    <ClInclude Include="$(FC_SOURCE)\Gui\ui_DlgTipOfTheDay.h" />
+    <ClInclude Include="$(FC_SOURCE)\Gui\ui_DlgToolbars.h" />
+    <ClInclude Include="$(FC_SOURCE)\Gui\ui_DlgWorkbenches.h" />
+    <ClInclude Include="$(FC_SOURCE)\Gui\ui_DlgTreeWidget.h" />
+    <ClInclude Include="$(FC_SOURCE)\Gui\ui_DlgLocationAngle.h" />
+    <ClInclude Include="$(FC_SOURCE)\Gui\ui_DlgLocationPos.h" />
+    <ClInclude Include="$(FC_SOURCE)\Gui\ui_DownloadManager.h" />
+    <ClInclude Include="$(FC_SOURCE)\Gui\ui_DownloadItem.h" />
+    <ClInclude Include="$(FC_SOURCE)\Gui\ui_MouseButtons.h" />
+    <ClInclude Include="$(FC_SOURCE)\Gui\ui_SceneInspector.h" />
+    <ClInclude Include="$(FC_SOURCE)\Gui\ui_InputVector.h" />
+    <ClInclude Include="$(FC_SOURCE)\Gui\ui_Placement.h" />
+    <ClInclude Include="$(FC_SOURCE)\Gui\ui_TextureMapping.h" />
+    <ClInclude Include="$(FC_SOURCE)\Gui\ui_TaskAppearance.h" />
+    <ClInclude Include="$(FC_SOURCE)\Gui\ui_TaskSelectLinkProperty.h" />
+    <ClInclude Include="$(FC_SOURCE)\Gui\Command.h" />
+    <ClInclude Include="$(FC_SOURCE)\Gui\PythonConsolePy.h" />
+    <ClInclude Include="$(FC_SOURCE)\Gui\SyntaxHighlighter.h" />
+    <ClInclude Include="$(FC_SOURCE)\Gui\WhatsThis.h" />
+    <ClInclude Include="$(FC_SOURCE)\Gui\Inventor\SoDrawingGrid.h" />
+    <ClInclude Include="$(FC_SOURCE)\Gui\Inventor\SoAutoZoomTranslation.h" />
+    <ClInclude Include="$(FC_SOURCE)\Gui\SoFCBackgroundGradient.h" />
+    <ClInclude Include="$(FC_SOURCE)\Gui\SoFCBoundingBox.h" />
+    <ClInclude Include="$(FC_SOURCE)\Gui\SoFCColorBar.h" />
+    <ClInclude Include="$(FC_SOURCE)\Gui\SoFCColorGradient.h" />
+    <ClInclude Include="$(FC_SOURCE)\Gui\SoFCColorLegend.h" />
+    <ClInclude Include="$(FC_SOURCE)\Gui\SoFCDB.h" />
+    <ClInclude Include="$(FC_SOURCE)\Gui\SoFCInteractiveElement.h" />
+    <ClInclude Include="$(FC_SOURCE)\Gui\SoFCOffscreenRenderer.h" />
+    <ClInclude Include="$(FC_SOURCE)\Gui\SoFCSelection.h" />
+    <ClInclude Include="$(FC_SOURCE)\Gui\SoFCUnifiedSelection.h" />
+    <ClInclude Include="$(FC_SOURCE)\Gui\SoFCSelectionAction.h" />
+    <ClInclude Include="$(FC_SOURCE)\Gui\SoFCVectorizeSVGAction.h" />
+    <ClInclude Include="$(FC_SOURCE)\Gui\SoFCVectorizeU3DAction.h" />
+    <ClInclude Include="$(FC_SOURCE)\Gui\SoNavigationDragger.h" />
+    <ClInclude Include="$(FC_SOURCE)\Gui\SoAxisCrossKit.h" />
+    <ClInclude Include="$(FC_SOURCE)\Gui\SoTextLabel.h" />
+    <ClInclude Include="$(FC_SOURCE)\Gui\SoTouchEvents.h" />
+    <ClInclude Include="$(FC_SOURCE)\Gui\TaskView\TaskDialogPython.h" />
+    <ClInclude Include="$(FC_SOURCE)\Gui\iisTaskPanel\src\iisfreecadscheme.h" />
+    <ClInclude Include="$(FC_SOURCE)\Gui\iisTaskPanel\src\iisiconlabel.h" />
+    <ClInclude Include="$(FC_SOURCE)\Gui\iisTaskPanel\src\iistaskbox.h" />
+    <ClInclude Include="$(FC_SOURCE)\Gui\iisTaskPanel\src\iistaskgroup.h" />
+    <ClInclude Include="$(FC_SOURCE)\Gui\iisTaskPanel\src\iistaskheader.h" />
+    <ClInclude Include="$(FC_SOURCE)\Gui\iisTaskPanel\src\iistaskpanel.h" />
+    <ClInclude Include="$(FC_SOURCE)\Gui\iisTaskPanel\src\iistaskpanelscheme.h" />
+    <ClInclude Include="$(FC_SOURCE)\Gui\iisTaskPanel\src\iiswinxptaskpanelscheme.h" />
+    <ClInclude Include="$(FC_SOURCE)\Gui\iisTaskPanel\src\iistaskpanel_global.h" />
+    <ClInclude Include="$(FC_SOURCE)\Gui\QSint\actionpanel\actionbox.h" />
+    <ClInclude Include="$(FC_SOURCE)\Gui\QSint\actionpanel\actionlabel.h" />
+    <ClInclude Include="$(FC_SOURCE)\Gui\QSint\actionpanel\actiongroup.h" />
+    <ClInclude Include="$(FC_SOURCE)\Gui\QSint\actionpanel\actionpanel.h" />
+    <ClInclude Include="$(FC_SOURCE)\Gui\QSint\actionpanel\actionpanelscheme.h" />
+    <ClInclude Include="$(FC_SOURCE)\Gui\QSint\actionpanel\androidpanelscheme.h" />
+    <ClInclude Include="$(FC_SOURCE)\Gui\QSint\actionpanel\macpanelscheme.h" />
+    <ClInclude Include="$(FC_SOURCE)\Gui\QSint\actionpanel\taskgroup_p.h" />
+    <ClInclude Include="$(FC_SOURCE)\Gui\QSint\actionpanel\taskheader_p.h" />
+    <ClInclude Include="$(FC_SOURCE)\Gui\QSint\actionpanel\winvistapanelscheme.h" />
+    <ClInclude Include="$(FC_SOURCE)\Gui\QSint\actionpanel\winxppanelscheme.h" />
+    <ClInclude Include="$(FC_SOURCE)\Gui\QSint\actionpanel\freecadscheme.h" />
+    <ClInclude Include="$(FC_SOURCE)\Gui\Quarter\Basic.h" />
+    <ClInclude Include="$(FC_SOURCE)\Gui\Quarter\ContextMenu.h" />
+    <ClInclude Include="$(FC_SOURCE)\Gui\Quarter\devices\InputDevice.h" />
+    <ClInclude Include="$(FC_SOURCE)\Gui\Quarter\devices\Keyboard.h" />
+    <ClInclude Include="$(FC_SOURCE)\Gui\Quarter\devices\Mouse.h" />
+    <ClInclude Include="$(FC_SOURCE)\Gui\Quarter\devices\SpaceNavigatorDevice.h" />
+    <ClInclude Include="$(FC_SOURCE)\Gui\Quarter\eventhandlers\DragDropHandler.h" />
+    <ClInclude Include="$(FC_SOURCE)\Gui\Quarter\eventhandlers\EventFilter.h" />
+    <ClInclude Include="$(FC_SOURCE)\Gui\Quarter\eventhandlers\FocusHandler.h" />
+    <ClInclude Include="$(FC_SOURCE)\Gui\Quarter\ImageReader.h" />
+    <ClInclude Include="$(FC_SOURCE)\Gui\Quarter\InteractionMode.h" />
+    <ClInclude Include="$(FC_SOURCE)\Gui\Quarter\KeyboardP.h" />
+    <ClInclude Include="$(FC_SOURCE)\Gui\Quarter\NativeEvent.h" />
+    <ClInclude Include="$(FC_SOURCE)\Gui\Quarter\QtCoinCompatibility.h" />
+    <ClInclude Include="$(FC_SOURCE)\Gui\Quarter\Quarter.h" />
+    <ClInclude Include="$(FC_SOURCE)\Gui\Quarter\QuarterP.h" />
+    <ClInclude Include="$(FC_SOURCE)\Gui\Quarter\QuarterWidget.h" />
+    <ClInclude Include="$(FC_SOURCE)\Gui\Quarter\QuarterWidgetP.h" />
+    <ClInclude Include="$(FC_SOURCE)\Gui\Quarter\SensorManager.h" />
+    <ClInclude Include="$(FC_SOURCE)\Gui\Quarter\SignalThread.h" />
+    <ClInclude Include="$(FC_SOURCE)\Gui\Quarter\SoQTQuarterAdaptor.h" />
+    <ClInclude Include="$(FC_SOURCE)\Gui\GLPainter.h" />
+    <ClInclude Include="$(FC_SOURCE)\Gui\MouseSelection.h" />
+    <ClInclude Include="$(FC_SOURCE)\Gui\NavigationStyle.h" />
+    <ClInclude Include="$(FC_SOURCE)\Gui\SplitView3DInventor.h" />
+    <ClInclude Include="$(FC_SOURCE)\Gui\View.h" />
+    <ClInclude Include="$(FC_SOURCE)\Gui\View3DInventorExamples.h" />
+    <ClInclude Include="$(FC_SOURCE)\Gui\View3DInventorViewer.h" />
+    <ClInclude Include="$(FC_SOURCE)\Gui\View3DPy.h" />
+    <ClInclude Include="$(FC_SOURCE)\Gui\View3DInventorRiftViewer.h" />
+    <ClInclude Include="$(FC_SOURCE)\Gui\CoinRiftWidget.h" />
+    <ClInclude Include="$(FC_SOURCE)\Gui\View3DViewerPy.h" />
+    <ClInclude Include="$(FC_SOURCE)\Gui\ViewProvider.h" />
+    <ClInclude Include="$(FC_SOURCE)\Gui\ViewProviderAnnotation.h" />
+    <ClInclude Include="$(FC_SOURCE)\Gui\ViewProviderDocumentObject.h" />
+    <ClInclude Include="$(FC_SOURCE)\Gui\ViewProviderDocumentObjectGroup.h" />
+    <ClInclude Include="$(FC_SOURCE)\Gui\ViewProviderExtern.h" />
+    <ClInclude Include="$(FC_SOURCE)\Gui\ViewProviderFeature.h" />
+    <ClInclude Include="$(FC_SOURCE)\Gui\ViewProviderGeometryObject.h" />
+    <ClInclude Include="$(FC_SOURCE)\Gui\ViewProviderInventorObject.h" />
+    <ClInclude Include="$(FC_SOURCE)\Gui\ViewProviderMeasureDistance.h" />
+    <ClInclude Include="$(FC_SOURCE)\Gui\ViewProviderPythonFeature.h" />
+    <ClInclude Include="$(FC_SOURCE)\Gui\ViewProviderVRMLObject.h" />
+    <ClInclude Include="$(FC_SOURCE)\Gui\ViewProviderBuilder.h" />
+    <ClInclude Include="$(FC_SOURCE)\Gui\ViewProviderPlacement.h" />
+    <ClInclude Include="$(FC_SOURCE)\Gui\ViewProviderPlane.h" />
+    <ClInclude Include="$(FC_SOURCE)\Gui\ViewProviderMaterialObject.h" />
+    <ClInclude Include="$(FC_SOURCE)\Gui\Window.h" />
+    <ClInclude Include="$(FC_SOURCE)\Gui\MenuManager.h" />
+    <ClInclude Include="$(FC_SOURCE)\Gui\ToolBarManager.h" />
+    <ClInclude Include="$(FC_SOURCE)\Gui\ToolBoxManager.h" />
+    <ClInclude Include="$(FC_SOURCE)\Gui\Workbench.h" />
+    <ClInclude Include="$(FC_SOURCE)\Gui\WorkbenchFactory.h" />
+    <ClInclude Include="$(FC_SOURCE)\Gui\WorkbenchManager.h" />
+    <ClInclude Include="$(FC_SOURCE)\Gui\SelectionObject.h" />
+    <ClInclude Include="$(FC_SOURCE)\Gui\Selection.h" />
+    <ClInclude Include="$(FC_SOURCE)\Gui\SelectionFilter.h" />
+    <ClInclude Include="$(FC_SOURCE)\Gui\Application.h" />
+    <ClInclude Include="$(FC_SOURCE)\Gui\BitmapFactory.h" />
+    <ClInclude Include="$(FC_SOURCE)\Gui\Document.h" />
+    <ClInclude Include="$(FC_SOURCE)\Gui\DocumentModel.h" />
+    <ClInclude Include="$(FC_SOURCE)\Gui\GuiConsole.h" />
+    <ClInclude Include="$(FC_SOURCE)\Gui\InventorAll.h" />
+    <ClInclude Include="$(FC_SOURCE)\Gui\Macro.h" />
+    <ClInclude Include="$(FC_SOURCE)\Gui\MergeDocuments.h" />
+    <ClInclude Include="$(FC_SOURCE)\Gui\PreCompiled.h" />
+    <ClInclude Include="$(FC_SOURCE)\Gui\Qt4All.h" />
+    <ClInclude Include="$(FC_SOURCE)\Gui\SpaceballEvent.h" />
+    <ClInclude Include="$(FC_SOURCE)\Gui\Thumbnail.h" />
+    <ClInclude Include="$(FC_SOURCE)\Gui\Utilities.h" />
+    <ClInclude Include="$(FC_SOURCE)\Gui\WaitCursor.h" />
+    <ClInclude Include="$(FC_SOURCE)\Gui\WinNativeGestureRecognizers.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="$(FC_SOURCE)\Gui\ViewProviderDocumentObjectPy.xml" />
+    <CustomBuild Include="$(FC_SOURCE)\Gui\ViewProviderPythonFeaturePy.xml" />
+    <CustomBuild Include="$(FC_SOURCE)\Gui\ViewProviderPy.xml" />
+    <CustomBuild Include="$(FC_SOURCE)\Gui\PythonWorkbenchPy.xml" />
+    <CustomBuild Include="$(FC_SOURCE)\Gui\WorkbenchPy.xml" />
+    <CustomBuild Include="$(FC_SOURCE)\Gui\SelectionObjectPy.xml" />
+    <CustomBuild Include="$(FC_SOURCE)\Gui\DocumentPy.xml" />
+    <CustomBuild Include="$(FC_SOURCE)\Gui\Action.h" />
+    <CustomBuild Include="$(FC_SOURCE)\Gui\ActionFunction.h" />
+    <CustomBuild Include="$(FC_SOURCE)\Gui\Clipping.h" />
+    <CustomBuild Include="$(FC_SOURCE)\Gui\DemoMode.h" />
+    <CustomBuild Include="$(FC_SOURCE)\Gui\DlgActivateWindowImp.h" />
+    <CustomBuild Include="$(FC_SOURCE)\Gui\DlgUnitsCalculatorImp.h" />
+    <CustomBuild Include="$(FC_SOURCE)\Gui\DlgDisplayPropertiesImp.h" />
+    <CustomBuild Include="$(FC_SOURCE)\Gui\DlgInputDialogImp.h" />
+    <CustomBuild Include="$(FC_SOURCE)\Gui\DlgMacroExecuteImp.h" />
+    <CustomBuild Include="$(FC_SOURCE)\Gui\DlgRunExternal.h" />
+    <CustomBuild Include="$(FC_SOURCE)\Gui\DlgEditFileIncludeProptertyExternal.h" />
+    <CustomBuild Include="$(FC_SOURCE)\Gui\DlgMacroRecordImp.h" />
+    <CustomBuild Include="$(FC_SOURCE)\Gui\DlgMaterialPropertiesImp.h" />
+    <CustomBuild Include="$(FC_SOURCE)\Gui\DlgParameterImp.h" />
+    <CustomBuild Include="$(FC_SOURCE)\Gui\DlgProjectInformationImp.h" />
+    <CustomBuild Include="$(FC_SOURCE)\Gui\DlgProjectUtility.h" />
+    <CustomBuild Include="$(FC_SOURCE)\Gui\DlgPropertyLink.h" />
+    <CustomBuild Include="$(FC_SOURCE)\Gui\DlgTipOfTheDayImp.h" />
+    <CustomBuild Include="$(FC_SOURCE)\Gui\TaskDlgRelocation.h" />
+    <CustomBuild Include="$(FC_SOURCE)\Gui\DlgUndoRedo.h" />
+    <CustomBuild Include="$(FC_SOURCE)\Gui\InputVector.h" />
+    <CustomBuild Include="$(FC_SOURCE)\Gui\Placement.h" />
+    <CustomBuild Include="$(FC_SOURCE)\Gui\PropertyPage.h" />
+    <CustomBuild Include="$(FC_SOURCE)\Gui\SceneInspector.h" />
+    <CustomBuild Include="$(FC_SOURCE)\Gui\TextureMapping.h" />
+    <CustomBuild Include="$(FC_SOURCE)\Gui\Transform.h" />
+    <CustomBuild Include="$(FC_SOURCE)\Gui\DownloadDialog.h" />
+    <CustomBuild Include="$(FC_SOURCE)\Gui\DownloadItem.h" />
+    <CustomBuild Include="$(FC_SOURCE)\Gui\DownloadManager.h" />
+    <CustomBuild Include="$(FC_SOURCE)\Gui\AboutApplication.ui" />
+    <CustomBuild Include="$(FC_SOURCE)\Gui\Clipping.ui" />
+    <CustomBuild Include="$(FC_SOURCE)\Gui\DemoMode.ui" />
+    <CustomBuild Include="$(FC_SOURCE)\Gui\DlgActivateWindow.ui" />
+    <CustomBuild Include="$(FC_SOURCE)\Gui\DlgUnitsCalculator.ui" />
+    <CustomBuild Include="$(FC_SOURCE)\Gui\DlgAuthorization.ui" />
+    <CustomBuild Include="$(FC_SOURCE)\Gui\DlgDisplayProperties.ui" />
+    <CustomBuild Include="$(FC_SOURCE)\Gui\DlgInputDialog.ui" />
+    <CustomBuild Include="$(FC_SOURCE)\Gui\DlgLocationAngle.ui" />
+    <CustomBuild Include="$(FC_SOURCE)\Gui\DlgLocationPos.ui" />
+    <CustomBuild Include="$(FC_SOURCE)\Gui\DlgMacroExecute.ui" />
+    <CustomBuild Include="$(FC_SOURCE)\Gui\DlgRunExternal.ui" />
+    <CustomBuild Include="$(FC_SOURCE)\Gui\DlgMacroRecord.ui" />
+    <CustomBuild Include="$(FC_SOURCE)\Gui\DlgMaterialProperties.ui" />
+    <CustomBuild Include="$(FC_SOURCE)\Gui\DlgParameter.ui" />
+    <CustomBuild Include="$(FC_SOURCE)\Gui\DlgProjectInformation.ui" />
+    <CustomBuild Include="$(FC_SOURCE)\Gui\DlgProjectUtility.ui" />
+    <CustomBuild Include="$(FC_SOURCE)\Gui\DlgPropertyLink.ui" />
+    <CustomBuild Include="$(FC_SOURCE)\Gui\DlgTipOfTheDay.ui" />
+    <CustomBuild Include="$(FC_SOURCE)\Gui\DlgTreeWidget.ui" />
+    <CustomBuild Include="$(FC_SOURCE)\Gui\DownloadManager.ui" />
+    <CustomBuild Include="$(FC_SOURCE)\Gui\DownloadItem.ui" />
+    <CustomBuild Include="$(FC_SOURCE)\Gui\MouseButtons.ui" />
+    <CustomBuild Include="$(FC_SOURCE)\Gui\InputVector.ui" />
+    <CustomBuild Include="$(FC_SOURCE)\Gui\Placement.ui" />
+    <CustomBuild Include="$(FC_SOURCE)\Gui\SceneInspector.ui" />
+    <CustomBuild Include="$(FC_SOURCE)\Gui\TextureMapping.ui" />
+    <CustomBuild Include="$(FC_SOURCE)\Gui\DlgActionsImp.h" />
+    <CustomBuild Include="$(FC_SOURCE)\Gui\DlgCommandsImp.h" />
+    <CustomBuild Include="$(FC_SOURCE)\Gui\DlgCustomizeImp.h" />
+    <CustomBuild Include="$(FC_SOURCE)\Gui\DlgCustomizeSpaceball.h" />
+    <CustomBuild Include="$(FC_SOURCE)\Gui\DlgCustomizeSpNavSettings.h" />
+    <CustomBuild Include="$(FC_SOURCE)\Gui\DlgKeyboardImp.h" />
+    <CustomBuild Include="$(FC_SOURCE)\Gui\DlgToolbarsImp.h" />
+    <CustomBuild Include="$(FC_SOURCE)\Gui\DlgWorkbenchesImp.h" />
+    <CustomBuild Include="$(FC_SOURCE)\Gui\QListWidgetCustom.h" />
+    <CustomBuild Include="$(FC_SOURCE)\Gui\DlgActions.ui" />
+    <CustomBuild Include="$(FC_SOURCE)\Gui\DlgChooseIcon.ui" />
+    <CustomBuild Include="$(FC_SOURCE)\Gui\DlgCommands.ui" />
+    <CustomBuild Include="$(FC_SOURCE)\Gui\DlgCustomizeSpNavSettings.ui" />
+    <CustomBuild Include="$(FC_SOURCE)\Gui\DlgKeyboard.ui" />
+    <CustomBuild Include="$(FC_SOURCE)\Gui\DlgToolbars.ui" />
+    <CustomBuild Include="$(FC_SOURCE)\Gui\DlgWorkbenches.ui" />
+    <CustomBuild Include="$(FC_SOURCE)\Gui\DlgEditorImp.h" />
+    <CustomBuild Include="$(FC_SOURCE)\Gui\DlgGeneralImp.h" />
+    <CustomBuild Include="$(FC_SOURCE)\Gui\DlgOnlineHelpImp.h" />
+    <CustomBuild Include="$(FC_SOURCE)\Gui\DlgPreferencesImp.h" />
+    <CustomBuild Include="$(FC_SOURCE)\Gui\DlgReportViewImp.h" />
+    <CustomBuild Include="$(FC_SOURCE)\Gui\DlgSettings3DViewImp.h" />
+    <CustomBuild Include="$(FC_SOURCE)\Gui\DlgSettingsUnitsImp.h" />
+    <CustomBuild Include="$(FC_SOURCE)\Gui\DlgSettingsViewColor.h" />
+    <CustomBuild Include="$(FC_SOURCE)\Gui\DlgSettingsColorGradientImp.h" />
+    <CustomBuild Include="$(FC_SOURCE)\Gui\DlgSettingsDocumentImp.h" />
+    <CustomBuild Include="$(FC_SOURCE)\Gui\DlgSettingsImageImp.h" />
+    <CustomBuild Include="$(FC_SOURCE)\Gui\DlgSettingsMacroImp.h" />
+    <CustomBuild Include="$(FC_SOURCE)\Gui\DlgEditor.ui" />
+    <CustomBuild Include="$(FC_SOURCE)\Gui\DlgGeneral.ui" />
+    <CustomBuild Include="$(FC_SOURCE)\Gui\DlgOnlineHelp.ui" />
+    <CustomBuild Include="$(FC_SOURCE)\Gui\DlgPreferences.ui" />
+    <CustomBuild Include="$(FC_SOURCE)\Gui\DlgReportView.ui" />
+    <CustomBuild Include="$(FC_SOURCE)\Gui\DlgSettings3DView.ui" />
+    <CustomBuild Include="$(FC_SOURCE)\Gui\DlgSettingsUnits.ui" />
+    <CustomBuild Include="$(FC_SOURCE)\Gui\DlgSettingsViewColor.ui" />
+    <CustomBuild Include="$(FC_SOURCE)\Gui\DlgSettingsColorGradient.ui" />
+    <CustomBuild Include="$(FC_SOURCE)\Gui\DlgSettingsDocument.ui" />
+    <CustomBuild Include="$(FC_SOURCE)\Gui\DlgSettingsImage.ui" />
+    <CustomBuild Include="$(FC_SOURCE)\Gui\DlgSettingsMacro.ui" />
+    <CustomBuild Include="$(FC_SOURCE)\Gui\CombiView.h" />
+    <CustomBuild Include="$(FC_SOURCE)\Gui\DockWindow.h" />
+    <CustomBuild Include="$(FC_SOURCE)\Gui\HelpView.h" />
+    <CustomBuild Include="$(FC_SOURCE)\Gui\PropertyView.h" />
+    <CustomBuild Include="$(FC_SOURCE)\Gui\ReportView.h" />
+    <CustomBuild Include="$(FC_SOURCE)\Gui\SelectionView.h" />
+    <CustomBuild Include="$(FC_SOURCE)\Gui\ToolBox.h" />
+    <CustomBuild Include="$(FC_SOURCE)\Gui\Tree.h" />
+    <CustomBuild Include="$(FC_SOURCE)\Gui\TreeView.h" />
+    <CustomBuild Include="$(FC_SOURCE)\Gui\ProjectView.h" />
+    <CustomBuild Include="$(FC_SOURCE)\Gui\CallTips.h" />
+    <CustomBuild Include="$(FC_SOURCE)\Gui\EditorView.h" />
+    <CustomBuild Include="$(FC_SOURCE)\Gui\PythonConsole.h" />
+    <CustomBuild Include="$(FC_SOURCE)\Gui\PythonDebugger.h" />
+    <CustomBuild Include="$(FC_SOURCE)\Gui\PythonEditor.h" />
+    <CustomBuild Include="$(FC_SOURCE)\Gui\TextEdit.h" />
+    <CustomBuild Include="$(FC_SOURCE)\Gui\Assistant.h" />
+    <CustomBuild Include="$(FC_SOURCE)\Gui\NetworkRetriever.h" />
+    <CustomBuild Include="$(FC_SOURCE)\Gui\OnlineDocumentation.h" />
+    <CustomBuild Include="$(FC_SOURCE)\Gui\Language\Translator.h" />
+    <CustomBuild Include="$(FC_SOURCE)\Gui\propertyeditor\PropertyEditor.h" />
+    <CustomBuild Include="$(FC_SOURCE)\Gui\propertyeditor\PropertyItem.h" />
+    <CustomBuild Include="$(FC_SOURCE)\Gui\propertyeditor\PropertyItemDelegate.h" />
+    <CustomBuild Include="$(FC_SOURCE)\Gui\propertyeditor\PropertyModel.h" />
+    <CustomBuild Include="$(FC_SOURCE)\Gui\TaskView\TaskAppearance.h" />
+    <CustomBuild Include="$(FC_SOURCE)\Gui\TaskView\TaskAppearance.ui" />
+    <CustomBuild Include="$(FC_SOURCE)\Gui\TaskView\TaskSelectLinkProperty.h" />
+    <CustomBuild Include="$(FC_SOURCE)\Gui\TaskView\TaskSelectLinkProperty.ui" />
+    <CustomBuild Include="$(FC_SOURCE)\Gui\TaskView\TaskEditControl.h" />
+    <CustomBuild Include="$(FC_SOURCE)\Gui\TaskView\TaskView.h" />
+    <CustomBuild Include="$(FC_SOURCE)\Gui\TaskView\TaskDialog.h" />
+    <CustomBuild Include="$(FC_SOURCE)\Gui\TaskView\TaskWatcher.h" />
+    <CustomBuild Include="$(FC_SOURCE)\Gui\Flag.h" />
+    <CustomBuild Include="$(FC_SOURCE)\Gui\View3DInventor.h" />
+    <CustomBuild Include="$(FC_SOURCE)\Gui\FileDialog.h" />
+    <CustomBuild Include="$(FC_SOURCE)\Gui\MainWindow.h" />
+    <CustomBuild Include="$(FC_SOURCE)\Gui\PrefWidgets.h" />
+    <CustomBuild Include="$(FC_SOURCE)\Gui\InputField.h" />
+    <CustomBuild Include="$(FC_SOURCE)\Gui\ProgressBar.h" />
+    <CustomBuild Include="$(FC_SOURCE)\Gui\QuantitySpinBox.h" />
+    <CustomBuild Include="$(FC_SOURCE)\Gui\SpinBox.h" />
+    <CustomBuild Include="$(FC_SOURCE)\Gui\Splashscreen.h" />
+    <CustomBuild Include="$(FC_SOURCE)\Gui\WidgetFactory.h" />
+    <CustomBuild Include="$(FC_SOURCE)\Gui\Widgets.h" />
+    <CustomBuild Include="$(FC_SOURCE)\Gui\MDIView.h" />
+    <CustomBuild Include="$(FC_SOURCE)\Gui\GraphvizView.h" />
+    <CustomBuild Include="$(FC_SOURCE)\Gui\DockWindowManager.h" />
+    <CustomBuild Include="$(FC_SOURCE)\Gui\FreeCADGuiInit.py" />
+    <CustomBuild Include="$(FC_SOURCE)\Gui\GraphicsViewZoom.h" />
+    <CustomBuild Include="$(FC_SOURCE)\Gui\GuiApplicationNativeEventAware.h" />
+    <CustomBuild Include="$(FC_SOURCE)\Gui\Control.h" />
+    <CustomBuild Include="$(FC_SOURCE)\Gui\ManualAlignment.h" />
+    <CustomBuild Include="$(FC_SOURCE)\Gui\Icons\resource.qrc" />
+    <CustomBuild Include="$(FC_SOURCE)\Gui\Language\translation.qrc" />
+    <CustomBuild Include="$(FC_SOURCE)\Gui\iisTaskPanel\src\iisTaskPanel.qrc" />
+    <CustomBuild Include="$(FC_SOURCE)\Gui\QSint\actionpanel\schemes.qrc" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="$(FC_SOURCE)\Gui\TaskView\TaskEditControl.ui" />
+    <None Include="$(FC_SOURCE)\Gui\SelectionFilter.y" />
+    <None Include="$(FC_SOURCE)\Gui\SelectionFilter.l" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{BD35BF06-C8E8-3366-910F-4955129FFCAC}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{4129A801-9AD2-3DA1-A809-5BC032DABCC2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{5124C73C-630B-3F59-9DFC-D2C200992F06}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="3D connexion SDK">
+      <UniqueIdentifier>{3F6F08BB-7A5A-30BA-A89B-D61B206FA94C}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Uic">
+      <UniqueIdentifier>{A6D9CC86-9972-39CF-B8D8-B376837AD0BA}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Command">
+      <UniqueIdentifier>{30B6D119-0B8C-3F93-915C-2582DEB9F70B}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Dialog">
+      <UniqueIdentifier>{098B9E53-4CE5-32C8-8987-5534E82A023C}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Dock Windows">
+      <UniqueIdentifier>{01DBEB23-C2F0-3171-8D5A-F2B7CCE9AE7C}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Editor">
+      <UniqueIdentifier>{7AC6E1DE-C2B1-3C20-A204-1909A0E19307}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Help">
+      <UniqueIdentifier>{459EC67C-9F8B-3307-BC30-69719622AB3D}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Language">
+      <UniqueIdentifier>{8544327E-EE77-32D6-B471-9810F4B12B5F}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Propertyeditor">
+      <UniqueIdentifier>{A30B4C10-4C2E-34DB-BDBE-551E6C4E409F}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Task View">
+      <UniqueIdentifier>{51AC83DF-F999-3023-8D59-A94342BE3EE7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Widget">
+      <UniqueIdentifier>{34186B52-D783-333B-A279-5D8B92AA6C24}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="View3D">
+      <UniqueIdentifier>{F8659C01-D773-37BA-9E7D-CEA1EC0563A2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Quarter">
+      <UniqueIdentifier>{9597DDFF-4D35-3EB0-B797-08AF6E648046}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="View">
+      <UniqueIdentifier>{FB311A12-FA9C-3CF8-8D89-E6D4F0F49B47}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Workbench">
+      <UniqueIdentifier>{5266DB21-FE27-3FCF-BA27-0102EBDD539B}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Selection">
+      <UniqueIdentifier>{DE0DCE49-4E92-3678-880F-F5C1B9A4CF24}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Dialog\Customize">
+      <UniqueIdentifier>{19B98E8F-3BA0-3EAA-8A9C-F52F59570C98}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Dialog\Settings">
+      <UniqueIdentifier>{9BD4CA85-0B67-341E-92E1-12E5C12548C8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Widget\iisTaskPanel\Mocs">
+      <UniqueIdentifier>{DB874DB6-8A84-354E-80FA-065B484AA6AA}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Widget\QSintActionPanel\Mocs">
+      <UniqueIdentifier>{48012EBC-B71D-3A63-93DC-CFA5F752C00B}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Widget\iisTaskPanel">
+      <UniqueIdentifier>{D8F604C4-797D-3FE7-9716-AD163F06882C}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Widget\QSintActionPanel">
+      <UniqueIdentifier>{AB2C617C-1EB7-3511-8FE0-E4B06E920FEF}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="View3D\Viewprovider">
+      <UniqueIdentifier>{2A8764AD-314B-3671-A4D5-5A515BF7683F}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="View3D\Inventor">
+      <UniqueIdentifier>{E8D7B922-6F45-38F0-9232-F56F57562A7E}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

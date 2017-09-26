@@ -1,0 +1,142 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="$(FC_SOURCE)\Mod\Fem\Gui\ViewProviderFemMeshPyImp.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Fem\Gui\DlgSettingsFemImp.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Fem\Gui\TaskFemConstraint.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Fem\Gui\TaskFemConstraintBearing.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Fem\Gui\TaskFemConstraintFixed.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Fem\Gui\TaskFemConstraintForce.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Fem\Gui\TaskFemConstraintPressure.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Fem\Gui\TaskFemConstraintGear.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Fem\Gui\TaskFemConstraintPulley.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Fem\Gui\qrc_Fem.cxx" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Fem\Gui\ViewProviderFemMesh.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Fem\Gui\ViewProviderFemMeshShape.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Fem\Gui\ViewProviderFemMeshShapeNetgen.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Fem\Gui\ViewProviderAnalysis.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Fem\Gui\ViewProviderSetNodes.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Fem\Gui\ViewProviderSetElements.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Fem\Gui\ViewProviderSetFaces.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Fem\Gui\ViewProviderSetGeometry.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Fem\Gui\FemSelectionGate.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Fem\Gui\ViewProviderFemConstraint.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Fem\Gui\ViewProviderFemConstraintBearing.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Fem\Gui\ViewProviderFemConstraintFixed.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Fem\Gui\ViewProviderFemConstraintForce.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Fem\Gui\ViewProviderFemConstraintPressure.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Fem\Gui\ViewProviderFemConstraintGear.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Fem\Gui\ViewProviderFemConstraintPulley.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Fem\Gui\ViewProviderResult.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Fem\Gui\TaskDlgCreateNodeSet.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Fem\Gui\TaskDlgMeshShapeNetgen.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Fem\Gui\TaskDlgAnalysis.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Fem\Gui\TaskObjectName.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Fem\Gui\TaskCreateNodeSet.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Fem\Gui\TaskDriver.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Fem\Gui\TaskAnalysisInfo.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Fem\Gui\TaskTetParameter.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Fem\Gui\AppFemGui.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Fem\Gui\AppFemGuiPy.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Fem\Gui\AbaqusHighlighter.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Fem\Gui\ActiveAnalysisObserver.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Fem\Gui\Command.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Fem\Gui\PreCompiled.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Fem\Gui\Workbench.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="$(FC_SOURCE)\Mod\Fem\Gui\ui_DlgSettingsFem.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Fem\Gui\ui_TaskCreateNodeSet.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Fem\Gui\ui_TaskObjectName.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Fem\Gui\ui_TaskFemConstraint.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Fem\Gui\ui_TaskFemConstraintBearing.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Fem\Gui\ui_TaskFemConstraintFixed.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Fem\Gui\ui_TaskFemConstraintForce.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Fem\Gui\ui_TaskFemConstraintPressure.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Fem\Gui\ui_TaskTetParameter.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Fem\Gui\ui_TaskAnalysisInfo.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Fem\Gui\ui_TaskDriver.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Fem\Gui\ViewProviderFemMesh.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Fem\Gui\ViewProviderFemMeshShape.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Fem\Gui\ViewProviderFemMeshShapeNetgen.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Fem\Gui\ViewProviderAnalysis.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Fem\Gui\ViewProviderSetNodes.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Fem\Gui\ViewProviderSetElements.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Fem\Gui\ViewProviderSetFaces.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Fem\Gui\ViewProviderSetGeometry.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Fem\Gui\FemSelectionGate.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Fem\Gui\ViewProviderFemConstraint.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Fem\Gui\ViewProviderFemConstraintBearing.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Fem\Gui\ViewProviderFemConstraintFixed.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Fem\Gui\ViewProviderFemConstraintForce.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Fem\Gui\ViewProviderFemConstraintPressure.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Fem\Gui\ViewProviderFemConstraintGear.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Fem\Gui\ViewProviderFemConstraintPulley.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Fem\Gui\ViewProviderResult.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Fem\Gui\AbaqusHighlighter.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Fem\Gui\ActiveAnalysisObserver.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Fem\Gui\PreCompiled.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Fem\Gui\Workbench.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="$(FC_SOURCE)\Mod\Fem\Gui\ViewProviderFemMeshPy.xml" />
+    <CustomBuild Include="$(FC_SOURCE)\Mod\Fem\Gui\DlgSettingsFem.ui" />
+    <CustomBuild Include="$(FC_SOURCE)\Mod\Fem\Gui\DlgSettingsFemImp.h" />
+    <CustomBuild Include="$(FC_SOURCE)\Mod\Fem\Gui\TaskFemConstraint.ui" />
+    <CustomBuild Include="$(FC_SOURCE)\Mod\Fem\Gui\TaskFemConstraint.h" />
+    <CustomBuild Include="$(FC_SOURCE)\Mod\Fem\Gui\TaskFemConstraintBearing.ui" />
+    <CustomBuild Include="$(FC_SOURCE)\Mod\Fem\Gui\TaskFemConstraintBearing.h" />
+    <CustomBuild Include="$(FC_SOURCE)\Mod\Fem\Gui\TaskFemConstraintFixed.ui" />
+    <CustomBuild Include="$(FC_SOURCE)\Mod\Fem\Gui\TaskFemConstraintFixed.h" />
+    <CustomBuild Include="$(FC_SOURCE)\Mod\Fem\Gui\TaskFemConstraintForce.ui" />
+    <CustomBuild Include="$(FC_SOURCE)\Mod\Fem\Gui\TaskFemConstraintForce.h" />
+    <CustomBuild Include="$(FC_SOURCE)\Mod\Fem\Gui\TaskFemConstraintPressure.ui" />
+    <CustomBuild Include="$(FC_SOURCE)\Mod\Fem\Gui\TaskFemConstraintPressure.h" />
+    <CustomBuild Include="$(FC_SOURCE)\Mod\Fem\Gui\TaskFemConstraintGear.h" />
+    <CustomBuild Include="$(FC_SOURCE)\Mod\Fem\Gui\TaskFemConstraintPulley.h" />
+    <CustomBuild Include="$(FC_SOURCE)\Mod\Fem\Gui\TaskDlgCreateNodeSet.h" />
+    <CustomBuild Include="$(FC_SOURCE)\Mod\Fem\Gui\TaskDlgMeshShapeNetgen.h" />
+    <CustomBuild Include="$(FC_SOURCE)\Mod\Fem\Gui\TaskDlgAnalysis.h" />
+    <CustomBuild Include="$(FC_SOURCE)\Mod\Fem\Gui\TaskObjectName.ui" />
+    <CustomBuild Include="$(FC_SOURCE)\Mod\Fem\Gui\TaskObjectName.h" />
+    <CustomBuild Include="$(FC_SOURCE)\Mod\Fem\Gui\TaskCreateNodeSet.ui" />
+    <CustomBuild Include="$(FC_SOURCE)\Mod\Fem\Gui\TaskCreateNodeSet.h" />
+    <CustomBuild Include="$(FC_SOURCE)\Mod\Fem\Gui\TaskDriver.ui" />
+    <CustomBuild Include="$(FC_SOURCE)\Mod\Fem\Gui\TaskDriver.h" />
+    <CustomBuild Include="$(FC_SOURCE)\Mod\Fem\Gui\TaskAnalysisInfo.ui" />
+    <CustomBuild Include="$(FC_SOURCE)\Mod\Fem\Gui\TaskAnalysisInfo.h" />
+    <CustomBuild Include="$(FC_SOURCE)\Mod\Fem\Gui\TaskTetParameter.ui" />
+    <CustomBuild Include="$(FC_SOURCE)\Mod\Fem\Gui\TaskTetParameter.h" />
+    <CustomBuild Include="$(FC_SOURCE)\Mod\Fem\Gui\Resources\Fem.qrc" />
+    <CustomBuild Include="\code\free-cad-code\Source\Repos\code\CMakeFiles\49c6813715ff56e9360160382e75e871\InitGui.py.rule" />
+    <CustomBuild Include="\code\free-cad-code\Source\Repos\code\CMakeFiles\49c6813715ff56e9360160382e75e871\MechanicalMaterial.ui.rule" />
+    <CustomBuild Include="\code\free-cad-code\Source\Repos\code\CMakeFiles\49c6813715ff56e9360160382e75e871\MechanicalAnalysis.ui.rule" />
+    <CustomBuild Include="\code\free-cad-code\Source\Repos\code\CMakeFiles\aaa0fab4d4fbfb733f521d6b0d535510\preferences-fem.svg.rule" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{5124C73C-630B-3F59-9DFC-D2C200992F06}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resources">
+      <UniqueIdentifier>{8C207286-E436-3C9C-8929-F51266F7ADBA}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Python">
+      <UniqueIdentifier>{3007B628-6C63-33B6-B2CF-5375A530392A}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Constraint-Dialogs">
+      <UniqueIdentifier>{31D10CF1-119F-3531-9FBB-4C5CB911889A}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ViewProvider">
+      <UniqueIdentifier>{C58C1CB9-DF0A-37B9-9E90-01B496C8CA81}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Task_Boxes">
+      <UniqueIdentifier>{0A79CDBB-1E55-333C-8A28-3816688FE8E1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Task_Dialogs">
+      <UniqueIdentifier>{8869044E-0548-3A9E-B76B-F49D0E641256}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Module">
+      <UniqueIdentifier>{D07C31CD-D17F-31BA-9EAE-DE2074DD6B41}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

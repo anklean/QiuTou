@@ -1,0 +1,132 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="$(FC_SOURCE)\Mod\PartDesign\Gui\qrc_PartDesign.cxx" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\PartDesign\Gui\AppPartDesignGui.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\PartDesign\Gui\AppPartDesignGuiPy.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\PartDesign\Gui\Command.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\PartDesign\Gui\PreCompiled.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\PartDesign\Gui\Workbench.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\PartDesign\Gui\FeaturePickDialog.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\PartDesign\Gui\ReferenceSelection.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\PartDesign\Gui\TaskPadParameters.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\PartDesign\Gui\TaskPocketParameters.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\PartDesign\Gui\TaskChamferParameters.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\PartDesign\Gui\TaskFilletParameters.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\PartDesign\Gui\TaskDraftParameters.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\PartDesign\Gui\TaskRevolutionParameters.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\PartDesign\Gui\TaskGrooveParameters.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\PartDesign\Gui\TaskTransformedMessages.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\PartDesign\Gui\TaskTransformedParameters.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\PartDesign\Gui\TaskMirroredParameters.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\PartDesign\Gui\TaskLinearPatternParameters.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\PartDesign\Gui\TaskPolarPatternParameters.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\PartDesign\Gui\TaskScaledParameters.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\PartDesign\Gui\TaskMultiTransformParameters.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\PartDesign\Gui\TaskHoleParameters.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\PartDesign\Gui\ViewProvider.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\PartDesign\Gui\ViewProviderPad.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\PartDesign\Gui\ViewProviderHole.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\PartDesign\Gui\ViewProviderPocket.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\PartDesign\Gui\ViewProviderChamfer.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\PartDesign\Gui\ViewProviderFillet.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\PartDesign\Gui\ViewProviderDraft.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\PartDesign\Gui\ViewProviderRevolution.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\PartDesign\Gui\ViewProviderGroove.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\PartDesign\Gui\ViewProviderTransformed.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\PartDesign\Gui\ViewProviderMirrored.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\PartDesign\Gui\ViewProviderLinearPattern.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\PartDesign\Gui\ViewProviderPolarPattern.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\PartDesign\Gui\ViewProviderScaled.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\PartDesign\Gui\ViewProviderMultiTransform.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="$(FC_SOURCE)\Mod\PartDesign\Gui\ui_FeaturePickDialog.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\PartDesign\Gui\ui_TaskPadParameters.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\PartDesign\Gui\ui_TaskPocketParameters.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\PartDesign\Gui\ui_TaskChamferParameters.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\PartDesign\Gui\ui_TaskFilletParameters.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\PartDesign\Gui\ui_TaskDraftParameters.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\PartDesign\Gui\ui_TaskHoleParameters.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\PartDesign\Gui\ui_TaskRevolutionParameters.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\PartDesign\Gui\ui_TaskGrooveParameters.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\PartDesign\Gui\ui_TaskTransformedMessages.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\PartDesign\Gui\ui_TaskMirroredParameters.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\PartDesign\Gui\ui_TaskLinearPatternParameters.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\PartDesign\Gui\ui_TaskPolarPatternParameters.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\PartDesign\Gui\ui_TaskScaledParameters.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\PartDesign\Gui\ui_TaskMultiTransformParameters.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\PartDesign\Gui\PreCompiled.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\PartDesign\Gui\Workbench.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\PartDesign\Gui\ReferenceSelection.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\PartDesign\Gui\ViewProvider.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\PartDesign\Gui\ViewProviderPad.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\PartDesign\Gui\ViewProviderHole.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\PartDesign\Gui\ViewProviderPocket.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\PartDesign\Gui\ViewProviderChamfer.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\PartDesign\Gui\ViewProviderFillet.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\PartDesign\Gui\ViewProviderDraft.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\PartDesign\Gui\ViewProviderRevolution.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\PartDesign\Gui\ViewProviderGroove.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\PartDesign\Gui\ViewProviderTransformed.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\PartDesign\Gui\ViewProviderMirrored.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\PartDesign\Gui\ViewProviderLinearPattern.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\PartDesign\Gui\ViewProviderPolarPattern.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\PartDesign\Gui\ViewProviderScaled.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\PartDesign\Gui\ViewProviderMultiTransform.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="$(FC_SOURCE)\Mod\PartDesign\Gui\Resources\PartDesign.qrc" />
+    <CustomBuild Include="$(FC_SOURCE)\Mod\PartDesign\Gui\FeaturePickDialog.ui" />
+    <CustomBuild Include="$(FC_SOURCE)\Mod\PartDesign\Gui\FeaturePickDialog.h" />
+    <CustomBuild Include="$(FC_SOURCE)\Mod\PartDesign\Gui\TaskPadParameters.ui" />
+    <CustomBuild Include="$(FC_SOURCE)\Mod\PartDesign\Gui\TaskPadParameters.h" />
+    <CustomBuild Include="$(FC_SOURCE)\Mod\PartDesign\Gui\TaskPocketParameters.ui" />
+    <CustomBuild Include="$(FC_SOURCE)\Mod\PartDesign\Gui\TaskPocketParameters.h" />
+    <CustomBuild Include="$(FC_SOURCE)\Mod\PartDesign\Gui\TaskChamferParameters.ui" />
+    <CustomBuild Include="$(FC_SOURCE)\Mod\PartDesign\Gui\TaskChamferParameters.h" />
+    <CustomBuild Include="$(FC_SOURCE)\Mod\PartDesign\Gui\TaskFilletParameters.ui" />
+    <CustomBuild Include="$(FC_SOURCE)\Mod\PartDesign\Gui\TaskFilletParameters.h" />
+    <CustomBuild Include="$(FC_SOURCE)\Mod\PartDesign\Gui\TaskDraftParameters.ui" />
+    <CustomBuild Include="$(FC_SOURCE)\Mod\PartDesign\Gui\TaskDraftParameters.h" />
+    <CustomBuild Include="$(FC_SOURCE)\Mod\PartDesign\Gui\TaskRevolutionParameters.ui" />
+    <CustomBuild Include="$(FC_SOURCE)\Mod\PartDesign\Gui\TaskRevolutionParameters.h" />
+    <CustomBuild Include="$(FC_SOURCE)\Mod\PartDesign\Gui\TaskGrooveParameters.ui" />
+    <CustomBuild Include="$(FC_SOURCE)\Mod\PartDesign\Gui\TaskGrooveParameters.h" />
+    <CustomBuild Include="$(FC_SOURCE)\Mod\PartDesign\Gui\TaskTransformedMessages.ui" />
+    <CustomBuild Include="$(FC_SOURCE)\Mod\PartDesign\Gui\TaskTransformedMessages.h" />
+    <CustomBuild Include="$(FC_SOURCE)\Mod\PartDesign\Gui\TaskTransformedParameters.h" />
+    <CustomBuild Include="$(FC_SOURCE)\Mod\PartDesign\Gui\TaskMirroredParameters.ui" />
+    <CustomBuild Include="$(FC_SOURCE)\Mod\PartDesign\Gui\TaskMirroredParameters.h" />
+    <CustomBuild Include="$(FC_SOURCE)\Mod\PartDesign\Gui\TaskLinearPatternParameters.ui" />
+    <CustomBuild Include="$(FC_SOURCE)\Mod\PartDesign\Gui\TaskLinearPatternParameters.h" />
+    <CustomBuild Include="$(FC_SOURCE)\Mod\PartDesign\Gui\TaskPolarPatternParameters.ui" />
+    <CustomBuild Include="$(FC_SOURCE)\Mod\PartDesign\Gui\TaskPolarPatternParameters.h" />
+    <CustomBuild Include="$(FC_SOURCE)\Mod\PartDesign\Gui\TaskScaledParameters.ui" />
+    <CustomBuild Include="$(FC_SOURCE)\Mod\PartDesign\Gui\TaskScaledParameters.h" />
+    <CustomBuild Include="$(FC_SOURCE)\Mod\PartDesign\Gui\TaskMultiTransformParameters.ui" />
+    <CustomBuild Include="$(FC_SOURCE)\Mod\PartDesign\Gui\TaskMultiTransformParameters.h" />
+    <CustomBuild Include="$(FC_SOURCE)\Mod\PartDesign\Gui\TaskHoleParameters.ui" />
+    <CustomBuild Include="$(FC_SOURCE)\Mod\PartDesign\Gui\TaskHoleParameters.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{BD35BF06-C8E8-3366-910F-4955129FFCAC}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{4129A801-9AD2-3DA1-A809-5BC032DABCC2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{5124C73C-630B-3F59-9DFC-D2C200992F06}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ViewProvider">
+      <UniqueIdentifier>{C58C1CB9-DF0A-37B9-9E90-01B496C8CA81}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="TaskDialogs">
+      <UniqueIdentifier>{FA163800-3670-30ED-971A-9EABDE0DB6C9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Module">
+      <UniqueIdentifier>{D07C31CD-D17F-31BA-9EAE-DE2074DD6B41}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

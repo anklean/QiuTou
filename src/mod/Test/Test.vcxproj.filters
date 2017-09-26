@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="\code\free-cad-code\Source\Repos\code\CMakeFiles\09c7a0b6066627013243792eb22927cc\Init.py.rule" />
+    <CustomBuild Include="\code\free-cad-code\Source\Repos\code\CMakeFiles\09c7a0b6066627013243792eb22927cc\BaseTests.py.rule" />
+    <CustomBuild Include="\code\free-cad-code\Source\Repos\code\CMakeFiles\09c7a0b6066627013243792eb22927cc\Document.py.rule" />
+    <CustomBuild Include="\code\free-cad-code\Source\Repos\code\CMakeFiles\09c7a0b6066627013243792eb22927cc\Menu.py.rule" />
+    <CustomBuild Include="\code\free-cad-code\Source\Repos\code\CMakeFiles\09c7a0b6066627013243792eb22927cc\TestApp.py.rule" />
+    <CustomBuild Include="\code\free-cad-code\Source\Repos\code\CMakeFiles\09c7a0b6066627013243792eb22927cc\TestGui.py.rule" />
+    <CustomBuild Include="\code\free-cad-code\Source\Repos\code\CMakeFiles\09c7a0b6066627013243792eb22927cc\UnicodeTests.py.rule" />
+    <CustomBuild Include="\code\free-cad-code\Source\Repos\code\CMakeFiles\09c7a0b6066627013243792eb22927cc\UnitTests.py.rule" />
+    <CustomBuild Include="\code\free-cad-code\Source\Repos\code\CMakeFiles\09c7a0b6066627013243792eb22927cc\Workbench.py.rule" />
+    <CustomBuild Include="\code\free-cad-code\Source\Repos\code\CMakeFiles\09c7a0b6066627013243792eb22927cc\unittestgui.py.rule" />
+    <CustomBuild Include="\code\free-cad-code\Source\Repos\code\CMakeFiles\09c7a0b6066627013243792eb22927cc\InitGui.py.rule" />
+    <CustomBuild Include="\code\free-cad-code\Source\Repos\code\CMakeFiles\09c7a0b6066627013243792eb22927cc\testmakeWireString.py.rule" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="$(FC_SOURCE)\Mod\Test\Init.py" />
+    <None Include="$(FC_SOURCE)\Mod\Test\BaseTests.py" />
+    <None Include="$(FC_SOURCE)\Mod\Test\Document.py" />
+    <None Include="$(FC_SOURCE)\Mod\Test\Menu.py" />
+    <None Include="$(FC_SOURCE)\Mod\Test\TestApp.py" />
+    <None Include="$(FC_SOURCE)\Mod\Test\TestGui.py" />
+    <None Include="$(FC_SOURCE)\Mod\Test\UnicodeTests.py" />
+    <None Include="$(FC_SOURCE)\Mod\Test\UnitTests.py" />
+    <None Include="$(FC_SOURCE)\Mod\Test\Workbench.py" />
+    <None Include="$(FC_SOURCE)\Mod\Test\unittestgui.py" />
+    <None Include="$(FC_SOURCE)\Mod\Test\InitGui.py" />
+    <None Include="$(FC_SOURCE)\Mod\Test\testmakeWireString.py" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{5124C73C-630B-3F59-9DFC-D2C200992F06}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

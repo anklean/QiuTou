@@ -1,0 +1,117 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="$(FC_SOURCE)\App\Annotation.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\App\Document.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\App\DocumentObject.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\App\DocumentObjectFileIncluded.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\App\DocumentObjectGroup.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\App\DocumentObjectGroupPyImp.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\App\DocumentObjectPyImp.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\App\DocumentObserver.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\App\DocumentObserverPython.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\App\DocumentPyImp.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\App\FeaturePython.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\App\FeatureTest.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\App\GeoFeature.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\App\InventorObject.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\App\MeasureDistance.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\App\Placement.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\App\Plane.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\App\Transactions.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\App\VRMLObject.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\App\MaterialObject.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\App\MergeDocuments.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\App\DynamicProperty.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\App\Property.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\App\PropertyContainer.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\App\PropertyContainerPyImp.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\App\PropertyFile.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\App\PropertyGeo.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\App\PropertyLinks.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\App\PropertyPythonObject.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\App\PropertyStandard.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\App\PropertyUnits.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\App\Application.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\App\ApplicationPy.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\App\Branding.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\App\ColorModel.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\App\ComplexGeoData.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\App\ComplexGeoDataPyImp.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\App\Enumeration.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\App\Material.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\App\MaterialPyImp.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\App\PreCompiled.cpp" />
+    <ClCompile Include="GrindingWheelData.cpp" />
+    <ClCompile Include="PropertyToolList.cpp" />
+    <ClCompile Include="Tools.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="$(FC_SOURCE)\App\Annotation.h" />
+    <ClInclude Include="$(FC_SOURCE)\App\Document.h" />
+    <ClInclude Include="$(FC_SOURCE)\App\DocumentObject.h" />
+    <ClInclude Include="$(FC_SOURCE)\App\DocumentObjectFileIncluded.h" />
+    <ClInclude Include="$(FC_SOURCE)\App\DocumentObjectGroup.h" />
+    <ClInclude Include="$(FC_SOURCE)\App\DocumentObserver.h" />
+    <ClInclude Include="$(FC_SOURCE)\App\DocumentObserverPython.h" />
+    <ClInclude Include="$(FC_SOURCE)\App\FeaturePython.h" />
+    <ClInclude Include="$(FC_SOURCE)\App\FeaturePythonPyImp.h" />
+    <ClInclude Include="$(FC_SOURCE)\App\FeaturePythonPyImp.inl" />
+    <ClInclude Include="$(FC_SOURCE)\App\FeatureTest.h" />
+    <ClInclude Include="$(FC_SOURCE)\App\GeoFeature.h" />
+    <ClInclude Include="$(FC_SOURCE)\App\InventorObject.h" />
+    <ClInclude Include="$(FC_SOURCE)\App\MeasureDistance.h" />
+    <ClInclude Include="$(FC_SOURCE)\App\Placement.h" />
+    <ClInclude Include="$(FC_SOURCE)\App\Plane.h" />
+    <ClInclude Include="$(FC_SOURCE)\App\Transactions.h" />
+    <ClInclude Include="$(FC_SOURCE)\App\VRMLObject.h" />
+    <ClInclude Include="$(FC_SOURCE)\App\MaterialObject.h" />
+    <ClInclude Include="$(FC_SOURCE)\App\MergeDocuments.h" />
+    <ClInclude Include="$(FC_SOURCE)\App\DynamicProperty.h" />
+    <ClInclude Include="$(FC_SOURCE)\App\Property.h" />
+    <ClInclude Include="$(FC_SOURCE)\App\PropertyContainer.h" />
+    <ClInclude Include="$(FC_SOURCE)\App\PropertyFile.h" />
+    <ClInclude Include="$(FC_SOURCE)\App\PropertyGeo.h" />
+    <ClInclude Include="$(FC_SOURCE)\App\PropertyLinks.h" />
+    <ClInclude Include="$(FC_SOURCE)\App\PropertyPythonObject.h" />
+    <ClInclude Include="$(FC_SOURCE)\App\PropertyStandard.h" />
+    <ClInclude Include="$(FC_SOURCE)\App\PropertyUnits.h" />
+    <ClInclude Include="$(FC_SOURCE)\App\Application.h" />
+    <ClInclude Include="$(FC_SOURCE)\App\Branding.h" />
+    <ClInclude Include="$(FC_SOURCE)\App\ColorModel.h" />
+    <ClInclude Include="$(FC_SOURCE)\App\ComplexGeoData.h" />
+    <ClInclude Include="$(FC_SOURCE)\App\Enumeration.h" />
+    <ClInclude Include="$(FC_SOURCE)\App\Material.h" />
+    <ClInclude Include="$(FC_SOURCE)\App\PreCompiled.h" />
+    <ClInclude Include="GrindingWheelData.h" />
+    <ClInclude Include="PropertyToolList.h" />
+    <ClInclude Include="Tools.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="$(FC_SOURCE)\App\DocumentObjectGroupPy.xml" />
+    <CustomBuild Include="$(FC_SOURCE)\App\DocumentObjectPy.xml" />
+    <CustomBuild Include="$(FC_SOURCE)\App\DocumentPy.xml" />
+    <CustomBuild Include="$(FC_SOURCE)\App\PropertyContainerPy.xml" />
+    <CustomBuild Include="$(FC_SOURCE)\App\ComplexGeoDataPy.xml" />
+    <CustomBuild Include="$(FC_SOURCE)\App\MaterialPy.xml" />
+    <CustomBuild Include="$(FC_SOURCE)\App\FreeCADInit.py" />
+    <CustomBuild Include="$(FC_SOURCE)\App\FreeCADTest.py" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{BD35BF06-C8E8-3366-910F-4955129FFCAC}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{4129A801-9AD2-3DA1-A809-5BC032DABCC2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="XML">
+      <UniqueIdentifier>{D8F0DEC7-9BFC-39C9-8396-A24484506E51}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Document">
+      <UniqueIdentifier>{2628AE65-59F2-341F-9BCD-E54FE1C1E438}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Properties">
+      <UniqueIdentifier>{5EB61082-D5F5-3734-98ED-D3746C5EEBFD}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

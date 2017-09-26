@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="\code\free-cad-code\Source\Repos\code\CMakeFiles\71754a110ed74380c1cf0d211fbbe211\__init__.py.rule" />
+    <CustomBuild Include="\code\free-cad-code\Source\Repos\code\CMakeFiles\71754a110ed74380c1cf0d211fbbe211\AggregationDataTypes.py.rule" />
+    <CustomBuild Include="\code\free-cad-code\Source\Repos\code\CMakeFiles\71754a110ed74380c1cf0d211fbbe211\BaseType.py.rule" />
+    <CustomBuild Include="\code\free-cad-code\Source\Repos\code\CMakeFiles\71754a110ed74380c1cf0d211fbbe211\Builtin.py.rule" />
+    <CustomBuild Include="\code\free-cad-code\Source\Repos\code\CMakeFiles\71754a110ed74380c1cf0d211fbbe211\ConstructedDataTypes.py.rule" />
+    <CustomBuild Include="\code\free-cad-code\Source\Repos\code\CMakeFiles\71754a110ed74380c1cf0d211fbbe211\essa_par.py.rule" />
+    <CustomBuild Include="\code\free-cad-code\Source\Repos\code\CMakeFiles\71754a110ed74380c1cf0d211fbbe211\Model.py.rule" />
+    <CustomBuild Include="\code\free-cad-code\Source\Repos\code\CMakeFiles\71754a110ed74380c1cf0d211fbbe211\Part21.py.rule" />
+    <CustomBuild Include="\code\free-cad-code\Source\Repos\code\CMakeFiles\71754a110ed74380c1cf0d211fbbe211\Rules.py.rule" />
+    <CustomBuild Include="\code\free-cad-code\Source\Repos\code\CMakeFiles\71754a110ed74380c1cf0d211fbbe211\SCLBase.py.rule" />
+    <CustomBuild Include="\code\free-cad-code\Source\Repos\code\CMakeFiles\71754a110ed74380c1cf0d211fbbe211\SimpleDataTypes.py.rule" />
+    <CustomBuild Include="\code\free-cad-code\Source\Repos\code\CMakeFiles\71754a110ed74380c1cf0d211fbbe211\TypeChecker.py.rule" />
+    <CustomBuild Include="\code\free-cad-code\Source\Repos\code\CMakeFiles\71754a110ed74380c1cf0d211fbbe211\Utils.py.rule" />
+    <CustomBuild Include="\code\free-cad-code\Source\Repos\code\CMakeFiles\fc88b8e58f9301b0a56610036a8d2870\automotive_design.py.rule" />
+    <CustomBuild Include="\code\free-cad-code\Source\Repos\code\CMakeFiles\fc88b8e58f9301b0a56610036a8d2870\ifc2x3.py.rule" />
+    <CustomBuild Include="\code\free-cad-code\Source\Repos\code\CMakeFiles\fc88b8e58f9301b0a56610036a8d2870\ifc4.py.rule" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="$(FC_SOURCE)\Mod\Import\App\SCL\__init__.py" />
+    <None Include="$(FC_SOURCE)\Mod\Import\App\SCL\AggregationDataTypes.py" />
+    <None Include="$(FC_SOURCE)\Mod\Import\App\SCL\BaseType.py" />
+    <None Include="$(FC_SOURCE)\Mod\Import\App\SCL\Builtin.py" />
+    <None Include="$(FC_SOURCE)\Mod\Import\App\SCL\ConstructedDataTypes.py" />
+    <None Include="$(FC_SOURCE)\Mod\Import\App\SCL\essa_par.py" />
+    <None Include="$(FC_SOURCE)\Mod\Import\App\SCL\Model.py" />
+    <None Include="$(FC_SOURCE)\Mod\Import\App\SCL\Part21.py" />
+    <None Include="$(FC_SOURCE)\Mod\Import\App\SCL\Rules.py" />
+    <None Include="$(FC_SOURCE)\Mod\Import\App\SCL\SCLBase.py" />
+    <None Include="$(FC_SOURCE)\Mod\Import\App\SCL\SimpleDataTypes.py" />
+    <None Include="$(FC_SOURCE)\Mod\Import\App\SCL\TypeChecker.py" />
+    <None Include="$(FC_SOURCE)\Mod\Import\App\SCL\Utils.py" />
+    <None Include="$(FC_SOURCE)\Mod\Import\App\automotive_design.py" />
+    <None Include="$(FC_SOURCE)\Mod\Import\App\ifc2x3.py" />
+    <None Include="$(FC_SOURCE)\Mod\Import\App\ifc4.py" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{5124C73C-630B-3F59-9DFC-D2C200992F06}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SCL">
+      <UniqueIdentifier>{289A9D0C-DAF5-3126-A60C-09776E63AC29}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

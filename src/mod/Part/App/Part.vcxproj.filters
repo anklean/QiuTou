@@ -1,0 +1,198 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="$(FC_SOURCE)\Mod\Part\App\FeaturePartBoolean.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Part\App\FeaturePartBox.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Part\App\FeaturePartCircle.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Part\App\FeaturePartCommon.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Part\App\FeaturePartCurveNet.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Part\App\FeaturePartCut.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Part\App\FeaturePartFuse.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Part\App\FeaturePartImportBrep.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Part\App\FeaturePartImportIges.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Part\App\FeaturePartImportStep.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Part\App\FeaturePartPolygon.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Part\App\FeaturePartSection.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Part\App\FeaturePartSpline.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Part\App\FeatureChamfer.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Part\App\FeatureCompound.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Part\App\FeatureExtrusion.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Part\App\FeatureFillet.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Part\App\FeatureMirroring.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Part\App\FeatureRevolution.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Part\App\PartFeatures.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Part\App\PartFeature.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Part\App\PartFeatureReference.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Part\App\Part2DObject.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Part\App\PrimitiveFeature.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Part\App\FeatureGeometrySet.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Part\App\CustomFeature.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Part\App\PropertyTopoShape.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Part\App\PropertyGeometryList.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Part\App\ArcPyImp.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Part\App\ArcOfCirclePyImp.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Part\App\ArcOfParabolaPyImp.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Part\App\CirclePyImp.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Part\App\ArcOfEllipsePyImp.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Part\App\EllipsePyImp.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Part\App\HyperbolaPyImp.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Part\App\ArcOfHyperbolaPyImp.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Part\App\ParabolaPyImp.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Part\App\OffsetCurvePyImp.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Part\App\GeometryPyImp.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Part\App\GeometryCurvePyImp.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Part\App\GeometrySurfacePyImp.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Part\App\LinePyImp.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Part\App\PointPyImp.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Part\App\BezierCurvePyImp.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Part\App\BSplineCurvePyImp.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Part\App\PlanePyImp.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Part\App\ConePyImp.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Part\App\CylinderPyImp.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Part\App\SpherePyImp.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Part\App\ToroidPyImp.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Part\App\BezierSurfacePyImp.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Part\App\BSplineSurfacePyImp.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Part\App\OffsetSurfacePyImp.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Part\App\RectangularTrimmedSurfacePyImp.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Part\App\SurfaceOfExtrusionPyImp.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Part\App\SurfaceOfRevolutionPyImp.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Part\App\PartFeaturePyImp.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Part\App\Part2DObjectPyImp.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Part\App\TopoShapePyImp.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Part\App\TopoShapeCompSolidPyImp.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Part\App\TopoShapeCompoundPyImp.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Part\App\TopoShapeEdgePyImp.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Part\App\TopoShapeFacePyImp.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Part\App\TopoShapeShellPyImp.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Part\App\TopoShapeSolidPyImp.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Part\App\TopoShapeVertexPyImp.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Part\App\TopoShapeWirePyImp.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Part\App\BRepOffsetAPI_MakePipeShellPyImp.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Part\App\AppPart.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Part\App\AppPartPy.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Part\App\BSplineCurveBiArcs.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Part\App\CrossSection.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Part\App\Geometry.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Part\App\ImportIges.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Part\App\ImportStep.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Part\App\PreCompiled.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Part\App\ProgressIndicator.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Part\App\TopoShape.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Part\App\edgecluster.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Part\App\modelRefine.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Part\App\Tools.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Part\App\FT2FC.cpp" />
+    <ClCompile Include="FeatureOffsetEdge.cpp" />
+    <ClCompile Include="BallCutter.cpp" />
+    <ClCompile Include="BRepOffset_OffsetEdgeOnFace.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="$(FC_SOURCE)\Mod\Part\App\FeaturePartBoolean.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Part\App\FeaturePartBox.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Part\App\FeaturePartCircle.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Part\App\FeaturePartCommon.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Part\App\FeaturePartCurveNet.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Part\App\FeaturePartCut.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Part\App\FeaturePartFuse.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Part\App\FeaturePartImportBrep.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Part\App\FeaturePartImportIges.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Part\App\FeaturePartImportStep.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Part\App\FeaturePartPolygon.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Part\App\FeaturePartSection.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Part\App\FeaturePartSpline.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Part\App\FeatureChamfer.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Part\App\FeatureCompound.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Part\App\FeatureExtrusion.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Part\App\FeatureFillet.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Part\App\FeatureMirroring.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Part\App\FeatureRevolution.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Part\App\PartFeatures.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Part\App\PartFeature.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Part\App\PartFeatureReference.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Part\App\Part2DObject.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Part\App\PrimitiveFeature.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Part\App\FeatureGeometrySet.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Part\App\CustomFeature.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Part\App\PropertyTopoShape.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Part\App\PropertyGeometryList.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Part\App\CrossSection.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Part\App\Geometry.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Part\App\ImportIges.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Part\App\ImportStep.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Part\App\PreCompiled.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Part\App\ProgressIndicator.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Part\App\TopoShape.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Part\App\edgecluster.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Part\App\modelRefine.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Part\App\Tools.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Part\App\encodeFilename.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Part\App\OCCError.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Part\App\FT2FC.h" />
+    <ClInclude Include="FeatureOffsetEdge.h" />
+    <ClInclude Include="BallCutter.h" />
+    <ClInclude Include="BRepOffset_OffsetEdgeOnFace.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="$(FC_SOURCE)\Mod\Part\App\ArcPy.xml" />
+    <CustomBuild Include="$(FC_SOURCE)\Mod\Part\App\ArcOfCirclePy.xml" />
+    <CustomBuild Include="$(FC_SOURCE)\Mod\Part\App\ArcOfParabolaPy.xml" />
+    <CustomBuild Include="$(FC_SOURCE)\Mod\Part\App\CirclePy.xml" />
+    <CustomBuild Include="$(FC_SOURCE)\Mod\Part\App\ArcOfEllipsePy.xml" />
+    <CustomBuild Include="$(FC_SOURCE)\Mod\Part\App\EllipsePy.xml" />
+    <CustomBuild Include="$(FC_SOURCE)\Mod\Part\App\HyperbolaPy.xml" />
+    <CustomBuild Include="$(FC_SOURCE)\Mod\Part\App\ArcOfHyperbolaPy.xml" />
+    <CustomBuild Include="$(FC_SOURCE)\Mod\Part\App\ParabolaPy.xml" />
+    <CustomBuild Include="$(FC_SOURCE)\Mod\Part\App\OffsetCurvePy.xml" />
+    <CustomBuild Include="$(FC_SOURCE)\Mod\Part\App\GeometryPy.xml" />
+    <CustomBuild Include="$(FC_SOURCE)\Mod\Part\App\GeometryCurvePy.xml" />
+    <CustomBuild Include="$(FC_SOURCE)\Mod\Part\App\GeometrySurfacePy.xml" />
+    <CustomBuild Include="$(FC_SOURCE)\Mod\Part\App\LinePy.xml" />
+    <CustomBuild Include="$(FC_SOURCE)\Mod\Part\App\PointPy.xml" />
+    <CustomBuild Include="$(FC_SOURCE)\Mod\Part\App\BezierCurvePy.xml" />
+    <CustomBuild Include="$(FC_SOURCE)\Mod\Part\App\BSplineCurvePy.xml" />
+    <CustomBuild Include="$(FC_SOURCE)\Mod\Part\App\PlanePy.xml" />
+    <CustomBuild Include="$(FC_SOURCE)\Mod\Part\App\ConePy.xml" />
+    <CustomBuild Include="$(FC_SOURCE)\Mod\Part\App\CylinderPy.xml" />
+    <CustomBuild Include="$(FC_SOURCE)\Mod\Part\App\SpherePy.xml" />
+    <CustomBuild Include="$(FC_SOURCE)\Mod\Part\App\ToroidPy.xml" />
+    <CustomBuild Include="$(FC_SOURCE)\Mod\Part\App\BezierSurfacePy.xml" />
+    <CustomBuild Include="$(FC_SOURCE)\Mod\Part\App\BSplineSurfacePy.xml" />
+    <CustomBuild Include="$(FC_SOURCE)\Mod\Part\App\OffsetSurfacePy.xml" />
+    <CustomBuild Include="$(FC_SOURCE)\Mod\Part\App\RectangularTrimmedSurfacePy.xml" />
+    <CustomBuild Include="$(FC_SOURCE)\Mod\Part\App\SurfaceOfExtrusionPy.xml" />
+    <CustomBuild Include="$(FC_SOURCE)\Mod\Part\App\SurfaceOfRevolutionPy.xml" />
+    <CustomBuild Include="$(FC_SOURCE)\Mod\Part\App\PartFeaturePy.xml" />
+    <CustomBuild Include="$(FC_SOURCE)\Mod\Part\App\Part2DObjectPy.xml" />
+    <CustomBuild Include="$(FC_SOURCE)\Mod\Part\App\TopoShapePy.xml" />
+    <CustomBuild Include="$(FC_SOURCE)\Mod\Part\App\TopoShapeCompSolidPy.xml" />
+    <CustomBuild Include="$(FC_SOURCE)\Mod\Part\App\TopoShapeCompoundPy.xml" />
+    <CustomBuild Include="$(FC_SOURCE)\Mod\Part\App\TopoShapeEdgePy.xml" />
+    <CustomBuild Include="$(FC_SOURCE)\Mod\Part\App\TopoShapeFacePy.xml" />
+    <CustomBuild Include="$(FC_SOURCE)\Mod\Part\App\TopoShapeShellPy.xml" />
+    <CustomBuild Include="$(FC_SOURCE)\Mod\Part\App\TopoShapeSolidPy.xml" />
+    <CustomBuild Include="$(FC_SOURCE)\Mod\Part\App\TopoShapeVertexPy.xml" />
+    <CustomBuild Include="$(FC_SOURCE)\Mod\Part\App\TopoShapeWirePy.xml" />
+    <CustomBuild Include="$(FC_SOURCE)\Mod\Part\App\BRepOffsetAPI_MakePipeShellPy.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{BD35BF06-C8E8-3366-910F-4955129FFCAC}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{4129A801-9AD2-3DA1-A809-5BC032DABCC2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{5124C73C-630B-3F59-9DFC-D2C200992F06}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Features">
+      <UniqueIdentifier>{87630B96-4026-3662-A292-99D1C179217B}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Properties">
+      <UniqueIdentifier>{5EB61082-D5F5-3734-98ED-D3746C5EEBFD}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Python">
+      <UniqueIdentifier>{3007B628-6C63-33B6-B2CF-5375A530392A}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

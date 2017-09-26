@@ -1,0 +1,757 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="MinSizeRel|Win32">
+      <Configuration>MinSizeRel</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|Win32">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGUID>{2E789373-B7B4-374E-A3F3-80682A970B40}</ProjectGUID>
+    <Keyword>Win32Proj</Keyword>
+    <Platform>Win32</Platform>
+    <ProjectName>PathGui</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">
+    <Import Project="..\..\..\..\FreeCAD_trunk.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="..\..\..\..\FreeCAD_trunk.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">
+    <Import Project="..\..\..\..\FreeCAD_trunk.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="..\..\..\..\FreeCAD_trunk.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.pyd</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</GenerateManifest>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">PathGui</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.pyd</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">\code\free-cad-code\Source\Repos\code\Mod\Path\MinSizeRel\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">PathGui.dir\MinSizeRel\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">PathGui</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">.pyd</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">\code\free-cad-code\Source\Repos\code\Mod\Path\RelWithDebInfo\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">PathGui.dir\RelWithDebInfo\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">PathGui</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">.pyd</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">true</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">true</GenerateManifest>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <AdditionalOptions> /Zm128 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalIncludeDirectories>$(FC_INCLUDE);$(FC_INCLUDE)\QtOpenGL;$(FC_INCLUDE)\QtSvg;$(FC_INCLUDE)\QtUiTools;$(FC_INCLUDE)\QtWebKit;$(FC_INCLUDE)\QtGui;$(FC_INCLUDE)\QtXml;$(FC_INCLUDE)\QtNetwork;$(FC_INCLUDE)\QtCore;$(FC_SOURCE);\code\free-cad-code\Source\Repos\code;$(FC_SOURCE)\Mod\Path\Gui;$(FC_LIBRARY)\cmake\..\..\include\oce;$(FC_INCLUDE)\eigen3;$(FC_INCLUDE)\python2.7;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>Debug/</AssemblerListingLocation>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_DEBUG;FC_DEBUG;QT_OPENGL_LIB;QT_SVG_LIB;QT_UITOOLS_LIB;QT_WEBKIT_LIB;QT_GUI_LIB;QT_XML_LIB;QT_NETWORK_LIB;QT_CORE_LIB;FCGuiPath;HAVE_ACOSH;HAVE_ASINH;HAVE_ATANH;CMAKE_INTDIR="Debug";PathGui_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_DEBUG;FC_DEBUG;QT_OPENGL_LIB;QT_SVG_LIB;QT_UITOOLS_LIB;QT_WEBKIT_LIB;QT_GUI_LIB;QT_XML_LIB;QT_NETWORK_LIB;QT_CORE_LIB;FCGuiPath;HAVE_ACOSH;HAVE_ASINH;HAVE_ATANH;CMAKE_INTDIR=\"Debug\";PathGui_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(FC_INCLUDE);$(FC_INCLUDE)\QtOpenGL;$(FC_INCLUDE)\QtSvg;$(FC_INCLUDE)\QtUiTools;$(FC_INCLUDE)\QtWebKit;$(FC_INCLUDE)\QtGui;$(FC_INCLUDE)\QtXml;$(FC_INCLUDE)\QtNetwork;$(FC_INCLUDE)\QtCore;$(FC_SOURCE);\code\free-cad-code\Source\Repos\code;$(FC_SOURCE)\Mod\Path\Gui;$(FC_LIBRARY)\cmake\..\..\include\oce;$(FC_INCLUDE)\eigen3;$(FC_INCLUDE)\python2.7;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>$(FC_INCLUDE);$(FC_INCLUDE)\QtOpenGL;$(FC_INCLUDE)\QtSvg;$(FC_INCLUDE)\QtUiTools;$(FC_INCLUDE)\QtWebKit;$(FC_INCLUDE)\QtGui;$(FC_INCLUDE)\QtXml;$(FC_INCLUDE)\QtNetwork;$(FC_INCLUDE)\QtCore;$(FC_SOURCE);\code\free-cad-code\Source\Repos\code;$(FC_SOURCE)\Mod\Path\Gui;$(FC_LIBRARY)\cmake\..\..\include\oce;$(FC_INCLUDE)\eigen3;$(FC_INCLUDE)\python2.7;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <PostBuildEvent>
+      <Message>
+      </Message>
+      <Command>setlocal
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+    </PostBuildEvent>
+    <Link>
+      <AdditionalOptions> /machine:X86 /debug %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;SHFolder.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;winmm.lib;comsupp.lib;Ws2_32.lib;dbghelp.lib;Path_d.lib;FreeCADGui.lib;Part_d.lib;$(FC_LIBRARY)\TKIGESd.lib;$(FC_LIBRARY)\TKSTLd.lib;$(FC_LIBRARY)\TKMeshd.lib;$(FC_LIBRARY)\TKOffsetd.lib;$(FC_LIBRARY)\TKFilletd.lib;$(FC_LIBRARY)\TKSTEPd.lib;$(FC_LIBRARY)\TKSTEP209d.lib;$(FC_LIBRARY)\TKSTEPAttrd.lib;$(FC_LIBRARY)\TKSTEPBased.lib;$(FC_LIBRARY)\TKXSBased.lib;$(FC_LIBRARY)\TKHLRd.lib;$(FC_LIBRARY)\TKFeatd.lib;$(FC_LIBRARY)\TKBoold.lib;$(FC_LIBRARY)\TKShHealingd.lib;$(FC_LIBRARY)\TKBOd.lib;$(FC_LIBRARY)\TKPrimd.lib;$(FC_LIBRARY)\TKTopAlgod.lib;$(FC_LIBRARY)\TKGeomAlgod.lib;$(FC_LIBRARY)\TKBRepd.lib;$(FC_LIBRARY)\TKGeomBased.lib;$(FC_LIBRARY)\TKG3dd.lib;$(FC_LIBRARY)\TKG2dd.lib;$(FC_LIBRARY)\TKMathd.lib;$(FC_LIBRARY)\TKerneld.lib;psapi.lib;$(FC_LIBRARY)\freetype.lib;FreeCADApp.lib;FreeCADBase.lib;$(FC_LIBRARY)\python27_d.lib;$(FC_LIBRARY)\xerces-c_3D.lib;$(FC_LIBRARY)\zlibd.lib;MSVCRTD.lib;MSVCPRTD.lib;Rpcrt4.lib;version.lib;$(FC_LIBRARY)\boost_filesystem-vc120-mt-gd-1_55.lib;$(FC_LIBRARY)\boost_program_options-vc120-mt-gd-1_55.lib;$(FC_LIBRARY)\boost_regex-vc120-mt-gd-1_55.lib;$(FC_LIBRARY)\boost_signals-vc120-mt-gd-1_55.lib;$(FC_LIBRARY)\boost_system-vc120-mt-gd-1_55.lib;$(FC_LIBRARY)\boost_thread-vc120-mt-gd-1_55.lib;$(FC_LIBRARY)\coin4d.lib;$(FC_LIBRARY)\QtOpenGLd4.lib;glu32.lib;QtUiToolsd.lib;opengl32.lib;$(FC_LIBRARY)\QtSvgd4.lib;$(FC_LIBRARY)\QtUiToolsd.lib;$(FC_LIBRARY)\QtWebKitd4.lib;$(FC_LIBRARY)\QtXmlPatternsd4.lib;$(FC_LIBRARY)\QtGuid4.lib;imm32.lib;$(FC_LIBRARY)\QtXmld4.lib;$(FC_LIBRARY)\QtNetworkd4.lib;$(FC_LIBRARY)\QtCored4.lib;ws2_32.lib;$(FC_LIBRARY)\cmake\Shiboken-1.2.2\..\..\shiboken-python2.7_d.lib;$(FC_LIBRARY)\cmake\PySide-1.2.2\..\..\pyside-python2.7_d.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(FC_LIBRARY)\;$(FC_LIBRARY)\/$(Configuration);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreAllDefaultLibraries>true</IgnoreAllDefaultLibraries>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>$(FC_LIBRARY)\$(TargetName).lib</ImportLibrary>
+      <LargeAddressAware>true</LargeAddressAware>
+      <ProgramDataBaseFile>$(DEVROOT)/Mod/Path/PathGui_d.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+      <Version>
+      </Version>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>$(FC_INCLUDE);$(FC_INCLUDE)\QtOpenGL;$(FC_INCLUDE)\QtSvg;$(FC_INCLUDE)\QtUiTools;$(FC_INCLUDE)\QtWebKit;$(FC_INCLUDE)\QtGui;$(FC_INCLUDE)\QtXml;$(FC_INCLUDE)\QtNetwork;$(FC_INCLUDE)\QtCore;$(FC_SOURCE);\code\free-cad-code\Source\Repos\code;$(FC_SOURCE)\Mod\Path\Gui;$(FC_LIBRARY)\cmake\..\..\include\oce;$(FC_INCLUDE)\eigen3;$(FC_INCLUDE)\python2.7;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>Release/</AssemblerListingLocation>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <ExceptionHandling>Async</ExceptionHandling>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;QT_NO_DEBUG;QT_OPENGL_LIB;QT_SVG_LIB;QT_UITOOLS_LIB;QT_WEBKIT_LIB;QT_GUI_LIB;QT_XML_LIB;QT_NETWORK_LIB;QT_CORE_LIB;FCGuiPath;HAVE_ACOSH;HAVE_ASINH;HAVE_ATANH;CMAKE_INTDIR="Release";PathGui_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;QT_NO_DEBUG;QT_OPENGL_LIB;QT_SVG_LIB;QT_UITOOLS_LIB;QT_WEBKIT_LIB;QT_GUI_LIB;QT_XML_LIB;QT_NETWORK_LIB;QT_CORE_LIB;FCGuiPath;HAVE_ACOSH;HAVE_ASINH;HAVE_ATANH;CMAKE_INTDIR=\"Release\";PathGui_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(FC_INCLUDE);$(FC_INCLUDE)\QtOpenGL;$(FC_INCLUDE)\QtSvg;$(FC_INCLUDE)\QtUiTools;$(FC_INCLUDE)\QtWebKit;$(FC_INCLUDE)\QtGui;$(FC_INCLUDE)\QtXml;$(FC_INCLUDE)\QtNetwork;$(FC_INCLUDE)\QtCore;$(FC_SOURCE);\code\free-cad-code\Source\Repos\code;$(FC_SOURCE)\Mod\Path\Gui;$(FC_LIBRARY)\cmake\..\..\include\oce;$(FC_INCLUDE)\eigen3;$(FC_INCLUDE)\python2.7;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>$(FC_INCLUDE);$(FC_INCLUDE)\QtOpenGL;$(FC_INCLUDE)\QtSvg;$(FC_INCLUDE)\QtUiTools;$(FC_INCLUDE)\QtWebKit;$(FC_INCLUDE)\QtGui;$(FC_INCLUDE)\QtXml;$(FC_INCLUDE)\QtNetwork;$(FC_INCLUDE)\QtCore;$(FC_SOURCE);\code\free-cad-code\Source\Repos\code;$(FC_SOURCE)\Mod\Path\Gui;$(FC_LIBRARY)\cmake\..\..\include\oce;$(FC_INCLUDE)\eigen3;$(FC_INCLUDE)\python2.7;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <PostBuildEvent>
+      <Message>
+      </Message>
+      <Command>setlocal
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+    </PostBuildEvent>
+    <Link>
+      <AdditionalOptions> /machine:X86 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;SHFolder.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;winmm.lib;comsupp.lib;Ws2_32.lib;dbghelp.lib;Path.lib;FreeCADGui.lib;Part.lib;$(FC_LIBRARY)\TKIGES.lib;$(FC_LIBRARY)\TKSTL.lib;$(FC_LIBRARY)\TKMesh.lib;$(FC_LIBRARY)\TKOffset.lib;$(FC_LIBRARY)\TKFillet.lib;$(FC_LIBRARY)\TKSTEP.lib;$(FC_LIBRARY)\TKSTEP209.lib;$(FC_LIBRARY)\TKSTEPAttr.lib;$(FC_LIBRARY)\TKSTEPBase.lib;$(FC_LIBRARY)\TKXSBase.lib;$(FC_LIBRARY)\TKHLR.lib;$(FC_LIBRARY)\TKFeat.lib;$(FC_LIBRARY)\TKBool.lib;$(FC_LIBRARY)\TKShHealing.lib;$(FC_LIBRARY)\TKBO.lib;$(FC_LIBRARY)\TKPrim.lib;$(FC_LIBRARY)\TKTopAlgo.lib;$(FC_LIBRARY)\TKGeomAlgo.lib;$(FC_LIBRARY)\TKBRep.lib;$(FC_LIBRARY)\TKGeomBase.lib;$(FC_LIBRARY)\TKG3d.lib;$(FC_LIBRARY)\TKG2d.lib;$(FC_LIBRARY)\TKMath.lib;$(FC_LIBRARY)\TKernel.lib;psapi.lib;$(FC_LIBRARY)\freetype.lib;FreeCADApp.lib;FreeCADBase.lib;$(FC_LIBRARY)\python27.lib;$(FC_LIBRARY)\xerces-c_3.lib;$(FC_LIBRARY)\zlib.lib;MSVCRT.lib;MSVCPRT.lib;Rpcrt4.lib;version.lib;$(FC_LIBRARY)\boost_filesystem-vc120-mt-1_55.lib;$(FC_LIBRARY)\boost_program_options-vc120-mt-1_55.lib;$(FC_LIBRARY)\boost_regex-vc120-mt-1_55.lib;$(FC_LIBRARY)\boost_signals-vc120-mt-1_55.lib;$(FC_LIBRARY)\boost_system-vc120-mt-1_55.lib;$(FC_LIBRARY)\boost_thread-vc120-mt-1_55.lib;$(FC_LIBRARY)\coin4.lib;$(FC_LIBRARY)\QtOpenGL4.lib;glu32.lib;QtUiTools.lib;opengl32.lib;$(FC_LIBRARY)\QtSvg4.lib;$(FC_LIBRARY)\QtUiTools.lib;$(FC_LIBRARY)\QtWebKit4.lib;$(FC_LIBRARY)\QtXmlPatterns4.lib;$(FC_LIBRARY)\QtGui4.lib;imm32.lib;$(FC_LIBRARY)\QtXml4.lib;$(FC_LIBRARY)\QtNetwork4.lib;$(FC_LIBRARY)\QtCore4.lib;ws2_32.lib;$(FC_LIBRARY)\cmake\Shiboken-1.2.2\..\..\shiboken-python2.7.lib;$(FC_LIBRARY)\cmake\PySide-1.2.2\..\..\pyside-python2.7.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(FC_LIBRARY)\;$(FC_LIBRARY)\/$(Configuration);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreAllDefaultLibraries>true</IgnoreAllDefaultLibraries>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>$(FC_SOURCE)/Mod/Path/Gui/Release/PathGui.lib</ImportLibrary>
+      <LargeAddressAware>true</LargeAddressAware>
+      <ProgramDataBaseFile>$(DEVROOT)/Mod/Path/PathGui.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+      <Version>
+      </Version>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>$(FC_INCLUDE);$(FC_INCLUDE)\QtOpenGL;$(FC_INCLUDE)\QtSvg;$(FC_INCLUDE)\QtUiTools;$(FC_INCLUDE)\QtWebKit;$(FC_INCLUDE)\QtGui;$(FC_INCLUDE)\QtXml;$(FC_INCLUDE)\QtNetwork;$(FC_INCLUDE)\QtCore;$(FC_SOURCE);\code\free-cad-code\Source\Repos\code;$(FC_SOURCE)\Mod\Path\Gui;$(FC_LIBRARY)\cmake\..\..\include\oce;$(FC_INCLUDE)\eigen3;$(FC_INCLUDE)\python2.7;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>MinSizeRel/</AssemblerListingLocation>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <Optimization>MinSpace</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;QT_NO_DEBUG;QT_OPENGL_LIB;QT_SVG_LIB;QT_UITOOLS_LIB;QT_WEBKIT_LIB;QT_GUI_LIB;QT_XML_LIB;QT_NETWORK_LIB;QT_CORE_LIB;FCGuiPath;HAVE_ACOSH;HAVE_ASINH;HAVE_ATANH;CMAKE_INTDIR="MinSizeRel";PathGui_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;QT_NO_DEBUG;QT_OPENGL_LIB;QT_SVG_LIB;QT_UITOOLS_LIB;QT_WEBKIT_LIB;QT_GUI_LIB;QT_XML_LIB;QT_NETWORK_LIB;QT_CORE_LIB;FCGuiPath;HAVE_ACOSH;HAVE_ASINH;HAVE_ATANH;CMAKE_INTDIR=\"MinSizeRel\";PathGui_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(FC_INCLUDE);$(FC_INCLUDE)\QtOpenGL;$(FC_INCLUDE)\QtSvg;$(FC_INCLUDE)\QtUiTools;$(FC_INCLUDE)\QtWebKit;$(FC_INCLUDE)\QtGui;$(FC_INCLUDE)\QtXml;$(FC_INCLUDE)\QtNetwork;$(FC_INCLUDE)\QtCore;$(FC_SOURCE);\code\free-cad-code\Source\Repos\code;$(FC_SOURCE)\Mod\Path\Gui;$(FC_LIBRARY)\cmake\..\..\include\oce;$(FC_INCLUDE)\eigen3;$(FC_INCLUDE)\python2.7;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>$(FC_INCLUDE);$(FC_INCLUDE)\QtOpenGL;$(FC_INCLUDE)\QtSvg;$(FC_INCLUDE)\QtUiTools;$(FC_INCLUDE)\QtWebKit;$(FC_INCLUDE)\QtGui;$(FC_INCLUDE)\QtXml;$(FC_INCLUDE)\QtNetwork;$(FC_INCLUDE)\QtCore;$(FC_SOURCE);\code\free-cad-code\Source\Repos\code;$(FC_SOURCE)\Mod\Path\Gui;$(FC_LIBRARY)\cmake\..\..\include\oce;$(FC_INCLUDE)\eigen3;$(FC_INCLUDE)\python2.7;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <PostBuildEvent>
+      <Message>
+      </Message>
+      <Command>setlocal
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+    </PostBuildEvent>
+    <Link>
+      <AdditionalOptions> /machine:X86 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;SHFolder.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;winmm.lib;comsupp.lib;Ws2_32.lib;dbghelp.lib;..\App\MinSizeRel\Path.lib;..\..\..\Gui\MinSizeRel\FreeCADGui.lib;..\..\Robot\App\MinSizeRel\Robot.lib;..\..\Part\App\MinSizeRel\Part.lib;$(FC_LIBRARY)\TKIGESd.lib;$(FC_LIBRARY)\TKSTLd.lib;$(FC_LIBRARY)\TKMeshd.lib;$(FC_LIBRARY)\TKOffsetd.lib;$(FC_LIBRARY)\TKFilletd.lib;$(FC_LIBRARY)\TKSTEPd.lib;$(FC_LIBRARY)\TKSTEP209d.lib;$(FC_LIBRARY)\TKSTEPAttrd.lib;$(FC_LIBRARY)\TKSTEPBased.lib;$(FC_LIBRARY)\TKXSBased.lib;$(FC_LIBRARY)\TKHLRd.lib;$(FC_LIBRARY)\TKFeatd.lib;$(FC_LIBRARY)\TKBoold.lib;$(FC_LIBRARY)\TKShHealingd.lib;$(FC_LIBRARY)\TKBOd.lib;$(FC_LIBRARY)\TKPrimd.lib;$(FC_LIBRARY)\TKTopAlgod.lib;$(FC_LIBRARY)\TKGeomAlgod.lib;$(FC_LIBRARY)\TKBRepd.lib;$(FC_LIBRARY)\TKGeomBased.lib;$(FC_LIBRARY)\TKG3dd.lib;$(FC_LIBRARY)\TKG2dd.lib;$(FC_LIBRARY)\TKMathd.lib;$(FC_LIBRARY)\TKerneld.lib;advapi32.lib;gdi32.lib;user32.lib;kernel32.lib;psapi.lib;$(FC_LIBRARY)\freetype.lib;..\..\..\App\MinSizeRel\FreeCADApp.lib;..\..\..\Base\MinSizeRel\FreeCADBase.lib;$(FC_LIBRARY)\python27.lib;$(FC_LIBRARY)\xerces-c_3.lib;$(FC_LIBRARY)\zlib.lib;MSVCRT.lib;MSVCPRT.lib;Rpcrt4.lib;version.lib;$(FC_LIBRARY)\boost_filesystem-vc120-mt-1_55.lib;$(FC_LIBRARY)\boost_program_options-vc120-mt-1_55.lib;$(FC_LIBRARY)\boost_regex-vc120-mt-1_55.lib;$(FC_LIBRARY)\boost_signals-vc120-mt-1_55.lib;$(FC_LIBRARY)\boost_system-vc120-mt-1_55.lib;$(FC_LIBRARY)\boost_thread-vc120-mt-1_55.lib;$(FC_LIBRARY)\coin4.lib;$(FC_LIBRARY)\QtOpenGL4.lib;glu32.lib;QtUiTools.lib;opengl32.lib;$(FC_LIBRARY)\QtSvg4.lib;$(FC_LIBRARY)\QtUiTools.lib;$(FC_LIBRARY)\QtWebKit4.lib;$(FC_LIBRARY)\QtXmlPatterns4.lib;$(FC_LIBRARY)\QtGui4.lib;imm32.lib;winmm.lib;$(FC_LIBRARY)\QtXml4.lib;$(FC_LIBRARY)\QtNetwork4.lib;$(FC_LIBRARY)\QtCore4.lib;ws2_32.lib;$(FC_LIBRARY)\cmake\Shiboken-1.2.2\..\..\shiboken-python2.7.lib;$(FC_LIBRARY)\cmake\PySide-1.2.2\..\..\pyside-python2.7.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(FC_LIBRARY)\;$(FC_LIBRARY)\/$(Configuration);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreAllDefaultLibraries>true</IgnoreAllDefaultLibraries>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>$(FC_SOURCE)/Mod/Path/Gui/MinSizeRel/PathGui.lib</ImportLibrary>
+      <LargeAddressAware>true</LargeAddressAware>
+      <ProgramDataBaseFile>$(DEVROOT)/Mod/Path/MinSizeRel/PathGui.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+      <Version>
+      </Version>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>$(FC_INCLUDE);$(FC_INCLUDE)\QtOpenGL;$(FC_INCLUDE)\QtSvg;$(FC_INCLUDE)\QtUiTools;$(FC_INCLUDE)\QtWebKit;$(FC_INCLUDE)\QtGui;$(FC_INCLUDE)\QtXml;$(FC_INCLUDE)\QtNetwork;$(FC_INCLUDE)\QtCore;$(FC_SOURCE);\code\free-cad-code\Source\Repos\code;$(FC_SOURCE)\Mod\Path\Gui;$(FC_LIBRARY)\cmake\..\..\include\oce;$(FC_INCLUDE)\eigen3;$(FC_INCLUDE)\python2.7;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>RelWithDebInfo/</AssemblerListingLocation>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;QT_NO_DEBUG;QT_OPENGL_LIB;QT_SVG_LIB;QT_UITOOLS_LIB;QT_WEBKIT_LIB;QT_GUI_LIB;QT_XML_LIB;QT_NETWORK_LIB;QT_CORE_LIB;FCGuiPath;HAVE_ACOSH;HAVE_ASINH;HAVE_ATANH;CMAKE_INTDIR="RelWithDebInfo";PathGui_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;QT_NO_DEBUG;QT_OPENGL_LIB;QT_SVG_LIB;QT_UITOOLS_LIB;QT_WEBKIT_LIB;QT_GUI_LIB;QT_XML_LIB;QT_NETWORK_LIB;QT_CORE_LIB;FCGuiPath;HAVE_ACOSH;HAVE_ASINH;HAVE_ATANH;CMAKE_INTDIR=\"RelWithDebInfo\";PathGui_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(FC_INCLUDE);$(FC_INCLUDE)\QtOpenGL;$(FC_INCLUDE)\QtSvg;$(FC_INCLUDE)\QtUiTools;$(FC_INCLUDE)\QtWebKit;$(FC_INCLUDE)\QtGui;$(FC_INCLUDE)\QtXml;$(FC_INCLUDE)\QtNetwork;$(FC_INCLUDE)\QtCore;$(FC_SOURCE);\code\free-cad-code\Source\Repos\code;$(FC_SOURCE)\Mod\Path\Gui;$(FC_LIBRARY)\cmake\..\..\include\oce;$(FC_INCLUDE)\eigen3;$(FC_INCLUDE)\python2.7;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>$(FC_INCLUDE);$(FC_INCLUDE)\QtOpenGL;$(FC_INCLUDE)\QtSvg;$(FC_INCLUDE)\QtUiTools;$(FC_INCLUDE)\QtWebKit;$(FC_INCLUDE)\QtGui;$(FC_INCLUDE)\QtXml;$(FC_INCLUDE)\QtNetwork;$(FC_INCLUDE)\QtCore;$(FC_SOURCE);\code\free-cad-code\Source\Repos\code;$(FC_SOURCE)\Mod\Path\Gui;$(FC_LIBRARY)\cmake\..\..\include\oce;$(FC_INCLUDE)\eigen3;$(FC_INCLUDE)\python2.7;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <PostBuildEvent>
+      <Message>
+      </Message>
+      <Command>setlocal
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+    </PostBuildEvent>
+    <Link>
+      <AdditionalOptions> /machine:X86 /debug %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;SHFolder.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;winmm.lib;comsupp.lib;Ws2_32.lib;dbghelp.lib;..\App\RelWithDebInfo\Path.lib;..\..\..\Gui\RelWithDebInfo\FreeCADGui.lib;..\..\Robot\App\RelWithDebInfo\Robot.lib;..\..\Part\App\RelWithDebInfo\Part.lib;$(FC_LIBRARY)\TKIGESd.lib;$(FC_LIBRARY)\TKSTLd.lib;$(FC_LIBRARY)\TKMeshd.lib;$(FC_LIBRARY)\TKOffsetd.lib;$(FC_LIBRARY)\TKFilletd.lib;$(FC_LIBRARY)\TKSTEPd.lib;$(FC_LIBRARY)\TKSTEP209d.lib;$(FC_LIBRARY)\TKSTEPAttrd.lib;$(FC_LIBRARY)\TKSTEPBased.lib;$(FC_LIBRARY)\TKXSBased.lib;$(FC_LIBRARY)\TKHLRd.lib;$(FC_LIBRARY)\TKFeatd.lib;$(FC_LIBRARY)\TKBoold.lib;$(FC_LIBRARY)\TKShHealingd.lib;$(FC_LIBRARY)\TKBOd.lib;$(FC_LIBRARY)\TKPrimd.lib;$(FC_LIBRARY)\TKTopAlgod.lib;$(FC_LIBRARY)\TKGeomAlgod.lib;$(FC_LIBRARY)\TKBRepd.lib;$(FC_LIBRARY)\TKGeomBased.lib;$(FC_LIBRARY)\TKG3dd.lib;$(FC_LIBRARY)\TKG2dd.lib;$(FC_LIBRARY)\TKMathd.lib;$(FC_LIBRARY)\TKerneld.lib;advapi32.lib;gdi32.lib;user32.lib;kernel32.lib;psapi.lib;$(FC_LIBRARY)\freetype.lib;..\..\..\App\RelWithDebInfo\FreeCADApp.lib;..\..\..\Base\RelWithDebInfo\FreeCADBase.lib;$(FC_LIBRARY)\python27.lib;$(FC_LIBRARY)\xerces-c_3.lib;$(FC_LIBRARY)\zlib.lib;MSVCRT.lib;MSVCPRT.lib;Rpcrt4.lib;version.lib;$(FC_LIBRARY)\boost_filesystem-vc120-mt-1_55.lib;$(FC_LIBRARY)\boost_program_options-vc120-mt-1_55.lib;$(FC_LIBRARY)\boost_regex-vc120-mt-1_55.lib;$(FC_LIBRARY)\boost_signals-vc120-mt-1_55.lib;$(FC_LIBRARY)\boost_system-vc120-mt-1_55.lib;$(FC_LIBRARY)\boost_thread-vc120-mt-1_55.lib;$(FC_LIBRARY)\coin4.lib;$(FC_LIBRARY)\QtOpenGL4.lib;glu32.lib;QtUiTools.lib;opengl32.lib;$(FC_LIBRARY)\QtSvg4.lib;$(FC_LIBRARY)\QtUiTools.lib;$(FC_LIBRARY)\QtWebKit4.lib;$(FC_LIBRARY)\QtXmlPatterns4.lib;$(FC_LIBRARY)\QtGui4.lib;imm32.lib;winmm.lib;$(FC_LIBRARY)\QtXml4.lib;$(FC_LIBRARY)\QtNetwork4.lib;$(FC_LIBRARY)\QtCore4.lib;ws2_32.lib;$(FC_LIBRARY)\cmake\Shiboken-1.2.2\..\..\shiboken-python2.7.lib;$(FC_LIBRARY)\cmake\PySide-1.2.2\..\..\pyside-python2.7.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(FC_LIBRARY)\;$(FC_LIBRARY)\/$(Configuration);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreAllDefaultLibraries>true</IgnoreAllDefaultLibraries>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>$(FC_SOURCE)/Mod/Path/Gui/RelWithDebInfo/PathGui.lib</ImportLibrary>
+      <LargeAddressAware>true</LargeAddressAware>
+      <ProgramDataBaseFile>$(DEVROOT)/Mod/Path/RelWithDebInfo/PathGui.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+      <Version>
+      </Version>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="$(FC_SOURCE)\Mod\Path\Gui\Resources\Path.qrc">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generating qrc_Path.cxx</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+$(FC_BIN)\rcc.exe -name Path -o $(FC_SOURCE)/Mod/Path/Gui/qrc_Path.cxx $(FC_SOURCE)/Mod/Path/Gui/Resources/Path.qrc
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(FC_SOURCE)/Mod/Path/Gui/Resources/Path.qrc;$(FC_SOURCE)\Mod\Path\Gui\Resources\icons\preferences-path.svg;$(FC_SOURCE)\Mod\Path\Gui\Resources\icons\Path-Toolpath.svg;$(FC_SOURCE)\Mod\Path\Gui\Resources\icons\Path-Compound.svg;$(FC_SOURCE)\Mod\Path\Gui\Resources\icons\Path-Shape.svg;$(FC_SOURCE)\Mod\Path\Gui\Resources\icons\Path-Profile.svg;$(FC_SOURCE)\Mod\Path\Gui\Resources\icons\Path-Pocket.svg;$(FC_SOURCE)\Mod\Path\Gui\Resources\icons\Path-Drilling.svg;$(FC_SOURCE)\Mod\Path\Gui\Resources\icons\Path-Project.svg;$(FC_SOURCE)\Mod\Path\Gui\Resources\icons\Path-Dressup.svg;$(FC_SOURCE)\Mod\Path\Gui\Resources\icons\Path-Hop.svg;$(FC_SOURCE)\Mod\Path\Gui\Resources\icons\Path-Datums.svg;$(FC_SOURCE)\Mod\Path\Gui\Resources\icons\Path-Copy.svg;$(FC_SOURCE)\Mod\Path\Gui\Resources\icons\Path-ToolTable.svg;$(FC_SOURCE)\Mod\Path\Gui\Resources\icons\Path-LengthOffset.svg;$(FC_SOURCE)\Mod\Path\Gui\Resources\icons\Path-Axis.svg;$(FC_SOURCE)\Mod\Path\Gui\Resources\icons\Path-Stock.svg;$(FC_SOURCE)\Mod\Path\Gui\Resources\icons\Path-Plane.svg;$(FC_SOURCE)\Mod\Path\Gui\Resources\icons\Path-Post.svg;$(FC_SOURCE)\Mod\Path\Gui\Resources\icons\Path-LoadTool.svg;$(FC_SOURCE)\Mod\Path\Gui\Resources\icons\Path-Comment.svg;$(FC_SOURCE)\Mod\Path\Gui\Resources\icons\Path-Stop.svg;$(FC_SOURCE)\Mod\Path\Gui\Resources\icons\Path-Machine.svg;$(FC_SOURCE)\Mod\Path\Gui\Resources\icons\Path-Kurve.svg;$(FC_SOURCE)\Mod\Path\Gui\Resources\Path.qrc.depends;$(FC_SOURCE)\Mod\Path\Gui\Resources\Path.qrc;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(FC_SOURCE)\Mod\Path\Gui\qrc_Path.cxx</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Generating qrc_Path.cxx</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+$(FC_BIN)\rcc.exe -name Path -o $(FC_SOURCE)/Mod/Path/Gui/qrc_Path.cxx $(FC_SOURCE)/Mod/Path/Gui/Resources/Path.qrc
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(FC_SOURCE)/Mod/Path/Gui/Resources/Path.qrc;$(FC_SOURCE)\Mod\Path\Gui\Resources\icons\preferences-path.svg;$(FC_SOURCE)\Mod\Path\Gui\Resources\icons\Path-Toolpath.svg;$(FC_SOURCE)\Mod\Path\Gui\Resources\icons\Path-Compound.svg;$(FC_SOURCE)\Mod\Path\Gui\Resources\icons\Path-Shape.svg;$(FC_SOURCE)\Mod\Path\Gui\Resources\icons\Path-Profile.svg;$(FC_SOURCE)\Mod\Path\Gui\Resources\icons\Path-Pocket.svg;$(FC_SOURCE)\Mod\Path\Gui\Resources\icons\Path-Drilling.svg;$(FC_SOURCE)\Mod\Path\Gui\Resources\icons\Path-Project.svg;$(FC_SOURCE)\Mod\Path\Gui\Resources\icons\Path-Dressup.svg;$(FC_SOURCE)\Mod\Path\Gui\Resources\icons\Path-Hop.svg;$(FC_SOURCE)\Mod\Path\Gui\Resources\icons\Path-Datums.svg;$(FC_SOURCE)\Mod\Path\Gui\Resources\icons\Path-Copy.svg;$(FC_SOURCE)\Mod\Path\Gui\Resources\icons\Path-ToolTable.svg;$(FC_SOURCE)\Mod\Path\Gui\Resources\icons\Path-LengthOffset.svg;$(FC_SOURCE)\Mod\Path\Gui\Resources\icons\Path-Axis.svg;$(FC_SOURCE)\Mod\Path\Gui\Resources\icons\Path-Stock.svg;$(FC_SOURCE)\Mod\Path\Gui\Resources\icons\Path-Plane.svg;$(FC_SOURCE)\Mod\Path\Gui\Resources\icons\Path-Post.svg;$(FC_SOURCE)\Mod\Path\Gui\Resources\icons\Path-LoadTool.svg;$(FC_SOURCE)\Mod\Path\Gui\Resources\icons\Path-Comment.svg;$(FC_SOURCE)\Mod\Path\Gui\Resources\icons\Path-Stop.svg;$(FC_SOURCE)\Mod\Path\Gui\Resources\icons\Path-Machine.svg;$(FC_SOURCE)\Mod\Path\Gui\Resources\icons\Path-Kurve.svg;$(FC_SOURCE)\Mod\Path\Gui\Resources\Path.qrc.depends;$(FC_SOURCE)\Mod\Path\Gui\Resources\Path.qrc;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(FC_SOURCE)\Mod\Path\Gui\qrc_Path.cxx</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Generating qrc_Path.cxx</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+$(FC_BIN)\rcc.exe -name Path -o $(FC_SOURCE)/Mod/Path/Gui/qrc_Path.cxx $(FC_SOURCE)/Mod/Path/Gui/Resources/Path.qrc
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">$(FC_SOURCE)/Mod/Path/Gui/Resources/Path.qrc;$(FC_SOURCE)\Mod\Path\Gui\Resources\icons\preferences-path.svg;$(FC_SOURCE)\Mod\Path\Gui\Resources\icons\Path-Toolpath.svg;$(FC_SOURCE)\Mod\Path\Gui\Resources\icons\Path-Compound.svg;$(FC_SOURCE)\Mod\Path\Gui\Resources\icons\Path-Shape.svg;$(FC_SOURCE)\Mod\Path\Gui\Resources\icons\Path-Profile.svg;$(FC_SOURCE)\Mod\Path\Gui\Resources\icons\Path-Pocket.svg;$(FC_SOURCE)\Mod\Path\Gui\Resources\icons\Path-Drilling.svg;$(FC_SOURCE)\Mod\Path\Gui\Resources\icons\Path-Project.svg;$(FC_SOURCE)\Mod\Path\Gui\Resources\icons\Path-Dressup.svg;$(FC_SOURCE)\Mod\Path\Gui\Resources\icons\Path-Hop.svg;$(FC_SOURCE)\Mod\Path\Gui\Resources\icons\Path-Datums.svg;$(FC_SOURCE)\Mod\Path\Gui\Resources\icons\Path-Copy.svg;$(FC_SOURCE)\Mod\Path\Gui\Resources\icons\Path-ToolTable.svg;$(FC_SOURCE)\Mod\Path\Gui\Resources\icons\Path-LengthOffset.svg;$(FC_SOURCE)\Mod\Path\Gui\Resources\icons\Path-Axis.svg;$(FC_SOURCE)\Mod\Path\Gui\Resources\icons\Path-Stock.svg;$(FC_SOURCE)\Mod\Path\Gui\Resources\icons\Path-Plane.svg;$(FC_SOURCE)\Mod\Path\Gui\Resources\icons\Path-Post.svg;$(FC_SOURCE)\Mod\Path\Gui\Resources\icons\Path-LoadTool.svg;$(FC_SOURCE)\Mod\Path\Gui\Resources\icons\Path-Comment.svg;$(FC_SOURCE)\Mod\Path\Gui\Resources\icons\Path-Stop.svg;$(FC_SOURCE)\Mod\Path\Gui\Resources\icons\Path-Machine.svg;$(FC_SOURCE)\Mod\Path\Gui\Resources\icons\Path-Kurve.svg;$(FC_SOURCE)\Mod\Path\Gui\Resources\Path.qrc.depends;$(FC_SOURCE)\Mod\Path\Gui\Resources\Path.qrc;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">$(FC_SOURCE)\Mod\Path\Gui\qrc_Path.cxx</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Generating qrc_Path.cxx</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+$(FC_BIN)\rcc.exe -name Path -o $(FC_SOURCE)/Mod/Path/Gui/qrc_Path.cxx $(FC_SOURCE)/Mod/Path/Gui/Resources/Path.qrc
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(FC_SOURCE)/Mod/Path/Gui/Resources/Path.qrc;$(FC_SOURCE)\Mod\Path\Gui\Resources\icons\preferences-path.svg;$(FC_SOURCE)\Mod\Path\Gui\Resources\icons\Path-Toolpath.svg;$(FC_SOURCE)\Mod\Path\Gui\Resources\icons\Path-Compound.svg;$(FC_SOURCE)\Mod\Path\Gui\Resources\icons\Path-Shape.svg;$(FC_SOURCE)\Mod\Path\Gui\Resources\icons\Path-Profile.svg;$(FC_SOURCE)\Mod\Path\Gui\Resources\icons\Path-Pocket.svg;$(FC_SOURCE)\Mod\Path\Gui\Resources\icons\Path-Drilling.svg;$(FC_SOURCE)\Mod\Path\Gui\Resources\icons\Path-Project.svg;$(FC_SOURCE)\Mod\Path\Gui\Resources\icons\Path-Dressup.svg;$(FC_SOURCE)\Mod\Path\Gui\Resources\icons\Path-Hop.svg;$(FC_SOURCE)\Mod\Path\Gui\Resources\icons\Path-Datums.svg;$(FC_SOURCE)\Mod\Path\Gui\Resources\icons\Path-Copy.svg;$(FC_SOURCE)\Mod\Path\Gui\Resources\icons\Path-ToolTable.svg;$(FC_SOURCE)\Mod\Path\Gui\Resources\icons\Path-LengthOffset.svg;$(FC_SOURCE)\Mod\Path\Gui\Resources\icons\Path-Axis.svg;$(FC_SOURCE)\Mod\Path\Gui\Resources\icons\Path-Stock.svg;$(FC_SOURCE)\Mod\Path\Gui\Resources\icons\Path-Plane.svg;$(FC_SOURCE)\Mod\Path\Gui\Resources\icons\Path-Post.svg;$(FC_SOURCE)\Mod\Path\Gui\Resources\icons\Path-LoadTool.svg;$(FC_SOURCE)\Mod\Path\Gui\Resources\icons\Path-Comment.svg;$(FC_SOURCE)\Mod\Path\Gui\Resources\icons\Path-Stop.svg;$(FC_SOURCE)\Mod\Path\Gui\Resources\icons\Path-Machine.svg;$(FC_SOURCE)\Mod\Path\Gui\Resources\icons\Path-Kurve.svg;$(FC_SOURCE)\Mod\Path\Gui\Resources\Path.qrc.depends;$(FC_SOURCE)\Mod\Path\Gui\Resources\Path.qrc;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(FC_SOURCE)\Mod\Path\Gui\qrc_Path.cxx</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="$(FC_SOURCE)\Mod\Path\Gui\DlgSettingsPathColor.ui">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generating ui_DlgSettingsPathColor.h</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+$(FC_BIN)\uic.exe -o $(FC_SOURCE)/Mod/Path/Gui/ui_DlgSettingsPathColor.h $(FC_SOURCE)/Mod/Path/Gui/DlgSettingsPathColor.ui
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(FC_SOURCE)/Mod/Path/Gui/DlgSettingsPathColor.ui;$(FC_SOURCE)\Mod\Path\Gui\DlgSettingsPathColor.ui;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(FC_SOURCE)\Mod\Path\Gui\ui_DlgSettingsPathColor.h</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Generating ui_DlgSettingsPathColor.h</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+$(FC_BIN)\uic.exe -o $(FC_SOURCE)/Mod/Path/Gui/ui_DlgSettingsPathColor.h $(FC_SOURCE)/Mod/Path/Gui/DlgSettingsPathColor.ui
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(FC_SOURCE)/Mod/Path/Gui/DlgSettingsPathColor.ui;$(FC_SOURCE)\Mod\Path\Gui\DlgSettingsPathColor.ui;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(FC_SOURCE)\Mod\Path\Gui\ui_DlgSettingsPathColor.h</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Generating ui_DlgSettingsPathColor.h</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+$(FC_BIN)\uic.exe -o $(FC_SOURCE)/Mod/Path/Gui/ui_DlgSettingsPathColor.h $(FC_SOURCE)/Mod/Path/Gui/DlgSettingsPathColor.ui
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">$(FC_SOURCE)/Mod/Path/Gui/DlgSettingsPathColor.ui;$(FC_SOURCE)\Mod\Path\Gui\DlgSettingsPathColor.ui;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">$(FC_SOURCE)\Mod\Path\Gui\ui_DlgSettingsPathColor.h</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Generating ui_DlgSettingsPathColor.h</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+$(FC_BIN)\uic.exe -o $(FC_SOURCE)/Mod/Path/Gui/ui_DlgSettingsPathColor.h $(FC_SOURCE)/Mod/Path/Gui/DlgSettingsPathColor.ui
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(FC_SOURCE)/Mod/Path/Gui/DlgSettingsPathColor.ui;$(FC_SOURCE)\Mod\Path\Gui\DlgSettingsPathColor.ui;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(FC_SOURCE)\Mod\Path\Gui\ui_DlgSettingsPathColor.h</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="$(FC_SOURCE)\Mod\Path\Gui\DlgSettingsPathColor.h">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generating moc_DlgSettingsPathColor.cpp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+$(FC_BIN)\moc.exe -DBOOST_TT_HAS_OPERATOR_HPP_INCLUDED $(FC_SOURCE)/Mod/Path/Gui/DlgSettingsPathColor.h -o $(FC_SOURCE)/Mod/Path/Gui/moc_DlgSettingsPathColor.cpp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(FC_SOURCE)/Mod/Path/Gui/DlgSettingsPathColor.h;$(FC_SOURCE)\Mod\Path\Gui\DlgSettingsPathColor.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(FC_SOURCE)\Mod\Path\Gui\moc_DlgSettingsPathColor.cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Generating moc_DlgSettingsPathColor.cpp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+$(FC_BIN)\moc.exe -DBOOST_TT_HAS_OPERATOR_HPP_INCLUDED $(FC_SOURCE)/Mod/Path/Gui/DlgSettingsPathColor.h -o $(FC_SOURCE)/Mod/Path/Gui/moc_DlgSettingsPathColor.cpp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(FC_SOURCE)/Mod/Path/Gui/DlgSettingsPathColor.h;$(FC_SOURCE)\Mod\Path\Gui\DlgSettingsPathColor.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(FC_SOURCE)\Mod\Path\Gui\moc_DlgSettingsPathColor.cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Generating moc_DlgSettingsPathColor.cpp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+$(FC_BIN)\moc.exe -DBOOST_TT_HAS_OPERATOR_HPP_INCLUDED $(FC_SOURCE)/Mod/Path/Gui/DlgSettingsPathColor.h -o $(FC_SOURCE)/Mod/Path/Gui/moc_DlgSettingsPathColor.cpp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">$(FC_SOURCE)/Mod/Path/Gui/DlgSettingsPathColor.h;$(FC_SOURCE)\Mod\Path\Gui\DlgSettingsPathColor.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">$(FC_SOURCE)\Mod\Path\Gui\moc_DlgSettingsPathColor.cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Generating moc_DlgSettingsPathColor.cpp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+$(FC_BIN)\moc.exe -DBOOST_TT_HAS_OPERATOR_HPP_INCLUDED $(FC_SOURCE)/Mod/Path/Gui/DlgSettingsPathColor.h -o $(FC_SOURCE)/Mod/Path/Gui/moc_DlgSettingsPathColor.cpp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(FC_SOURCE)/Mod/Path/Gui/DlgSettingsPathColor.h;$(FC_SOURCE)\Mod\Path\Gui\DlgSettingsPathColor.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(FC_SOURCE)\Mod\Path\Gui\moc_DlgSettingsPathColor.cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="$(FC_SOURCE)\Mod\Path\Gui\TaskDlgPathCompound.ui">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generating ui_TaskDlgPathCompound.h</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+$(FC_BIN)\uic.exe -o $(FC_SOURCE)/Mod/Path/Gui/ui_TaskDlgPathCompound.h $(FC_SOURCE)/Mod/Path/Gui/TaskDlgPathCompound.ui
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(FC_SOURCE)/Mod/Path/Gui/TaskDlgPathCompound.ui;$(FC_SOURCE)\Mod\Path\Gui\TaskDlgPathCompound.ui;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(FC_SOURCE)\Mod\Path\Gui\ui_TaskDlgPathCompound.h</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Generating ui_TaskDlgPathCompound.h</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+$(FC_BIN)\uic.exe -o $(FC_SOURCE)/Mod/Path/Gui/ui_TaskDlgPathCompound.h $(FC_SOURCE)/Mod/Path/Gui/TaskDlgPathCompound.ui
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(FC_SOURCE)/Mod/Path/Gui/TaskDlgPathCompound.ui;$(FC_SOURCE)\Mod\Path\Gui\TaskDlgPathCompound.ui;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(FC_SOURCE)\Mod\Path\Gui\ui_TaskDlgPathCompound.h</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Generating ui_TaskDlgPathCompound.h</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+$(FC_BIN)\uic.exe -o $(FC_SOURCE)/Mod/Path/Gui/ui_TaskDlgPathCompound.h $(FC_SOURCE)/Mod/Path/Gui/TaskDlgPathCompound.ui
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">$(FC_SOURCE)/Mod/Path/Gui/TaskDlgPathCompound.ui;$(FC_SOURCE)\Mod\Path\Gui\TaskDlgPathCompound.ui;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">$(FC_SOURCE)\Mod\Path\Gui\ui_TaskDlgPathCompound.h</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Generating ui_TaskDlgPathCompound.h</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+$(FC_BIN)\uic.exe -o $(FC_SOURCE)/Mod/Path/Gui/ui_TaskDlgPathCompound.h $(FC_SOURCE)/Mod/Path/Gui/TaskDlgPathCompound.ui
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(FC_SOURCE)/Mod/Path/Gui/TaskDlgPathCompound.ui;$(FC_SOURCE)\Mod\Path\Gui\TaskDlgPathCompound.ui;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(FC_SOURCE)\Mod\Path\Gui\ui_TaskDlgPathCompound.h</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="$(FC_SOURCE)\Mod\Path\Gui\TaskDlgPathCompound.h">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generating moc_TaskDlgPathCompound.cpp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+$(FC_BIN)\moc.exe -DBOOST_TT_HAS_OPERATOR_HPP_INCLUDED $(FC_SOURCE)/Mod/Path/Gui/TaskDlgPathCompound.h -o $(FC_SOURCE)/Mod/Path/Gui/moc_TaskDlgPathCompound.cpp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(FC_SOURCE)/Mod/Path/Gui/TaskDlgPathCompound.h;$(FC_SOURCE)\Mod\Path\Gui\TaskDlgPathCompound.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(FC_SOURCE)\Mod\Path\Gui\moc_TaskDlgPathCompound.cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Generating moc_TaskDlgPathCompound.cpp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+$(FC_BIN)\moc.exe -DBOOST_TT_HAS_OPERATOR_HPP_INCLUDED $(FC_SOURCE)/Mod/Path/Gui/TaskDlgPathCompound.h -o $(FC_SOURCE)/Mod/Path/Gui/moc_TaskDlgPathCompound.cpp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(FC_SOURCE)/Mod/Path/Gui/TaskDlgPathCompound.h;$(FC_SOURCE)\Mod\Path\Gui\TaskDlgPathCompound.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(FC_SOURCE)\Mod\Path\Gui\moc_TaskDlgPathCompound.cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Generating moc_TaskDlgPathCompound.cpp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+$(FC_BIN)\moc.exe -DBOOST_TT_HAS_OPERATOR_HPP_INCLUDED $(FC_SOURCE)/Mod/Path/Gui/TaskDlgPathCompound.h -o $(FC_SOURCE)/Mod/Path/Gui/moc_TaskDlgPathCompound.cpp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">$(FC_SOURCE)/Mod/Path/Gui/TaskDlgPathCompound.h;$(FC_SOURCE)\Mod\Path\Gui\TaskDlgPathCompound.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">$(FC_SOURCE)\Mod\Path\Gui\moc_TaskDlgPathCompound.cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Generating moc_TaskDlgPathCompound.cpp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+$(FC_BIN)\moc.exe -DBOOST_TT_HAS_OPERATOR_HPP_INCLUDED $(FC_SOURCE)/Mod/Path/Gui/TaskDlgPathCompound.h -o $(FC_SOURCE)/Mod/Path/Gui/moc_TaskDlgPathCompound.cpp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(FC_SOURCE)/Mod/Path/Gui/TaskDlgPathCompound.h;$(FC_SOURCE)\Mod\Path\Gui\TaskDlgPathCompound.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(FC_SOURCE)\Mod\Path\Gui\moc_TaskDlgPathCompound.cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="$(FC_SOURCE)\Mod\Path\Gui\DlgProcessorChooser.ui">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generating ui_DlgProcessorChooser.h</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+$(FC_BIN)\uic.exe -o $(FC_SOURCE)/Mod/Path/Gui/ui_DlgProcessorChooser.h $(FC_SOURCE)/Mod/Path/Gui/DlgProcessorChooser.ui
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(FC_SOURCE)/Mod/Path/Gui/DlgProcessorChooser.ui;$(FC_SOURCE)\Mod\Path\Gui\DlgProcessorChooser.ui;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(FC_SOURCE)\Mod\Path\Gui\ui_DlgProcessorChooser.h</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Generating ui_DlgProcessorChooser.h</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+$(FC_BIN)\uic.exe -o $(FC_SOURCE)/Mod/Path/Gui/ui_DlgProcessorChooser.h $(FC_SOURCE)/Mod/Path/Gui/DlgProcessorChooser.ui
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(FC_SOURCE)/Mod/Path/Gui/DlgProcessorChooser.ui;$(FC_SOURCE)\Mod\Path\Gui\DlgProcessorChooser.ui;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(FC_SOURCE)\Mod\Path\Gui\ui_DlgProcessorChooser.h</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Generating ui_DlgProcessorChooser.h</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+$(FC_BIN)\uic.exe -o $(FC_SOURCE)/Mod/Path/Gui/ui_DlgProcessorChooser.h $(FC_SOURCE)/Mod/Path/Gui/DlgProcessorChooser.ui
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">$(FC_SOURCE)/Mod/Path/Gui/DlgProcessorChooser.ui;$(FC_SOURCE)\Mod\Path\Gui\DlgProcessorChooser.ui;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">$(FC_SOURCE)\Mod\Path\Gui\ui_DlgProcessorChooser.h</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Generating ui_DlgProcessorChooser.h</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+$(FC_BIN)\uic.exe -o $(FC_SOURCE)/Mod/Path/Gui/ui_DlgProcessorChooser.h $(FC_SOURCE)/Mod/Path/Gui/DlgProcessorChooser.ui
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(FC_SOURCE)/Mod/Path/Gui/DlgProcessorChooser.ui;$(FC_SOURCE)\Mod\Path\Gui\DlgProcessorChooser.ui;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(FC_SOURCE)\Mod\Path\Gui\ui_DlgProcessorChooser.h</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="$(FC_SOURCE)\Mod\Path\Gui\DlgProcessorChooser.h">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generating moc_DlgProcessorChooser.cpp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+$(FC_BIN)\moc.exe -DBOOST_TT_HAS_OPERATOR_HPP_INCLUDED $(FC_SOURCE)/Mod/Path/Gui/DlgProcessorChooser.h -o $(FC_SOURCE)/Mod/Path/Gui/moc_DlgProcessorChooser.cpp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(FC_SOURCE)/Mod/Path/Gui/DlgProcessorChooser.h;$(FC_SOURCE)\Mod\Path\Gui\DlgProcessorChooser.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(FC_SOURCE)\Mod\Path\Gui\moc_DlgProcessorChooser.cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Generating moc_DlgProcessorChooser.cpp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+$(FC_BIN)\moc.exe -DBOOST_TT_HAS_OPERATOR_HPP_INCLUDED $(FC_SOURCE)/Mod/Path/Gui/DlgProcessorChooser.h -o $(FC_SOURCE)/Mod/Path/Gui/moc_DlgProcessorChooser.cpp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(FC_SOURCE)/Mod/Path/Gui/DlgProcessorChooser.h;$(FC_SOURCE)\Mod\Path\Gui\DlgProcessorChooser.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(FC_SOURCE)\Mod\Path\Gui\moc_DlgProcessorChooser.cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Generating moc_DlgProcessorChooser.cpp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+$(FC_BIN)\moc.exe -DBOOST_TT_HAS_OPERATOR_HPP_INCLUDED $(FC_SOURCE)/Mod/Path/Gui/DlgProcessorChooser.h -o $(FC_SOURCE)/Mod/Path/Gui/moc_DlgProcessorChooser.cpp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">$(FC_SOURCE)/Mod/Path/Gui/DlgProcessorChooser.h;$(FC_SOURCE)\Mod\Path\Gui\DlgProcessorChooser.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">$(FC_SOURCE)\Mod\Path\Gui\moc_DlgProcessorChooser.cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Generating moc_DlgProcessorChooser.cpp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+$(FC_BIN)\moc.exe -DBOOST_TT_HAS_OPERATOR_HPP_INCLUDED $(FC_SOURCE)/Mod/Path/Gui/DlgProcessorChooser.h -o $(FC_SOURCE)/Mod/Path/Gui/moc_DlgProcessorChooser.cpp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(FC_SOURCE)/Mod/Path/Gui/DlgProcessorChooser.h;$(FC_SOURCE)\Mod\Path\Gui\DlgProcessorChooser.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(FC_SOURCE)\Mod\Path\Gui\moc_DlgProcessorChooser.cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="$(FC_SOURCE)\Mod\Path\Gui\ui_DlgSettingsPathColor.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Path\Gui\ui_TaskDlgPathCompound.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Path\Gui\ui_DlgProcessorChooser.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Path\Gui\PreCompiled.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Path\Gui\ViewProviderPath.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Path\Gui\ViewProviderPathCompound.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Path\Gui\ViewProviderPathShape.h" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Path\Gui\qrc_Path.cxx" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Path\Gui\Command.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Path\Gui\AppPathGui.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Path\Gui\AppPathGuiPy.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Path\Gui\PreCompiled.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Path\Gui\DlgSettingsPathColor.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Path\Gui\TaskDlgPathCompound.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Path\Gui\DlgProcessorChooser.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Path\Gui\ViewProviderPath.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Path\Gui\ViewProviderPathCompound.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Path\Gui\ViewProviderPathShape.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="$(FC_SOURCE)/App/FreeCADApp.vcxproj">
+      <Project>106CFB68-340E-3307-8B33-691BFD4C2F84</Project>
+    </ProjectReference>
+    <ProjectReference Include="$(FC_SOURCE)/Base/FreeCADBase.vcxproj">
+      <Project>C318BD7C-A3CA-3454-A3D8-7E815B7B6CC0</Project>
+    </ProjectReference>
+    <ProjectReference Include="$(FC_SOURCE)/Gui/FreeCADGui.vcxproj">
+      <Project>DFA51F4B-58A3-3BF2-B5F0-4D1AE14CB897</Project>
+    </ProjectReference>
+    <ProjectReference Include="$(FC_SOURCE)/Mod/Part/App/Part.vcxproj">
+      <Project>CD9CC58A-54E1-3516-AE9C-CEFF64AC463B</Project>
+    </ProjectReference>
+    <ProjectReference Include="$(FC_SOURCE)/Mod/Path/App/Path.vcxproj">
+      <Project>5C51B93E-CB38-361D-A14A-00003839F8D7</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="$(FC_SOURCE)\Mod\Mesh\Gui\DlgEvaluateMeshImp.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Mesh\Gui\DlgRegularSolidImp.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Mesh\Gui\DlgSettingsMeshView.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Mesh\Gui\DlgSmoothing.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Mesh\Gui\RemoveComponents.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Mesh\Gui\Segmentation.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Mesh\Gui\Selection.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Mesh\Gui\SoFCIndexedFaceSet.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Mesh\Gui\SoFCMeshObject.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Mesh\Gui\SoPolygon.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Mesh\Gui\qrc_Mesh.cxx" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Mesh\Gui\ViewProvider.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Mesh\Gui\ViewProviderPython.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Mesh\Gui\ViewProviderCurvature.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Mesh\Gui\ViewProviderDefects.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Mesh\Gui\ViewProviderMeshFaceSet.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Mesh\Gui\ViewProviderTransform.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Mesh\Gui\ViewProviderTransformDemolding.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Mesh\Gui\AppMeshGui.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Mesh\Gui\Command.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Mesh\Gui\Doxygen.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Mesh\Gui\PreCompiled.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Mesh\Gui\MeshEditor.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Mesh\Gui\MeshSelection.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Mesh\Gui\PropertyEditorMesh.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Mesh\Gui\Workbench.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="$(FC_SOURCE)\Mod\Mesh\Gui\ui_DlgEvaluateMesh.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Mesh\Gui\ui_DlgRegularSolid.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Mesh\Gui\ui_DlgSettingsMeshView.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Mesh\Gui\ui_DlgSmoothing.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Mesh\Gui\ui_RemoveComponents.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Mesh\Gui\ui_Segmentation.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Mesh\Gui\ui_Selection.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Mesh\Gui\Segmentation.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Mesh\Gui\SoFCIndexedFaceSet.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Mesh\Gui\SoFCMeshObject.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Mesh\Gui\SoPolygon.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Mesh\Gui\ViewProvider.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Mesh\Gui\ViewProviderPython.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Mesh\Gui\ViewProviderCurvature.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Mesh\Gui\ViewProviderDefects.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Mesh\Gui\ViewProviderMeshFaceSet.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Mesh\Gui\ViewProviderTransform.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Mesh\Gui\ViewProviderTransformDemolding.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Mesh\Gui\PreCompiled.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Mesh\Gui\MeshSelection.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Mesh\Gui\Workbench.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="$(FC_SOURCE)\Mod\Mesh\Gui\DlgEvaluateMesh.ui" />
+    <CustomBuild Include="$(FC_SOURCE)\Mod\Mesh\Gui\DlgEvaluateMeshImp.h" />
+    <CustomBuild Include="$(FC_SOURCE)\Mod\Mesh\Gui\DlgRegularSolid.ui" />
+    <CustomBuild Include="$(FC_SOURCE)\Mod\Mesh\Gui\DlgRegularSolidImp.h" />
+    <CustomBuild Include="$(FC_SOURCE)\Mod\Mesh\Gui\DlgSettingsMeshView.ui" />
+    <CustomBuild Include="$(FC_SOURCE)\Mod\Mesh\Gui\DlgSettingsMeshView.h" />
+    <CustomBuild Include="$(FC_SOURCE)\Mod\Mesh\Gui\DlgSmoothing.ui" />
+    <CustomBuild Include="$(FC_SOURCE)\Mod\Mesh\Gui\DlgSmoothing.h" />
+    <CustomBuild Include="$(FC_SOURCE)\Mod\Mesh\Gui\RemoveComponents.ui" />
+    <CustomBuild Include="$(FC_SOURCE)\Mod\Mesh\Gui\RemoveComponents.h" />
+    <CustomBuild Include="$(FC_SOURCE)\Mod\Mesh\Gui\Segmentation.ui" />
+    <CustomBuild Include="$(FC_SOURCE)\Mod\Mesh\Gui\Selection.ui" />
+    <CustomBuild Include="$(FC_SOURCE)\Mod\Mesh\Gui\Selection.h" />
+    <CustomBuild Include="$(FC_SOURCE)\Mod\Mesh\Gui\Resources\Mesh.qrc" />
+    <CustomBuild Include="$(FC_SOURCE)\Mod\Mesh\Gui\MeshEditor.h" />
+    <CustomBuild Include="$(FC_SOURCE)\Mod\Mesh\Gui\PropertyEditorMesh.h" />
+    <CustomBuild Include="\code\free-cad-code\Source\Repos\code\CMakeFiles\4e4e2cd78587fde24e5eb2770f253390\InitGui.py.rule" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{BD35BF06-C8E8-3366-910F-4955129FFCAC}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{4129A801-9AD2-3DA1-A809-5BC032DABCC2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{5124C73C-630B-3F59-9DFC-D2C200992F06}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Dialogs">
+      <UniqueIdentifier>{6A330087-959C-3F3A-AEF3-71AD202B9000}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Inventor">
+      <UniqueIdentifier>{648F1046-6347-36D7-8192-78BEDDE09CFE}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="resource">
+      <UniqueIdentifier>{A71476A5-F3A7-3729-A001-952B8C533BF9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ViewProvider">
+      <UniqueIdentifier>{C58C1CB9-DF0A-37B9-9E90-01B496C8CA81}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

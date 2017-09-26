@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="\code\free-cad-code\Source\Repos\code\CMakeFiles\b29104fd1e81f58e62bd8c65e100fb96\Plot.py.rule" />
+    <CustomBuild Include="\code\free-cad-code\Source\Repos\code\CMakeFiles\b29104fd1e81f58e62bd8c65e100fb96\InitGui.py.rule" />
+    <CustomBuild Include="\code\free-cad-code\Source\Repos\code\CMakeFiles\b29104fd1e81f58e62bd8c65e100fb96\PlotGui.py.rule" />
+    <CustomBuild Include="\code\free-cad-code\Source\Repos\code\CMakeFiles\7e3730feb0e563a895963fd609d95af4\__init__.py.rule" />
+    <CustomBuild Include="\code\free-cad-code\Source\Repos\code\CMakeFiles\7e3730feb0e563a895963fd609d95af4\TaskPanel.py.rule" />
+    <CustomBuild Include="\code\free-cad-code\Source\Repos\code\CMakeFiles\7e3730feb0e563a895963fd609d95af4\TaskPanel.ui.rule" />
+    <CustomBuild Include="\code\free-cad-code\Source\Repos\code\CMakeFiles\5718b7dab087676d683af9f169e27d0b\__init__.py.rule" />
+    <CustomBuild Include="\code\free-cad-code\Source\Repos\code\CMakeFiles\5718b7dab087676d683af9f169e27d0b\TaskPanel.py.rule" />
+    <CustomBuild Include="\code\free-cad-code\Source\Repos\code\CMakeFiles\5718b7dab087676d683af9f169e27d0b\TaskPanel.ui.rule" />
+    <CustomBuild Include="\code\free-cad-code\Source\Repos\code\CMakeFiles\2d4507766f6a04e8f27f418ba976287b\__init__.py.rule" />
+    <CustomBuild Include="\code\free-cad-code\Source\Repos\code\CMakeFiles\2d4507766f6a04e8f27f418ba976287b\TaskPanel.py.rule" />
+    <CustomBuild Include="\code\free-cad-code\Source\Repos\code\CMakeFiles\2d4507766f6a04e8f27f418ba976287b\TaskPanel.ui.rule" />
+    <CustomBuild Include="\code\free-cad-code\Source\Repos\code\CMakeFiles\298b51b5bd750b70be859f4da83043cb\__init__.py.rule" />
+    <CustomBuild Include="\code\free-cad-code\Source\Repos\code\CMakeFiles\298b51b5bd750b70be859f4da83043cb\TaskPanel.py.rule" />
+    <CustomBuild Include="\code\free-cad-code\Source\Repos\code\CMakeFiles\298b51b5bd750b70be859f4da83043cb\TaskPanel.ui.rule" />
+    <CustomBuild Include="\code\free-cad-code\Source\Repos\code\CMakeFiles\c99e88e1004a244ef4c3a0226cb511a7\__init__.py.rule" />
+    <CustomBuild Include="\code\free-cad-code\Source\Repos\code\CMakeFiles\c99e88e1004a244ef4c3a0226cb511a7\TaskPanel.py.rule" />
+    <CustomBuild Include="\code\free-cad-code\Source\Repos\code\CMakeFiles\c99e88e1004a244ef4c3a0226cb511a7\TaskPanel.ui.rule" />
+    <CustomBuild Include="\code\free-cad-code\Source\Repos\code\CMakeFiles\eec53a29c307b8fe46154b0373d0f61e\__init__.py.rule" />
+    <CustomBuild Include="\code\free-cad-code\Source\Repos\code\CMakeFiles\eec53a29c307b8fe46154b0373d0f61e\Paths.py.rule" />
+    <CustomBuild Include="$(FC_SOURCE)\Mod\Plot\resources\Plot.qrc" />
+    <CustomBuild Include="\code\free-cad-code\Source\Repos\code\CMakeFiles\b29104fd1e81f58e62bd8c65e100fb96\Plot_rc.py.rule" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="$(FC_SOURCE)\Mod\Plot\Plot.py" />
+    <None Include="$(FC_SOURCE)\Mod\Plot\InitGui.py" />
+    <None Include="$(FC_SOURCE)\Mod\Plot\PlotGui.py" />
+    <None Include="$(FC_SOURCE)\Mod\Plot\plotAxes\__init__.py" />
+    <None Include="$(FC_SOURCE)\Mod\Plot\plotAxes\TaskPanel.py" />
+    <None Include="$(FC_SOURCE)\Mod\Plot\plotAxes\TaskPanel.ui" />
+    <None Include="$(FC_SOURCE)\Mod\Plot\plotLabels\__init__.py" />
+    <None Include="$(FC_SOURCE)\Mod\Plot\plotLabels\TaskPanel.py" />
+    <None Include="$(FC_SOURCE)\Mod\Plot\plotLabels\TaskPanel.ui" />
+    <None Include="$(FC_SOURCE)\Mod\Plot\plotPositions\__init__.py" />
+    <None Include="$(FC_SOURCE)\Mod\Plot\plotPositions\TaskPanel.py" />
+    <None Include="$(FC_SOURCE)\Mod\Plot\plotPositions\TaskPanel.ui" />
+    <None Include="$(FC_SOURCE)\Mod\Plot\plotSave\__init__.py" />
+    <None Include="$(FC_SOURCE)\Mod\Plot\plotSave\TaskPanel.py" />
+    <None Include="$(FC_SOURCE)\Mod\Plot\plotSave\TaskPanel.ui" />
+    <None Include="$(FC_SOURCE)\Mod\Plot\plotSeries\__init__.py" />
+    <None Include="$(FC_SOURCE)\Mod\Plot\plotSeries\TaskPanel.py" />
+    <None Include="$(FC_SOURCE)\Mod\Plot\plotSeries\TaskPanel.ui" />
+    <None Include="$(FC_SOURCE)\Mod\Plot\plotUtils\__init__.py" />
+    <None Include="$(FC_SOURCE)\Mod\Plot\plotUtils\Paths.py" />
+    <None Include="$(FC_SOURCE)\Mod\Plot\Plot_rc.py" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{5124C73C-630B-3F59-9DFC-D2C200992F06}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="plotaxes">
+      <UniqueIdentifier>{CE7B5343-B884-3562-89FB-4F388C9888D1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="plotlabels">
+      <UniqueIdentifier>{70905EBC-B263-3E27-807B-DAD227265E99}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="plotpositions">
+      <UniqueIdentifier>{61FD35BD-F268-32EB-9B3F-88973AC3DBDE}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="plotsave">
+      <UniqueIdentifier>{5FED976E-0EA6-36B1-A139-5610DAD8CF54}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="plotseries">
+      <UniqueIdentifier>{502AA38F-F0EA-3E6C-BE26-2C85B4DFC4FD}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="plotutils">
+      <UniqueIdentifier>{16E7FCCE-FBCE-336F-B53F-0DCAED2E70A3}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

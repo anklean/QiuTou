@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="\code\free-cad-code\Source\Repos\code\CMakeFiles\b47a54bf88fb010cb4cd641271385ee9\Init.py.rule" />
+    <CustomBuild Include="\code\free-cad-code\Source\Repos\code\CMakeFiles\b47a54bf88fb010cb4cd641271385ee9\InitGui.py.rule" />
+    <CustomBuild Include="\code\free-cad-code\Source\Repos\code\CMakeFiles\b47a54bf88fb010cb4cd641271385ee9\Material.py.rule" />
+    <CustomBuild Include="\code\free-cad-code\Source\Repos\code\CMakeFiles\b47a54bf88fb010cb4cd641271385ee9\importFCMat.py.rule" />
+    <CustomBuild Include="\code\free-cad-code\Source\Repos\code\CMakeFiles\b47a54bf88fb010cb4cd641271385ee9\MaterialEditor.py.rule" />
+    <CustomBuild Include="\code\free-cad-code\Source\Repos\code\CMakeFiles\b47a54bf88fb010cb4cd641271385ee9\materials-editor.ui.rule" />
+    <CustomBuild Include="$(FC_SOURCE)\Mod\Material\Resources\Material.qrc" />
+    <CustomBuild Include="\code\free-cad-code\Source\Repos\code\CMakeFiles\b47a54bf88fb010cb4cd641271385ee9\Material_rc.py.rule" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="$(FC_SOURCE)\Mod\Material\Init.py" />
+    <None Include="$(FC_SOURCE)\Mod\Material\InitGui.py" />
+    <None Include="$(FC_SOURCE)\Mod\Material\Material.py" />
+    <None Include="$(FC_SOURCE)\Mod\Material\importFCMat.py" />
+    <None Include="$(FC_SOURCE)\Mod\Material\MaterialEditor.py" />
+    <None Include="$(FC_SOURCE)\Mod\Material\materials-editor.ui" />
+    <None Include="$(FC_SOURCE)\Mod\Material\Material_rc.py" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{5124C73C-630B-3F59-9DFC-D2C200992F06}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Module">
+      <UniqueIdentifier>{D07C31CD-D17F-31BA-9EAE-DE2074DD6B41}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

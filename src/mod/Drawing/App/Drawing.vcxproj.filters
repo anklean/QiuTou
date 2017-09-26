@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="$(FC_SOURCE)\Mod\Drawing\App\AppDrawing.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Drawing\App\AppDrawingPy.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Drawing\App\PreCompiled.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Drawing\App\FeaturePage.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Drawing\App\FeatureProjection.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Drawing\App\FeatureView.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Drawing\App\FeatureViewPart.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Drawing\App\FeatureViewAnnotation.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Drawing\App\FeatureViewSymbol.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Drawing\App\FeatureClip.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Drawing\App\PageGroup.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Drawing\App\DrawingExport.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Drawing\App\ProjectionAlgos.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="$(FC_SOURCE)\Mod\Drawing\App\PreCompiled.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Drawing\App\FeaturePage.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Drawing\App\FeatureProjection.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Drawing\App\FeatureView.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Drawing\App\FeatureViewPart.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Drawing\App\FeatureViewAnnotation.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Drawing\App\FeatureViewSymbol.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Drawing\App\FeatureClip.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Drawing\App\PageGroup.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Drawing\App\DrawingExport.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Drawing\App\ProjectionAlgos.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="\code\free-cad-code\Source\Repos\code\CMakeFiles\13c93b197220c4bc49f0c888508d265a\Init.py.rule" />
+    <CustomBuild Include="\code\free-cad-code\Source\Repos\code\CMakeFiles\13c93b197220c4bc49f0c888508d265a\DrawingAlgos.py.rule" />
+    <CustomBuild Include="\code\free-cad-code\Source\Repos\code\CMakeFiles\ff74f2185aa35e271dca1f13f8d681af\A0_Landscape_ISO7200.svg.rule" />
+    <CustomBuild Include="\code\free-cad-code\Source\Repos\code\CMakeFiles\ff74f2185aa35e271dca1f13f8d681af\A0_Landscape_plain.svg.rule" />
+    <CustomBuild Include="\code\free-cad-code\Source\Repos\code\CMakeFiles\ff74f2185aa35e271dca1f13f8d681af\A0_Portrait_plain.svg.rule" />
+    <CustomBuild Include="\code\free-cad-code\Source\Repos\code\CMakeFiles\ff74f2185aa35e271dca1f13f8d681af\A1_Landscape_ISO7200.svg.rule" />
+    <CustomBuild Include="\code\free-cad-code\Source\Repos\code\CMakeFiles\ff74f2185aa35e271dca1f13f8d681af\A1_Landscape_plain.svg.rule" />
+    <CustomBuild Include="\code\free-cad-code\Source\Repos\code\CMakeFiles\ff74f2185aa35e271dca1f13f8d681af\A1_Portrait_plain.svg.rule" />
+    <CustomBuild Include="\code\free-cad-code\Source\Repos\code\CMakeFiles\ff74f2185aa35e271dca1f13f8d681af\A2_Landscape_ISO7200.svg.rule" />
+    <CustomBuild Include="\code\free-cad-code\Source\Repos\code\CMakeFiles\ff74f2185aa35e271dca1f13f8d681af\A2_Landscape_plain.svg.rule" />
+    <CustomBuild Include="\code\free-cad-code\Source\Repos\code\CMakeFiles\ff74f2185aa35e271dca1f13f8d681af\A2_Portrait_plain.svg.rule" />
+    <CustomBuild Include="\code\free-cad-code\Source\Repos\code\CMakeFiles\ff74f2185aa35e271dca1f13f8d681af\A3_Landscape.svg.rule" />
+    <CustomBuild Include="\code\free-cad-code\Source\Repos\code\CMakeFiles\ff74f2185aa35e271dca1f13f8d681af\A3_Landscape_ISO7200.svg.rule" />
+    <CustomBuild Include="\code\free-cad-code\Source\Repos\code\CMakeFiles\ff74f2185aa35e271dca1f13f8d681af\A3_Landscape_plain.svg.rule" />
+    <CustomBuild Include="\code\free-cad-code\Source\Repos\code\CMakeFiles\ff74f2185aa35e271dca1f13f8d681af\A3_Portrait_plain.svg.rule" />
+    <CustomBuild Include="\code\free-cad-code\Source\Repos\code\CMakeFiles\ff74f2185aa35e271dca1f13f8d681af\A4_Landscape.svg.rule" />
+    <CustomBuild Include="\code\free-cad-code\Source\Repos\code\CMakeFiles\ff74f2185aa35e271dca1f13f8d681af\A4_Landscape_ISO7200.svg.rule" />
+    <CustomBuild Include="\code\free-cad-code\Source\Repos\code\CMakeFiles\ff74f2185aa35e271dca1f13f8d681af\A4_Landscape_plain.svg.rule" />
+    <CustomBuild Include="\code\free-cad-code\Source\Repos\code\CMakeFiles\ff74f2185aa35e271dca1f13f8d681af\A4_Portrait_ISO7200.svg.rule" />
+    <CustomBuild Include="\code\free-cad-code\Source\Repos\code\CMakeFiles\ff74f2185aa35e271dca1f13f8d681af\A4_Portrait_plain.svg.rule" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{5124C73C-630B-3F59-9DFC-D2C200992F06}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Mod">
+      <UniqueIdentifier>{5AB22130-1B24-37FF-8C75-80B96661A15E}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Features">
+      <UniqueIdentifier>{87630B96-4026-3662-A292-99D1C179217B}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Algorithms">
+      <UniqueIdentifier>{5084070D-732F-3BE5-A813-023ED2E03870}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

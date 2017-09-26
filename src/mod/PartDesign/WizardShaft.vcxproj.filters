@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="\code\free-cad-code\Source\Repos\code\CMakeFiles\9e17346c7ff4efca1d81292f485cc107\__init__.py.rule" />
+    <CustomBuild Include="\code\free-cad-code\Source\Repos\code\CMakeFiles\9e17346c7ff4efca1d81292f485cc107\WizardShaft.svg.rule" />
+    <CustomBuild Include="\code\free-cad-code\Source\Repos\code\CMakeFiles\9e17346c7ff4efca1d81292f485cc107\WizardShaft.py.rule" />
+    <CustomBuild Include="\code\free-cad-code\Source\Repos\code\CMakeFiles\9e17346c7ff4efca1d81292f485cc107\WizardShaftTable.py.rule" />
+    <CustomBuild Include="\code\free-cad-code\Source\Repos\code\CMakeFiles\9e17346c7ff4efca1d81292f485cc107\Shaft.py.rule" />
+    <CustomBuild Include="\code\free-cad-code\Source\Repos\code\CMakeFiles\9e17346c7ff4efca1d81292f485cc107\ShaftFeature.py.rule" />
+    <CustomBuild Include="\code\free-cad-code\Source\Repos\code\CMakeFiles\9e17346c7ff4efca1d81292f485cc107\ShaftDiagram.py.rule" />
+    <CustomBuild Include="\code\free-cad-code\Source\Repos\code\CMakeFiles\9e17346c7ff4efca1d81292f485cc107\SegmentFunction.py.rule" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="$(FC_SOURCE)\Mod\PartDesign\WizardShaft\__init__.py" />
+    <None Include="$(FC_SOURCE)\Mod\PartDesign\WizardShaft\WizardShaft.svg" />
+    <None Include="$(FC_SOURCE)\Mod\PartDesign\WizardShaft\WizardShaft.py" />
+    <None Include="$(FC_SOURCE)\Mod\PartDesign\WizardShaft\WizardShaftTable.py" />
+    <None Include="$(FC_SOURCE)\Mod\PartDesign\WizardShaft\Shaft.py" />
+    <None Include="$(FC_SOURCE)\Mod\PartDesign\WizardShaft\ShaftFeature.py" />
+    <None Include="$(FC_SOURCE)\Mod\PartDesign\WizardShaft\ShaftDiagram.py" />
+    <None Include="$(FC_SOURCE)\Mod\PartDesign\WizardShaft\SegmentFunction.py" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{5124C73C-630B-3F59-9DFC-D2C200992F06}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="wizardshaft">
+      <UniqueIdentifier>{619EF8DD-79F1-3363-869C-BA04AFFE0E72}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

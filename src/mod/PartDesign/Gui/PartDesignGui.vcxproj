@@ -1,0 +1,2215 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="MinSizeRel|Win32">
+      <Configuration>MinSizeRel</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|Win32">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGUID>{DFDD7CB8-D015-3260-81DB-54BC63611800}</ProjectGUID>
+    <Keyword>Win32Proj</Keyword>
+    <Platform>Win32</Platform>
+    <ProjectName>PartDesignGui</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">
+    <Import Project="..\..\..\..\FreeCAD_trunk.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="..\..\..\..\FreeCAD_trunk.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">
+    <Import Project="..\..\..\..\FreeCAD_trunk.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="..\..\..\..\FreeCAD_trunk.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">\code\free-cad-code\Source\Repos\code\Mod\PartDesign\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">PartDesignGui.dir\Debug\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">PartDesignGui_d</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.pyd</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">\code\free-cad-code\Source\Repos\code\Mod\PartDesign\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">PartDesignGui.dir\Release\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">PartDesignGui</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.pyd</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">\code\free-cad-code\Source\Repos\code\Mod\PartDesign\MinSizeRel\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">PartDesignGui.dir\MinSizeRel\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">PartDesignGui</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">.pyd</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">\code\free-cad-code\Source\Repos\code\Mod\PartDesign\RelWithDebInfo\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">PartDesignGui.dir\RelWithDebInfo\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">PartDesignGui</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">.pyd</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">true</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">true</GenerateManifest>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <AdditionalOptions> /Zm128 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalIncludeDirectories>$(FC_INCLUDE);$(FC_INCLUDE)\QtOpenGL;$(FC_INCLUDE)\QtSvg;$(FC_INCLUDE)\QtUiTools;$(FC_INCLUDE)\QtWebKit;$(FC_INCLUDE)\QtGui;$(FC_INCLUDE)\QtXml;$(FC_INCLUDE)\QtNetwork;$(FC_INCLUDE)\QtCore;$(FC_SOURCE);\code\free-cad-code\Source\Repos\code;$(FC_SOURCE)\Mod\PartDesign\Gui;$(FC_LIBRARY)\cmake\..\..\include\oce;$(FC_INCLUDE)\python2.7;$(FC_INCLUDE)\eigen3;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>Debug/</AssemblerListingLocation>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_DEBUG;FC_DEBUG;QT_OPENGL_LIB;QT_SVG_LIB;QT_UITOOLS_LIB;QT_WEBKIT_LIB;QT_GUI_LIB;QT_XML_LIB;QT_NETWORK_LIB;QT_CORE_LIB;HAVE_ACOSH;HAVE_ATANH;HAVE_ASINH;CMAKE_INTDIR="Debug";PartDesignGui_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_DEBUG;FC_DEBUG;QT_OPENGL_LIB;QT_SVG_LIB;QT_UITOOLS_LIB;QT_WEBKIT_LIB;QT_GUI_LIB;QT_XML_LIB;QT_NETWORK_LIB;QT_CORE_LIB;HAVE_ACOSH;HAVE_ATANH;HAVE_ASINH;CMAKE_INTDIR=\"Debug\";PartDesignGui_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(FC_INCLUDE);$(FC_INCLUDE)\QtOpenGL;$(FC_INCLUDE)\QtSvg;$(FC_INCLUDE)\QtUiTools;$(FC_INCLUDE)\QtWebKit;$(FC_INCLUDE)\QtGui;$(FC_INCLUDE)\QtXml;$(FC_INCLUDE)\QtNetwork;$(FC_INCLUDE)\QtCore;$(FC_SOURCE);\code\free-cad-code\Source\Repos\code;$(FC_SOURCE)\Mod\PartDesign\Gui;$(FC_LIBRARY)\cmake\..\..\include\oce;$(FC_INCLUDE)\python2.7;$(FC_INCLUDE)\eigen3;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>$(FC_INCLUDE);$(FC_INCLUDE)\QtOpenGL;$(FC_INCLUDE)\QtSvg;$(FC_INCLUDE)\QtUiTools;$(FC_INCLUDE)\QtWebKit;$(FC_INCLUDE)\QtGui;$(FC_INCLUDE)\QtXml;$(FC_INCLUDE)\QtNetwork;$(FC_INCLUDE)\QtCore;$(FC_SOURCE);\code\free-cad-code\Source\Repos\code;$(FC_SOURCE)\Mod\PartDesign\Gui;$(FC_LIBRARY)\cmake\..\..\include\oce;$(FC_INCLUDE)\python2.7;$(FC_INCLUDE)\eigen3;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <PostBuildEvent>
+      <Message>
+      </Message>
+      <Command>setlocal
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+    </PostBuildEvent>
+    <Link>
+      <AdditionalOptions> /machine:X86 /debug %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;SHFolder.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;winmm.lib;comsupp.lib;Ws2_32.lib;dbghelp.lib;..\App\Debug\_PartDesign_d.lib;..\..\Sketcher\Gui\Debug\SketcherGui_d.lib;..\..\Part\Gui\Debug\PartGui_d.lib;..\..\..\Gui\Debug\FreeCADGui_d.lib;$(FC_LIBRARY)\coin4d.lib;QtUiToolsd.lib;$(FC_LIBRARY)\cmake\Shiboken-1.2.2\..\..\shiboken-python2.7_d.lib;$(FC_LIBRARY)\cmake\PySide-1.2.2\..\..\pyside-python2.7_d.lib;..\..\Sketcher\App\Debug\Sketcher_d.lib;..\..\Part\App\Debug\Part_d.lib;$(FC_LIBRARY)\TKIGESd.lib;$(FC_LIBRARY)\TKSTLd.lib;$(FC_LIBRARY)\TKMeshd.lib;$(FC_LIBRARY)\TKOffsetd.lib;$(FC_LIBRARY)\TKFilletd.lib;$(FC_LIBRARY)\TKSTEPd.lib;$(FC_LIBRARY)\TKSTEP209d.lib;$(FC_LIBRARY)\TKSTEPAttrd.lib;$(FC_LIBRARY)\TKSTEPBased.lib;$(FC_LIBRARY)\TKXSBased.lib;$(FC_LIBRARY)\TKHLRd.lib;$(FC_LIBRARY)\TKFeatd.lib;$(FC_LIBRARY)\TKBoold.lib;$(FC_LIBRARY)\TKShHealingd.lib;$(FC_LIBRARY)\TKBOd.lib;$(FC_LIBRARY)\TKPrimd.lib;$(FC_LIBRARY)\TKTopAlgod.lib;$(FC_LIBRARY)\TKGeomAlgod.lib;$(FC_LIBRARY)\TKBRepd.lib;$(FC_LIBRARY)\TKGeomBased.lib;$(FC_LIBRARY)\TKG3dd.lib;$(FC_LIBRARY)\TKG2dd.lib;$(FC_LIBRARY)\TKMathd.lib;$(FC_LIBRARY)\TKerneld.lib;advapi32.lib;gdi32.lib;user32.lib;kernel32.lib;psapi.lib;$(FC_LIBRARY)\freetype.lib;..\..\..\App\Debug\FreeCADApp_d.lib;$(FC_LIBRARY)\QtOpenGLd4.lib;glu32.lib;opengl32.lib;$(FC_LIBRARY)\QtSvgd4.lib;$(FC_LIBRARY)\QtUiToolsd.lib;$(FC_LIBRARY)\QtWebKitd4.lib;$(FC_LIBRARY)\QtXmlPatternsd4.lib;$(FC_LIBRARY)\QtGuid4.lib;imm32.lib;winmm.lib;$(FC_LIBRARY)\QtXmld4.lib;$(FC_LIBRARY)\QtNetworkd4.lib;ws2_32.lib;..\..\..\Base\Debug\FreeCADBase_d.lib;$(FC_LIBRARY)\python27_d.lib;$(FC_LIBRARY)\xerces-c_3D.lib;$(FC_LIBRARY)\zlibd.lib;MSVCRTD.lib;MSVCPRTD.lib;Rpcrt4.lib;version.lib;$(FC_LIBRARY)\boost_filesystem-vc120-mt-gd-1_55.lib;$(FC_LIBRARY)\boost_program_options-vc120-mt-gd-1_55.lib;$(FC_LIBRARY)\boost_regex-vc120-mt-gd-1_55.lib;$(FC_LIBRARY)\boost_signals-vc120-mt-gd-1_55.lib;$(FC_LIBRARY)\boost_system-vc120-mt-gd-1_55.lib;$(FC_LIBRARY)\boost_thread-vc120-mt-gd-1_55.lib;$(FC_LIBRARY)\QtCored4.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(FC_LIBRARY)\;$(FC_LIBRARY)\/$(Configuration);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreAllDefaultLibraries>true</IgnoreAllDefaultLibraries>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>$(FC_LIBRARY)\$(TargetName).lib</ImportLibrary>
+      <LargeAddressAware>true</LargeAddressAware>
+      <ProgramDataBaseFile>$(DEVROOT)/Mod/PartDesign/PartDesignGui_d.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+      <Version>
+      </Version>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>$(FC_INCLUDE);$(FC_INCLUDE)\QtOpenGL;$(FC_INCLUDE)\QtSvg;$(FC_INCLUDE)\QtUiTools;$(FC_INCLUDE)\QtWebKit;$(FC_INCLUDE)\QtGui;$(FC_INCLUDE)\QtXml;$(FC_INCLUDE)\QtNetwork;$(FC_INCLUDE)\QtCore;$(FC_SOURCE);\code\free-cad-code\Source\Repos\code;$(FC_SOURCE)\Mod\PartDesign\Gui;$(FC_LIBRARY)\cmake\..\..\include\oce;$(FC_INCLUDE)\python2.7;$(FC_INCLUDE)\eigen3;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>Release/</AssemblerListingLocation>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <ExceptionHandling>Async</ExceptionHandling>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;QT_NO_DEBUG;QT_OPENGL_LIB;QT_SVG_LIB;QT_UITOOLS_LIB;QT_WEBKIT_LIB;QT_GUI_LIB;QT_XML_LIB;QT_NETWORK_LIB;QT_CORE_LIB;HAVE_ACOSH;HAVE_ATANH;HAVE_ASINH;CMAKE_INTDIR="Release";PartDesignGui_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;QT_NO_DEBUG;QT_OPENGL_LIB;QT_SVG_LIB;QT_UITOOLS_LIB;QT_WEBKIT_LIB;QT_GUI_LIB;QT_XML_LIB;QT_NETWORK_LIB;QT_CORE_LIB;HAVE_ACOSH;HAVE_ATANH;HAVE_ASINH;CMAKE_INTDIR=\"Release\";PartDesignGui_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(FC_INCLUDE);$(FC_INCLUDE)\QtOpenGL;$(FC_INCLUDE)\QtSvg;$(FC_INCLUDE)\QtUiTools;$(FC_INCLUDE)\QtWebKit;$(FC_INCLUDE)\QtGui;$(FC_INCLUDE)\QtXml;$(FC_INCLUDE)\QtNetwork;$(FC_INCLUDE)\QtCore;$(FC_SOURCE);\code\free-cad-code\Source\Repos\code;$(FC_SOURCE)\Mod\PartDesign\Gui;$(FC_LIBRARY)\cmake\..\..\include\oce;$(FC_INCLUDE)\python2.7;$(FC_INCLUDE)\eigen3;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>$(FC_INCLUDE);$(FC_INCLUDE)\QtOpenGL;$(FC_INCLUDE)\QtSvg;$(FC_INCLUDE)\QtUiTools;$(FC_INCLUDE)\QtWebKit;$(FC_INCLUDE)\QtGui;$(FC_INCLUDE)\QtXml;$(FC_INCLUDE)\QtNetwork;$(FC_INCLUDE)\QtCore;$(FC_SOURCE);\code\free-cad-code\Source\Repos\code;$(FC_SOURCE)\Mod\PartDesign\Gui;$(FC_LIBRARY)\cmake\..\..\include\oce;$(FC_INCLUDE)\python2.7;$(FC_INCLUDE)\eigen3;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <PostBuildEvent>
+      <Message>
+      </Message>
+      <Command>setlocal
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+    </PostBuildEvent>
+    <Link>
+      <AdditionalOptions> /machine:X86 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;SHFolder.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;winmm.lib;comsupp.lib;Ws2_32.lib;dbghelp.lib;..\App\Release\_PartDesign.lib;..\..\Sketcher\Gui\Release\SketcherGui.lib;..\..\Part\Gui\Release\PartGui.lib;..\..\..\Gui\Release\FreeCADGui.lib;$(FC_LIBRARY)\coin4.lib;QtUiTools.lib;$(FC_LIBRARY)\cmake\Shiboken-1.2.2\..\..\shiboken-python2.7.lib;$(FC_LIBRARY)\cmake\PySide-1.2.2\..\..\pyside-python2.7.lib;..\..\Sketcher\App\Release\Sketcher.lib;..\..\Part\App\Release\Part.lib;$(FC_LIBRARY)\TKIGES.lib;$(FC_LIBRARY)\TKSTL.lib;$(FC_LIBRARY)\TKMesh.lib;$(FC_LIBRARY)\TKOffset.lib;$(FC_LIBRARY)\TKFillet.lib;$(FC_LIBRARY)\TKSTEP.lib;$(FC_LIBRARY)\TKSTEP209.lib;$(FC_LIBRARY)\TKSTEPAttr.lib;$(FC_LIBRARY)\TKSTEPBase.lib;$(FC_LIBRARY)\TKXSBase.lib;$(FC_LIBRARY)\TKHLR.lib;$(FC_LIBRARY)\TKFeat.lib;$(FC_LIBRARY)\TKBool.lib;$(FC_LIBRARY)\TKShHealing.lib;$(FC_LIBRARY)\TKBO.lib;$(FC_LIBRARY)\TKPrim.lib;$(FC_LIBRARY)\TKTopAlgo.lib;$(FC_LIBRARY)\TKGeomAlgo.lib;$(FC_LIBRARY)\TKBRep.lib;$(FC_LIBRARY)\TKGeomBase.lib;$(FC_LIBRARY)\TKG3d.lib;$(FC_LIBRARY)\TKG2d.lib;$(FC_LIBRARY)\TKMath.lib;$(FC_LIBRARY)\TKernel.lib;advapi32.lib;gdi32.lib;user32.lib;kernel32.lib;psapi.lib;$(FC_LIBRARY)\freetype.lib;..\..\..\App\Release\FreeCADApp.lib;$(FC_LIBRARY)\QtOpenGL4.lib;glu32.lib;opengl32.lib;$(FC_LIBRARY)\QtSvg4.lib;$(FC_LIBRARY)\QtUiTools.lib;$(FC_LIBRARY)\QtWebKit4.lib;$(FC_LIBRARY)\QtXmlPatterns4.lib;$(FC_LIBRARY)\QtGui4.lib;imm32.lib;winmm.lib;$(FC_LIBRARY)\QtXml4.lib;$(FC_LIBRARY)\QtNetwork4.lib;ws2_32.lib;..\..\..\Base\Release\FreeCADBase.lib;$(FC_LIBRARY)\python27.lib;$(FC_LIBRARY)\xerces-c_3.lib;$(FC_LIBRARY)\zlib.lib;MSVCRT.lib;MSVCPRT.lib;Rpcrt4.lib;version.lib;$(FC_LIBRARY)\boost_filesystem-vc120-mt-1_55.lib;$(FC_LIBRARY)\boost_program_options-vc120-mt-1_55.lib;$(FC_LIBRARY)\boost_regex-vc120-mt-1_55.lib;$(FC_LIBRARY)\boost_signals-vc120-mt-1_55.lib;$(FC_LIBRARY)\boost_system-vc120-mt-1_55.lib;$(FC_LIBRARY)\boost_thread-vc120-mt-1_55.lib;$(FC_LIBRARY)\QtCore4.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(FC_LIBRARY)\;$(FC_LIBRARY)\/$(Configuration);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreAllDefaultLibraries>true</IgnoreAllDefaultLibraries>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>$(FC_SOURCE)/Mod/PartDesign/Gui/Release/PartDesignGui.lib</ImportLibrary>
+      <LargeAddressAware>true</LargeAddressAware>
+      <ProgramDataBaseFile>$(DEVROOT)/Mod/PartDesign/PartDesignGui.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+      <Version>
+      </Version>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>$(FC_INCLUDE);$(FC_INCLUDE)\QtOpenGL;$(FC_INCLUDE)\QtSvg;$(FC_INCLUDE)\QtUiTools;$(FC_INCLUDE)\QtWebKit;$(FC_INCLUDE)\QtGui;$(FC_INCLUDE)\QtXml;$(FC_INCLUDE)\QtNetwork;$(FC_INCLUDE)\QtCore;$(FC_SOURCE);\code\free-cad-code\Source\Repos\code;$(FC_SOURCE)\Mod\PartDesign\Gui;$(FC_LIBRARY)\cmake\..\..\include\oce;$(FC_INCLUDE)\python2.7;$(FC_INCLUDE)\eigen3;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>MinSizeRel/</AssemblerListingLocation>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <Optimization>MinSpace</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;QT_NO_DEBUG;QT_OPENGL_LIB;QT_SVG_LIB;QT_UITOOLS_LIB;QT_WEBKIT_LIB;QT_GUI_LIB;QT_XML_LIB;QT_NETWORK_LIB;QT_CORE_LIB;HAVE_ACOSH;HAVE_ATANH;HAVE_ASINH;CMAKE_INTDIR="MinSizeRel";PartDesignGui_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;QT_NO_DEBUG;QT_OPENGL_LIB;QT_SVG_LIB;QT_UITOOLS_LIB;QT_WEBKIT_LIB;QT_GUI_LIB;QT_XML_LIB;QT_NETWORK_LIB;QT_CORE_LIB;HAVE_ACOSH;HAVE_ATANH;HAVE_ASINH;CMAKE_INTDIR=\"MinSizeRel\";PartDesignGui_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(FC_INCLUDE);$(FC_INCLUDE)\QtOpenGL;$(FC_INCLUDE)\QtSvg;$(FC_INCLUDE)\QtUiTools;$(FC_INCLUDE)\QtWebKit;$(FC_INCLUDE)\QtGui;$(FC_INCLUDE)\QtXml;$(FC_INCLUDE)\QtNetwork;$(FC_INCLUDE)\QtCore;$(FC_SOURCE);\code\free-cad-code\Source\Repos\code;$(FC_SOURCE)\Mod\PartDesign\Gui;$(FC_LIBRARY)\cmake\..\..\include\oce;$(FC_INCLUDE)\python2.7;$(FC_INCLUDE)\eigen3;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>$(FC_INCLUDE);$(FC_INCLUDE)\QtOpenGL;$(FC_INCLUDE)\QtSvg;$(FC_INCLUDE)\QtUiTools;$(FC_INCLUDE)\QtWebKit;$(FC_INCLUDE)\QtGui;$(FC_INCLUDE)\QtXml;$(FC_INCLUDE)\QtNetwork;$(FC_INCLUDE)\QtCore;$(FC_SOURCE);\code\free-cad-code\Source\Repos\code;$(FC_SOURCE)\Mod\PartDesign\Gui;$(FC_LIBRARY)\cmake\..\..\include\oce;$(FC_INCLUDE)\python2.7;$(FC_INCLUDE)\eigen3;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <PostBuildEvent>
+      <Message>
+      </Message>
+      <Command>setlocal
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+    </PostBuildEvent>
+    <Link>
+      <AdditionalOptions> /machine:X86 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;SHFolder.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;winmm.lib;comsupp.lib;Ws2_32.lib;dbghelp.lib;..\App\MinSizeRel\_PartDesign.lib;..\..\Sketcher\Gui\MinSizeRel\SketcherGui.lib;..\..\Part\Gui\MinSizeRel\PartGui.lib;..\..\..\Gui\MinSizeRel\FreeCADGui.lib;$(FC_LIBRARY)\coin4.lib;QtUiTools.lib;$(FC_LIBRARY)\cmake\Shiboken-1.2.2\..\..\shiboken-python2.7.lib;$(FC_LIBRARY)\cmake\PySide-1.2.2\..\..\pyside-python2.7.lib;..\..\Sketcher\App\MinSizeRel\Sketcher.lib;..\..\Part\App\MinSizeRel\Part.lib;$(FC_LIBRARY)\TKIGESd.lib;$(FC_LIBRARY)\TKSTLd.lib;$(FC_LIBRARY)\TKMeshd.lib;$(FC_LIBRARY)\TKOffsetd.lib;$(FC_LIBRARY)\TKFilletd.lib;$(FC_LIBRARY)\TKSTEPd.lib;$(FC_LIBRARY)\TKSTEP209d.lib;$(FC_LIBRARY)\TKSTEPAttrd.lib;$(FC_LIBRARY)\TKSTEPBased.lib;$(FC_LIBRARY)\TKXSBased.lib;$(FC_LIBRARY)\TKHLRd.lib;$(FC_LIBRARY)\TKFeatd.lib;$(FC_LIBRARY)\TKBoold.lib;$(FC_LIBRARY)\TKShHealingd.lib;$(FC_LIBRARY)\TKBOd.lib;$(FC_LIBRARY)\TKPrimd.lib;$(FC_LIBRARY)\TKTopAlgod.lib;$(FC_LIBRARY)\TKGeomAlgod.lib;$(FC_LIBRARY)\TKBRepd.lib;$(FC_LIBRARY)\TKGeomBased.lib;$(FC_LIBRARY)\TKG3dd.lib;$(FC_LIBRARY)\TKG2dd.lib;$(FC_LIBRARY)\TKMathd.lib;$(FC_LIBRARY)\TKerneld.lib;advapi32.lib;gdi32.lib;user32.lib;kernel32.lib;psapi.lib;$(FC_LIBRARY)\freetype.lib;..\..\..\App\MinSizeRel\FreeCADApp.lib;$(FC_LIBRARY)\QtOpenGL4.lib;glu32.lib;opengl32.lib;$(FC_LIBRARY)\QtSvg4.lib;$(FC_LIBRARY)\QtUiTools.lib;$(FC_LIBRARY)\QtWebKit4.lib;$(FC_LIBRARY)\QtXmlPatterns4.lib;$(FC_LIBRARY)\QtGui4.lib;imm32.lib;winmm.lib;$(FC_LIBRARY)\QtXml4.lib;$(FC_LIBRARY)\QtNetwork4.lib;ws2_32.lib;..\..\..\Base\MinSizeRel\FreeCADBase.lib;$(FC_LIBRARY)\python27.lib;$(FC_LIBRARY)\xerces-c_3.lib;$(FC_LIBRARY)\zlib.lib;MSVCRT.lib;MSVCPRT.lib;Rpcrt4.lib;version.lib;$(FC_LIBRARY)\boost_filesystem-vc120-mt-1_55.lib;$(FC_LIBRARY)\boost_program_options-vc120-mt-1_55.lib;$(FC_LIBRARY)\boost_regex-vc120-mt-1_55.lib;$(FC_LIBRARY)\boost_signals-vc120-mt-1_55.lib;$(FC_LIBRARY)\boost_system-vc120-mt-1_55.lib;$(FC_LIBRARY)\boost_thread-vc120-mt-1_55.lib;$(FC_LIBRARY)\QtCore4.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(FC_LIBRARY)\;$(FC_LIBRARY)\/$(Configuration);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreAllDefaultLibraries>true</IgnoreAllDefaultLibraries>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>$(FC_SOURCE)/Mod/PartDesign/Gui/MinSizeRel/PartDesignGui.lib</ImportLibrary>
+      <LargeAddressAware>true</LargeAddressAware>
+      <ProgramDataBaseFile>$(DEVROOT)/Mod/PartDesign/MinSizeRel/PartDesignGui.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+      <Version>
+      </Version>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>$(FC_INCLUDE);$(FC_INCLUDE)\QtOpenGL;$(FC_INCLUDE)\QtSvg;$(FC_INCLUDE)\QtUiTools;$(FC_INCLUDE)\QtWebKit;$(FC_INCLUDE)\QtGui;$(FC_INCLUDE)\QtXml;$(FC_INCLUDE)\QtNetwork;$(FC_INCLUDE)\QtCore;$(FC_SOURCE);\code\free-cad-code\Source\Repos\code;$(FC_SOURCE)\Mod\PartDesign\Gui;$(FC_LIBRARY)\cmake\..\..\include\oce;$(FC_INCLUDE)\python2.7;$(FC_INCLUDE)\eigen3;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>RelWithDebInfo/</AssemblerListingLocation>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;QT_NO_DEBUG;QT_OPENGL_LIB;QT_SVG_LIB;QT_UITOOLS_LIB;QT_WEBKIT_LIB;QT_GUI_LIB;QT_XML_LIB;QT_NETWORK_LIB;QT_CORE_LIB;HAVE_ACOSH;HAVE_ATANH;HAVE_ASINH;CMAKE_INTDIR="RelWithDebInfo";PartDesignGui_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;QT_NO_DEBUG;QT_OPENGL_LIB;QT_SVG_LIB;QT_UITOOLS_LIB;QT_WEBKIT_LIB;QT_GUI_LIB;QT_XML_LIB;QT_NETWORK_LIB;QT_CORE_LIB;HAVE_ACOSH;HAVE_ATANH;HAVE_ASINH;CMAKE_INTDIR=\"RelWithDebInfo\";PartDesignGui_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(FC_INCLUDE);$(FC_INCLUDE)\QtOpenGL;$(FC_INCLUDE)\QtSvg;$(FC_INCLUDE)\QtUiTools;$(FC_INCLUDE)\QtWebKit;$(FC_INCLUDE)\QtGui;$(FC_INCLUDE)\QtXml;$(FC_INCLUDE)\QtNetwork;$(FC_INCLUDE)\QtCore;$(FC_SOURCE);\code\free-cad-code\Source\Repos\code;$(FC_SOURCE)\Mod\PartDesign\Gui;$(FC_LIBRARY)\cmake\..\..\include\oce;$(FC_INCLUDE)\python2.7;$(FC_INCLUDE)\eigen3;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>$(FC_INCLUDE);$(FC_INCLUDE)\QtOpenGL;$(FC_INCLUDE)\QtSvg;$(FC_INCLUDE)\QtUiTools;$(FC_INCLUDE)\QtWebKit;$(FC_INCLUDE)\QtGui;$(FC_INCLUDE)\QtXml;$(FC_INCLUDE)\QtNetwork;$(FC_INCLUDE)\QtCore;$(FC_SOURCE);\code\free-cad-code\Source\Repos\code;$(FC_SOURCE)\Mod\PartDesign\Gui;$(FC_LIBRARY)\cmake\..\..\include\oce;$(FC_INCLUDE)\python2.7;$(FC_INCLUDE)\eigen3;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <PostBuildEvent>
+      <Message>
+      </Message>
+      <Command>setlocal
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+    </PostBuildEvent>
+    <Link>
+      <AdditionalOptions> /machine:X86 /debug %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;SHFolder.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;winmm.lib;comsupp.lib;Ws2_32.lib;dbghelp.lib;..\App\RelWithDebInfo\_PartDesign.lib;..\..\Sketcher\Gui\RelWithDebInfo\SketcherGui.lib;..\..\Part\Gui\RelWithDebInfo\PartGui.lib;..\..\..\Gui\RelWithDebInfo\FreeCADGui.lib;$(FC_LIBRARY)\coin4.lib;QtUiTools.lib;$(FC_LIBRARY)\cmake\Shiboken-1.2.2\..\..\shiboken-python2.7.lib;$(FC_LIBRARY)\cmake\PySide-1.2.2\..\..\pyside-python2.7.lib;..\..\Sketcher\App\RelWithDebInfo\Sketcher.lib;..\..\Part\App\RelWithDebInfo\Part.lib;$(FC_LIBRARY)\TKIGESd.lib;$(FC_LIBRARY)\TKSTLd.lib;$(FC_LIBRARY)\TKMeshd.lib;$(FC_LIBRARY)\TKOffsetd.lib;$(FC_LIBRARY)\TKFilletd.lib;$(FC_LIBRARY)\TKSTEPd.lib;$(FC_LIBRARY)\TKSTEP209d.lib;$(FC_LIBRARY)\TKSTEPAttrd.lib;$(FC_LIBRARY)\TKSTEPBased.lib;$(FC_LIBRARY)\TKXSBased.lib;$(FC_LIBRARY)\TKHLRd.lib;$(FC_LIBRARY)\TKFeatd.lib;$(FC_LIBRARY)\TKBoold.lib;$(FC_LIBRARY)\TKShHealingd.lib;$(FC_LIBRARY)\TKBOd.lib;$(FC_LIBRARY)\TKPrimd.lib;$(FC_LIBRARY)\TKTopAlgod.lib;$(FC_LIBRARY)\TKGeomAlgod.lib;$(FC_LIBRARY)\TKBRepd.lib;$(FC_LIBRARY)\TKGeomBased.lib;$(FC_LIBRARY)\TKG3dd.lib;$(FC_LIBRARY)\TKG2dd.lib;$(FC_LIBRARY)\TKMathd.lib;$(FC_LIBRARY)\TKerneld.lib;advapi32.lib;gdi32.lib;user32.lib;kernel32.lib;psapi.lib;$(FC_LIBRARY)\freetype.lib;..\..\..\App\RelWithDebInfo\FreeCADApp.lib;$(FC_LIBRARY)\QtOpenGL4.lib;glu32.lib;opengl32.lib;$(FC_LIBRARY)\QtSvg4.lib;$(FC_LIBRARY)\QtUiTools.lib;$(FC_LIBRARY)\QtWebKit4.lib;$(FC_LIBRARY)\QtXmlPatterns4.lib;$(FC_LIBRARY)\QtGui4.lib;imm32.lib;winmm.lib;$(FC_LIBRARY)\QtXml4.lib;$(FC_LIBRARY)\QtNetwork4.lib;ws2_32.lib;..\..\..\Base\RelWithDebInfo\FreeCADBase.lib;$(FC_LIBRARY)\python27.lib;$(FC_LIBRARY)\xerces-c_3.lib;$(FC_LIBRARY)\zlib.lib;MSVCRT.lib;MSVCPRT.lib;Rpcrt4.lib;version.lib;$(FC_LIBRARY)\boost_filesystem-vc120-mt-1_55.lib;$(FC_LIBRARY)\boost_program_options-vc120-mt-1_55.lib;$(FC_LIBRARY)\boost_regex-vc120-mt-1_55.lib;$(FC_LIBRARY)\boost_signals-vc120-mt-1_55.lib;$(FC_LIBRARY)\boost_system-vc120-mt-1_55.lib;$(FC_LIBRARY)\boost_thread-vc120-mt-1_55.lib;$(FC_LIBRARY)\QtCore4.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(FC_LIBRARY)\;$(FC_LIBRARY)\/$(Configuration);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreAllDefaultLibraries>true</IgnoreAllDefaultLibraries>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>$(FC_SOURCE)/Mod/PartDesign/Gui/RelWithDebInfo/PartDesignGui.lib</ImportLibrary>
+      <LargeAddressAware>true</LargeAddressAware>
+      <ProgramDataBaseFile>$(DEVROOT)/Mod/PartDesign/RelWithDebInfo/PartDesignGui.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+      <Version>
+      </Version>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="$(FC_SOURCE)\Mod\PartDesign\Gui\Resources\PartDesign.qrc">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generating qrc_PartDesign.cxx</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+$(FC_BIN)\rcc.exe -name PartDesign -o $(FC_SOURCE)/Mod/PartDesign/Gui/qrc_PartDesign.cxx $(FC_SOURCE)/Mod/PartDesign/Gui/Resources/PartDesign.qrc
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(FC_SOURCE)/Mod/PartDesign/Gui/Resources/PartDesign.qrc;$(FC_SOURCE)\Mod\PartDesign\Gui\Resources\icons\PartDesign_Chamfer.svg;$(FC_SOURCE)\Mod\PartDesign\Gui\Resources\icons\PartDesign_Fillet.svg;$(FC_SOURCE)\Mod\PartDesign\Gui\Resources\icons\PartDesign_Draft.svg;$(FC_SOURCE)\Mod\PartDesign\Gui\Resources\icons\PartDesign_Groove.svg;$(FC_SOURCE)\Mod\PartDesign\Gui\Resources\icons\PartDesign_Pad.svg;$(FC_SOURCE)\Mod\PartDesign\Gui\Resources\icons\PartDesign_Pocket.svg;$(FC_SOURCE)\Mod\PartDesign\Gui\Resources\icons\PartDesign_Revolution.svg;$(FC_SOURCE)\Mod\PartDesign\Gui\Resources\icons\PartDesign_Mirrored.svg;$(FC_SOURCE)\Mod\PartDesign\Gui\Resources\icons\PartDesign_LinearPattern.svg;$(FC_SOURCE)\Mod\PartDesign\Gui\Resources\icons\PartDesign_PolarPattern.svg;$(FC_SOURCE)\Mod\PartDesign\Gui\Resources\icons\PartDesign_Scaled.svg;$(FC_SOURCE)\Mod\PartDesign\Gui\Resources\icons\PartDesign_MultiTransform.svg;$(FC_SOURCE)\Mod\PartDesign\Gui\Resources\icons\PartDesign_Hole.svg;$(FC_SOURCE)\Mod\PartDesign\Gui\Resources\icons\Tree_PartDesign_Pad.svg;$(FC_SOURCE)\Mod\PartDesign\Gui\Resources\icons\Tree_PartDesign_Revolution.svg;$(FC_SOURCE)\Mod\PartDesign\Gui\Resources\icons\PartDesign_InternalExternalGear.svg;$(FC_SOURCE)\Mod\PartDesign\Gui\Resources\icons\PartDesign_InvoluteGear.svg;$(FC_SOURCE)\Mod\PartDesign\Gui\Resources\translations\PartDesign_af.qm;$(FC_SOURCE)\Mod\PartDesign\Gui\Resources\translations\PartDesign_de.qm;$(FC_SOURCE)\Mod\PartDesign\Gui\Resources\translations\PartDesign_fi.qm;$(FC_SOURCE)\Mod\PartDesign\Gui\Resources\translations\PartDesign_fr.qm;$(FC_SOURCE)\Mod\PartDesign\Gui\Resources\translations\PartDesign_hr.qm;$(FC_SOURCE)\Mod\PartDesign\Gui\Resources\translations\PartDesign_it.qm;$(FC_SOURCE)\Mod\PartDesign\Gui\Resources\translations\PartDesign_nl.qm;$(FC_SOURCE)\Mod\PartDesign\Gui\Resources\translations\PartDesign_no.qm;$(FC_SOURCE)\Mod\PartDesign\Gui\Resources\translations\PartDesign_pl.qm;$(FC_SOURCE)\Mod\PartDesign\Gui\Resources\translations\PartDesign_ru.qm;$(FC_SOURCE)\Mod\PartDesign\Gui\Resources\translations\PartDesign_uk.qm;$(FC_SOURCE)\Mod\PartDesign\Gui\Resources\translations\PartDesign_tr.qm;$(FC_SOURCE)\Mod\PartDesign\Gui\Resources\translations\PartDesign_sv-SE.qm;$(FC_SOURCE)\Mod\PartDesign\Gui\Resources\translations\PartDesign_zh-TW.qm;$(FC_SOURCE)\Mod\PartDesign\Gui\Resources\translations\PartDesign_pt-BR.qm;$(FC_SOURCE)\Mod\PartDesign\Gui\Resources\translations\PartDesign_cs.qm;$(FC_SOURCE)\Mod\PartDesign\Gui\Resources\translations\PartDesign_sk.qm;$(FC_SOURCE)\Mod\PartDesign\Gui\Resources\translations\PartDesign_es-ES.qm;$(FC_SOURCE)\Mod\PartDesign\Gui\Resources\translations\PartDesign_zh-CN.qm;$(FC_SOURCE)\Mod\PartDesign\Gui\Resources\translations\PartDesign_ja.qm;$(FC_SOURCE)\Mod\PartDesign\Gui\Resources\translations\PartDesign_ro.qm;$(FC_SOURCE)\Mod\PartDesign\Gui\Resources\translations\PartDesign_hu.qm;$(FC_SOURCE)\Mod\PartDesign\Gui\Resources\translations\PartDesign_pt-PT.qm;$(FC_SOURCE)\Mod\PartDesign\Gui\Resources\translations\PartDesign_sr.qm;$(FC_SOURCE)\Mod\PartDesign\Gui\Resources\PartDesign.qrc.depends;$(FC_SOURCE)\Mod\PartDesign\Gui\Resources\PartDesign.qrc;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(FC_SOURCE)\Mod\PartDesign\Gui\qrc_PartDesign.cxx</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Generating qrc_PartDesign.cxx</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+$(FC_BIN)\rcc.exe -name PartDesign -o $(FC_SOURCE)/Mod/PartDesign/Gui/qrc_PartDesign.cxx $(FC_SOURCE)/Mod/PartDesign/Gui/Resources/PartDesign.qrc
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(FC_SOURCE)/Mod/PartDesign/Gui/Resources/PartDesign.qrc;$(FC_SOURCE)\Mod\PartDesign\Gui\Resources\icons\PartDesign_Chamfer.svg;$(FC_SOURCE)\Mod\PartDesign\Gui\Resources\icons\PartDesign_Fillet.svg;$(FC_SOURCE)\Mod\PartDesign\Gui\Resources\icons\PartDesign_Draft.svg;$(FC_SOURCE)\Mod\PartDesign\Gui\Resources\icons\PartDesign_Groove.svg;$(FC_SOURCE)\Mod\PartDesign\Gui\Resources\icons\PartDesign_Pad.svg;$(FC_SOURCE)\Mod\PartDesign\Gui\Resources\icons\PartDesign_Pocket.svg;$(FC_SOURCE)\Mod\PartDesign\Gui\Resources\icons\PartDesign_Revolution.svg;$(FC_SOURCE)\Mod\PartDesign\Gui\Resources\icons\PartDesign_Mirrored.svg;$(FC_SOURCE)\Mod\PartDesign\Gui\Resources\icons\PartDesign_LinearPattern.svg;$(FC_SOURCE)\Mod\PartDesign\Gui\Resources\icons\PartDesign_PolarPattern.svg;$(FC_SOURCE)\Mod\PartDesign\Gui\Resources\icons\PartDesign_Scaled.svg;$(FC_SOURCE)\Mod\PartDesign\Gui\Resources\icons\PartDesign_MultiTransform.svg;$(FC_SOURCE)\Mod\PartDesign\Gui\Resources\icons\PartDesign_Hole.svg;$(FC_SOURCE)\Mod\PartDesign\Gui\Resources\icons\Tree_PartDesign_Pad.svg;$(FC_SOURCE)\Mod\PartDesign\Gui\Resources\icons\Tree_PartDesign_Revolution.svg;$(FC_SOURCE)\Mod\PartDesign\Gui\Resources\icons\PartDesign_InternalExternalGear.svg;$(FC_SOURCE)\Mod\PartDesign\Gui\Resources\icons\PartDesign_InvoluteGear.svg;$(FC_SOURCE)\Mod\PartDesign\Gui\Resources\translations\PartDesign_af.qm;$(FC_SOURCE)\Mod\PartDesign\Gui\Resources\translations\PartDesign_de.qm;$(FC_SOURCE)\Mod\PartDesign\Gui\Resources\translations\PartDesign_fi.qm;$(FC_SOURCE)\Mod\PartDesign\Gui\Resources\translations\PartDesign_fr.qm;$(FC_SOURCE)\Mod\PartDesign\Gui\Resources\translations\PartDesign_hr.qm;$(FC_SOURCE)\Mod\PartDesign\Gui\Resources\translations\PartDesign_it.qm;$(FC_SOURCE)\Mod\PartDesign\Gui\Resources\translations\PartDesign_nl.qm;$(FC_SOURCE)\Mod\PartDesign\Gui\Resources\translations\PartDesign_no.qm;$(FC_SOURCE)\Mod\PartDesign\Gui\Resources\translations\PartDesign_pl.qm;$(FC_SOURCE)\Mod\PartDesign\Gui\Resources\translations\PartDesign_ru.qm;$(FC_SOURCE)\Mod\PartDesign\Gui\Resources\translations\PartDesign_uk.qm;$(FC_SOURCE)\Mod\PartDesign\Gui\Resources\translations\PartDesign_tr.qm;$(FC_SOURCE)\Mod\PartDesign\Gui\Resources\translations\PartDesign_sv-SE.qm;$(FC_SOURCE)\Mod\PartDesign\Gui\Resources\translations\PartDesign_zh-TW.qm;$(FC_SOURCE)\Mod\PartDesign\Gui\Resources\translations\PartDesign_pt-BR.qm;$(FC_SOURCE)\Mod\PartDesign\Gui\Resources\translations\PartDesign_cs.qm;$(FC_SOURCE)\Mod\PartDesign\Gui\Resources\translations\PartDesign_sk.qm;$(FC_SOURCE)\Mod\PartDesign\Gui\Resources\translations\PartDesign_es-ES.qm;$(FC_SOURCE)\Mod\PartDesign\Gui\Resources\translations\PartDesign_zh-CN.qm;$(FC_SOURCE)\Mod\PartDesign\Gui\Resources\translations\PartDesign_ja.qm;$(FC_SOURCE)\Mod\PartDesign\Gui\Resources\translations\PartDesign_ro.qm;$(FC_SOURCE)\Mod\PartDesign\Gui\Resources\translations\PartDesign_hu.qm;$(FC_SOURCE)\Mod\PartDesign\Gui\Resources\translations\PartDesign_pt-PT.qm;$(FC_SOURCE)\Mod\PartDesign\Gui\Resources\translations\PartDesign_sr.qm;$(FC_SOURCE)\Mod\PartDesign\Gui\Resources\PartDesign.qrc.depends;$(FC_SOURCE)\Mod\PartDesign\Gui\Resources\PartDesign.qrc;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(FC_SOURCE)\Mod\PartDesign\Gui\qrc_PartDesign.cxx</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Generating qrc_PartDesign.cxx</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+$(FC_BIN)\rcc.exe -name PartDesign -o $(FC_SOURCE)/Mod/PartDesign/Gui/qrc_PartDesign.cxx $(FC_SOURCE)/Mod/PartDesign/Gui/Resources/PartDesign.qrc
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">$(FC_SOURCE)/Mod/PartDesign/Gui/Resources/PartDesign.qrc;$(FC_SOURCE)\Mod\PartDesign\Gui\Resources\icons\PartDesign_Chamfer.svg;$(FC_SOURCE)\Mod\PartDesign\Gui\Resources\icons\PartDesign_Fillet.svg;$(FC_SOURCE)\Mod\PartDesign\Gui\Resources\icons\PartDesign_Draft.svg;$(FC_SOURCE)\Mod\PartDesign\Gui\Resources\icons\PartDesign_Groove.svg;$(FC_SOURCE)\Mod\PartDesign\Gui\Resources\icons\PartDesign_Pad.svg;$(FC_SOURCE)\Mod\PartDesign\Gui\Resources\icons\PartDesign_Pocket.svg;$(FC_SOURCE)\Mod\PartDesign\Gui\Resources\icons\PartDesign_Revolution.svg;$(FC_SOURCE)\Mod\PartDesign\Gui\Resources\icons\PartDesign_Mirrored.svg;$(FC_SOURCE)\Mod\PartDesign\Gui\Resources\icons\PartDesign_LinearPattern.svg;$(FC_SOURCE)\Mod\PartDesign\Gui\Resources\icons\PartDesign_PolarPattern.svg;$(FC_SOURCE)\Mod\PartDesign\Gui\Resources\icons\PartDesign_Scaled.svg;$(FC_SOURCE)\Mod\PartDesign\Gui\Resources\icons\PartDesign_MultiTransform.svg;$(FC_SOURCE)\Mod\PartDesign\Gui\Resources\icons\PartDesign_Hole.svg;$(FC_SOURCE)\Mod\PartDesign\Gui\Resources\icons\Tree_PartDesign_Pad.svg;$(FC_SOURCE)\Mod\PartDesign\Gui\Resources\icons\Tree_PartDesign_Revolution.svg;$(FC_SOURCE)\Mod\PartDesign\Gui\Resources\icons\PartDesign_InternalExternalGear.svg;$(FC_SOURCE)\Mod\PartDesign\Gui\Resources\icons\PartDesign_InvoluteGear.svg;$(FC_SOURCE)\Mod\PartDesign\Gui\Resources\translations\PartDesign_af.qm;$(FC_SOURCE)\Mod\PartDesign\Gui\Resources\translations\PartDesign_de.qm;$(FC_SOURCE)\Mod\PartDesign\Gui\Resources\translations\PartDesign_fi.qm;$(FC_SOURCE)\Mod\PartDesign\Gui\Resources\translations\PartDesign_fr.qm;$(FC_SOURCE)\Mod\PartDesign\Gui\Resources\translations\PartDesign_hr.qm;$(FC_SOURCE)\Mod\PartDesign\Gui\Resources\translations\PartDesign_it.qm;$(FC_SOURCE)\Mod\PartDesign\Gui\Resources\translations\PartDesign_nl.qm;$(FC_SOURCE)\Mod\PartDesign\Gui\Resources\translations\PartDesign_no.qm;$(FC_SOURCE)\Mod\PartDesign\Gui\Resources\translations\PartDesign_pl.qm;$(FC_SOURCE)\Mod\PartDesign\Gui\Resources\translations\PartDesign_ru.qm;$(FC_SOURCE)\Mod\PartDesign\Gui\Resources\translations\PartDesign_uk.qm;$(FC_SOURCE)\Mod\PartDesign\Gui\Resources\translations\PartDesign_tr.qm;$(FC_SOURCE)\Mod\PartDesign\Gui\Resources\translations\PartDesign_sv-SE.qm;$(FC_SOURCE)\Mod\PartDesign\Gui\Resources\translations\PartDesign_zh-TW.qm;$(FC_SOURCE)\Mod\PartDesign\Gui\Resources\translations\PartDesign_pt-BR.qm;$(FC_SOURCE)\Mod\PartDesign\Gui\Resources\translations\PartDesign_cs.qm;$(FC_SOURCE)\Mod\PartDesign\Gui\Resources\translations\PartDesign_sk.qm;$(FC_SOURCE)\Mod\PartDesign\Gui\Resources\translations\PartDesign_es-ES.qm;$(FC_SOURCE)\Mod\PartDesign\Gui\Resources\translations\PartDesign_zh-CN.qm;$(FC_SOURCE)\Mod\PartDesign\Gui\Resources\translations\PartDesign_ja.qm;$(FC_SOURCE)\Mod\PartDesign\Gui\Resources\translations\PartDesign_ro.qm;$(FC_SOURCE)\Mod\PartDesign\Gui\Resources\translations\PartDesign_hu.qm;$(FC_SOURCE)\Mod\PartDesign\Gui\Resources\translations\PartDesign_pt-PT.qm;$(FC_SOURCE)\Mod\PartDesign\Gui\Resources\translations\PartDesign_sr.qm;$(FC_SOURCE)\Mod\PartDesign\Gui\Resources\PartDesign.qrc.depends;$(FC_SOURCE)\Mod\PartDesign\Gui\Resources\PartDesign.qrc;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">$(FC_SOURCE)\Mod\PartDesign\Gui\qrc_PartDesign.cxx</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Generating qrc_PartDesign.cxx</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+$(FC_BIN)\rcc.exe -name PartDesign -o $(FC_SOURCE)/Mod/PartDesign/Gui/qrc_PartDesign.cxx $(FC_SOURCE)/Mod/PartDesign/Gui/Resources/PartDesign.qrc
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(FC_SOURCE)/Mod/PartDesign/Gui/Resources/PartDesign.qrc;$(FC_SOURCE)\Mod\PartDesign\Gui\Resources\icons\PartDesign_Chamfer.svg;$(FC_SOURCE)\Mod\PartDesign\Gui\Resources\icons\PartDesign_Fillet.svg;$(FC_SOURCE)\Mod\PartDesign\Gui\Resources\icons\PartDesign_Draft.svg;$(FC_SOURCE)\Mod\PartDesign\Gui\Resources\icons\PartDesign_Groove.svg;$(FC_SOURCE)\Mod\PartDesign\Gui\Resources\icons\PartDesign_Pad.svg;$(FC_SOURCE)\Mod\PartDesign\Gui\Resources\icons\PartDesign_Pocket.svg;$(FC_SOURCE)\Mod\PartDesign\Gui\Resources\icons\PartDesign_Revolution.svg;$(FC_SOURCE)\Mod\PartDesign\Gui\Resources\icons\PartDesign_Mirrored.svg;$(FC_SOURCE)\Mod\PartDesign\Gui\Resources\icons\PartDesign_LinearPattern.svg;$(FC_SOURCE)\Mod\PartDesign\Gui\Resources\icons\PartDesign_PolarPattern.svg;$(FC_SOURCE)\Mod\PartDesign\Gui\Resources\icons\PartDesign_Scaled.svg;$(FC_SOURCE)\Mod\PartDesign\Gui\Resources\icons\PartDesign_MultiTransform.svg;$(FC_SOURCE)\Mod\PartDesign\Gui\Resources\icons\PartDesign_Hole.svg;$(FC_SOURCE)\Mod\PartDesign\Gui\Resources\icons\Tree_PartDesign_Pad.svg;$(FC_SOURCE)\Mod\PartDesign\Gui\Resources\icons\Tree_PartDesign_Revolution.svg;$(FC_SOURCE)\Mod\PartDesign\Gui\Resources\icons\PartDesign_InternalExternalGear.svg;$(FC_SOURCE)\Mod\PartDesign\Gui\Resources\icons\PartDesign_InvoluteGear.svg;$(FC_SOURCE)\Mod\PartDesign\Gui\Resources\translations\PartDesign_af.qm;$(FC_SOURCE)\Mod\PartDesign\Gui\Resources\translations\PartDesign_de.qm;$(FC_SOURCE)\Mod\PartDesign\Gui\Resources\translations\PartDesign_fi.qm;$(FC_SOURCE)\Mod\PartDesign\Gui\Resources\translations\PartDesign_fr.qm;$(FC_SOURCE)\Mod\PartDesign\Gui\Resources\translations\PartDesign_hr.qm;$(FC_SOURCE)\Mod\PartDesign\Gui\Resources\translations\PartDesign_it.qm;$(FC_SOURCE)\Mod\PartDesign\Gui\Resources\translations\PartDesign_nl.qm;$(FC_SOURCE)\Mod\PartDesign\Gui\Resources\translations\PartDesign_no.qm;$(FC_SOURCE)\Mod\PartDesign\Gui\Resources\translations\PartDesign_pl.qm;$(FC_SOURCE)\Mod\PartDesign\Gui\Resources\translations\PartDesign_ru.qm;$(FC_SOURCE)\Mod\PartDesign\Gui\Resources\translations\PartDesign_uk.qm;$(FC_SOURCE)\Mod\PartDesign\Gui\Resources\translations\PartDesign_tr.qm;$(FC_SOURCE)\Mod\PartDesign\Gui\Resources\translations\PartDesign_sv-SE.qm;$(FC_SOURCE)\Mod\PartDesign\Gui\Resources\translations\PartDesign_zh-TW.qm;$(FC_SOURCE)\Mod\PartDesign\Gui\Resources\translations\PartDesign_pt-BR.qm;$(FC_SOURCE)\Mod\PartDesign\Gui\Resources\translations\PartDesign_cs.qm;$(FC_SOURCE)\Mod\PartDesign\Gui\Resources\translations\PartDesign_sk.qm;$(FC_SOURCE)\Mod\PartDesign\Gui\Resources\translations\PartDesign_es-ES.qm;$(FC_SOURCE)\Mod\PartDesign\Gui\Resources\translations\PartDesign_zh-CN.qm;$(FC_SOURCE)\Mod\PartDesign\Gui\Resources\translations\PartDesign_ja.qm;$(FC_SOURCE)\Mod\PartDesign\Gui\Resources\translations\PartDesign_ro.qm;$(FC_SOURCE)\Mod\PartDesign\Gui\Resources\translations\PartDesign_hu.qm;$(FC_SOURCE)\Mod\PartDesign\Gui\Resources\translations\PartDesign_pt-PT.qm;$(FC_SOURCE)\Mod\PartDesign\Gui\Resources\translations\PartDesign_sr.qm;$(FC_SOURCE)\Mod\PartDesign\Gui\Resources\PartDesign.qrc.depends;$(FC_SOURCE)\Mod\PartDesign\Gui\Resources\PartDesign.qrc;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(FC_SOURCE)\Mod\PartDesign\Gui\qrc_PartDesign.cxx</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="$(FC_SOURCE)\Mod\PartDesign\Gui\FeaturePickDialog.ui">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generating ui_FeaturePickDialog.h</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+$(FC_BIN)\uic.exe -o $(FC_SOURCE)/Mod/PartDesign/Gui/ui_FeaturePickDialog.h $(FC_SOURCE)/Mod/PartDesign/Gui/FeaturePickDialog.ui
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(FC_SOURCE)/Mod/PartDesign/Gui/FeaturePickDialog.ui;$(FC_SOURCE)\Mod\PartDesign\Gui\FeaturePickDialog.ui;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(FC_SOURCE)\Mod\PartDesign\Gui\ui_FeaturePickDialog.h</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Generating ui_FeaturePickDialog.h</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+$(FC_BIN)\uic.exe -o $(FC_SOURCE)/Mod/PartDesign/Gui/ui_FeaturePickDialog.h $(FC_SOURCE)/Mod/PartDesign/Gui/FeaturePickDialog.ui
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(FC_SOURCE)/Mod/PartDesign/Gui/FeaturePickDialog.ui;$(FC_SOURCE)\Mod\PartDesign\Gui\FeaturePickDialog.ui;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(FC_SOURCE)\Mod\PartDesign\Gui\ui_FeaturePickDialog.h</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Generating ui_FeaturePickDialog.h</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+$(FC_BIN)\uic.exe -o $(FC_SOURCE)/Mod/PartDesign/Gui/ui_FeaturePickDialog.h $(FC_SOURCE)/Mod/PartDesign/Gui/FeaturePickDialog.ui
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">$(FC_SOURCE)/Mod/PartDesign/Gui/FeaturePickDialog.ui;$(FC_SOURCE)\Mod\PartDesign\Gui\FeaturePickDialog.ui;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">$(FC_SOURCE)\Mod\PartDesign\Gui\ui_FeaturePickDialog.h</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Generating ui_FeaturePickDialog.h</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+$(FC_BIN)\uic.exe -o $(FC_SOURCE)/Mod/PartDesign/Gui/ui_FeaturePickDialog.h $(FC_SOURCE)/Mod/PartDesign/Gui/FeaturePickDialog.ui
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(FC_SOURCE)/Mod/PartDesign/Gui/FeaturePickDialog.ui;$(FC_SOURCE)\Mod\PartDesign\Gui\FeaturePickDialog.ui;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(FC_SOURCE)\Mod\PartDesign\Gui\ui_FeaturePickDialog.h</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="$(FC_SOURCE)\Mod\PartDesign\Gui\FeaturePickDialog.h">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generating moc_FeaturePickDialog.cpp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+$(FC_BIN)\moc.exe -DBOOST_TT_HAS_OPERATOR_HPP_INCLUDED $(FC_SOURCE)/Mod/PartDesign/Gui/FeaturePickDialog.h -o $(FC_SOURCE)/Mod/PartDesign/Gui/moc_FeaturePickDialog.cpp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(FC_SOURCE)/Mod/PartDesign/Gui/FeaturePickDialog.h;$(FC_SOURCE)\Mod\PartDesign\Gui\FeaturePickDialog.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(FC_SOURCE)\Mod\PartDesign\Gui\moc_FeaturePickDialog.cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Generating moc_FeaturePickDialog.cpp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+$(FC_BIN)\moc.exe -DBOOST_TT_HAS_OPERATOR_HPP_INCLUDED $(FC_SOURCE)/Mod/PartDesign/Gui/FeaturePickDialog.h -o $(FC_SOURCE)/Mod/PartDesign/Gui/moc_FeaturePickDialog.cpp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(FC_SOURCE)/Mod/PartDesign/Gui/FeaturePickDialog.h;$(FC_SOURCE)\Mod\PartDesign\Gui\FeaturePickDialog.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(FC_SOURCE)\Mod\PartDesign\Gui\moc_FeaturePickDialog.cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Generating moc_FeaturePickDialog.cpp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+$(FC_BIN)\moc.exe -DBOOST_TT_HAS_OPERATOR_HPP_INCLUDED $(FC_SOURCE)/Mod/PartDesign/Gui/FeaturePickDialog.h -o $(FC_SOURCE)/Mod/PartDesign/Gui/moc_FeaturePickDialog.cpp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">$(FC_SOURCE)/Mod/PartDesign/Gui/FeaturePickDialog.h;$(FC_SOURCE)\Mod\PartDesign\Gui\FeaturePickDialog.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">$(FC_SOURCE)\Mod\PartDesign\Gui\moc_FeaturePickDialog.cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Generating moc_FeaturePickDialog.cpp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+$(FC_BIN)\moc.exe -DBOOST_TT_HAS_OPERATOR_HPP_INCLUDED $(FC_SOURCE)/Mod/PartDesign/Gui/FeaturePickDialog.h -o $(FC_SOURCE)/Mod/PartDesign/Gui/moc_FeaturePickDialog.cpp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(FC_SOURCE)/Mod/PartDesign/Gui/FeaturePickDialog.h;$(FC_SOURCE)\Mod\PartDesign\Gui\FeaturePickDialog.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(FC_SOURCE)\Mod\PartDesign\Gui\moc_FeaturePickDialog.cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="$(FC_SOURCE)\Mod\PartDesign\Gui\TaskPadParameters.ui">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generating ui_TaskPadParameters.h</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+$(FC_BIN)\uic.exe -o $(FC_SOURCE)/Mod/PartDesign/Gui/ui_TaskPadParameters.h $(FC_SOURCE)/Mod/PartDesign/Gui/TaskPadParameters.ui
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(FC_SOURCE)/Mod/PartDesign/Gui/TaskPadParameters.ui;$(FC_SOURCE)\Mod\PartDesign\Gui\TaskPadParameters.ui;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(FC_SOURCE)\Mod\PartDesign\Gui\ui_TaskPadParameters.h</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Generating ui_TaskPadParameters.h</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+$(FC_BIN)\uic.exe -o $(FC_SOURCE)/Mod/PartDesign/Gui/ui_TaskPadParameters.h $(FC_SOURCE)/Mod/PartDesign/Gui/TaskPadParameters.ui
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(FC_SOURCE)/Mod/PartDesign/Gui/TaskPadParameters.ui;$(FC_SOURCE)\Mod\PartDesign\Gui\TaskPadParameters.ui;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(FC_SOURCE)\Mod\PartDesign\Gui\ui_TaskPadParameters.h</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Generating ui_TaskPadParameters.h</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+$(FC_BIN)\uic.exe -o $(FC_SOURCE)/Mod/PartDesign/Gui/ui_TaskPadParameters.h $(FC_SOURCE)/Mod/PartDesign/Gui/TaskPadParameters.ui
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">$(FC_SOURCE)/Mod/PartDesign/Gui/TaskPadParameters.ui;$(FC_SOURCE)\Mod\PartDesign\Gui\TaskPadParameters.ui;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">$(FC_SOURCE)\Mod\PartDesign\Gui\ui_TaskPadParameters.h</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Generating ui_TaskPadParameters.h</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+$(FC_BIN)\uic.exe -o $(FC_SOURCE)/Mod/PartDesign/Gui/ui_TaskPadParameters.h $(FC_SOURCE)/Mod/PartDesign/Gui/TaskPadParameters.ui
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(FC_SOURCE)/Mod/PartDesign/Gui/TaskPadParameters.ui;$(FC_SOURCE)\Mod\PartDesign\Gui\TaskPadParameters.ui;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(FC_SOURCE)\Mod\PartDesign\Gui\ui_TaskPadParameters.h</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="$(FC_SOURCE)\Mod\PartDesign\Gui\TaskPadParameters.h">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generating moc_TaskPadParameters.cpp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+$(FC_BIN)\moc.exe -DBOOST_TT_HAS_OPERATOR_HPP_INCLUDED $(FC_SOURCE)/Mod/PartDesign/Gui/TaskPadParameters.h -o $(FC_SOURCE)/Mod/PartDesign/Gui/moc_TaskPadParameters.cpp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(FC_SOURCE)/Mod/PartDesign/Gui/TaskPadParameters.h;$(FC_SOURCE)\Mod\PartDesign\Gui\TaskPadParameters.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(FC_SOURCE)\Mod\PartDesign\Gui\moc_TaskPadParameters.cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Generating moc_TaskPadParameters.cpp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+$(FC_BIN)\moc.exe -DBOOST_TT_HAS_OPERATOR_HPP_INCLUDED $(FC_SOURCE)/Mod/PartDesign/Gui/TaskPadParameters.h -o $(FC_SOURCE)/Mod/PartDesign/Gui/moc_TaskPadParameters.cpp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(FC_SOURCE)/Mod/PartDesign/Gui/TaskPadParameters.h;$(FC_SOURCE)\Mod\PartDesign\Gui\TaskPadParameters.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(FC_SOURCE)\Mod\PartDesign\Gui\moc_TaskPadParameters.cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Generating moc_TaskPadParameters.cpp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+$(FC_BIN)\moc.exe -DBOOST_TT_HAS_OPERATOR_HPP_INCLUDED $(FC_SOURCE)/Mod/PartDesign/Gui/TaskPadParameters.h -o $(FC_SOURCE)/Mod/PartDesign/Gui/moc_TaskPadParameters.cpp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">$(FC_SOURCE)/Mod/PartDesign/Gui/TaskPadParameters.h;$(FC_SOURCE)\Mod\PartDesign\Gui\TaskPadParameters.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">$(FC_SOURCE)\Mod\PartDesign\Gui\moc_TaskPadParameters.cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Generating moc_TaskPadParameters.cpp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+$(FC_BIN)\moc.exe -DBOOST_TT_HAS_OPERATOR_HPP_INCLUDED $(FC_SOURCE)/Mod/PartDesign/Gui/TaskPadParameters.h -o $(FC_SOURCE)/Mod/PartDesign/Gui/moc_TaskPadParameters.cpp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(FC_SOURCE)/Mod/PartDesign/Gui/TaskPadParameters.h;$(FC_SOURCE)\Mod\PartDesign\Gui\TaskPadParameters.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(FC_SOURCE)\Mod\PartDesign\Gui\moc_TaskPadParameters.cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="$(FC_SOURCE)\Mod\PartDesign\Gui\TaskPocketParameters.ui">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generating ui_TaskPocketParameters.h</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+$(FC_BIN)\uic.exe -o $(FC_SOURCE)/Mod/PartDesign/Gui/ui_TaskPocketParameters.h $(FC_SOURCE)/Mod/PartDesign/Gui/TaskPocketParameters.ui
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(FC_SOURCE)/Mod/PartDesign/Gui/TaskPocketParameters.ui;$(FC_SOURCE)\Mod\PartDesign\Gui\TaskPocketParameters.ui;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(FC_SOURCE)\Mod\PartDesign\Gui\ui_TaskPocketParameters.h</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Generating ui_TaskPocketParameters.h</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+$(FC_BIN)\uic.exe -o $(FC_SOURCE)/Mod/PartDesign/Gui/ui_TaskPocketParameters.h $(FC_SOURCE)/Mod/PartDesign/Gui/TaskPocketParameters.ui
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(FC_SOURCE)/Mod/PartDesign/Gui/TaskPocketParameters.ui;$(FC_SOURCE)\Mod\PartDesign\Gui\TaskPocketParameters.ui;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(FC_SOURCE)\Mod\PartDesign\Gui\ui_TaskPocketParameters.h</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Generating ui_TaskPocketParameters.h</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+$(FC_BIN)\uic.exe -o $(FC_SOURCE)/Mod/PartDesign/Gui/ui_TaskPocketParameters.h $(FC_SOURCE)/Mod/PartDesign/Gui/TaskPocketParameters.ui
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">$(FC_SOURCE)/Mod/PartDesign/Gui/TaskPocketParameters.ui;$(FC_SOURCE)\Mod\PartDesign\Gui\TaskPocketParameters.ui;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">$(FC_SOURCE)\Mod\PartDesign\Gui\ui_TaskPocketParameters.h</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Generating ui_TaskPocketParameters.h</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+$(FC_BIN)\uic.exe -o $(FC_SOURCE)/Mod/PartDesign/Gui/ui_TaskPocketParameters.h $(FC_SOURCE)/Mod/PartDesign/Gui/TaskPocketParameters.ui
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(FC_SOURCE)/Mod/PartDesign/Gui/TaskPocketParameters.ui;$(FC_SOURCE)\Mod\PartDesign\Gui\TaskPocketParameters.ui;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(FC_SOURCE)\Mod\PartDesign\Gui\ui_TaskPocketParameters.h</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="$(FC_SOURCE)\Mod\PartDesign\Gui\TaskPocketParameters.h">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generating moc_TaskPocketParameters.cpp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+$(FC_BIN)\moc.exe -DBOOST_TT_HAS_OPERATOR_HPP_INCLUDED $(FC_SOURCE)/Mod/PartDesign/Gui/TaskPocketParameters.h -o $(FC_SOURCE)/Mod/PartDesign/Gui/moc_TaskPocketParameters.cpp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(FC_SOURCE)/Mod/PartDesign/Gui/TaskPocketParameters.h;$(FC_SOURCE)\Mod\PartDesign\Gui\TaskPocketParameters.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(FC_SOURCE)\Mod\PartDesign\Gui\moc_TaskPocketParameters.cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Generating moc_TaskPocketParameters.cpp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+$(FC_BIN)\moc.exe -DBOOST_TT_HAS_OPERATOR_HPP_INCLUDED $(FC_SOURCE)/Mod/PartDesign/Gui/TaskPocketParameters.h -o $(FC_SOURCE)/Mod/PartDesign/Gui/moc_TaskPocketParameters.cpp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(FC_SOURCE)/Mod/PartDesign/Gui/TaskPocketParameters.h;$(FC_SOURCE)\Mod\PartDesign\Gui\TaskPocketParameters.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(FC_SOURCE)\Mod\PartDesign\Gui\moc_TaskPocketParameters.cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Generating moc_TaskPocketParameters.cpp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+$(FC_BIN)\moc.exe -DBOOST_TT_HAS_OPERATOR_HPP_INCLUDED $(FC_SOURCE)/Mod/PartDesign/Gui/TaskPocketParameters.h -o $(FC_SOURCE)/Mod/PartDesign/Gui/moc_TaskPocketParameters.cpp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">$(FC_SOURCE)/Mod/PartDesign/Gui/TaskPocketParameters.h;$(FC_SOURCE)\Mod\PartDesign\Gui\TaskPocketParameters.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">$(FC_SOURCE)\Mod\PartDesign\Gui\moc_TaskPocketParameters.cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Generating moc_TaskPocketParameters.cpp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+$(FC_BIN)\moc.exe -DBOOST_TT_HAS_OPERATOR_HPP_INCLUDED $(FC_SOURCE)/Mod/PartDesign/Gui/TaskPocketParameters.h -o $(FC_SOURCE)/Mod/PartDesign/Gui/moc_TaskPocketParameters.cpp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(FC_SOURCE)/Mod/PartDesign/Gui/TaskPocketParameters.h;$(FC_SOURCE)\Mod\PartDesign\Gui\TaskPocketParameters.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(FC_SOURCE)\Mod\PartDesign\Gui\moc_TaskPocketParameters.cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="$(FC_SOURCE)\Mod\PartDesign\Gui\TaskChamferParameters.ui">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generating ui_TaskChamferParameters.h</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+$(FC_BIN)\uic.exe -o $(FC_SOURCE)/Mod/PartDesign/Gui/ui_TaskChamferParameters.h $(FC_SOURCE)/Mod/PartDesign/Gui/TaskChamferParameters.ui
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(FC_SOURCE)/Mod/PartDesign/Gui/TaskChamferParameters.ui;$(FC_SOURCE)\Mod\PartDesign\Gui\TaskChamferParameters.ui;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(FC_SOURCE)\Mod\PartDesign\Gui\ui_TaskChamferParameters.h</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Generating ui_TaskChamferParameters.h</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+$(FC_BIN)\uic.exe -o $(FC_SOURCE)/Mod/PartDesign/Gui/ui_TaskChamferParameters.h $(FC_SOURCE)/Mod/PartDesign/Gui/TaskChamferParameters.ui
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(FC_SOURCE)/Mod/PartDesign/Gui/TaskChamferParameters.ui;$(FC_SOURCE)\Mod\PartDesign\Gui\TaskChamferParameters.ui;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(FC_SOURCE)\Mod\PartDesign\Gui\ui_TaskChamferParameters.h</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Generating ui_TaskChamferParameters.h</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+$(FC_BIN)\uic.exe -o $(FC_SOURCE)/Mod/PartDesign/Gui/ui_TaskChamferParameters.h $(FC_SOURCE)/Mod/PartDesign/Gui/TaskChamferParameters.ui
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">$(FC_SOURCE)/Mod/PartDesign/Gui/TaskChamferParameters.ui;$(FC_SOURCE)\Mod\PartDesign\Gui\TaskChamferParameters.ui;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">$(FC_SOURCE)\Mod\PartDesign\Gui\ui_TaskChamferParameters.h</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Generating ui_TaskChamferParameters.h</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+$(FC_BIN)\uic.exe -o $(FC_SOURCE)/Mod/PartDesign/Gui/ui_TaskChamferParameters.h $(FC_SOURCE)/Mod/PartDesign/Gui/TaskChamferParameters.ui
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(FC_SOURCE)/Mod/PartDesign/Gui/TaskChamferParameters.ui;$(FC_SOURCE)\Mod\PartDesign\Gui\TaskChamferParameters.ui;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(FC_SOURCE)\Mod\PartDesign\Gui\ui_TaskChamferParameters.h</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="$(FC_SOURCE)\Mod\PartDesign\Gui\TaskChamferParameters.h">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generating moc_TaskChamferParameters.cpp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+$(FC_BIN)\moc.exe -DBOOST_TT_HAS_OPERATOR_HPP_INCLUDED $(FC_SOURCE)/Mod/PartDesign/Gui/TaskChamferParameters.h -o $(FC_SOURCE)/Mod/PartDesign/Gui/moc_TaskChamferParameters.cpp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(FC_SOURCE)/Mod/PartDesign/Gui/TaskChamferParameters.h;$(FC_SOURCE)\Mod\PartDesign\Gui\TaskChamferParameters.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(FC_SOURCE)\Mod\PartDesign\Gui\moc_TaskChamferParameters.cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Generating moc_TaskChamferParameters.cpp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+$(FC_BIN)\moc.exe -DBOOST_TT_HAS_OPERATOR_HPP_INCLUDED $(FC_SOURCE)/Mod/PartDesign/Gui/TaskChamferParameters.h -o $(FC_SOURCE)/Mod/PartDesign/Gui/moc_TaskChamferParameters.cpp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(FC_SOURCE)/Mod/PartDesign/Gui/TaskChamferParameters.h;$(FC_SOURCE)\Mod\PartDesign\Gui\TaskChamferParameters.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(FC_SOURCE)\Mod\PartDesign\Gui\moc_TaskChamferParameters.cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Generating moc_TaskChamferParameters.cpp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+$(FC_BIN)\moc.exe -DBOOST_TT_HAS_OPERATOR_HPP_INCLUDED $(FC_SOURCE)/Mod/PartDesign/Gui/TaskChamferParameters.h -o $(FC_SOURCE)/Mod/PartDesign/Gui/moc_TaskChamferParameters.cpp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">$(FC_SOURCE)/Mod/PartDesign/Gui/TaskChamferParameters.h;$(FC_SOURCE)\Mod\PartDesign\Gui\TaskChamferParameters.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">$(FC_SOURCE)\Mod\PartDesign\Gui\moc_TaskChamferParameters.cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Generating moc_TaskChamferParameters.cpp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+$(FC_BIN)\moc.exe -DBOOST_TT_HAS_OPERATOR_HPP_INCLUDED $(FC_SOURCE)/Mod/PartDesign/Gui/TaskChamferParameters.h -o $(FC_SOURCE)/Mod/PartDesign/Gui/moc_TaskChamferParameters.cpp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(FC_SOURCE)/Mod/PartDesign/Gui/TaskChamferParameters.h;$(FC_SOURCE)\Mod\PartDesign\Gui\TaskChamferParameters.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(FC_SOURCE)\Mod\PartDesign\Gui\moc_TaskChamferParameters.cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="$(FC_SOURCE)\Mod\PartDesign\Gui\TaskFilletParameters.ui">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generating ui_TaskFilletParameters.h</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+$(FC_BIN)\uic.exe -o $(FC_SOURCE)/Mod/PartDesign/Gui/ui_TaskFilletParameters.h $(FC_SOURCE)/Mod/PartDesign/Gui/TaskFilletParameters.ui
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(FC_SOURCE)/Mod/PartDesign/Gui/TaskFilletParameters.ui;$(FC_SOURCE)\Mod\PartDesign\Gui\TaskFilletParameters.ui;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(FC_SOURCE)\Mod\PartDesign\Gui\ui_TaskFilletParameters.h</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Generating ui_TaskFilletParameters.h</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+$(FC_BIN)\uic.exe -o $(FC_SOURCE)/Mod/PartDesign/Gui/ui_TaskFilletParameters.h $(FC_SOURCE)/Mod/PartDesign/Gui/TaskFilletParameters.ui
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(FC_SOURCE)/Mod/PartDesign/Gui/TaskFilletParameters.ui;$(FC_SOURCE)\Mod\PartDesign\Gui\TaskFilletParameters.ui;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(FC_SOURCE)\Mod\PartDesign\Gui\ui_TaskFilletParameters.h</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Generating ui_TaskFilletParameters.h</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+$(FC_BIN)\uic.exe -o $(FC_SOURCE)/Mod/PartDesign/Gui/ui_TaskFilletParameters.h $(FC_SOURCE)/Mod/PartDesign/Gui/TaskFilletParameters.ui
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">$(FC_SOURCE)/Mod/PartDesign/Gui/TaskFilletParameters.ui;$(FC_SOURCE)\Mod\PartDesign\Gui\TaskFilletParameters.ui;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">$(FC_SOURCE)\Mod\PartDesign\Gui\ui_TaskFilletParameters.h</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Generating ui_TaskFilletParameters.h</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+$(FC_BIN)\uic.exe -o $(FC_SOURCE)/Mod/PartDesign/Gui/ui_TaskFilletParameters.h $(FC_SOURCE)/Mod/PartDesign/Gui/TaskFilletParameters.ui
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(FC_SOURCE)/Mod/PartDesign/Gui/TaskFilletParameters.ui;$(FC_SOURCE)\Mod\PartDesign\Gui\TaskFilletParameters.ui;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(FC_SOURCE)\Mod\PartDesign\Gui\ui_TaskFilletParameters.h</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="$(FC_SOURCE)\Mod\PartDesign\Gui\TaskFilletParameters.h">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generating moc_TaskFilletParameters.cpp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+$(FC_BIN)\moc.exe -DBOOST_TT_HAS_OPERATOR_HPP_INCLUDED $(FC_SOURCE)/Mod/PartDesign/Gui/TaskFilletParameters.h -o $(FC_SOURCE)/Mod/PartDesign/Gui/moc_TaskFilletParameters.cpp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(FC_SOURCE)/Mod/PartDesign/Gui/TaskFilletParameters.h;$(FC_SOURCE)\Mod\PartDesign\Gui\TaskFilletParameters.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(FC_SOURCE)\Mod\PartDesign\Gui\moc_TaskFilletParameters.cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Generating moc_TaskFilletParameters.cpp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+$(FC_BIN)\moc.exe -DBOOST_TT_HAS_OPERATOR_HPP_INCLUDED $(FC_SOURCE)/Mod/PartDesign/Gui/TaskFilletParameters.h -o $(FC_SOURCE)/Mod/PartDesign/Gui/moc_TaskFilletParameters.cpp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(FC_SOURCE)/Mod/PartDesign/Gui/TaskFilletParameters.h;$(FC_SOURCE)\Mod\PartDesign\Gui\TaskFilletParameters.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(FC_SOURCE)\Mod\PartDesign\Gui\moc_TaskFilletParameters.cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Generating moc_TaskFilletParameters.cpp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+$(FC_BIN)\moc.exe -DBOOST_TT_HAS_OPERATOR_HPP_INCLUDED $(FC_SOURCE)/Mod/PartDesign/Gui/TaskFilletParameters.h -o $(FC_SOURCE)/Mod/PartDesign/Gui/moc_TaskFilletParameters.cpp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">$(FC_SOURCE)/Mod/PartDesign/Gui/TaskFilletParameters.h;$(FC_SOURCE)\Mod\PartDesign\Gui\TaskFilletParameters.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">$(FC_SOURCE)\Mod\PartDesign\Gui\moc_TaskFilletParameters.cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Generating moc_TaskFilletParameters.cpp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+$(FC_BIN)\moc.exe -DBOOST_TT_HAS_OPERATOR_HPP_INCLUDED $(FC_SOURCE)/Mod/PartDesign/Gui/TaskFilletParameters.h -o $(FC_SOURCE)/Mod/PartDesign/Gui/moc_TaskFilletParameters.cpp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(FC_SOURCE)/Mod/PartDesign/Gui/TaskFilletParameters.h;$(FC_SOURCE)\Mod\PartDesign\Gui\TaskFilletParameters.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(FC_SOURCE)\Mod\PartDesign\Gui\moc_TaskFilletParameters.cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="$(FC_SOURCE)\Mod\PartDesign\Gui\TaskDraftParameters.ui">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generating ui_TaskDraftParameters.h</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+$(FC_BIN)\uic.exe -o $(FC_SOURCE)/Mod/PartDesign/Gui/ui_TaskDraftParameters.h $(FC_SOURCE)/Mod/PartDesign/Gui/TaskDraftParameters.ui
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(FC_SOURCE)/Mod/PartDesign/Gui/TaskDraftParameters.ui;$(FC_SOURCE)\Mod\PartDesign\Gui\TaskDraftParameters.ui;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(FC_SOURCE)\Mod\PartDesign\Gui\ui_TaskDraftParameters.h</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Generating ui_TaskDraftParameters.h</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+$(FC_BIN)\uic.exe -o $(FC_SOURCE)/Mod/PartDesign/Gui/ui_TaskDraftParameters.h $(FC_SOURCE)/Mod/PartDesign/Gui/TaskDraftParameters.ui
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(FC_SOURCE)/Mod/PartDesign/Gui/TaskDraftParameters.ui;$(FC_SOURCE)\Mod\PartDesign\Gui\TaskDraftParameters.ui;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(FC_SOURCE)\Mod\PartDesign\Gui\ui_TaskDraftParameters.h</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Generating ui_TaskDraftParameters.h</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+$(FC_BIN)\uic.exe -o $(FC_SOURCE)/Mod/PartDesign/Gui/ui_TaskDraftParameters.h $(FC_SOURCE)/Mod/PartDesign/Gui/TaskDraftParameters.ui
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">$(FC_SOURCE)/Mod/PartDesign/Gui/TaskDraftParameters.ui;$(FC_SOURCE)\Mod\PartDesign\Gui\TaskDraftParameters.ui;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">$(FC_SOURCE)\Mod\PartDesign\Gui\ui_TaskDraftParameters.h</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Generating ui_TaskDraftParameters.h</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+$(FC_BIN)\uic.exe -o $(FC_SOURCE)/Mod/PartDesign/Gui/ui_TaskDraftParameters.h $(FC_SOURCE)/Mod/PartDesign/Gui/TaskDraftParameters.ui
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(FC_SOURCE)/Mod/PartDesign/Gui/TaskDraftParameters.ui;$(FC_SOURCE)\Mod\PartDesign\Gui\TaskDraftParameters.ui;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(FC_SOURCE)\Mod\PartDesign\Gui\ui_TaskDraftParameters.h</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="$(FC_SOURCE)\Mod\PartDesign\Gui\TaskDraftParameters.h">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generating moc_TaskDraftParameters.cpp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+$(FC_BIN)\moc.exe -DBOOST_TT_HAS_OPERATOR_HPP_INCLUDED $(FC_SOURCE)/Mod/PartDesign/Gui/TaskDraftParameters.h -o $(FC_SOURCE)/Mod/PartDesign/Gui/moc_TaskDraftParameters.cpp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(FC_SOURCE)/Mod/PartDesign/Gui/TaskDraftParameters.h;$(FC_SOURCE)\Mod\PartDesign\Gui\TaskDraftParameters.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(FC_SOURCE)\Mod\PartDesign\Gui\moc_TaskDraftParameters.cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Generating moc_TaskDraftParameters.cpp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+$(FC_BIN)\moc.exe -DBOOST_TT_HAS_OPERATOR_HPP_INCLUDED $(FC_SOURCE)/Mod/PartDesign/Gui/TaskDraftParameters.h -o $(FC_SOURCE)/Mod/PartDesign/Gui/moc_TaskDraftParameters.cpp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(FC_SOURCE)/Mod/PartDesign/Gui/TaskDraftParameters.h;$(FC_SOURCE)\Mod\PartDesign\Gui\TaskDraftParameters.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(FC_SOURCE)\Mod\PartDesign\Gui\moc_TaskDraftParameters.cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Generating moc_TaskDraftParameters.cpp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+$(FC_BIN)\moc.exe -DBOOST_TT_HAS_OPERATOR_HPP_INCLUDED $(FC_SOURCE)/Mod/PartDesign/Gui/TaskDraftParameters.h -o $(FC_SOURCE)/Mod/PartDesign/Gui/moc_TaskDraftParameters.cpp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">$(FC_SOURCE)/Mod/PartDesign/Gui/TaskDraftParameters.h;$(FC_SOURCE)\Mod\PartDesign\Gui\TaskDraftParameters.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">$(FC_SOURCE)\Mod\PartDesign\Gui\moc_TaskDraftParameters.cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Generating moc_TaskDraftParameters.cpp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+$(FC_BIN)\moc.exe -DBOOST_TT_HAS_OPERATOR_HPP_INCLUDED $(FC_SOURCE)/Mod/PartDesign/Gui/TaskDraftParameters.h -o $(FC_SOURCE)/Mod/PartDesign/Gui/moc_TaskDraftParameters.cpp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(FC_SOURCE)/Mod/PartDesign/Gui/TaskDraftParameters.h;$(FC_SOURCE)\Mod\PartDesign\Gui\TaskDraftParameters.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(FC_SOURCE)\Mod\PartDesign\Gui\moc_TaskDraftParameters.cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="$(FC_SOURCE)\Mod\PartDesign\Gui\TaskRevolutionParameters.ui">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generating ui_TaskRevolutionParameters.h</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+$(FC_BIN)\uic.exe -o $(FC_SOURCE)/Mod/PartDesign/Gui/ui_TaskRevolutionParameters.h $(FC_SOURCE)/Mod/PartDesign/Gui/TaskRevolutionParameters.ui
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(FC_SOURCE)/Mod/PartDesign/Gui/TaskRevolutionParameters.ui;$(FC_SOURCE)\Mod\PartDesign\Gui\TaskRevolutionParameters.ui;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(FC_SOURCE)\Mod\PartDesign\Gui\ui_TaskRevolutionParameters.h</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Generating ui_TaskRevolutionParameters.h</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+$(FC_BIN)\uic.exe -o $(FC_SOURCE)/Mod/PartDesign/Gui/ui_TaskRevolutionParameters.h $(FC_SOURCE)/Mod/PartDesign/Gui/TaskRevolutionParameters.ui
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(FC_SOURCE)/Mod/PartDesign/Gui/TaskRevolutionParameters.ui;$(FC_SOURCE)\Mod\PartDesign\Gui\TaskRevolutionParameters.ui;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(FC_SOURCE)\Mod\PartDesign\Gui\ui_TaskRevolutionParameters.h</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Generating ui_TaskRevolutionParameters.h</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+$(FC_BIN)\uic.exe -o $(FC_SOURCE)/Mod/PartDesign/Gui/ui_TaskRevolutionParameters.h $(FC_SOURCE)/Mod/PartDesign/Gui/TaskRevolutionParameters.ui
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">$(FC_SOURCE)/Mod/PartDesign/Gui/TaskRevolutionParameters.ui;$(FC_SOURCE)\Mod\PartDesign\Gui\TaskRevolutionParameters.ui;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">$(FC_SOURCE)\Mod\PartDesign\Gui\ui_TaskRevolutionParameters.h</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Generating ui_TaskRevolutionParameters.h</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+$(FC_BIN)\uic.exe -o $(FC_SOURCE)/Mod/PartDesign/Gui/ui_TaskRevolutionParameters.h $(FC_SOURCE)/Mod/PartDesign/Gui/TaskRevolutionParameters.ui
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(FC_SOURCE)/Mod/PartDesign/Gui/TaskRevolutionParameters.ui;$(FC_SOURCE)\Mod\PartDesign\Gui\TaskRevolutionParameters.ui;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(FC_SOURCE)\Mod\PartDesign\Gui\ui_TaskRevolutionParameters.h</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="$(FC_SOURCE)\Mod\PartDesign\Gui\TaskRevolutionParameters.h">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generating moc_TaskRevolutionParameters.cpp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+$(FC_BIN)\moc.exe -DBOOST_TT_HAS_OPERATOR_HPP_INCLUDED $(FC_SOURCE)/Mod/PartDesign/Gui/TaskRevolutionParameters.h -o $(FC_SOURCE)/Mod/PartDesign/Gui/moc_TaskRevolutionParameters.cpp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(FC_SOURCE)/Mod/PartDesign/Gui/TaskRevolutionParameters.h;$(FC_SOURCE)\Mod\PartDesign\Gui\TaskRevolutionParameters.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(FC_SOURCE)\Mod\PartDesign\Gui\moc_TaskRevolutionParameters.cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Generating moc_TaskRevolutionParameters.cpp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+$(FC_BIN)\moc.exe -DBOOST_TT_HAS_OPERATOR_HPP_INCLUDED $(FC_SOURCE)/Mod/PartDesign/Gui/TaskRevolutionParameters.h -o $(FC_SOURCE)/Mod/PartDesign/Gui/moc_TaskRevolutionParameters.cpp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(FC_SOURCE)/Mod/PartDesign/Gui/TaskRevolutionParameters.h;$(FC_SOURCE)\Mod\PartDesign\Gui\TaskRevolutionParameters.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(FC_SOURCE)\Mod\PartDesign\Gui\moc_TaskRevolutionParameters.cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Generating moc_TaskRevolutionParameters.cpp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+$(FC_BIN)\moc.exe -DBOOST_TT_HAS_OPERATOR_HPP_INCLUDED $(FC_SOURCE)/Mod/PartDesign/Gui/TaskRevolutionParameters.h -o $(FC_SOURCE)/Mod/PartDesign/Gui/moc_TaskRevolutionParameters.cpp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">$(FC_SOURCE)/Mod/PartDesign/Gui/TaskRevolutionParameters.h;$(FC_SOURCE)\Mod\PartDesign\Gui\TaskRevolutionParameters.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">$(FC_SOURCE)\Mod\PartDesign\Gui\moc_TaskRevolutionParameters.cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Generating moc_TaskRevolutionParameters.cpp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+$(FC_BIN)\moc.exe -DBOOST_TT_HAS_OPERATOR_HPP_INCLUDED $(FC_SOURCE)/Mod/PartDesign/Gui/TaskRevolutionParameters.h -o $(FC_SOURCE)/Mod/PartDesign/Gui/moc_TaskRevolutionParameters.cpp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(FC_SOURCE)/Mod/PartDesign/Gui/TaskRevolutionParameters.h;$(FC_SOURCE)\Mod\PartDesign\Gui\TaskRevolutionParameters.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(FC_SOURCE)\Mod\PartDesign\Gui\moc_TaskRevolutionParameters.cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="$(FC_SOURCE)\Mod\PartDesign\Gui\TaskGrooveParameters.ui">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generating ui_TaskGrooveParameters.h</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+$(FC_BIN)\uic.exe -o $(FC_SOURCE)/Mod/PartDesign/Gui/ui_TaskGrooveParameters.h $(FC_SOURCE)/Mod/PartDesign/Gui/TaskGrooveParameters.ui
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(FC_SOURCE)/Mod/PartDesign/Gui/TaskGrooveParameters.ui;$(FC_SOURCE)\Mod\PartDesign\Gui\TaskGrooveParameters.ui;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(FC_SOURCE)\Mod\PartDesign\Gui\ui_TaskGrooveParameters.h</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Generating ui_TaskGrooveParameters.h</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+$(FC_BIN)\uic.exe -o $(FC_SOURCE)/Mod/PartDesign/Gui/ui_TaskGrooveParameters.h $(FC_SOURCE)/Mod/PartDesign/Gui/TaskGrooveParameters.ui
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(FC_SOURCE)/Mod/PartDesign/Gui/TaskGrooveParameters.ui;$(FC_SOURCE)\Mod\PartDesign\Gui\TaskGrooveParameters.ui;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(FC_SOURCE)\Mod\PartDesign\Gui\ui_TaskGrooveParameters.h</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Generating ui_TaskGrooveParameters.h</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+$(FC_BIN)\uic.exe -o $(FC_SOURCE)/Mod/PartDesign/Gui/ui_TaskGrooveParameters.h $(FC_SOURCE)/Mod/PartDesign/Gui/TaskGrooveParameters.ui
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">$(FC_SOURCE)/Mod/PartDesign/Gui/TaskGrooveParameters.ui;$(FC_SOURCE)\Mod\PartDesign\Gui\TaskGrooveParameters.ui;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">$(FC_SOURCE)\Mod\PartDesign\Gui\ui_TaskGrooveParameters.h</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Generating ui_TaskGrooveParameters.h</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+$(FC_BIN)\uic.exe -o $(FC_SOURCE)/Mod/PartDesign/Gui/ui_TaskGrooveParameters.h $(FC_SOURCE)/Mod/PartDesign/Gui/TaskGrooveParameters.ui
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(FC_SOURCE)/Mod/PartDesign/Gui/TaskGrooveParameters.ui;$(FC_SOURCE)\Mod\PartDesign\Gui\TaskGrooveParameters.ui;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(FC_SOURCE)\Mod\PartDesign\Gui\ui_TaskGrooveParameters.h</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="$(FC_SOURCE)\Mod\PartDesign\Gui\TaskGrooveParameters.h">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generating moc_TaskGrooveParameters.cpp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+$(FC_BIN)\moc.exe -DBOOST_TT_HAS_OPERATOR_HPP_INCLUDED $(FC_SOURCE)/Mod/PartDesign/Gui/TaskGrooveParameters.h -o $(FC_SOURCE)/Mod/PartDesign/Gui/moc_TaskGrooveParameters.cpp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(FC_SOURCE)/Mod/PartDesign/Gui/TaskGrooveParameters.h;$(FC_SOURCE)\Mod\PartDesign\Gui\TaskGrooveParameters.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(FC_SOURCE)\Mod\PartDesign\Gui\moc_TaskGrooveParameters.cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Generating moc_TaskGrooveParameters.cpp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+$(FC_BIN)\moc.exe -DBOOST_TT_HAS_OPERATOR_HPP_INCLUDED $(FC_SOURCE)/Mod/PartDesign/Gui/TaskGrooveParameters.h -o $(FC_SOURCE)/Mod/PartDesign/Gui/moc_TaskGrooveParameters.cpp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(FC_SOURCE)/Mod/PartDesign/Gui/TaskGrooveParameters.h;$(FC_SOURCE)\Mod\PartDesign\Gui\TaskGrooveParameters.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(FC_SOURCE)\Mod\PartDesign\Gui\moc_TaskGrooveParameters.cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Generating moc_TaskGrooveParameters.cpp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+$(FC_BIN)\moc.exe -DBOOST_TT_HAS_OPERATOR_HPP_INCLUDED $(FC_SOURCE)/Mod/PartDesign/Gui/TaskGrooveParameters.h -o $(FC_SOURCE)/Mod/PartDesign/Gui/moc_TaskGrooveParameters.cpp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">$(FC_SOURCE)/Mod/PartDesign/Gui/TaskGrooveParameters.h;$(FC_SOURCE)\Mod\PartDesign\Gui\TaskGrooveParameters.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">$(FC_SOURCE)\Mod\PartDesign\Gui\moc_TaskGrooveParameters.cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Generating moc_TaskGrooveParameters.cpp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+$(FC_BIN)\moc.exe -DBOOST_TT_HAS_OPERATOR_HPP_INCLUDED $(FC_SOURCE)/Mod/PartDesign/Gui/TaskGrooveParameters.h -o $(FC_SOURCE)/Mod/PartDesign/Gui/moc_TaskGrooveParameters.cpp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(FC_SOURCE)/Mod/PartDesign/Gui/TaskGrooveParameters.h;$(FC_SOURCE)\Mod\PartDesign\Gui\TaskGrooveParameters.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(FC_SOURCE)\Mod\PartDesign\Gui\moc_TaskGrooveParameters.cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="$(FC_SOURCE)\Mod\PartDesign\Gui\TaskTransformedMessages.ui">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generating ui_TaskTransformedMessages.h</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+$(FC_BIN)\uic.exe -o $(FC_SOURCE)/Mod/PartDesign/Gui/ui_TaskTransformedMessages.h $(FC_SOURCE)/Mod/PartDesign/Gui/TaskTransformedMessages.ui
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(FC_SOURCE)/Mod/PartDesign/Gui/TaskTransformedMessages.ui;$(FC_SOURCE)\Mod\PartDesign\Gui\TaskTransformedMessages.ui;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(FC_SOURCE)\Mod\PartDesign\Gui\ui_TaskTransformedMessages.h</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Generating ui_TaskTransformedMessages.h</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+$(FC_BIN)\uic.exe -o $(FC_SOURCE)/Mod/PartDesign/Gui/ui_TaskTransformedMessages.h $(FC_SOURCE)/Mod/PartDesign/Gui/TaskTransformedMessages.ui
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(FC_SOURCE)/Mod/PartDesign/Gui/TaskTransformedMessages.ui;$(FC_SOURCE)\Mod\PartDesign\Gui\TaskTransformedMessages.ui;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(FC_SOURCE)\Mod\PartDesign\Gui\ui_TaskTransformedMessages.h</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Generating ui_TaskTransformedMessages.h</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+$(FC_BIN)\uic.exe -o $(FC_SOURCE)/Mod/PartDesign/Gui/ui_TaskTransformedMessages.h $(FC_SOURCE)/Mod/PartDesign/Gui/TaskTransformedMessages.ui
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">$(FC_SOURCE)/Mod/PartDesign/Gui/TaskTransformedMessages.ui;$(FC_SOURCE)\Mod\PartDesign\Gui\TaskTransformedMessages.ui;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">$(FC_SOURCE)\Mod\PartDesign\Gui\ui_TaskTransformedMessages.h</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Generating ui_TaskTransformedMessages.h</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+$(FC_BIN)\uic.exe -o $(FC_SOURCE)/Mod/PartDesign/Gui/ui_TaskTransformedMessages.h $(FC_SOURCE)/Mod/PartDesign/Gui/TaskTransformedMessages.ui
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(FC_SOURCE)/Mod/PartDesign/Gui/TaskTransformedMessages.ui;$(FC_SOURCE)\Mod\PartDesign\Gui\TaskTransformedMessages.ui;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(FC_SOURCE)\Mod\PartDesign\Gui\ui_TaskTransformedMessages.h</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="$(FC_SOURCE)\Mod\PartDesign\Gui\TaskTransformedMessages.h">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generating moc_TaskTransformedMessages.cpp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+$(FC_BIN)\moc.exe -DBOOST_TT_HAS_OPERATOR_HPP_INCLUDED $(FC_SOURCE)/Mod/PartDesign/Gui/TaskTransformedMessages.h -o $(FC_SOURCE)/Mod/PartDesign/Gui/moc_TaskTransformedMessages.cpp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(FC_SOURCE)/Mod/PartDesign/Gui/TaskTransformedMessages.h;$(FC_SOURCE)\Mod\PartDesign\Gui\TaskTransformedMessages.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(FC_SOURCE)\Mod\PartDesign\Gui\moc_TaskTransformedMessages.cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Generating moc_TaskTransformedMessages.cpp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+$(FC_BIN)\moc.exe -DBOOST_TT_HAS_OPERATOR_HPP_INCLUDED $(FC_SOURCE)/Mod/PartDesign/Gui/TaskTransformedMessages.h -o $(FC_SOURCE)/Mod/PartDesign/Gui/moc_TaskTransformedMessages.cpp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(FC_SOURCE)/Mod/PartDesign/Gui/TaskTransformedMessages.h;$(FC_SOURCE)\Mod\PartDesign\Gui\TaskTransformedMessages.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(FC_SOURCE)\Mod\PartDesign\Gui\moc_TaskTransformedMessages.cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Generating moc_TaskTransformedMessages.cpp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+$(FC_BIN)\moc.exe -DBOOST_TT_HAS_OPERATOR_HPP_INCLUDED $(FC_SOURCE)/Mod/PartDesign/Gui/TaskTransformedMessages.h -o $(FC_SOURCE)/Mod/PartDesign/Gui/moc_TaskTransformedMessages.cpp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">$(FC_SOURCE)/Mod/PartDesign/Gui/TaskTransformedMessages.h;$(FC_SOURCE)\Mod\PartDesign\Gui\TaskTransformedMessages.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">$(FC_SOURCE)\Mod\PartDesign\Gui\moc_TaskTransformedMessages.cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Generating moc_TaskTransformedMessages.cpp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+$(FC_BIN)\moc.exe -DBOOST_TT_HAS_OPERATOR_HPP_INCLUDED $(FC_SOURCE)/Mod/PartDesign/Gui/TaskTransformedMessages.h -o $(FC_SOURCE)/Mod/PartDesign/Gui/moc_TaskTransformedMessages.cpp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(FC_SOURCE)/Mod/PartDesign/Gui/TaskTransformedMessages.h;$(FC_SOURCE)\Mod\PartDesign\Gui\TaskTransformedMessages.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(FC_SOURCE)\Mod\PartDesign\Gui\moc_TaskTransformedMessages.cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="$(FC_SOURCE)\Mod\PartDesign\Gui\TaskTransformedParameters.h">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generating moc_TaskTransformedParameters.cpp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+$(FC_BIN)\moc.exe -DBOOST_TT_HAS_OPERATOR_HPP_INCLUDED $(FC_SOURCE)/Mod/PartDesign/Gui/TaskTransformedParameters.h -o $(FC_SOURCE)/Mod/PartDesign/Gui/moc_TaskTransformedParameters.cpp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(FC_SOURCE)/Mod/PartDesign/Gui/TaskTransformedParameters.h;$(FC_SOURCE)\Mod\PartDesign\Gui\TaskTransformedParameters.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(FC_SOURCE)\Mod\PartDesign\Gui\moc_TaskTransformedParameters.cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Generating moc_TaskTransformedParameters.cpp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+$(FC_BIN)\moc.exe -DBOOST_TT_HAS_OPERATOR_HPP_INCLUDED $(FC_SOURCE)/Mod/PartDesign/Gui/TaskTransformedParameters.h -o $(FC_SOURCE)/Mod/PartDesign/Gui/moc_TaskTransformedParameters.cpp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(FC_SOURCE)/Mod/PartDesign/Gui/TaskTransformedParameters.h;$(FC_SOURCE)\Mod\PartDesign\Gui\TaskTransformedParameters.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(FC_SOURCE)\Mod\PartDesign\Gui\moc_TaskTransformedParameters.cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Generating moc_TaskTransformedParameters.cpp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+$(FC_BIN)\moc.exe -DBOOST_TT_HAS_OPERATOR_HPP_INCLUDED $(FC_SOURCE)/Mod/PartDesign/Gui/TaskTransformedParameters.h -o $(FC_SOURCE)/Mod/PartDesign/Gui/moc_TaskTransformedParameters.cpp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">$(FC_SOURCE)/Mod/PartDesign/Gui/TaskTransformedParameters.h;$(FC_SOURCE)\Mod\PartDesign\Gui\TaskTransformedParameters.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">$(FC_SOURCE)\Mod\PartDesign\Gui\moc_TaskTransformedParameters.cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Generating moc_TaskTransformedParameters.cpp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+$(FC_BIN)\moc.exe -DBOOST_TT_HAS_OPERATOR_HPP_INCLUDED $(FC_SOURCE)/Mod/PartDesign/Gui/TaskTransformedParameters.h -o $(FC_SOURCE)/Mod/PartDesign/Gui/moc_TaskTransformedParameters.cpp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(FC_SOURCE)/Mod/PartDesign/Gui/TaskTransformedParameters.h;$(FC_SOURCE)\Mod\PartDesign\Gui\TaskTransformedParameters.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(FC_SOURCE)\Mod\PartDesign\Gui\moc_TaskTransformedParameters.cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="$(FC_SOURCE)\Mod\PartDesign\Gui\TaskMirroredParameters.ui">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generating ui_TaskMirroredParameters.h</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+$(FC_BIN)\uic.exe -o $(FC_SOURCE)/Mod/PartDesign/Gui/ui_TaskMirroredParameters.h $(FC_SOURCE)/Mod/PartDesign/Gui/TaskMirroredParameters.ui
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(FC_SOURCE)/Mod/PartDesign/Gui/TaskMirroredParameters.ui;$(FC_SOURCE)\Mod\PartDesign\Gui\TaskMirroredParameters.ui;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(FC_SOURCE)\Mod\PartDesign\Gui\ui_TaskMirroredParameters.h</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Generating ui_TaskMirroredParameters.h</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+$(FC_BIN)\uic.exe -o $(FC_SOURCE)/Mod/PartDesign/Gui/ui_TaskMirroredParameters.h $(FC_SOURCE)/Mod/PartDesign/Gui/TaskMirroredParameters.ui
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(FC_SOURCE)/Mod/PartDesign/Gui/TaskMirroredParameters.ui;$(FC_SOURCE)\Mod\PartDesign\Gui\TaskMirroredParameters.ui;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(FC_SOURCE)\Mod\PartDesign\Gui\ui_TaskMirroredParameters.h</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Generating ui_TaskMirroredParameters.h</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+$(FC_BIN)\uic.exe -o $(FC_SOURCE)/Mod/PartDesign/Gui/ui_TaskMirroredParameters.h $(FC_SOURCE)/Mod/PartDesign/Gui/TaskMirroredParameters.ui
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">$(FC_SOURCE)/Mod/PartDesign/Gui/TaskMirroredParameters.ui;$(FC_SOURCE)\Mod\PartDesign\Gui\TaskMirroredParameters.ui;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">$(FC_SOURCE)\Mod\PartDesign\Gui\ui_TaskMirroredParameters.h</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Generating ui_TaskMirroredParameters.h</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+$(FC_BIN)\uic.exe -o $(FC_SOURCE)/Mod/PartDesign/Gui/ui_TaskMirroredParameters.h $(FC_SOURCE)/Mod/PartDesign/Gui/TaskMirroredParameters.ui
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(FC_SOURCE)/Mod/PartDesign/Gui/TaskMirroredParameters.ui;$(FC_SOURCE)\Mod\PartDesign\Gui\TaskMirroredParameters.ui;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(FC_SOURCE)\Mod\PartDesign\Gui\ui_TaskMirroredParameters.h</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="$(FC_SOURCE)\Mod\PartDesign\Gui\TaskMirroredParameters.h">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generating moc_TaskMirroredParameters.cpp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+$(FC_BIN)\moc.exe -DBOOST_TT_HAS_OPERATOR_HPP_INCLUDED $(FC_SOURCE)/Mod/PartDesign/Gui/TaskMirroredParameters.h -o $(FC_SOURCE)/Mod/PartDesign/Gui/moc_TaskMirroredParameters.cpp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(FC_SOURCE)/Mod/PartDesign/Gui/TaskMirroredParameters.h;$(FC_SOURCE)\Mod\PartDesign\Gui\TaskMirroredParameters.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(FC_SOURCE)\Mod\PartDesign\Gui\moc_TaskMirroredParameters.cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Generating moc_TaskMirroredParameters.cpp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+$(FC_BIN)\moc.exe -DBOOST_TT_HAS_OPERATOR_HPP_INCLUDED $(FC_SOURCE)/Mod/PartDesign/Gui/TaskMirroredParameters.h -o $(FC_SOURCE)/Mod/PartDesign/Gui/moc_TaskMirroredParameters.cpp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(FC_SOURCE)/Mod/PartDesign/Gui/TaskMirroredParameters.h;$(FC_SOURCE)\Mod\PartDesign\Gui\TaskMirroredParameters.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(FC_SOURCE)\Mod\PartDesign\Gui\moc_TaskMirroredParameters.cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Generating moc_TaskMirroredParameters.cpp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+$(FC_BIN)\moc.exe -DBOOST_TT_HAS_OPERATOR_HPP_INCLUDED $(FC_SOURCE)/Mod/PartDesign/Gui/TaskMirroredParameters.h -o $(FC_SOURCE)/Mod/PartDesign/Gui/moc_TaskMirroredParameters.cpp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">$(FC_SOURCE)/Mod/PartDesign/Gui/TaskMirroredParameters.h;$(FC_SOURCE)\Mod\PartDesign\Gui\TaskMirroredParameters.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">$(FC_SOURCE)\Mod\PartDesign\Gui\moc_TaskMirroredParameters.cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Generating moc_TaskMirroredParameters.cpp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+$(FC_BIN)\moc.exe -DBOOST_TT_HAS_OPERATOR_HPP_INCLUDED $(FC_SOURCE)/Mod/PartDesign/Gui/TaskMirroredParameters.h -o $(FC_SOURCE)/Mod/PartDesign/Gui/moc_TaskMirroredParameters.cpp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(FC_SOURCE)/Mod/PartDesign/Gui/TaskMirroredParameters.h;$(FC_SOURCE)\Mod\PartDesign\Gui\TaskMirroredParameters.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(FC_SOURCE)\Mod\PartDesign\Gui\moc_TaskMirroredParameters.cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="$(FC_SOURCE)\Mod\PartDesign\Gui\TaskLinearPatternParameters.ui">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generating ui_TaskLinearPatternParameters.h</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+$(FC_BIN)\uic.exe -o $(FC_SOURCE)/Mod/PartDesign/Gui/ui_TaskLinearPatternParameters.h $(FC_SOURCE)/Mod/PartDesign/Gui/TaskLinearPatternParameters.ui
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(FC_SOURCE)/Mod/PartDesign/Gui/TaskLinearPatternParameters.ui;$(FC_SOURCE)\Mod\PartDesign\Gui\TaskLinearPatternParameters.ui;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(FC_SOURCE)\Mod\PartDesign\Gui\ui_TaskLinearPatternParameters.h</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Generating ui_TaskLinearPatternParameters.h</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+$(FC_BIN)\uic.exe -o $(FC_SOURCE)/Mod/PartDesign/Gui/ui_TaskLinearPatternParameters.h $(FC_SOURCE)/Mod/PartDesign/Gui/TaskLinearPatternParameters.ui
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(FC_SOURCE)/Mod/PartDesign/Gui/TaskLinearPatternParameters.ui;$(FC_SOURCE)\Mod\PartDesign\Gui\TaskLinearPatternParameters.ui;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(FC_SOURCE)\Mod\PartDesign\Gui\ui_TaskLinearPatternParameters.h</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Generating ui_TaskLinearPatternParameters.h</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+$(FC_BIN)\uic.exe -o $(FC_SOURCE)/Mod/PartDesign/Gui/ui_TaskLinearPatternParameters.h $(FC_SOURCE)/Mod/PartDesign/Gui/TaskLinearPatternParameters.ui
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">$(FC_SOURCE)/Mod/PartDesign/Gui/TaskLinearPatternParameters.ui;$(FC_SOURCE)\Mod\PartDesign\Gui\TaskLinearPatternParameters.ui;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">$(FC_SOURCE)\Mod\PartDesign\Gui\ui_TaskLinearPatternParameters.h</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Generating ui_TaskLinearPatternParameters.h</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+$(FC_BIN)\uic.exe -o $(FC_SOURCE)/Mod/PartDesign/Gui/ui_TaskLinearPatternParameters.h $(FC_SOURCE)/Mod/PartDesign/Gui/TaskLinearPatternParameters.ui
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(FC_SOURCE)/Mod/PartDesign/Gui/TaskLinearPatternParameters.ui;$(FC_SOURCE)\Mod\PartDesign\Gui\TaskLinearPatternParameters.ui;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(FC_SOURCE)\Mod\PartDesign\Gui\ui_TaskLinearPatternParameters.h</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="$(FC_SOURCE)\Mod\PartDesign\Gui\TaskLinearPatternParameters.h">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generating moc_TaskLinearPatternParameters.cpp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+$(FC_BIN)\moc.exe -DBOOST_TT_HAS_OPERATOR_HPP_INCLUDED $(FC_SOURCE)/Mod/PartDesign/Gui/TaskLinearPatternParameters.h -o $(FC_SOURCE)/Mod/PartDesign/Gui/moc_TaskLinearPatternParameters.cpp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(FC_SOURCE)/Mod/PartDesign/Gui/TaskLinearPatternParameters.h;$(FC_SOURCE)\Mod\PartDesign\Gui\TaskLinearPatternParameters.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(FC_SOURCE)\Mod\PartDesign\Gui\moc_TaskLinearPatternParameters.cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Generating moc_TaskLinearPatternParameters.cpp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+$(FC_BIN)\moc.exe -DBOOST_TT_HAS_OPERATOR_HPP_INCLUDED $(FC_SOURCE)/Mod/PartDesign/Gui/TaskLinearPatternParameters.h -o $(FC_SOURCE)/Mod/PartDesign/Gui/moc_TaskLinearPatternParameters.cpp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(FC_SOURCE)/Mod/PartDesign/Gui/TaskLinearPatternParameters.h;$(FC_SOURCE)\Mod\PartDesign\Gui\TaskLinearPatternParameters.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(FC_SOURCE)\Mod\PartDesign\Gui\moc_TaskLinearPatternParameters.cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Generating moc_TaskLinearPatternParameters.cpp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+$(FC_BIN)\moc.exe -DBOOST_TT_HAS_OPERATOR_HPP_INCLUDED $(FC_SOURCE)/Mod/PartDesign/Gui/TaskLinearPatternParameters.h -o $(FC_SOURCE)/Mod/PartDesign/Gui/moc_TaskLinearPatternParameters.cpp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">$(FC_SOURCE)/Mod/PartDesign/Gui/TaskLinearPatternParameters.h;$(FC_SOURCE)\Mod\PartDesign\Gui\TaskLinearPatternParameters.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">$(FC_SOURCE)\Mod\PartDesign\Gui\moc_TaskLinearPatternParameters.cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Generating moc_TaskLinearPatternParameters.cpp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+$(FC_BIN)\moc.exe -DBOOST_TT_HAS_OPERATOR_HPP_INCLUDED $(FC_SOURCE)/Mod/PartDesign/Gui/TaskLinearPatternParameters.h -o $(FC_SOURCE)/Mod/PartDesign/Gui/moc_TaskLinearPatternParameters.cpp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(FC_SOURCE)/Mod/PartDesign/Gui/TaskLinearPatternParameters.h;$(FC_SOURCE)\Mod\PartDesign\Gui\TaskLinearPatternParameters.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(FC_SOURCE)\Mod\PartDesign\Gui\moc_TaskLinearPatternParameters.cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="$(FC_SOURCE)\Mod\PartDesign\Gui\TaskPolarPatternParameters.ui">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generating ui_TaskPolarPatternParameters.h</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+$(FC_BIN)\uic.exe -o $(FC_SOURCE)/Mod/PartDesign/Gui/ui_TaskPolarPatternParameters.h $(FC_SOURCE)/Mod/PartDesign/Gui/TaskPolarPatternParameters.ui
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(FC_SOURCE)/Mod/PartDesign/Gui/TaskPolarPatternParameters.ui;$(FC_SOURCE)\Mod\PartDesign\Gui\TaskPolarPatternParameters.ui;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(FC_SOURCE)\Mod\PartDesign\Gui\ui_TaskPolarPatternParameters.h</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Generating ui_TaskPolarPatternParameters.h</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+$(FC_BIN)\uic.exe -o $(FC_SOURCE)/Mod/PartDesign/Gui/ui_TaskPolarPatternParameters.h $(FC_SOURCE)/Mod/PartDesign/Gui/TaskPolarPatternParameters.ui
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(FC_SOURCE)/Mod/PartDesign/Gui/TaskPolarPatternParameters.ui;$(FC_SOURCE)\Mod\PartDesign\Gui\TaskPolarPatternParameters.ui;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(FC_SOURCE)\Mod\PartDesign\Gui\ui_TaskPolarPatternParameters.h</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Generating ui_TaskPolarPatternParameters.h</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+$(FC_BIN)\uic.exe -o $(FC_SOURCE)/Mod/PartDesign/Gui/ui_TaskPolarPatternParameters.h $(FC_SOURCE)/Mod/PartDesign/Gui/TaskPolarPatternParameters.ui
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">$(FC_SOURCE)/Mod/PartDesign/Gui/TaskPolarPatternParameters.ui;$(FC_SOURCE)\Mod\PartDesign\Gui\TaskPolarPatternParameters.ui;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">$(FC_SOURCE)\Mod\PartDesign\Gui\ui_TaskPolarPatternParameters.h</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Generating ui_TaskPolarPatternParameters.h</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+$(FC_BIN)\uic.exe -o $(FC_SOURCE)/Mod/PartDesign/Gui/ui_TaskPolarPatternParameters.h $(FC_SOURCE)/Mod/PartDesign/Gui/TaskPolarPatternParameters.ui
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(FC_SOURCE)/Mod/PartDesign/Gui/TaskPolarPatternParameters.ui;$(FC_SOURCE)\Mod\PartDesign\Gui\TaskPolarPatternParameters.ui;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(FC_SOURCE)\Mod\PartDesign\Gui\ui_TaskPolarPatternParameters.h</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="$(FC_SOURCE)\Mod\PartDesign\Gui\TaskPolarPatternParameters.h">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generating moc_TaskPolarPatternParameters.cpp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+$(FC_BIN)\moc.exe -DBOOST_TT_HAS_OPERATOR_HPP_INCLUDED $(FC_SOURCE)/Mod/PartDesign/Gui/TaskPolarPatternParameters.h -o $(FC_SOURCE)/Mod/PartDesign/Gui/moc_TaskPolarPatternParameters.cpp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(FC_SOURCE)/Mod/PartDesign/Gui/TaskPolarPatternParameters.h;$(FC_SOURCE)\Mod\PartDesign\Gui\TaskPolarPatternParameters.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(FC_SOURCE)\Mod\PartDesign\Gui\moc_TaskPolarPatternParameters.cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Generating moc_TaskPolarPatternParameters.cpp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+$(FC_BIN)\moc.exe -DBOOST_TT_HAS_OPERATOR_HPP_INCLUDED $(FC_SOURCE)/Mod/PartDesign/Gui/TaskPolarPatternParameters.h -o $(FC_SOURCE)/Mod/PartDesign/Gui/moc_TaskPolarPatternParameters.cpp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(FC_SOURCE)/Mod/PartDesign/Gui/TaskPolarPatternParameters.h;$(FC_SOURCE)\Mod\PartDesign\Gui\TaskPolarPatternParameters.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(FC_SOURCE)\Mod\PartDesign\Gui\moc_TaskPolarPatternParameters.cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Generating moc_TaskPolarPatternParameters.cpp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+$(FC_BIN)\moc.exe -DBOOST_TT_HAS_OPERATOR_HPP_INCLUDED $(FC_SOURCE)/Mod/PartDesign/Gui/TaskPolarPatternParameters.h -o $(FC_SOURCE)/Mod/PartDesign/Gui/moc_TaskPolarPatternParameters.cpp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">$(FC_SOURCE)/Mod/PartDesign/Gui/TaskPolarPatternParameters.h;$(FC_SOURCE)\Mod\PartDesign\Gui\TaskPolarPatternParameters.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">$(FC_SOURCE)\Mod\PartDesign\Gui\moc_TaskPolarPatternParameters.cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Generating moc_TaskPolarPatternParameters.cpp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+$(FC_BIN)\moc.exe -DBOOST_TT_HAS_OPERATOR_HPP_INCLUDED $(FC_SOURCE)/Mod/PartDesign/Gui/TaskPolarPatternParameters.h -o $(FC_SOURCE)/Mod/PartDesign/Gui/moc_TaskPolarPatternParameters.cpp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(FC_SOURCE)/Mod/PartDesign/Gui/TaskPolarPatternParameters.h;$(FC_SOURCE)\Mod\PartDesign\Gui\TaskPolarPatternParameters.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(FC_SOURCE)\Mod\PartDesign\Gui\moc_TaskPolarPatternParameters.cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="$(FC_SOURCE)\Mod\PartDesign\Gui\TaskScaledParameters.ui">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generating ui_TaskScaledParameters.h</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+$(FC_BIN)\uic.exe -o $(FC_SOURCE)/Mod/PartDesign/Gui/ui_TaskScaledParameters.h $(FC_SOURCE)/Mod/PartDesign/Gui/TaskScaledParameters.ui
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(FC_SOURCE)/Mod/PartDesign/Gui/TaskScaledParameters.ui;$(FC_SOURCE)\Mod\PartDesign\Gui\TaskScaledParameters.ui;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(FC_SOURCE)\Mod\PartDesign\Gui\ui_TaskScaledParameters.h</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Generating ui_TaskScaledParameters.h</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+$(FC_BIN)\uic.exe -o $(FC_SOURCE)/Mod/PartDesign/Gui/ui_TaskScaledParameters.h $(FC_SOURCE)/Mod/PartDesign/Gui/TaskScaledParameters.ui
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(FC_SOURCE)/Mod/PartDesign/Gui/TaskScaledParameters.ui;$(FC_SOURCE)\Mod\PartDesign\Gui\TaskScaledParameters.ui;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(FC_SOURCE)\Mod\PartDesign\Gui\ui_TaskScaledParameters.h</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Generating ui_TaskScaledParameters.h</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+$(FC_BIN)\uic.exe -o $(FC_SOURCE)/Mod/PartDesign/Gui/ui_TaskScaledParameters.h $(FC_SOURCE)/Mod/PartDesign/Gui/TaskScaledParameters.ui
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">$(FC_SOURCE)/Mod/PartDesign/Gui/TaskScaledParameters.ui;$(FC_SOURCE)\Mod\PartDesign\Gui\TaskScaledParameters.ui;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">$(FC_SOURCE)\Mod\PartDesign\Gui\ui_TaskScaledParameters.h</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Generating ui_TaskScaledParameters.h</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+$(FC_BIN)\uic.exe -o $(FC_SOURCE)/Mod/PartDesign/Gui/ui_TaskScaledParameters.h $(FC_SOURCE)/Mod/PartDesign/Gui/TaskScaledParameters.ui
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(FC_SOURCE)/Mod/PartDesign/Gui/TaskScaledParameters.ui;$(FC_SOURCE)\Mod\PartDesign\Gui\TaskScaledParameters.ui;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(FC_SOURCE)\Mod\PartDesign\Gui\ui_TaskScaledParameters.h</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="$(FC_SOURCE)\Mod\PartDesign\Gui\TaskScaledParameters.h">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generating moc_TaskScaledParameters.cpp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+$(FC_BIN)\moc.exe -DBOOST_TT_HAS_OPERATOR_HPP_INCLUDED $(FC_SOURCE)/Mod/PartDesign/Gui/TaskScaledParameters.h -o $(FC_SOURCE)/Mod/PartDesign/Gui/moc_TaskScaledParameters.cpp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(FC_SOURCE)/Mod/PartDesign/Gui/TaskScaledParameters.h;$(FC_SOURCE)\Mod\PartDesign\Gui\TaskScaledParameters.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(FC_SOURCE)\Mod\PartDesign\Gui\moc_TaskScaledParameters.cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Generating moc_TaskScaledParameters.cpp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+$(FC_BIN)\moc.exe -DBOOST_TT_HAS_OPERATOR_HPP_INCLUDED $(FC_SOURCE)/Mod/PartDesign/Gui/TaskScaledParameters.h -o $(FC_SOURCE)/Mod/PartDesign/Gui/moc_TaskScaledParameters.cpp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(FC_SOURCE)/Mod/PartDesign/Gui/TaskScaledParameters.h;$(FC_SOURCE)\Mod\PartDesign\Gui\TaskScaledParameters.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(FC_SOURCE)\Mod\PartDesign\Gui\moc_TaskScaledParameters.cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Generating moc_TaskScaledParameters.cpp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+$(FC_BIN)\moc.exe -DBOOST_TT_HAS_OPERATOR_HPP_INCLUDED $(FC_SOURCE)/Mod/PartDesign/Gui/TaskScaledParameters.h -o $(FC_SOURCE)/Mod/PartDesign/Gui/moc_TaskScaledParameters.cpp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">$(FC_SOURCE)/Mod/PartDesign/Gui/TaskScaledParameters.h;$(FC_SOURCE)\Mod\PartDesign\Gui\TaskScaledParameters.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">$(FC_SOURCE)\Mod\PartDesign\Gui\moc_TaskScaledParameters.cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Generating moc_TaskScaledParameters.cpp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+$(FC_BIN)\moc.exe -DBOOST_TT_HAS_OPERATOR_HPP_INCLUDED $(FC_SOURCE)/Mod/PartDesign/Gui/TaskScaledParameters.h -o $(FC_SOURCE)/Mod/PartDesign/Gui/moc_TaskScaledParameters.cpp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(FC_SOURCE)/Mod/PartDesign/Gui/TaskScaledParameters.h;$(FC_SOURCE)\Mod\PartDesign\Gui\TaskScaledParameters.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(FC_SOURCE)\Mod\PartDesign\Gui\moc_TaskScaledParameters.cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="$(FC_SOURCE)\Mod\PartDesign\Gui\TaskMultiTransformParameters.ui">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generating ui_TaskMultiTransformParameters.h</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+$(FC_BIN)\uic.exe -o $(FC_SOURCE)/Mod/PartDesign/Gui/ui_TaskMultiTransformParameters.h $(FC_SOURCE)/Mod/PartDesign/Gui/TaskMultiTransformParameters.ui
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(FC_SOURCE)/Mod/PartDesign/Gui/TaskMultiTransformParameters.ui;$(FC_SOURCE)\Mod\PartDesign\Gui\TaskMultiTransformParameters.ui;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(FC_SOURCE)\Mod\PartDesign\Gui\ui_TaskMultiTransformParameters.h</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Generating ui_TaskMultiTransformParameters.h</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+$(FC_BIN)\uic.exe -o $(FC_SOURCE)/Mod/PartDesign/Gui/ui_TaskMultiTransformParameters.h $(FC_SOURCE)/Mod/PartDesign/Gui/TaskMultiTransformParameters.ui
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(FC_SOURCE)/Mod/PartDesign/Gui/TaskMultiTransformParameters.ui;$(FC_SOURCE)\Mod\PartDesign\Gui\TaskMultiTransformParameters.ui;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(FC_SOURCE)\Mod\PartDesign\Gui\ui_TaskMultiTransformParameters.h</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Generating ui_TaskMultiTransformParameters.h</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+$(FC_BIN)\uic.exe -o $(FC_SOURCE)/Mod/PartDesign/Gui/ui_TaskMultiTransformParameters.h $(FC_SOURCE)/Mod/PartDesign/Gui/TaskMultiTransformParameters.ui
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">$(FC_SOURCE)/Mod/PartDesign/Gui/TaskMultiTransformParameters.ui;$(FC_SOURCE)\Mod\PartDesign\Gui\TaskMultiTransformParameters.ui;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">$(FC_SOURCE)\Mod\PartDesign\Gui\ui_TaskMultiTransformParameters.h</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Generating ui_TaskMultiTransformParameters.h</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+$(FC_BIN)\uic.exe -o $(FC_SOURCE)/Mod/PartDesign/Gui/ui_TaskMultiTransformParameters.h $(FC_SOURCE)/Mod/PartDesign/Gui/TaskMultiTransformParameters.ui
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(FC_SOURCE)/Mod/PartDesign/Gui/TaskMultiTransformParameters.ui;$(FC_SOURCE)\Mod\PartDesign\Gui\TaskMultiTransformParameters.ui;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(FC_SOURCE)\Mod\PartDesign\Gui\ui_TaskMultiTransformParameters.h</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="$(FC_SOURCE)\Mod\PartDesign\Gui\TaskMultiTransformParameters.h">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generating moc_TaskMultiTransformParameters.cpp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+$(FC_BIN)\moc.exe -DBOOST_TT_HAS_OPERATOR_HPP_INCLUDED $(FC_SOURCE)/Mod/PartDesign/Gui/TaskMultiTransformParameters.h -o $(FC_SOURCE)/Mod/PartDesign/Gui/moc_TaskMultiTransformParameters.cpp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(FC_SOURCE)/Mod/PartDesign/Gui/TaskMultiTransformParameters.h;$(FC_SOURCE)\Mod\PartDesign\Gui\TaskMultiTransformParameters.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(FC_SOURCE)\Mod\PartDesign\Gui\moc_TaskMultiTransformParameters.cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Generating moc_TaskMultiTransformParameters.cpp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+$(FC_BIN)\moc.exe -DBOOST_TT_HAS_OPERATOR_HPP_INCLUDED $(FC_SOURCE)/Mod/PartDesign/Gui/TaskMultiTransformParameters.h -o $(FC_SOURCE)/Mod/PartDesign/Gui/moc_TaskMultiTransformParameters.cpp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(FC_SOURCE)/Mod/PartDesign/Gui/TaskMultiTransformParameters.h;$(FC_SOURCE)\Mod\PartDesign\Gui\TaskMultiTransformParameters.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(FC_SOURCE)\Mod\PartDesign\Gui\moc_TaskMultiTransformParameters.cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Generating moc_TaskMultiTransformParameters.cpp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+$(FC_BIN)\moc.exe -DBOOST_TT_HAS_OPERATOR_HPP_INCLUDED $(FC_SOURCE)/Mod/PartDesign/Gui/TaskMultiTransformParameters.h -o $(FC_SOURCE)/Mod/PartDesign/Gui/moc_TaskMultiTransformParameters.cpp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">$(FC_SOURCE)/Mod/PartDesign/Gui/TaskMultiTransformParameters.h;$(FC_SOURCE)\Mod\PartDesign\Gui\TaskMultiTransformParameters.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">$(FC_SOURCE)\Mod\PartDesign\Gui\moc_TaskMultiTransformParameters.cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Generating moc_TaskMultiTransformParameters.cpp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+$(FC_BIN)\moc.exe -DBOOST_TT_HAS_OPERATOR_HPP_INCLUDED $(FC_SOURCE)/Mod/PartDesign/Gui/TaskMultiTransformParameters.h -o $(FC_SOURCE)/Mod/PartDesign/Gui/moc_TaskMultiTransformParameters.cpp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(FC_SOURCE)/Mod/PartDesign/Gui/TaskMultiTransformParameters.h;$(FC_SOURCE)\Mod\PartDesign\Gui\TaskMultiTransformParameters.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(FC_SOURCE)\Mod\PartDesign\Gui\moc_TaskMultiTransformParameters.cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="$(FC_SOURCE)\Mod\PartDesign\Gui\TaskHoleParameters.ui">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generating ui_TaskHoleParameters.h</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+$(FC_BIN)\uic.exe -o $(FC_SOURCE)/Mod/PartDesign/Gui/ui_TaskHoleParameters.h $(FC_SOURCE)/Mod/PartDesign/Gui/TaskHoleParameters.ui
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(FC_SOURCE)/Mod/PartDesign/Gui/TaskHoleParameters.ui;$(FC_SOURCE)\Mod\PartDesign\Gui\TaskHoleParameters.ui;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(FC_SOURCE)\Mod\PartDesign\Gui\ui_TaskHoleParameters.h</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Generating ui_TaskHoleParameters.h</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+$(FC_BIN)\uic.exe -o $(FC_SOURCE)/Mod/PartDesign/Gui/ui_TaskHoleParameters.h $(FC_SOURCE)/Mod/PartDesign/Gui/TaskHoleParameters.ui
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(FC_SOURCE)/Mod/PartDesign/Gui/TaskHoleParameters.ui;$(FC_SOURCE)\Mod\PartDesign\Gui\TaskHoleParameters.ui;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(FC_SOURCE)\Mod\PartDesign\Gui\ui_TaskHoleParameters.h</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Generating ui_TaskHoleParameters.h</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+$(FC_BIN)\uic.exe -o $(FC_SOURCE)/Mod/PartDesign/Gui/ui_TaskHoleParameters.h $(FC_SOURCE)/Mod/PartDesign/Gui/TaskHoleParameters.ui
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">$(FC_SOURCE)/Mod/PartDesign/Gui/TaskHoleParameters.ui;$(FC_SOURCE)\Mod\PartDesign\Gui\TaskHoleParameters.ui;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">$(FC_SOURCE)\Mod\PartDesign\Gui\ui_TaskHoleParameters.h</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Generating ui_TaskHoleParameters.h</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+$(FC_BIN)\uic.exe -o $(FC_SOURCE)/Mod/PartDesign/Gui/ui_TaskHoleParameters.h $(FC_SOURCE)/Mod/PartDesign/Gui/TaskHoleParameters.ui
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(FC_SOURCE)/Mod/PartDesign/Gui/TaskHoleParameters.ui;$(FC_SOURCE)\Mod\PartDesign\Gui\TaskHoleParameters.ui;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(FC_SOURCE)\Mod\PartDesign\Gui\ui_TaskHoleParameters.h</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="$(FC_SOURCE)\Mod\PartDesign\Gui\TaskHoleParameters.h">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generating moc_TaskHoleParameters.cpp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+$(FC_BIN)\moc.exe -DBOOST_TT_HAS_OPERATOR_HPP_INCLUDED $(FC_SOURCE)/Mod/PartDesign/Gui/TaskHoleParameters.h -o $(FC_SOURCE)/Mod/PartDesign/Gui/moc_TaskHoleParameters.cpp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(FC_SOURCE)/Mod/PartDesign/Gui/TaskHoleParameters.h;$(FC_SOURCE)\Mod\PartDesign\Gui\TaskHoleParameters.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(FC_SOURCE)\Mod\PartDesign\Gui\moc_TaskHoleParameters.cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Generating moc_TaskHoleParameters.cpp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+$(FC_BIN)\moc.exe -DBOOST_TT_HAS_OPERATOR_HPP_INCLUDED $(FC_SOURCE)/Mod/PartDesign/Gui/TaskHoleParameters.h -o $(FC_SOURCE)/Mod/PartDesign/Gui/moc_TaskHoleParameters.cpp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(FC_SOURCE)/Mod/PartDesign/Gui/TaskHoleParameters.h;$(FC_SOURCE)\Mod\PartDesign\Gui\TaskHoleParameters.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(FC_SOURCE)\Mod\PartDesign\Gui\moc_TaskHoleParameters.cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Generating moc_TaskHoleParameters.cpp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+$(FC_BIN)\moc.exe -DBOOST_TT_HAS_OPERATOR_HPP_INCLUDED $(FC_SOURCE)/Mod/PartDesign/Gui/TaskHoleParameters.h -o $(FC_SOURCE)/Mod/PartDesign/Gui/moc_TaskHoleParameters.cpp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">$(FC_SOURCE)/Mod/PartDesign/Gui/TaskHoleParameters.h;$(FC_SOURCE)\Mod\PartDesign\Gui\TaskHoleParameters.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">$(FC_SOURCE)\Mod\PartDesign\Gui\moc_TaskHoleParameters.cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Generating moc_TaskHoleParameters.cpp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+$(FC_BIN)\moc.exe -DBOOST_TT_HAS_OPERATOR_HPP_INCLUDED $(FC_SOURCE)/Mod/PartDesign/Gui/TaskHoleParameters.h -o $(FC_SOURCE)/Mod/PartDesign/Gui/moc_TaskHoleParameters.cpp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(FC_SOURCE)/Mod/PartDesign/Gui/TaskHoleParameters.h;$(FC_SOURCE)\Mod\PartDesign\Gui\TaskHoleParameters.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(FC_SOURCE)\Mod\PartDesign\Gui\moc_TaskHoleParameters.cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="$(FC_SOURCE)\Mod\PartDesign\Gui\ui_FeaturePickDialog.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\PartDesign\Gui\ui_TaskPadParameters.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\PartDesign\Gui\ui_TaskPocketParameters.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\PartDesign\Gui\ui_TaskChamferParameters.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\PartDesign\Gui\ui_TaskFilletParameters.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\PartDesign\Gui\ui_TaskDraftParameters.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\PartDesign\Gui\ui_TaskHoleParameters.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\PartDesign\Gui\ui_TaskRevolutionParameters.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\PartDesign\Gui\ui_TaskGrooveParameters.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\PartDesign\Gui\ui_TaskTransformedMessages.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\PartDesign\Gui\ui_TaskMirroredParameters.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\PartDesign\Gui\ui_TaskLinearPatternParameters.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\PartDesign\Gui\ui_TaskPolarPatternParameters.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\PartDesign\Gui\ui_TaskScaledParameters.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\PartDesign\Gui\ui_TaskMultiTransformParameters.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\PartDesign\Gui\PreCompiled.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\PartDesign\Gui\Workbench.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\PartDesign\Gui\ReferenceSelection.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\PartDesign\Gui\ViewProvider.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\PartDesign\Gui\ViewProviderPad.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\PartDesign\Gui\ViewProviderHole.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\PartDesign\Gui\ViewProviderPocket.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\PartDesign\Gui\ViewProviderChamfer.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\PartDesign\Gui\ViewProviderFillet.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\PartDesign\Gui\ViewProviderDraft.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\PartDesign\Gui\ViewProviderRevolution.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\PartDesign\Gui\ViewProviderGroove.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\PartDesign\Gui\ViewProviderTransformed.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\PartDesign\Gui\ViewProviderMirrored.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\PartDesign\Gui\ViewProviderLinearPattern.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\PartDesign\Gui\ViewProviderPolarPattern.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\PartDesign\Gui\ViewProviderScaled.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\PartDesign\Gui\ViewProviderMultiTransform.h" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\PartDesign\Gui\qrc_PartDesign.cxx" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\PartDesign\Gui\AppPartDesignGui.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\PartDesign\Gui\AppPartDesignGuiPy.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\PartDesign\Gui\Command.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\PartDesign\Gui\PreCompiled.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\PartDesign\Gui\Workbench.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\PartDesign\Gui\FeaturePickDialog.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\PartDesign\Gui\ReferenceSelection.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\PartDesign\Gui\TaskPadParameters.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\PartDesign\Gui\TaskPocketParameters.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\PartDesign\Gui\TaskChamferParameters.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\PartDesign\Gui\TaskFilletParameters.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\PartDesign\Gui\TaskDraftParameters.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\PartDesign\Gui\TaskRevolutionParameters.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\PartDesign\Gui\TaskGrooveParameters.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\PartDesign\Gui\TaskTransformedMessages.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\PartDesign\Gui\TaskTransformedParameters.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\PartDesign\Gui\TaskMirroredParameters.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\PartDesign\Gui\TaskLinearPatternParameters.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\PartDesign\Gui\TaskPolarPatternParameters.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\PartDesign\Gui\TaskScaledParameters.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\PartDesign\Gui\TaskMultiTransformParameters.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\PartDesign\Gui\TaskHoleParameters.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\PartDesign\Gui\ViewProvider.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\PartDesign\Gui\ViewProviderPad.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\PartDesign\Gui\ViewProviderHole.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\PartDesign\Gui\ViewProviderPocket.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\PartDesign\Gui\ViewProviderChamfer.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\PartDesign\Gui\ViewProviderFillet.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\PartDesign\Gui\ViewProviderDraft.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\PartDesign\Gui\ViewProviderRevolution.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\PartDesign\Gui\ViewProviderGroove.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\PartDesign\Gui\ViewProviderTransformed.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\PartDesign\Gui\ViewProviderMirrored.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\PartDesign\Gui\ViewProviderLinearPattern.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\PartDesign\Gui\ViewProviderPolarPattern.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\PartDesign\Gui\ViewProviderScaled.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\PartDesign\Gui\ViewProviderMultiTransform.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="$(FC_SOURCE)/App/FreeCADApp.vcxproj">
+      <Project>106CFB68-340E-3307-8B33-691BFD4C2F84</Project>
+    </ProjectReference>
+    <ProjectReference Include="$(FC_SOURCE)/Base/FreeCADBase.vcxproj">
+      <Project>C318BD7C-A3CA-3454-A3D8-7E815B7B6CC0</Project>
+    </ProjectReference>
+    <ProjectReference Include="$(FC_SOURCE)/Gui/FreeCADGui.vcxproj">
+      <Project>DFA51F4B-58A3-3BF2-B5F0-4D1AE14CB897</Project>
+    </ProjectReference>
+    <ProjectReference Include="$(FC_SOURCE)/Mod/Part/App/Part.vcxproj">
+      <Project>CD9CC58A-54E1-3516-AE9C-CEFF64AC463B</Project>
+    </ProjectReference>
+    <ProjectReference Include="$(FC_SOURCE)/Mod/Part/Gui/PartGui.vcxproj">
+      <Project>446F61D8-23AC-34D3-8ADB-A3100BC111E6</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="$(FC_SOURCE)\Mod\Sketcher\App\SketchObjectSF.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Sketcher\App\SketchObject.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Sketcher\App\planegcs\GCS.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Sketcher\App\planegcs\Geo.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Sketcher\App\planegcs\Constraints.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Sketcher\App\planegcs\SubSystem.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Sketcher\App\planegcs\qp_eq.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Sketcher\App\AppSketcher.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Sketcher\App\AppSketcherPy.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Sketcher\App\PreCompiled.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Sketcher\App\SketchObjectSFPyImp.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Sketcher\App\SketchObjectPyImp.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Sketcher\App\ConstraintPyImp.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Sketcher\App\SketchPyImp.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Sketcher\App\PropertyConstraintList.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Sketcher\App\Constraint.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Sketcher\App\Sketch.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="$(FC_SOURCE)\Mod\Sketcher\App\SketchObjectSF.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Sketcher\App\SketchObject.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Sketcher\App\planegcs\qp_eq.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Sketcher\App\planegcs\GCS.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Sketcher\App\planegcs\Util.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Sketcher\App\planegcs\Geo.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Sketcher\App\planegcs\Constraints.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Sketcher\App\planegcs\SubSystem.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Sketcher\App\PreCompiled.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Sketcher\App\PropertyConstraintList.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Sketcher\App\Constraint.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Sketcher\App\Sketch.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="$(FC_SOURCE)\Mod\Sketcher\App\SketchObjectSFPy.xml" />
+    <CustomBuild Include="$(FC_SOURCE)\Mod\Sketcher\App\SketchObjectPy.xml" />
+    <CustomBuild Include="$(FC_SOURCE)\Mod\Sketcher\App\ConstraintPy.xml" />
+    <CustomBuild Include="$(FC_SOURCE)\Mod\Sketcher\App\SketchPy.xml" />
+    <CustomBuild Include="\code\free-cad-code\Source\Repos\code\CMakeFiles\1441a96959fe2714d7ac997be2b95f2e\Init.py.rule" />
+    <CustomBuild Include="\code\free-cad-code\Source\Repos\code\CMakeFiles\1441a96959fe2714d7ac997be2b95f2e\SketcherExample.py.rule" />
+    <CustomBuild Include="\code\free-cad-code\Source\Repos\code\CMakeFiles\1441a96959fe2714d7ac997be2b95f2e\TestSketcherApp.py.rule" />
+    <CustomBuild Include="\code\free-cad-code\Source\Repos\code\CMakeFiles\1441a96959fe2714d7ac997be2b95f2e\Profiles.py.rule" />
+    <CustomBuild Include="\code\free-cad-code\Source\Repos\code\CMakeFiles\ecf5a9ab6f7e71825356ddcaa6ba6047\Hexagon.py.rule" />
+    <CustomBuild Include="\code\free-cad-code\Source\Repos\code\CMakeFiles\ecf5a9ab6f7e71825356ddcaa6ba6047\RegularPolygon.py.rule" />
+    <CustomBuild Include="\code\free-cad-code\Source\Repos\code\CMakeFiles\ecf5a9ab6f7e71825356ddcaa6ba6047\__init__.py.rule" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{5124C73C-630B-3F59-9DFC-D2C200992F06}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Properties">
+      <UniqueIdentifier>{5EB61082-D5F5-3734-98ED-D3746C5EEBFD}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Features">
+      <UniqueIdentifier>{87630B96-4026-3662-A292-99D1C179217B}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Datatypes">
+      <UniqueIdentifier>{EAAECD35-A46F-3BF4-B357-0400D7C540E2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Python">
+      <UniqueIdentifier>{3007B628-6C63-33B6-B2CF-5375A530392A}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="PlaneGCS">
+      <UniqueIdentifier>{2E1A8D7C-AE22-36FE-8799-003E0CFFF9B9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Module">
+      <UniqueIdentifier>{D07C31CD-D17F-31BA-9EAE-DE2074DD6B41}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

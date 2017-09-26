@@ -1,0 +1,1689 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="MinSizeRel|Win32">
+      <Configuration>MinSizeRel</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|Win32">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGUID>{058D6725-923F-3FD9-A7E6-BE056148A68A}</ProjectGUID>
+    <Keyword>Win32Proj</Keyword>
+    <Platform>Win32</Platform>
+    <ProjectName>SketcherGui</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">
+    <Import Project="..\..\..\..\FreeCAD_trunk.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="..\..\..\..\FreeCAD_trunk.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">
+    <Import Project="..\..\..\..\FreeCAD_trunk.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="..\..\..\..\FreeCAD_trunk.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">\code\free-cad-code\Source\Repos\code\Mod\Sketcher\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">SketcherGui.dir\Debug\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">SketcherGui_d</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.pyd</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">\code\free-cad-code\Source\Repos\code\Mod\Sketcher\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">SketcherGui.dir\Release\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">SketcherGui</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.pyd</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">\code\free-cad-code\Source\Repos\code\Mod\Sketcher\MinSizeRel\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">SketcherGui.dir\MinSizeRel\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">SketcherGui</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">.pyd</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">\code\free-cad-code\Source\Repos\code\Mod\Sketcher\RelWithDebInfo\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">SketcherGui.dir\RelWithDebInfo\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">SketcherGui</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">.pyd</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">true</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">true</GenerateManifest>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <AdditionalOptions> /Zm128 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalIncludeDirectories>$(FC_INCLUDE);$(FC_INCLUDE)\QtOpenGL;$(FC_INCLUDE)\QtSvg;$(FC_INCLUDE)\QtUiTools;$(FC_INCLUDE)\QtWebKit;$(FC_INCLUDE)\QtGui;$(FC_INCLUDE)\QtXml;$(FC_INCLUDE)\QtNetwork;$(FC_INCLUDE)\QtCore;$(FC_SOURCE);\code\free-cad-code\Source\Repos\code;$(FC_SOURCE)\Mod\Sketcher\Gui;$(FC_LIBRARY)\cmake\..\..\include\oce;$(FC_INCLUDE)\python2.7;$(FC_INCLUDE)\eigen3;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>Debug/</AssemblerListingLocation>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_DEBUG;FC_DEBUG;QT_OPENGL_LIB;QT_SVG_LIB;QT_UITOOLS_LIB;QT_WEBKIT_LIB;QT_GUI_LIB;QT_XML_LIB;QT_NETWORK_LIB;QT_CORE_LIB;HAVE_ACOSH;HAVE_ATANH;HAVE_ASINH;CMAKE_INTDIR="Debug";SketcherGui_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_DEBUG;FC_DEBUG;QT_OPENGL_LIB;QT_SVG_LIB;QT_UITOOLS_LIB;QT_WEBKIT_LIB;QT_GUI_LIB;QT_XML_LIB;QT_NETWORK_LIB;QT_CORE_LIB;HAVE_ACOSH;HAVE_ATANH;HAVE_ASINH;CMAKE_INTDIR=\"Debug\";SketcherGui_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(FC_INCLUDE);$(FC_INCLUDE)\QtOpenGL;$(FC_INCLUDE)\QtSvg;$(FC_INCLUDE)\QtUiTools;$(FC_INCLUDE)\QtWebKit;$(FC_INCLUDE)\QtGui;$(FC_INCLUDE)\QtXml;$(FC_INCLUDE)\QtNetwork;$(FC_INCLUDE)\QtCore;$(FC_SOURCE);\code\free-cad-code\Source\Repos\code;$(FC_SOURCE)\Mod\Sketcher\Gui;$(FC_LIBRARY)\cmake\..\..\include\oce;$(FC_INCLUDE)\python2.7;$(FC_INCLUDE)\eigen3;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>$(FC_INCLUDE);$(FC_INCLUDE)\QtOpenGL;$(FC_INCLUDE)\QtSvg;$(FC_INCLUDE)\QtUiTools;$(FC_INCLUDE)\QtWebKit;$(FC_INCLUDE)\QtGui;$(FC_INCLUDE)\QtXml;$(FC_INCLUDE)\QtNetwork;$(FC_INCLUDE)\QtCore;$(FC_SOURCE);\code\free-cad-code\Source\Repos\code;$(FC_SOURCE)\Mod\Sketcher\Gui;$(FC_LIBRARY)\cmake\..\..\include\oce;$(FC_INCLUDE)\python2.7;$(FC_INCLUDE)\eigen3;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <PostBuildEvent>
+      <Message>
+      </Message>
+      <Command>setlocal
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+    </PostBuildEvent>
+    <Link>
+      <AdditionalOptions> /machine:X86 /debug %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;SHFolder.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;winmm.lib;comsupp.lib;Ws2_32.lib;dbghelp.lib;..\App\Debug\Sketcher_d.lib;..\..\Part\Gui\Debug\PartGui_d.lib;..\..\..\Gui\Debug\FreeCADGui_d.lib;$(FC_LIBRARY)\coin4d.lib;QtUiToolsd.lib;$(FC_LIBRARY)\cmake\Shiboken-1.2.2\..\..\shiboken-python2.7_d.lib;$(FC_LIBRARY)\cmake\PySide-1.2.2\..\..\pyside-python2.7_d.lib;..\..\Part\App\Debug\Part_d.lib;..\..\..\App\Debug\FreeCADApp_d.lib;$(FC_LIBRARY)\QtOpenGLd4.lib;glu32.lib;opengl32.lib;$(FC_LIBRARY)\QtSvgd4.lib;$(FC_LIBRARY)\QtUiToolsd.lib;$(FC_LIBRARY)\QtWebKitd4.lib;$(FC_LIBRARY)\QtXmlPatternsd4.lib;$(FC_LIBRARY)\QtGuid4.lib;imm32.lib;winmm.lib;$(FC_LIBRARY)\QtXmld4.lib;$(FC_LIBRARY)\QtNetworkd4.lib;..\..\..\Base\Debug\FreeCADBase_d.lib;$(FC_LIBRARY)\python27_d.lib;$(FC_LIBRARY)\xerces-c_3D.lib;$(FC_LIBRARY)\zlibd.lib;MSVCRTD.lib;MSVCPRTD.lib;Rpcrt4.lib;version.lib;$(FC_LIBRARY)\boost_filesystem-vc120-mt-gd-1_55.lib;$(FC_LIBRARY)\boost_program_options-vc120-mt-gd-1_55.lib;$(FC_LIBRARY)\boost_regex-vc120-mt-gd-1_55.lib;$(FC_LIBRARY)\boost_signals-vc120-mt-gd-1_55.lib;$(FC_LIBRARY)\boost_system-vc120-mt-gd-1_55.lib;$(FC_LIBRARY)\boost_thread-vc120-mt-gd-1_55.lib;$(FC_LIBRARY)\QtCored4.lib;$(FC_LIBRARY)\TKIGESd.lib;$(FC_LIBRARY)\TKSTLd.lib;$(FC_LIBRARY)\TKMeshd.lib;$(FC_LIBRARY)\TKOffsetd.lib;$(FC_LIBRARY)\TKFilletd.lib;$(FC_LIBRARY)\TKSTEPd.lib;$(FC_LIBRARY)\TKSTEP209d.lib;$(FC_LIBRARY)\TKSTEPAttrd.lib;$(FC_LIBRARY)\TKSTEPBased.lib;$(FC_LIBRARY)\TKXSBased.lib;$(FC_LIBRARY)\TKHLRd.lib;$(FC_LIBRARY)\TKFeatd.lib;$(FC_LIBRARY)\TKBoold.lib;$(FC_LIBRARY)\TKShHealingd.lib;$(FC_LIBRARY)\TKBOd.lib;$(FC_LIBRARY)\TKPrimd.lib;$(FC_LIBRARY)\TKTopAlgod.lib;$(FC_LIBRARY)\TKGeomAlgod.lib;$(FC_LIBRARY)\TKBRepd.lib;$(FC_LIBRARY)\TKGeomBased.lib;$(FC_LIBRARY)\TKG3dd.lib;$(FC_LIBRARY)\TKG2dd.lib;$(FC_LIBRARY)\TKMathd.lib;$(FC_LIBRARY)\TKerneld.lib;ws2_32.lib;advapi32.lib;gdi32.lib;user32.lib;kernel32.lib;psapi.lib;$(FC_LIBRARY)\freetype.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(FC_LIBRARY)\;$(FC_LIBRARY)\/$(Configuration);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreAllDefaultLibraries>true</IgnoreAllDefaultLibraries>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>$(FC_SOURCE)/Mod/Sketcher/Gui/Debug/SketcherGui_d.lib</ImportLibrary>
+      <LargeAddressAware>true</LargeAddressAware>
+      <ProgramDataBaseFile>$(DEVROOT)/Mod/Sketcher/SketcherGui_d.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+      <Version>
+      </Version>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>$(FC_INCLUDE);$(FC_INCLUDE)\QtOpenGL;$(FC_INCLUDE)\QtSvg;$(FC_INCLUDE)\QtUiTools;$(FC_INCLUDE)\QtWebKit;$(FC_INCLUDE)\QtGui;$(FC_INCLUDE)\QtXml;$(FC_INCLUDE)\QtNetwork;$(FC_INCLUDE)\QtCore;$(FC_SOURCE);\code\free-cad-code\Source\Repos\code;$(FC_SOURCE)\Mod\Sketcher\Gui;$(FC_LIBRARY)\cmake\..\..\include\oce;$(FC_INCLUDE)\python2.7;$(FC_INCLUDE)\eigen3;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>Release/</AssemblerListingLocation>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <ExceptionHandling>Async</ExceptionHandling>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;QT_NO_DEBUG;QT_OPENGL_LIB;QT_SVG_LIB;QT_UITOOLS_LIB;QT_WEBKIT_LIB;QT_GUI_LIB;QT_XML_LIB;QT_NETWORK_LIB;QT_CORE_LIB;HAVE_ACOSH;HAVE_ATANH;HAVE_ASINH;CMAKE_INTDIR="Release";SketcherGui_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;QT_NO_DEBUG;QT_OPENGL_LIB;QT_SVG_LIB;QT_UITOOLS_LIB;QT_WEBKIT_LIB;QT_GUI_LIB;QT_XML_LIB;QT_NETWORK_LIB;QT_CORE_LIB;HAVE_ACOSH;HAVE_ATANH;HAVE_ASINH;CMAKE_INTDIR=\"Release\";SketcherGui_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(FC_INCLUDE);$(FC_INCLUDE)\QtOpenGL;$(FC_INCLUDE)\QtSvg;$(FC_INCLUDE)\QtUiTools;$(FC_INCLUDE)\QtWebKit;$(FC_INCLUDE)\QtGui;$(FC_INCLUDE)\QtXml;$(FC_INCLUDE)\QtNetwork;$(FC_INCLUDE)\QtCore;$(FC_SOURCE);\code\free-cad-code\Source\Repos\code;$(FC_SOURCE)\Mod\Sketcher\Gui;$(FC_LIBRARY)\cmake\..\..\include\oce;$(FC_INCLUDE)\python2.7;$(FC_INCLUDE)\eigen3;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>$(FC_INCLUDE);$(FC_INCLUDE)\QtOpenGL;$(FC_INCLUDE)\QtSvg;$(FC_INCLUDE)\QtUiTools;$(FC_INCLUDE)\QtWebKit;$(FC_INCLUDE)\QtGui;$(FC_INCLUDE)\QtXml;$(FC_INCLUDE)\QtNetwork;$(FC_INCLUDE)\QtCore;$(FC_SOURCE);\code\free-cad-code\Source\Repos\code;$(FC_SOURCE)\Mod\Sketcher\Gui;$(FC_LIBRARY)\cmake\..\..\include\oce;$(FC_INCLUDE)\python2.7;$(FC_INCLUDE)\eigen3;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <PostBuildEvent>
+      <Message>
+      </Message>
+      <Command>setlocal
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+    </PostBuildEvent>
+    <Link>
+      <AdditionalOptions> /machine:X86 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;SHFolder.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;winmm.lib;comsupp.lib;Ws2_32.lib;dbghelp.lib;..\App\Release\Sketcher.lib;..\..\Part\Gui\Release\PartGui.lib;..\..\..\Gui\Release\FreeCADGui.lib;$(FC_LIBRARY)\coin4.lib;QtUiTools.lib;$(FC_LIBRARY)\cmake\Shiboken-1.2.2\..\..\shiboken-python2.7.lib;$(FC_LIBRARY)\cmake\PySide-1.2.2\..\..\pyside-python2.7.lib;..\..\Part\App\Release\Part.lib;..\..\..\App\Release\FreeCADApp.lib;$(FC_LIBRARY)\QtOpenGL4.lib;glu32.lib;opengl32.lib;$(FC_LIBRARY)\QtSvg4.lib;$(FC_LIBRARY)\QtUiTools.lib;$(FC_LIBRARY)\QtWebKit4.lib;$(FC_LIBRARY)\QtXmlPatterns4.lib;$(FC_LIBRARY)\QtGui4.lib;imm32.lib;winmm.lib;$(FC_LIBRARY)\QtXml4.lib;$(FC_LIBRARY)\QtNetwork4.lib;..\..\..\Base\Release\FreeCADBase.lib;$(FC_LIBRARY)\python27.lib;$(FC_LIBRARY)\xerces-c_3.lib;$(FC_LIBRARY)\zlib.lib;MSVCRT.lib;MSVCPRT.lib;Rpcrt4.lib;version.lib;$(FC_LIBRARY)\boost_filesystem-vc120-mt-1_55.lib;$(FC_LIBRARY)\boost_program_options-vc120-mt-1_55.lib;$(FC_LIBRARY)\boost_regex-vc120-mt-1_55.lib;$(FC_LIBRARY)\boost_signals-vc120-mt-1_55.lib;$(FC_LIBRARY)\boost_system-vc120-mt-1_55.lib;$(FC_LIBRARY)\boost_thread-vc120-mt-1_55.lib;$(FC_LIBRARY)\QtCore4.lib;$(FC_LIBRARY)\TKIGES.lib;$(FC_LIBRARY)\TKSTL.lib;$(FC_LIBRARY)\TKMesh.lib;$(FC_LIBRARY)\TKOffset.lib;$(FC_LIBRARY)\TKFillet.lib;$(FC_LIBRARY)\TKSTEP.lib;$(FC_LIBRARY)\TKSTEP209.lib;$(FC_LIBRARY)\TKSTEPAttr.lib;$(FC_LIBRARY)\TKSTEPBase.lib;$(FC_LIBRARY)\TKXSBase.lib;$(FC_LIBRARY)\TKHLR.lib;$(FC_LIBRARY)\TKFeat.lib;$(FC_LIBRARY)\TKBool.lib;$(FC_LIBRARY)\TKShHealing.lib;$(FC_LIBRARY)\TKBO.lib;$(FC_LIBRARY)\TKPrim.lib;$(FC_LIBRARY)\TKTopAlgo.lib;$(FC_LIBRARY)\TKGeomAlgo.lib;$(FC_LIBRARY)\TKBRep.lib;$(FC_LIBRARY)\TKGeomBase.lib;$(FC_LIBRARY)\TKG3d.lib;$(FC_LIBRARY)\TKG2d.lib;$(FC_LIBRARY)\TKMath.lib;$(FC_LIBRARY)\TKernel.lib;ws2_32.lib;advapi32.lib;gdi32.lib;user32.lib;kernel32.lib;psapi.lib;$(FC_LIBRARY)\freetype.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(FC_LIBRARY)\;$(FC_LIBRARY)\/$(Configuration);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreAllDefaultLibraries>true</IgnoreAllDefaultLibraries>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>$(FC_SOURCE)/Mod/Sketcher/Gui/Release/SketcherGui.lib</ImportLibrary>
+      <LargeAddressAware>true</LargeAddressAware>
+      <ProgramDataBaseFile>$(DEVROOT)/Mod/Sketcher/SketcherGui.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+      <Version>
+      </Version>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>$(FC_INCLUDE);$(FC_INCLUDE)\QtOpenGL;$(FC_INCLUDE)\QtSvg;$(FC_INCLUDE)\QtUiTools;$(FC_INCLUDE)\QtWebKit;$(FC_INCLUDE)\QtGui;$(FC_INCLUDE)\QtXml;$(FC_INCLUDE)\QtNetwork;$(FC_INCLUDE)\QtCore;$(FC_SOURCE);\code\free-cad-code\Source\Repos\code;$(FC_SOURCE)\Mod\Sketcher\Gui;$(FC_LIBRARY)\cmake\..\..\include\oce;$(FC_INCLUDE)\python2.7;$(FC_INCLUDE)\eigen3;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>MinSizeRel/</AssemblerListingLocation>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <Optimization>MinSpace</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;QT_NO_DEBUG;QT_OPENGL_LIB;QT_SVG_LIB;QT_UITOOLS_LIB;QT_WEBKIT_LIB;QT_GUI_LIB;QT_XML_LIB;QT_NETWORK_LIB;QT_CORE_LIB;HAVE_ACOSH;HAVE_ATANH;HAVE_ASINH;CMAKE_INTDIR="MinSizeRel";SketcherGui_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;QT_NO_DEBUG;QT_OPENGL_LIB;QT_SVG_LIB;QT_UITOOLS_LIB;QT_WEBKIT_LIB;QT_GUI_LIB;QT_XML_LIB;QT_NETWORK_LIB;QT_CORE_LIB;HAVE_ACOSH;HAVE_ATANH;HAVE_ASINH;CMAKE_INTDIR=\"MinSizeRel\";SketcherGui_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(FC_INCLUDE);$(FC_INCLUDE)\QtOpenGL;$(FC_INCLUDE)\QtSvg;$(FC_INCLUDE)\QtUiTools;$(FC_INCLUDE)\QtWebKit;$(FC_INCLUDE)\QtGui;$(FC_INCLUDE)\QtXml;$(FC_INCLUDE)\QtNetwork;$(FC_INCLUDE)\QtCore;$(FC_SOURCE);\code\free-cad-code\Source\Repos\code;$(FC_SOURCE)\Mod\Sketcher\Gui;$(FC_LIBRARY)\cmake\..\..\include\oce;$(FC_INCLUDE)\python2.7;$(FC_INCLUDE)\eigen3;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>$(FC_INCLUDE);$(FC_INCLUDE)\QtOpenGL;$(FC_INCLUDE)\QtSvg;$(FC_INCLUDE)\QtUiTools;$(FC_INCLUDE)\QtWebKit;$(FC_INCLUDE)\QtGui;$(FC_INCLUDE)\QtXml;$(FC_INCLUDE)\QtNetwork;$(FC_INCLUDE)\QtCore;$(FC_SOURCE);\code\free-cad-code\Source\Repos\code;$(FC_SOURCE)\Mod\Sketcher\Gui;$(FC_LIBRARY)\cmake\..\..\include\oce;$(FC_INCLUDE)\python2.7;$(FC_INCLUDE)\eigen3;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <PostBuildEvent>
+      <Message>
+      </Message>
+      <Command>setlocal
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+    </PostBuildEvent>
+    <Link>
+      <AdditionalOptions> /machine:X86 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;SHFolder.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;winmm.lib;comsupp.lib;Ws2_32.lib;dbghelp.lib;..\App\MinSizeRel\Sketcher.lib;..\..\Part\Gui\MinSizeRel\PartGui.lib;..\..\..\Gui\MinSizeRel\FreeCADGui.lib;$(FC_LIBRARY)\coin4.lib;QtUiTools.lib;$(FC_LIBRARY)\cmake\Shiboken-1.2.2\..\..\shiboken-python2.7.lib;$(FC_LIBRARY)\cmake\PySide-1.2.2\..\..\pyside-python2.7.lib;..\..\Part\App\MinSizeRel\Part.lib;..\..\..\App\MinSizeRel\FreeCADApp.lib;$(FC_LIBRARY)\QtOpenGL4.lib;glu32.lib;opengl32.lib;$(FC_LIBRARY)\QtSvg4.lib;$(FC_LIBRARY)\QtUiTools.lib;$(FC_LIBRARY)\QtWebKit4.lib;$(FC_LIBRARY)\QtXmlPatterns4.lib;$(FC_LIBRARY)\QtGui4.lib;imm32.lib;winmm.lib;$(FC_LIBRARY)\QtXml4.lib;$(FC_LIBRARY)\QtNetwork4.lib;..\..\..\Base\MinSizeRel\FreeCADBase.lib;$(FC_LIBRARY)\python27.lib;$(FC_LIBRARY)\xerces-c_3.lib;$(FC_LIBRARY)\zlib.lib;MSVCRT.lib;MSVCPRT.lib;Rpcrt4.lib;version.lib;$(FC_LIBRARY)\boost_filesystem-vc120-mt-1_55.lib;$(FC_LIBRARY)\boost_program_options-vc120-mt-1_55.lib;$(FC_LIBRARY)\boost_regex-vc120-mt-1_55.lib;$(FC_LIBRARY)\boost_signals-vc120-mt-1_55.lib;$(FC_LIBRARY)\boost_system-vc120-mt-1_55.lib;$(FC_LIBRARY)\boost_thread-vc120-mt-1_55.lib;$(FC_LIBRARY)\QtCore4.lib;$(FC_LIBRARY)\TKIGESd.lib;$(FC_LIBRARY)\TKSTLd.lib;$(FC_LIBRARY)\TKMeshd.lib;$(FC_LIBRARY)\TKOffsetd.lib;$(FC_LIBRARY)\TKFilletd.lib;$(FC_LIBRARY)\TKSTEPd.lib;$(FC_LIBRARY)\TKSTEP209d.lib;$(FC_LIBRARY)\TKSTEPAttrd.lib;$(FC_LIBRARY)\TKSTEPBased.lib;$(FC_LIBRARY)\TKXSBased.lib;$(FC_LIBRARY)\TKHLRd.lib;$(FC_LIBRARY)\TKFeatd.lib;$(FC_LIBRARY)\TKBoold.lib;$(FC_LIBRARY)\TKShHealingd.lib;$(FC_LIBRARY)\TKBOd.lib;$(FC_LIBRARY)\TKPrimd.lib;$(FC_LIBRARY)\TKTopAlgod.lib;$(FC_LIBRARY)\TKGeomAlgod.lib;$(FC_LIBRARY)\TKBRepd.lib;$(FC_LIBRARY)\TKGeomBased.lib;$(FC_LIBRARY)\TKG3dd.lib;$(FC_LIBRARY)\TKG2dd.lib;$(FC_LIBRARY)\TKMathd.lib;$(FC_LIBRARY)\TKerneld.lib;ws2_32.lib;advapi32.lib;gdi32.lib;user32.lib;kernel32.lib;psapi.lib;$(FC_LIBRARY)\freetype.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(FC_LIBRARY)\;$(FC_LIBRARY)\/$(Configuration);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreAllDefaultLibraries>true</IgnoreAllDefaultLibraries>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>$(FC_SOURCE)/Mod/Sketcher/Gui/MinSizeRel/SketcherGui.lib</ImportLibrary>
+      <LargeAddressAware>true</LargeAddressAware>
+      <ProgramDataBaseFile>$(DEVROOT)/Mod/Sketcher/MinSizeRel/SketcherGui.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+      <Version>
+      </Version>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>$(FC_INCLUDE);$(FC_INCLUDE)\QtOpenGL;$(FC_INCLUDE)\QtSvg;$(FC_INCLUDE)\QtUiTools;$(FC_INCLUDE)\QtWebKit;$(FC_INCLUDE)\QtGui;$(FC_INCLUDE)\QtXml;$(FC_INCLUDE)\QtNetwork;$(FC_INCLUDE)\QtCore;$(FC_SOURCE);\code\free-cad-code\Source\Repos\code;$(FC_SOURCE)\Mod\Sketcher\Gui;$(FC_LIBRARY)\cmake\..\..\include\oce;$(FC_INCLUDE)\python2.7;$(FC_INCLUDE)\eigen3;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>RelWithDebInfo/</AssemblerListingLocation>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;QT_NO_DEBUG;QT_OPENGL_LIB;QT_SVG_LIB;QT_UITOOLS_LIB;QT_WEBKIT_LIB;QT_GUI_LIB;QT_XML_LIB;QT_NETWORK_LIB;QT_CORE_LIB;HAVE_ACOSH;HAVE_ATANH;HAVE_ASINH;CMAKE_INTDIR="RelWithDebInfo";SketcherGui_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;QT_NO_DEBUG;QT_OPENGL_LIB;QT_SVG_LIB;QT_UITOOLS_LIB;QT_WEBKIT_LIB;QT_GUI_LIB;QT_XML_LIB;QT_NETWORK_LIB;QT_CORE_LIB;HAVE_ACOSH;HAVE_ATANH;HAVE_ASINH;CMAKE_INTDIR=\"RelWithDebInfo\";SketcherGui_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(FC_INCLUDE);$(FC_INCLUDE)\QtOpenGL;$(FC_INCLUDE)\QtSvg;$(FC_INCLUDE)\QtUiTools;$(FC_INCLUDE)\QtWebKit;$(FC_INCLUDE)\QtGui;$(FC_INCLUDE)\QtXml;$(FC_INCLUDE)\QtNetwork;$(FC_INCLUDE)\QtCore;$(FC_SOURCE);\code\free-cad-code\Source\Repos\code;$(FC_SOURCE)\Mod\Sketcher\Gui;$(FC_LIBRARY)\cmake\..\..\include\oce;$(FC_INCLUDE)\python2.7;$(FC_INCLUDE)\eigen3;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>$(FC_INCLUDE);$(FC_INCLUDE)\QtOpenGL;$(FC_INCLUDE)\QtSvg;$(FC_INCLUDE)\QtUiTools;$(FC_INCLUDE)\QtWebKit;$(FC_INCLUDE)\QtGui;$(FC_INCLUDE)\QtXml;$(FC_INCLUDE)\QtNetwork;$(FC_INCLUDE)\QtCore;$(FC_SOURCE);\code\free-cad-code\Source\Repos\code;$(FC_SOURCE)\Mod\Sketcher\Gui;$(FC_LIBRARY)\cmake\..\..\include\oce;$(FC_INCLUDE)\python2.7;$(FC_INCLUDE)\eigen3;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <PostBuildEvent>
+      <Message>
+      </Message>
+      <Command>setlocal
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+    </PostBuildEvent>
+    <Link>
+      <AdditionalOptions> /machine:X86 /debug %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;SHFolder.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;winmm.lib;comsupp.lib;Ws2_32.lib;dbghelp.lib;..\App\RelWithDebInfo\Sketcher.lib;..\..\Part\Gui\RelWithDebInfo\PartGui.lib;..\..\..\Gui\RelWithDebInfo\FreeCADGui.lib;$(FC_LIBRARY)\coin4.lib;QtUiTools.lib;$(FC_LIBRARY)\cmake\Shiboken-1.2.2\..\..\shiboken-python2.7.lib;$(FC_LIBRARY)\cmake\PySide-1.2.2\..\..\pyside-python2.7.lib;..\..\Part\App\RelWithDebInfo\Part.lib;..\..\..\App\RelWithDebInfo\FreeCADApp.lib;$(FC_LIBRARY)\QtOpenGL4.lib;glu32.lib;opengl32.lib;$(FC_LIBRARY)\QtSvg4.lib;$(FC_LIBRARY)\QtUiTools.lib;$(FC_LIBRARY)\QtWebKit4.lib;$(FC_LIBRARY)\QtXmlPatterns4.lib;$(FC_LIBRARY)\QtGui4.lib;imm32.lib;winmm.lib;$(FC_LIBRARY)\QtXml4.lib;$(FC_LIBRARY)\QtNetwork4.lib;..\..\..\Base\RelWithDebInfo\FreeCADBase.lib;$(FC_LIBRARY)\python27.lib;$(FC_LIBRARY)\xerces-c_3.lib;$(FC_LIBRARY)\zlib.lib;MSVCRT.lib;MSVCPRT.lib;Rpcrt4.lib;version.lib;$(FC_LIBRARY)\boost_filesystem-vc120-mt-1_55.lib;$(FC_LIBRARY)\boost_program_options-vc120-mt-1_55.lib;$(FC_LIBRARY)\boost_regex-vc120-mt-1_55.lib;$(FC_LIBRARY)\boost_signals-vc120-mt-1_55.lib;$(FC_LIBRARY)\boost_system-vc120-mt-1_55.lib;$(FC_LIBRARY)\boost_thread-vc120-mt-1_55.lib;$(FC_LIBRARY)\QtCore4.lib;$(FC_LIBRARY)\TKIGESd.lib;$(FC_LIBRARY)\TKSTLd.lib;$(FC_LIBRARY)\TKMeshd.lib;$(FC_LIBRARY)\TKOffsetd.lib;$(FC_LIBRARY)\TKFilletd.lib;$(FC_LIBRARY)\TKSTEPd.lib;$(FC_LIBRARY)\TKSTEP209d.lib;$(FC_LIBRARY)\TKSTEPAttrd.lib;$(FC_LIBRARY)\TKSTEPBased.lib;$(FC_LIBRARY)\TKXSBased.lib;$(FC_LIBRARY)\TKHLRd.lib;$(FC_LIBRARY)\TKFeatd.lib;$(FC_LIBRARY)\TKBoold.lib;$(FC_LIBRARY)\TKShHealingd.lib;$(FC_LIBRARY)\TKBOd.lib;$(FC_LIBRARY)\TKPrimd.lib;$(FC_LIBRARY)\TKTopAlgod.lib;$(FC_LIBRARY)\TKGeomAlgod.lib;$(FC_LIBRARY)\TKBRepd.lib;$(FC_LIBRARY)\TKGeomBased.lib;$(FC_LIBRARY)\TKG3dd.lib;$(FC_LIBRARY)\TKG2dd.lib;$(FC_LIBRARY)\TKMathd.lib;$(FC_LIBRARY)\TKerneld.lib;ws2_32.lib;advapi32.lib;gdi32.lib;user32.lib;kernel32.lib;psapi.lib;$(FC_LIBRARY)\freetype.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(FC_LIBRARY)\;$(FC_LIBRARY)\/$(Configuration);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreAllDefaultLibraries>true</IgnoreAllDefaultLibraries>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>$(FC_SOURCE)/Mod/Sketcher/Gui/RelWithDebInfo/SketcherGui.lib</ImportLibrary>
+      <LargeAddressAware>true</LargeAddressAware>
+      <ProgramDataBaseFile>$(DEVROOT)/Mod/Sketcher/RelWithDebInfo/SketcherGui.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+      <Version>
+      </Version>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\Sketcher.qrc">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generating qrc_Sketcher.cxx</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+$(FC_BIN)\rcc.exe -name Sketcher -o $(FC_SOURCE)/Mod/Sketcher/Gui/qrc_Sketcher.cxx $(FC_SOURCE)/Mod/Sketcher/Gui/Resources/Sketcher.qrc
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(FC_SOURCE)/Mod/Sketcher/Gui/Resources/Sketcher.qrc;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Constraint_Concentric.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Constraint_Ellipse_Axis_Angle.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Constraint_Ellipse_Major_Radius.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Constraint_Ellipse_Minor_Radius.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Constraint_Ellipse_Radii.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Constraint_EqualLength.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Constraint_ExternalAngle.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Constraint_Horizontal.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Constraint_HorizontalDistance.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Constraint_HorizontalDistance_Driven.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Constraint_InternalAlignment.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Constraint_InternalAlignment_Ellipse_Focus1.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Constraint_InternalAlignment_Ellipse_Focus2.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Constraint_InternalAlignment_Ellipse_MajorAxis.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Constraint_InternalAlignment_Ellipse_MinorAxis.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Constraint_InternalAngle.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Constraint_InternalAngle_Driven.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Constraint_Length.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Constraint_Length_Driven.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Constraint_Parallel.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Constraint_Perpendicular.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Constraint_PointOnEnd.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Constraint_PointOnMidPoint.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Constraint_PointOnObject.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Constraint_PointOnPoint.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Constraint_PointOnStart.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Constraint_PointToObject.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Constraint_Radius.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Constraint_Radius_Driven.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Constraint_SnellsLaw.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Constraint_SnellsLaw_Driven.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Constraint_Symmetric.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Constraint_Tangent.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Constraint_TangentToEnd.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Constraint_TangentToStart.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Constraint_Vertical.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Constraint_VerticalDistance.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Constraint_VerticalDistance_Driven.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_AlterConstruction.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_AlterFillet.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_CloseShape.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_Conics.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_Conics_Constr.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_Conics_Ellipse_3points.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_Conics_Ellipse_Center.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_ConnectLines.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_ConstrainCoincident.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_ConstrainDistance.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_ConstrainHorizontal.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_ConstrainLock.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_ConstrainLock_Driven.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_ConstrainParallel.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_ConstrainVertical.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_Create3PointArc.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_Create3PointArc_Constr.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_Create3PointCircle.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_Create3PointCircle_Constr.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_CreateArc.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_CreateArc_Constr.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_CreateCircle.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_CreateCircle_Constr.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_CreateEllipse.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_CreateEllipse_3points.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_CreateEllipse_3points_Constr.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_CreateEllipse_Constr.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_CreateFillet.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_CreateHeptagon.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_CreateHeptagon_Constr.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_CreateHexagon.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_CreateHexagon_Constr.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_CreateLine.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_CreateLine_Constr.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_CreateOctagon.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_CreateOctagon_Constr.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_CreatePentagon.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_CreatePentagon_Constr.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_CreatePoint.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_CreatePolyline.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_CreatePolyline_Constr.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_CreateRectangle.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_CreateRectangle_Constr.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_CreateSlot.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_CreateSlot_Constr.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_CreateSquare.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_CreateSquare_Constr.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_CreateText.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_CreateTriangle.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_CreateTriangle_Constr.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_DraftLine.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_EditSketch.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_Element_Arc_Edge.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_Element_Arc_EndPoint.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_Element_Arc_MidPoint.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_Element_Arc_StartingPoint.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_Element_Circle_Edge.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_Element_Circle_MidPoint.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_Element_Ellipse_All.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_Element_Ellipse_CentrePoint.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_Element_Ellipse_Edge_1.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_Element_Ellipse_Edge_2.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_Element_Ellipse_Focus1.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_Element_Ellipse_Focus2.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_Element_Ellipse_MajorAxis.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_Element_Ellipse_MinorAxis.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_Element_Elliptical_Arc_Centre_Point.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_Element_Elliptical_Arc_Edge.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_Element_Elliptical_Arc_End_Point.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_Element_Elliptical_Arc_Start_Point.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_Element_Line_Edge.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_Element_Line_EndPoint.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_Element_Line_StartingPoint.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_Element_Point_StartingPoint.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_Element_SelectionTypeInvalid.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_Elliptical_Arc.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_Elliptical_Arc_Constr.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_External.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_LeaveSketch.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_MapSketch.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_MergeSketch.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_NewSketch.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_ProfilesHexagon1.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_SelectConflictingConstraints.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_SelectConstraints.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_SelectElementsAssociatedWithConstraints.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_SelectHorizontalAxis.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_SelectOrigin.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_SelectRedundantConstraints.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_SelectVerticalAxis.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_Sketch.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_ToggleConstraint.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_ToggleConstruction.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_ToggleNormal.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_Toggle_Constraint_Driven.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_Toggle_Constraint_Driving.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_Trimming.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_ViewSketch.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\small\Constraint_Concentric_sm.xpm;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\small\Constraint_EqualLength_sm.xpm;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\small\Constraint_ExternalAngle_sm.xpm;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\small\Constraint_HorizontalDistance_sm.xpm;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\small\Constraint_Horizontal_sm.xpm;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\small\Constraint_InternalAngle_sm.xpm;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\small\Constraint_Length_sm.xpm;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\small\Constraint_Lock_sm.xpm;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\small\Constraint_Parallel_sm.xpm;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\small\Constraint_Perpendicular_sm.xpm;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\small\Constraint_PointOnEnd_sm.xpm;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\small\Constraint_PointOnMidPoint_sm.xpm;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\small\Constraint_PointOnObject_sm.xpm;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\small\Constraint_PointOnPoint_sm.xpm;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\small\Constraint_PointOnStart_sm.xpm;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\small\Constraint_PointToObject_sm.xpm;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\small\Constraint_Radius_sm.xpm;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\small\Constraint_SnellsLaw_sm.xpm;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\small\Constraint_Symmetric_sm.xpm;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\small\Constraint_TangentToEnd_sm.xpm;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\small\Constraint_TangentToStart_sm.xpm;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\small\Constraint_Tangent_sm.xpm;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\small\Constraint_VerticalDistance_sm.xpm;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\small\Constraint_Vertical_sm.xpm;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\translations\Sketcher_af.qm;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\translations\Sketcher_cs.qm;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\translations\Sketcher_de.qm;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\translations\Sketcher_es-ES.qm;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\translations\Sketcher_fi.qm;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\translations\Sketcher_fr.qm;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\translations\Sketcher_hr.qm;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\translations\Sketcher_hu.qm;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\translations\Sketcher_it.qm;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\translations\Sketcher_ja.qm;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\translations\Sketcher_nl.qm;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\translations\Sketcher_no.qm;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\translations\Sketcher_pl.qm;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\translations\Sketcher_pt-BR.qm;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\translations\Sketcher_pt-PT.qm;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\translations\Sketcher_ro.qm;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\translations\Sketcher_ru.qm;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\translations\Sketcher_sk.qm;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\translations\Sketcher_sr.qm;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\translations\Sketcher_sv-SE.qm;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\translations\Sketcher_tr.qm;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\translations\Sketcher_uk.qm;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\translations\Sketcher_zh-CN.qm;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\translations\Sketcher_zh-TW.qm;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\Sketcher.qrc.depends;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\Sketcher.qrc;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(FC_SOURCE)\Mod\Sketcher\Gui\qrc_Sketcher.cxx</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Generating qrc_Sketcher.cxx</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+$(FC_BIN)\rcc.exe -name Sketcher -o $(FC_SOURCE)/Mod/Sketcher/Gui/qrc_Sketcher.cxx $(FC_SOURCE)/Mod/Sketcher/Gui/Resources/Sketcher.qrc
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(FC_SOURCE)/Mod/Sketcher/Gui/Resources/Sketcher.qrc;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Constraint_Concentric.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Constraint_Ellipse_Axis_Angle.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Constraint_Ellipse_Major_Radius.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Constraint_Ellipse_Minor_Radius.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Constraint_Ellipse_Radii.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Constraint_EqualLength.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Constraint_ExternalAngle.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Constraint_Horizontal.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Constraint_HorizontalDistance.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Constraint_HorizontalDistance_Driven.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Constraint_InternalAlignment.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Constraint_InternalAlignment_Ellipse_Focus1.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Constraint_InternalAlignment_Ellipse_Focus2.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Constraint_InternalAlignment_Ellipse_MajorAxis.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Constraint_InternalAlignment_Ellipse_MinorAxis.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Constraint_InternalAngle.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Constraint_InternalAngle_Driven.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Constraint_Length.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Constraint_Length_Driven.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Constraint_Parallel.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Constraint_Perpendicular.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Constraint_PointOnEnd.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Constraint_PointOnMidPoint.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Constraint_PointOnObject.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Constraint_PointOnPoint.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Constraint_PointOnStart.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Constraint_PointToObject.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Constraint_Radius.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Constraint_Radius_Driven.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Constraint_SnellsLaw.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Constraint_SnellsLaw_Driven.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Constraint_Symmetric.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Constraint_Tangent.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Constraint_TangentToEnd.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Constraint_TangentToStart.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Constraint_Vertical.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Constraint_VerticalDistance.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Constraint_VerticalDistance_Driven.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_AlterConstruction.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_AlterFillet.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_CloseShape.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_Conics.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_Conics_Constr.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_Conics_Ellipse_3points.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_Conics_Ellipse_Center.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_ConnectLines.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_ConstrainCoincident.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_ConstrainDistance.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_ConstrainHorizontal.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_ConstrainLock.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_ConstrainLock_Driven.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_ConstrainParallel.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_ConstrainVertical.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_Create3PointArc.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_Create3PointArc_Constr.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_Create3PointCircle.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_Create3PointCircle_Constr.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_CreateArc.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_CreateArc_Constr.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_CreateCircle.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_CreateCircle_Constr.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_CreateEllipse.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_CreateEllipse_3points.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_CreateEllipse_3points_Constr.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_CreateEllipse_Constr.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_CreateFillet.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_CreateHeptagon.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_CreateHeptagon_Constr.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_CreateHexagon.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_CreateHexagon_Constr.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_CreateLine.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_CreateLine_Constr.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_CreateOctagon.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_CreateOctagon_Constr.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_CreatePentagon.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_CreatePentagon_Constr.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_CreatePoint.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_CreatePolyline.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_CreatePolyline_Constr.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_CreateRectangle.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_CreateRectangle_Constr.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_CreateSlot.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_CreateSlot_Constr.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_CreateSquare.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_CreateSquare_Constr.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_CreateText.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_CreateTriangle.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_CreateTriangle_Constr.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_DraftLine.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_EditSketch.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_Element_Arc_Edge.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_Element_Arc_EndPoint.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_Element_Arc_MidPoint.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_Element_Arc_StartingPoint.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_Element_Circle_Edge.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_Element_Circle_MidPoint.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_Element_Ellipse_All.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_Element_Ellipse_CentrePoint.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_Element_Ellipse_Edge_1.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_Element_Ellipse_Edge_2.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_Element_Ellipse_Focus1.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_Element_Ellipse_Focus2.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_Element_Ellipse_MajorAxis.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_Element_Ellipse_MinorAxis.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_Element_Elliptical_Arc_Centre_Point.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_Element_Elliptical_Arc_Edge.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_Element_Elliptical_Arc_End_Point.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_Element_Elliptical_Arc_Start_Point.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_Element_Line_Edge.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_Element_Line_EndPoint.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_Element_Line_StartingPoint.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_Element_Point_StartingPoint.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_Element_SelectionTypeInvalid.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_Elliptical_Arc.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_Elliptical_Arc_Constr.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_External.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_LeaveSketch.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_MapSketch.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_MergeSketch.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_NewSketch.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_ProfilesHexagon1.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_SelectConflictingConstraints.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_SelectConstraints.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_SelectElementsAssociatedWithConstraints.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_SelectHorizontalAxis.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_SelectOrigin.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_SelectRedundantConstraints.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_SelectVerticalAxis.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_Sketch.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_ToggleConstraint.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_ToggleConstruction.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_ToggleNormal.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_Toggle_Constraint_Driven.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_Toggle_Constraint_Driving.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_Trimming.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_ViewSketch.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\small\Constraint_Concentric_sm.xpm;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\small\Constraint_EqualLength_sm.xpm;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\small\Constraint_ExternalAngle_sm.xpm;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\small\Constraint_HorizontalDistance_sm.xpm;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\small\Constraint_Horizontal_sm.xpm;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\small\Constraint_InternalAngle_sm.xpm;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\small\Constraint_Length_sm.xpm;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\small\Constraint_Lock_sm.xpm;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\small\Constraint_Parallel_sm.xpm;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\small\Constraint_Perpendicular_sm.xpm;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\small\Constraint_PointOnEnd_sm.xpm;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\small\Constraint_PointOnMidPoint_sm.xpm;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\small\Constraint_PointOnObject_sm.xpm;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\small\Constraint_PointOnPoint_sm.xpm;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\small\Constraint_PointOnStart_sm.xpm;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\small\Constraint_PointToObject_sm.xpm;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\small\Constraint_Radius_sm.xpm;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\small\Constraint_SnellsLaw_sm.xpm;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\small\Constraint_Symmetric_sm.xpm;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\small\Constraint_TangentToEnd_sm.xpm;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\small\Constraint_TangentToStart_sm.xpm;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\small\Constraint_Tangent_sm.xpm;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\small\Constraint_VerticalDistance_sm.xpm;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\small\Constraint_Vertical_sm.xpm;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\translations\Sketcher_af.qm;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\translations\Sketcher_cs.qm;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\translations\Sketcher_de.qm;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\translations\Sketcher_es-ES.qm;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\translations\Sketcher_fi.qm;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\translations\Sketcher_fr.qm;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\translations\Sketcher_hr.qm;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\translations\Sketcher_hu.qm;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\translations\Sketcher_it.qm;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\translations\Sketcher_ja.qm;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\translations\Sketcher_nl.qm;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\translations\Sketcher_no.qm;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\translations\Sketcher_pl.qm;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\translations\Sketcher_pt-BR.qm;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\translations\Sketcher_pt-PT.qm;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\translations\Sketcher_ro.qm;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\translations\Sketcher_ru.qm;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\translations\Sketcher_sk.qm;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\translations\Sketcher_sr.qm;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\translations\Sketcher_sv-SE.qm;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\translations\Sketcher_tr.qm;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\translations\Sketcher_uk.qm;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\translations\Sketcher_zh-CN.qm;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\translations\Sketcher_zh-TW.qm;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\Sketcher.qrc.depends;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\Sketcher.qrc;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(FC_SOURCE)\Mod\Sketcher\Gui\qrc_Sketcher.cxx</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Generating qrc_Sketcher.cxx</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+$(FC_BIN)\rcc.exe -name Sketcher -o $(FC_SOURCE)/Mod/Sketcher/Gui/qrc_Sketcher.cxx $(FC_SOURCE)/Mod/Sketcher/Gui/Resources/Sketcher.qrc
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">$(FC_SOURCE)/Mod/Sketcher/Gui/Resources/Sketcher.qrc;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Constraint_Concentric.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Constraint_Ellipse_Axis_Angle.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Constraint_Ellipse_Major_Radius.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Constraint_Ellipse_Minor_Radius.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Constraint_Ellipse_Radii.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Constraint_EqualLength.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Constraint_ExternalAngle.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Constraint_Horizontal.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Constraint_HorizontalDistance.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Constraint_HorizontalDistance_Driven.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Constraint_InternalAlignment.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Constraint_InternalAlignment_Ellipse_Focus1.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Constraint_InternalAlignment_Ellipse_Focus2.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Constraint_InternalAlignment_Ellipse_MajorAxis.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Constraint_InternalAlignment_Ellipse_MinorAxis.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Constraint_InternalAngle.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Constraint_InternalAngle_Driven.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Constraint_Length.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Constraint_Length_Driven.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Constraint_Parallel.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Constraint_Perpendicular.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Constraint_PointOnEnd.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Constraint_PointOnMidPoint.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Constraint_PointOnObject.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Constraint_PointOnPoint.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Constraint_PointOnStart.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Constraint_PointToObject.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Constraint_Radius.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Constraint_Radius_Driven.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Constraint_SnellsLaw.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Constraint_SnellsLaw_Driven.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Constraint_Symmetric.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Constraint_Tangent.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Constraint_TangentToEnd.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Constraint_TangentToStart.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Constraint_Vertical.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Constraint_VerticalDistance.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Constraint_VerticalDistance_Driven.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_AlterConstruction.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_AlterFillet.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_CloseShape.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_Conics.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_Conics_Constr.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_Conics_Ellipse_3points.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_Conics_Ellipse_Center.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_ConnectLines.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_ConstrainCoincident.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_ConstrainDistance.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_ConstrainHorizontal.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_ConstrainLock.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_ConstrainLock_Driven.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_ConstrainParallel.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_ConstrainVertical.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_Create3PointArc.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_Create3PointArc_Constr.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_Create3PointCircle.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_Create3PointCircle_Constr.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_CreateArc.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_CreateArc_Constr.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_CreateCircle.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_CreateCircle_Constr.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_CreateEllipse.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_CreateEllipse_3points.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_CreateEllipse_3points_Constr.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_CreateEllipse_Constr.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_CreateFillet.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_CreateHeptagon.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_CreateHeptagon_Constr.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_CreateHexagon.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_CreateHexagon_Constr.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_CreateLine.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_CreateLine_Constr.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_CreateOctagon.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_CreateOctagon_Constr.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_CreatePentagon.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_CreatePentagon_Constr.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_CreatePoint.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_CreatePolyline.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_CreatePolyline_Constr.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_CreateRectangle.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_CreateRectangle_Constr.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_CreateSlot.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_CreateSlot_Constr.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_CreateSquare.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_CreateSquare_Constr.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_CreateText.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_CreateTriangle.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_CreateTriangle_Constr.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_DraftLine.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_EditSketch.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_Element_Arc_Edge.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_Element_Arc_EndPoint.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_Element_Arc_MidPoint.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_Element_Arc_StartingPoint.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_Element_Circle_Edge.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_Element_Circle_MidPoint.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_Element_Ellipse_All.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_Element_Ellipse_CentrePoint.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_Element_Ellipse_Edge_1.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_Element_Ellipse_Edge_2.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_Element_Ellipse_Focus1.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_Element_Ellipse_Focus2.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_Element_Ellipse_MajorAxis.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_Element_Ellipse_MinorAxis.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_Element_Elliptical_Arc_Centre_Point.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_Element_Elliptical_Arc_Edge.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_Element_Elliptical_Arc_End_Point.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_Element_Elliptical_Arc_Start_Point.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_Element_Line_Edge.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_Element_Line_EndPoint.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_Element_Line_StartingPoint.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_Element_Point_StartingPoint.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_Element_SelectionTypeInvalid.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_Elliptical_Arc.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_Elliptical_Arc_Constr.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_External.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_LeaveSketch.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_MapSketch.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_MergeSketch.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_NewSketch.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_ProfilesHexagon1.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_SelectConflictingConstraints.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_SelectConstraints.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_SelectElementsAssociatedWithConstraints.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_SelectHorizontalAxis.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_SelectOrigin.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_SelectRedundantConstraints.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_SelectVerticalAxis.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_Sketch.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_ToggleConstraint.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_ToggleConstruction.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_ToggleNormal.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_Toggle_Constraint_Driven.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_Toggle_Constraint_Driving.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_Trimming.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_ViewSketch.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\small\Constraint_Concentric_sm.xpm;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\small\Constraint_EqualLength_sm.xpm;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\small\Constraint_ExternalAngle_sm.xpm;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\small\Constraint_HorizontalDistance_sm.xpm;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\small\Constraint_Horizontal_sm.xpm;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\small\Constraint_InternalAngle_sm.xpm;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\small\Constraint_Length_sm.xpm;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\small\Constraint_Lock_sm.xpm;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\small\Constraint_Parallel_sm.xpm;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\small\Constraint_Perpendicular_sm.xpm;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\small\Constraint_PointOnEnd_sm.xpm;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\small\Constraint_PointOnMidPoint_sm.xpm;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\small\Constraint_PointOnObject_sm.xpm;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\small\Constraint_PointOnPoint_sm.xpm;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\small\Constraint_PointOnStart_sm.xpm;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\small\Constraint_PointToObject_sm.xpm;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\small\Constraint_Radius_sm.xpm;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\small\Constraint_SnellsLaw_sm.xpm;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\small\Constraint_Symmetric_sm.xpm;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\small\Constraint_TangentToEnd_sm.xpm;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\small\Constraint_TangentToStart_sm.xpm;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\small\Constraint_Tangent_sm.xpm;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\small\Constraint_VerticalDistance_sm.xpm;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\small\Constraint_Vertical_sm.xpm;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\translations\Sketcher_af.qm;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\translations\Sketcher_cs.qm;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\translations\Sketcher_de.qm;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\translations\Sketcher_es-ES.qm;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\translations\Sketcher_fi.qm;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\translations\Sketcher_fr.qm;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\translations\Sketcher_hr.qm;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\translations\Sketcher_hu.qm;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\translations\Sketcher_it.qm;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\translations\Sketcher_ja.qm;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\translations\Sketcher_nl.qm;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\translations\Sketcher_no.qm;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\translations\Sketcher_pl.qm;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\translations\Sketcher_pt-BR.qm;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\translations\Sketcher_pt-PT.qm;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\translations\Sketcher_ro.qm;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\translations\Sketcher_ru.qm;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\translations\Sketcher_sk.qm;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\translations\Sketcher_sr.qm;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\translations\Sketcher_sv-SE.qm;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\translations\Sketcher_tr.qm;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\translations\Sketcher_uk.qm;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\translations\Sketcher_zh-CN.qm;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\translations\Sketcher_zh-TW.qm;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\Sketcher.qrc.depends;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\Sketcher.qrc;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">$(FC_SOURCE)\Mod\Sketcher\Gui\qrc_Sketcher.cxx</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Generating qrc_Sketcher.cxx</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+$(FC_BIN)\rcc.exe -name Sketcher -o $(FC_SOURCE)/Mod/Sketcher/Gui/qrc_Sketcher.cxx $(FC_SOURCE)/Mod/Sketcher/Gui/Resources/Sketcher.qrc
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(FC_SOURCE)/Mod/Sketcher/Gui/Resources/Sketcher.qrc;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Constraint_Concentric.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Constraint_Ellipse_Axis_Angle.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Constraint_Ellipse_Major_Radius.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Constraint_Ellipse_Minor_Radius.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Constraint_Ellipse_Radii.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Constraint_EqualLength.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Constraint_ExternalAngle.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Constraint_Horizontal.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Constraint_HorizontalDistance.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Constraint_HorizontalDistance_Driven.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Constraint_InternalAlignment.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Constraint_InternalAlignment_Ellipse_Focus1.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Constraint_InternalAlignment_Ellipse_Focus2.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Constraint_InternalAlignment_Ellipse_MajorAxis.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Constraint_InternalAlignment_Ellipse_MinorAxis.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Constraint_InternalAngle.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Constraint_InternalAngle_Driven.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Constraint_Length.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Constraint_Length_Driven.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Constraint_Parallel.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Constraint_Perpendicular.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Constraint_PointOnEnd.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Constraint_PointOnMidPoint.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Constraint_PointOnObject.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Constraint_PointOnPoint.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Constraint_PointOnStart.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Constraint_PointToObject.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Constraint_Radius.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Constraint_Radius_Driven.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Constraint_SnellsLaw.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Constraint_SnellsLaw_Driven.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Constraint_Symmetric.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Constraint_Tangent.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Constraint_TangentToEnd.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Constraint_TangentToStart.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Constraint_Vertical.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Constraint_VerticalDistance.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Constraint_VerticalDistance_Driven.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_AlterConstruction.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_AlterFillet.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_CloseShape.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_Conics.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_Conics_Constr.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_Conics_Ellipse_3points.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_Conics_Ellipse_Center.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_ConnectLines.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_ConstrainCoincident.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_ConstrainDistance.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_ConstrainHorizontal.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_ConstrainLock.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_ConstrainLock_Driven.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_ConstrainParallel.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_ConstrainVertical.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_Create3PointArc.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_Create3PointArc_Constr.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_Create3PointCircle.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_Create3PointCircle_Constr.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_CreateArc.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_CreateArc_Constr.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_CreateCircle.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_CreateCircle_Constr.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_CreateEllipse.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_CreateEllipse_3points.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_CreateEllipse_3points_Constr.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_CreateEllipse_Constr.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_CreateFillet.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_CreateHeptagon.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_CreateHeptagon_Constr.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_CreateHexagon.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_CreateHexagon_Constr.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_CreateLine.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_CreateLine_Constr.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_CreateOctagon.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_CreateOctagon_Constr.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_CreatePentagon.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_CreatePentagon_Constr.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_CreatePoint.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_CreatePolyline.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_CreatePolyline_Constr.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_CreateRectangle.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_CreateRectangle_Constr.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_CreateSlot.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_CreateSlot_Constr.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_CreateSquare.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_CreateSquare_Constr.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_CreateText.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_CreateTriangle.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_CreateTriangle_Constr.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_DraftLine.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_EditSketch.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_Element_Arc_Edge.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_Element_Arc_EndPoint.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_Element_Arc_MidPoint.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_Element_Arc_StartingPoint.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_Element_Circle_Edge.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_Element_Circle_MidPoint.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_Element_Ellipse_All.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_Element_Ellipse_CentrePoint.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_Element_Ellipse_Edge_1.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_Element_Ellipse_Edge_2.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_Element_Ellipse_Focus1.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_Element_Ellipse_Focus2.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_Element_Ellipse_MajorAxis.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_Element_Ellipse_MinorAxis.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_Element_Elliptical_Arc_Centre_Point.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_Element_Elliptical_Arc_Edge.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_Element_Elliptical_Arc_End_Point.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_Element_Elliptical_Arc_Start_Point.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_Element_Line_Edge.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_Element_Line_EndPoint.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_Element_Line_StartingPoint.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_Element_Point_StartingPoint.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_Element_SelectionTypeInvalid.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_Elliptical_Arc.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_Elliptical_Arc_Constr.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_External.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_LeaveSketch.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_MapSketch.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_MergeSketch.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_NewSketch.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_ProfilesHexagon1.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_SelectConflictingConstraints.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_SelectConstraints.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_SelectElementsAssociatedWithConstraints.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_SelectHorizontalAxis.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_SelectOrigin.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_SelectRedundantConstraints.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_SelectVerticalAxis.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_Sketch.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_ToggleConstraint.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_ToggleConstruction.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_ToggleNormal.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_Toggle_Constraint_Driven.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_Toggle_Constraint_Driving.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_Trimming.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\Sketcher_ViewSketch.svg;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\small\Constraint_Concentric_sm.xpm;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\small\Constraint_EqualLength_sm.xpm;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\small\Constraint_ExternalAngle_sm.xpm;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\small\Constraint_HorizontalDistance_sm.xpm;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\small\Constraint_Horizontal_sm.xpm;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\small\Constraint_InternalAngle_sm.xpm;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\small\Constraint_Length_sm.xpm;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\small\Constraint_Lock_sm.xpm;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\small\Constraint_Parallel_sm.xpm;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\small\Constraint_Perpendicular_sm.xpm;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\small\Constraint_PointOnEnd_sm.xpm;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\small\Constraint_PointOnMidPoint_sm.xpm;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\small\Constraint_PointOnObject_sm.xpm;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\small\Constraint_PointOnPoint_sm.xpm;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\small\Constraint_PointOnStart_sm.xpm;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\small\Constraint_PointToObject_sm.xpm;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\small\Constraint_Radius_sm.xpm;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\small\Constraint_SnellsLaw_sm.xpm;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\small\Constraint_Symmetric_sm.xpm;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\small\Constraint_TangentToEnd_sm.xpm;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\small\Constraint_TangentToStart_sm.xpm;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\small\Constraint_Tangent_sm.xpm;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\small\Constraint_VerticalDistance_sm.xpm;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\icons\small\Constraint_Vertical_sm.xpm;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\translations\Sketcher_af.qm;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\translations\Sketcher_cs.qm;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\translations\Sketcher_de.qm;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\translations\Sketcher_es-ES.qm;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\translations\Sketcher_fi.qm;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\translations\Sketcher_fr.qm;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\translations\Sketcher_hr.qm;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\translations\Sketcher_hu.qm;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\translations\Sketcher_it.qm;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\translations\Sketcher_ja.qm;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\translations\Sketcher_nl.qm;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\translations\Sketcher_no.qm;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\translations\Sketcher_pl.qm;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\translations\Sketcher_pt-BR.qm;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\translations\Sketcher_pt-PT.qm;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\translations\Sketcher_ro.qm;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\translations\Sketcher_ru.qm;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\translations\Sketcher_sk.qm;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\translations\Sketcher_sr.qm;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\translations\Sketcher_sv-SE.qm;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\translations\Sketcher_tr.qm;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\translations\Sketcher_uk.qm;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\translations\Sketcher_zh-CN.qm;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\translations\Sketcher_zh-TW.qm;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\Sketcher.qrc.depends;$(FC_SOURCE)\Mod\Sketcher\Gui\Resources\Sketcher.qrc;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(FC_SOURCE)\Mod\Sketcher\Gui\qrc_Sketcher.cxx</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="$(FC_SOURCE)\Mod\Sketcher\Gui\PropertyConstraintListItem.h">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generating moc_PropertyConstraintListItem.cpp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+$(FC_BIN)\moc.exe -DBOOST_TT_HAS_OPERATOR_HPP_INCLUDED $(FC_SOURCE)/Mod/Sketcher/Gui/PropertyConstraintListItem.h -o $(FC_SOURCE)/Mod/Sketcher/Gui/moc_PropertyConstraintListItem.cpp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(FC_SOURCE)/Mod/Sketcher/Gui/PropertyConstraintListItem.h;$(FC_SOURCE)\Mod\Sketcher\Gui\PropertyConstraintListItem.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(FC_SOURCE)\Mod\Sketcher\Gui\moc_PropertyConstraintListItem.cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Generating moc_PropertyConstraintListItem.cpp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+$(FC_BIN)\moc.exe -DBOOST_TT_HAS_OPERATOR_HPP_INCLUDED $(FC_SOURCE)/Mod/Sketcher/Gui/PropertyConstraintListItem.h -o $(FC_SOURCE)/Mod/Sketcher/Gui/moc_PropertyConstraintListItem.cpp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(FC_SOURCE)/Mod/Sketcher/Gui/PropertyConstraintListItem.h;$(FC_SOURCE)\Mod\Sketcher\Gui\PropertyConstraintListItem.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(FC_SOURCE)\Mod\Sketcher\Gui\moc_PropertyConstraintListItem.cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Generating moc_PropertyConstraintListItem.cpp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+$(FC_BIN)\moc.exe -DBOOST_TT_HAS_OPERATOR_HPP_INCLUDED $(FC_SOURCE)/Mod/Sketcher/Gui/PropertyConstraintListItem.h -o $(FC_SOURCE)/Mod/Sketcher/Gui/moc_PropertyConstraintListItem.cpp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">$(FC_SOURCE)/Mod/Sketcher/Gui/PropertyConstraintListItem.h;$(FC_SOURCE)\Mod\Sketcher\Gui\PropertyConstraintListItem.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">$(FC_SOURCE)\Mod\Sketcher\Gui\moc_PropertyConstraintListItem.cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Generating moc_PropertyConstraintListItem.cpp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+$(FC_BIN)\moc.exe -DBOOST_TT_HAS_OPERATOR_HPP_INCLUDED $(FC_SOURCE)/Mod/Sketcher/Gui/PropertyConstraintListItem.h -o $(FC_SOURCE)/Mod/Sketcher/Gui/moc_PropertyConstraintListItem.cpp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(FC_SOURCE)/Mod/Sketcher/Gui/PropertyConstraintListItem.h;$(FC_SOURCE)\Mod\Sketcher\Gui\PropertyConstraintListItem.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(FC_SOURCE)\Mod\Sketcher\Gui\moc_PropertyConstraintListItem.cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="$(FC_SOURCE)\Mod\Sketcher\Gui\TaskSketcherConstrains.ui">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generating ui_TaskSketcherConstrains.h</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+$(FC_BIN)\uic.exe -o $(FC_SOURCE)/Mod/Sketcher/Gui/ui_TaskSketcherConstrains.h $(FC_SOURCE)/Mod/Sketcher/Gui/TaskSketcherConstrains.ui
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(FC_SOURCE)/Mod/Sketcher/Gui/TaskSketcherConstrains.ui;$(FC_SOURCE)\Mod\Sketcher\Gui\TaskSketcherConstrains.ui;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(FC_SOURCE)\Mod\Sketcher\Gui\ui_TaskSketcherConstrains.h</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Generating ui_TaskSketcherConstrains.h</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+$(FC_BIN)\uic.exe -o $(FC_SOURCE)/Mod/Sketcher/Gui/ui_TaskSketcherConstrains.h $(FC_SOURCE)/Mod/Sketcher/Gui/TaskSketcherConstrains.ui
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(FC_SOURCE)/Mod/Sketcher/Gui/TaskSketcherConstrains.ui;$(FC_SOURCE)\Mod\Sketcher\Gui\TaskSketcherConstrains.ui;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(FC_SOURCE)\Mod\Sketcher\Gui\ui_TaskSketcherConstrains.h</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Generating ui_TaskSketcherConstrains.h</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+$(FC_BIN)\uic.exe -o $(FC_SOURCE)/Mod/Sketcher/Gui/ui_TaskSketcherConstrains.h $(FC_SOURCE)/Mod/Sketcher/Gui/TaskSketcherConstrains.ui
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">$(FC_SOURCE)/Mod/Sketcher/Gui/TaskSketcherConstrains.ui;$(FC_SOURCE)\Mod\Sketcher\Gui\TaskSketcherConstrains.ui;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">$(FC_SOURCE)\Mod\Sketcher\Gui\ui_TaskSketcherConstrains.h</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Generating ui_TaskSketcherConstrains.h</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+$(FC_BIN)\uic.exe -o $(FC_SOURCE)/Mod/Sketcher/Gui/ui_TaskSketcherConstrains.h $(FC_SOURCE)/Mod/Sketcher/Gui/TaskSketcherConstrains.ui
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(FC_SOURCE)/Mod/Sketcher/Gui/TaskSketcherConstrains.ui;$(FC_SOURCE)\Mod\Sketcher\Gui\TaskSketcherConstrains.ui;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(FC_SOURCE)\Mod\Sketcher\Gui\ui_TaskSketcherConstrains.h</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="$(FC_SOURCE)\Mod\Sketcher\Gui\TaskSketcherConstrains.h">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generating moc_TaskSketcherConstrains.cpp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+$(FC_BIN)\moc.exe -DBOOST_TT_HAS_OPERATOR_HPP_INCLUDED $(FC_SOURCE)/Mod/Sketcher/Gui/TaskSketcherConstrains.h -o $(FC_SOURCE)/Mod/Sketcher/Gui/moc_TaskSketcherConstrains.cpp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(FC_SOURCE)/Mod/Sketcher/Gui/TaskSketcherConstrains.h;$(FC_SOURCE)\Mod\Sketcher\Gui\TaskSketcherConstrains.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(FC_SOURCE)\Mod\Sketcher\Gui\moc_TaskSketcherConstrains.cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Generating moc_TaskSketcherConstrains.cpp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+$(FC_BIN)\moc.exe -DBOOST_TT_HAS_OPERATOR_HPP_INCLUDED $(FC_SOURCE)/Mod/Sketcher/Gui/TaskSketcherConstrains.h -o $(FC_SOURCE)/Mod/Sketcher/Gui/moc_TaskSketcherConstrains.cpp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(FC_SOURCE)/Mod/Sketcher/Gui/TaskSketcherConstrains.h;$(FC_SOURCE)\Mod\Sketcher\Gui\TaskSketcherConstrains.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(FC_SOURCE)\Mod\Sketcher\Gui\moc_TaskSketcherConstrains.cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Generating moc_TaskSketcherConstrains.cpp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+$(FC_BIN)\moc.exe -DBOOST_TT_HAS_OPERATOR_HPP_INCLUDED $(FC_SOURCE)/Mod/Sketcher/Gui/TaskSketcherConstrains.h -o $(FC_SOURCE)/Mod/Sketcher/Gui/moc_TaskSketcherConstrains.cpp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">$(FC_SOURCE)/Mod/Sketcher/Gui/TaskSketcherConstrains.h;$(FC_SOURCE)\Mod\Sketcher\Gui\TaskSketcherConstrains.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">$(FC_SOURCE)\Mod\Sketcher\Gui\moc_TaskSketcherConstrains.cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Generating moc_TaskSketcherConstrains.cpp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+$(FC_BIN)\moc.exe -DBOOST_TT_HAS_OPERATOR_HPP_INCLUDED $(FC_SOURCE)/Mod/Sketcher/Gui/TaskSketcherConstrains.h -o $(FC_SOURCE)/Mod/Sketcher/Gui/moc_TaskSketcherConstrains.cpp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(FC_SOURCE)/Mod/Sketcher/Gui/TaskSketcherConstrains.h;$(FC_SOURCE)\Mod\Sketcher\Gui\TaskSketcherConstrains.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(FC_SOURCE)\Mod\Sketcher\Gui\moc_TaskSketcherConstrains.cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="$(FC_SOURCE)\Mod\Sketcher\Gui\TaskSketcherElements.ui">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generating ui_TaskSketcherElements.h</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+$(FC_BIN)\uic.exe -o $(FC_SOURCE)/Mod/Sketcher/Gui/ui_TaskSketcherElements.h $(FC_SOURCE)/Mod/Sketcher/Gui/TaskSketcherElements.ui
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(FC_SOURCE)/Mod/Sketcher/Gui/TaskSketcherElements.ui;$(FC_SOURCE)\Mod\Sketcher\Gui\TaskSketcherElements.ui;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(FC_SOURCE)\Mod\Sketcher\Gui\ui_TaskSketcherElements.h</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Generating ui_TaskSketcherElements.h</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+$(FC_BIN)\uic.exe -o $(FC_SOURCE)/Mod/Sketcher/Gui/ui_TaskSketcherElements.h $(FC_SOURCE)/Mod/Sketcher/Gui/TaskSketcherElements.ui
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(FC_SOURCE)/Mod/Sketcher/Gui/TaskSketcherElements.ui;$(FC_SOURCE)\Mod\Sketcher\Gui\TaskSketcherElements.ui;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(FC_SOURCE)\Mod\Sketcher\Gui\ui_TaskSketcherElements.h</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Generating ui_TaskSketcherElements.h</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+$(FC_BIN)\uic.exe -o $(FC_SOURCE)/Mod/Sketcher/Gui/ui_TaskSketcherElements.h $(FC_SOURCE)/Mod/Sketcher/Gui/TaskSketcherElements.ui
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">$(FC_SOURCE)/Mod/Sketcher/Gui/TaskSketcherElements.ui;$(FC_SOURCE)\Mod\Sketcher\Gui\TaskSketcherElements.ui;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">$(FC_SOURCE)\Mod\Sketcher\Gui\ui_TaskSketcherElements.h</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Generating ui_TaskSketcherElements.h</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+$(FC_BIN)\uic.exe -o $(FC_SOURCE)/Mod/Sketcher/Gui/ui_TaskSketcherElements.h $(FC_SOURCE)/Mod/Sketcher/Gui/TaskSketcherElements.ui
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(FC_SOURCE)/Mod/Sketcher/Gui/TaskSketcherElements.ui;$(FC_SOURCE)\Mod\Sketcher\Gui\TaskSketcherElements.ui;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(FC_SOURCE)\Mod\Sketcher\Gui\ui_TaskSketcherElements.h</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="$(FC_SOURCE)\Mod\Sketcher\Gui\TaskSketcherElements.h">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generating moc_TaskSketcherElements.cpp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+$(FC_BIN)\moc.exe -DBOOST_TT_HAS_OPERATOR_HPP_INCLUDED $(FC_SOURCE)/Mod/Sketcher/Gui/TaskSketcherElements.h -o $(FC_SOURCE)/Mod/Sketcher/Gui/moc_TaskSketcherElements.cpp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(FC_SOURCE)/Mod/Sketcher/Gui/TaskSketcherElements.h;$(FC_SOURCE)\Mod\Sketcher\Gui\TaskSketcherElements.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(FC_SOURCE)\Mod\Sketcher\Gui\moc_TaskSketcherElements.cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Generating moc_TaskSketcherElements.cpp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+$(FC_BIN)\moc.exe -DBOOST_TT_HAS_OPERATOR_HPP_INCLUDED $(FC_SOURCE)/Mod/Sketcher/Gui/TaskSketcherElements.h -o $(FC_SOURCE)/Mod/Sketcher/Gui/moc_TaskSketcherElements.cpp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(FC_SOURCE)/Mod/Sketcher/Gui/TaskSketcherElements.h;$(FC_SOURCE)\Mod\Sketcher\Gui\TaskSketcherElements.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(FC_SOURCE)\Mod\Sketcher\Gui\moc_TaskSketcherElements.cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Generating moc_TaskSketcherElements.cpp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+$(FC_BIN)\moc.exe -DBOOST_TT_HAS_OPERATOR_HPP_INCLUDED $(FC_SOURCE)/Mod/Sketcher/Gui/TaskSketcherElements.h -o $(FC_SOURCE)/Mod/Sketcher/Gui/moc_TaskSketcherElements.cpp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">$(FC_SOURCE)/Mod/Sketcher/Gui/TaskSketcherElements.h;$(FC_SOURCE)\Mod\Sketcher\Gui\TaskSketcherElements.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">$(FC_SOURCE)\Mod\Sketcher\Gui\moc_TaskSketcherElements.cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Generating moc_TaskSketcherElements.cpp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+$(FC_BIN)\moc.exe -DBOOST_TT_HAS_OPERATOR_HPP_INCLUDED $(FC_SOURCE)/Mod/Sketcher/Gui/TaskSketcherElements.h -o $(FC_SOURCE)/Mod/Sketcher/Gui/moc_TaskSketcherElements.cpp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(FC_SOURCE)/Mod/Sketcher/Gui/TaskSketcherElements.h;$(FC_SOURCE)\Mod\Sketcher\Gui\TaskSketcherElements.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(FC_SOURCE)\Mod\Sketcher\Gui\moc_TaskSketcherElements.cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="$(FC_SOURCE)\Mod\Sketcher\Gui\TaskSketcherCreateCommands.h">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generating moc_TaskSketcherCreateCommands.cpp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+$(FC_BIN)\moc.exe -DBOOST_TT_HAS_OPERATOR_HPP_INCLUDED $(FC_SOURCE)/Mod/Sketcher/Gui/TaskSketcherCreateCommands.h -o $(FC_SOURCE)/Mod/Sketcher/Gui/moc_TaskSketcherCreateCommands.cpp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(FC_SOURCE)/Mod/Sketcher/Gui/TaskSketcherCreateCommands.h;$(FC_SOURCE)\Mod\Sketcher\Gui\TaskSketcherCreateCommands.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(FC_SOURCE)\Mod\Sketcher\Gui\moc_TaskSketcherCreateCommands.cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Generating moc_TaskSketcherCreateCommands.cpp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+$(FC_BIN)\moc.exe -DBOOST_TT_HAS_OPERATOR_HPP_INCLUDED $(FC_SOURCE)/Mod/Sketcher/Gui/TaskSketcherCreateCommands.h -o $(FC_SOURCE)/Mod/Sketcher/Gui/moc_TaskSketcherCreateCommands.cpp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(FC_SOURCE)/Mod/Sketcher/Gui/TaskSketcherCreateCommands.h;$(FC_SOURCE)\Mod\Sketcher\Gui\TaskSketcherCreateCommands.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(FC_SOURCE)\Mod\Sketcher\Gui\moc_TaskSketcherCreateCommands.cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Generating moc_TaskSketcherCreateCommands.cpp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+$(FC_BIN)\moc.exe -DBOOST_TT_HAS_OPERATOR_HPP_INCLUDED $(FC_SOURCE)/Mod/Sketcher/Gui/TaskSketcherCreateCommands.h -o $(FC_SOURCE)/Mod/Sketcher/Gui/moc_TaskSketcherCreateCommands.cpp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">$(FC_SOURCE)/Mod/Sketcher/Gui/TaskSketcherCreateCommands.h;$(FC_SOURCE)\Mod\Sketcher\Gui\TaskSketcherCreateCommands.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">$(FC_SOURCE)\Mod\Sketcher\Gui\moc_TaskSketcherCreateCommands.cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Generating moc_TaskSketcherCreateCommands.cpp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+$(FC_BIN)\moc.exe -DBOOST_TT_HAS_OPERATOR_HPP_INCLUDED $(FC_SOURCE)/Mod/Sketcher/Gui/TaskSketcherCreateCommands.h -o $(FC_SOURCE)/Mod/Sketcher/Gui/moc_TaskSketcherCreateCommands.cpp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(FC_SOURCE)/Mod/Sketcher/Gui/TaskSketcherCreateCommands.h;$(FC_SOURCE)\Mod\Sketcher\Gui\TaskSketcherCreateCommands.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(FC_SOURCE)\Mod\Sketcher\Gui\moc_TaskSketcherCreateCommands.cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="$(FC_SOURCE)\Mod\Sketcher\Gui\TaskSketcherGeneral.ui">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generating ui_TaskSketcherGeneral.h</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+$(FC_BIN)\uic.exe -o $(FC_SOURCE)/Mod/Sketcher/Gui/ui_TaskSketcherGeneral.h $(FC_SOURCE)/Mod/Sketcher/Gui/TaskSketcherGeneral.ui
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(FC_SOURCE)/Mod/Sketcher/Gui/TaskSketcherGeneral.ui;$(FC_SOURCE)\Mod\Sketcher\Gui\TaskSketcherGeneral.ui;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(FC_SOURCE)\Mod\Sketcher\Gui\ui_TaskSketcherGeneral.h</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Generating ui_TaskSketcherGeneral.h</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+$(FC_BIN)\uic.exe -o $(FC_SOURCE)/Mod/Sketcher/Gui/ui_TaskSketcherGeneral.h $(FC_SOURCE)/Mod/Sketcher/Gui/TaskSketcherGeneral.ui
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(FC_SOURCE)/Mod/Sketcher/Gui/TaskSketcherGeneral.ui;$(FC_SOURCE)\Mod\Sketcher\Gui\TaskSketcherGeneral.ui;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(FC_SOURCE)\Mod\Sketcher\Gui\ui_TaskSketcherGeneral.h</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Generating ui_TaskSketcherGeneral.h</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+$(FC_BIN)\uic.exe -o $(FC_SOURCE)/Mod/Sketcher/Gui/ui_TaskSketcherGeneral.h $(FC_SOURCE)/Mod/Sketcher/Gui/TaskSketcherGeneral.ui
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">$(FC_SOURCE)/Mod/Sketcher/Gui/TaskSketcherGeneral.ui;$(FC_SOURCE)\Mod\Sketcher\Gui\TaskSketcherGeneral.ui;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">$(FC_SOURCE)\Mod\Sketcher\Gui\ui_TaskSketcherGeneral.h</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Generating ui_TaskSketcherGeneral.h</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+$(FC_BIN)\uic.exe -o $(FC_SOURCE)/Mod/Sketcher/Gui/ui_TaskSketcherGeneral.h $(FC_SOURCE)/Mod/Sketcher/Gui/TaskSketcherGeneral.ui
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(FC_SOURCE)/Mod/Sketcher/Gui/TaskSketcherGeneral.ui;$(FC_SOURCE)\Mod\Sketcher\Gui\TaskSketcherGeneral.ui;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(FC_SOURCE)\Mod\Sketcher\Gui\ui_TaskSketcherGeneral.h</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="$(FC_SOURCE)\Mod\Sketcher\Gui\TaskSketcherGeneral.h">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generating moc_TaskSketcherGeneral.cpp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+$(FC_BIN)\moc.exe -DBOOST_TT_HAS_OPERATOR_HPP_INCLUDED $(FC_SOURCE)/Mod/Sketcher/Gui/TaskSketcherGeneral.h -o $(FC_SOURCE)/Mod/Sketcher/Gui/moc_TaskSketcherGeneral.cpp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(FC_SOURCE)/Mod/Sketcher/Gui/TaskSketcherGeneral.h;$(FC_SOURCE)\Mod\Sketcher\Gui\TaskSketcherGeneral.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(FC_SOURCE)\Mod\Sketcher\Gui\moc_TaskSketcherGeneral.cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Generating moc_TaskSketcherGeneral.cpp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+$(FC_BIN)\moc.exe -DBOOST_TT_HAS_OPERATOR_HPP_INCLUDED $(FC_SOURCE)/Mod/Sketcher/Gui/TaskSketcherGeneral.h -o $(FC_SOURCE)/Mod/Sketcher/Gui/moc_TaskSketcherGeneral.cpp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(FC_SOURCE)/Mod/Sketcher/Gui/TaskSketcherGeneral.h;$(FC_SOURCE)\Mod\Sketcher\Gui\TaskSketcherGeneral.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(FC_SOURCE)\Mod\Sketcher\Gui\moc_TaskSketcherGeneral.cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Generating moc_TaskSketcherGeneral.cpp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+$(FC_BIN)\moc.exe -DBOOST_TT_HAS_OPERATOR_HPP_INCLUDED $(FC_SOURCE)/Mod/Sketcher/Gui/TaskSketcherGeneral.h -o $(FC_SOURCE)/Mod/Sketcher/Gui/moc_TaskSketcherGeneral.cpp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">$(FC_SOURCE)/Mod/Sketcher/Gui/TaskSketcherGeneral.h;$(FC_SOURCE)\Mod\Sketcher\Gui\TaskSketcherGeneral.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">$(FC_SOURCE)\Mod\Sketcher\Gui\moc_TaskSketcherGeneral.cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Generating moc_TaskSketcherGeneral.cpp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+$(FC_BIN)\moc.exe -DBOOST_TT_HAS_OPERATOR_HPP_INCLUDED $(FC_SOURCE)/Mod/Sketcher/Gui/TaskSketcherGeneral.h -o $(FC_SOURCE)/Mod/Sketcher/Gui/moc_TaskSketcherGeneral.cpp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(FC_SOURCE)/Mod/Sketcher/Gui/TaskSketcherGeneral.h;$(FC_SOURCE)\Mod\Sketcher\Gui\TaskSketcherGeneral.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(FC_SOURCE)\Mod\Sketcher\Gui\moc_TaskSketcherGeneral.cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="$(FC_SOURCE)\Mod\Sketcher\Gui\TaskSketcherMessages.ui">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generating ui_TaskSketcherMessages.h</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+$(FC_BIN)\uic.exe -o $(FC_SOURCE)/Mod/Sketcher/Gui/ui_TaskSketcherMessages.h $(FC_SOURCE)/Mod/Sketcher/Gui/TaskSketcherMessages.ui
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(FC_SOURCE)/Mod/Sketcher/Gui/TaskSketcherMessages.ui;$(FC_SOURCE)\Mod\Sketcher\Gui\TaskSketcherMessages.ui;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(FC_SOURCE)\Mod\Sketcher\Gui\ui_TaskSketcherMessages.h</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Generating ui_TaskSketcherMessages.h</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+$(FC_BIN)\uic.exe -o $(FC_SOURCE)/Mod/Sketcher/Gui/ui_TaskSketcherMessages.h $(FC_SOURCE)/Mod/Sketcher/Gui/TaskSketcherMessages.ui
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(FC_SOURCE)/Mod/Sketcher/Gui/TaskSketcherMessages.ui;$(FC_SOURCE)\Mod\Sketcher\Gui\TaskSketcherMessages.ui;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(FC_SOURCE)\Mod\Sketcher\Gui\ui_TaskSketcherMessages.h</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Generating ui_TaskSketcherMessages.h</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+$(FC_BIN)\uic.exe -o $(FC_SOURCE)/Mod/Sketcher/Gui/ui_TaskSketcherMessages.h $(FC_SOURCE)/Mod/Sketcher/Gui/TaskSketcherMessages.ui
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">$(FC_SOURCE)/Mod/Sketcher/Gui/TaskSketcherMessages.ui;$(FC_SOURCE)\Mod\Sketcher\Gui\TaskSketcherMessages.ui;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">$(FC_SOURCE)\Mod\Sketcher\Gui\ui_TaskSketcherMessages.h</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Generating ui_TaskSketcherMessages.h</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+$(FC_BIN)\uic.exe -o $(FC_SOURCE)/Mod/Sketcher/Gui/ui_TaskSketcherMessages.h $(FC_SOURCE)/Mod/Sketcher/Gui/TaskSketcherMessages.ui
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(FC_SOURCE)/Mod/Sketcher/Gui/TaskSketcherMessages.ui;$(FC_SOURCE)\Mod\Sketcher\Gui\TaskSketcherMessages.ui;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(FC_SOURCE)\Mod\Sketcher\Gui\ui_TaskSketcherMessages.h</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="$(FC_SOURCE)\Mod\Sketcher\Gui\TaskSketcherMessages.h">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generating moc_TaskSketcherMessages.cpp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+$(FC_BIN)\moc.exe -DBOOST_TT_HAS_OPERATOR_HPP_INCLUDED $(FC_SOURCE)/Mod/Sketcher/Gui/TaskSketcherMessages.h -o $(FC_SOURCE)/Mod/Sketcher/Gui/moc_TaskSketcherMessages.cpp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(FC_SOURCE)/Mod/Sketcher/Gui/TaskSketcherMessages.h;$(FC_SOURCE)\Mod\Sketcher\Gui\TaskSketcherMessages.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(FC_SOURCE)\Mod\Sketcher\Gui\moc_TaskSketcherMessages.cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Generating moc_TaskSketcherMessages.cpp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+$(FC_BIN)\moc.exe -DBOOST_TT_HAS_OPERATOR_HPP_INCLUDED $(FC_SOURCE)/Mod/Sketcher/Gui/TaskSketcherMessages.h -o $(FC_SOURCE)/Mod/Sketcher/Gui/moc_TaskSketcherMessages.cpp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(FC_SOURCE)/Mod/Sketcher/Gui/TaskSketcherMessages.h;$(FC_SOURCE)\Mod\Sketcher\Gui\TaskSketcherMessages.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(FC_SOURCE)\Mod\Sketcher\Gui\moc_TaskSketcherMessages.cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Generating moc_TaskSketcherMessages.cpp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+$(FC_BIN)\moc.exe -DBOOST_TT_HAS_OPERATOR_HPP_INCLUDED $(FC_SOURCE)/Mod/Sketcher/Gui/TaskSketcherMessages.h -o $(FC_SOURCE)/Mod/Sketcher/Gui/moc_TaskSketcherMessages.cpp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">$(FC_SOURCE)/Mod/Sketcher/Gui/TaskSketcherMessages.h;$(FC_SOURCE)\Mod\Sketcher\Gui\TaskSketcherMessages.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">$(FC_SOURCE)\Mod\Sketcher\Gui\moc_TaskSketcherMessages.cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Generating moc_TaskSketcherMessages.cpp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+$(FC_BIN)\moc.exe -DBOOST_TT_HAS_OPERATOR_HPP_INCLUDED $(FC_SOURCE)/Mod/Sketcher/Gui/TaskSketcherMessages.h -o $(FC_SOURCE)/Mod/Sketcher/Gui/moc_TaskSketcherMessages.cpp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(FC_SOURCE)/Mod/Sketcher/Gui/TaskSketcherMessages.h;$(FC_SOURCE)\Mod\Sketcher\Gui\TaskSketcherMessages.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(FC_SOURCE)\Mod\Sketcher\Gui\moc_TaskSketcherMessages.cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="$(FC_SOURCE)\Mod\Sketcher\Gui\TaskSketcherSolverAdvanced.ui">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generating ui_TaskSketcherSolverAdvanced.h</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+$(FC_BIN)\uic.exe -o $(FC_SOURCE)/Mod/Sketcher/Gui/ui_TaskSketcherSolverAdvanced.h $(FC_SOURCE)/Mod/Sketcher/Gui/TaskSketcherSolverAdvanced.ui
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(FC_SOURCE)/Mod/Sketcher/Gui/TaskSketcherSolverAdvanced.ui;$(FC_SOURCE)\Mod\Sketcher\Gui\TaskSketcherSolverAdvanced.ui;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(FC_SOURCE)\Mod\Sketcher\Gui\ui_TaskSketcherSolverAdvanced.h</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Generating ui_TaskSketcherSolverAdvanced.h</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+$(FC_BIN)\uic.exe -o $(FC_SOURCE)/Mod/Sketcher/Gui/ui_TaskSketcherSolverAdvanced.h $(FC_SOURCE)/Mod/Sketcher/Gui/TaskSketcherSolverAdvanced.ui
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(FC_SOURCE)/Mod/Sketcher/Gui/TaskSketcherSolverAdvanced.ui;$(FC_SOURCE)\Mod\Sketcher\Gui\TaskSketcherSolverAdvanced.ui;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(FC_SOURCE)\Mod\Sketcher\Gui\ui_TaskSketcherSolverAdvanced.h</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Generating ui_TaskSketcherSolverAdvanced.h</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+$(FC_BIN)\uic.exe -o $(FC_SOURCE)/Mod/Sketcher/Gui/ui_TaskSketcherSolverAdvanced.h $(FC_SOURCE)/Mod/Sketcher/Gui/TaskSketcherSolverAdvanced.ui
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">$(FC_SOURCE)/Mod/Sketcher/Gui/TaskSketcherSolverAdvanced.ui;$(FC_SOURCE)\Mod\Sketcher\Gui\TaskSketcherSolverAdvanced.ui;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">$(FC_SOURCE)\Mod\Sketcher\Gui\ui_TaskSketcherSolverAdvanced.h</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Generating ui_TaskSketcherSolverAdvanced.h</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+$(FC_BIN)\uic.exe -o $(FC_SOURCE)/Mod/Sketcher/Gui/ui_TaskSketcherSolverAdvanced.h $(FC_SOURCE)/Mod/Sketcher/Gui/TaskSketcherSolverAdvanced.ui
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(FC_SOURCE)/Mod/Sketcher/Gui/TaskSketcherSolverAdvanced.ui;$(FC_SOURCE)\Mod\Sketcher\Gui\TaskSketcherSolverAdvanced.ui;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(FC_SOURCE)\Mod\Sketcher\Gui\ui_TaskSketcherSolverAdvanced.h</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="$(FC_SOURCE)\Mod\Sketcher\Gui\TaskSketcherSolverAdvanced.h">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generating moc_TaskSketcherSolverAdvanced.cpp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+$(FC_BIN)\moc.exe -DBOOST_TT_HAS_OPERATOR_HPP_INCLUDED $(FC_SOURCE)/Mod/Sketcher/Gui/TaskSketcherSolverAdvanced.h -o $(FC_SOURCE)/Mod/Sketcher/Gui/moc_TaskSketcherSolverAdvanced.cpp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(FC_SOURCE)/Mod/Sketcher/Gui/TaskSketcherSolverAdvanced.h;$(FC_SOURCE)\Mod\Sketcher\Gui\TaskSketcherSolverAdvanced.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(FC_SOURCE)\Mod\Sketcher\Gui\moc_TaskSketcherSolverAdvanced.cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Generating moc_TaskSketcherSolverAdvanced.cpp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+$(FC_BIN)\moc.exe -DBOOST_TT_HAS_OPERATOR_HPP_INCLUDED $(FC_SOURCE)/Mod/Sketcher/Gui/TaskSketcherSolverAdvanced.h -o $(FC_SOURCE)/Mod/Sketcher/Gui/moc_TaskSketcherSolverAdvanced.cpp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(FC_SOURCE)/Mod/Sketcher/Gui/TaskSketcherSolverAdvanced.h;$(FC_SOURCE)\Mod\Sketcher\Gui\TaskSketcherSolverAdvanced.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(FC_SOURCE)\Mod\Sketcher\Gui\moc_TaskSketcherSolverAdvanced.cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Generating moc_TaskSketcherSolverAdvanced.cpp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+$(FC_BIN)\moc.exe -DBOOST_TT_HAS_OPERATOR_HPP_INCLUDED $(FC_SOURCE)/Mod/Sketcher/Gui/TaskSketcherSolverAdvanced.h -o $(FC_SOURCE)/Mod/Sketcher/Gui/moc_TaskSketcherSolverAdvanced.cpp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">$(FC_SOURCE)/Mod/Sketcher/Gui/TaskSketcherSolverAdvanced.h;$(FC_SOURCE)\Mod\Sketcher\Gui\TaskSketcherSolverAdvanced.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">$(FC_SOURCE)\Mod\Sketcher\Gui\moc_TaskSketcherSolverAdvanced.cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Generating moc_TaskSketcherSolverAdvanced.cpp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+$(FC_BIN)\moc.exe -DBOOST_TT_HAS_OPERATOR_HPP_INCLUDED $(FC_SOURCE)/Mod/Sketcher/Gui/TaskSketcherSolverAdvanced.h -o $(FC_SOURCE)/Mod/Sketcher/Gui/moc_TaskSketcherSolverAdvanced.cpp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(FC_SOURCE)/Mod/Sketcher/Gui/TaskSketcherSolverAdvanced.h;$(FC_SOURCE)\Mod\Sketcher\Gui\TaskSketcherSolverAdvanced.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(FC_SOURCE)\Mod\Sketcher\Gui\moc_TaskSketcherSolverAdvanced.cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="$(FC_SOURCE)\Mod\Sketcher\Gui\TaskSketcherValidation.ui">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generating ui_TaskSketcherValidation.h</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+$(FC_BIN)\uic.exe -o $(FC_SOURCE)/Mod/Sketcher/Gui/ui_TaskSketcherValidation.h $(FC_SOURCE)/Mod/Sketcher/Gui/TaskSketcherValidation.ui
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(FC_SOURCE)/Mod/Sketcher/Gui/TaskSketcherValidation.ui;$(FC_SOURCE)\Mod\Sketcher\Gui\TaskSketcherValidation.ui;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(FC_SOURCE)\Mod\Sketcher\Gui\ui_TaskSketcherValidation.h</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Generating ui_TaskSketcherValidation.h</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+$(FC_BIN)\uic.exe -o $(FC_SOURCE)/Mod/Sketcher/Gui/ui_TaskSketcherValidation.h $(FC_SOURCE)/Mod/Sketcher/Gui/TaskSketcherValidation.ui
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(FC_SOURCE)/Mod/Sketcher/Gui/TaskSketcherValidation.ui;$(FC_SOURCE)\Mod\Sketcher\Gui\TaskSketcherValidation.ui;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(FC_SOURCE)\Mod\Sketcher\Gui\ui_TaskSketcherValidation.h</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Generating ui_TaskSketcherValidation.h</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+$(FC_BIN)\uic.exe -o $(FC_SOURCE)/Mod/Sketcher/Gui/ui_TaskSketcherValidation.h $(FC_SOURCE)/Mod/Sketcher/Gui/TaskSketcherValidation.ui
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">$(FC_SOURCE)/Mod/Sketcher/Gui/TaskSketcherValidation.ui;$(FC_SOURCE)\Mod\Sketcher\Gui\TaskSketcherValidation.ui;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">$(FC_SOURCE)\Mod\Sketcher\Gui\ui_TaskSketcherValidation.h</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Generating ui_TaskSketcherValidation.h</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+$(FC_BIN)\uic.exe -o $(FC_SOURCE)/Mod/Sketcher/Gui/ui_TaskSketcherValidation.h $(FC_SOURCE)/Mod/Sketcher/Gui/TaskSketcherValidation.ui
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(FC_SOURCE)/Mod/Sketcher/Gui/TaskSketcherValidation.ui;$(FC_SOURCE)\Mod\Sketcher\Gui\TaskSketcherValidation.ui;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(FC_SOURCE)\Mod\Sketcher\Gui\ui_TaskSketcherValidation.h</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="$(FC_SOURCE)\Mod\Sketcher\Gui\TaskSketcherValidation.h">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generating moc_TaskSketcherValidation.cpp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+$(FC_BIN)\moc.exe -DBOOST_TT_HAS_OPERATOR_HPP_INCLUDED $(FC_SOURCE)/Mod/Sketcher/Gui/TaskSketcherValidation.h -o $(FC_SOURCE)/Mod/Sketcher/Gui/moc_TaskSketcherValidation.cpp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(FC_SOURCE)/Mod/Sketcher/Gui/TaskSketcherValidation.h;$(FC_SOURCE)\Mod\Sketcher\Gui\TaskSketcherValidation.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(FC_SOURCE)\Mod\Sketcher\Gui\moc_TaskSketcherValidation.cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Generating moc_TaskSketcherValidation.cpp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+$(FC_BIN)\moc.exe -DBOOST_TT_HAS_OPERATOR_HPP_INCLUDED $(FC_SOURCE)/Mod/Sketcher/Gui/TaskSketcherValidation.h -o $(FC_SOURCE)/Mod/Sketcher/Gui/moc_TaskSketcherValidation.cpp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(FC_SOURCE)/Mod/Sketcher/Gui/TaskSketcherValidation.h;$(FC_SOURCE)\Mod\Sketcher\Gui\TaskSketcherValidation.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(FC_SOURCE)\Mod\Sketcher\Gui\moc_TaskSketcherValidation.cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Generating moc_TaskSketcherValidation.cpp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+$(FC_BIN)\moc.exe -DBOOST_TT_HAS_OPERATOR_HPP_INCLUDED $(FC_SOURCE)/Mod/Sketcher/Gui/TaskSketcherValidation.h -o $(FC_SOURCE)/Mod/Sketcher/Gui/moc_TaskSketcherValidation.cpp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">$(FC_SOURCE)/Mod/Sketcher/Gui/TaskSketcherValidation.h;$(FC_SOURCE)\Mod\Sketcher\Gui\TaskSketcherValidation.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">$(FC_SOURCE)\Mod\Sketcher\Gui\moc_TaskSketcherValidation.cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Generating moc_TaskSketcherValidation.cpp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+$(FC_BIN)\moc.exe -DBOOST_TT_HAS_OPERATOR_HPP_INCLUDED $(FC_SOURCE)/Mod/Sketcher/Gui/TaskSketcherValidation.h -o $(FC_SOURCE)/Mod/Sketcher/Gui/moc_TaskSketcherValidation.cpp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(FC_SOURCE)/Mod/Sketcher/Gui/TaskSketcherValidation.h;$(FC_SOURCE)\Mod\Sketcher\Gui\TaskSketcherValidation.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(FC_SOURCE)\Mod\Sketcher\Gui\moc_TaskSketcherValidation.cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="$(FC_SOURCE)\Mod\Sketcher\Gui\SketchOrientationDialog.h">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generating moc_SketchOrientationDialog.cpp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+$(FC_BIN)\moc.exe -DBOOST_TT_HAS_OPERATOR_HPP_INCLUDED $(FC_SOURCE)/Mod/Sketcher/Gui/SketchOrientationDialog.h -o $(FC_SOURCE)/Mod/Sketcher/Gui/moc_SketchOrientationDialog.cpp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(FC_SOURCE)/Mod/Sketcher/Gui/SketchOrientationDialog.h;$(FC_SOURCE)\Mod\Sketcher\Gui\SketchOrientationDialog.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(FC_SOURCE)\Mod\Sketcher\Gui\moc_SketchOrientationDialog.cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Generating moc_SketchOrientationDialog.cpp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+$(FC_BIN)\moc.exe -DBOOST_TT_HAS_OPERATOR_HPP_INCLUDED $(FC_SOURCE)/Mod/Sketcher/Gui/SketchOrientationDialog.h -o $(FC_SOURCE)/Mod/Sketcher/Gui/moc_SketchOrientationDialog.cpp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(FC_SOURCE)/Mod/Sketcher/Gui/SketchOrientationDialog.h;$(FC_SOURCE)\Mod\Sketcher\Gui\SketchOrientationDialog.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(FC_SOURCE)\Mod\Sketcher\Gui\moc_SketchOrientationDialog.cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Generating moc_SketchOrientationDialog.cpp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+$(FC_BIN)\moc.exe -DBOOST_TT_HAS_OPERATOR_HPP_INCLUDED $(FC_SOURCE)/Mod/Sketcher/Gui/SketchOrientationDialog.h -o $(FC_SOURCE)/Mod/Sketcher/Gui/moc_SketchOrientationDialog.cpp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">$(FC_SOURCE)/Mod/Sketcher/Gui/SketchOrientationDialog.h;$(FC_SOURCE)\Mod\Sketcher\Gui\SketchOrientationDialog.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">$(FC_SOURCE)\Mod\Sketcher\Gui\moc_SketchOrientationDialog.cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Generating moc_SketchOrientationDialog.cpp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+$(FC_BIN)\moc.exe -DBOOST_TT_HAS_OPERATOR_HPP_INCLUDED $(FC_SOURCE)/Mod/Sketcher/Gui/SketchOrientationDialog.h -o $(FC_SOURCE)/Mod/Sketcher/Gui/moc_SketchOrientationDialog.cpp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(FC_SOURCE)/Mod/Sketcher/Gui/SketchOrientationDialog.h;$(FC_SOURCE)\Mod\Sketcher\Gui\SketchOrientationDialog.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(FC_SOURCE)\Mod\Sketcher\Gui\moc_SketchOrientationDialog.cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="$(FC_SOURCE)\Mod\Sketcher\Gui\SketcherSettings.h">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generating moc_SketcherSettings.cpp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+$(FC_BIN)\moc.exe -DBOOST_TT_HAS_OPERATOR_HPP_INCLUDED $(FC_SOURCE)/Mod/Sketcher/Gui/SketcherSettings.h -o $(FC_SOURCE)/Mod/Sketcher/Gui/moc_SketcherSettings.cpp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(FC_SOURCE)/Mod/Sketcher/Gui/SketcherSettings.h;$(FC_SOURCE)\Mod\Sketcher\Gui\SketcherSettings.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(FC_SOURCE)\Mod\Sketcher\Gui\moc_SketcherSettings.cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Generating moc_SketcherSettings.cpp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+$(FC_BIN)\moc.exe -DBOOST_TT_HAS_OPERATOR_HPP_INCLUDED $(FC_SOURCE)/Mod/Sketcher/Gui/SketcherSettings.h -o $(FC_SOURCE)/Mod/Sketcher/Gui/moc_SketcherSettings.cpp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(FC_SOURCE)/Mod/Sketcher/Gui/SketcherSettings.h;$(FC_SOURCE)\Mod\Sketcher\Gui\SketcherSettings.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(FC_SOURCE)\Mod\Sketcher\Gui\moc_SketcherSettings.cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Generating moc_SketcherSettings.cpp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+$(FC_BIN)\moc.exe -DBOOST_TT_HAS_OPERATOR_HPP_INCLUDED $(FC_SOURCE)/Mod/Sketcher/Gui/SketcherSettings.h -o $(FC_SOURCE)/Mod/Sketcher/Gui/moc_SketcherSettings.cpp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">$(FC_SOURCE)/Mod/Sketcher/Gui/SketcherSettings.h;$(FC_SOURCE)\Mod\Sketcher\Gui\SketcherSettings.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">$(FC_SOURCE)\Mod\Sketcher\Gui\moc_SketcherSettings.cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Generating moc_SketcherSettings.cpp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+$(FC_BIN)\moc.exe -DBOOST_TT_HAS_OPERATOR_HPP_INCLUDED $(FC_SOURCE)/Mod/Sketcher/Gui/SketcherSettings.h -o $(FC_SOURCE)/Mod/Sketcher/Gui/moc_SketcherSettings.cpp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(FC_SOURCE)/Mod/Sketcher/Gui/SketcherSettings.h;$(FC_SOURCE)\Mod\Sketcher\Gui\SketcherSettings.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(FC_SOURCE)\Mod\Sketcher\Gui\moc_SketcherSettings.cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="$(FC_SOURCE)\Mod\Sketcher\Gui\TaskDlgEditSketch.h">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generating moc_TaskDlgEditSketch.cpp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+$(FC_BIN)\moc.exe -DBOOST_TT_HAS_OPERATOR_HPP_INCLUDED $(FC_SOURCE)/Mod/Sketcher/Gui/TaskDlgEditSketch.h -o $(FC_SOURCE)/Mod/Sketcher/Gui/moc_TaskDlgEditSketch.cpp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(FC_SOURCE)/Mod/Sketcher/Gui/TaskDlgEditSketch.h;$(FC_SOURCE)\Mod\Sketcher\Gui\TaskDlgEditSketch.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(FC_SOURCE)\Mod\Sketcher\Gui\moc_TaskDlgEditSketch.cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Generating moc_TaskDlgEditSketch.cpp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+$(FC_BIN)\moc.exe -DBOOST_TT_HAS_OPERATOR_HPP_INCLUDED $(FC_SOURCE)/Mod/Sketcher/Gui/TaskDlgEditSketch.h -o $(FC_SOURCE)/Mod/Sketcher/Gui/moc_TaskDlgEditSketch.cpp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(FC_SOURCE)/Mod/Sketcher/Gui/TaskDlgEditSketch.h;$(FC_SOURCE)\Mod\Sketcher\Gui\TaskDlgEditSketch.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(FC_SOURCE)\Mod\Sketcher\Gui\moc_TaskDlgEditSketch.cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Generating moc_TaskDlgEditSketch.cpp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+$(FC_BIN)\moc.exe -DBOOST_TT_HAS_OPERATOR_HPP_INCLUDED $(FC_SOURCE)/Mod/Sketcher/Gui/TaskDlgEditSketch.h -o $(FC_SOURCE)/Mod/Sketcher/Gui/moc_TaskDlgEditSketch.cpp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">$(FC_SOURCE)/Mod/Sketcher/Gui/TaskDlgEditSketch.h;$(FC_SOURCE)\Mod\Sketcher\Gui\TaskDlgEditSketch.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">$(FC_SOURCE)\Mod\Sketcher\Gui\moc_TaskDlgEditSketch.cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Generating moc_TaskDlgEditSketch.cpp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+$(FC_BIN)\moc.exe -DBOOST_TT_HAS_OPERATOR_HPP_INCLUDED $(FC_SOURCE)/Mod/Sketcher/Gui/TaskDlgEditSketch.h -o $(FC_SOURCE)/Mod/Sketcher/Gui/moc_TaskDlgEditSketch.cpp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(FC_SOURCE)/Mod/Sketcher/Gui/TaskDlgEditSketch.h;$(FC_SOURCE)\Mod\Sketcher\Gui\TaskDlgEditSketch.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(FC_SOURCE)\Mod\Sketcher\Gui\moc_TaskDlgEditSketch.cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="\code\free-cad-code\Source\Repos\code\CMakeFiles\1441a96959fe2714d7ac997be2b95f2e\InitGui.py.rule">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generating ../../../../Mod/Sketcher/InitGui.py</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+$(CMAKE_BIN)\cmake.exe -E copy $(FC_SOURCE)/Mod/Sketcher/InitGui.py $(DEVROOT)/Mod/Sketcher/InitGui.py
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(DEVROOT)/CMakeFiles/1441a96959fe2714d7ac997be2b95f2e/InitGui.py.rule;$(FC_SOURCE)\Mod\Sketcher\InitGui.py;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">\code\free-cad-code\Source\Repos\code\Mod\Sketcher\InitGui.py</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Generating ../../../../Mod/Sketcher/InitGui.py</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+$(CMAKE_BIN)\cmake.exe -E copy $(FC_SOURCE)/Mod/Sketcher/InitGui.py $(DEVROOT)/Mod/Sketcher/InitGui.py
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(DEVROOT)/CMakeFiles/1441a96959fe2714d7ac997be2b95f2e/InitGui.py.rule;$(FC_SOURCE)\Mod\Sketcher\InitGui.py;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">\code\free-cad-code\Source\Repos\code\Mod\Sketcher\InitGui.py</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Generating ../../../../Mod/Sketcher/InitGui.py</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+$(CMAKE_BIN)\cmake.exe -E copy $(FC_SOURCE)/Mod/Sketcher/InitGui.py $(DEVROOT)/Mod/Sketcher/InitGui.py
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">$(DEVROOT)/CMakeFiles/1441a96959fe2714d7ac997be2b95f2e/InitGui.py.rule;$(FC_SOURCE)\Mod\Sketcher\InitGui.py;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">\code\free-cad-code\Source\Repos\code\Mod\Sketcher\InitGui.py</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Generating ../../../../Mod/Sketcher/InitGui.py</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+$(CMAKE_BIN)\cmake.exe -E copy $(FC_SOURCE)/Mod/Sketcher/InitGui.py $(DEVROOT)/Mod/Sketcher/InitGui.py
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(DEVROOT)/CMakeFiles/1441a96959fe2714d7ac997be2b95f2e/InitGui.py.rule;$(FC_SOURCE)\Mod\Sketcher\InitGui.py;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">\code\free-cad-code\Source\Repos\code\Mod\Sketcher\InitGui.py</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="\code\free-cad-code\Source\Repos\code\CMakeFiles\1441a96959fe2714d7ac997be2b95f2e\TestSketcherGui.py.rule">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generating ../../../../Mod/Sketcher/TestSketcherGui.py</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+$(CMAKE_BIN)\cmake.exe -E copy $(FC_SOURCE)/Mod/Sketcher/TestSketcherGui.py $(DEVROOT)/Mod/Sketcher/TestSketcherGui.py
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(DEVROOT)/CMakeFiles/1441a96959fe2714d7ac997be2b95f2e/TestSketcherGui.py.rule;$(FC_SOURCE)\Mod\Sketcher\TestSketcherGui.py;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">\code\free-cad-code\Source\Repos\code\Mod\Sketcher\TestSketcherGui.py</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Generating ../../../../Mod/Sketcher/TestSketcherGui.py</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+$(CMAKE_BIN)\cmake.exe -E copy $(FC_SOURCE)/Mod/Sketcher/TestSketcherGui.py $(DEVROOT)/Mod/Sketcher/TestSketcherGui.py
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(DEVROOT)/CMakeFiles/1441a96959fe2714d7ac997be2b95f2e/TestSketcherGui.py.rule;$(FC_SOURCE)\Mod\Sketcher\TestSketcherGui.py;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">\code\free-cad-code\Source\Repos\code\Mod\Sketcher\TestSketcherGui.py</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Generating ../../../../Mod/Sketcher/TestSketcherGui.py</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+$(CMAKE_BIN)\cmake.exe -E copy $(FC_SOURCE)/Mod/Sketcher/TestSketcherGui.py $(DEVROOT)/Mod/Sketcher/TestSketcherGui.py
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">$(DEVROOT)/CMakeFiles/1441a96959fe2714d7ac997be2b95f2e/TestSketcherGui.py.rule;$(FC_SOURCE)\Mod\Sketcher\TestSketcherGui.py;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">\code\free-cad-code\Source\Repos\code\Mod\Sketcher\TestSketcherGui.py</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Generating ../../../../Mod/Sketcher/TestSketcherGui.py</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+$(CMAKE_BIN)\cmake.exe -E copy $(FC_SOURCE)/Mod/Sketcher/TestSketcherGui.py $(DEVROOT)/Mod/Sketcher/TestSketcherGui.py
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(DEVROOT)/CMakeFiles/1441a96959fe2714d7ac997be2b95f2e/TestSketcherGui.py.rule;$(FC_SOURCE)\Mod\Sketcher\TestSketcherGui.py;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">\code\free-cad-code\Source\Repos\code\Mod\Sketcher\TestSketcherGui.py</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="$(FC_SOURCE)\Mod\Sketcher\Gui\InsertDatum.ui">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generating ui_InsertDatum.h</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+$(FC_BIN)\uic.exe -o $(FC_SOURCE)/Mod/Sketcher/Gui/ui_InsertDatum.h $(FC_SOURCE)/Mod/Sketcher/Gui/InsertDatum.ui
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(FC_SOURCE)/Mod/Sketcher/Gui/InsertDatum.ui;$(FC_SOURCE)\Mod\Sketcher\Gui\InsertDatum.ui;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(FC_SOURCE)\Mod\Sketcher\Gui\ui_InsertDatum.h</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Generating ui_InsertDatum.h</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+$(FC_BIN)\uic.exe -o $(FC_SOURCE)/Mod/Sketcher/Gui/ui_InsertDatum.h $(FC_SOURCE)/Mod/Sketcher/Gui/InsertDatum.ui
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(FC_SOURCE)/Mod/Sketcher/Gui/InsertDatum.ui;$(FC_SOURCE)\Mod\Sketcher\Gui\InsertDatum.ui;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(FC_SOURCE)\Mod\Sketcher\Gui\ui_InsertDatum.h</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Generating ui_InsertDatum.h</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+$(FC_BIN)\uic.exe -o $(FC_SOURCE)/Mod/Sketcher/Gui/ui_InsertDatum.h $(FC_SOURCE)/Mod/Sketcher/Gui/InsertDatum.ui
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">$(FC_SOURCE)/Mod/Sketcher/Gui/InsertDatum.ui;$(FC_SOURCE)\Mod\Sketcher\Gui\InsertDatum.ui;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">$(FC_SOURCE)\Mod\Sketcher\Gui\ui_InsertDatum.h</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Generating ui_InsertDatum.h</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+$(FC_BIN)\uic.exe -o $(FC_SOURCE)/Mod/Sketcher/Gui/ui_InsertDatum.h $(FC_SOURCE)/Mod/Sketcher/Gui/InsertDatum.ui
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(FC_SOURCE)/Mod/Sketcher/Gui/InsertDatum.ui;$(FC_SOURCE)\Mod\Sketcher\Gui\InsertDatum.ui;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(FC_SOURCE)\Mod\Sketcher\Gui\ui_InsertDatum.h</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="$(FC_SOURCE)\Mod\Sketcher\Gui\SketchOrientationDialog.ui">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generating ui_SketchOrientationDialog.h</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+$(FC_BIN)\uic.exe -o $(FC_SOURCE)/Mod/Sketcher/Gui/ui_SketchOrientationDialog.h $(FC_SOURCE)/Mod/Sketcher/Gui/SketchOrientationDialog.ui
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(FC_SOURCE)/Mod/Sketcher/Gui/SketchOrientationDialog.ui;$(FC_SOURCE)\Mod\Sketcher\Gui\SketchOrientationDialog.ui;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(FC_SOURCE)\Mod\Sketcher\Gui\ui_SketchOrientationDialog.h</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Generating ui_SketchOrientationDialog.h</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+$(FC_BIN)\uic.exe -o $(FC_SOURCE)/Mod/Sketcher/Gui/ui_SketchOrientationDialog.h $(FC_SOURCE)/Mod/Sketcher/Gui/SketchOrientationDialog.ui
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(FC_SOURCE)/Mod/Sketcher/Gui/SketchOrientationDialog.ui;$(FC_SOURCE)\Mod\Sketcher\Gui\SketchOrientationDialog.ui;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(FC_SOURCE)\Mod\Sketcher\Gui\ui_SketchOrientationDialog.h</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Generating ui_SketchOrientationDialog.h</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+$(FC_BIN)\uic.exe -o $(FC_SOURCE)/Mod/Sketcher/Gui/ui_SketchOrientationDialog.h $(FC_SOURCE)/Mod/Sketcher/Gui/SketchOrientationDialog.ui
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">$(FC_SOURCE)/Mod/Sketcher/Gui/SketchOrientationDialog.ui;$(FC_SOURCE)\Mod\Sketcher\Gui\SketchOrientationDialog.ui;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">$(FC_SOURCE)\Mod\Sketcher\Gui\ui_SketchOrientationDialog.h</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Generating ui_SketchOrientationDialog.h</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+$(FC_BIN)\uic.exe -o $(FC_SOURCE)/Mod/Sketcher/Gui/ui_SketchOrientationDialog.h $(FC_SOURCE)/Mod/Sketcher/Gui/SketchOrientationDialog.ui
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(FC_SOURCE)/Mod/Sketcher/Gui/SketchOrientationDialog.ui;$(FC_SOURCE)\Mod\Sketcher\Gui\SketchOrientationDialog.ui;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(FC_SOURCE)\Mod\Sketcher\Gui\ui_SketchOrientationDialog.h</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="$(FC_SOURCE)\Mod\Sketcher\Gui\SketcherSettings.ui">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generating ui_SketcherSettings.h</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+$(FC_BIN)\uic.exe -o $(FC_SOURCE)/Mod/Sketcher/Gui/ui_SketcherSettings.h $(FC_SOURCE)/Mod/Sketcher/Gui/SketcherSettings.ui
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(FC_SOURCE)/Mod/Sketcher/Gui/SketcherSettings.ui;$(FC_SOURCE)\Mod\Sketcher\Gui\SketcherSettings.ui;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(FC_SOURCE)\Mod\Sketcher\Gui\ui_SketcherSettings.h</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Generating ui_SketcherSettings.h</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+$(FC_BIN)\uic.exe -o $(FC_SOURCE)/Mod/Sketcher/Gui/ui_SketcherSettings.h $(FC_SOURCE)/Mod/Sketcher/Gui/SketcherSettings.ui
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(FC_SOURCE)/Mod/Sketcher/Gui/SketcherSettings.ui;$(FC_SOURCE)\Mod\Sketcher\Gui\SketcherSettings.ui;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(FC_SOURCE)\Mod\Sketcher\Gui\ui_SketcherSettings.h</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Generating ui_SketcherSettings.h</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+$(FC_BIN)\uic.exe -o $(FC_SOURCE)/Mod/Sketcher/Gui/ui_SketcherSettings.h $(FC_SOURCE)/Mod/Sketcher/Gui/SketcherSettings.ui
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">$(FC_SOURCE)/Mod/Sketcher/Gui/SketcherSettings.ui;$(FC_SOURCE)\Mod\Sketcher\Gui\SketcherSettings.ui;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">$(FC_SOURCE)\Mod\Sketcher\Gui\ui_SketcherSettings.h</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Generating ui_SketcherSettings.h</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+$(FC_BIN)\uic.exe -o $(FC_SOURCE)/Mod/Sketcher/Gui/ui_SketcherSettings.h $(FC_SOURCE)/Mod/Sketcher/Gui/SketcherSettings.ui
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(FC_SOURCE)/Mod/Sketcher/Gui/SketcherSettings.ui;$(FC_SOURCE)\Mod\Sketcher\Gui\SketcherSettings.ui;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(FC_SOURCE)\Mod\Sketcher\Gui\ui_SketcherSettings.h</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="$(FC_SOURCE)\Mod\Sketcher\Gui\ui_TaskSketcherConstrains.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Sketcher\Gui\ui_TaskSketcherElements.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Sketcher\Gui\ui_TaskSketcherGeneral.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Sketcher\Gui\ui_TaskSketcherMessages.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Sketcher\Gui\ui_TaskSketcherSolverAdvanced.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Sketcher\Gui\ui_TaskSketcherValidation.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Sketcher\Gui\ui_InsertDatum.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Sketcher\Gui\ui_SketchOrientationDialog.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Sketcher\Gui\ui_SketcherSettings.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Sketcher\Gui\GeometryCreationMode.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Sketcher\Gui\CommandConstraints.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Sketcher\Gui\PreCompiled.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Sketcher\Gui\SoZoomTranslation.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Sketcher\Gui\SoDatumLabel.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Sketcher\Gui\ViewProviderSketch.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Sketcher\Gui\DrawSketchHandler.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Sketcher\Gui\Workbench.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Sketcher\Gui\EditDatumDialog.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Sketcher\Gui\ViewProviderPython.h" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Sketcher\Gui\qrc_Sketcher.cxx" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Sketcher\Gui\AppSketcherGui.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Sketcher\Gui\AppSketcherGuiPy.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Sketcher\Gui\Command.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Sketcher\Gui\CommandCreateGeo.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Sketcher\Gui\CommandConstraints.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Sketcher\Gui\CommandSketcherTools.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Sketcher\Gui\CommandAlterGeometry.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Sketcher\Gui\PreCompiled.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Sketcher\Gui\SoZoomTranslation.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Sketcher\Gui\SoDatumLabel.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Sketcher\Gui\PropertyConstraintListItem.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Sketcher\Gui\TaskSketcherConstrains.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Sketcher\Gui\TaskSketcherElements.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Sketcher\Gui\TaskSketcherCreateCommands.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Sketcher\Gui\TaskSketcherGeneral.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Sketcher\Gui\TaskSketcherMessages.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Sketcher\Gui\TaskSketcherSolverAdvanced.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Sketcher\Gui\TaskSketcherValidation.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Sketcher\Gui\ViewProviderSketch.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Sketcher\Gui\DrawSketchHandler.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Sketcher\Gui\Workbench.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Sketcher\Gui\EditDatumDialog.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Sketcher\Gui\SketchOrientationDialog.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Sketcher\Gui\SketcherSettings.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Sketcher\Gui\TaskDlgEditSketch.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Sketcher\Gui\ViewProviderPython.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="$(FC_SOURCE)/App/FreeCADApp.vcxproj">
+      <Project>106CFB68-340E-3307-8B33-691BFD4C2F84</Project>
+    </ProjectReference>
+    <ProjectReference Include="$(FC_SOURCE)/Base/FreeCADBase.vcxproj">
+      <Project>C318BD7C-A3CA-3454-A3D8-7E815B7B6CC0</Project>
+    </ProjectReference>
+    <ProjectReference Include="$(FC_SOURCE)/Gui/FreeCADGui.vcxproj">
+      <Project>DFA51F4B-58A3-3BF2-B5F0-4D1AE14CB897</Project>
+    </ProjectReference>
+    <ProjectReference Include="$(FC_SOURCE)/Mod/Part/App/Part.vcxproj">
+      <Project>CD9CC58A-54E1-3516-AE9C-CEFF64AC463B</Project>
+    </ProjectReference>
+    <ProjectReference Include="$(FC_SOURCE)/Mod/Part/Gui/PartGui.vcxproj">
+      <Project>446F61D8-23AC-34D3-8ADB-A3100BC111E6</Project>
+    </ProjectReference>
+    <ProjectReference Include="$(FC_SOURCE)/Mod/Sketcher/App/Sketcher.vcxproj">
+      <Project>1D297875-9983-3FD3-9A21-5A33FCB1439D</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

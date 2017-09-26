@@ -1,0 +1,219 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="$(FC_SOURCE)\CXX\cxxextensions.c" />
+    <ClCompile Include="$(FC_SOURCE)\CXX\cxx_extensions.cxx" />
+    <ClCompile Include="$(FC_SOURCE)\CXX\cxxsupport.cxx" />
+    <ClCompile Include="$(FC_SOURCE)\CXX\IndirectPythonInterface.cxx" />
+    <ClCompile Include="$(FC_SOURCE)\Base\Axis.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Base\AxisPyImp.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Base\Base64.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Base\BaseClass.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Base\BaseClassPyImp.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Base\BoundBoxPyImp.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Base\Builder3D.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Base\Console.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Base\CoordinateSystem.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Base\Debugger.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Base\Exception.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Base\Factory.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Base\FileInfo.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Base\FileTemplate.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Base\FutureWatcherProgress.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Base\gzstream.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Base\GeometryPyCXX.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Base\Handle.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Base\InputSource.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Base\Interpreter.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Base\Matrix.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Base\MatrixPyImp.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Base\MemDebug.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Base\Parameter.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Base\ParameterPy.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Base\Persistence.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Base\PersistencePyImp.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Base\Placement.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Base\PlacementPyImp.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Base\PyExport.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Base\PyObjectBase.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Base\Reader.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Base\Rotation.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Base\RotationPyImp.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Base\Sequencer.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Base\Stream.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Base\Swap.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Base\swigpyrun_1.3.25.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Base\swigpyrun_1.3.33.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Base\swigpyrun_1.3.36.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Base\swigpyrun_1.3.38.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Base\swigpyrun_1.3.40.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Base\swigpyrun.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Base\TimeInfo.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Base\Tools.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Base\Tools2D.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Base\Type.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Base\Uuid.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Base\Vector3D.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Base\VectorPyImp.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Base\Writer.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Base\XMLTools.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Base\UnitsApi.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Base\UnitsApiPy.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Base\UnitsSchema.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Base\UnitsSchemaInternal.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Base\UnitsSchemaMKS.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Base\UnitsSchemaImperial1.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Base\Quantity.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Base\QuantityPyImp.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Base\Unit.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Base\UnitPyImp.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Base\PyTools.c" />
+    <ClCompile Include="$(FC_SOURCE)\Base\PreCompiled.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Base\StackWalker.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\zipios++\basicentry.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\zipios++\collcoll.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\zipios++\deflateoutputstreambuf.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\zipios++\dircoll.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\zipios++\directory.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\zipios++\fcoll.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\zipios++\fcollexceptions.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\zipios++\fileentry.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\zipios++\filepath.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\zipios++\filterinputstreambuf.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\zipios++\filteroutputstreambuf.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\zipios++\gzipoutputstream.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\zipios++\gzipoutputstreambuf.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\zipios++\inflateinputstreambuf.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\zipios++\zipfile.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\zipios++\ziphead.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\zipios++\zipheadio.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\zipios++\zipinputstream.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\zipios++\zipinputstreambuf.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\zipios++\zipoutputstreambuf.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\zipios++\zipoutputstream.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="$(FC_SOURCE)\Base\gzstream.h" />
+    <ClInclude Include="$(FC_SOURCE)\Base\Axis.h" />
+    <ClInclude Include="$(FC_SOURCE)\Base\Base64.h" />
+    <ClInclude Include="$(FC_SOURCE)\Base\BaseClass.h" />
+    <ClInclude Include="$(FC_SOURCE)\Base\BoundBox.h" />
+    <ClInclude Include="$(FC_SOURCE)\Base\Builder3D.h" />
+    <ClInclude Include="$(FC_SOURCE)\Base\Console.h" />
+    <ClInclude Include="$(FC_SOURCE)\Base\CoordinateSystem.h" />
+    <ClInclude Include="$(FC_SOURCE)\Base\Debugger.h" />
+    <ClInclude Include="$(FC_SOURCE)\Base\Exception.h" />
+    <ClInclude Include="$(FC_SOURCE)\Base\Factory.h" />
+    <ClInclude Include="$(FC_SOURCE)\Base\FileInfo.h" />
+    <ClInclude Include="$(FC_SOURCE)\Base\FileTemplate.h" />
+    <ClInclude Include="$(FC_SOURCE)\Base\FutureWatcherProgress.h" />
+    <ClInclude Include="$(FC_SOURCE)\Base\fdstream.hpp" />
+    <ClInclude Include="$(FC_SOURCE)\Base\GeometryPyCXX.h" />
+    <ClInclude Include="$(FC_SOURCE)\Base\Handle.h" />
+    <ClInclude Include="$(FC_SOURCE)\Base\InputSource.h" />
+    <ClInclude Include="$(FC_SOURCE)\Base\Interpreter.h" />
+    <ClInclude Include="$(FC_SOURCE)\Base\Matrix.h" />
+    <ClInclude Include="$(FC_SOURCE)\Base\MemDebug.h" />
+    <ClInclude Include="$(FC_SOURCE)\Base\Observer.h" />
+    <ClInclude Include="$(FC_SOURCE)\Base\Parameter.h" />
+    <ClInclude Include="$(FC_SOURCE)\Base\Persistence.h" />
+    <ClInclude Include="$(FC_SOURCE)\Base\Placement.h" />
+    <ClInclude Include="$(FC_SOURCE)\Base\PyExport.h" />
+    <ClInclude Include="$(FC_SOURCE)\Base\PyObjectBase.h" />
+    <ClInclude Include="$(FC_SOURCE)\Base\Reader.h" />
+    <ClInclude Include="$(FC_SOURCE)\Base\Rotation.h" />
+    <ClInclude Include="$(FC_SOURCE)\Base\Sequencer.h" />
+    <ClInclude Include="$(FC_SOURCE)\Base\Stream.h" />
+    <ClInclude Include="$(FC_SOURCE)\Base\Swap.h" />
+    <ClInclude Include="$(FC_SOURCE)\Base\swigpyrun_1.3.25.h" />
+    <ClInclude Include="$(FC_SOURCE)\Base\swigpyrun_1.3.33.h" />
+    <ClInclude Include="$(FC_SOURCE)\Base\swigpyrun_1.3.36.h" />
+    <ClInclude Include="$(FC_SOURCE)\Base\swigpyrun_1.3.38.h" />
+    <ClInclude Include="$(FC_SOURCE)\Base\swigpyrun_1.3.40.h" />
+    <ClInclude Include="$(FC_SOURCE)\Base\swigpyrun.inl" />
+    <ClInclude Include="$(FC_SOURCE)\Base\TimeInfo.h" />
+    <ClInclude Include="$(FC_SOURCE)\Base\Tools.h" />
+    <ClInclude Include="$(FC_SOURCE)\Base\Tools2D.h" />
+    <ClInclude Include="$(FC_SOURCE)\Base\Type.h" />
+    <ClInclude Include="$(FC_SOURCE)\Base\Uuid.h" />
+    <ClInclude Include="$(FC_SOURCE)\Base\Vector3D.h" />
+    <ClInclude Include="$(FC_SOURCE)\Base\ViewProj.h" />
+    <ClInclude Include="$(FC_SOURCE)\Base\Writer.h" />
+    <ClInclude Include="$(FC_SOURCE)\Base\XMLTools.h" />
+    <ClInclude Include="$(FC_SOURCE)\Base\UnitsApi.h" />
+    <ClInclude Include="$(FC_SOURCE)\Base\UnitsSchema.h" />
+    <ClInclude Include="$(FC_SOURCE)\Base\UnitsSchemaInternal.h" />
+    <ClInclude Include="$(FC_SOURCE)\Base\UnitsSchemaMKS.h" />
+    <ClInclude Include="$(FC_SOURCE)\Base\UnitsSchemaImperial1.h" />
+    <ClInclude Include="$(FC_SOURCE)\Base\Quantity.h" />
+    <ClInclude Include="$(FC_SOURCE)\Base\Unit.h" />
+    <ClInclude Include="$(FC_SOURCE)\Base\PyTools.h" />
+    <ClInclude Include="$(FC_SOURCE)\Base\StackWalker.h" />
+    <ClInclude Include="$(FC_SOURCE)\zipios++\backbuffer.h" />
+    <ClInclude Include="$(FC_SOURCE)\zipios++\basicentry.h" />
+    <ClInclude Include="$(FC_SOURCE)\zipios++\collcoll.h" />
+    <ClInclude Include="$(FC_SOURCE)\zipios++\deflateoutputstreambuf.h" />
+    <ClInclude Include="$(FC_SOURCE)\zipios++\dircoll.h" />
+    <ClInclude Include="$(FC_SOURCE)\zipios++\directory.h" />
+    <ClInclude Include="$(FC_SOURCE)\zipios++\fcoll.h" />
+    <ClInclude Include="$(FC_SOURCE)\zipios++\fcollexceptions.h" />
+    <ClInclude Include="$(FC_SOURCE)\zipios++\fileentry.h" />
+    <ClInclude Include="$(FC_SOURCE)\zipios++\filepath.h" />
+    <ClInclude Include="$(FC_SOURCE)\zipios++\filterinputstreambuf.h" />
+    <ClInclude Include="$(FC_SOURCE)\zipios++\filteroutputstreambuf.h" />
+    <ClInclude Include="$(FC_SOURCE)\zipios++\gzipoutputstream.h" />
+    <ClInclude Include="$(FC_SOURCE)\zipios++\gzipoutputstreambuf.h" />
+    <ClInclude Include="$(FC_SOURCE)\zipios++\inflateinputstreambuf.h" />
+    <ClInclude Include="$(FC_SOURCE)\zipios++\meta-iostreams.h" />
+    <ClInclude Include="$(FC_SOURCE)\zipios++\outputstringstream.h" />
+    <ClInclude Include="$(FC_SOURCE)\zipios++\simplesmartptr.h" />
+    <ClInclude Include="$(FC_SOURCE)\zipios++\virtualseeker.h" />
+    <ClInclude Include="$(FC_SOURCE)\zipios++\zipfile.h" />
+    <ClInclude Include="$(FC_SOURCE)\zipios++\ziphead.h" />
+    <ClInclude Include="$(FC_SOURCE)\zipios++\zipheadio.h" />
+    <ClInclude Include="$(FC_SOURCE)\zipios++\zipinputstream.h" />
+    <ClInclude Include="$(FC_SOURCE)\zipios++\zipinputstreambuf.h" />
+    <ClInclude Include="$(FC_SOURCE)\zipios++\zipios_common.h" />
+    <ClInclude Include="$(FC_SOURCE)\zipios++\zipios-config.h" />
+    <ClInclude Include="$(FC_SOURCE)\zipios++\zipios_defs.h" />
+    <ClInclude Include="$(FC_SOURCE)\zipios++\zipoutputstreambuf.h" />
+    <ClInclude Include="$(FC_SOURCE)\zipios++\zipoutputstream.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="$(FC_SOURCE)\Base\AxisPy.xml" />
+    <CustomBuild Include="$(FC_SOURCE)\Base\BaseClassPy.xml" />
+    <CustomBuild Include="$(FC_SOURCE)\Base\BoundBoxPy.xml" />
+    <CustomBuild Include="$(FC_SOURCE)\Base\MatrixPy.xml" />
+    <CustomBuild Include="$(FC_SOURCE)\Base\PersistencePy.xml" />
+    <CustomBuild Include="$(FC_SOURCE)\Base\PlacementPy.xml" />
+    <CustomBuild Include="$(FC_SOURCE)\Base\RotationPy.xml" />
+    <CustomBuild Include="$(FC_SOURCE)\Base\VectorPy.xml" />
+    <CustomBuild Include="$(FC_SOURCE)\Base\QuantityPy.xml" />
+    <CustomBuild Include="$(FC_SOURCE)\Base\UnitPy.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="$(FC_SOURCE)\Base\QuantityParser.l" />
+    <None Include="$(FC_SOURCE)\Base\QuantityParser.y" />
+    <None Include="$(FC_SOURCE)\Base\PreCompiled.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{BD35BF06-C8E8-3366-910F-4955129FFCAC}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{4129A801-9AD2-3DA1-A809-5BC032DABCC2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="zipios">
+      <UniqueIdentifier>{54803C02-6434-3C30-999D-30AF50F76B76}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="pycxx">
+      <UniqueIdentifier>{38FB2772-C3DA-3951-A80C-8F3C5509D68E}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="XML">
+      <UniqueIdentifier>{D8F0DEC7-9BFC-39C9-8396-A24484506E51}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Units">
+      <UniqueIdentifier>{80444703-E390-3DE8-820C-213E16B6D9D1}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

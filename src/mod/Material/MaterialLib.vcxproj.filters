@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="\code\free-cad-code\Source\Repos\code\CMakeFiles\c55a6b61d1b3d8776e269b038e55bd92\None.FCMat.rule" />
+    <CustomBuild Include="\code\free-cad-code\Source\Repos\code\CMakeFiles\c55a6b61d1b3d8776e269b038e55bd92\ABS.FCMat.rule" />
+    <CustomBuild Include="\code\free-cad-code\Source\Repos\code\CMakeFiles\c55a6b61d1b3d8776e269b038e55bd92\CalculiX.FCMat.rule" />
+    <CustomBuild Include="\code\free-cad-code\Source\Repos\code\CMakeFiles\c55a6b61d1b3d8776e269b038e55bd92\Concrete-Generic.FCMat.rule" />
+    <CustomBuild Include="\code\free-cad-code\Source\Repos\code\CMakeFiles\c55a6b61d1b3d8776e269b038e55bd92\PLA.FCMat.rule" />
+    <CustomBuild Include="\code\free-cad-code\Source\Repos\code\CMakeFiles\c55a6b61d1b3d8776e269b038e55bd92\Steel-Generic.FCMat.rule" />
+    <CustomBuild Include="\code\free-cad-code\Source\Repos\code\CMakeFiles\c55a6b61d1b3d8776e269b038e55bd92\Wood-Generic.FCMat.rule" />
+    <CustomBuild Include="\code\free-cad-code\Source\Repos\code\CMakeFiles\c55a6b61d1b3d8776e269b038e55bd92\Readme.txt.rule" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="$(FC_SOURCE)\Mod\Material\StandardMaterial\None.FCMat" />
+    <None Include="$(FC_SOURCE)\Mod\Material\StandardMaterial\ABS.FCMat" />
+    <None Include="$(FC_SOURCE)\Mod\Material\StandardMaterial\CalculiX.FCMat" />
+    <None Include="$(FC_SOURCE)\Mod\Material\StandardMaterial\Concrete-Generic.FCMat" />
+    <None Include="$(FC_SOURCE)\Mod\Material\StandardMaterial\PLA.FCMat" />
+    <None Include="$(FC_SOURCE)\Mod\Material\StandardMaterial\Steel-Generic.FCMat" />
+    <None Include="$(FC_SOURCE)\Mod\Material\StandardMaterial\Wood-Generic.FCMat" />
+    <None Include="$(FC_SOURCE)\Mod\Material\StandardMaterial\Readme.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{5124C73C-630B-3F59-9DFC-D2C200992F06}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MatLib">
+      <UniqueIdentifier>{877C678B-E0DC-3B3B-8A61-7AF95559AC47}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

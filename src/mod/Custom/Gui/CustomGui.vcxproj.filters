@@ -1,0 +1,127 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Mod">
+      <UniqueIdentifier>{8437e7ab-17ce-4f83-8e58-a066b3a64102}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource">
+      <UniqueIdentifier>{a9be6a77-b2d1-459c-9293-11fc61a4ff95}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Dlg">
+      <UniqueIdentifier>{765bedb2-9b1c-47ec-a45b-a5c8dae38fae}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="viewProvider">
+      <UniqueIdentifier>{467d209e-2035-4f64-80b3-19ad81a9dddc}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="AppCustomGui.cpp">
+      <Filter>Mod</Filter>
+    </ClCompile>
+    <ClCompile Include="Command.cpp">
+      <Filter>Mod</Filter>
+    </ClCompile>
+    <ClCompile Include="PreCompiled.cpp">
+      <Filter>Mod</Filter>
+    </ClCompile>
+    <ClCompile Include="Workbench.cpp">
+      <Filter>Mod</Filter>
+    </ClCompile>
+    <ClCompile Include="qrc_Custom.cxx">
+      <Filter>Resource</Filter>
+    </ClCompile>
+    <ClCompile Include="ParamSetPage.cpp">
+      <Filter>Dlg</Filter>
+    </ClCompile>
+    <ClCompile Include="ViewProviderCustomPath.cpp">
+      <Filter>viewProvider</Filter>
+    </ClCompile>
+    <ClCompile Include="CutterPlayer.cpp" />
+    <ClCompile Include="CreateToolsDlg.cpp">
+      <Filter>Dlg</Filter>
+    </ClCompile>
+    <ClCompile Include="GrindingWheelDlg.cpp">
+      <Filter>Dlg</Filter>
+    </ClCompile>
+    <ClCompile Include="CreatePathDlg.cpp">
+      <Filter>Dlg</Filter>
+    </ClCompile>
+    <ClCompile Include="CreateNCfileDlg.cpp">
+      <Filter>Dlg</Filter>
+    </ClCompile>
+    <ClCompile Include="PlayPathDlg.cpp">
+      <Filter>Dlg</Filter>
+    </ClCompile>
+    <ClCompile Include="CreateBallCutter.cpp">
+      <Filter>Dlg</Filter>
+    </ClCompile>
+    <ClCompile Include="ParamDockWindow.cpp">
+      <Filter>Dlg</Filter>
+    </ClCompile>
+    <ClCompile Include="setPartLocationDlg.cpp" />
+    <ClCompile Include="ViewProviderNC.cpp">
+      <Filter>viewProvider</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="PreCompiled.h">
+      <Filter>Mod</Filter>
+    </ClInclude>
+    <ClInclude Include="Workbench.h">
+      <Filter>Mod</Filter>
+    </ClInclude>
+    <ClInclude Include="ViewProviderCustomPath.h">
+      <Filter>viewProvider</Filter>
+    </ClInclude>
+    <ClInclude Include="ViewProviderNC.h">
+      <Filter>viewProvider</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="ParamSetPage.ui">
+      <Filter>Dlg</Filter>
+    </CustomBuild>
+    <CustomBuild Include="ParamSetPage.h">
+      <Filter>Dlg</Filter>
+    </CustomBuild>
+    <CustomBuild Include="CutterPlayer.h" />
+    <CustomBuild Include="GrindingWheelDlg.h">
+      <Filter>Dlg</Filter>
+    </CustomBuild>
+    <CustomBuild Include="CreateToolsDlg.h">
+      <Filter>Dlg</Filter>
+    </CustomBuild>
+    <CustomBuild Include="CreateToolsDlg.ui">
+      <Filter>Dlg</Filter>
+    </CustomBuild>
+    <CustomBuild Include="CreateNCfileDlg.h">
+      <Filter>Dlg</Filter>
+    </CustomBuild>
+    <CustomBuild Include="CreateNCfileDlg.ui">
+      <Filter>Dlg</Filter>
+    </CustomBuild>
+    <CustomBuild Include="CreatePathDlg.h">
+      <Filter>Dlg</Filter>
+    </CustomBuild>
+    <CustomBuild Include="createPathDlg.ui">
+      <Filter>Dlg</Filter>
+    </CustomBuild>
+    <CustomBuild Include="PlayPathDlg.h">
+      <Filter>Dlg</Filter>
+    </CustomBuild>
+    <CustomBuild Include="PlayPathDlg.ui">
+      <Filter>Dlg</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\Custom.qrc">
+      <Filter>Resource</Filter>
+    </CustomBuild>
+    <CustomBuild Include="GrindingWheelDlg.ui">
+      <Filter>Dlg</Filter>
+    </CustomBuild>
+    <CustomBuild Include="CreateBallCutter.h" />
+    <CustomBuild Include="ParamDockWindow.h" />
+    <CustomBuild Include="createBallCutter.ui" />
+    <CustomBuild Include="setPartLocationDlg.h" />
+    <CustomBuild Include="setPartLocationDlg.ui" />
+  </ItemGroup>
+</Project>

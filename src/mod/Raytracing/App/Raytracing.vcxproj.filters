@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="$(FC_SOURCE)\Mod\Raytracing\App\AppRaytracing.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Raytracing\App\AppRaytracingPy.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Raytracing\App\PovTools.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Raytracing\App\LuxTools.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Raytracing\App\PreCompiled.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Raytracing\App\RayFeature.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Raytracing\App\RayProject.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Raytracing\App\RaySegment.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Raytracing\App\LuxFeature.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Raytracing\App\LuxProject.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="$(FC_SOURCE)\Mod\Raytracing\App\PovTools.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Raytracing\App\LuxTools.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Raytracing\App\PreCompiled.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Raytracing\App\RayFeature.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Raytracing\App\RayProject.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Raytracing\App\RaySegment.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Raytracing\App\LuxFeature.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Raytracing\App\LuxProject.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="$(FC_SOURCE)\Mod\Raytracing\App\FreeCADpov" />
+    <CustomBuild Include="\code\free-cad-code\Source\Repos\code\CMakeFiles\126c38985c0f6908033f931909e565a6\Init.py.rule" />
+    <CustomBuild Include="\code\free-cad-code\Source\Repos\code\CMakeFiles\126c38985c0f6908033f931909e565a6\RaytracingExample.py.rule" />
+    <CustomBuild Include="\code\free-cad-code\Source\Repos\code\CMakeFiles\97480509eaeacbc7df9453f3e657ca36\LuxClassic.lxs.rule" />
+    <CustomBuild Include="\code\free-cad-code\Source\Repos\code\CMakeFiles\97480509eaeacbc7df9453f3e657ca36\LuxOutdoor.lxs.rule" />
+    <CustomBuild Include="\code\free-cad-code\Source\Repos\code\CMakeFiles\97480509eaeacbc7df9453f3e657ca36\ProjectStd.pov.rule" />
+    <CustomBuild Include="\code\free-cad-code\Source\Repos\code\CMakeFiles\97480509eaeacbc7df9453f3e657ca36\RadiosityNormal.pov.rule" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{BD35BF06-C8E8-3366-910F-4955129FFCAC}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{4129A801-9AD2-3DA1-A809-5BC032DABCC2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{5124C73C-630B-3F59-9DFC-D2C200992F06}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

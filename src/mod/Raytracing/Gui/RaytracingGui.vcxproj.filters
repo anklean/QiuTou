@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="$(FC_SOURCE)\Mod\Raytracing\Gui\qrc_Raytracing.cxx" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Raytracing\Gui\AppRaytracingGui.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Raytracing\Gui\AppRaytracingGuiPy.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Raytracing\Gui\Command.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Raytracing\Gui\DlgSettingsRayImp.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Raytracing\Gui\PovrayHighlighter.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Raytracing\Gui\PreCompiled.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Raytracing\Gui\ViewProvider.cpp" />
+    <ClCompile Include="$(FC_SOURCE)\Mod\Raytracing\Gui\Workbench.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="$(FC_SOURCE)\Mod\Raytracing\Gui\ui_DlgSettingsRay.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Raytracing\Gui\PovrayHighlighter.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Raytracing\Gui\PreCompiled.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Raytracing\Gui\ViewProvider.h" />
+    <ClInclude Include="$(FC_SOURCE)\Mod\Raytracing\Gui\Workbench.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="$(FC_SOURCE)\Mod\Raytracing\Gui\Resources\Raytracing.qrc" />
+    <CustomBuild Include="$(FC_SOURCE)\Mod\Raytracing\Gui\DlgSettingsRay.ui" />
+    <CustomBuild Include="$(FC_SOURCE)\Mod\Raytracing\Gui\DlgSettingsRayImp.h" />
+    <CustomBuild Include="$(FC_SOURCE)\Mod\Raytracing\Gui\FreeCADpov" />
+    <CustomBuild Include="\code\free-cad-code\Source\Repos\code\CMakeFiles\126c38985c0f6908033f931909e565a6\InitGui.py.rule" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{BD35BF06-C8E8-3366-910F-4955129FFCAC}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{4129A801-9AD2-3DA1-A809-5BC032DABCC2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{5124C73C-630B-3F59-9DFC-D2C200992F06}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource">
+      <UniqueIdentifier>{0328B962-5D65-3B13-A9F0-F84103A543D7}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

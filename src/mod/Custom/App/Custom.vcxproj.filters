@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Mod">
+      <UniqueIdentifier>{1016535c-cb16-40c8-afcb-a671f8bf83ad}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Object">
+      <UniqueIdentifier>{a5b5b819-e927-4cef-989b-41ed4f634efa}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Data">
+      <UniqueIdentifier>{fad69c98-d340-4773-959e-a191df35936b}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="PreCompiled.cpp">
+      <Filter>Mod</Filter>
+    </ClCompile>
+    <ClCompile Include="AppCustom.cpp">
+      <Filter>Mod</Filter>
+    </ClCompile>
+    <ClCompile Include="AppCustomPy.cpp">
+      <Filter>Mod</Filter>
+    </ClCompile>
+    <ClCompile Include="BallCutter.cpp">
+      <Filter>Object</Filter>
+    </ClCompile>
+    <ClCompile Include="PathObject.cpp">
+      <Filter>Object</Filter>
+    </ClCompile>
+    <ClCompile Include="NCOutputter.cpp" />
+    <ClCompile Include="CreateNCData.cpp">
+      <Filter>Data</Filter>
+    </ClCompile>
+    <ClCompile Include="CreatePathData.cpp">
+      <Filter>Data</Filter>
+    </ClCompile>
+    <ClCompile Include="Polygon_Functions.cpp" />
+    <ClCompile Include="PathBuilder.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="PreCompiled.h">
+      <Filter>Mod</Filter>
+    </ClInclude>
+    <ClInclude Include="BallCutter.h">
+      <Filter>Object</Filter>
+    </ClInclude>
+    <ClInclude Include="PathObject.h">
+      <Filter>Object</Filter>
+    </ClInclude>
+    <ClInclude Include="NCOutputter.h" />
+    <ClInclude Include="CreateNCData.h">
+      <Filter>Data</Filter>
+    </ClInclude>
+    <ClInclude Include="CreatePathData.h">
+      <Filter>Data</Filter>
+    </ClInclude>
+    <ClInclude Include="Polygon_Functions.h" />
+    <ClInclude Include="PathBuilder.h" />
+  </ItemGroup>
+</Project>
