@@ -25,9 +25,9 @@ void SetPartLocationDlg::onCancle()
 
 Base::Vector3d SetPartLocationDlg::getLocation()
 {
-	double dx = ui.doubleSpinBox->value();
-	double dy = ui.doubleSpinBox_2->value();
-	double dz = ui.doubleSpinBox_3->value();
+	double dx = ui.doubleSpinBox->text().toDouble();
+	double dy = ui.doubleSpinBox_2->text().toDouble();
+	double dz = ui.doubleSpinBox_3->text().toDouble();
 
 	Base::Vector3d pos(dx, dy, dz);
 	return pos;

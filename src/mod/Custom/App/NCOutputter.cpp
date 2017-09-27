@@ -202,7 +202,7 @@ void NCOutPutter::printAPath(std::ofstream& ofs, int& nlines, Custom::PathObject
 			if (fabs(step.Point.z - lastStep.Point.z) > tol)
 				ofs << " Z" << step.Point.z << " ";
 			//if (fabs(da - la) > tol)
-				ofs << " A" << da  << " B" << db << " C" << dc;
+				ofs << " A" << da /* << " B" << db << " C" << dc*/;
 			//if (fabs(step.speed - lastStep.speed) > tol)
 				ofs << " F" << local_speed << " ";
 			ofs << std::endl;

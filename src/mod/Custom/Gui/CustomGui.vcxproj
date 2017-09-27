@@ -555,6 +555,9 @@ exit /b %1
 if %errorlevel% neq 0 goto :VCEnd</Command>
       <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generating qrc_Custom.cxx</Message>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(FC_SOURCE)\Mod\Custom\Gui\qrc_Custom.cxx</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(FC_BIN)\rcc.exe -name Custom -o $(FC_SOURCE)/Mod/Custom/Gui/qrc_Custom.cxx $(FC_SOURCE)/Mod/Custom/Gui/Resources/Custom.qrc</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Generating qrc_Custom.cxx</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(FC_SOURCE)\Mod\Custom\Gui\qrc_Custom.cxx</Outputs>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>

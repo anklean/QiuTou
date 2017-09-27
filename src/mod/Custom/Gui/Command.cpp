@@ -279,14 +279,33 @@ void CmdCustomBuildPath::activated(int iMsg)
 	CreatePathData data;
 	QStringList lstFaces;
 	QStringList lstCurves;
+
+	
 	std::vector<Gui::SelectionObject>  selobjs = Gui::Selection().getSelectionEx();
 	for (std::vector<Gui::SelectionObject>::iterator it = selobjs.begin(); it != selobjs.end(); it++)
 	{
-		std::string s = it->getAsPropertyLinkSubString();
-		if (s.find("[\"Face")!=s.npos)
-			lstFaces.push_back(Base::Tools::fromStdString(s));
-		else if (s.find("[\"Edge") != s.npos)
-			lstCurves.push_back(Base::Tools::fromStdString(s));
+		std::string ss = (*it).getAsPropertyLinkSubString();
+
+		std::string buf1 = "", buf2 = "";
+		buf1 += "(App.ActiveDocument.";
+		buf1 += (*it).getFeatName();
+		buf1 += ",[\"";
+		buf2 += "\"])";
+		std::vector<std::string> names = (*it).getSubNames();
+		for (int i = 0; i < names.size(); i++)
+		{
+			std::string s = names[i];
+			if (s.find("Face") != s.npos)
+			{
+				s = buf1 + s + buf2;
+				lstFaces.push_back(Base::Tools::fromStdString(s));
+			}
+			else if (s.find("Edge") != s.npos)
+			{
+				s = buf1 + s + buf2;
+				lstCurves.push_back(Base::Tools::fromStdString(s));
+			}
+		}	
 	}
 	data.setFaces(lstFaces);
 	data.setCurves(lstCurves);
@@ -480,24 +499,28 @@ void CmdCustomBuildNCFile::activated(int iMsg)
 	
 
 	CreateNCData data;
-	QStringList lstPaths;
-	Base::Placement workcs;
+	QStringList lstFaces;
 	std::vector<Gui::SelectionObject>  selobjs = Gui::Selection().getSelectionEx();
 	for (std::vector<Gui::SelectionObject>::iterator it = selobjs.begin(); it != selobjs.end(); it++)
 	{
-		QString ss = QString::fromAscii("App.ActiveDocument.%1").arg(QString::fromAscii((*it).getFeatName()));	
-		lstPaths.push_back(ss);
-		App::DocumentObject* obj = it->getObject();
-		if (obj->getTypeId().isDerivedFrom(Part::Feature::getClassTypeId()))
+		std::string buf1 = "";
+
+		buf1 += (*it).getFeatName();
+		buf1 += ".";
+		std::vector<std::string> names = (*it).getSubNames();
+		for (int i = 0; i < names.size(); i++)
 		{
-			Part::Feature* fea = dynamic_cast<Part::Feature*>(obj);
-			if (fea)
-				workcs = fea->Placement.getValue();
+			std::string s = names[i];
+			if (s.find("Face") != s.npos)
+			{
+				s = buf1 + s;
+				lstFaces.push_back(Base::Tools::fromStdString(s));
+			}
 		}
 	}
-	data.setPathList(lstPaths);
-	data.setMachineCS(Base::Placement());
-	data.setWorkCS(workcs);
+	data.setPathList(lstFaces);
+	//data.setMachineCS(Base::Placement());
+	//data.setWorkCS(workcs);
 	data.setSafeHeight(150);
 	data.setSpeed(1000);
 	data.setSavePath(QString::fromAscii("d:\\ccc.anc"));
@@ -526,9 +549,19 @@ void CmdCustomBuildNCFile::activated(int iMsg)
 		CreateNCData data = dlg->getData();
 
 		QStringList lstPaths = data.getPathList();
-		QString strPaths;
+		QString	strPaths = QLatin1String("[");
 		for (int i = 0; i < lstPaths.size(); i++)
-			strPaths += lstPaths[i] + QString::fromAscii(",");
+		{
+			QString ss = lstPaths[i];
+			
+			strPaths+=
+				QString::fromLocal8Bit("(App.ActiveDocument.%1,\"%2\"),")
+				.arg(ss.section(QLatin1Char('.'), 0, 0))
+				.arg(ss.section(QLatin1Char('.'), 1, 1));
+		}
+		if (strPaths.endsWith(QLatin1Char(',')))
+			strPaths.chop(1);	
+		strPaths += QLatin1String("]");
 	
 		QStringList lstBG = data.getBeforeGCode();
 		QString strBGS;
@@ -539,6 +572,126 @@ void CmdCustomBuildNCFile::activated(int iMsg)
 		QString strAGS;
 		for (int i = 0; i < lstAG.size(); i++)
 			strAGS += QString::fromAscii("'")+ lstAG[i] + QString::fromAscii("',");
+
+		QString str = QString::fromAscii(
+			"o=App.ActiveDocument.addObject('Custom::NCOutPutter','NCOutPutter')\n"
+			"o.PathList=%1 \n"
+			"o.OutputFile='%2'\n"
+			"o.BeforeGcode=[%3]\n"
+			"o.AfterGcode=[%4]\n"
+			"o.SafeHeight=%5\n"
+			"o.Speed=%6\n"
+			)
+			.arg(strPaths)
+			.arg(data.getSavePath())
+			.arg(strBGS)
+			.arg(strAGS)
+			.arg(data.getSafeHeight())
+			.arg(data.getSpeed())
+			;
+
+		try {
+			if (!str.isEmpty())
+				doCommand(Doc, (const char*)str.toAscii());
+		}
+		catch (const Base::Exception& e) {
+			Base::Console().Warning("an error occured.%s", e.what());
+		};
+	}
+	
+
+}
+
+bool CmdCustomBuildNCFile::isActive(void)
+{
+	if (getActiveGuiDocument())
+		return true;
+	else
+		return false;
+}
+
+//===========================================================================
+// Custom_BuildNCFile2
+//===========================================================================
+DEF_STD_CMD_A(CmdCustomBuildNCFile2);
+
+CmdCustomBuildNCFile2::CmdCustomBuildNCFile2()
+	:Command("Custom_BuildNCFile2")
+{
+	sAppModule = "Custom";
+	sGroup = "Custom";
+	sMenuText = QT_TR_NOOP("build the file of nc");
+	sToolTipText = QT_TR_NOOP("build the file of nc");
+	sWhatsThis = "Custom_BuildNCFile";
+	sStatusTip = sToolTipText;
+	sPixmap = "Path-Comment";
+}
+
+void CmdCustomBuildNCFile2::activated(int iMsg)
+{
+	Gui::MainWindow* pMainWindow = Gui::getMainWindow();
+
+
+	CreateNCData data;
+	QStringList lstPaths;
+	Base::Placement workcs;
+	std::vector<Gui::SelectionObject>  selobjs = Gui::Selection().getSelectionEx();
+	for (std::vector<Gui::SelectionObject>::iterator it = selobjs.begin(); it != selobjs.end(); it++)
+	{
+		QString ss = QString::fromAscii("App.ActiveDocument.%1").arg(QString::fromAscii((*it).getFeatName()));
+		lstPaths.push_back(ss);
+		App::DocumentObject* obj = it->getObject();
+		if (obj->getTypeId().isDerivedFrom(Part::Feature::getClassTypeId()))
+		{
+			Part::Feature* fea = dynamic_cast<Part::Feature*>(obj);
+			if (fea)
+				workcs = fea->Placement.getValue();
+		}
+	}
+	data.setPathList(lstPaths);
+	data.setMachineCS(Base::Placement());
+	data.setWorkCS(workcs);
+	data.setSafeHeight(150);
+	data.setSpeed(1000);
+	data.setSavePath(QString::fromAscii("d:\\ccc.anc"));
+
+	QStringList sb;
+	sb
+		<< QString::fromLocal8Bit("M06 T1")//; 设置使用刀具1
+		<< QString::fromLocal8Bit("M03 S5000")//; 设置主轴顺时针旋转 转速5000
+		<< QString::fromLocal8Bit("M08")//; 冷却打开 
+		<< QString::fromLocal8Bit("G90 G54 G64");//; 几何数据的基本设定:使用绝对坐标, 使用工件坐标系1, 使用连续路径运行
+	//<< QString::fromAscii("G00 Z150; Z轴运行至安全高度")//
+	//<< QString::fromAscii("G00 X - 7.2 Y - 7.2; XY运行到起始点"); //
+	data.setBeforeGCode(sb);
+	//	G43 H1 Z150.
+
+	QStringList ab;
+	ab
+		<< QString::fromLocal8Bit("M05 M09")//; 主轴停止，冷却液关闭
+		<< QString::fromLocal8Bit("M30");//; 程序结束
+	data.setAfterGCode(ab);
+
+	CreateNCfileDlg* dlg = new CreateNCfileDlg(pMainWindow);
+	dlg->setData(data);
+	if (dlg->exec() == QDialog::Accepted)
+	{
+		CreateNCData data = dlg->getData();
+
+		QStringList lstPaths = data.getPathList();
+		QString strPaths;
+		for (int i = 0; i < lstPaths.size(); i++)
+			strPaths += lstPaths[i] + QString::fromAscii(",");
+
+		QStringList lstBG = data.getBeforeGCode();
+		QString strBGS;
+		for (int i = 0; i < lstBG.size(); i++)
+			strBGS += QString::fromAscii("'") + lstBG[i] + QString::fromAscii("',");
+
+		QStringList lstAG = data.getAfterGCode();
+		QString strAGS;
+		for (int i = 0; i < lstAG.size(); i++)
+			strAGS += QString::fromAscii("'") + lstAG[i] + QString::fromAscii("',");
 
 		QString str = QString::fromAscii(
 			"o=App.ActiveDocument.addObject('Custom::NCOutPutter','NCOutPutter')\n"
@@ -565,19 +718,17 @@ void CmdCustomBuildNCFile::activated(int iMsg)
 		catch (const Base::Exception& e) {
 		};
 	}
-	
+
 
 }
 
-bool CmdCustomBuildNCFile::isActive(void)
+bool CmdCustomBuildNCFile2::isActive(void)
 {
 	if (getActiveGuiDocument())
 		return true;
 	else
 		return false;
 }
-
-
 //////////////////////////////////////////////////////////////////////////
 
 //== == == == == == == == == == == == ==
@@ -727,6 +878,7 @@ void CreateCustomCommands(void)
 	rcCmdMgr.addCommand(new CmdCustomBuildPath2());
 	rcCmdMgr.addCommand(new CmdCustomBuildPath3());
 	rcCmdMgr.addCommand(new CmdCustomBuildNCFile());
+	rcCmdMgr.addCommand(new CmdCustomBuildNCFile2());
 	rcCmdMgr.addCommand(new CmdCustomStartPlayPath());
 	rcCmdMgr.addCommand(new CmdCustomStopPlayPath());
 	rcCmdMgr.addCommand(new CmdCustom_CreateTools());
