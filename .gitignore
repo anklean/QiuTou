@@ -279,3 +279,11 @@ install_manifest.txt
 /src/mod/Robot/Lib/Kuka/*.pdf
 /src/*.zip
 *.rar
+*.tlog
+/src/mod/Custom/App/Part.dir/Release/Custom.tlog/*.tlog
+/src/mod/Custom/App/Part.dir/Release/Custom.tlog/*
+/src/mod/Custom/Gui/PartGui.dir/Debug/PartGui.tlog/*.tlog
+/src/mod/Custom/Gui/PartGui.dir/Release/CustomGui.tlog/*.tlog
+/src/mod/Custom/Gui/PartGui.dir/Release/CustomGui.tlog/*
+*.tlog
+*

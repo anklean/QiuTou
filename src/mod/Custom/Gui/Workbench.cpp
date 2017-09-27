@@ -81,7 +81,7 @@ Gui::MenuItem* Workbench::setupMenuBar() const
 	// Standard views
 	Gui::MenuItem* stdviews = new Gui::MenuItem;
 	stdviews->setCommand("Standard views");
-	*stdviews << "Std_ViewFitAll" << "Std_ViewFitSelection" /*<< "Std_DrawStyle" */<< "Std_ViewAxo"
+	*stdviews << "Std_ViewFitAll" << "Std_ViewFitSelection" /*<< "Std_DrawStyle"*/ << "Std_ViewAxo"
 		<< "Separator" << "Std_ViewFront" << "Std_ViewTop"
 		<< "Std_ViewRight" << "Separator" << "Std_ViewRear"
 		<< "Std_ViewBottom" << "Std_ViewLeft"
@@ -160,16 +160,16 @@ Gui::ToolBarItem* Workbench::setupToolBars() const
 
 	Gui::ToolBarItem* model = new Gui::ToolBarItem(root);
 	model->setCommand("NC");
-	*model << "Part_Import" << "Custom_CreateBallCutter"/*;
+	*model << "Part_Import" << "Custom_CreateBallCutter" << "Custom_SetModelPosition"/*;
 
 	Gui::ToolBarItem* NC = new Gui::ToolBarItem(root);
 	NC->setCommand("NC");
-	*NC */<< "Custom_CreateTools"/*<< "Custom_BuildPath"*/<< "Custom_BuildNCFile"
+	*NC */<< "Custom_CreateTools" /*<< "Custom_BuildPath"*/ << "Custom_BuildNCFile"
 		/*<< "Separator"	<< "Custom_StartPlayPath" */;
 
 	Gui::ToolBarItem* view = new Gui::ToolBarItem(root);
 	view->setCommand("view");
-	*view << "Std_ViewFitAll" << "Std_ViewFitSelection"/* << "Std_DrawStyle" */<< "Std_ViewAxo"
+	*view << "Std_ViewFitAll" << "Std_ViewFitSelection" << /*"Std_DrawStyle" <<*/ "Std_ViewAxo"
 		<< "Separator" << "Std_ViewFront" << "Std_ViewTop"
 		<< "Std_ViewRight" << "Separator" << "Std_ViewRear"
 		<< "Std_ViewBottom" << "Std_ViewLeft"
@@ -190,11 +190,11 @@ Gui::DockWindowItems* Workbench::setupDockWindows() const
 	//root->addDockWidget("Std_ToolBox", Qt::RightDockWidgetArea, true, false);
 	root->addDockWidget("Std_ParamView", Qt::RightDockWidgetArea, true, true);
 	//root->addDockWidget("Std_HelpView", Qt::RightDockWidgetArea, true, false);
-	root->addDockWidget("Std_TreeView", Qt::LeftDockWidgetArea, true, false);
-	root->addDockWidget("Std_PropertyView", Qt::LeftDockWidgetArea, true, false);
+	//root->addDockWidget("Std_TreeView", Qt::LeftDockWidgetArea, true, false);
+	//root->addDockWidget("Std_PropertyView", Qt::LeftDockWidgetArea, true, false);
 	//root->addDockWidget("Std_SelectionView", Qt::LeftDockWidgetArea, false, false);
-	root->addDockWidget("Std_CombiView", Qt::LeftDockWidgetArea, false, false);
+	//root->addDockWidget("Std_CombiView", Qt::LeftDockWidgetArea, false, false);
 	//root->addDockWidget("Std_ReportView", Qt::BottomDockWidgetArea, true, true);
-	root->addDockWidget("Std_PythonView", Qt::BottomDockWidgetArea, false, true);
+	//root->addDockWidget("Std_PythonView", Qt::BottomDockWidgetArea, true, true);
 	return root;
 }

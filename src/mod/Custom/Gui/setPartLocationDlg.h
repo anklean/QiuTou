@@ -3,6 +3,7 @@
 
 #include <QDialog>
 #include "GeneratedFiles/ui_SetPartLocationDlg.h"
+#include "Base/Vector3D.h"
 
 class SetPartLocationDlg : public QDialog
 {
@@ -11,6 +12,8 @@ class SetPartLocationDlg : public QDialog
 public:
 	SetPartLocationDlg(QWidget *parent = 0);
 	~SetPartLocationDlg();
+
+	Base::Vector3d getLocation();
 
 private slots:
 void onOK();

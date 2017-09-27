@@ -72,6 +72,7 @@
 #include <QMessageBox>
 #include "Base/Tools.h"
 #include "CreateBallCutter.h"
+#include "setPartLocationDlg.h"
 
 //#include "Placement.h"
 
@@ -86,8 +87,8 @@ CmdCustomCreateBallCutter::CmdCustomCreateBallCutter()
 {
 	sAppModule = "Custom";
 	sGroup = "Custom";
-	sMenuText = QT_TR_NOOP("QiuTou");
-	sToolTipText = QT_TR_NOOP("Create a QiuTou");
+	sMenuText = QT_TR_NOOP("qiu tou fen qu");
+	sToolTipText = QT_TR_NOOP("Create an qiu tou fen qu");
 	sWhatsThis = "Custom_NewDoc";
 	sStatusTip = sToolTipText;
 	sPixmap = "qiutoufenqu";
@@ -116,6 +117,64 @@ void CmdCustomCreateBallCutter::activated(int iMsg)
 }
 
 bool CmdCustomCreateBallCutter::isActive(void)
+{
+	if (getActiveGuiDocument())
+		return true;
+	else
+		return false;
+}
+
+
+//===========================================================================
+// Custom_SetModelPosition
+//===========================================================================
+DEF_STD_CMD_A(CmdCustom_SetModelPosition);
+
+CmdCustom_SetModelPosition::CmdCustom_SetModelPosition()
+:Command("Custom_SetModelPosition")
+{
+	sAppModule = "Custom";
+	sGroup = "Custom";
+	sMenuText = QT_TR_NOOP("part Position");
+	sToolTipText = QT_TR_NOOP("set the model's position");
+	sWhatsThis = "Custom_SetModelPostion";
+	sStatusTip = sToolTipText;
+	sPixmap = "position";
+}
+
+void CmdCustom_SetModelPosition::activated(int iMsg)
+{
+	Gui::MainWindow* pMainWindow = Gui::getMainWindow();
+	SetPartLocationDlg* dlg = new SetPartLocationDlg(pMainWindow);
+
+	if (dlg->exec() == QDialog::Accepted)
+	{
+		Base::Vector3d pos = dlg->getLocation();
+
+		App::Document* pDoc = App::GetApplication().getActiveDocument();
+		std::vector<App::DocumentObject*> objList = pDoc->getObjectsOfType(Part::Feature::getClassTypeId());
+
+		std::vector<App::DocumentObject*>::iterator it;
+		for (it = objList.begin(); it != objList.end(); ++it)
+		{
+			App::DocumentObject* pObj = (*it);
+			if (pObj && pObj->isDerivedFrom(Part::Feature::getClassTypeId()))
+			{
+				Part::Feature* featureObj = dynamic_cast<Part::Feature*>(pObj);
+
+				Base::Rotation rotation(Base::Vector3d(0, 1, 0), -M_PI / 2);
+				Base::Placement place;
+				place.setPosition(pos);
+				place.setRotation(rotation);
+				featureObj->Placement.setValue(place);
+			}
+		}
+	}
+	doCommand(Command::Gui, "Gui.SendMsgToActiveView(\"ViewFit\")");
+	doCommand(Command::Gui, "Gui.activeDocument().activeView().viewFront()");
+}
+
+bool CmdCustom_SetModelPosition::isActive(void)
 {
 	if (getActiveGuiDocument())
 		return true;
@@ -206,8 +265,8 @@ CmdCustomBuildPath::CmdCustomBuildPath()
 {
 	sAppModule = "Custom";
 	sGroup = "Custom";
-	sMenuText = QT_TR_NOOP("Path");
-	sToolTipText = QT_TR_NOOP("Create a Path");
+	sMenuText = "切削圆柱形区域";
+	sToolTipText = "build the path of cutter";
 	sWhatsThis = "Custom_BuildPath";
 	sStatusTip = sToolTipText;
 	sPixmap = "Path-Toolpath";
@@ -220,33 +279,14 @@ void CmdCustomBuildPath::activated(int iMsg)
 	CreatePathData data;
 	QStringList lstFaces;
 	QStringList lstCurves;
-
-	
 	std::vector<Gui::SelectionObject>  selobjs = Gui::Selection().getSelectionEx();
 	for (std::vector<Gui::SelectionObject>::iterator it = selobjs.begin(); it != selobjs.end(); it++)
 	{
-		std::string ss = (*it).getAsPropertyLinkSubString();
-
-		std::string buf1 = "", buf2 = "";
-		buf1 += "(App.ActiveDocument.";
-		buf1 += (*it).getFeatName();
-		buf1 += ",[\"";
-		buf2 += "\"])";
-		std::vector<std::string> names = (*it).getSubNames();
-		for (int i = 0; i < names.size(); i++)
-		{
-			std::string s = names[i];
-			if (s.find("Face") != s.npos)
-			{
-				s = buf1 + s + buf2;
-				lstFaces.push_back(Base::Tools::fromStdString(s));
-			}
-			else if (s.find("Edge") != s.npos)
-			{
-				s = buf1 + s + buf2;
-				lstCurves.push_back(Base::Tools::fromStdString(s));
-			}
-		}	
+		std::string s = it->getAsPropertyLinkSubString();
+		if (s.find("[\"Face")!=s.npos)
+			lstFaces.push_back(Base::Tools::fromStdString(s));
+		else if (s.find("[\"Edge") != s.npos)
+			lstCurves.push_back(Base::Tools::fromStdString(s));
 	}
 	data.setFaces(lstFaces);
 	data.setCurves(lstCurves);
@@ -440,28 +480,24 @@ void CmdCustomBuildNCFile::activated(int iMsg)
 	
 
 	CreateNCData data;
-	QStringList lstFaces;
+	QStringList lstPaths;
+	Base::Placement workcs;
 	std::vector<Gui::SelectionObject>  selobjs = Gui::Selection().getSelectionEx();
 	for (std::vector<Gui::SelectionObject>::iterator it = selobjs.begin(); it != selobjs.end(); it++)
 	{
-		std::string buf1 = "";
-
-		buf1 += (*it).getFeatName();
-		buf1 += ".";
-		std::vector<std::string> names = (*it).getSubNames();
-		for (int i = 0; i < names.size(); i++)
+		QString ss = QString::fromAscii("App.ActiveDocument.%1").arg(QString::fromAscii((*it).getFeatName()));	
+		lstPaths.push_back(ss);
+		App::DocumentObject* obj = it->getObject();
+		if (obj->getTypeId().isDerivedFrom(Part::Feature::getClassTypeId()))
 		{
-			std::string s = names[i];
-			if (s.find("Face") != s.npos)
-			{
-				s = buf1 + s;
-				lstFaces.push_back(Base::Tools::fromStdString(s));
-			}
+			Part::Feature* fea = dynamic_cast<Part::Feature*>(obj);
+			if (fea)
+				workcs = fea->Placement.getValue();
 		}
 	}
-	data.setPathList(lstFaces);
-	//data.setMachineCS(Base::Placement());
-	//data.setWorkCS(workcs);
+	data.setPathList(lstPaths);
+	data.setMachineCS(Base::Placement());
+	data.setWorkCS(workcs);
 	data.setSafeHeight(150);
 	data.setSpeed(1000);
 	data.setSavePath(QString::fromAscii("d:\\ccc.anc"));
@@ -490,19 +526,9 @@ void CmdCustomBuildNCFile::activated(int iMsg)
 		CreateNCData data = dlg->getData();
 
 		QStringList lstPaths = data.getPathList();
-		QString	strPaths = QLatin1String("[");
+		QString strPaths;
 		for (int i = 0; i < lstPaths.size(); i++)
-		{
-			QString ss = lstPaths[i];
-			
-			strPaths+=
-				QString::fromLocal8Bit("(App.ActiveDocument.%1,\"%2\"),")
-				.arg(ss.section(QLatin1Char('.'), 0, 0))
-				.arg(ss.section(QLatin1Char('.'), 1, 1));
-		}
-		if (strPaths.endsWith(QLatin1Char(',')))
-			strPaths.chop(1);	
-		strPaths += QLatin1String("]");
+			strPaths += lstPaths[i] + QString::fromAscii(",");
 	
 		QStringList lstBG = data.getBeforeGCode();
 		QString strBGS;
@@ -513,126 +539,6 @@ void CmdCustomBuildNCFile::activated(int iMsg)
 		QString strAGS;
 		for (int i = 0; i < lstAG.size(); i++)
 			strAGS += QString::fromAscii("'")+ lstAG[i] + QString::fromAscii("',");
-
-		QString str = QString::fromAscii(
-			"o=App.ActiveDocument.addObject('Custom::NCOutPutter','NCOutPutter')\n"
-			"o.PathList=%1 \n"
-			"o.OutputFile='%2'\n"
-			"o.BeforeGcode=[%3]\n"
-			"o.AfterGcode=[%4]\n"
-			"o.SafeHeight=%5\n"
-			"o.Speed=%6\n"
-			)
-			.arg(strPaths)
-			.arg(data.getSavePath())
-			.arg(strBGS)
-			.arg(strAGS)
-			.arg(data.getSafeHeight())
-			.arg(data.getSpeed())
-			;
-
-		try {
-			if (!str.isEmpty())
-				doCommand(Doc, (const char*)str.toAscii());
-		}
-		catch (const Base::Exception& e) {
-			Base::Console().Warning("an error occured.%s", e.what());
-		};
-	}
-	
-
-}
-
-bool CmdCustomBuildNCFile::isActive(void)
-{
-	if (getActiveGuiDocument())
-		return true;
-	else
-		return false;
-}
-
-//===========================================================================
-// Custom_BuildNCFile2
-//===========================================================================
-DEF_STD_CMD_A(CmdCustomBuildNCFile2);
-
-CmdCustomBuildNCFile2::CmdCustomBuildNCFile2()
-	:Command("Custom_BuildNCFile2")
-{
-	sAppModule = "Custom";
-	sGroup = "Custom";
-	sMenuText = QT_TR_NOOP("build the file of nc");
-	sToolTipText = QT_TR_NOOP("build the file of nc");
-	sWhatsThis = "Custom_BuildNCFile";
-	sStatusTip = sToolTipText;
-	sPixmap = "Path-Comment";
-}
-
-void CmdCustomBuildNCFile2::activated(int iMsg)
-{
-	Gui::MainWindow* pMainWindow = Gui::getMainWindow();
-
-
-	CreateNCData data;
-	QStringList lstPaths;
-	Base::Placement workcs;
-	std::vector<Gui::SelectionObject>  selobjs = Gui::Selection().getSelectionEx();
-	for (std::vector<Gui::SelectionObject>::iterator it = selobjs.begin(); it != selobjs.end(); it++)
-	{
-		QString ss = QString::fromAscii("App.ActiveDocument.%1").arg(QString::fromAscii((*it).getFeatName()));
-		lstPaths.push_back(ss);
-		App::DocumentObject* obj = it->getObject();
-		if (obj->getTypeId().isDerivedFrom(Part::Feature::getClassTypeId()))
-		{
-			Part::Feature* fea = dynamic_cast<Part::Feature*>(obj);
-			if (fea)
-				workcs = fea->Placement.getValue();
-		}
-	}
-	data.setPathList(lstPaths);
-	data.setMachineCS(Base::Placement());
-	data.setWorkCS(workcs);
-	data.setSafeHeight(150);
-	data.setSpeed(1000);
-	data.setSavePath(QString::fromAscii("d:\\ccc.anc"));
-
-	QStringList sb;
-	sb
-		<< QString::fromLocal8Bit("M06 T1")//; 设置使用刀具1
-		<< QString::fromLocal8Bit("M03 S5000")//; 设置主轴顺时针旋转 转速5000
-		<< QString::fromLocal8Bit("M08")//; 冷却打开 
-		<< QString::fromLocal8Bit("G90 G54 G64");//; 几何数据的基本设定:使用绝对坐标, 使用工件坐标系1, 使用连续路径运行
-	//<< QString::fromAscii("G00 Z150; Z轴运行至安全高度")//
-	//<< QString::fromAscii("G00 X - 7.2 Y - 7.2; XY运行到起始点"); //
-	data.setBeforeGCode(sb);
-	//	G43 H1 Z150.
-
-	QStringList ab;
-	ab
-		<< QString::fromLocal8Bit("M05 M09")//; 主轴停止，冷却液关闭
-		<< QString::fromLocal8Bit("M30");//; 程序结束
-	data.setAfterGCode(ab);
-
-	CreateNCfileDlg* dlg = new CreateNCfileDlg(pMainWindow);
-	dlg->setData(data);
-	if (dlg->exec() == QDialog::Accepted)
-	{
-		CreateNCData data = dlg->getData();
-
-		QStringList lstPaths = data.getPathList();
-		QString strPaths;
-		for (int i = 0; i < lstPaths.size(); i++)
-			strPaths += lstPaths[i] + QString::fromAscii(",");
-
-		QStringList lstBG = data.getBeforeGCode();
-		QString strBGS;
-		for (int i = 0; i < lstBG.size(); i++)
-			strBGS += QString::fromAscii("'") + lstBG[i] + QString::fromAscii("',");
-
-		QStringList lstAG = data.getAfterGCode();
-		QString strAGS;
-		for (int i = 0; i < lstAG.size(); i++)
-			strAGS += QString::fromAscii("'") + lstAG[i] + QString::fromAscii("',");
 
 		QString str = QString::fromAscii(
 			"o=App.ActiveDocument.addObject('Custom::NCOutPutter','NCOutPutter')\n"
@@ -659,17 +565,19 @@ void CmdCustomBuildNCFile2::activated(int iMsg)
 		catch (const Base::Exception& e) {
 		};
 	}
-
+	
 
 }
 
-bool CmdCustomBuildNCFile2::isActive(void)
+bool CmdCustomBuildNCFile::isActive(void)
 {
 	if (getActiveGuiDocument())
 		return true;
 	else
 		return false;
 }
+
+
 //////////////////////////////////////////////////////////////////////////
 
 //== == == == == == == == == == == == ==
@@ -819,8 +727,8 @@ void CreateCustomCommands(void)
 	rcCmdMgr.addCommand(new CmdCustomBuildPath2());
 	rcCmdMgr.addCommand(new CmdCustomBuildPath3());
 	rcCmdMgr.addCommand(new CmdCustomBuildNCFile());
-	rcCmdMgr.addCommand(new CmdCustomBuildNCFile2());
 	rcCmdMgr.addCommand(new CmdCustomStartPlayPath());
 	rcCmdMgr.addCommand(new CmdCustomStopPlayPath());
 	rcCmdMgr.addCommand(new CmdCustom_CreateTools());
+	rcCmdMgr.addCommand(new CmdCustom_SetModelPosition());
 }

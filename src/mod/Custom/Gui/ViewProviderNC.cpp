@@ -210,6 +210,7 @@ void CustomGui::ViewProviderNC::updateVisual(const TopoDS_Shape & prop)
 			Base::Vector3d v = ptlist[j].Point;
 			Base::Vector3d n = ptlist[j].Normal;
 			
+#if _DEBUG
 			vertex_list.push_back(SbVec3f(v.x, v.y, v.z));
 			index_list.push_back(nIndex++);
 
@@ -218,7 +219,12 @@ void CustomGui::ViewProviderNC::updateVisual(const TopoDS_Shape & prop)
 			index_list.push_back(nIndex++);
 
 			index_list.push_back(-1);
+#else
+			vertex_list.push_back(SbVec3f(v.x, v.y, v.z));
+			index_list.push_back(nIndex++);
+#endif
 		}
+		index_list.push_back(-1);
 	}
 	if (vertex_list.size() > 0)
 	{

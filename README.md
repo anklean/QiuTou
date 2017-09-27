@@ -1,2 +1,2 @@
 # QiuTou
-a qiutou NC
+基于FreeCAD做的QiuTou的数控程序

@@ -11,6 +11,8 @@
 #include "TopExp_Explorer.hxx"
 #include "gp_Lin.hxx"
 #include "GCPnts_AbscissaPoint.hxx"
+#include "GeomLProp_CLProps.hxx"
+#include "Precision.hxx"
 
 
 void BuildPath(Part::TopoShape& shape, std::string asub, std::vector<Custom::NCStepInfo>& pathPointList)
@@ -134,18 +136,24 @@ void BuildPath(Part::TopoShape& shape, std::string asub, std::vector<Custom::NCS
 		gp_Pnt2d             theUV;
 		crvMeshTools.Value(i, theIsoParam, theParam, thePoint, theUV);
 
-		gp_Dir nrm;
-		int nret = getNormal2(thePoint, center_line, nrm);
-		if (nret != 0)
-		{
+		GeomLProp_CLProps prop(curveAdaptor.Curve().Curve(), theParam, 1, Precision::Confusion());
+
+		gp_Dir tangent;
+		if (prop.IsTangentDefined()) {
+			prop.Tangent(tangent);
 		}
+// 		gp_Dir nrm;
+// 		int nret = getNormal2(thePoint, center_line, nrm);
+// 		if (nret != 0)
+// 		{
+// 		}
 
 		Custom::NCStepInfo si = { 0 };
 		si.type = 0;
 		si.gcode = "";
 		si.speed = 0;
 		si.Point = Base::Vector3d(thePoint.X(), thePoint.Y(), thePoint.Z());
-		si.Normal = Base::Vector3d(nrm.X(), nrm.Y(), nrm.Z());
+		si.Normal = Base::Vector3d(tangent.X(), tangent.Y(), tangent.Z());
 		pathPointList.push_back(si);//从原点开始
 	}
 }

@@ -23,4 +23,14 @@ void SetPartLocationDlg::onCancle()
 	this->reject();
 }
 
+Base::Vector3d SetPartLocationDlg::getLocation()
+{
+	double dx = ui.doubleSpinBox->value();
+	double dy = ui.doubleSpinBox_2->value();
+	double dz = ui.doubleSpinBox_3->value();
+
+	Base::Vector3d pos(dx, dy, dz);
+	return pos;
+}
+
 #include "GeneratedFiles/moc_SetPartLocationDlg.cpp"

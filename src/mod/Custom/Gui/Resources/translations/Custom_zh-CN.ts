@@ -129,7 +129,9 @@
 <context>
     <name>CmdCustomBuildNCFile</name>
     <message>
-        <location filename="../../Command.cpp" line="+402"/>
+        <location filename="../../back/Command.cpp" line="+461"/>
+        <location line="+1"/>
+        <location filename="../../Command.cpp" line="+468"/>
         <location line="+1"/>
         <source>build the file of nc</source>
         <translation>生成NC</translation>
@@ -138,17 +140,21 @@
 <context>
     <name>CmdCustomCreateBallCutter</name>
     <message>
-        <location line="-314"/>
+        <location line="-372"/>
+        <location filename="../../Command.cpp" line="-379"/>
         <source>qiu tou fen qu</source>
         <translation>创建模型</translation>
     </message>
     <message>
         <location line="+1"/>
+        <location filename="../../Command.cpp" line="+1"/>
         <source>Create an qiu tou fen qu</source>
         <translation>创建成品模具</translation>
     </message>
     <message>
         <location line="+16"/>
+        <location line="+5"/>
+        <location filename="../../Command.cpp" line="+16"/>
         <location line="+5"/>
         <source>BallCutter</source>
         <translation>球头分区</translation>
@@ -157,14 +163,36 @@
 <context>
     <name>CmdCustom_CreateTools</name>
     <message>
-        <location line="+501"/>
+        <location line="+561"/>
+        <location filename="../../Command.cpp" line="+568"/>
         <source>CreateTools</source>
         <translation>砂轮管理</translation>
     </message>
     <message>
         <location line="+1"/>
+        <location filename="../../Command.cpp" line="+1"/>
         <source>Tools list</source>
         <translation>砂轮管理</translation>
+    </message>
+</context>
+<context>
+    <name>CmdCustom_SetModelPosition</name>
+    <message>
+        <location line="-536"/>
+        <location filename="../../Command.cpp" line="-543"/>
+        <source>part Position</source>
+        <translation>工件坐标</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <location filename="../../Command.cpp" line="+1"/>
+        <source>set the model&apos;s position</source>
+        <translation>设置工件坐标系</translation>
+    </message>
+    <message>
+        <location line="+16"/>
+        <source>SetModelPosition</source>
+        <translation>设置工件坐标系</translation>
     </message>
 </context>
 <context>
@@ -503,11 +531,11 @@
     </message>
     <message>
         <source>Imports a CAD file</source>
-        <translation>导入stp文件</translation>
+        <translation type="obsolete">导入stp文件</translation>
     </message>
     <message>
         <source>Import CAD...</source>
-        <translation>导入stp</translation>
+        <translation type="obsolete">导入stp</translation>
     </message>
 </context>
 <context>
@@ -819,32 +847,32 @@
     <name>CreateBallCutter</name>
     <message utf8="true">
         <location filename="../../createBallCutter.ui" line="+14"/>
-        <location filename="../../GeneratedFiles/ui_createBallCutter.h" line="+249"/>
+        <location filename="../../GeneratedFiles/ui_createBallCutter.h" line="+251"/>
         <source>创建球头分区</source>
         <translation></translation>
     </message>
     <message utf8="true">
-        <location line="+28"/>
-        <location filename="../../GeneratedFiles/ui_createBallCutter.h" line="+2"/>
+        <location line="+11"/>
+        <location filename="../../GeneratedFiles/ui_createBallCutter.h" line="+1"/>
         <source>详细参数</source>
         <translation></translation>
     </message>
     <message utf8="true">
-        <location line="+14"/>
+        <location line="+17"/>
         <location filename="../../GeneratedFiles/ui_createBallCutter.h" line="+1"/>
         <source>球头直径</source>
         <translation></translation>
     </message>
     <message>
         <location line="+14"/>
-        <location line="+100"/>
+        <location line="+97"/>
         <location filename="../../GeneratedFiles/ui_createBallCutter.h" line="+1"/>
         <location line="+10"/>
         <source>mm</source>
         <translation>mm</translation>
     </message>
     <message utf8="true">
-        <location line="-93"/>
+        <location line="-90"/>
         <location filename="../../GeneratedFiles/ui_createBallCutter.h" line="-9"/>
         <source>螺旋角</source>
         <translation></translation>
@@ -852,7 +880,7 @@
     <message utf8="true">
         <location line="+17"/>
         <location line="+21"/>
-        <location line="+17"/>
+        <location line="+14"/>
         <location line="+17"/>
         <location filename="../../GeneratedFiles/ui_createBallCutter.h" line="+1"/>
         <location line="+2"/>
@@ -862,7 +890,7 @@
         <translation></translation>
     </message>
     <message utf8="true">
-        <location line="-48"/>
+        <location line="-45"/>
         <location filename="../../GeneratedFiles/ui_createBallCutter.h" line="-5"/>
         <source>弧起始角</source>
         <translation></translation>
@@ -874,7 +902,7 @@
         <translation></translation>
     </message>
     <message utf8="true">
-        <location line="+17"/>
+        <location line="+14"/>
         <location filename="../../GeneratedFiles/ui_createBallCutter.h" line="+2"/>
         <source>前角</source>
         <translation></translation>
@@ -1034,7 +1062,7 @@
     <name>CreatePathDlg</name>
     <message utf8="true">
         <location filename="../../createPathDlg.ui" line="+14"/>
-        <location filename="../../GeneratedFiles/ui_createPathDlg.h" line="+175"/>
+        <location filename="../../GeneratedFiles/ui_createPathDlg.h" line="+178"/>
         <source>生成轨迹</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1044,33 +1072,9 @@
         <source>生成参数</source>
         <translation type="unfinished"></translation>
     </message>
-    <message utf8="true">
-        <location line="+14"/>
-        <location filename="../../GeneratedFiles/ui_createPathDlg.h" line="+1"/>
-        <source>指定加工面</source>
-        <translation type="unfinished"></translation>
-    </message>
     <message>
-        <location line="+11"/>
+        <location line="+41"/>
         <location filename="../../GeneratedFiles/ui_createPathDlg.h" line="+3"/>
-        <source>V</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+5"/>
-        <location filename="../../GeneratedFiles/ui_createPathDlg.h" line="+1"/>
-        <source>U</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message utf8="true">
-        <location line="+8"/>
-        <location filename="../../GeneratedFiles/ui_createPathDlg.h" line="+2"/>
-        <source>指定边界</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+17"/>
-        <location filename="../../GeneratedFiles/ui_createPathDlg.h" line="+1"/>
         <source>mm</source>
         <translation type="unfinished">mm</translation>
     </message>
@@ -1099,14 +1103,32 @@
         <translation type="unfinished"></translation>
     </message>
     <message utf8="true">
-        <location line="+7"/>
-        <location filename="../../GeneratedFiles/ui_createPathDlg.h" line="+1"/>
+        <location line="+16"/>
+        <location filename="../../GeneratedFiles/ui_createPathDlg.h" line="+4"/>
+        <source>沿边界单向</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message utf8="true">
+        <location line="+11"/>
+        <location filename="../../GeneratedFiles/ui_createPathDlg.h" line="+2"/>
+        <source>轨迹线</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message utf8="true">
+        <location line="-102"/>
+        <location filename="../../GeneratedFiles/ui_createPathDlg.h" line="-12"/>
         <source>加工方法</source>
         <translation type="unfinished"></translation>
     </message>
     <message utf8="true">
-        <location line="+8"/>
-        <location filename="../../GeneratedFiles/ui_createPathDlg.h" line="+3"/>
+        <location line="+7"/>
+        <location filename="../../GeneratedFiles/ui_createPathDlg.h" line="+1"/>
+        <source>切削面</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message utf8="true">
+        <location line="+79"/>
+        <location filename="../../GeneratedFiles/ui_createPathDlg.h" line="+8"/>
         <source>面上沿边界往返</source>
         <translation type="unfinished"></translation>
     </message>
@@ -3586,7 +3608,7 @@ in the 3D view for the sweep path.</source>
 <context>
     <name>QDockWidget</name>
     <message>
-        <location filename="../../AppCustomGui.cpp" line="+82"/>
+        <location filename="../../AppCustomGui.cpp" line="+84"/>
         <source>Param View</source>
         <translation>参数列表</translation>
     </message>
@@ -3941,23 +3963,57 @@ Do you want to continue?</translation>
     </message>
 </context>
 <context>
+    <name>SetPartLocationDlg</name>
+    <message utf8="true">
+        <location filename="../../back/setPartLocationDlg.ui" line="+20"/>
+        <location filename="../../setPartLocationDlg.ui" line="+20"/>
+        <location filename="../../GeneratedFiles/ui_setPartLocationDlg.h" line="+106"/>
+        <source>设置工件坐标系</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+11"/>
+        <location filename="../../setPartLocationDlg.ui" line="+11"/>
+        <location filename="../../GeneratedFiles/ui_setPartLocationDlg.h" line="+1"/>
+        <source>X</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <location filename="../../setPartLocationDlg.ui" line="+10"/>
+        <location filename="../../GeneratedFiles/ui_setPartLocationDlg.h" line="+1"/>
+        <source>Y</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <location filename="../../setPartLocationDlg.ui" line="+10"/>
+        <location filename="../../GeneratedFiles/ui_setPartLocationDlg.h" line="+1"/>
+        <source>Z</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>Workbench</name>
     <message>
         <source>&amp;Part</source>
         <translation type="obsolete">零件(&amp;P)</translation>
     </message>
     <message>
+        <location filename="../../back/Workbench.cpp" line="+38"/>
         <location filename="../../Workbench.cpp" line="+38"/>
         <source>&amp;Custom</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+1"/>
+        <location filename="../../Workbench.cpp" line="+1"/>
         <source>&amp;Simple</source>
         <translation>简单(&amp;S)</translation>
     </message>
     <message>
         <location line="+1"/>
+        <location filename="../../Workbench.cpp" line="+1"/>
         <source>&amp;Parametric</source>
         <translation>参数化(&amp;P)</translation>
     </message>
@@ -3967,16 +4023,19 @@ Do you want to continue?</translation>
     </message>
     <message>
         <location line="+1"/>
+        <location filename="../../Workbench.cpp" line="+1"/>
         <source>Solids</source>
         <translation>实体</translation>
     </message>
     <message>
         <location line="+1"/>
+        <location filename="../../Workbench.cpp" line="+1"/>
         <source>Custom tools</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+1"/>
+        <location filename="../../Workbench.cpp" line="+1"/>
         <source>Boolean</source>
         <translation>布尔值</translation>
     </message>
