@@ -224,7 +224,10 @@ void CustomGui::ViewProviderNC::updateVisual(const TopoDS_Shape & prop)
 			index_list.push_back(nIndex++);
 #endif
 		}
+#if _DEBUG
+#else
 		index_list.push_back(-1);
+#endif
 	}
 	if (vertex_list.size() > 0)
 	{

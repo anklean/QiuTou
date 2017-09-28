@@ -193,8 +193,8 @@ Gui::DockWindowItems* Workbench::setupDockWindows() const
 	//root->addDockWidget("Std_TreeView", Qt::LeftDockWidgetArea, true, false);
 	//root->addDockWidget("Std_PropertyView", Qt::LeftDockWidgetArea, true, false);
 	//root->addDockWidget("Std_SelectionView", Qt::LeftDockWidgetArea, false, false);
-	//root->addDockWidget("Std_CombiView", Qt::LeftDockWidgetArea, false, false);
+	root->addDockWidget("Std_CombiView", Qt::LeftDockWidgetArea, true, false);
 	//root->addDockWidget("Std_ReportView", Qt::BottomDockWidgetArea, true, true);
-	//root->addDockWidget("Std_PythonView", Qt::BottomDockWidgetArea, true, true);
+	root->addDockWidget("Std_PythonView", Qt::BottomDockWidgetArea, false, false);
 	return root;
 }

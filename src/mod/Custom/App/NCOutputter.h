@@ -46,7 +46,9 @@ namespace Custom
 		//@}
 	
 	protected:
-		void getAngle(Base::Vector3d nrm, double& a, double &b, double & c,Base::Placement p);
+		double getA(Base::Vector3d nrm, Base::Placement place);
+		double getB(Base::Vector3d nrm, Base::Placement place);
+		void getAngle(Base::Vector3d nrm, double& a, double &b, double & c, Base::Placement p);
 		void printHeader(std::ofstream& ofs, int& nlines);
 		void printFooter(std::ofstream& ofs, int& nlines);
 		void printFeed(std::ofstream& ofs, int& nlines, Custom::PathObject::PathPointList& paths , Base::Placement p);

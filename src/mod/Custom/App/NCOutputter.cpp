@@ -81,10 +81,106 @@ short NCOutPutter::mustExecute() const
 	return 0;
 }
 
+double NCOutPutter::getA(Base::Vector3d nrm, Base::Placement place)
+{
+	Base::Matrix4D mtx = place.toMatrix();
+	mtx.transpose();
+
+	Base::Vector3d base = place.getPosition();
+
+	double dmtx[16];
+	mtx.getMatrix(dmtx);
+	// 	Base::Vector3d x_axis(dmtx[0], dmtx[1], dmtx[2]);
+	// 	Base::Vector3d y_axis(dmtx[4], dmtx[5], dmtx[6]);
+	// 	Base::Vector3d z_axis(dmtx[8], dmtx[9], dmtx[10]);
+	Base::Vector3d x_axis(1, 0, 0);
+	Base::Vector3d y_axis(0, 1, 0);
+	Base::Vector3d z_axis(0, 0, 1);
+	//a
+	//nrm在XY平面上与X轴的夹角
+	Base::Vector3d va = nrm.ProjToPlane(Base::Vector3d(0,0,0), z_axis);
+	double da = va.GetAngle(x_axis);
+	double a = -( Base::toDegrees<double>(da));
+
+	//b
+	////nrm 在YZ平面上与Y轴的夹角
+	//Base::Vector3d vb = nrm.ProjToPlane(base, x_axis);
+	//double db = vb.GetAngle(z_axis);
+	//b = -Base::toDegrees<double>(db);
+
+	//c
+	//nrm在XY平面上绕Z轴旋转的角度
+	//Base::Vector3d vc = nrm.ProjToPlane(base, y_axis);
+	//double dc = vc.GetAngle(x_axis);
+	//c = -Base::toDegrees<double>(dc);
+
+	if (fabs(a) < Precision::Confusion()) a = 0;
+// 	if (fabs(b) < Precision::Confusion()) b = 0;
+// 	if (fabs(c) < Precision::Confusion()) c = 0;
+
+	return a;
+}
+
+
+double NCOutPutter::getB(Base::Vector3d nrm,Base::Placement place)
+{
+	Base::Matrix4D mtx = place.toMatrix();
+	//mtx.transpose();
+
+	Base::Vector3d base = place.getPosition();
+
+	double dmtx[16];
+	mtx.getMatrix(dmtx);
+	// 	Base::Vector3d x_axis(dmtx[0], dmtx[1], dmtx[2]);
+	// 	Base::Vector3d y_axis(dmtx[4], dmtx[5], dmtx[6]);
+	// 	Base::Vector3d z_axis(dmtx[8], dmtx[9], dmtx[10]);
+	Base::Vector3d x_axis(1, 0, 0);
+	Base::Vector3d y_axis(0,1, 0);
+	Base::Vector3d z_axis(0, 0, 1);
+
+	Base::Vector3d vb = nrm.ProjToPlane(base, x_axis);
+
+	double y = vb.y - base.y;
+	double z = vb.z - base.z;
+
+	//atan -90~90
+	double db = atan(y / z);
+	double b = 0;
+	if (z < 0)
+		b = -180 + Base::toDegrees<double>(db);
+	else
+		b = Base::toDegrees<double>(db);
+	//a
+	//nrm在XY平面上与X轴的夹角
+// 	Base::Vector3d va = nrm.ProjToPlane(base, z_axis);
+// 	double da = va.GetAngle(x_axis);
+// 	a = -(180 - Base::toDegrees<double>(da));
+
+	//b
+	////nrm 在YZ平面上与Y轴的夹角
+// 	Base::Vector3d vb = v.ProjToPlane(Base::Vector3d(0,0,0), x_axis);
+// 	double db = nrm.GetAngle(z_axis);
+// 	double b = -Base::toDegrees<double>(db);
+
+	//c
+	//nrm在XY平面上绕Z轴旋转的角度
+	//Base::Vector3d vc = nrm.ProjToPlane(base, y_axis);
+	//double dc = vc.GetAngle(x_axis);
+	//c = -Base::toDegrees<double>(dc);
+
+	//if (fabs(a) < Precision::Confusion()) a = 0;
+	 	if (fabs(b) < Precision::Confusion()) b = 0;
+	// 	if (fabs(c) < Precision::Confusion()) c = 0;
+
+		return b;
+}
+
 void NCOutPutter::getAngle(Base::Vector3d nrm, double& a, double &b, double & c, Base::Placement place)
 {
 	Base::Matrix4D mtx=place.toMatrix();
 	mtx.transpose();
+
+	Base::Vector3d base = place.getPosition();
 
 	double dmtx[16];
 	mtx.getMatrix(dmtx);
@@ -92,23 +188,23 @@ void NCOutPutter::getAngle(Base::Vector3d nrm, double& a, double &b, double & c,
 // 	Base::Vector3d y_axis(dmtx[4], dmtx[5], dmtx[6]);
 // 	Base::Vector3d z_axis(dmtx[8], dmtx[9], dmtx[10]);
 	Base::Vector3d x_axis(1, 0, 0);
-	Base::Vector3d y_axis(0, -1, 0);
+	Base::Vector3d y_axis(0, 1, 0);
 	Base::Vector3d z_axis(0, 0, 1);
 	//a
 	//nrm在XY平面上与X轴的夹角
-	Base::Vector3d va = nrm.ProjToPlane(x_axis, z_axis);
+	Base::Vector3d va = nrm.ProjToPlane(base, z_axis);
 	double da = va.GetAngle(x_axis);
-	a = - Base::toDegrees<double>(da);
+	a = - (180-Base::toDegrees<double>(da));
 	
 	//b
-	//nrm 在XZ平面上绕Y轴旋转的角度
-	Base::Vector3d vb = nrm.ProjToPlane(z_axis, x_axis);
+	//nrm 在YZ平面上与Y轴的夹角
+	Base::Vector3d vb = nrm.ProjToPlane(base, x_axis);
 	double db = vb.GetAngle(z_axis);
 	b = -Base::toDegrees<double>(db);	
 	
 	//c
 	//nrm在XY平面上绕Z轴旋转的角度
-	Base::Vector3d vc = nrm.ProjToPlane(x_axis, y_axis);
+	Base::Vector3d vc = nrm.ProjToPlane(base, y_axis);
 	double dc = vc.GetAngle(x_axis);
 	c = -Base::toDegrees<double>(dc);
 
@@ -149,12 +245,12 @@ void NCOutPutter::printFeed(std::ofstream& ofs, int& nlines, Custom::PathObject:
 	{
 		Custom::NCStepInfo step = paths[0];
 	
-		double da =.0, db =.0, dc = .0;
-		getAngle(step.Normal, da, db, dc,place);
+		double da =getA(step.Normal, place);
+		double db = getB(step.Point,  place);
 		ofs << "N" << nlines++ << " " << "G00 Z" << h/*<< "; Z轴运行至安全高度"*/ << std::endl;
 		ofs << "N" << nlines++ << " " << "G01 G90 B" << db /*<< "; B旋转到相应角度"*/ << std::endl;
 		ofs << "N" << nlines++ << " " << "G01 G90 A" << da /*<< "; A旋转到相应角度"*/<< std::endl;
-		ofs << "N" << nlines++ << " " << "G01 G90 Y" << step.Point.y << " " << std::endl;
+		ofs << "N" << nlines++ << " " << "G01 G90 X10 Y" << step.Point.y << " " << std::endl;
 		ofs << "N" << nlines++ << " " << "G01 G90 Z" << step.Point.z << " " << std::endl;
 			ofs << "N" << nlines++ << " " << "G01 G90 X" << step.Point.x << " F" << step.speed/*<< ";x, y" */<< std::endl;
 	}
@@ -188,11 +284,8 @@ void NCOutPutter::printAPath(std::ofstream& ofs, int& nlines, Custom::PathObject
 		{
 			Custom::NCStepInfo step = paths[i];
 
-			double da = .0, db = .0, dc = .0;
-			getAngle(step.Point, da, db, dc,place);
-			
-			double la = .0, lb = .0, lc = .0;
-			getAngle(lastStep.Point, la, lb, lc, place);
+			double da =getA(step.Normal,place);			
+			double la = getA(lastStep.Normal,  place);
 			
 			ofs << "N" << nlines++ << " G01 G90 ";
 			if (fabs(step.Point.x - lastStep.Point.x) > tol)

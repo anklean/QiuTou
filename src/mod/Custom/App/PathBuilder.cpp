@@ -93,6 +93,7 @@ void BuildPath(Part::TopoShape& shape, std::string asub, std::vector<Custom::NCS
 	
 	Base::Vector3d rBase, rNormal;
 	gp_Lin center_line;
+	gp_Pnt left_center;
 
 	d[0] = fabs(sp.X() - ep.X());
 	d[1] = fabs(sp.Y() - ep.Y());
@@ -113,16 +114,19 @@ void BuildPath(Part::TopoShape& shape, std::string asub, std::vector<Custom::NCS
 	{
 		bbox.CalcPlane(Base::BoundBox3d::LEFT, rBase, rNormal);
 		center_line = gp_Lin(gp_Pnt(center.x, center.y, center.z), gp_Dir(1, 0, 0));
+		left_center = gp_Pnt(bbox.MinX, center.y, center.z);
 	}
 	else if (nFlag == 2)//Y
 	{
 		bbox.CalcPlane(Base::BoundBox3d::BOTTOM, rBase, rNormal);
 		center_line = gp_Lin(gp_Pnt(center.x, center.y, center.z), gp_Dir(0, 1, 0));
+		left_center = gp_Pnt(center.x, bbox.MinY, center.z);
 	}
 	else if (nFlag == 3)//Z
 	{
 		bbox.CalcPlane(Base::BoundBox3d::BACK, rBase, rNormal);
 		center_line = gp_Lin(gp_Pnt(center.x, center.y, center.z), gp_Dir(0, 0, 1));
+		left_center = gp_Pnt(center.x, center.y, bbox.MinZ);
 	}
 	
 	BRepMesh_GeomTool crvMeshTools(curveAdaptor, first, last, deflection, AngDeflectionRads);
@@ -136,13 +140,14 @@ void BuildPath(Part::TopoShape& shape, std::string asub, std::vector<Custom::NCS
 		gp_Pnt2d             theUV;
 		crvMeshTools.Value(i, theIsoParam, theParam, thePoint, theUV);
 
-		GeomLProp_CLProps prop(curveAdaptor.Curve().Curve(), theParam, 1, Precision::Confusion());
-
-		gp_Dir tangent;
-		if (prop.IsTangentDefined()) {
-			prop.Tangent(tangent);
-		}
-// 		gp_Dir nrm;
+// 		GeomLProp_CLProps prop(curveAdaptor.Curve().Curve(), theParam, 1, Precision::Confusion());
+// 
+// 		gp_Dir tangent;
+// 		if (prop.IsTangentDefined()) {
+// 			prop.Tangent(tangent);
+// 		}
+		gp_XYZ pntdir = left_center.XYZ() -thePoint.XYZ();
+ 		//gp_Dir nrm(pntdir);
 // 		int nret = getNormal2(thePoint, center_line, nrm);
 // 		if (nret != 0)
 // 		{
@@ -153,7 +158,7 @@ void BuildPath(Part::TopoShape& shape, std::string asub, std::vector<Custom::NCS
 		si.gcode = "";
 		si.speed = 0;
 		si.Point = Base::Vector3d(thePoint.X(), thePoint.Y(), thePoint.Z());
-		si.Normal = Base::Vector3d(tangent.X(), tangent.Y(), tangent.Z());
+		si.Normal = Base::Vector3d(pntdir.X(), pntdir.Y(), pntdir.Z());
 		pathPointList.push_back(si);//从原点开始
 	}
 }
