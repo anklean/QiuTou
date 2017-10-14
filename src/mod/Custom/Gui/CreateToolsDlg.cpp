@@ -46,20 +46,26 @@ void CreateToolsDlg::onEditTool()
 	GrindingWheelDlg* dlg = new GrindingWheelDlg(this);
 	this->getValueFromUI();
 
-	QListWidgetItem* item = ui.listWidget->selectedItems().at(0);
-	if (item)
+	QList<QListWidgetItem*> listItems = ui.listWidget->selectedItems();
+	if (listItems.count() > 0)
 	{
-		QString name = item->text();
-		GrindingWheelData grindingWheel = m_data.findGrindingWheel(name);
-		dlg->setData(grindingWheel);
-		dlg->setNameEnable(false);
-		if (dlg->exec() == QDialog::Accepted)
+		QListWidgetItem* item = listItems.at(0);
+		if (item)
 		{
-			GrindingWheelData data = dlg->getData();
-			m_data.rmvGrindingWheel(data.getName());
-			m_data.addGrindingWheel(data);
+			QString name = item->text();
+			GrindingWheelData grindingWheel = m_data.findGrindingWheel(name);
+			dlg->setData(grindingWheel);
+			dlg->setNameEnable(false);
+			if (dlg->exec() == QDialog::Accepted)
+			{
+				GrindingWheelData data = dlg->getData();
+				m_data.rmvGrindingWheel(data.getName());
+				m_data.addGrindingWheel(data);
+			}
 		}
 	}
+
+	
 	
 }
 

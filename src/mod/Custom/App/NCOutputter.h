@@ -31,6 +31,8 @@ namespace Custom
 		App::PropertyLength SafeHeight;//安全高度
 		App::PropertyLength Speed;//速度
 		
+		App::PropertyString ToolNum;
+
 		/** @name methods override feature */
 		//@{
 		/// recalculate the feature
@@ -47,7 +49,11 @@ namespace Custom
 	
 	protected:
 		double getA(Base::Vector3d nrm, Base::Placement place);
+		double getA(Base::Vector3d nrm, Base::Placement place, double B);
+		double getA(Base::Vector3d pnt1, Base::Vector3d pnt2, Base::Placement place, double B);
 		double getB(Base::Vector3d nrm, Base::Placement place);
+		Base::Vector3d adjustPointByTools(Base::Vector3d& point, Base::Placement& place);
+		double getToolDiameter();
 		void getAngle(Base::Vector3d nrm, double& a, double &b, double & c, Base::Placement p);
 		void printHeader(std::ofstream& ofs, int& nlines);
 		void printFooter(std::ofstream& ofs, int& nlines);

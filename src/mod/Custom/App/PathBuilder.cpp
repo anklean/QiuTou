@@ -140,19 +140,14 @@ void BuildPath(Part::TopoShape& shape, std::string asub, std::vector<Custom::NCS
 		gp_Pnt2d             theUV;
 		crvMeshTools.Value(i, theIsoParam, theParam, thePoint, theUV);
 
-// 		GeomLProp_CLProps prop(curveAdaptor.Curve().Curve(), theParam, 1, Precision::Confusion());
-// 
-// 		gp_Dir tangent;
-// 		if (prop.IsTangentDefined()) {
-// 			prop.Tangent(tangent);
-// 		}
-		gp_XYZ pntdir = left_center.XYZ() -thePoint.XYZ();
- 		//gp_Dir nrm(pntdir);
-// 		int nret = getNormal2(thePoint, center_line, nrm);
-// 		if (nret != 0)
-// 		{
-// 		}
+		GeomLProp_CLProps prop(curveAdaptor.Curve().Curve(), theParam, 1, Precision::Confusion());
 
+		gp_Dir tangent;
+		if (prop.IsTangentDefined()) {
+			prop.Tangent(tangent);
+		}
+		gp_XYZ pntdir = left_center.XYZ() -thePoint.XYZ();
+		
 		Custom::NCStepInfo si = { 0 };
 		si.type = 0;
 		si.gcode = "";
@@ -161,6 +156,7 @@ void BuildPath(Part::TopoShape& shape, std::string asub, std::vector<Custom::NCS
 		si.Normal = Base::Vector3d(pntdir.X(), pntdir.Y(), pntdir.Z());
 		pathPointList.push_back(si);//从原点开始
 	}
+
 }
 
 
