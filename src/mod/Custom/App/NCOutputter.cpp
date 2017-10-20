@@ -188,10 +188,10 @@ double NCOutPutter::getB(Base::Vector3d nrm, Base::Placement place)
 	// 	Base::Vector3d y_axis(0,1, 0);
 	//	Base::Vector3d z_axis(0, 0, 1);
 
-	Base::Vector3d vb = nrm.ProjToPlane(base, z_axis);
+	Base::Vector3d vb = nrm.ProjToPlane(base, z_axis); //z_axis
 
 	Base::Vector3d vv = vb - base;
-	double db = vv.GetAngle(y_axis);
+	double db = vv.GetAngle(y_axis);//y_axis
 	double b = Base::toDegrees<double>(db);
 
 	//
@@ -214,31 +214,40 @@ double NCOutPutter::getB(Base::Vector3d nrm, Base::Placement place)
 // 调整刀具点的位置
 // 计算时使用的是砂轮的边缘，仿真时使用的砂轮的中心作为位置点，因此需要矫正
 //
-Base::Vector3d NCOutPutter::adjustPointByTools(Base::Vector3d& point, Base::Placement& place)
+Base::Vector3d NCOutPutter::adjustPointByTools(Base::Vector3d& point, Base::Placement& place , double B)
 {
 	double tool_radius = getToolDiameter() / 2.0;
+	double db = Base::toRadians<double>(B-90);
 
 	Base::Vector3d tpnt = point;
 
-	Base::Vector3d base = place.getPosition();
-	Base::Matrix4D mtx = place.toMatrix();
-	mtx.transpose();
+ 	Base::Vector3d base = place.getPosition();
+ 	Base::Matrix4D mtx = place.toMatrix();
+ 	mtx.transpose();
 
 	double dmtx[16] = { 0 };
 	mtx.getMatrix(dmtx);
 
-	Base::Vector3d x_axis(dmtx[0], dmtx[1], dmtx[2]);
-	Base::Vector3d y_axis(dmtx[4], dmtx[5], dmtx[6]);
-	Base::Vector3d z_axis(dmtx[8], dmtx[9], dmtx[10]);
-
-	Base::Vector3d bbase = base.ProjToPlane(tpnt, z_axis);
-	Base::Vector3d ppnt = tpnt.ProjToPlane(tpnt, z_axis);
-
-	//Base::Vector3d ppnt = tpnt.ProjToLine(base, z_axis);
-
-	Base::Vector3d nrm_vec = ppnt - bbase;
+	Base::Vector3d newx(dmtx[0], dmtx[1], dmtx[2]);
+	Base::Vector3d newy(dmtx[4], dmtx[5], dmtx[6]);
+	Base::Vector3d newz(dmtx[8], dmtx[9], dmtx[10]);
+	
+	Base::Vector3d bbase = base.ProjToPlane(tpnt, newz);
+	Base::Vector3d nrm_vec = tpnt -bbase  ;
 	nrm_vec = nrm_vec.Normalize();
-	Base::Vector3d r = point + nrm_vec * tool_radius;
+	Base::Vector3d tt = tpnt + nrm_vec * tool_radius;
+	
+	Base::Matrix4D mmtx(bbase,newz,db);
+	Base::Vector3d r=mmtx*tt;
+
+// 	Base::Vector3d rclBase; Base::Vector3d rclDir; double fAngle; double fTranslation;
+// 	mtx.toAxisAngle(rclBase, rclDir, fAngle, fTranslation) ;
+// 
+// 	Base::Matrix4D mmtx(base, rclDir, fAngle);
+// 	mmtx.rotZ(db);
+// 	mmtx.toAxisAngle(rclBase, rclDir, fAngle, fTranslation);
+// 	Base::Vector3d r = mmtx*tt;
+
 	return r;
 }
 
@@ -339,7 +348,7 @@ void NCOutPutter::printFeed(std::ofstream& ofs, int& nlines, Custom::PathObject:
 		double db = getB(step.Point, place);
 		double da = getA(step.Point - step1.Point, place, db);
 		
-		Base::Vector3d r = adjustPointByTools(step.Point , place);
+		Base::Vector3d r = adjustPointByTools(step.Point , place,db);
 
 		ofs << "N" << nlines++ << " " << "G00 X" << h << " Z" << h/*<< "; Z轴运行至安全高度"*/ << std::endl;
 		ofs << "N" << nlines++ << " " << "G01 G90 B" << db /*<< "; B旋转到相应角度"*/ << std::endl;
@@ -368,7 +377,7 @@ void NCOutPutter::printTract(std::ofstream& ofs, int& nlines, Custom::PathObject
 		double db = getB(step.Point, place);
 		double da = getA(step1.Point - step.Point, place, db);
 
-		Base::Vector3d r = adjustPointByTools(ppnt, place);
+		Base::Vector3d r = adjustPointByTools(ppnt, place,db);
 
 		ofs << "N" << nlines++ << " G01 G90 ";		
 		ofs << " X" << r.x << " ";
@@ -376,8 +385,8 @@ void NCOutPutter::printTract(std::ofstream& ofs, int& nlines, Custom::PathObject
 		ofs << " Z" << r.z << " ";
 		ofs << std::endl;
 
-		ofs << "N" << nlines++ << " " << "G00 X-100" << std::endl;
-		ofs << "N" << nlines++ << " " << "G00 Z150  "  << std::endl;
+		ofs << "N" << nlines++ << " " << "G00 Z" << h << std::endl;
+		ofs << "N" << nlines++ << " " << "G00 X" << h << std::endl;
 		//ofs << "N" << nlines++ << " " << "G00 X0 Y0 Z0  " << std::endl;
 		//ofs << "N" << nlines++ << " " << "G00 A" << 0 << " B" <<0 <<std::endl;
 	}
@@ -401,8 +410,7 @@ void NCOutPutter::printAPath(std::ofstream& ofs, int& nlines, Custom::PathObject
 			double da = getA(lastStep.Point -step.Point, place, db);
 			double la = getA(lastStep.Point, place);
 			
-			Base::Vector3d r = adjustPointByTools(step.Point, place);
-		
+			Base::Vector3d r = adjustPointByTools(step.Point, place,db);		
 
 			ofs << "N" << nlines++ << " G01 G90 ";
 			if (fabs(step.Point.x - lastStep.Point.x) > tol)

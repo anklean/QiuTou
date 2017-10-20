@@ -521,7 +521,7 @@ void CmdCustomBuildNCFile::activated(int iMsg)
 	data.setPathList(lstFaces);
 	//data.setMachineCS(Base::Placement());
 	//data.setWorkCS(workcs);
-	data.setSafeHeight(150);
+	data.setSafeHeight(250);
 	data.setSpeed(1000);
 	data.setSavePath(QString::fromAscii("d:\\ccc.anc"));
 

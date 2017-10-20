@@ -89,7 +89,10 @@
 #include "GC_MakeSegment.hxx"
 #include "Geom_SphericalSurface.hxx"
 #include "BRepProj_Projection.hxx"
-
+#include "BRepBuilderAPI_Transform.hxx"
+#include "BRepOffsetAPI_MakePipe.hxx"
+#include "BRepAlgo_BooleanOperation.hxx"
+#include "BRepAlgo_Cut.hxx"
 
 using namespace Custom;
 
@@ -99,7 +102,7 @@ PROPERTY_SOURCE(Custom::BallCutter, Part::Feature)
 BallCutter::BallCutter()
 {
 	ADD_PROPERTY(number, (6));
-	ADD_PROPERTY(angle, (18));
+	ADD_PROPERTY(angle, (11));
 	ADD_PROPERTY(sketchAngle, (30));
 	ADD_PROPERTY(sketchLength, (0.3));
 
@@ -195,7 +198,7 @@ void BallCutter::makePloyline(std::vector<Base::Vector3d> points,TopoDS_Wire& wr
 	}
 }
 
-void BallCutter::makeMainBoby(TopoDS_Shape& body)
+void BallCutter::makeMainBoby(TopoDS_Shape& body, double ang)
 {
   double cyDiameter = cylinderDiameter.getValue();
   double cyLength = cylinderLength.getValue();
@@ -257,7 +260,7 @@ void BallCutter::makeMainBoby(TopoDS_Shape& body)
   gp_Pnt pnt(0, 0, 0);
   gp_Dir dir(0, 0, 1);
   gp_Ax1 axis(pnt, dir);
-  body = this->doRevolution(wrie, axis);
+  body = this->doRevolution(wrie, axis, ang);
 
 }
 
@@ -366,13 +369,15 @@ void BallCutter::makeMainSketch(double h, double L, double angleIncre, double sk
 App::DocumentObjectExecReturn *BallCutter::execute(void)
 {
 	TopoDS_Shape BaseShape;
-	makeMainBoby(BaseShape);
+	makeMainBoby(BaseShape, -1 * M_PI);
+
+	TopoDS_Shape newBaseShape = cutHeader(BaseShape);
 	//this->Shape.setValue(BaseShape);
 	//return App::DocumentObject::StdReturn;
 
 	TopoDS_Shape CutBody;
 	TopoDS_Edge yindaoxian;
-	this->makeCutterBody(BaseShape, CutBody, yindaoxian);
+	this->makeCutterBody(newBaseShape, CutBody, yindaoxian);
 
 	//TopoDS_Shape s = doBoolean_Cut(BaseShape, CutBody);
 	
@@ -593,20 +598,20 @@ TopoDS_Shape Custom::BallCutter::doBoolean_Fuse(TopoDS_Shape BaseShape, TopoDS_S
 	return resShape;
 }
 
-TopoDS_Shape Custom::BallCutter::doBoolean_Cut(TopoDS_Shape BaseShape, TopoDS_Shape ToolShape)
+const TopoDS_Shape&  Custom::BallCutter::doBoolean_Cut(const TopoDS_Shape& BaseShape, const TopoDS_Shape& ToolShape)
 {
-	TopoDS_Shape resShape;
+	
 	try {
-		std::auto_ptr<BRepAlgoAPI_BooleanOperation> mkBool(new BRepAlgoAPI_Cut(BaseShape, ToolShape));
+		std::auto_ptr<BRepAlgo_BooleanOperation> mkBool(new BRepAlgo_Cut(BaseShape, ToolShape));
 		if (mkBool->IsDone()) {
-			resShape = mkBool->Shape();
+			return mkBool->Shape();
 		}
 	}
 	catch (...) {
 
 	}
 
-	return resShape;
+	return TopoDS_Shape();
 }
 
 void Custom::BallCutter::makeHeaderCutBoby(TopoDS_Shape& body)
@@ -672,16 +677,28 @@ void Custom::BallCutter::makeCutterBody(TopoDS_Shape& baseShape, TopoDS_Shape& C
 
 	Base::Vector3d dir0 = (pt1 - pt3).Normalize();
 	Base::Vector3d pt4 = pt1 + dir0 * dSketchLength * 2;
-	Base::Vector3d pt5 = pt2 + dir0 * dSketchLength * 2;
+
+	Base::Vector3d dir1 = (pt2 - pt3).Normalize();
+	Base::Vector3d pt5 = pt2 + dir1 * dSketchLength * 2;
+
+	Base::Vector3d pt6 = pt5 + dir0 * dSketchLength * 3;
+
 	std::vector<Base::Vector3d> ptList;
 	ptList.push_back(pt2);
 	ptList.push_back(pt3);
 	ptList.push_back(pt1);
 	ptList.push_back(pt4);
+	ptList.push_back(pt6);
 	ptList.push_back(pt5);
 
 	TopoDS_Wire wire;
  	makePloyline(ptList, wire);
+
+
+	TopoDS_Compound comp;
+	BRep_Builder builder;
+	builder.MakeCompound(comp);
+	builder.Add(comp, wire);
 
 	
 	//////////////////////////////////////////////////////////////////////////
@@ -692,7 +709,7 @@ void Custom::BallCutter::makeCutterBody(TopoDS_Shape& baseShape, TopoDS_Shape& C
 
 	double dDiameter = radius.getValue() * 2;
 	double dAngle = angle.getValue() * M_PI / 180;
-	Base::Vector3d ptLineEnd(pt0.x - dDiameter * sin(dAngle), pt0.y, pt0.z - dDiameter * cos(dAngle));
+	Base::Vector3d ptLineEnd(pt0.x + dDiameter * sin(dAngle), pt0.y, pt0.z - dDiameter * cos(dAngle));
 
 	Base::Vector3d v = ptLineEnd - ptLineStart;
 
@@ -708,9 +725,12 @@ void Custom::BallCutter::makeCutterBody(TopoDS_Shape& baseShape, TopoDS_Shape& C
 // 	TopoDS_Edge line = makeEdge_Line(ptLineStart, ptLineEnd);
 
 	//////////////////////////////////////////////////////////////////////////
-	//  尝试使用投影 创建引导线  未编译成功
+	//  使用投影 创建引导线
 	//////////////////////////////////////////////////////////////////////////	
+
+
 	TopoDS_Face f;
+	TopoDS_Wire projLine;
 	TopExp_Explorer Ex;
 	for (Ex.Init(baseShape, TopAbs_FACE); Ex.More(); Ex.Next()) {
 		f = TopoDS::Face(Ex.Current());
@@ -727,17 +747,30 @@ void Custom::BallCutter::makeCutterBody(TopoDS_Shape& baseShape, TopoDS_Shape& C
 			BRepProj_Projection proj(w, f, gp_Dir(0, 1, 0));
 			bool fff = proj.IsDone();
 			
-			TopoDS_Compound comp;
-			BRep_Builder builder;
-			builder.MakeCompound(comp);
-			builder.Add(comp, f);
+			if (fff)
+			{
+				projLine = proj.Current();
+			}
+
+			//builder.Add(comp, f);
+			//builder.Add(comp, baseShape);
 			builder.Add(comp, w);
-			builder.Add(comp, proj.Shape());
-			this->Shape.setValue(comp);
+			builder.Add(comp, projLine);
 
 			break;
 		}
 	}
+
+
+	//gp_Trsf T;
+	//T.SetRotation(gp_Ax1(gp_Pnt(0., 0., 0.), gp_Vec(0., 0., 1.)),M_PI);
+	//BRepBuilderAPI_Transform theTrsf(T);
+	//TopoDS_Wire newShape;
+	//theTrsf.Perform(projLine, Standard_False);
+	//newShape = TopoDS::Wire(theTrsf.Shape());
+	//builder.Add(comp, newShape);
+
+
 	//return;
 	//this->Shape.setValue(curver.);
 
@@ -779,7 +812,7 @@ void Custom::BallCutter::makeCutterBody(TopoDS_Shape& baseShape, TopoDS_Shape& C
 
 	profiles.Append(wire);
 
-	BRepBuilderAPI_MakeWire mkWire(yindaoxian);
+	BRepBuilderAPI_MakeWire mkWire(projLine);
 	TopoDS_Shape path = mkWire.Wire();
 
 	Standard_Boolean isSolid =  Standard_True;
@@ -801,7 +834,62 @@ void Custom::BallCutter::makeCutterBody(TopoDS_Shape& baseShape, TopoDS_Shape& C
 	if (isSolid)
 		mkPipeShell.MakeSolid();
 #endif
+	gp_Trsf TT;
+	TT.SetRotation(gp_Ax1(gp_Pnt(0., 0., 0.), gp_Vec(0., 0., -1.)), M_PI / 3.);
+	BRepBuilderAPI_Transform theTrsfNew(TT);
+	TopoDS_Wire newWire;
+	theTrsfNew.Perform(wire, Standard_True);
+	newWire = TopoDS::Wire(theTrsfNew.Shape());
+	builder.Add(comp, newWire);
 
+	TopoDS_Shape pipeShape1 = this->doSweep(newWire, projLine);
+	//builder.Add(comp, pipeShape1);
+
+	gp_Trsf T;
+	T.SetRotation(gp_Ax1(gp_Pnt(0., 0., 0.), gp_Vec(0., 0., -1.)),	M_PI / 3.);
+	BRepBuilderAPI_Transform theTrsf(T);
+	TopoDS_Wire newShape;
+	theTrsf.Perform(projLine, Standard_True);
+	newShape = TopoDS::Wire(theTrsf.Shape());
+	builder.Add(comp, newShape);
+	
+
+	//builder.Add(comp, temp);
+
+
+	std::vector<Base::Vector3d> ptListWWW;
+	ptListWWW.push_back(pt2);
+	ptListWWW.push_back(pt3);
+	ptListWWW.push_back(pt1);
+	ptListWWW.push_back(pt6);
+	ptListWWW.push_back(pt5);
+
+	TopoDS_Wire wireWWW;
+	makePloyline(ptListWWW, wireWWW);
+
+
+
+
+	TopoDS_Shape pipeShape2 = this->doSweep(newWire, newShape);
+	//builder.Add(comp, pipeShape2);
+	//TopoDS_Shape temp = this->doBoolean_Fuse(pipeShape2, pipeShape1);
+
+	//TopoDS_Shape temp2 = this->doBoolean_Cut(baseShape, temp);
+
+	//TopoDS_Shape temp = this->doBoolean_Cut(baseShape, pipeShape2);
+
+	//TopoDS_Shape temp2 = this->doBoolean_Cut(temp, pipeShape1);
+
+	std::auto_ptr<BRepAlgo_BooleanOperation> mkBool(new BRepAlgo_Cut(baseShape, pipeShape2));
+	if (mkBool->IsDone()) {		
+		 TopoDS_Compound comp1;
+		 BRep_Builder builder1;
+		 builder1.MakeCompound(comp1);
+		 builder1.Add(comp1, mkBool->Shape());
+		 this->Shape.setValue(comp1);
+	}
+
+	
 	//this->Shape.setValue(mkPipeShell.Shape());
 	return ;
 }
@@ -822,3 +910,98 @@ TopoDS_Shape Custom::BallCutter::doBoolean_Section(TopoDS_Shape BaseShape, TopoD
 	return resShape;
 }
 
+TopoDS_Shape Custom::BallCutter::doSweep(TopoDS_Wire wire, TopoDS_Wire path)
+{
+	TopTools_ListOfShape profiles;
+
+	profiles.Append(wire);
+
+	Standard_Boolean isSolid = Standard_True;
+	Standard_Boolean isFrenet = Standard_False;
+	BRepBuilderAPI_TransitionMode transMode;
+	transMode = BRepBuilderAPI_RoundCorner;
+
+	BRepOffsetAPI_MakePipeShell mkPipeShell(path);
+	//mkPipeShell.SetMode(gp_Dir(0., 0., 1.));
+	mkPipeShell.SetMode(gp_Ax2(gp_Pnt(0,0,0), gp_Dir(0,1,0)));
+	//mkPipeShell.SetMode(isFrenet);
+	mkPipeShell.SetTransitionMode(transMode);
+	TopTools_ListIteratorOfListOfShape iter;
+	for (iter.Initialize(profiles); iter.More(); iter.Next()) {
+		mkPipeShell.Add(TopoDS_Shape(iter.Value()));
+	}
+
+	if (!mkPipeShell.IsReady())
+		Standard_Failure::Raise("shape is not ready to build");
+	mkPipeShell.Build();
+	if (isSolid)
+		mkPipeShell.MakeSolid();
+
+	return mkPipeShell.Shape();
+}
+
+
+TopoDS_Shape Custom::BallCutter::doSweep2(TopoDS_Wire wire, TopoDS_Wire path)
+{
+	TopTools_ListOfShape profiles;
+
+	profiles.Append(wire);
+
+	Standard_Boolean isSolid = Standard_True;
+	Standard_Boolean isFrenet = Standard_False;
+	BRepBuilderAPI_TransitionMode transMode;
+	transMode = BRepBuilderAPI_Transformed;
+
+	BRepOffsetAPI_MakePipeShell mkPipeShell(path);
+	//mkPipeShell.SetMode(gp_Dir(0., 0., 1.));
+	//mkPipeShell.SetMode(gp_Ax2(gp_Pnt(0, 0, 0), gp_Dir(0, 1, 0)));
+	mkPipeShell.SetMode(isFrenet);
+	mkPipeShell.SetTransitionMode(transMode);
+	TopTools_ListIteratorOfListOfShape iter;
+	for (iter.Initialize(profiles); iter.More(); iter.Next()) {
+		mkPipeShell.Add(TopoDS_Shape(iter.Value()));
+	}
+
+	if (!mkPipeShell.IsReady())
+		Standard_Failure::Raise("shape is not ready to build");
+	mkPipeShell.Build();
+	if (isSolid)
+		mkPipeShell.MakeSolid();
+
+	return mkPipeShell.Shape();
+}
+
+TopoDS_Shape Custom::BallCutter::cutHeader(TopoDS_Shape& baseShape)
+{
+	Base::Vector3d ptBase(0, 0, 0);
+	double cyLength1 = cylinderLength.getValue();
+	double dH = ballHeight.getValue();
+	double draidus = radius.getValue();
+
+	double dAg = angle.getValue() * M_PI / 180;
+
+	double tempH = dH - draidus;
+	double tempL = sqrt(draidus* draidus - tempH*sin(dAg)*tempH*sin(dAg)) + tempH*cos(dAg);
+	double dZ = cyLength1 + tempL*cos(dAg);
+
+	Base::Vector3d pt11(ptBase.x + 2 * draidus, ptBase.y + 2 * draidus, ptBase.z - dZ + 0.05);
+	Base::Vector3d pt21(ptBase.x - 2 * draidus, ptBase.y + 2 * draidus, pt11.z);
+	Base::Vector3d pt31(ptBase.x - 2 * draidus, ptBase.y - 2 * draidus, pt11.z);
+	Base::Vector3d pt41(ptBase.x + 2 * draidus, ptBase.y - 2 * draidus, pt11.z);
+
+
+	std::vector<Base::Vector3d> ptList11;
+	ptList11.push_back(pt11);
+	ptList11.push_back(pt21);
+	ptList11.push_back(pt31);
+	ptList11.push_back(pt41);
+
+	TopoDS_Wire wire11;
+	makePloyline(ptList11, wire11);
+
+	TopoDS_Shape ext = this->doExtrusion(wire11, Base::Vector3d(0, 0, -1), 0, draidus);
+
+	TopoDS_Shape ss = this->doBoolean_Cut(baseShape, ext);
+
+	return ss;
+}

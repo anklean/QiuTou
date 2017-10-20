@@ -59,18 +59,21 @@ namespace Custom
 		void makePloyline(std::vector<Base::Vector3d> points, TopoDS_Wire& wire);
 		TopoDS_Edge makeEdge_Line(const Base::Vector3d& startPt, const Base::Vector3d& endPt);
 
-		void makeMainBoby(TopoDS_Shape& body);
+		void makeMainBoby(TopoDS_Shape& body,double ang);
 		void makeHeaderBoby(TopoDS_Shape& body);
+		TopoDS_Shape cutHeader(TopoDS_Shape& baseShape);
 		void makeHeaderCutBoby(TopoDS_Shape& body);
 
 		void makeCutterBody(TopoDS_Shape& baseShape, TopoDS_Shape& CutBody, TopoDS_Edge& yindaoxian);
 		TopoDS_Shape doRevolution(TopoDS_Wire wire, gp_Ax1 axis, double angle = 2 * M_PI);
 		TopoDS_Shape doExtrusion(TopoDS_Wire wire, Base::Vector3d Dir, double start, double end);
 
-		TopoDS_Shape doBoolean_Fuse(TopoDS_Shape BaseShape, TopoDS_Shape ToolShape);
-		TopoDS_Shape doBoolean_Cut(TopoDS_Shape BaseShape, TopoDS_Shape ToolShape);
-		TopoDS_Shape doBoolean_Section(TopoDS_Shape BaseShape, TopoDS_Shape ToolShape);
+		TopoDS_Shape doSweep(TopoDS_Wire wire, TopoDS_Wire path);
 
+		TopoDS_Shape doBoolean_Fuse(TopoDS_Shape BaseShape, TopoDS_Shape ToolShape);
+		const TopoDS_Shape&  doBoolean_Cut(const TopoDS_Shape&  BaseShape, const TopoDS_Shape&  ToolShape);
+		TopoDS_Shape doBoolean_Section(TopoDS_Shape BaseShape, TopoDS_Shape ToolShape);
+		TopoDS_Shape doSweep2(TopoDS_Wire wire, TopoDS_Wire path);
 	private:
 		std::vector<TopoDS_Edge>  lineList;
 		TopTools_ListOfShape profiles;
