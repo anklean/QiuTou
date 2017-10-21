@@ -71,7 +71,7 @@ namespace Custom
 		TopoDS_Shape doSweep(TopoDS_Wire wire, TopoDS_Wire path);
 
 		TopoDS_Shape doBoolean_Fuse(TopoDS_Shape BaseShape, TopoDS_Shape ToolShape);
-		const TopoDS_Shape&  doBoolean_Cut(const TopoDS_Shape&  BaseShape, const TopoDS_Shape&  ToolShape);
+		TopoDS_Shape  doBoolean_Cut(const TopoDS_Shape&  BaseShape, const TopoDS_Shape&  ToolShape);
 		TopoDS_Shape doBoolean_Section(TopoDS_Shape BaseShape, TopoDS_Shape ToolShape);
 		TopoDS_Shape doSweep2(TopoDS_Wire wire, TopoDS_Wire path);
 	private:

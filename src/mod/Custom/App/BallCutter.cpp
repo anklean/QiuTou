@@ -369,7 +369,7 @@ void BallCutter::makeMainSketch(double h, double L, double angleIncre, double sk
 App::DocumentObjectExecReturn *BallCutter::execute(void)
 {
 	TopoDS_Shape BaseShape;
-	makeMainBoby(BaseShape, -1 * M_PI);
+	makeMainBoby(BaseShape, -1 * M_PI*2);
 
 	TopoDS_Shape newBaseShape = cutHeader(BaseShape);
 	//this->Shape.setValue(BaseShape);
@@ -598,20 +598,20 @@ TopoDS_Shape Custom::BallCutter::doBoolean_Fuse(TopoDS_Shape BaseShape, TopoDS_S
 	return resShape;
 }
 
-const TopoDS_Shape&  Custom::BallCutter::doBoolean_Cut(const TopoDS_Shape& BaseShape, const TopoDS_Shape& ToolShape)
+TopoDS_Shape  Custom::BallCutter::doBoolean_Cut(const TopoDS_Shape& BaseShape, const TopoDS_Shape& ToolShape)
 {
-	
+	TopoDS_Shape r;
 	try {
 		std::auto_ptr<BRepAlgo_BooleanOperation> mkBool(new BRepAlgo_Cut(BaseShape, ToolShape));
 		if (mkBool->IsDone()) {
-			return mkBool->Shape();
+			r= mkBool->Shape();
 		}
 	}
 	catch (...) {
 
 	}
 
-	return TopoDS_Shape();
+	return r;
 }
 
 void Custom::BallCutter::makeHeaderCutBoby(TopoDS_Shape& body)
@@ -684,9 +684,9 @@ void Custom::BallCutter::makeCutterBody(TopoDS_Shape& baseShape, TopoDS_Shape& C
 	Base::Vector3d pt6 = pt5 + dir0 * dSketchLength * 3;
 
 	std::vector<Base::Vector3d> ptList;
-	ptList.push_back(pt2);
+	//ptList.push_back(pt2);
 	ptList.push_back(pt3);
-	ptList.push_back(pt1);
+	//ptList.push_back(pt1);
 	ptList.push_back(pt4);
 	ptList.push_back(pt6);
 	ptList.push_back(pt5);
@@ -727,10 +727,8 @@ void Custom::BallCutter::makeCutterBody(TopoDS_Shape& baseShape, TopoDS_Shape& C
 	//////////////////////////////////////////////////////////////////////////
 	//  使用投影 创建引导线
 	//////////////////////////////////////////////////////////////////////////	
-
-
+	std::vector<TopoDS_Wire> list18ProjLines;
 	TopoDS_Face f;
-	TopoDS_Wire projLine;
 	TopExp_Explorer Ex;
 	for (Ex.Init(baseShape, TopAbs_FACE); Ex.More(); Ex.Next()) {
 		f = TopoDS::Face(Ex.Current());
@@ -745,22 +743,35 @@ void Custom::BallCutter::makeCutterBody(TopoDS_Shape& baseShape, TopoDS_Shape& C
 			TopoDS_Wire w = BRepBuilderAPI_MakeWire(e);
 
 			BRepProj_Projection proj(w, f, gp_Dir(0, 1, 0));
-			bool fff = proj.IsDone();
-			
-			if (fff)
-			{
-				projLine = proj.Current();
-			}
 
-			//builder.Add(comp, f);
-			//builder.Add(comp, baseShape);
-			builder.Add(comp, w);
-			builder.Add(comp, projLine);
+
+			if (proj.IsDone()) {
+				while (proj.More()) {
+					list18ProjLines.push_back(proj.Current());
+					proj.Next();
+				}
+			}
 
 			break;
 		}
 	}
 
+	std::vector<TopoDS_Edge> list18ProjEdges;
+	for (int i = 0; i < list18ProjLines.size(); i++)
+	{
+		TopoDS_Wire w = list18ProjLines[i];
+		for (Ex.Init(w, TopAbs_EDGE); Ex.More(); Ex.Next()) {
+			TopoDS_Edge e = TopoDS::Edge(Ex.Current());
+			list18ProjEdges.push_back(e);
+		}
+	}
+
+	std::vector<TopoDS_Wire> spineWires;
+	for (int i = 0; i < list18ProjEdges.size(); i++)
+	{
+		BRepBuilderAPI_MakeWire makeSpine(list18ProjEdges[i]);
+		spineWires.push_back(makeSpine.Wire());
+	}
 
 	//gp_Trsf T;
 	//T.SetRotation(gp_Ax1(gp_Pnt(0., 0., 0.), gp_Vec(0., 0., 1.)),M_PI);
@@ -834,26 +845,43 @@ void Custom::BallCutter::makeCutterBody(TopoDS_Shape& baseShape, TopoDS_Shape& C
 	if (isSolid)
 		mkPipeShell.MakeSolid();
 #endif
-	gp_Trsf TT;
-	TT.SetRotation(gp_Ax1(gp_Pnt(0., 0., 0.), gp_Vec(0., 0., -1.)), M_PI / 3.);
-	BRepBuilderAPI_Transform theTrsfNew(TT);
-	TopoDS_Wire newWire;
-	theTrsfNew.Perform(wire, Standard_True);
-	newWire = TopoDS::Wire(theTrsfNew.Shape());
-	builder.Add(comp, newWire);
 
-	TopoDS_Shape pipeShape1 = this->doSweep(newWire, projLine);
-	//builder.Add(comp, pipeShape1);
+	TopoDS_Shape pipeShape[2];
+	double ang[2] = { M_PI / 3.0, M_PI / 3.0+M_PI  };
+	for (int i = 0; i < 2; i++)
+	{
+		gp_Trsf TT;
+		TT.SetRotation(gp_Ax1(gp_Pnt(0., 0., 0.), gp_Vec(0., 0., -1.)), ang[i]);
+		BRepBuilderAPI_Transform theTrsfNew(TT);
+		TopoDS_Wire newWire;
+		theTrsfNew.Perform(wire, Standard_True);
+		newWire = TopoDS::Wire(theTrsfNew.Shape());
 
-	gp_Trsf T;
-	T.SetRotation(gp_Ax1(gp_Pnt(0., 0., 0.), gp_Vec(0., 0., -1.)),	M_PI / 3.);
-	BRepBuilderAPI_Transform theTrsf(T);
-	TopoDS_Wire newShape;
-	theTrsf.Perform(projLine, Standard_True);
-	newShape = TopoDS::Wire(theTrsf.Shape());
-	builder.Add(comp, newShape);
+		pipeShape[i] = this->doSweep(newWire, spineWires[i]);
+	}
+
+
+
+	std::vector<TopoDS_Shape> pipeShapes;
+	pipeShapes.push_back(pipeShape[0]);
+	//pipeShapes.push_back(pipeShape[1]);
+
+	for (int i = 1; i < 6; i++)
+	{
+		gp_Trsf T;
+		T.SetRotation(gp_Ax1(gp_Pnt(0., 0., 0.), gp_Vec(0., 0., -1.)), i*2*M_PI / 6.0);
+		BRepBuilderAPI_Transform theTrsf(T);
+		theTrsf.Perform(pipeShape[0], Standard_True);
+		pipeShapes.push_back(theTrsf.Shape());
 	
+	}
+	//this->Shape.setValue(comp1);
+	//return;
 
+	//Part::TopoShape compPipe(pipeShape1);
+	//TopoDS_Shape S=compPipe.multiFuse(pipeShapes);
+// 	this->Shape.setValue(S);
+// 	return;
 	//builder.Add(comp, temp);
 
 
@@ -866,28 +894,57 @@ void Custom::BallCutter::makeCutterBody(TopoDS_Shape& baseShape, TopoDS_Shape& C
 
 	TopoDS_Wire wireWWW;
 	makePloyline(ptListWWW, wireWWW);
-
-
-
-
-	TopoDS_Shape pipeShape2 = this->doSweep(newWire, newShape);
+	
+// 	TopoDS_Shape pipeShape2 = this->doSweep(newWire, newShape);
 	//builder.Add(comp, pipeShape2);
 	//TopoDS_Shape temp = this->doBoolean_Fuse(pipeShape2, pipeShape1);
 
 	//TopoDS_Shape temp2 = this->doBoolean_Cut(baseShape, temp);
+// 
+// 	TopoDS_Shape temp = this->doBoolean_Cut(baseShape, pipeShape2);
+// 
+// 	TopoDS_Shape temp2 = this->doBoolean_Cut(temp, pipeShape1);
+// 	this->Shape.setValue(temp2);
 
-	//TopoDS_Shape temp = this->doBoolean_Cut(baseShape, pipeShape2);
 
-	//TopoDS_Shape temp2 = this->doBoolean_Cut(temp, pipeShape1);
-
-	std::auto_ptr<BRepAlgo_BooleanOperation> mkBool(new BRepAlgo_Cut(baseShape, pipeShape2));
-	if (mkBool->IsDone()) {		
-		 TopoDS_Compound comp1;
-		 BRep_Builder builder1;
-		 builder1.MakeCompound(comp1);
-		 builder1.Add(comp1, mkBool->Shape());
-		 this->Shape.setValue(comp1);
+// 	Part::TopoShape baseshape_tt(baseShape);
+// 	TopoDS_Shape R = baseshape_tt.cut(pipeShape1);
+// 	this->Shape.setValue(R);
+// 	return;
+	TopoDS_Shape B = baseShape;
+	for (int i = 0; i <pipeShapes.size(); i++)
+	{
+		if (i != 3)
+		{
+			TopoDS_Shape T = pipeShapes[i];
+			std::auto_ptr<BRepAlgo_BooleanOperation> mkBool(new BRepAlgo_Cut(B, T));
+			if (mkBool->IsDone()) {
+				B = mkBool->Shape();
+			}
+		}
 	}
+// 单独处理第三个	
+	std::auto_ptr<BRepAlgo_BooleanOperation> mkBool(new BRepAlgo_Cut(B, pipeShape[1]));
+	if (mkBool->IsDone()) {
+		B = mkBool->Shape();
+	}
+
+// 	TopoDS_Compound comp1;
+// 	BRep_Builder builder1;
+// 	builder1.MakeCompound(comp1);
+// 	builder1.Add(comp1, pipeShape[1]);
+// 	builder1.Add(comp1, B);
+
+	this->Shape.setValue(B);
+
+// 	std::auto_ptr<BRepAlgo_BooleanOperation> mkBool(new BRepAlgo_Cut(baseShape, S));
+// 	if (mkBool->IsDone()) {
+// // 		TopoDS_Compound comp1;
+// // 		BRep_Builder builder1;
+// // 		builder1.MakeCompound(comp1);
+// // 		builder1.Add(comp1, mkBool->Shape());
+// 		this->Shape.setValue(mkBool->Shape());
+// 	}
 
 	
 	//this->Shape.setValue(mkPipeShell.Shape());
