@@ -337,8 +337,7 @@ App::DocumentObjectExecReturn *BallCutter::execute(void)
 	//创建零件主体
 	TopoDS_Shape BaseShape;
 	makeMainBoby(BaseShape, -1 * M_PI*2);
-	this->Shape.setValue(BaseShape);
-	return 0;
+
 	//现将头部消去一部分
 	//TopoDS_Shape newBaseShape = cutHeader(BaseShape);
 	
@@ -909,7 +908,6 @@ TopoDS_Shape Custom::BallCutter::makeCutterBody(TopoDS_Shape& baseShape, TopoDS_
 	//	unionshape = unionshape.fuse(theTrsf.Shape());
 	}
 
-	return comp1;
  	TopoDS_Shape RB = baseShape;
  	for (int i = 0; i <pipeShapes.size(); i++)
  	{

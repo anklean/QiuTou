@@ -25,7 +25,9 @@
 #ifndef APP_APPLICATION_H
 #define APP_APPLICATION_H
 
+#ifndef Q_MOC_RUN
 #include <boost/signal.hpp>
+#endif
 
 #include <vector>
 
