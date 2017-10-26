@@ -121,6 +121,10 @@ BallCutter::BallCutter()
 
 	ADD_PROPERTY(GrindingWheelThick, (4)); //砂轮的厚度
 	ADD_PROPERTY(GrindingWheelAngle, (90));//砂轮的角度
+
+	ADD_PROPERTY(CheckSpine, (false));//砂轮的角度
+
+	
 }
 
 short BallCutter::mustExecute() const
@@ -675,13 +679,13 @@ TopoDS_Shape Custom::BallCutter::makeCutterBody(TopoDS_Shape& baseShape, TopoDS_
 	TopoDS_Wire wire;
 	makePloyline(ptList, wire);
 	
-	TopoDS_Wire  sectionWire = wire;
-// 	gp_Trsf T;
-// 	T.SetRotation(gp_Ax1(gp_Pnt(pt1.x, pt1.y, pt1.z), gp_Vec(0., 0., 1.)), -dAngle);
-// 	BRepBuilderAPI_Transform theTrsf(T);
-// 	TopoDS_Wire sectionWire;
-// 	theTrsf.Perform(wire, Standard_False);
-// 	sectionWire = TopoDS::Wire(theTrsf.Shape());
+	//截面是按照平行于Y画的，需要转动一个螺旋角，使其与投影引导线匹配
+	gp_Trsf T;
+	T.SetRotation(gp_Ax1(gp_Pnt(pt1.x, pt1.y, pt1.z), gp_Vec(0., 0., 1.)), -dSketchAngel/2.0);
+	BRepBuilderAPI_Transform theTrsf(T);
+	TopoDS_Wire sectionWire;
+	theTrsf.Perform(wire, Standard_False);
+	sectionWire = TopoDS::Wire(theTrsf.Shape());
 
 # if 0
 	// 外圆上的两个点
@@ -721,7 +725,7 @@ TopoDS_Shape Custom::BallCutter::makeCutterBody(TopoDS_Shape& baseShape, TopoDS_
 	//////////////////////////////////////////////////////////////////////////
 	// 绘制18度直线
 	//////////////////////////////////////////////////////////////////////////
-	Base::Vector3d pt0 = Base::Vector3d(ptBase.x, ptBase.y, ptBase.z - cyLength);
+	Base::Vector3d pt0 = Base::Vector3d(ptBase.x, ptBase.y + (ballradius - cutDepth), ptBase.z - cyLength);
 	Base::Vector3d ptLineStart = pt0;
 	
 	Base::Vector3d ptLineEnd(pt0.x + dDiameter * sin(dAngle), pt0.y, pt0.z - dDiameter * cos(dAngle));
@@ -804,7 +808,12 @@ TopoDS_Shape Custom::BallCutter::makeCutterBody(TopoDS_Shape& baseShape, TopoDS_
 	//return comp1;
 
 	TopoDS_Shape pipeShape;	
-	Part::TopoShape spineShape(spineWires[0]);
+	int nSpineIndex = 0;
+	if (CheckSpine.getValue() == true)
+	{
+		nSpineIndex = 1;
+	}
+	Part::TopoShape spineShape(spineWires[nSpineIndex]);
 	Part::TopoShape pipeTopoShape = spineShape.makePipeShell(listSection, true, false, 0);
 	pipeShape = pipeTopoShape._Shape;
 	builder1.Add(comp1, pipeTopoShape._Shape);

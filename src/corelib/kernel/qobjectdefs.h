@@ -66,7 +66,13 @@ class QString;
 #  define QT_NO_EMIT
 # else
 #   define slots
-#   define signals protected
+//#   define signals protected
+// zhangkun 2016-05-11
+// boost::signal already defined signal to a namespace name 
+// if qt define signals to protected,qt cannot compiled with boost
+// so redefine to q_signals
+#   define q_slots
+#   define q_signals protected
 # endif
 # define Q_SLOTS
 # define Q_SIGNALS protected

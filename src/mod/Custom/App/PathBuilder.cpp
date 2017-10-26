@@ -157,6 +157,8 @@ void BuildPath(Part::TopoShape& shape, std::string asub, std::vector<Custom::NCS
 		pathPointList.push_back(si);//从原点开始
 	}
 
+	std::reverse(pathPointList.begin(), pathPointList.end());
+	
 }
 
 

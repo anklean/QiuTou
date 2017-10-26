@@ -40,6 +40,8 @@ namespace Custom
 		
 		App::PropertyLength GrindingWheelThick; //砂轮的厚度
 		App::PropertyAngle GrindingWheelAngle;//砂轮的角度
+
+		App::PropertyBool CheckSpine;//切换引导线
 		/** @name methods override feature */
 		//@{
 		/// recalculate the feature
