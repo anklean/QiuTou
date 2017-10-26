@@ -52,14 +52,14 @@
     <ClCompile Include="PlayPathDlg.cpp">
       <Filter>Dlg</Filter>
     </ClCompile>
-    <ClCompile Include="CreateBallCutter.cpp">
-      <Filter>Dlg</Filter>
-    </ClCompile>
-    <ClCompile Include="ParamDockWindow.cpp">
-      <Filter>Dlg</Filter>
-    </ClCompile>
     <ClCompile Include="setPartLocationDlg.cpp" />
     <ClCompile Include="ViewProviderNC.cpp">
+      <Filter>viewProvider</Filter>
+    </ClCompile>
+    <ClCompile Include="BallCutterDialog.cpp">
+      <Filter>Dlg</Filter>
+    </ClCompile>
+    <ClCompile Include="ViewProviderBallCutter.cpp">
       <Filter>viewProvider</Filter>
     </ClCompile>
   </ItemGroup>
@@ -74,6 +74,9 @@
       <Filter>viewProvider</Filter>
     </ClInclude>
     <ClInclude Include="ViewProviderNC.h">
+      <Filter>viewProvider</Filter>
+    </ClInclude>
+    <ClInclude Include="ViewProviderBallCutter.h">
       <Filter>viewProvider</Filter>
     </ClInclude>
   </ItemGroup>
@@ -118,10 +121,9 @@
     <CustomBuild Include="GrindingWheelDlg.ui">
       <Filter>Dlg</Filter>
     </CustomBuild>
-    <CustomBuild Include="CreateBallCutter.h" />
-    <CustomBuild Include="ParamDockWindow.h" />
-    <CustomBuild Include="createBallCutter.ui" />
     <CustomBuild Include="setPartLocationDlg.h" />
     <CustomBuild Include="setPartLocationDlg.ui" />
+    <CustomBuild Include="BallCutterDialog.h" />
+    <CustomBuild Include="BallCutterDialog.ui" />
   </ItemGroup>
 </Project>

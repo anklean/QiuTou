@@ -61,18 +61,19 @@ NCOutPutter::NCOutPutter()
 	ADD_PROPERTY_TYPE(SafeHeight, (15), strPara, App::Prop_None, _UTF8("安全高度"));
 
 	std::vector<std::string> befores;
-	befores.push_back("M06 T" + ToolNum .getStrValue()+ "; 设置使用刀具1");//
-	befores.push_back("M03 S5000; 设置主轴顺时针旋转 转速5000");//
-	befores.push_back("M08; 冷却打开 ");//
-	befores.push_back("G90 G54 G64; 几何数据的基本设定:使用绝对坐标, 使用工件坐标系1, 使用连续路径运行");//
+//	befores.push_back("M06 T" + ToolNum .getStrValue()+ "; 设置使用刀具1");//
+	befores.push_back("M03 S5000");//; 设置主轴顺时针旋转 转速5000
+	befores.push_back("M08 ");//; 冷却打开
+	befores.push_back("G90 G54");// G64; 几何数据的基本设定:使用绝对坐标, 使用工件坐标系1, 使用连续路径运行
 	//befores.push_back("G00 Z150; Z轴运行至安全高度");//
 	//befores.push_back("G00 X - 7.2 Y - 7.2; XY运行到起始点");//
 	//	G43 H1 Z150.
 	BeforeGcode.setValues(befores);
 
 	std::vector<std::string> afters;	
-	afters.push_back("M05 M09; 主轴停止，冷却液关闭");//
-	afters.push_back("M30; 程序结束");//
+	afters.push_back("M05");//; 主轴停止
+	afters.push_back("M09");//; 冷却液关闭
+	afters.push_back("M30");//; 程序结束
 	AfterGcode.setValues(afters);
 
 }
@@ -311,7 +312,7 @@ void NCOutPutter::getAngle(Base::Vector3d nrm, double& a, double &b, double & c,
 //输出程序头
 void NCOutPutter::printHeader(std::ofstream& ofs, int& nlines)
 {
-	ofs << "%" << std::endl;
+	//ofs << "%" << std::endl;
 	std::vector<std::string> befores = BeforeGcode.getValues();
 	for (int i = 0; i < befores.size(); i++)
 	{
@@ -332,7 +333,7 @@ void NCOutPutter::printFooter(std::ofstream& ofs, int& nlines)
 		ofs << "N" << nlines++ << " ";
 		ofs << afters[i] << std::endl;
 	}
-	ofs << "%" << std::endl;
+//	ofs << "%" << std::endl;
 }
 
 //输出一段程序开始前的进刀
@@ -351,8 +352,8 @@ void NCOutPutter::printFeed(std::ofstream& ofs, int& nlines, Custom::PathObject:
 		Base::Vector3d r = adjustPointByTools(step.Point , place,db);
 
 		ofs << "N" << nlines++ << " " << "G00 X" << h << " Z" << h/*<< "; Z轴运行至安全高度"*/ << std::endl;
-		ofs << "N" << nlines++ << " " << "G01 G90 B" << db /*<< "; B旋转到相应角度"*/ << std::endl;
-		ofs << "N" << nlines++ << " " << "G01 G90 A" << da /*<< "; A旋转到相应角度"*/<< std::endl;
+		ofs << "N" << nlines++ << " " << "G01 G90 A" << db /*<< "; B旋转到相应角度"*/ << std::endl;
+		ofs << "N" << nlines++ << " " << "G01 G90 B" << da /*<< "; A旋转到相应角度"*/<< std::endl;
 		ofs << "N" << nlines++ << " " << "G01 G90 Y" << r.y << " " << std::endl;
 		ofs << "N" << nlines++ << " " << "G01 G90 Z" << r.z << " " << std::endl;
 		ofs << "N" << nlines++ << " " << "G01 G90 X" << r.x << " F" << step.speed/*<< ";x, y" */ << std::endl;
@@ -398,7 +399,7 @@ void NCOutPutter::printAPath(std::ofstream& ofs, int& nlines, Custom::PathObject
 	double local_speed = Speed.getValue();
 	if (paths.size() > 0)
 	{
-		ofs << "\n\n\n;----Path Begin----------" << std::endl;
+		//ofs << "\n\n\n;----Path Begin----------" << std::endl;
 		printFeed(ofs, nlines, paths , place);
 		
 		Custom::NCStepInfo lastStep = paths[0];
@@ -420,7 +421,7 @@ void NCOutPutter::printAPath(std::ofstream& ofs, int& nlines, Custom::PathObject
 			if (fabs(step.Point.z - lastStep.Point.z) > tol)
 				ofs << " Z" << r.z << " ";
 			//if (fabs(da - la) > tol)
-				ofs << " A" << da /* << " B" << db << " C" << dc*/;
+				ofs << " B" << da /* << " B" << db << " C" << dc*/;
 			//if (fabs(step.speed - lastStep.speed) > tol)
 				ofs << " F" << local_speed << " ";
 			ofs << std::endl;
@@ -429,7 +430,7 @@ void NCOutPutter::printAPath(std::ofstream& ofs, int& nlines, Custom::PathObject
 		}
 
 		printTract(ofs, nlines, paths, place);
-		ofs << ";----Path End----------\n\n\n" << std::endl;
+		//ofs << ";----Path End----------\n\n\n" << std::endl;
 	}
 	
 }

@@ -12,7 +12,7 @@ using namespace Gui;
 ParamDockWindow::ParamDockWindow(Gui::Document* pcDocument, QWidget *parent)
 : DockWindow(pcDocument,parent)
 {
-	paramPage = new CreateBallCutter(this);
+	paramPage = new BallCutterDialog(this);
 	
 	QHBoxLayout* layout = new QHBoxLayout;
 	layout->addWidget(paramPage);
@@ -22,7 +22,7 @@ ParamDockWindow::ParamDockWindow(Gui::Document* pcDocument, QWidget *parent)
 
 ParamDockWindow::ParamDockWindow(QWidget *parent /*= 0*/)
 {
-	paramPage = new CreateBallCutter(this);
+	paramPage = new BallCutterDialog(this);
 
 	QHBoxLayout* layout = new QHBoxLayout(this);
 	layout->addWidget(paramPage);

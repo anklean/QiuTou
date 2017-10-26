@@ -6,47 +6,47 @@
 #include <App/PropertyUnits.h>
 
 #include <TopoDS_Face.hxx>
-#include "Geometry.h"
+#include "Mod\Part\App\Geometry.h"
 #include "App/DocumentObject.h"
 #include "TopoDS_Edge.hxx"
 #include "Mod\Part\App\PartFeature.h"
 
 namespace Custom
 {
-
-	class BallCutter : public Part::Feature
+	class CustomExport BallCutter : public Part::Feature
 	{
 		PROPERTY_HEADER(Custom::BallCutter);
 
 	public:
 		BallCutter();
 
-		App::PropertyInteger number; // 刀刃数量
-		App::PropertyAngle angle; // 螺旋角
+		App::PropertyLength A; //球头直径
+		App::PropertyAngle B;//螺旋角
+		App::PropertyLength C; //砂轮直径C
+		App::PropertyAngle D; //弧开始角
+		App::PropertyAngle E; //弧结束角
+		App::PropertyLength F; //安全高度
+		App::PropertyLength G; //下切深度
+		App::PropertyAngle H; //前角
+		App::PropertyLength I;//毛坯头部余量
+		App::PropertyInteger J; //组数
+		App::PropertyInteger K;//每组刃数
+		App::PropertyInteger L;//总刃数
 
-		App::PropertyAngle sketchAngle; // 截面夹角
-		App::PropertyLength sketchLength; // 截面边长
-
-		App::PropertyLength radius; // 球头半径
-		App::PropertyLength ballHeight; // 球头总高
-
-		App::PropertyLength pathStep; // 刀路歩距
-
-		App::PropertyLength cylinderDiameter; // 圆柱部分直径
-		App::PropertyLength cylinderLength; // 圆柱部分高度
-
-		App::PropertyLength chamferEdgeA;  //倒角边A
-		App::PropertyLength chamferEdgeB;  //倒角边B
-
-		App::PropertyLength headerHeight;  // 顶部刀刃高度
-		App::PropertyAngle headerAngle;  // 顶部刀刃角度
-
+		App::PropertyLength CylinderLength; //柱面长度
+		App::PropertyLength CylinderDiameter;//柱面直径
+		App::PropertyLength CylinderChamferA;//柱面倒角长度A
+		App::PropertyLength CylinderChamferB;//柱面倒角长度B
+		
+		App::PropertyLength GrindingWheelThick; //砂轮的厚度
+		App::PropertyAngle GrindingWheelAngle;//砂轮的角度
 		/** @name methods override feature */
 		//@{
 		/// recalculate the feature
 		App::DocumentObjectExecReturn *execute(void);
 		short mustExecute() const;
 		void onChanged(const App::Property* prop);
+	
 		/// returns the type name of the view provider
 		const char* getViewProviderName(void) const {
 			return "PartGui::ViewProviderPart";
@@ -64,7 +64,7 @@ namespace Custom
 		TopoDS_Shape cutHeader(TopoDS_Shape& baseShape);
 		void makeHeaderCutBoby(TopoDS_Shape& body);
 
-		void makeCutterBody(TopoDS_Shape& baseShape, TopoDS_Shape& CutBody, TopoDS_Edge& yindaoxian);
+		TopoDS_Shape makeCutterBody(TopoDS_Shape& baseShape, TopoDS_Shape& CutBody, TopoDS_Edge& yindaoxian);
 		TopoDS_Shape doRevolution(TopoDS_Wire wire, gp_Ax1 axis, double angle = 2 * M_PI);
 		TopoDS_Shape doExtrusion(TopoDS_Wire wire, Base::Vector3d Dir, double start, double end);
 
@@ -74,6 +74,9 @@ namespace Custom
 		TopoDS_Shape  doBoolean_Cut(const TopoDS_Shape&  BaseShape, const TopoDS_Shape&  ToolShape);
 		TopoDS_Shape doBoolean_Section(TopoDS_Shape BaseShape, TopoDS_Shape ToolShape);
 		TopoDS_Shape doSweep2(TopoDS_Wire wire, TopoDS_Wire path);
+
+		double getBallHeight();
+		TopoDS_Shape validateFace(const TopoDS_Shape& shape);
 	private:
 		std::vector<TopoDS_Edge>  lineList;
 		TopTools_ListOfShape profiles;

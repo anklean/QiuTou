@@ -71,9 +71,11 @@
 #include "PlayPathDlg.h"
 #include <QMessageBox>
 #include "Base/Tools.h"
-#include "CreateBallCutter.h"
+#include "BallCutterDialog.h"
 #include "setPartLocationDlg.h"
 
+#include <Gui/Utilities.h>
+#include <Gui/Control.h>
 //#include "Placement.h"
 
 
@@ -96,32 +98,17 @@ CmdCustomCreateBallCutter::CmdCustomCreateBallCutter()
 
 void CmdCustomCreateBallCutter::activated(int iMsg)
 {
-	Gui::MainWindow* pMainWindow = Gui::getMainWindow();
-	//QMessageBox::information(pMainWindow, QObject::tr("warning"), QObject::tr("this function has not Completed!"));
-	//return;
-
-	//CreateBallCutter* test = new CreateBallCutter(pMainWindow);
-	//test->show();
-
-	QString cmd;
-	cmd = qApp->translate("CmdCustomCreateBallCutter", "BallCutter");
-	openCommand((const char*)cmd.toUtf8());
-
-	doCommand(Doc, "App.ActiveDocument.addObject(\"Custom::BallCutter\",\"BallCutter\")");
-	cmd = QString::fromAscii("App.ActiveDocument.ActiveObject.Label = \"%1\"")
-		.arg(qApp->translate("CmdCustomCreateBallCutter", "BallCutter"));
-	doCommand(Doc, (const char*)cmd.toUtf8());
-	commitCommand();
-	updateActive();
-	doCommand(Gui, "Gui.SendMsgToActiveView(\"ViewFit\")");
+	Gui::TaskView::TaskDialog* dlg = Gui::Control().activeDialog();
+	if (!dlg)
+	{
+		dlg = new CustomGui::TaskBallCutter();
+	}
+	Gui::Control().showDialog(dlg);
 }
 
 bool CmdCustomCreateBallCutter::isActive(void)
 {
-	if (getActiveGuiDocument())
-		return true;
-	else
-		return false;
+	return (hasActiveDocument() && !Gui::Control().activeDialog());
 }
 
 
@@ -527,10 +514,10 @@ void CmdCustomBuildNCFile::activated(int iMsg)
 
 	QStringList sb;
 	sb
-		<< QString::fromLocal8Bit("M06 T1")//; 设置使用刀具1
+		//<< QString::fromLocal8Bit("M06 T1")//; 设置使用刀具1
 		<< QString::fromLocal8Bit("M03 S5000")//; 设置主轴顺时针旋转 转速5000
 		<< QString::fromLocal8Bit("M08")//; 冷却打开 
-		<< QString::fromLocal8Bit("G90 G54 G64");//; 几何数据的基本设定:使用绝对坐标, 使用工件坐标系1, 使用连续路径运行
+		<< QString::fromLocal8Bit("G90 G54");//;  G64几何数据的基本设定:使用绝对坐标, 使用工件坐标系1, 使用连续路径运行
 		//<< QString::fromAscii("G00 Z150; Z轴运行至安全高度")//
 		//<< QString::fromAscii("G00 X - 7.2 Y - 7.2; XY运行到起始点"); //
 	data.setBeforeGCode(sb);
@@ -538,7 +525,8 @@ void CmdCustomBuildNCFile::activated(int iMsg)
 
 	QStringList ab;
 	ab  
-		<< QString::fromLocal8Bit("M05 M09")//; 主轴停止，冷却液关闭
+		<< QString::fromLocal8Bit("M05")//; 主轴停止
+		<< QString::fromLocal8Bit("M09")//; 冷却液关闭
 		<< QString::fromLocal8Bit("M30");//; 程序结束
 	data.setAfterGCode(ab);
 	

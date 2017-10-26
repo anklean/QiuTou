@@ -339,18 +339,18 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
   <ItemGroup>
     <ClCompile Include="AppCustomGui.cpp" />
     <ClCompile Include="Command.cpp" />
-    <ClCompile Include="CreateBallCutter.cpp" />
+    <ClCompile Include="BallCutterDialog.cpp" />
     <ClCompile Include="CreateNCfileDlg.cpp" />
     <ClCompile Include="CreatePathDlg.cpp" />
     <ClCompile Include="CreateToolsDlg.cpp" />
     <ClCompile Include="CutterPlayer.cpp" />
     <ClCompile Include="GrindingWheelDlg.cpp" />
-    <ClCompile Include="ParamDockWindow.cpp" />
     <ClCompile Include="ParamSetPage.cpp" />
     <ClCompile Include="PlayPathDlg.cpp" />
     <ClCompile Include="PreCompiled.cpp" />
     <ClCompile Include="qrc_Custom.cxx" />
     <ClCompile Include="setPartLocationDlg.cpp" />
+    <ClCompile Include="ViewProviderBallCutter.cpp" />
     <ClCompile Include="ViewProviderCustomPath.cpp" />
     <ClCompile Include="ViewProviderNC.cpp" />
     <ClCompile Include="Workbench.cpp" />
@@ -482,25 +482,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">$(FC_BIN)\moc.exe;%(FullPath)</AdditionalInputs>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(FC_BIN)\moc.exe;%(FullPath)</AdditionalInputs>
     </CustomBuild>
-    <CustomBuild Include="CreateBallCutter.h">
-      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">"$(FC_BIN)\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\moc_%(Filename).cpp"  -DUNICODE -DWIN32 -DQT_DLL -DQT_CORE_LIB -DQT_GUI_LIB "-I.\GeneratedFiles" "-I." "-I$(FC_INCLUDE)" "-I.\GeneratedFiles\." "-I$(FC_INCLUDE)\Qt\QtCore" "-I$(FC_INCLUDE)\Qt\QtGui"</Command>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(FC_BIN)\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\moc_%(Filename).cpp"  -DUNICODE -DWIN32 -DQT_DLL -DQT_CORE_LIB -DQT_GUI_LIB "-I.\GeneratedFiles" "-I." "-I$(FC_INCLUDE)" "-I.\GeneratedFiles\." "-I$(FC_INCLUDE)\Qt\QtCore" "-I$(FC_INCLUDE)\Qt\QtGui"</Command>
-      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">"$(FC_BIN)\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\moc_%(Filename).cpp"  -DUNICODE -DWIN32 -DQT_DLL -DQT_CORE_LIB -DQT_GUI_LIB "-I.\GeneratedFiles" "-I." "-I$(FC_INCLUDE)" "-I.\GeneratedFiles\." "-I$(FC_INCLUDE)\Qt\QtCore" "-I$(FC_INCLUDE)\Qt\QtGui"</Command>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(FC_BIN)\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\moc_%(Filename).cpp"  -DUNICODE -DWIN32 -DQT_DLL -DQT_CORE_LIB -DQT_GUI_LIB "-I.\GeneratedFiles" "-I." "-I$(FC_INCLUDE)" "-I.\GeneratedFiles\." "-I$(FC_INCLUDE)\Qt\QtCore" "-I$(FC_INCLUDE)\Qt\QtGui"</Command>
-      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Moc%27ing %(Filename).h...</Message>
-      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing %(Filename).h...</Message>
-      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Moc%27ing %(Filename).h...</Message>
-      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Moc%27ing %(Filename).h...</Message>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">.\GeneratedFiles\moc_%(Filename).cpp</Outputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\GeneratedFiles\moc_%(Filename).cpp</Outputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">.\GeneratedFiles\moc_%(Filename).cpp</Outputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\GeneratedFiles\moc_%(Filename).cpp</Outputs>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(FC_BIN)\moc.exe;%(FullPath)</AdditionalInputs>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(FC_BIN)\moc.exe;%(FullPath)</AdditionalInputs>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">$(FC_BIN)\moc.exe;%(FullPath)</AdditionalInputs>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(FC_BIN)\moc.exe;%(FullPath)</AdditionalInputs>
-    </CustomBuild>
-    <CustomBuild Include="ParamDockWindow.h">
+    <CustomBuild Include="BallCutterDialog.h">
       <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">"$(FC_BIN)\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\moc_%(Filename).cpp"  -DUNICODE -DWIN32 -DQT_DLL -DQT_CORE_LIB -DQT_GUI_LIB "-I.\GeneratedFiles" "-I." "-I$(FC_INCLUDE)" "-I.\GeneratedFiles\." "-I$(FC_INCLUDE)\Qt\QtCore" "-I$(FC_INCLUDE)\Qt\QtGui"</Command>
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(FC_BIN)\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\moc_%(Filename).cpp"  -DUNICODE -DWIN32 -DQT_DLL -DQT_CORE_LIB -DQT_GUI_LIB "-I.\GeneratedFiles" "-I." "-I$(FC_INCLUDE)" "-I.\GeneratedFiles\." "-I$(FC_INCLUDE)\Qt\QtCore" "-I$(FC_INCLUDE)\Qt\QtGui"</Command>
       <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">"$(FC_BIN)\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\moc_%(Filename).cpp"  -DUNICODE -DWIN32 -DQT_DLL -DQT_CORE_LIB -DQT_GUI_LIB "-I.\GeneratedFiles" "-I." "-I$(FC_INCLUDE)" "-I.\GeneratedFiles\." "-I$(FC_INCLUDE)\Qt\QtCore" "-I$(FC_INCLUDE)\Qt\QtGui"</Command>
@@ -537,6 +519,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">$(FC_BIN)\moc.exe;%(FullPath)</AdditionalInputs>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(FC_BIN)\moc.exe;%(FullPath)</AdditionalInputs>
     </CustomBuild>
+    <ClInclude Include="ViewProviderBallCutter.h" />
     <ClInclude Include="ViewProviderCustomPath.h" />
     <ClInclude Include="ViewProviderNC.h" />
     <ClInclude Include="Workbench.h" />
@@ -685,7 +668,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
-    <CustomBuild Include="createBallCutter.ui">
+    <CustomBuild Include="BallCutterDialog.ui">
       <FileType>Document</FileType>
       <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">"$(FC_BIN)\uic.exe" -o ".\GeneratedFiles\ui_%(Filename).h" "%(FullPath)"</Command>
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(FC_BIN)\uic.exe" -o ".\GeneratedFiles\ui_%(Filename).h" "%(FullPath)"</Command>

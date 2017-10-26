@@ -26,7 +26,6 @@
 #include "ViewProviderCustomPath.h"
 #include "Gui/DockWindowManager.h"
 #include "Gui/MainWindow.h"
-#include "ParamDockWindow.h"
 #include "ViewProviderNC.h"
 
 
@@ -76,14 +75,14 @@ void CustomGuiExport initCustomGui()
     // add resources and reloads the translators
     loadCustomResource();
 
-
-	Gui::DockWindowManager* pDockMgr = Gui::DockWindowManager::instance();
-	Gui::MainWindow* pMainWindow = Gui::getMainWindow();
-	// Param view
-	ParamDockWindow* pcParamView = new ParamDockWindow(0,pMainWindow);
-	pcParamView->setObjectName(QString::fromAscii(QT_TRANSLATE_NOOP("QDockWidget", "Param View")));
-	pcParamView->setMinimumWidth(200);
-	pDockMgr->registerDockWindow("Std_ParamView", pcParamView);
+// 
+// 	Gui::DockWindowManager* pDockMgr = Gui::DockWindowManager::instance();
+// 	Gui::MainWindow* pMainWindow = Gui::getMainWindow();
+// 	// Param view
+// 	ParamDockWindow* pcParamView = new ParamDockWindow(0,pMainWindow);
+// 	pcParamView->setObjectName(QString::fromAscii(QT_TRANSLATE_NOOP("QDockWidget", "Param View")));
+// 	pcParamView->setMinimumWidth(200);
+// 	pDockMgr->registerDockWindow("Std_ParamView", pcParamView);
 
 }
 } // extern "C"

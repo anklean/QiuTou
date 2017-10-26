@@ -2,7 +2,7 @@
 #include "PreCompiled.h"
 #include "Gui\dockwindow.h"
 #include "Gui\Document.h"
-#include "CreateBallCutter.h"
+#include "BallCutterDialog.h"
 
 class ParamDockWindow : public Gui::DockWindow
 {
@@ -13,5 +13,5 @@ public:
 	~ParamDockWindow(void);
 
 private:
-	CreateBallCutter* paramPage;
+	BallCutterDialog* paramPage;
 };
