@@ -109,18 +109,20 @@ ViewProviderBallCutter::~ViewProviderBallCutter()
 
 void CustomGui::ViewProviderBallCutter::setupContextMenu(QMenu*menu, QObject* receiver, const char* member)
 {
-	QAction* act = menu->addAction(QObject::tr("Edit..."), receiver, member);
-	act->setData(QVariant(5));
+	QAction* act;
+	act = menu->addAction(QObject::tr("Edit "), receiver, member);
+	act->setData(QVariant((int)ViewProvider::Default));
+//	ViewProviderPart::setupContextMenu(menu, receiver, member);
 }
 
 bool CustomGui::ViewProviderBallCutter::setEdit(int ModNum)
 {
-	if (ModNum == 5) {
+	if (ModNum == ViewProvider::Default) {
 		// When double-clicking on the item for this pad the
 		// object unsets and sets its edit mode without closing
 		// the task panel
 		Gui::TaskView::TaskDialog *dlg = Gui::Control().activeDialog();
-		if (!dlg) {
+		if (dlg!=0) {
 			Gui::Control().showDialog(dlg);
 			return false;
 		}
@@ -136,7 +138,8 @@ bool CustomGui::ViewProviderBallCutter::setEdit(int ModNum)
 
 void CustomGui::ViewProviderBallCutter::unsetEdit(int ModNum)
 {
-	if (ModNum == ViewProvider::Color) {
+	if (ModNum == ViewProvider::Default) {
+
 	}
 	else {
 		Gui::ViewProviderGeometryObject::unsetEdit(ModNum);

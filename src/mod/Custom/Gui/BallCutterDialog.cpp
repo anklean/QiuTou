@@ -20,10 +20,7 @@ BallCutterDialog::~BallCutterDialog()
 
 }
 
-void BallCutterDialog::accept()
-{
-	QDialog::accepted();
-}
+
 
 void CustomGui::BallCutterDialog::setData(App::DocumentObject* pObj)
 {
@@ -57,7 +54,12 @@ void CustomGui::BallCutterDialog::setData(App::DocumentObject* pObj)
 		}		
 	}
 }
-
+void BallCutterDialog::accept()
+{
+	apply();
+	QDialog::accepted();
+	setResult(QDialog::Accepted);
+}
 void CustomGui::BallCutterDialog::apply()
 {
 	double dA = ui.editA->value(); //球头直径
@@ -79,9 +81,7 @@ void CustomGui::BallCutterDialog::apply()
 	double cB = ui.editCylinderChamferB->value();
 	double gT = ui.editGrindingWheelThick->value();
 	double gA = ui.editGrindingWheelAngle->value();
-
-
-
+	
 	App::Document* pActiveDoc = App::GetApplication().getActiveDocument();
 
 	if (m_pObject == 0)
@@ -92,37 +92,58 @@ void CustomGui::BallCutterDialog::apply()
 	if (m_pObject && m_pObject->getTypeId() == Custom::BallCutter::getClassTypeId())
 	{
 		Custom::BallCutter* pBallCutter = dynamic_cast<Custom::BallCutter*>(m_pObject);
+		
 		pBallCutter->setStatus(App::ObjectStatus::Restore, true);
-		pBallCutter->A.setValue(dA); //球头直径
-		pBallCutter->B.setValue(dB); //螺旋角
-		pBallCutter->C.setValue(dC); //砂轮直径C
-		pBallCutter->D.setValue(dD); //弧开始角
-		pBallCutter->E.setValue(dE); //弧结束角
-		pBallCutter->F.setValue(dF); //安全高度
-		pBallCutter->G.setValue(dG); //下切深度
-		pBallCutter->H.setValue(dH); //前角
-		pBallCutter->I.setValue(dI); //毛坯头部余量
-		pBallCutter->J.setValue(dJ); //组数
-		pBallCutter->K.setValue(dK); //每组刃数
-		pBallCutter->L.setValue(dL); //总刃数
+		if (fabs(pBallCutter->A.getValue() - dA) > 0.001)
+			pBallCutter->A.setValue(dA); //球头直径
+		if (fabs(pBallCutter->B.getValue() - dB) > 0.001)
+			pBallCutter->B.setValue(dB); //螺旋角
+		if (fabs(pBallCutter->C.getValue() - dC) > 0.001)
+			pBallCutter->C.setValue(dC); //砂轮直径C
+		if (fabs(pBallCutter->D.getValue() - dD) > 0.001)
+			pBallCutter->D.setValue(dD); //弧开始角
+		if (fabs(pBallCutter->E.getValue() - dE) > 0.001)
+			pBallCutter->E.setValue(dE); //弧结束角
+		if (fabs(pBallCutter->F.getValue() - dF) > 0.001)
+			pBallCutter->F.setValue(dF); //安全高度
+		if (fabs(pBallCutter->G.getValue() - dG) > 0.001)
+			pBallCutter->G.setValue(dG); //下切深度
+		if (fabs(pBallCutter->H.getValue() - dH) > 0.001)
+			pBallCutter->H.setValue(dH); //前角
+		if (fabs(pBallCutter->I.getValue() - dI) > 0.001)
+			pBallCutter->I.setValue(dI); //毛坯头部余量
+		if (fabs(pBallCutter->J.getValue() - dJ) > 0.001)
+			pBallCutter->J.setValue(dJ); //组数
+		if (fabs(pBallCutter->K.getValue() - dK) > 0.001)
+			pBallCutter->K.setValue(dK); //每组刃数
+		if (fabs(pBallCutter->L.getValue() - dL) > 0.001)
+			pBallCutter->L.setValue(dL); //总刃数
+		if (fabs(pBallCutter->CylinderDiameter.getValue() - cD) > 0.001)
+			pBallCutter->CylinderDiameter.setValue(cD);
+		if (fabs(pBallCutter->CylinderLength.getValue() - cL) > 0.001)
+			pBallCutter->CylinderLength.setValue(cL);
+		if (fabs(pBallCutter->CylinderChamferA.getValue() - cA) > 0.001)
+			pBallCutter->CylinderChamferA.setValue(cA);
+		if (fabs(pBallCutter->CylinderChamferB.getValue() - cB) > 0.001)
+			pBallCutter->CylinderChamferB.setValue(cB);
+		if (fabs(pBallCutter->GrindingWheelThick.getValue() - gT) > 0.001)
+			pBallCutter->GrindingWheelThick.setValue(gT);
+		if (fabs(pBallCutter->GrindingWheelAngle.getValue() - gA) > 0.001)
+			pBallCutter->GrindingWheelAngle.setValue(gA);
 
-		pBallCutter->CylinderDiameter.setValue(cD);
-		pBallCutter->CylinderLength.setValue(cL);
-		pBallCutter->CylinderChamferA.setValue(cA);
-		pBallCutter->CylinderChamferB.setValue(cB);
-		pBallCutter->GrindingWheelThick.setValue(gT);
-		pBallCutter->GrindingWheelAngle.setValue(gA);
-
-		pBallCutter->CheckSpine.setValue(ui.checkSpine->isChecked());
+		if (pBallCutter->CheckSpine.getValue() != ui.checkSpine->isChecked())
+			pBallCutter->CheckSpine.setValue(ui.checkSpine->isChecked());
 		
 		pBallCutter->setStatus(App::ObjectStatus::Restore, false);
-		pBallCutter->recompute();
+		if (pBallCutter->mustExecute())
+			pBallCutter->recompute();
 	}
 
 }
 void BallCutterDialog::reject()
 {
 	QDialog::rejected();
+	setResult(QDialog::Rejected);
 }
 
 

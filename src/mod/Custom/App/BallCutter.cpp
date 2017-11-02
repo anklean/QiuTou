@@ -343,12 +343,12 @@ App::DocumentObjectExecReturn *BallCutter::execute(void)
 	makeMainBoby(BaseShape, -1 * M_PI*2);
 
 	//现将头部消去一部分
-	//TopoDS_Shape newBaseShape = cutHeader(BaseShape);
+	TopoDS_Shape newBaseShape = cutHeader(BaseShape);
 	
 	//创建刀刃部分
 	TopoDS_Shape CutBody;
 	TopoDS_Edge yindaoxian;
-	CutBody = this->makeCutterBody(BaseShape, CutBody, yindaoxian);
+	CutBody = this->makeCutterBody(newBaseShape, CutBody, yindaoxian);
 	
 // 	this->Shape.setValue(CutBody);
 // 	return 0;
@@ -362,7 +362,13 @@ App::DocumentObjectExecReturn *BallCutter::execute(void)
 		R= mkBool->Shape();
 	}
 
-	this->Shape.setValue(R);
+	//模型是按照朝+Z制作的，需要将模型的朝向调整为+X，即绕-Y转90°
+	gp_Trsf T;
+	T.SetRotation(gp_Ax1(gp_Pnt(0., 0., 0.), gp_Vec(0., -1,0)), M_PI/2.0);
+	BRepBuilderAPI_Transform theTrsf(T);
+	theTrsf.Perform(R, Standard_True);
+
+	this->Shape.setValue(theTrsf.Shape());
 
 // 	TopoDS_Compound comp;
 // 	BRep_Builder builder;
@@ -728,7 +734,7 @@ TopoDS_Shape Custom::BallCutter::makeCutterBody(TopoDS_Shape& baseShape, TopoDS_
 	Base::Vector3d pt0 = Base::Vector3d(ptBase.x, ptBase.y + (ballradius - cutDepth), ptBase.z - cyLength);
 	Base::Vector3d ptLineStart = pt0;
 	
-	Base::Vector3d ptLineEnd(pt0.x + dDiameter * sin(dAngle), pt0.y, pt0.z - dDiameter * cos(dAngle));
+	Base::Vector3d ptLineEnd(pt0.x + dDiameter * sin(dAngle), pt0.y, pt0.z -2* dDiameter * cos(dAngle));
 
 	Base::Vector3d v = ptLineEnd - ptLineStart;
 
@@ -813,10 +819,10 @@ TopoDS_Shape Custom::BallCutter::makeCutterBody(TopoDS_Shape& baseShape, TopoDS_
 	{
 		nSpineIndex = 1;
 	}
-	Part::TopoShape spineShape(spineWires[nSpineIndex]);
-	Part::TopoShape pipeTopoShape = spineShape.makePipeShell(listSection, true, false, 0);
-	pipeShape = pipeTopoShape._Shape;
-	builder1.Add(comp1, pipeTopoShape._Shape);
+
+	m_SpineEdge = list18ProjEdges[nSpineIndex];
+
+	pipeShape =doSweep(sectionWire, spineWires[nSpineIndex]);
 
 
 	//gp_Trsf T;
@@ -903,11 +909,11 @@ TopoDS_Shape Custom::BallCutter::makeCutterBody(TopoDS_Shape& baseShape, TopoDS_
 	//pipeShapes.push_back(pipeShape[1]);
 
 	//Part::TopoShape unionshape(pipeShape);
-
-	for (int i = 1; i <=6; i++)
+	int nCount = L.getValue();
+	for (int i = 1; i <=nCount; i++)
 	{
 		gp_Trsf T;
-		T.SetRotation(gp_Ax1(gp_Pnt(0., 0., 0.), gp_Vec(0., 0., -1.)), i*2*M_PI / 6.0);
+		T.SetRotation(gp_Ax1(gp_Pnt(0., 0., 0.), gp_Vec(0., 0., -1.)), i * 2 * M_PI / nCount);
 		BRepBuilderAPI_Transform theTrsf(T);
 		theTrsf.Perform(pipeShape, Standard_True);
 		pipeShapes.push_back(theTrsf.Shape());	
@@ -1065,7 +1071,7 @@ TopoDS_Shape Custom::BallCutter::doSweep(TopoDS_Wire wire, TopoDS_Wire path)
 
 	BRepOffsetAPI_MakePipeShell mkPipeShell(path);
 	//mkPipeShell.SetMode(gp_Dir(0., 0., 1.));
-	mkPipeShell.SetMode(gp_Ax2(gp_Pnt(0,0,0), gp_Dir(0,-1,0)));
+	mkPipeShell.SetMode(gp_Ax2(gp_Pnt(0,0,0), gp_Dir(0,1,0)));
 	//mkPipeShell.SetMode(isFrenet);
 	mkPipeShell.SetTransitionMode(transMode);
 	TopTools_ListIteratorOfListOfShape iter;

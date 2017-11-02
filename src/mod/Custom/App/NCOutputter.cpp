@@ -40,6 +40,7 @@
 #include <vector>
 #include "App\Tools.h"
 #include "App\Document.h"
+#include "BallCutter.h"
 
 using namespace Custom;
 
@@ -51,11 +52,11 @@ NCOutPutter::NCOutPutter()
 {
 	const char* strPara = _UTF8("参数");
 
-	ADD_PROPERTY(PathList, (0,0));
+	ADD_PROPERTY(PathList, (0));
 	ADD_PROPERTY(BeforeGcode, (""));
 	ADD_PROPERTY(AfterGcode, (""));
 	ADD_PROPERTY(OutputFile, ("d:\\ccc.anc"));
-	ADD_PROPERTY(Speed, (1000));
+	ADD_PROPERTY(Speed, (1000.0));
 	ADD_PROPERTY(ToolNum, ("1"));
 
 	ADD_PROPERTY_TYPE(SafeHeight, (15), strPara, App::Prop_None, _UTF8("安全高度"));
@@ -239,7 +240,7 @@ Base::Vector3d NCOutPutter::adjustPointByTools(Base::Vector3d& point, Base::Plac
 	Base::Vector3d tt = tpnt + nrm_vec * tool_radius;
 	
 	Base::Matrix4D mmtx(bbase,newz,db);
-	Base::Vector3d r=mmtx*tt;
+	Base::Vector3d r = mmtx*tpnt;
 
 // 	Base::Vector3d rclBase; Base::Vector3d rclDir; double fAngle; double fTranslation;
 // 	mtx.toAxisAngle(rclBase, rclDir, fAngle, fTranslation) ;
@@ -249,7 +250,7 @@ Base::Vector3d NCOutPutter::adjustPointByTools(Base::Vector3d& point, Base::Plac
 // 	mmtx.toAxisAngle(rclBase, rclDir, fAngle, fTranslation);
 // 	Base::Vector3d r = mmtx*tt;
 
-	return r;
+	return  r;
 }
 
 double NCOutPutter::getToolDiameter()
@@ -330,8 +331,12 @@ void NCOutPutter::printFooter(std::ofstream& ofs, int& nlines)
 	std::vector<std::string> afters = AfterGcode.getValues();
 	for (int i = 0; i < afters.size(); i++)
 	{
-		ofs << "N" << nlines++ << " ";
-		ofs << afters[i] << std::endl;
+		std::string s = afters[i];
+		if (s.size() > 0 && s != "")
+		{
+			ofs << "N" << nlines++ << " ";
+			ofs << s << std::endl;
+		}
 	}
 //	ofs << "%" << std::endl;
 }
@@ -363,31 +368,31 @@ void NCOutPutter::printFeed(std::ofstream& ofs, int& nlines, Custom::PathObject:
 void NCOutPutter::printTract(std::ofstream& ofs, int& nlines, Custom::PathObject::PathPointList& paths, Base::Placement place)
 {
 	double h = SafeHeight.getValue();
-	if (paths.size() > 0)
+	//if (paths.size() > 0)
 	{
-		int last = paths.size() - 1;
-
-		Custom::NCStepInfo step1 = paths[last-1];
-		Custom::NCStepInfo step = paths[last];
-
-		Base::Vector3d dir = step.Point - step1.Point;		
-		dir = dir.Normalize();
-		double tool_radius = getToolDiameter() ;
-		Base::Vector3d ppnt = step.Point + dir*tool_radius;
-
-		double db = getB(step.Point, place);
-		double da = getA(step1.Point - step.Point, place, db);
-
-		Base::Vector3d r = adjustPointByTools(ppnt, place,db);
-
-		ofs << "N" << nlines++ << " G01 G90 ";		
-		ofs << " X" << r.x << " ";
-		ofs << " Y" << r.y << " ";
-		ofs << " Z" << r.z << " ";
-		ofs << std::endl;
-
-		ofs << "N" << nlines++ << " " << "G00 Z" << h << std::endl;
+// 		int last = paths.size() - 1;
+// 
+// 		Custom::NCStepInfo step1 = paths[last-1];
+// 		Custom::NCStepInfo step = paths[last];
+// 
+// 		Base::Vector3d dir = step.Point - step1.Point;		
+// 		dir = dir.Normalize();
+// 		double tool_radius = getToolDiameter() ;
+// 		Base::Vector3d ppnt = step.Point + dir*tool_radius;
+// 
+// 		double db = getB(step.Point, place);
+// 		double da = getA(step1.Point - step.Point, place, db);
+// 
+// 		Base::Vector3d r = adjustPointByTools(ppnt, place,db);
+// 
+// 		ofs << "N" << nlines++ << " G01 G90 ";		
+// 		ofs << " X" << r.x << " ";
+// 		ofs << " Y" << r.y << " ";
+// 		ofs << " Z" << r.z << " ";
+// 		ofs << std::endl;
+		//修改退刀的轨迹是 先走一段X，然后Z向上提，
 		ofs << "N" << nlines++ << " " << "G00 X" << h << std::endl;
+		ofs << "N" << nlines++ << " " << "G00 Z" << h << std::endl;
 		//ofs << "N" << nlines++ << " " << "G00 X0 Y0 Z0  " << std::endl;
 		//ofs << "N" << nlines++ << " " << "G00 A" << 0 << " B" <<0 <<std::endl;
 	}
@@ -400,6 +405,7 @@ void NCOutPutter::printAPath(std::ofstream& ofs, int& nlines, Custom::PathObject
 	if (paths.size() > 0)
 	{
 		//ofs << "\n\n\n;----Path Begin----------" << std::endl;
+		ofs << "\n\n\n" << std::endl;
 		printFeed(ofs, nlines, paths , place);
 		
 		Custom::NCStepInfo lastStep = paths[0];
@@ -483,11 +489,56 @@ App::DocumentObjectExecReturn *NCOutPutter::execute(void)
 	printHeader(ofs, nlines);
 
 
-	std::vector<App::DocumentObject*>listPathObject = PathList.getValues();
+	std::vector<App::DocumentObject*>   listPathObject = PathList.getValues();
+
+	std::vector<TopoDS_Edge> pthEdgeList;
+	for (int i = 0; i < listPathObject.size(); i++)
+	{
+		App::DocumentObject* pObj = listPathObject[i];
+		Custom::BallCutter * pBallCutter = dynamic_cast<Custom::BallCutter *>(pObj);
+		if (pBallCutter)
+		{
+			TopoDS_Edge aEdge = pBallCutter->getSpineEdge();
+			
+
+			std::vector<NCStepInfo> pntlist;
+			BuildPath(aEdge, pntlist, pBallCutter);
+			Base::Placement place;
+			if (pBallCutter)
+			{
+				place = pBallCutter->Placement.getValue();
+			}
+			printAPath(ofs, nlines, pntlist, place);
+			m_nclist.push_back(pntlist);
+
+			int nCount = pBallCutter->L.getValue();
+			for (int i = 1; i <= nCount; i++)
+			{
+				gp_Trsf T;
+				T.SetRotation(gp_Ax1(gp_Pnt(0., 0., 0.), gp_Vec(0., 0., -1.)), i * 2 * M_PI / nCount);
+				BRepBuilderAPI_Transform theTrsf(T);
+				theTrsf.Perform(aEdge, Standard_True);
+
+				TopoDS_Edge edge = TopoDS::Edge(theTrsf.Shape());
+				
+				std::vector<NCStepInfo> pntlist;
+				BuildPath(edge, pntlist, pBallCutter);
+				Base::Placement place;
+				if (pBallCutter)
+				{
+					place = pBallCutter->Placement.getValue();
+				}
+				printAPath(ofs, nlines, pntlist, place);
+				m_nclist.push_back(pntlist);
+			}
+		}
+	}
+
+#if 0
 	std::vector<std::string> subs = PathList.getSubValues();
 	for (int i = 0; i < subs.size(); i++)
 	{
-		App::DocumentObject* pObj = listPathObject[i];
+		App::DocumentObject* pObj = listPathObject[i];		
 		std::string asub = subs[i];
 
 		Part::Feature * pFaceFeature = dynamic_cast<Part::Feature *>(pObj);
@@ -504,7 +555,7 @@ App::DocumentObjectExecReturn *NCOutPutter::execute(void)
 		printAPath(ofs, nlines, pntlist, place);
 		m_nclist.push_back(pntlist);
 	}
-	
+#endif
 	printFooter(ofs, nlines);
 
 	Part::TopoShape S;

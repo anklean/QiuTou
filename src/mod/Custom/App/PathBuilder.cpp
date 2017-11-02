@@ -36,6 +36,7 @@ void BuildPath(Part::TopoShape& shape, std::string asub, std::vector<Custom::NCS
 	std::vector<TopoDS_Edge>edgeList;
 	TopoDS_Edge aEdge;
 	TopExp_Explorer Ex;
+	double minlen = DBL_MAX;
 	for (Ex.Init(topoFace, TopAbs_EDGE); Ex.More(); Ex.Next())
 	{
 		aEdge = TopoDS::Edge(Ex.Current());
@@ -43,8 +44,8 @@ void BuildPath(Part::TopoShape& shape, std::string asub, std::vector<Custom::NCS
 		double len = GCPnts_AbscissaPoint::Length(ad);
 		mapedges.insert(std::pair<double, TopoDS_Edge>(len, aEdge));
 		if (ad.GetType() == GeomAbs_CurveType::GeomAbs_BSplineCurve)
-		{
-			if (len > (*dmax /2.0))
+		{			
+			//if (len > (*dmax /2.0))
 				edgeList.push_back(aEdge);
 		}
 		else if (ad.GetType() == GeomAbs_CurveType::GeomAbs_Line)
@@ -81,6 +82,8 @@ void BuildPath(Part::TopoShape& shape, std::string asub, std::vector<Custom::NCS
 		}
 	}
 
+	if (theEdge.IsNull())
+		return;
 
 	//theEdge是要加工的线
 	double deflection = 0.01;
@@ -90,7 +93,7 @@ void BuildPath(Part::TopoShape& shape, std::string asub, std::vector<Custom::NCS
 	Standard_Real last = curveAdaptor.LastParameter();
 	gp_Pnt sp = curveAdaptor.Value(first);
 	gp_Pnt ep = curveAdaptor.Value(last);
-	
+
 	Base::Vector3d rBase, rNormal;
 	gp_Lin center_line;
 	gp_Pnt left_center;
@@ -110,7 +113,7 @@ void BuildPath(Part::TopoShape& shape, std::string asub, std::vector<Custom::NCS
 		if (d[1] > d[2]) nFlag = 2;
 		else nFlag = 3;
 	}
-	if (nFlag ==1) //X
+	if (nFlag == 1) //X
 	{
 		bbox.CalcPlane(Base::BoundBox3d::LEFT, rBase, rNormal);
 		center_line = gp_Lin(gp_Pnt(center.x, center.y, center.z), gp_Dir(1, 0, 0));
@@ -128,9 +131,9 @@ void BuildPath(Part::TopoShape& shape, std::string asub, std::vector<Custom::NCS
 		center_line = gp_Lin(gp_Pnt(center.x, center.y, center.z), gp_Dir(0, 0, 1));
 		left_center = gp_Pnt(center.x, center.y, bbox.MinZ);
 	}
-	
+
 	BRepMesh_GeomTool crvMeshTools(curveAdaptor, first, last, deflection, AngDeflectionRads);
-		
+
 	int num = crvMeshTools.NbPoints();
 	for (int i = 1; i < num + 1; i++)
 	{
@@ -146,12 +149,12 @@ void BuildPath(Part::TopoShape& shape, std::string asub, std::vector<Custom::NCS
 		if (prop.IsTangentDefined()) {
 			prop.Tangent(tangent);
 		}
-		gp_XYZ pntdir = left_center.XYZ() -thePoint.XYZ();
-		
+		gp_XYZ pntdir = left_center.XYZ() - thePoint.XYZ();
+
 		Custom::NCStepInfo si = { 0 };
 		si.type = 0;
 		si.gcode = "";
-		si.speed = 0;
+		si.speed = 1000;
 		si.Point = Base::Vector3d(thePoint.X(), thePoint.Y(), thePoint.Z());
 		si.Normal = Base::Vector3d(pntdir.X(), pntdir.Y(), pntdir.Z());
 		pathPointList.push_back(si);//从原点开始
@@ -163,6 +166,99 @@ void BuildPath(Part::TopoShape& shape, std::string asub, std::vector<Custom::NCS
 
 
 
+
+void BuildPath(TopoDS_Edge& theEdge, std::vector<Custom::NCStepInfo>& pathPointList, Custom::BallCutter * pBallCutter)
+{
+	Part::TopoShape shape = pBallCutter->Shape.getShape();
+	Base::Matrix4D mtx = shape.getTransform();
+	mtx.transpose();
+
+	Base::BoundBox3d bbox = shape.getBoundBox();
+	Base::Vector3d center = bbox.CalcCenter();
+
+	double d[3] = { 0 };
+	d[0] = fabs(bbox.MinX - bbox.MaxX);
+	d[1] = fabs(bbox.MinY - bbox.MaxY);
+	d[2] = fabs(bbox.MinZ - bbox.MaxZ);
+	double* dmax = std::max_element(d, d + 2);
+
+	//theEdge是要加工的线
+	double deflection = 0.01;
+	double AngDeflectionRads = 0.1;
+	BRepAdaptor_Curve curveAdaptor(theEdge);
+	Standard_Real first = curveAdaptor.FirstParameter();
+	Standard_Real last = curveAdaptor.LastParameter();
+	gp_Pnt sp = curveAdaptor.Value(first);
+	gp_Pnt ep = curveAdaptor.Value(last);
+
+	Base::Vector3d rBase, rNormal;
+	gp_Lin center_line;
+	gp_Pnt left_center;
+
+	d[0] = fabs(sp.X() - ep.X());
+	d[1] = fabs(sp.Y() - ep.Y());
+	d[2] = fabs(sp.Z() - ep.Z());
+	int nFlag = -1;
+	if (d[0] > d[1])
+	{
+		if (d[0] > d[2]) nFlag = 1;
+		else
+			nFlag = 3;
+	}
+	else
+	{
+		if (d[1] > d[2]) nFlag = 2;
+		else nFlag = 3;
+	}
+//	if (nFlag == 1) //X
+	{
+		bbox.CalcPlane(Base::BoundBox3d::LEFT, rBase, rNormal);
+		center_line = gp_Lin(gp_Pnt(center.x, center.y, center.z), gp_Dir(1, 0, 0));
+		left_center = gp_Pnt(bbox.MinX, center.y, center.z);
+	}
+// 	else if (nFlag == 2)//Y
+// 	{
+// 		bbox.CalcPlane(Base::BoundBox3d::BOTTOM, rBase, rNormal);
+// 		center_line = gp_Lin(gp_Pnt(center.x, center.y, center.z), gp_Dir(0, 1, 0));
+// 		left_center = gp_Pnt(center.x, bbox.MinY, center.z);
+// 	}
+// 	else if (nFlag == 3)//Z
+// 	{
+// 		bbox.CalcPlane(Base::BoundBox3d::BACK, rBase, rNormal);
+// 		center_line = gp_Lin(gp_Pnt(center.x, center.y, center.z), gp_Dir(0, 0, 1));
+// 		left_center = gp_Pnt(center.x, center.y, bbox.MinZ);
+// 	}
+
+	BRepMesh_GeomTool crvMeshTools(curveAdaptor, first, last, deflection, AngDeflectionRads);
+
+	int num = crvMeshTools.NbPoints();
+	for (int i = 1; i < num + 1; i++)
+	{
+		Standard_Real         theIsoParam = 0;
+		Standard_Real         theParam;
+		gp_Pnt             thePoint;
+		gp_Pnt2d             theUV;
+		crvMeshTools.Value(i, theIsoParam, theParam, thePoint, theUV);
+
+		GeomLProp_CLProps prop(curveAdaptor.Curve().Curve(), theParam, 1, Precision::Confusion());
+
+		gp_Dir tangent;
+		if (prop.IsTangentDefined()) {
+			prop.Tangent(tangent);
+		}
+		gp_XYZ pntdir = left_center.XYZ() - thePoint.XYZ();
+
+		Custom::NCStepInfo si = { 0 };
+		si.type = 0;
+		si.gcode = "";
+		si.speed = 1000;
+		si.Point = Base::Vector3d(thePoint.X(), thePoint.Y(), thePoint.Z());
+		si.Normal = Base::Vector3d(pntdir.X(), pntdir.Y(), pntdir.Z());
+		pathPointList.push_back(si);//从原点开始
+	}
+
+	std::reverse(pathPointList.begin(), pathPointList.end());
+}
 
 int getNormal2(gp_Pnt& pnt, gp_Lin& center_line, gp_Dir& normal)
 {

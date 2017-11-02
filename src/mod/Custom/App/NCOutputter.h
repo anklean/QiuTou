@@ -23,8 +23,9 @@ namespace Custom
 	public:
 		NCOutPutter();
 
-		App::PropertyString OutputFile;
-		App::PropertyLinkSubList PathList;
+		App::PropertyString OutputFile;		
+		App::PropertyLinkList PathList;
+		//App::PropertyLinkSubList PathList;
 		App::PropertyStringList BeforeGcode;
 		App::PropertyStringList AfterGcode;
 

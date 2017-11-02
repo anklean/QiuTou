@@ -27,6 +27,7 @@
 #include "Gui/DockWindowManager.h"
 #include "Gui/MainWindow.h"
 #include "ViewProviderNC.h"
+#include "ViewProviderBallCutter.h"
 
 
 // use a different name to CreateCommand()
@@ -68,6 +69,7 @@ void CustomGuiExport initCustomGui()
     CustomGui::Workbench                      ::init();
 	CustomGui::ViewProviderCustomPath::init();
 	CustomGui::ViewProviderNC::init();
+	CustomGui::ViewProviderBallCutter::init();
 
     // instantiating the commands
     CreateCustomCommands();

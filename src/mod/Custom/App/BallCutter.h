@@ -51,10 +51,12 @@ namespace Custom
 	
 		/// returns the type name of the view provider
 		const char* getViewProviderName(void) const {
-			return "PartGui::ViewProviderPart";
+			return "CustomGui::ViewProviderBallCutter";
 		}
 		//@}
 
+		TopoDS_Edge getSpineEdge() const { return m_SpineEdge; }
+		void setSpineEdge(TopoDS_Edge val) { m_SpineEdge = val; }
 	private:
 		App::DocumentObjectExecReturn* makeLine(Base::Vector3d& startPt, Base::Vector3d& endPt, TopoDS_Edge& edge);
 		void makeMainSketch(double h, double L, double angleIncre, double sketchY, TopoDS_Wire& wire);
@@ -82,6 +84,8 @@ namespace Custom
 	private:
 		std::vector<TopoDS_Edge>  lineList;
 		TopTools_ListOfShape profiles;
+
+		TopoDS_Edge m_SpineEdge;
 	};
 
 } //namespace Custom

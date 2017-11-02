@@ -493,17 +493,18 @@ void CmdCustomBuildNCFile::activated(int iMsg)
 		std::string buf1 = "";
 
 		buf1 += (*it).getFeatName();
-		buf1 += ".";
-		std::vector<std::string> names = (*it).getSubNames();
-		for (int i = 0; i < names.size(); i++)
-		{
-			std::string s = names[i];
-			if (s.find("Face") != s.npos)
-			{
-				s = buf1 + s;
-				lstFaces.push_back(Base::Tools::fromStdString(s));
-			}
-		}
+		lstFaces.push_back(Base::Tools::fromStdString(buf1));
+// 		buf1 += ".";
+// 		std::vector<std::string> names = (*it).getSubNames();
+// 		for (int i = 0; i < names.size(); i++)
+// 		{
+// 			std::string s = names[i];
+// 			if (s.find("Face") != s.npos)
+// 			{
+// 				s = buf1 + s;
+// 				lstFaces.push_back(Base::Tools::fromStdString(s));
+// 			}
+// 		}
 	}
 	data.setPathList(lstFaces);
 	//data.setMachineCS(Base::Placement());
@@ -515,9 +516,10 @@ void CmdCustomBuildNCFile::activated(int iMsg)
 	QStringList sb;
 	sb
 		//<< QString::fromLocal8Bit("M06 T1")//; 设置使用刀具1
+		<< QString::fromLocal8Bit("G90 G54")//;  G64几何数据的基本设定:使用绝对坐标, 使用工件坐标系1, 使用连续路径运行
 		<< QString::fromLocal8Bit("M03 S5000")//; 设置主轴顺时针旋转 转速5000
 		<< QString::fromLocal8Bit("M08")//; 冷却打开 
-		<< QString::fromLocal8Bit("G90 G54");//;  G64几何数据的基本设定:使用绝对坐标, 使用工件坐标系1, 使用连续路径运行
+		;
 		//<< QString::fromAscii("G00 Z150; Z轴运行至安全高度")//
 		//<< QString::fromAscii("G00 X - 7.2 Y - 7.2; XY运行到起始点"); //
 	data.setBeforeGCode(sb);
@@ -542,10 +544,14 @@ void CmdCustomBuildNCFile::activated(int iMsg)
 		{
 			QString ss = lstPaths[i];
 			
-			strPaths+=
-				QString::fromLocal8Bit("(App.ActiveDocument.%1,\"%2\"),")
-				.arg(ss.section(QLatin1Char('.'), 0, 0))
-				.arg(ss.section(QLatin1Char('.'), 1, 1));
+// 			strPaths+=
+// 				QString::fromLocal8Bit("(App.ActiveDocument.%1,\"%2\"),")
+// 				.arg(ss.section(QLatin1Char('.'), 0, 0))
+// 				.arg(ss.section(QLatin1Char('.'), 1, 1));
+
+			strPaths +=
+				QString::fromLocal8Bit("App.ActiveDocument.%1,")
+				.arg(ss);
 		}
 		if (strPaths.endsWith(QLatin1Char(',')))
 			strPaths.chop(1);	
