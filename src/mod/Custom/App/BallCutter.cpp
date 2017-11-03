@@ -93,6 +93,7 @@
 #include "BRepOffsetAPI_MakePipe.hxx"
 #include "BRepAlgo_BooleanOperation.hxx"
 #include "BRepAlgo_Cut.hxx"
+#include "gp_Quaternion.hxx"
 
 using namespace Custom;
 
@@ -340,18 +341,17 @@ App::DocumentObjectExecReturn *BallCutter::execute(void)
 {
 	//创建零件主体
 	TopoDS_Shape BaseShape;
-	makeMainBoby(BaseShape, -1 * M_PI*2);
+	makeMainBoby(BaseShape, -1 * M_PI * 2);
 
 	//现将头部消去一部分
 	TopoDS_Shape newBaseShape = cutHeader(BaseShape);
-	
+
 	//创建刀刃部分
 	TopoDS_Shape CutBody;
 	TopoDS_Edge yindaoxian;
 	CutBody = this->makeCutterBody(newBaseShape, CutBody, yindaoxian);
-	
-// 	this->Shape.setValue(CutBody);
-// 	return 0;
+
+	this->Shape.setValue(CutBody);
 
 	TopoDS_Shape headerCutBody;
 	this->makeHeaderCutBoby(headerCutBody);
@@ -359,16 +359,31 @@ App::DocumentObjectExecReturn *BallCutter::execute(void)
 	TopoDS_Shape R;
 	std::auto_ptr<BRepAlgo_BooleanOperation> mkBool(new BRepAlgo_Cut(CutBody, headerCutBody));
 	if (mkBool->IsDone()) {
-		R= mkBool->Shape();
+		R = mkBool->Shape();
 	}
 
 	//模型是按照朝+Z制作的，需要将模型的朝向调整为+X，即绕-Y转90°
+	//需要将模型的球头处设置为原点处
+	double cyDiameter = CylinderDiameter.getValue();
+	double cyLength = CylinderLength.getValue();
+	double angle = D.getValue();
+	double ballradius = A.getValue() / 2.0;//球头半径
+	double move_x=-(sin(angle - 90)*ballradius + ballradius + cyLength);
+	double move_y = 0;
+	double move_z = 0;
+
+	gp_Trsf TT;
+	TT.SetTransformation(gp_Quaternion(gp_Vec(0., -1, 0), M_PI / 2.0), gp_Vec(move_x, move_y, move_z));
+	BRepBuilderAPI_Transform theTrsfT(TT);
+	theTrsfT.Perform(m_SpineEdge, Standard_True);
+	m_SpineEdge = TopoDS::Edge(theTrsfT.Shape());
+
 	gp_Trsf T;
-	T.SetRotation(gp_Ax1(gp_Pnt(0., 0., 0.), gp_Vec(0., -1,0)), M_PI/2.0);
+	T.SetTransformation(gp_Quaternion(gp_Vec(0., -1, 0), M_PI / 2.0), gp_Vec(move_x, move_y, move_z));
 	BRepBuilderAPI_Transform theTrsf(T);
 	theTrsf.Perform(R, Standard_True);
 
-	this->Shape.setValue(theTrsf.Shape());
+	this->Shape.setValue(m_SpineEdge);
 
 // 	TopoDS_Compound comp;
 // 	BRep_Builder builder;

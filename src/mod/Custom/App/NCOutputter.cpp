@@ -41,6 +41,7 @@
 #include "App\Tools.h"
 #include "App\Document.h"
 #include "BallCutter.h"
+#include "gp_Quaternion.hxx"
 
 using namespace Custom;
 
@@ -190,10 +191,9 @@ double NCOutPutter::getB(Base::Vector3d nrm, Base::Placement place)
 	// 	Base::Vector3d y_axis(0,1, 0);
 	//	Base::Vector3d z_axis(0, 0, 1);
 
-	Base::Vector3d vb = nrm.ProjToPlane(base, z_axis); //z_axis
-
-	Base::Vector3d vv = vb - base;
-	double db = vv.GetAngle(y_axis);//y_axis
+ 	Base::Vector3d vb = nrm.ProjToPlane(base, x_axis); //z_axis
+	Base::Vector3d vv = base - vb;
+	double db = vv.GetAngle(y_axis);//z_axis
 	double b = Base::toDegrees<double>(db);
 
 	//
@@ -201,7 +201,7 @@ double NCOutPutter::getB(Base::Vector3d nrm, Base::Placement place)
 	// 所以需要根据vv 与y_axis的方向来判断是在0~180范围内，还是在180~360范围内
 	// 若vv 与y_axis 反向，则说明在180~360
 	// 判断两向量是否反向，对两向量做点乘,若结果大于0,就是同向,等于0垂直,小于0反向
-	double ddd = vv.Normalize()*x_axis.Normalize();
+	double ddd = nrm.Normalize()*y_axis.Normalize();
 	if (ddd < 0)
 	{
 		b = 360 - b;
@@ -240,7 +240,7 @@ Base::Vector3d NCOutPutter::adjustPointByTools(Base::Vector3d& point, Base::Plac
 	Base::Vector3d tt = tpnt + nrm_vec * tool_radius;
 	
 	Base::Matrix4D mmtx(bbase,newz,db);
-	Base::Vector3d r = mmtx*tpnt;
+	Base::Vector3d r = /*mmtx**/tpnt;
 
 // 	Base::Vector3d rclBase; Base::Vector3d rclDir; double fAngle; double fTranslation;
 // 	mtx.toAxisAngle(rclBase, rclDir, fAngle, fTranslation) ;
@@ -498,8 +498,19 @@ App::DocumentObjectExecReturn *NCOutPutter::execute(void)
 		Custom::BallCutter * pBallCutter = dynamic_cast<Custom::BallCutter *>(pObj);
 		if (pBallCutter)
 		{
-			TopoDS_Edge aEdge = pBallCutter->getSpineEdge();
+			TopoDS_Edge aSpineEdge = pBallCutter->getSpineEdge();
 			
+			Base::Placement thePlacement = pBallCutter->Placement.getValue();
+			Base::Rotation rot = thePlacement.getRotation();
+			Base::Vector3d pos = thePlacement.getPosition();
+			double q1, q2, q3, q4;
+			rot.getValue(q1, q2, q3, q4);
+			
+			gp_Trsf TT;
+			TT.SetTransformation(gp_Quaternion(q1, q2, q3, q4), gp_Vec(pos.x, pos.y, pos.z));
+			BRepBuilderAPI_Transform theTrsfT(TT);
+			theTrsfT.Perform(aSpineEdge, Standard_True);
+			TopoDS_Edge aEdge = TopoDS::Edge(theTrsfT.Shape());
 
 			std::vector<NCStepInfo> pntlist;
 			BuildPath(aEdge, pntlist, pBallCutter);

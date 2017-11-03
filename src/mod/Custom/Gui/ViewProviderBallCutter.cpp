@@ -129,7 +129,7 @@ bool CustomGui::ViewProviderBallCutter::setEdit(int ModNum)
 
 		Gui::Selection().clearSelection();
 		Gui::Control().showDialog(new CustomGui::TaskBallCutter(this->getObject()));
-		return true;
+		return Gui::ViewProviderGeometryObject::setEdit(ModNum);
 	}
 	else {
 		return Gui::ViewProviderGeometryObject::setEdit(ModNum);
@@ -140,8 +140,6 @@ void CustomGui::ViewProviderBallCutter::unsetEdit(int ModNum)
 {
 	if (ModNum == ViewProvider::Default) {
 
-	}
-	else {
 		Gui::ViewProviderGeometryObject::unsetEdit(ModNum);
 	}
 }

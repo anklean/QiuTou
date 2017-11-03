@@ -160,7 +160,9 @@ Gui::ToolBarItem* Workbench::setupToolBars() const
 
 	Gui::ToolBarItem* model = new Gui::ToolBarItem(root);
 	model->setCommand("NC");
-	*model << "Part_Import" << "Custom_CreateBallCutter" << "Custom_SetModelPosition"/*;
+	*model 
+		/*<< "Part_Import" */
+		<< "Custom_CreateBallCutter" << "Custom_SetModelPosition"/*;
 
 	Gui::ToolBarItem* NC = new Gui::ToolBarItem(root);
 	NC->setCommand("NC");

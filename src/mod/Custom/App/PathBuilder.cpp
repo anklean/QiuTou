@@ -246,18 +246,22 @@ void BuildPath(TopoDS_Edge& theEdge, std::vector<Custom::NCStepInfo>& pathPointL
 		if (prop.IsTangentDefined()) {
 			prop.Tangent(tangent);
 		}
-		gp_XYZ pntdir = left_center.XYZ() - thePoint.XYZ();
+
+		Base::Vector3d vPoint(thePoint.X(), thePoint.Y(), thePoint.Z());
+		Base::Vector3d tPoint = vPoint;
+		Base::Vector3d cPoint = tPoint.ProjToLine(center, Base::Vector3d(1, 0, 0)); //z_axis
+		Base::Vector3d nrm = cPoint - vPoint;
 
 		Custom::NCStepInfo si = { 0 };
 		si.type = 0;
 		si.gcode = "";
 		si.speed = 1000;
-		si.Point = Base::Vector3d(thePoint.X(), thePoint.Y(), thePoint.Z());
-		si.Normal = Base::Vector3d(pntdir.X(), pntdir.Y(), pntdir.Z());
+		si.Point = vPoint;
+		si.Normal = nrm;
 		pathPointList.push_back(si);//从原点开始
 	}
 
-	std::reverse(pathPointList.begin(), pathPointList.end());
+//	std::reverse(pathPointList.begin(), pathPointList.end());
 }
 
 int getNormal2(gp_Pnt& pnt, gp_Lin& center_line, gp_Dir& normal)
