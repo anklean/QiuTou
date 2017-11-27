@@ -55,8 +55,8 @@ namespace Custom
 		}
 		//@}
 
-		TopoDS_Edge getSpineEdge() const { return m_SpineEdge; }
-		void setSpineEdge(TopoDS_Edge val) { m_SpineEdge = val; }
+		TopoDS_Compound getSpineEdge() const { return m_SpineComps; }
+		void setSpineEdge(TopoDS_Compound val) { m_SpineComps = val; }
 	private:
 		App::DocumentObjectExecReturn* makeLine(Base::Vector3d& startPt, Base::Vector3d& endPt, TopoDS_Edge& edge);
 		void makeMainSketch(double h, double L, double angleIncre, double sketchY, TopoDS_Wire& wire);
@@ -86,6 +86,7 @@ namespace Custom
 		TopTools_ListOfShape profiles;
 
 		TopoDS_Edge m_SpineEdge;
+		TopoDS_Compound m_SpineComps;
 	};
 
 } //namespace Custom

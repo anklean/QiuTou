@@ -306,7 +306,7 @@ void BallCutter::makeMainSketch(double h, double LL, double angleIncre, double s
 		return;
 	}
 	Base::Vector3d ptStart = points[0];
-	double sktAngle = GrindingWheelAngle.getValue() * M_PI / 180;
+	double sktAngle = M_PI - Base::toRadians(GrindingWheelAngle.getValue());
 	Base::Vector3d ptTemp = Base::Vector3d(ptStart.x + LL * sin(sktAngle),
 		ptStart.y - LL * cos(sktAngle), ptStart.z);
 	double ag = atan(ptTemp.y / ptTemp.x);
@@ -350,9 +350,7 @@ App::DocumentObjectExecReturn *BallCutter::execute(void)
 	TopoDS_Shape CutBody;
 	TopoDS_Edge yindaoxian;
 	CutBody = this->makeCutterBody(newBaseShape, CutBody, yindaoxian);
-
-	this->Shape.setValue(CutBody);
-
+	
 	TopoDS_Shape headerCutBody;
 	this->makeHeaderCutBoby(headerCutBody);
 
@@ -375,15 +373,20 @@ App::DocumentObjectExecReturn *BallCutter::execute(void)
 	gp_Trsf TT;
 	TT.SetTransformation(gp_Quaternion(gp_Vec(0., -1, 0), M_PI / 2.0), gp_Vec(move_x, move_y, move_z));
 	BRepBuilderAPI_Transform theTrsfT(TT);
-	theTrsfT.Perform(m_SpineEdge, Standard_True);
-	m_SpineEdge = TopoDS::Edge(theTrsfT.Shape());
+	theTrsfT.Perform(m_SpineComps, Standard_True);
+	m_SpineComps = TopoDS::Compound(theTrsfT.Shape());
 
 	gp_Trsf T;
 	T.SetTransformation(gp_Quaternion(gp_Vec(0., -1, 0), M_PI / 2.0), gp_Vec(move_x, move_y, move_z));
 	BRepBuilderAPI_Transform theTrsf(T);
 	theTrsf.Perform(R, Standard_True);
+	
+// 	gp_Trsf T;
+// 	T.SetTransformation(gp_Quaternion(gp_Vec(0., -1, 0), M_PI / 2.0), gp_Vec(move_x, move_y, move_z));
+// 	BRepBuilderAPI_Transform theTrsf(T);
+// 	theTrsf.Perform(comp, Standard_True);
 
-	this->Shape.setValue(m_SpineEdge);
+	this->Shape.setValue(theTrsf.Shape());
 
 // 	TopoDS_Compound comp;
 // 	BRep_Builder builder;
@@ -634,7 +637,7 @@ void Custom::BallCutter::makeHeaderCutBoby(TopoDS_Shape& body)
 	double r = A.getValue() /2.0;
 
 	double z = getBallHeight() - height;
-	Base::Vector3d ptBase(0, 0, -z);
+	Base::Vector3d ptBase(0, 0, z);
 
 	Base::Vector3d pt0(ptBase.x, ptBase.y, ptBase.z);
 	Base::Vector3d tPt0(pt0.x, pt0.y - r, pt0.z - height);
@@ -676,7 +679,7 @@ TopoDS_Shape Custom::BallCutter::makeCutterBody(TopoDS_Shape& baseShape, TopoDS_
 	double ag = 2 * M_PI / num;
 	Base::Vector3d ptBase(0, 0, 0);
 
-	double dSketchAngel = Base::toRadians(GrindingWheelAngle.getValue());
+	double dSketchAngel = M_PI - Base::toRadians(GrindingWheelAngle.getValue());
 	double dSketchLength = GrindingWheelThick.getValue();
 	//////////////////////////////////////////////////////////////////////////
 	// 绘制引导截面
@@ -835,11 +838,23 @@ TopoDS_Shape Custom::BallCutter::makeCutterBody(TopoDS_Shape& baseShape, TopoDS_
 		nSpineIndex = 1;
 	}
 
-	m_SpineEdge = list18ProjEdges[nSpineIndex];
+	m_SpineEdge= list18ProjEdges[nSpineIndex];
 
 	pipeShape =doSweep(sectionWire, spineWires[nSpineIndex]);
 
 
+	BRep_Builder builder;
+	builder.MakeCompound(m_SpineComps);
+
+	int nCount = L.getValue();
+	for (int i = 1; i <= nCount; i++)
+	{
+		gp_Trsf T;
+		T.SetRotation(gp_Ax1(gp_Pnt(0., 0., 0.), gp_Vec(0., 0., -1.)), i * 2 * M_PI / nCount);	
+		BRepBuilderAPI_Transform theTrsf(T);
+		theTrsf.Perform(m_SpineEdge, Standard_True);
+		builder.Add(m_SpineComps, theTrsf.Shape());
+	}
 	//gp_Trsf T;
 	//T.SetRotation(gp_Ax1(gp_Pnt(0., 0., 0.), gp_Vec(0., 0., 1.)),M_PI);
 	//BRepBuilderAPI_Transform theTrsf(T);
@@ -912,11 +927,8 @@ TopoDS_Shape Custom::BallCutter::makeCutterBody(TopoDS_Shape& baseShape, TopoDS_
 	if (isSolid)
 		mkPipeShell.MakeSolid();
 #endif
-
-	
-		//pipeShape = this->doSweep(sectionWire, spineWires[0]);
-
-
+		
+	//pipeShape = this->doSweep(sectionWire, spineWires[0]);
 
 	std::vector<TopoDS_Shape> pipeShapes;
 	pipeShapes.push_back(pipeShape);
@@ -924,7 +936,7 @@ TopoDS_Shape Custom::BallCutter::makeCutterBody(TopoDS_Shape& baseShape, TopoDS_
 	//pipeShapes.push_back(pipeShape[1]);
 
 	//Part::TopoShape unionshape(pipeShape);
-	int nCount = L.getValue();
+	//int nCount = L.getValue();
 	for (int i = 1; i <=nCount; i++)
 	{
 		gp_Trsf T;

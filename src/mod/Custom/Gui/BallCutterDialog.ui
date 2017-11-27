@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>538</width>
-    <height>630</height>
+    <height>658</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -508,6 +508,9 @@
            <widget class="QCheckBox" name="checkSpine">
             <property name="text">
              <string>切换引导线</string>
+            </property>
+            <property name="checked">
+             <bool>true</bool>
             </property>
            </widget>
           </item>

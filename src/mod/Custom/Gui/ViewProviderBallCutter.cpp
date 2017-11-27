@@ -91,7 +91,7 @@
 #include <Gui/Utilities.h>
 #include <Gui/Control.h>
 #include "BallCutterDialog.h"
-#include "../../../../include/QtGui/QMenu"
+#include "QtGui/QMenu"
 
 using namespace CustomGui;
 

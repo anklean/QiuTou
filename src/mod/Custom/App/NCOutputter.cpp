@@ -113,13 +113,13 @@ double NCOutPutter::getA(Base::Vector3d nrm, Base::Placement place ,double B)
 	Base::Vector3d y_axis(0, 1, 0);
 	Base::Vector3d z_axis(0, 0, 1);
 	
-	Base::Vector3d base(0, 0, 0);//= place.getPosition();
+	Base::Vector3d base(0, 0, 0);// = place.getPosition();
 
 	double db = Base::toRadians<double>(B);
 
 	Base::Matrix4D mtx = place.toMatrix();
 	mtx.transpose();
-	mtx.rotZ(db);
+	mtx.rotX(db);
 
 	double dmtx[16] = { 0 };
 	mtx.getMatrix(dmtx);
@@ -128,8 +128,10 @@ double NCOutPutter::getA(Base::Vector3d nrm, Base::Placement place ,double B)
 	Base::Vector3d newy(dmtx[4], dmtx[5], dmtx[6]);
 	Base::Vector3d newz(dmtx[8], dmtx[9], dmtx[10]);
 
-	Base::Vector3d va = nrm.ProjToPlane(base, newy);
-	double da = va.GetAngle(newz);
+	Base::Vector3d va = nrm.ProjToPlane(base, newz);
+	double da = va.GetAngle(newx);
+	double dy = va.GetAngle(newy);
+	double dz = va.GetAngle(newz);
 	double a = Base::toDegrees<double>(da);
 	// 	if (va.x > 0)
 	// 		a = 90 - a;
@@ -153,7 +155,7 @@ double NCOutPutter::getA(Base::Vector3d pnt1 ,Base::Vector3d pnt2, Base::Placeme
 	
 	Base::Matrix4D mtx = place.toMatrix();
 	mtx.transpose();
-	mtx.rotZ(db);
+//	mtx.rotZ(db);
 
 	double dmtx[16] = { 0 };
 	mtx.getMatrix(dmtx);
@@ -177,6 +179,74 @@ double NCOutPutter::getA(Base::Vector3d pnt1 ,Base::Vector3d pnt2, Base::Placeme
 
 double NCOutPutter::getB(Base::Vector3d nrm, Base::Placement place)
 {
+	Base::Vector3d tempNormal = nrm;
+	Base::Vector3d base = place.getPosition();
+	Base::Matrix4D mtx = place.toMatrix();
+	mtx.transpose();
+
+	double dmtx[16] = { 0 };
+	mtx.getMatrix(dmtx);
+
+	Base::Vector3d x_axis(dmtx[0], dmtx[1], dmtx[2]);
+	Base::Vector3d y_axis(dmtx[4], dmtx[5], dmtx[6]);
+	Base::Vector3d z_axis(dmtx[8], dmtx[9], dmtx[10]);
+	// 	Base::Vector3d x_axis(1, 0, 0);
+	// 	Base::Vector3d y_axis(0,1, 0);
+	//	Base::Vector3d z_axis(0, 0, 1);
+	
+	Base::Vector3d origin(0, 0, 0);
+	Base::Vector3d zu_axis(0, 0, 1);
+	Base::Vector3d vb = base.ProjToPlane(origin, x_axis); //z_axis
+	Base::Vector3d vn = tempNormal.ProjToPlane(origin, x_axis); //z_axis
+	Base::Vector3d vv = vb - vn;
+	double db = vv.GetAngle(zu_axis);//z_axis
+	double b = Base::toDegrees<double>(db);
+
+	//
+	// 通过getAngle求得的角度范围在0~180 
+	// 所以需要根据vv 与y_axis的方向来判断是在0~180范围内，还是在180~360范围内
+	// 若vv 与y_axis 反向，则说明在180~360
+	// 判断两向量是否反向，对两向量做点乘,若结果大于0,就是同向,等于0垂直,小于0反向
+	double ddd = nrm.Normalize()*y_axis.Normalize();
+	if (ddd < 0)
+	{
+		b = 360 - b;
+	}
+
+	return b;
+}
+
+//
+// 调整刀具点的位置
+// 计算时使用的是砂轮的边缘，仿真时使用的砂轮的中心作为位置点，因此需要矫正
+//
+Base::Vector3d NCOutPutter::adjustPointByTools(Base::Vector3d& point, Base::Placement& place , double B)
+{
+// 	return point;
+ 	double tool_radius = getToolDiameter() / 2.0;
+// 	double db = Base::toRadians<double>(B-90);
+// 
+// 	Base::Vector3d tpnt = point;
+// 
+//  	Base::Vector3d base = place.getPosition();
+//  	Base::Matrix4D mtx = place.toMatrix();
+//  	mtx.transpose();
+// 	//mtx.rotX(db);
+// 
+// 	double dmtx[16] = { 0 };
+// 	mtx.getMatrix(dmtx);
+// 
+// 	Base::Vector3d newx(dmtx[0], dmtx[1], dmtx[2]);
+// 	Base::Vector3d newy(dmtx[4], dmtx[5], dmtx[6]);
+// 	Base::Vector3d newz(dmtx[8], dmtx[9], dmtx[10]);
+// 	
+// 	Base::Vector3d bbase = base.ProjToPlane(tpnt, newx);
+// 	Base::Vector3d nrm_vec = bbase- tpnt  ;
+// 	nrm_vec = nrm_vec.Normalize();
+// 	Base::Vector3d tt = tpnt + nrm_vec * tool_radius;
+	
+
+	Base::Vector3d tempNormal = point;
 	Base::Vector3d base = place.getPosition();
 	Base::Matrix4D mtx = place.toMatrix();
 	mtx.transpose();
@@ -191,66 +261,16 @@ double NCOutPutter::getB(Base::Vector3d nrm, Base::Placement place)
 	// 	Base::Vector3d y_axis(0,1, 0);
 	//	Base::Vector3d z_axis(0, 0, 1);
 
- 	Base::Vector3d vb = nrm.ProjToPlane(base, x_axis); //z_axis
-	Base::Vector3d vv = base - vb;
-	double db = vv.GetAngle(y_axis);//z_axis
-	double b = Base::toDegrees<double>(db);
+	Base::Vector3d origin(0, 0, 0);
+	Base::Vector3d zu_axis(0, 0, 1);
+	Base::Vector3d vb = base.ProjToPlane(origin, x_axis); //z_axis
+	Base::Vector3d vn = tempNormal.ProjToPlane(origin, x_axis); //z_axis
+	Base::Vector3d vv = vb - vn;
 
-	//
-	// 通过getAngle求得的角度范围在0~180 
-	// 所以需要根据vv 与y_axis的方向来判断是在0~180范围内，还是在180~360范围内
-	// 若vv 与y_axis 反向，则说明在180~360
-	// 判断两向量是否反向，对两向量做点乘,若结果大于0,就是同向,等于0垂直,小于0反向
-	double ddd = nrm.Normalize()*y_axis.Normalize();
-	if (ddd < 0)
-	{
-		b = 360 - b;
-	}
 
-	if (fabs(b) < Precision::Confusion()) b = 0;
+	Base::Vector3d tt = point + z_axis * tool_radius;
 
-	return b;
-}
-
-//
-// 调整刀具点的位置
-// 计算时使用的是砂轮的边缘，仿真时使用的砂轮的中心作为位置点，因此需要矫正
-//
-Base::Vector3d NCOutPutter::adjustPointByTools(Base::Vector3d& point, Base::Placement& place , double B)
-{
-	double tool_radius = getToolDiameter() / 2.0;
-	double db = Base::toRadians<double>(B-90);
-
-	Base::Vector3d tpnt = point;
-
- 	Base::Vector3d base = place.getPosition();
- 	Base::Matrix4D mtx = place.toMatrix();
- 	mtx.transpose();
-
-	double dmtx[16] = { 0 };
-	mtx.getMatrix(dmtx);
-
-	Base::Vector3d newx(dmtx[0], dmtx[1], dmtx[2]);
-	Base::Vector3d newy(dmtx[4], dmtx[5], dmtx[6]);
-	Base::Vector3d newz(dmtx[8], dmtx[9], dmtx[10]);
-	
-	Base::Vector3d bbase = base.ProjToPlane(tpnt, newz);
-	Base::Vector3d nrm_vec = tpnt -bbase  ;
-	nrm_vec = nrm_vec.Normalize();
-	Base::Vector3d tt = tpnt + nrm_vec * tool_radius;
-	
-	Base::Matrix4D mmtx(bbase,newz,db);
-	Base::Vector3d r = /*mmtx**/tpnt;
-
-// 	Base::Vector3d rclBase; Base::Vector3d rclDir; double fAngle; double fTranslation;
-// 	mtx.toAxisAngle(rclBase, rclDir, fAngle, fTranslation) ;
-// 
-// 	Base::Matrix4D mmtx(base, rclDir, fAngle);
-// 	mmtx.rotZ(db);
-// 	mmtx.toAxisAngle(rclBase, rclDir, fAngle, fTranslation);
-// 	Base::Vector3d r = mmtx*tt;
-
-	return  r;
+	return  tt;
 }
 
 double NCOutPutter::getToolDiameter()
@@ -345,6 +365,7 @@ void NCOutPutter::printFooter(std::ofstream& ofs, int& nlines)
 void NCOutPutter::printFeed(std::ofstream& ofs, int& nlines, Custom::PathObject::PathPointList& paths, Base::Placement place)
 {
 	double h = SafeHeight.getValue();
+	double tool_radius = getToolDiameter() / 2.0;
 	
 	if (paths.size() > 0)
 	{
@@ -356,12 +377,25 @@ void NCOutPutter::printFeed(std::ofstream& ofs, int& nlines, Custom::PathObject:
 		
 		Base::Vector3d r = adjustPointByTools(step.Point , place,db);
 
-		ofs << "N" << nlines++ << " " << "G00 X" << h << " Z" << h/*<< "; Z轴运行至安全高度"*/ << std::endl;
-		ofs << "N" << nlines++ << " " << "G01 G90 A" << db /*<< "; B旋转到相应角度"*/ << std::endl;
-		ofs << "N" << nlines++ << " " << "G01 G90 B" << da /*<< "; A旋转到相应角度"*/<< std::endl;
+		Base::Vector3d base = place.getPosition();
+		Base::Matrix4D mtx = place.toMatrix();
+		mtx.transpose();
+
+		double dmtx[16] = { 0 };
+		mtx.getMatrix(dmtx);
+
+		Base::Vector3d newx(dmtx[0], dmtx[1], dmtx[2]);
+		//newx.x = -newx.x;
+		Base::Vector3d firstPoint = step.Point + newx*tool_radius;
+		
+
+		ofs << "N" << nlines++ << " " << "G00 G90 A" << da /*<< "; B旋转到相应角度"*/ << std::endl;
+		ofs << "N" << nlines++ << " " << "G00 G90 B" << db /*<< "; A旋转到相应角度"*/ << std::endl;
+		ofs << "N" << nlines++ << " " << "G00 X" << firstPoint.x  << std::endl;
+		ofs << "N" << nlines++ << " " << "G00 Z" << h/*<< "; Z轴运行至安全高度"*/ << std::endl;
 		ofs << "N" << nlines++ << " " << "G01 G90 Y" << r.y << " " << std::endl;
-		ofs << "N" << nlines++ << " " << "G01 G90 Z" << r.z << " " << std::endl;
 		ofs << "N" << nlines++ << " " << "G01 G90 X" << r.x << " F" << step.speed/*<< ";x, y" */ << std::endl;
+		ofs << "N" << nlines++ << " " << "G01 G90 Z" << r.z << " " << std::endl;
 	}
 }
 //输出一段程序结束后的退刀
@@ -416,8 +450,13 @@ void NCOutPutter::printAPath(std::ofstream& ofs, int& nlines, Custom::PathObject
 			
 			double da = getA(lastStep.Point -step.Point, place, db);
 			double la = getA(lastStep.Point, place);
+			double dbt = getB(step.Point, place);
 			
-			Base::Vector3d r = adjustPointByTools(step.Point, place,db);		
+			double dbb = dbt /*- db*/;
+			Base::Vector3d r = adjustPointByTools(step.Point, place,db);	
+			//double tool_radius = getToolDiameter() / 2.0;
+		//	Base::Vector3d r = step.Point + step.Normal*tool_radius;
+
 
 			ofs << "N" << nlines++ << " G01 G90 ";
 			if (fabs(step.Point.x - lastStep.Point.x) > tol)
@@ -426,8 +465,10 @@ void NCOutPutter::printAPath(std::ofstream& ofs, int& nlines, Custom::PathObject
 				ofs << " Y" << r.y << " ";
 			if (fabs(step.Point.z - lastStep.Point.z) > tol)
 				ofs << " Z" << r.z << " ";
-			//if (fabs(da - la) > tol)
-				ofs << " B" << da /* << " B" << db << " C" << dc*/;
+			if (fabs(da - la) > tol)
+			ofs << " A" << da /* << " B" << db << " C" << dc*/;
+			if (fabs(da - la) > tol)
+				ofs << " B" << dbb /* << " B" << db << " C" << dc*/;
 			//if (fabs(step.speed - lastStep.speed) > tol)
 				ofs << " F" << local_speed << " ";
 			ofs << std::endl;
@@ -498,49 +539,32 @@ App::DocumentObjectExecReturn *NCOutPutter::execute(void)
 		Custom::BallCutter * pBallCutter = dynamic_cast<Custom::BallCutter *>(pObj);
 		if (pBallCutter)
 		{
-			TopoDS_Edge aSpineEdge = pBallCutter->getSpineEdge();
+			TopoDS_Compound spineComp = pBallCutter->getSpineEdge();
 			
-			Base::Placement thePlacement = pBallCutter->Placement.getValue();
-			Base::Rotation rot = thePlacement.getRotation();
-			Base::Vector3d pos = thePlacement.getPosition();
-			double q1, q2, q3, q4;
-			rot.getValue(q1, q2, q3, q4);
+			Base::Placement place = pBallCutter->Placement.getValue();
 			
+			double q[4];
+			place.getRotation().getValue(q[0],q[1],q[2],q[3]);
+			Base::Vector3d pp = place.getPosition();
+
 			gp_Trsf TT;
-			TT.SetTransformation(gp_Quaternion(q1, q2, q3, q4), gp_Vec(pos.x, pos.y, pos.z));
+			TT.SetTransformation(gp_Quaternion(q[0], q[1], q[2], q[3]), gp_Vec(pp.x, pp.y, pp.z));
 			BRepBuilderAPI_Transform theTrsfT(TT);
-			theTrsfT.Perform(aSpineEdge, Standard_True);
-			TopoDS_Edge aEdge = TopoDS::Edge(theTrsfT.Shape());
+			theTrsfT.Perform(spineComp, Standard_True);
 
-			std::vector<NCStepInfo> pntlist;
-			BuildPath(aEdge, pntlist, pBallCutter);
-			Base::Placement place;
-			if (pBallCutter)
-			{
-				place = pBallCutter->Placement.getValue();
-			}
-			printAPath(ofs, nlines, pntlist, place);
-			m_nclist.push_back(pntlist);
-
-			int nCount = pBallCutter->L.getValue();
-			for (int i = 1; i <= nCount; i++)
-			{
-				gp_Trsf T;
-				T.SetRotation(gp_Ax1(gp_Pnt(0., 0., 0.), gp_Vec(0., 0., -1.)), i * 2 * M_PI / nCount);
-				BRepBuilderAPI_Transform theTrsf(T);
-				theTrsf.Perform(aEdge, Standard_True);
-
-				TopoDS_Edge edge = TopoDS::Edge(theTrsf.Shape());
+			TopExp_Explorer Ex;
+			for (Ex.Init(theTrsfT.Shape(), TopAbs_EDGE); Ex.More(); Ex.Next()) {
+				TopoDS_Edge aEdge  = TopoDS::Edge(Ex.Current());
 				
 				std::vector<NCStepInfo> pntlist;
-				BuildPath(edge, pntlist, pBallCutter);
+				BuildPath(aEdge, pntlist, pBallCutter);
 				Base::Placement place;
 				if (pBallCutter)
 				{
 					place = pBallCutter->Placement.getValue();
 				}
 				printAPath(ofs, nlines, pntlist, place);
-				m_nclist.push_back(pntlist);
+				m_nclist.push_back(pntlist);	
 			}
 		}
 	}

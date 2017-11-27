@@ -249,7 +249,7 @@ void BuildPath(TopoDS_Edge& theEdge, std::vector<Custom::NCStepInfo>& pathPointL
 
 		Base::Vector3d vPoint(thePoint.X(), thePoint.Y(), thePoint.Z());
 		Base::Vector3d tPoint = vPoint;
-		Base::Vector3d cPoint = tPoint.ProjToLine(center, Base::Vector3d(1, 0, 0)); //z_axis
+		Base::Vector3d cPoint = tPoint.Perpendicular(Base::Vector3d(0, 0, 0), Base::Vector3d(1, 0, 0)); //z_axis
 		Base::Vector3d nrm = cPoint - vPoint;
 
 		Custom::NCStepInfo si = { 0 };
@@ -257,7 +257,7 @@ void BuildPath(TopoDS_Edge& theEdge, std::vector<Custom::NCStepInfo>& pathPointL
 		si.gcode = "";
 		si.speed = 1000;
 		si.Point = vPoint;
-		si.Normal = nrm;
+		si.Normal = nrm.Normalize();
 		pathPointList.push_back(si);//从原点开始
 	}
 
