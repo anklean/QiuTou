@@ -94,6 +94,7 @@
 #include "BRepAlgo_BooleanOperation.hxx"
 #include "BRepAlgo_Cut.hxx"
 #include "gp_Quaternion.hxx"
+#include "STEPControl_Writer.hxx"
 
 using namespace Custom;
 
@@ -255,6 +256,7 @@ void BallCutter::makeMainBoby(TopoDS_Shape& body, double ang)
 
   // »æÖÆ Ô²Çò Ïß
   Base::Vector3d ptCenter(pt0.x, pt0.y, pt0.z - cyLength - ballH + ballradius);
+  setCenter(ptCenter);
 
   double endAngel = acos((ballH - ballradius) / ballradius);
   double test = endAngel * 180 / M_PI;
@@ -381,21 +383,8 @@ App::DocumentObjectExecReturn *BallCutter::execute(void)
 	BRepBuilderAPI_Transform theTrsf(T);
 	theTrsf.Perform(R, Standard_True);
 	
-// 	gp_Trsf T;
-// 	T.SetTransformation(gp_Quaternion(gp_Vec(0., -1, 0), M_PI / 2.0), gp_Vec(move_x, move_y, move_z));
-// 	BRepBuilderAPI_Transform theTrsf(T);
-// 	theTrsf.Perform(comp, Standard_True);
-
 	this->Shape.setValue(theTrsf.Shape());
-
-// 	TopoDS_Compound comp;
-// 	BRep_Builder builder;
-// 	builder.MakeCompound(comp);
-// 	builder.Add(comp,BaseShape);
-// 	builder.Add(comp, yindaoxian);
-
-	//this->Shape.setValue(yindaoxian);
-
+	
 	return App::DocumentObject::StdReturn;
 
 

@@ -39,6 +39,8 @@ public:
 	QString getSavePath() const { return savePath; }
 	void setSavePath(QString val) { savePath = val; }
 
+	double getDeltaX() const { return deltaX; }
+	void setDeltaX(double val) { deltaX = val; }
 private:
 	Base::Placement machineCS;//机床坐标系
 	Base::Placement workCS;//工件坐标系
@@ -46,6 +48,7 @@ private:
 	bool toStartPtAgain;
 	double safeHeight;
 	double speed;
+	double deltaX;
 	QStringList beforeGCode;
 	QStringList afterGCode;
 	QString savePath;

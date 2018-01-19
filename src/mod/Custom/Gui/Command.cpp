@@ -509,8 +509,9 @@ void CmdCustomBuildNCFile::activated(int iMsg)
 	data.setPathList(lstFaces);
 	//data.setMachineCS(Base::Placement());
 	//data.setWorkCS(workcs);
-	data.setSafeHeight(250);
+	data.setSafeHeight(5.0);
 	data.setSpeed(1000);
+	data.setDeltaX(18);
 	data.setSavePath(QString::fromAscii("d:\\ccc.anc"));
 
 	QStringList sb;
@@ -575,6 +576,7 @@ void CmdCustomBuildNCFile::activated(int iMsg)
 			"o.AfterGcode=[%4]\n"
 			"o.SafeHeight=%5\n"
 			"o.Speed=%6\n"
+			"o.DeltaX=%7\n"
 			)
 			.arg(strPaths)
 			.arg(data.getSavePath())
@@ -582,6 +584,7 @@ void CmdCustomBuildNCFile::activated(int iMsg)
 			.arg(strAGS)
 			.arg(data.getSafeHeight())
 			.arg(data.getSpeed())
+			.arg(data.getDeltaX())
 			;
 
 		try {
@@ -645,7 +648,7 @@ void CmdCustomBuildNCFile2::activated(int iMsg)
 	data.setPathList(lstPaths);
 	data.setMachineCS(Base::Placement());
 	data.setWorkCS(workcs);
-	data.setSafeHeight(150);
+	data.setSafeHeight(1.0);
 	data.setSpeed(1000);
 	data.setSavePath(QString::fromAscii("d:\\ccc.anc"));
 

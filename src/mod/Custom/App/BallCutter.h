@@ -57,6 +57,8 @@ namespace Custom
 
 		TopoDS_Compound getSpineEdge() const { return m_SpineComps; }
 		void setSpineEdge(TopoDS_Compound val) { m_SpineComps = val; }
+		Base::Vector3d getCenter() const { return m_ptCenter; }
+		void setCenter(Base::Vector3d val) { m_ptCenter = val; }
 	private:
 		App::DocumentObjectExecReturn* makeLine(Base::Vector3d& startPt, Base::Vector3d& endPt, TopoDS_Edge& edge);
 		void makeMainSketch(double h, double L, double angleIncre, double sketchY, TopoDS_Wire& wire);
@@ -87,6 +89,8 @@ namespace Custom
 
 		TopoDS_Edge m_SpineEdge;
 		TopoDS_Compound m_SpineComps;
+
+		Base::Vector3d m_ptCenter;
 	};
 
 } //namespace Custom

@@ -75,6 +75,9 @@ void CreateNCfileDlg::getValueFromUI()
 	double speed = ui.editSpeed->text().toDouble();
 	m_data.setSpeed(speed);
 
+	double deltax = ui.editDeltaX->text().toDouble();
+	m_data.setDeltaX(deltax);
+
 	QString sb =  ui.editBeforeGCode->toPlainText();
 	m_data.setBeforeGCode(sb.split(QChar('\n')));
 
@@ -121,6 +124,10 @@ void CreateNCfileDlg::setValueToUI()
 	double speed = m_data.getSpeed();
 	ui.editSpeed->setText(QString::fromAscii("%1").arg(speed));
 
+
+	double deltax = m_data.getDeltaX();
+	ui.editDeltaX->setText(QString::fromAscii("%1").arg(deltax));
+	
 	QString sBG="";
 	QStringList bg =m_data.getBeforeGCode();
 	for (int i = 0; i < bg.size(); i++)

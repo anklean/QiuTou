@@ -31,7 +31,7 @@ namespace Custom
 
 		App::PropertyLength SafeHeight;//安全高度
 		App::PropertyLength Speed;//速度
-		
+		App::PropertyLength DeltaX;//工件坐标与机床坐标的X差值
 		App::PropertyString ToolNum;
 
 		/** @name methods override feature */
@@ -54,6 +54,7 @@ namespace Custom
 		double getA(Base::Vector3d pnt1, Base::Vector3d pnt2, Base::Placement place, double B);
 		double getB(Base::Vector3d nrm, Base::Placement place);
 		Base::Vector3d adjustPointByTools(Base::Vector3d& point, Base::Placement& place, double B);
+		Base::Vector3d adjustPointByTools(Custom::PathObject::PathPointList& pathPointList, int i, Base::Placement& place, double B);
 		double getToolDiameter();
 		void getAngle(Base::Vector3d nrm, double& a, double &b, double & c, Base::Placement p);
 		void printHeader(std::ofstream& ofs, int& nlines);
@@ -63,6 +64,8 @@ namespace Custom
 		void printAPath(std::ofstream& ofs, int& nlines, Custom::PathObject::PathPointList& paths, Base::Placement p);
 	private:
 		std::vector<Custom::PathObject::PathPointList> m_nclist;
+
+		Base::Vector3d m_curPtCenter;
 	};
 
 } //namespace Custom
